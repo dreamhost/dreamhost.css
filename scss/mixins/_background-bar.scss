@@ -1,0 +1,18 @@
+@mixin background-bar(){
+	padding: $s-small;
+
+	// States
+	&.is-active {
+		background: $blue;
+		color: #fff;
+	}
+
+	&:not(.is-active){
+		background: $lightest-grey;
+	}
+
+}
+
+.background-bar {
+	@include background-bar;
+}

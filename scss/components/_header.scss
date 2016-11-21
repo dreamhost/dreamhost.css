@@ -1,0 +1,43 @@
+/*
+
+	Header
+
+	The header consists of a logo, a main navigation, and a secondary navigation.
+
+	Currently set up with a sass grid but maybe it should be some sort of table or flexbox thing.
+
+*/
+
+.header {
+	@include clearfix;
+	background: $black;
+	margin-bottom: $s-large;
+}
+
+.header__logo {
+	@include span-columns(2);
+	padding: $s;
+}
+.header__nav {
+	@include span-columns(5);
+	@include shift(1);
+}
+
+.header__links {
+	@include span-columns(2);
+	@include shift(2);
+	padding: $s 0;
+
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+.header__nav-item {
+	// font-size: $h3;
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	padding: $s 0;
+}

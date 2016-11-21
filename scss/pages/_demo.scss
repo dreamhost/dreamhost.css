@@ -1,0 +1,83 @@
+/*
+
+	DreamPress
+
+	Use this file to set up grids and attach mixins to their classes.
+
+	All custom code for the DreamPress application should go here.
+	Custom code should _not_ include components or one-off styles.
+
+*/
+
+// Index.html
+
+@media screen and (min-width: 650px){
+	.dp-welcome {@include span-columns(6);}
+	.dp-balance {@include span-columns(6);}
+}
+
+// Site.html
+
+.dp-wp-snapshot,
+.dp-storage-snapshot {
+	@include box;
+	@media screen and (min-width: 650px){
+		@include span-columns(6);
+	}
+}
+
+/*
+
+Servers page
+
+	An example of how you can use the Neat grid and custom box mixin to build a page.
+
+*/
+
+.server-controls {
+	@include outer-container;
+}
+
+.server-control {
+	@media screen and (min-width: 700px){
+		@include span-columns(6);
+		@include omega(2n);
+	}
+	@include box;
+	margin-bottom: $s-large;
+
+}
+
+/*
+	Support
+
+*/
+
+@media screen and (min-width: 750px) {
+	.talk-to-support {
+		@include span-columns(5);
+	}
+
+	.top-account-questions {
+		@include span-columns(5);
+		@include shift(2);
+	}
+}
+
+.products {
+	@include outer-container;
+}
+
+.product {
+	@include box;
+	margin-bottom: $s-large;
+	@include span-columns(6);
+	@include omega(2n);
+}
+
+.product__configuration {
+	@include background-bar;
+	display: block;
+	text-decoration: none;
+}
+

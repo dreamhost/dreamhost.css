@@ -1,0 +1,21 @@
+{
+  "name": "dreamhost-css",
+  "version": "0.0.1",
+  "description": "DreamHost's CSS framework",
+  "repository": {},
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "3.9",
+    "gulp-sass": "2.3",
+    "gulp-stylelint": "3.4.0",
+    "browser-sync": "2.18.1"
+  },
+  "private": true,
+  "license": "Unlicensed",
+  "stylelint": {
+    "rules": {
+      "selector-max-empty-lines": 0,
+      "selector-max-specificity": "0,2,0"
+    }
+  }
+}

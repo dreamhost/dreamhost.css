@@ -1,0 +1,62 @@
+// TO-DO
+// Some sort of scale
+
+body {
+	background: $lightest-grey;
+	-webkit-font-smoothing: antialiased;
+    font-feature-settings: "liga", "dlig";
+	color: $black;
+	font-family: $body;
+}
+
+h1, h2, h3, h4 {
+	text-transform: uppercase;
+	font-family: $heading;
+	font-weight: 100;
+	line-height: 1.6;
+}
+
+h1 {
+	font-size: $h1;
+	margin-bottom: $s-large;
+}
+
+h2 {
+	font-size: $h2;
+	margin-bottom: $s;
+}
+
+h3 {
+	font-size: $h3;
+	margin-bottom: $s-small;
+}
+
+h4 {
+	font-size: $h4;
+	margin-bottom: $s-small;
+}
+
+p {
+	color: $black;
+	line-height: 1.4;
+	margin-bottom: $s;
+}
+
+a {
+	color: $blue;
+}
+
+strong {
+	font-weight: 700;
+}
+
+img {
+	// margin-bottom: $s; ???
+	max-width: 100%;
+	height: auto;
+}
+
+hr {
+	border: 1px solid $lightest-grey;
+	margin: $s 0;
+}

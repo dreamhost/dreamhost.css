@@ -1,0 +1,25 @@
+.list { // maybe this should be applied to all lists? maybe not. lists are annoying sometimes.
+	margin-bottom: $s;
+	li:not(:last-child) {
+		margin-bottom: $s-small;
+	}
+}
+
+.list--bullets {
+	li {
+		margin-left: $s;
+		list-style-type: disc;
+	}
+}
+
+.list--inline {
+	li {
+		padding: 0;
+		display: inline;
+		margin-right: $s;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

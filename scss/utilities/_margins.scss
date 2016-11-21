@@ -1,0 +1,45 @@
+/*
+
+	Margins
+
+	Margins can be controlled using the shorthand m. Every direction
+	has none, smaller, small, large, larger and a default value that
+	can be referenced using just m-direction.
+
+*/
+
+
+.m-none {margin: 0;}
+.m-smaller {margin: $s-smaller;}
+.m-small {margin: $s-small}
+.m {margin: $s}
+.m-large {margin: $s-large;}
+.m-larger {margin: $s-larger;}
+
+.m-top-none {margin-top: 0;}
+.m-top-smaller {margin-top: $s-smaller}
+.m-top-small {margin-top: $s-smaller}
+.m-top {margin-top: $s};
+.m-top-large {margin-top: $s-large};
+.m-top-larger {margin-top: $s-larger};
+
+.m-bottom-none {margin-bottom: 0;}
+.m-bottom-smaller {margin-bottom: $s-smaller}
+.m-bottom-small {margin-bottom: $s-smaller}
+.m-bottom {margin-bottom: $s};
+.m-bottom-large {margin-bottom: $s-large};
+.m-bottom-larger {margin-bottom: $s-larger};
+
+.m-right-none {margin-right: 0;}
+.m-right-smaller {margin-right: $s-smaller}
+.m-right-small {margin-right: $s-smaller}
+.m-right {margin-right: $s};
+.m-right-large {margin-right: $s-large};
+.m-right-larger {margin-right: $s-larger};
+
+.m-left-none {margin-left: 0;}
+.m-left-smaller {margin-left: $s-smaller}
+.m-left-small {margin-left: $s-smaller}
+.m-left {margin-left: $s};
+.m-left-large {margin-left: $s-large};
+.m-left-larger {margin-left: $s-larger};

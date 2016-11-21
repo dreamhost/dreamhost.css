@@ -1,0 +1,26 @@
+/* Option Box
+
+	A style for larger box-style options in a form setting. Includes
+	a background heading and content underneath it. Use alongside
+	grid framework for positjoning.
+
+*/
+
+.option-box {
+	text-align: center;
+
+	//unlink
+	text-decoration: none;
+	color: $black;
+}
+
+.option-box__heading {
+	@include background-bar;
+	margin-bottom: 0;
+}
+
+.option-box__content {
+	@include box;
+	background: #fff;
+}
+

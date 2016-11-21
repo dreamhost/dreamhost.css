@@ -1,0 +1,44 @@
+/*
+
+	Padding
+
+	Padding can be controlled using the shorthand p. Every direction
+	has none, smaller, small, large, larger and a default value that
+	can be referenced using just p-direction.
+
+*/
+
+.p-none {padding: 0;}
+.p-smaller {padding: $s-smaller;}
+.p-small {padding: $s-small}
+.p {padding: $s}
+.p-large {padding: $s-large;}
+.p-larger {padding: $s-larger};
+
+.p-top-none {padding-top: 0;}
+.p-top-smaller {padding-top: $s-smaller}
+.p-top-small {padding-top: $s-smaller}
+.p-top {padding-top: $s};
+.p-top-large {padding-top: $s-large};
+.p-top-larger {padding-top: $s-larger};
+
+.p-bottom-none {padding-bottom: 0;}
+.p-bottom-smaller {padding-bottom: $s-smaller}
+.p-bottom-small {padding-bottom: $s-smaller}
+.p-bottom {padding-bottom: $s};
+.p-bottom-large {padding-bottom: $s-large};
+.p-bottom-larger {padding-bottom: $s-larger};
+
+.p-right-none {padding-right: 0;}
+.p-right-smaller {padding-right: $s-smaller}
+.p-right-small {padding-right: $s-smaller}
+.p-right {padding-right: $s};
+.p-right-large {padding-right: $s-large};
+.p-right-larger {padding-right: $s-larger};
+
+.p-left-none {padding-left: 0;}
+.p-left-smaller {padding-left: $s-smaller}
+.p-left-small {padding-left: $s-smaller}
+.p-left {padding-left: $s};
+.p-left-large {padding-left: $s-large};
+.p-left-larger {padding-left: $s-larger};

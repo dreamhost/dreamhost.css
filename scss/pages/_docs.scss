@@ -1,0 +1,7 @@
+.framework-strategy {
+	@media screen and (min-width: 700px){
+		@include span-columns(6);
+		@include omega(2n);
+	}
+	margin-bottom: $s-large;
+}

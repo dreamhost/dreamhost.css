@@ -1,0 +1,28 @@
+.tabs {
+	margin-bottom: $s-large;
+}
+
+.tabs__nav-item {
+	@include link(dark);
+	font-family: $heading;
+	padding: $s;
+	font-size: $h3;
+	display: inline-block;
+
+	&:first-child {
+		padding-left: 0; // to align with hard-left start of box below
+	}
+}
+
+.tab {
+	@include box;
+}
+
+// States
+
+.tabs__nav-item.is-active {
+	@include unlink;
+	font-weight: 900;
+}
+
+

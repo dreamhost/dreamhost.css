@@ -1,0 +1,47 @@
+/*
+
+	Variables
+
+	To stay consistent, we set as many properties as variables as we can. We
+	have five(???) options for margins and paddings and a something-point
+	typographic scale. All colours should be defined in this file except #fff
+	and #000.
+
+	Look in utilities.scss for ways to use these same properties in html instead.
+
+	Always use these variables when building components.
+
+*/
+
+// Colours
+$black: #2F323B;
+$blue: #3675b4;
+$red: #e74141;
+$yellow: #ffba00;
+$light-grey: #858585;
+$lighter-grey: #d1d1d1;
+$lightest-grey: #f7f7f7;
+
+// Spacing
+$s: 30px;
+$s-smaller: $s/4;
+$s-small: $s/2;
+$s-large: $s*2;
+$s-larger: $s*4;
+
+// Typography
+$body: 'Proxima Nova', sans-serif;
+$heading: 'Ubuntu', sans-serif;
+
+$t-size-larger: 21px;
+$t-size-large: 18px;
+$t-size: 16px;
+$t-size-small: 14px;
+$t-size-smaller: 12px;
+
+$h1: 40px;
+$h2: 26px;
+$h3: $t-size-larger;
+$h4: $t-size-large;
+
+$border-size: 2px;

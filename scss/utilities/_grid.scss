@@ -1,0 +1,10 @@
+.row {
+	@include clearfix;
+	padding: 0 $s-large;
+}
+
+.container {@include outer-container;}
+.grid__1-2 {@include span-columns(6)}
+.grid__1-3 {@include span-columns(4)}
+.grid__1-4 {@include span-columns(3)}
+.grid__1-6 {@include span-columns(2)}

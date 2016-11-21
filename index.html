@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="./dist/style.css">
+</head>
+<body>
+
+<div class="container">
+
+	<ul class="list m-top">
+		<li><a href="./docs/examples/dp/index.html">DreamPress demo</a></li>
+		<li><a href="./docs/examples/support/index.html">Support demo</a></li>
+		<li><a href="docs/index.html">Documentation</a></li>
+	</ul>
+
+	<p class="box t-center t-size-large c-black t-white">Here's a bunch of random things.</p>
+
+	<p><a href="javascript::" class="btn" data-remodal-target="modal">Open Modal</a></p>
+
+	<h1 class="m-bottom">Page title</h1>
+	<ul class="list list--inline m-bottom">
+		<li><strong>IPv4:</strong> 208.113.135.188</li>
+		<li><strong>IPv6:</strong> 2607:f298:5:101d:f816:3eff:fe98:d242</li>
+	</ul>
+
+	<section class="container">
+		<div class="t-center grid__1-2">
+			<div class="background-bar m-bottom-none is-active">Empty volume</div>
+			<p class="box c-white">Creates a new volume/block device without anything on it</p>
+		</div>
+		<div class="t-center grid__1-2">
+			<div class="background-bar m-bottom-none">Bootable volume</div>
+			<p class="box c-white">Creates a bootable volume pre-loaded with your operating system of choice.</p>
+		</div>
+	</section>
+
+<section>
+	<h2 class="m-bottom-small">Name</h2>
+	<p class="m-bottom-small">This is what your volume will be called.</p>
+	<input type="text" class="form__input" placeholder="My Volume Name" />
+</section>
+
+	<section class="container">
+		<a class="option-box grid-1_2" href="#">
+			<div class="option-box__heading is-active">Empty volume</div>
+			<p class="option-box__content">Creates a new volume/block device without anything on it</p>
+		</a>
+		<a class="option-box grid-1_2" href="#">
+			<div class="option-box__heading">Bootable volume</div>
+			<p class="option-box__content">Creates a bootable volume pre-loaded with your operating system of choice.</p>
+		</a>
+	</section>
+
+	<section class="tabs">
+		<ul>
+			<li class="tabs__nav-item is-active" data-tab="caching">Caching</li>
+			<li class="tabs__nav-item" data-tab="staging">Staging</li>
+			<li class="tabs__nav-item" data-tab="backup">Backup</li>
+			<li class="tabs__nav-item" data-tab="domain">Domain</li>
+			<li class="tabs__nav-item" data-tab="advanced">Advanced</li>
+		</ul>
+		<div class="tab" data-tab="caching">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptate et quibusdam debitis saepe ab, ratione molestias! Error rem quos iure deserunt assumenda magni, veritatis tenetur, impedit repellat soluta numquam.</p>
+		</div>
+	</section>
+
+	<section class="box c-white m-bottom-large">
+		<h1>Typography</h1>
+		<h2>Heading two</h2>
+		<h3>Heading three</h3>
+		<h4>Heading four</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quidem mollitia optio temporibus cum eius deserunt, eum tenetur minima nulla hic inventore quo tempore reprehenderit. Laboriosam maiores odio debitis, in?</p>
+		<ul class="list">
+			<li>List item</li>
+			<li>List item</li>
+			<li>List item</li>
+		</ul>
+		<ul class="list list--bullets">
+			<li>List with bullets</li>
+			<li>List with bullets</li>
+			<li>List with bullets</li>
+		</ul>
+		<ul class="list list--inline">
+			<li>Inline list</li>
+			<li>Inline list</li>
+			<li>Inline list</li>
+		</ul>
+		<p><a href="javascript::" class="btn--warning">Button</a></p>
+
+	</section>
+
+	<div class="remodal t-left" data-remodal-id="modal">
+		<h2>I'm a modal</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nemo praesentium aliquid optio labore qui, voluptate consequatur provident quos sed aperiam animi, placeat! Asperiores dicta, fuga modi temporibus laborum, culpa?</p>
+		<form>
+			<fieldset>
+				<label class="form__label">Something</label>
+				<input class="form__input" />
+			</fieldset>
+			<fieldset>
+				<label class="form__label">Something else</label>
+				<input class="form__input" />
+			</fieldset>
+			<button class="btn" data-remodal-action="close">Close</button>
+		</form>
+	</div>
+
+	<table class="table">
+		<thead>
+			<th>OS</th>
+			<th style="width: 45%">Name</th>
+			<th>Location</th>
+			<th>IP Address</th>
+			<th>Launched</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td>
+					<p class="m-bottom-smaller">
+						<a href="#">Server Name</a>
+					</p>
+					<ul class="list list--inline m-none t-size-small t-light-grey">
+						<li>VCPU: 1</li>
+						<li>RAM: 512MB</li>
+					</ul>
+				</td>
+				<td> US East-2</td>
+				<td>208.123.123.123</td>
+				<td>1 Month Ago</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<p class="m-bottom-smaller">
+						<a href="#">Server Name</a>
+					</p>
+					<ul class="list list--inline m-none t-size-small t-light-grey">
+						<li>VCPU: 1</li>
+						<li>RAM: 512MB</li>
+					</ul>
+				</td>
+				<td> US East-2</td>
+				<td>208.123.123.123</td>
+				<td>1 Month Ago</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<p class="m-bottom-smaller">
+						<a href="#">Server Name</a>
+					</p>
+					<ul class="list list--inline m-none t-size-small t-light-grey">
+						<li>VCPU: 1</li>
+						<li>RAM: 512MB</li>
+					</ul>
+				</td>
+				<td> US East-2</td>
+				<td>208.123.123.123</td>
+				<td>1 Month Ago</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="table table--large-padding">
+		<thead>
+			<th>Thing</th>
+			<th>Other Thing</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="t-light-grey">Ok</td>
+				<td>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio saepe ratione dicta ad nobis, perspiciatis aut nam tenetur eligendi id praesentium consequatur quod blanditiis, itaque libero ducimus et similique dolorem.
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<section class="server-controls">
+		<div class="server-control server-control--background">
+			<h2>Whatever</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+			<a href="#" class="btn">Go!</a>
+		</div>
+
+		<div class="server-control server-control--background">
+			<h2>Whatever</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+			<a href="#" class="btn">Go!</a>
+		</div>
+
+		<div class="server-control">
+			<h2>Whatever</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+			<a href="#" class="btn">Go!</a>
+		</div>
+		<div class="server-control">
+			<h2>Whatever</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+			<a href="#" class="btn">Go!</a>
+		</div>
+		<div class="server-control">
+			<h2>Whatever</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+			<a href="#" class="btn">Go!</a>
+		</div>
+		<div class="server-control">
+			<h2>Whatever</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+			<a href="#" class="btn--warning">Go!</a>
+		</div>
+	</section>
+
+	<form class="form box">
+		<fieldset>
+			<label class="form__label" for="name" class="form__label">Site name</label>
+			<input type="text" class="form__input" placeholder="This can be changed later">
+		</fieldset>
+		<fieldset>
+			<label class="form__label" for="admin-username" class="form__label">Admin username</label>
+			<input name="admin-username" type="text" class="form__input" placeholder="This can not be changed later" value="admin">
+		</fieldset>
+		<fieldset>
+			<label class="form__label" for="domain">Choose a domain</label>
+			<select class="form__input" id="domain">
+				<option>--</option>
+				<option>emptydomain.com</option>
+				<option id="existing">domainwithsomethinginstalledonit.com</option>
+				<option>---</option>
+				<option id="buy-new">Buy a new domain</option>
+				<option id="migrate">Migrate external site</option>
+				<option id="decide-later">Decide later</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<label class="form__label form__label--radio"><input class="form__input" type="radio" name="radio" value="one" />Option one</label>
+			<label class="form__label form__label--radio"><input class="form__input" type="radio" name="radio" value="two" />Option two</label>
+			<label class="form__label form__label--radio"><input class="form__input" type="radio" name="radio" value="three" />Option three</label>
+		</fieldset>
+		<fieldset>
+			<textarea class="form__input">Hey</textarea>
+		</fieldset>
+		<input type="submit" class="btn"></input>
+	</form>
+
+</div>
+
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="./js/remodal.js"></script>
+<script src="./js/scripts.js"></script>
+
+</body>
+</html>
