@@ -8,38 +8,37 @@
 
 */
 
+.m-none {margin: 0 !important}
+.m-smaller {margin: $s-smaller !important}
+.m-small {margin: $s-small !important}
+.m {margin: $s !important}
+.m-large {margin: $s-large !important}
+.m-larger {margin: $s-larger !important}
 
-.m-none {margin: 0;}
-.m-smaller {margin: $s-smaller;}
-.m-small {margin: $s-small}
-.m {margin: $s}
-.m-large {margin: $s-large;}
-.m-larger {margin: $s-larger;}
+.m-top-none {margin-top: 0 !important}
+.m-top-smaller {margin-top: $s-smaller !important}
+.m-top-small {margin-top: $s-smaller !important}
+.m-top {margin-top: $s !important}
+.m-top-large {margin-top: $s-large !important}
+.m-top-larger {margin-top: $s-larger !important}
 
-.m-top-none {margin-top: 0;}
-.m-top-smaller {margin-top: $s-smaller}
-.m-top-small {margin-top: $s-smaller}
-.m-top {margin-top: $s};
-.m-top-large {margin-top: $s-large};
-.m-top-larger {margin-top: $s-larger};
+.m-bottom-none {margin-bottom: 0 !important}
+.m-bottom-smaller {margin-bottom: $s-smaller !important}
+.m-bottom-small {margin-bottom: $s-smaller !important}
+.m-bottom {margin-bottom: $s !important}
+.m-bottom-large {margin-bottom: $s-large !important}
+.m-bottom-larger {margin-bottom: $s-larger !important}
 
-.m-bottom-none {margin-bottom: 0;}
-.m-bottom-smaller {margin-bottom: $s-smaller}
-.m-bottom-small {margin-bottom: $s-smaller}
-.m-bottom {margin-bottom: $s};
-.m-bottom-large {margin-bottom: $s-large};
-.m-bottom-larger {margin-bottom: $s-larger};
+.m-right-none {margin-right: 0 !important}
+.m-right-smaller {margin-right: $s-smaller !important}
+.m-right-small {margin-right: $s-smaller !important}
+.m-right {margin-right: $s !important}
+.m-right-large {margin-right: $s-large !important}
+.m-right-larger {margin-right: $s-larger !important}
 
-.m-right-none {margin-right: 0;}
-.m-right-smaller {margin-right: $s-smaller}
-.m-right-small {margin-right: $s-smaller}
-.m-right {margin-right: $s};
-.m-right-large {margin-right: $s-large};
-.m-right-larger {margin-right: $s-larger};
-
-.m-left-none {margin-left: 0;}
-.m-left-smaller {margin-left: $s-smaller}
-.m-left-small {margin-left: $s-smaller}
-.m-left {margin-left: $s};
-.m-left-large {margin-left: $s-large};
-.m-left-larger {margin-left: $s-larger};
+.m-left-none {margin-left: 0 !important}
+.m-left-smaller {margin-left: $s-smaller !important}
+.m-left-small {margin-left: $s-smaller !important}
+.m-left {margin-left: $s !important}
+.m-left-large {margin-left: $s-large !important}
+.m-left-larger {margin-left: $s-larger !important}

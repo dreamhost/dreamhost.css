@@ -11,6 +11,8 @@ Utilities
 
 	Do not @extend these classes in your sass. Use the variables directly instead.
 
+	Utilities are !important (see http://csswizardry.com/2016/05/the-importance-of-important/)
+
 */
 
 @import 'utilities/colors';

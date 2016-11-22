@@ -1,44 +1,44 @@
 // Fonts
-.t-body {font-family: $body};
-.t-heading {font-family: $heading}
+.t-body {font-family: $body !important}
+.t-heading {font-family: $heading !important}
 
 // Sizes (TODO: words or headings?)
-.t-size-small {font-size: $t-size-small}
-.t-size {font-size: $t-size;}
-.t-size-large {font-size: $h3;}
-.t-size-larger {font-size: $h2;}
-.u-h1 {font-size: $h1;}
-.u-h3 {font-size: $h3;}
+.t-size-small {font-size: $t-size-small !important}
+.t-size {font-size: $t-size !important}
+.t-size-large {font-size: $h3 !important}
+.t-size-larger {font-size: $h2 !important}
+.u-h1 {font-size: $h1 !important}
+.u-h3 {font-size: $h3 !important}
 
 // Colors
-.t-white {color: #fff}
-.t-black {color: $black}
-.t-blue {color: $blue}
-.t-light-grey {color: $light-grey}
-.t-lighter-grey {color: $lighter-grey}
-.t-lightest-grey {color: $lightest-grey}
-.t-yellow {color: $yellow}
+.t-white {color: #fff !important}
+.t-black {color: $black !important}
+.t-blue {color: $blue !important}
+.t-light-grey {color: $light-grey !important}
+.t-lighter-grey {color: $lighter-grey !important}
+.t-lightest-grey {color: $lightest-grey !important}
+.t-yellow {color: $yellow !important}
 
 // Whitespace
-.t-whitespace-normal { white-space: normal}
-.t-whitespace-nowrap { white-space: nowrap}
+.t-whitespace-normal {white-space: normal !important}
+.t-whitespace-nowrap {white-space: nowrap !important}
 
 // Alignment
-.t-left {text-align: left;}
-.t-right {text-align: right;}
-.t-center {text-align: center;}
-.t-justify {text-align: justify}
+.t-left {text-align: left !important}
+.t-right {text-align: right !important}
+.t-center {text-align: center !important}
+.t-justify {text-align: justify !important}
 
 // Weights
-.t-heavy {font-weight: 900;}
-.t-bold {font-weight: 700;}
-.t-light {font-weight: 300;}
-.t-lighter {font-weight: 100;}
+.t-heavy {font-weight: 900 !important}
+.t-bold {font-weight: 700 !important}
+.t-light {font-weight: 300 !important}
+.t-lighter {font-weight: 100 !important}
 
 // Styles
-.t-underline {text-decoration: underline;}
+.t-underline {text-decoration: underline !important}
 
 // Line Height
-.t-line-height-1 {line-height: 1;}
+.t-line-height-1 {line-height: 1 !important}
 
-.border {border: 1px solid $lightest-grey;}
+.border {border: 1px solid $lightest-grey !important}
