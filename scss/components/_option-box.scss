@@ -15,7 +15,9 @@
 }
 
 .option-box__heading {
-	@include background-bar;
+	background: $blue;
+	padding: $s-small;
+	color: #fff;
 	margin-bottom: 0;
 }
 

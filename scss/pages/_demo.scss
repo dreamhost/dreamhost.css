@@ -76,7 +76,10 @@ Servers page
 }
 
 .product__configuration {
-	@include background-bar;
+	background: $blue;
+	padding: $s-small;
+	color: #fff;
+	margin-bottom: 0;
 	display: block;
 	text-decoration: none;
 }
