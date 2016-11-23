@@ -22,7 +22,7 @@ gulp.task('serve', ['styles'], function() {
         open: false
     });
 
-    gulp.watch("./scss/**/*.scss", ['styles']);
+    gulp.watch("./src/scss/**/*.scss", ['styles']);
     gulp.watch("./**/*.html").on('change', browserSync.reload);
 });
 
@@ -38,7 +38,7 @@ gulp.task('serve', ['styles'], function() {
 */
 
 gulp.task('styles', function () {
-  return gulp.src('./scss/*.scss')
+  return gulp.src('./src/scss/*.scss')
     .pipe(stylelint({
     	failAfterError: false,
       	reporters: [{formatter: 'string', console: true}]
