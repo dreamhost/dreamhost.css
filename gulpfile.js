@@ -1,7 +1,9 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
+var cleanCSS    = require('gulp-clean-css');
 var sass        = require('gulp-sass');
 var stylelint 	= require('gulp-stylelint');
+var rename      = require('gulp-rename');
 var package     = require('./package.json');
 
 /*
@@ -47,6 +49,31 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('./dist'))
     .pipe(browserSync.stream());
 });
+
+/*
+
+  ## gulp dist
+
+  Compile css for distribution. Use version from package.json.
+  Place the following files in /dist/:
+
+  1. dreamhost.[version].css
+  2. dreamhost.[version].min.css
+
+*/
+
+gulp.task('dist', function(){
+  var file = 'dreamhost.' + package.version,
+      dest = './dist';
+
+  return gulp.src('./src/scss/*.scss')
+    .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
+    .pipe(rename(file + '.css'))
+    .pipe(gulp.dest(dest))
+    .pipe(cleanCSS())
+    .pipe(rename(file + '.min.css'))
+    .pipe(gulp.dest(dest));
+})
 
 /*
 
