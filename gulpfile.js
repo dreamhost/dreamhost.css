@@ -46,7 +46,7 @@ gulp.task('styles', function () {
       	reporters: [{formatter: 'string', console: true}]
     }))
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./src/'))
     .pipe(browserSync.stream());
 });
 
