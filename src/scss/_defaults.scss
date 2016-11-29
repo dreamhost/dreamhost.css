@@ -43,6 +43,10 @@ p {
 
 a {
 	color: $blue;
+	text-decoration: none;
+	&:hover {
+		color: darken($blue, 10);
+	}
 }
 
 strong {
