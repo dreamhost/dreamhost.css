@@ -344,21 +344,29 @@ Utilities
 
 .container::after { clear: both; content: ""; display: block; }
 
-.grid__1-2 { float: left; display: block; margin-right: 2.35765%; width: 48.82117%; }
+.g-1_6 { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
 
-.grid__1-2:last-child { margin-right: 0; }
+.g-1_6:last-child { margin-right: 0; }
 
-.grid__1-3 { float: left; display: block; margin-right: 2.35765%; width: 31.76157%; }
+.g-1_4 { float: left; display: block; margin-right: 2.35765%; width: 23.23176%; }
 
-.grid__1-3:last-child { margin-right: 0; }
+.g-1_4:last-child { margin-right: 0; }
 
-.grid__1-4 { float: left; display: block; margin-right: 2.35765%; width: 23.23176%; }
+.g-1_3 { float: left; display: block; margin-right: 2.35765%; width: 31.76157%; }
 
-.grid__1-4:last-child { margin-right: 0; }
+.g-1_3:last-child { margin-right: 0; }
 
-.grid__1-6 { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
+.g-1_2 { float: left; display: block; margin-right: 2.35765%; width: 48.82117%; }
 
-.grid__1-6:last-child { margin-right: 0; }
+.g-1_2:last-child { margin-right: 0; }
+
+.g-2_3 { float: left; display: block; margin-right: 2.35765%; width: 65.88078%; }
+
+.g-2_3:last-child { margin-right: 0; }
+
+.g-3_4 { float: left; display: block; margin-right: 2.35765%; width: 74.41059%; }
+
+.g-3_4:last-child { margin-right: 0; }
 
 .u-overflow-visible { overflow: visible !important; }
 
