@@ -339,6 +339,8 @@ Utilities
 
 .u-float-unset { float: none !important; }
 
+.u-centered { margin: 0 auto; }
+
 .row { padding: 0 60px; }
 
 .row::after { clear: both; content: ""; display: block; }
