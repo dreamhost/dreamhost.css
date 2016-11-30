@@ -2,7 +2,10 @@
   "name": "dreamhost-css",
   "version": "0.0.1",
   "description": "DreamHost's CSS framework",
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dreamhost/dreamhost.css.git"
+  },
   "dependencies": {},
   "devDependencies": {
     "gulp": "3.9",
