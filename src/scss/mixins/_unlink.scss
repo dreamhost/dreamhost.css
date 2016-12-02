@@ -1,8 +1,6 @@
-/* unlink
+	// unlink
 
-	Sometimes we want to pretend like things aren't links e.g when active
-
-*/
+	// Sometimes we want to pretend like things aren't links e.g when active
 
 @mixin unlink(){
 	&:hover {

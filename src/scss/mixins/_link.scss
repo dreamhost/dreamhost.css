@@ -1,11 +1,6 @@
-/*
+	// Link
 
-	Link
-
-	Makes something act like a link. Use 'invert' as a paramater to invert the colours.
-
-*/
-
+	// Makes something act like a link. Use 'invert' as a paramater to invert the colours.
 
 @mixin link($invert: 'false'){
 	@if $invert == 'false'{
