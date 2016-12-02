@@ -7,22 +7,22 @@
 */
 
 .option-box {
-	text-align: center;
+	@extend .t-center;
 
 	//unlink
-	text-decoration: none;
-	color: $black;
+	@extend .t-decoration-none;
+	@extend .t-black;
 }
 
 .option-box__heading {
-	background: $blue;
-	padding: $s-small;
-	color: #fff;
-	margin-bottom: 0;
+	@extend .bg-blue;
+	@extend .p-small;
+	@extend .m-bottom-none;
+	@extend .t-white;
 }
 
 .option-box__content {
 	@include box;
-	background: #fff;
+	@extend .bg-white;
 }
 

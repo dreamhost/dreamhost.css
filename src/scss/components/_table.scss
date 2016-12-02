@@ -10,9 +10,9 @@ Table
 */
 
 .table {
-	width: 100%;
-	margin-bottom: $s;
-	text-align: left;
+	@extend .w-100;
+	@extend .m-bottom;
+	@extend .t-left;
 }
 
 thead tr {
@@ -20,25 +20,26 @@ thead tr {
 }
 
 th {
-	padding: $s $s-small;
-	font-size: $h3;
-	font-family: $heading;
-	color: #000;
+	@extend .p-left;
+	@extend .p-right;
+	@extend .p-top-small;
+	@extend .p-bottom-small;
+	@extend .t-large;
+	@extend .t-heading;
+	@extend .t-black;
 }
 
-tbody tr {
-	border-bottom: 1px solid $lightest-grey;
-}
-
-tbody tr:nth-child(odd) {
-	background: #fff;
-}
+tbody tr {@extend .border;}
+tbody tr:nth-child(odd) {@extend .bg-white;}
 
 td {
-	padding: $s-small;
-	vertical-align: middle;
+	@extend .p-small;
+	@extend .u-vertical-align-middle;
 }
 
 .table--large-padding td {
-	padding: $s-large $s;
+	@extend .p-left;
+	@extend .p-right;
+	@extend .p-top-large;
+	@extend .p-bottom-large;
 }

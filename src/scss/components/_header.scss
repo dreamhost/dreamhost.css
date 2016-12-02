@@ -10,13 +10,13 @@
 
 .header {
 	@include clearfix;
-	background: $black;
-	margin-bottom: $s-large;
+	@extend .bg-black;
+	@extend .m-bottom-large;
 }
 
 .header__logo {
 	@include span-columns(2);
-	padding: $s;
+	@extend .p;
 }
 .header__nav {
 	@include span-columns(5);
@@ -26,18 +26,19 @@
 .header__links {
 	@include span-columns(2);
 	@include shift(2);
-	padding: $s 0;
+	@extend .p-top;
+	@extend .p-bottom;
 
 	a {
-		color: #fff;
-		text-decoration: none;
+		@extend .t-white;
+		@extend .t-decoration-none;
 	}
 }
 
 .header__nav-item {
-	// font-size: $h3;
-	text-decoration: none;
-	color: #fff;
-	display: inline-block;
-	padding: $s 0;
+	@extend .t-decoration-none;
+	@extend .t-white;
+	@extend .l-inline-block;
+	@extend .p-top;
+	@extend .p-bottom;
 }

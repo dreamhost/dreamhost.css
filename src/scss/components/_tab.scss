@@ -1,16 +1,16 @@
 .tabs {
-	margin-bottom: $s-large;
+	@extend .m-bottom-large;
 }
 
 .tabs__nav-item {
 	@include link(dark);
-	font-family: $heading;
-	padding: $s;
-	font-size: $h3;
-	display: inline-block;
+	@extend .t-heading;
+	@extend .p;
+	@extend .t-large;
+	@extend .l-inline-block;
 
 	&:first-child {
-		padding-left: 0; // to align with hard-left start of box below
+		@extend .p-left-none; // to align with hard-left start of box below
 	}
 }
 
@@ -22,7 +22,7 @@
 
 .tabs__nav-item.is-active {
 	@include unlink;
-	font-weight: 900;
+	@extend .t-bold;
 }
 
 

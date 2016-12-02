@@ -4,6 +4,7 @@
 
 // Sizes (TODO: words or headings?)
 .t-small {font-size: $t-small !important}
+.t-book {font-weight: normal;}
 .t-size {font-size: $t-size !important}
 .t-large {font-size: $h3 !important}
 .t-larger {font-size: $h2 !important}
@@ -35,9 +36,12 @@
 
 // Styles
 .t-underline {text-decoration: underline !important}
+.t-decoration-none {text-decoration: none}
 .t-italic {font-weight: italic}
 
 // Line Height
 .t-line-height-1 {line-height: 1 !important}
 
 .border {border: 1px solid $lightest-grey !important}
+.border-bottom {border-bottom: 1px solid $lightest-grey !important}
+.border-radius {border-radius: $border-size}
