@@ -3,12 +3,10 @@
 .t-heading {font-family: $heading !important}
 
 // Sizes (TODO: words or headings?)
-.t-size-small {font-size: $t-size-small !important}
+.t-small {font-size: $t-small !important}
 .t-size {font-size: $t-size !important}
-.t-size-large {font-size: $h3 !important}
-.t-size-larger {font-size: $h2 !important}
-.u-h1 {font-size: $h1 !important}
-.u-h3 {font-size: $h3 !important}
+.t-large {font-size: $h3 !important}
+.t-larger {font-size: $h2 !important}
 
 // Colors
 .t-white {color: #fff !important}
@@ -37,6 +35,7 @@
 
 // Styles
 .t-underline {text-decoration: underline !important}
+.t-italic {font-weight: italic}
 
 // Line Height
 .t-line-height-1 {line-height: 1 !important}

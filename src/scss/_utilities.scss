@@ -9,7 +9,7 @@ Utilities
 	When adding utility classes, make sure they are referencing variables from
 	variables.scss.
 
-	Do not @extend these classes in your sass. Use the variables directly instead.
+	Do not @extend these classes in your sass. Use the variables directly instead. (Maybe? Or would we rather extend?)
 
 	Utilities are !important (see http://csswizardry.com/2016/05/the-importance-of-important/)
 
@@ -17,9 +17,9 @@ Utilities
 
 @import 'utilities/clearfix';
 @import 'utilities/colors';
-@import 'utilities/display';
 @import 'utilities/floats';
 @import 'utilities/grid';
+@import 'utilities/layout';
 @import 'utilities/overflow';
 @import 'utilities/margins';
 @import 'utilities/padding';

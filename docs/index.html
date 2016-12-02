@@ -7,21 +7,21 @@
 </head>
 <body>
 
-<header class="c-black t-white p m-bottom">
-	<div class="u-maxwidth-640 u-centered">
-		<span class="t-white t-bold t-right u-block">Framework Guidelines</span>
+<header class="bg-black t-white p m-bottom">
+	<div class="w-640px l-centered">
+		<span class="t-white t-bold t-right l-block">Framework Guidelines</span>
 	</div>
 </header>
 
-<div class="container u-maxwidth-640 p-top">
+<div class="container w-640px p-top">
 	<section class="box m-bottom-large">
-		<p class="t-size-large">Our interfaces are just a collection of the same things on top of a shared visual style.</p>
-			<div class="c-lighter-grey p-small">Light grey</div>
-			<div class="c-black t-white p-small">Black</div>
-			<div class="c-blue t-white p-small">Blue</div>
-			<div class="c-yellow p-small m-bottom">Yellow</div>
-		<h4 class="u-inline t-bold m-right">Ubuntu for headings</h4>
-		<p class="u-inline-block">Proxima Nova for body text.</p>
+		<p class="t-large">Our interfaces are just a collection of the same things on top of a shared visual style.</p>
+			<div class="bg-lighter-grey p-small">Light grey</div>
+			<div class="bg-black t-white p-small">Black</div>
+			<div class="bg-blue t-white p-small">Blue</div>
+			<div class="bg-yellow p-small m-bottom">Yellow</div>
+		<h4 class="l-inline t-bold m-right">Ubuntu for headings</h4>
+		<p class="l-inline-block">Proxima Nova for body text.</p>
 		<p class="box border"><em>Generous spacing</em></p>
 		<p>This style will be set in a framework. Each app will only have to worry about loading the framework and then using its features to lay their pages out however they want quickly DreamHost style.</p>
 		<p>This will be accomplished using a combination of pre-packaged components and hyper-specific utility classes and is partially inspired by concepts like <a href="https://solid.buzzfeed.com">Solid</a>, <a href="http://basscss.com/">BaseCSS</a>, and <a href="https://suitcss.github.io/">SuitCSS</a>, though scaled back and simplified for our specific use cases.</p>
@@ -41,25 +41,25 @@
 
 	<section class="box m-bottom">
 		<h2>Set visual defaults</h2>
-		<p class="t-size-large">The visual style is handled on a global level, so UX designers and front-end developers don't need to continuously reconsider implementation details and can instead focusing on creating consistent pages quickly.</p>
+		<p class="t-large">The visual style is handled on a global level, so UX designers and front-end developers don't need to continuously reconsider implementation details and can instead focusing on creating consistent pages quickly.</p>
 		<p>Typography will have margins set according to a scale and used with HTML5 sectioning. For interface elements, margins will be applied manually to reduce unsetting of spacing styles.</p>
 	</section>
 
 	<section class="box m-bottom">
 		<h2>Keep everything consistent</h2>
-		<p class="t-size-large">An interface should be as simple and predictable as possible. This will be ensured by mapping all classes, components and mixins to the same variables.</p>
+		<p class="t-large">An interface should be as simple and predictable as possible. This will be ensured by mapping all classes, components and mixins to the same variables.</p>
 		<p>Ensure no numbers, colours or fonts are outside of _variables.scss. Page-specific .scss files are for mixins and responsive page layouts.</p>
 	</section>
 
 	<section class="box m-bottom">
 		<h2>Use a sass grid</h2>
-		<p class="t-size-large">Using <a href="http://neat.bourbon.io">Bourbon's Neat</a> allows us to scaffold our application using a minimal amount of meaningful names and then attach a responsive grid to it in your css file.</p>
+		<p class="t-large">Using <a href="http://neat.bourbon.io">Bourbon's Neat</a> allows us to scaffold our application using a minimal amount of meaningful names and then attach a responsive grid to it in your css file.</p>
 		<img src="neat.png" alt="" />
 	</section>
 
 	<section class="box m-bottom">
 		<h2>Use components</h2>
-		<p class="t-size-large">Most of DreamHost's interfaces can be broken down into the same components being used over and over again in different ways. (tables, boxes, forms, navs, buttons, etc.)</p>
+		<p class="t-large">Most of DreamHost's interfaces can be broken down into the same components being used over and over again in different ways. (tables, boxes, forms, navs, buttons, etc.)</p>
 		<p>When something is being used in multiple places in different contexts, it can be proposed to be turned into a component. Components can be identified by their <a href="http://getbem.com/introduction/">BEM-style</a> notation (except tables and lists).</p>
 		<p>Because all components and utility classes limit nesting and reference the same variables, it's trivial to add a component and then convert the individual implimentations over after.</p>
 		<img src="components.png" alt="" />
@@ -67,14 +67,14 @@
 
 	<section class="box m-bottom">
 		<h2>Use utility classes for page specifics</h2>
-		<p class="t-size-large">Use utility classes if a part of your application needs to adjust a font size, margin, padding or colour.</p>
+		<p class="t-large">Use utility classes if a part of your application needs to adjust a font size, margin, padding or colour.</p>
 		<p>This eliminates ambiguous classes and non-repeatable elements. Troubleshooting will be improved with everything having one single point of truth.</p>
 		<img src="utilities.png" />
 	</section>
 
 	<h1 class="t-center">Rules</h1>
 	<section class="box m-bottom">
-		<p class="t-size-large">When writing new code, there are certain rules that must be followed to esure we don't add technical debt and code bloat to this system.</p>
+		<p class="t-large">When writing new code, there are certain rules that must be followed to esure we don't add technical debt and code bloat to this system.</p>
 		<ul class="list list--bullets">
 			<li>No unsetting css</li>
 			<li>!important in _utilities.scss (and maybe /vendor) only</li>
