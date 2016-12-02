@@ -4,7 +4,7 @@
 // to steal as well
 // Also maybe these should be built using mixins, probably
 
-@mixin btn($background: #ffba00, $color: #664a00){
+@mixin btn($background: $yellow, $color: $black){
     background: $background;
     color: $color;
     text-decoration: none;

@@ -173,7 +173,7 @@ img { max-width: 100%; height: auto; }
 
 hr { border: 1px solid #f7f7f7; margin: 30px 0; }
 
-.btn { background: #ffba00; color: #664a00; text-decoration: none; border-radius: 2px; text-transform: uppercase; padding: 15px; display: inline-block; border: 0; font-size: 16px; }
+.btn { background: #ffba00; color: #2F323B; text-decoration: none; border-radius: 2px; text-transform: uppercase; padding: 15px; display: inline-block; border: 0; font-size: 16px; }
 
 .btn:hover { cursor: pointer; }
 
