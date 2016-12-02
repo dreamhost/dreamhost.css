@@ -271,15 +271,15 @@ Table
 */
 .table { width: 100%; margin-bottom: 30px; text-align: left; }
 
-.table thead tr { border-bottom: 3px solid #f7f7f7; }
+thead tr { border-bottom: 3px solid #f7f7f7; }
 
-.table th { padding: 30px 15px; font-size: 21px; font-family: "Ubuntu", sans-serif; color: #000; }
+th { padding: 30px 15px; font-size: 21px; font-family: "Ubuntu", sans-serif; color: #000; }
 
-.table tbody tr { border-bottom: 1px solid #f7f7f7; }
+tbody tr { border-bottom: 1px solid #f7f7f7; }
 
-.table tbody tr:nth-child(odd) { background: #fff; }
+tbody tr:nth-child(odd) { background: #fff; }
 
-.table td { padding: 15px; vertical-align: middle; }
+td { padding: 15px; vertical-align: middle; }
 
 .table--large-padding td { padding: 60px 30px; }
 

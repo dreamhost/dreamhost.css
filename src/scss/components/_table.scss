@@ -13,37 +13,32 @@ Table
 	width: 100%;
 	margin-bottom: $s;
 	text-align: left;
-
-	thead tr {
-		border-bottom: 3px solid $lightest-grey;
-	}
-
-	th {
-		padding: $s $s-small;
-		font-size: $h3;
-		font-family: $heading;
-		color: #000;
-	}
-
-	tbody tr {
-		border-bottom: 1px solid $lightest-grey;
-	}
-
-	tbody tr:nth-child(odd) {
-		background: #fff;
-	}
-
-	td {
-		padding: $s-small;
-		vertical-align: middle;
-	}
-
-	&--large-padding {
-		td {
-			padding: $s-large $s;
-		}
-	}
-
 }
 
+thead tr {
+	border-bottom: 3px solid $lightest-grey;
+}
 
+th {
+	padding: $s $s-small;
+	font-size: $h3;
+	font-family: $heading;
+	color: #000;
+}
+
+tbody tr {
+	border-bottom: 1px solid $lightest-grey;
+}
+
+tbody tr:nth-child(odd) {
+	background: #fff;
+}
+
+td {
+	padding: $s-small;
+	vertical-align: middle;
+}
+
+.table--large-padding td {
+	padding: $s-large $s;
+}
