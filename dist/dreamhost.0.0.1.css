@@ -311,35 +311,35 @@ Utilities
 */
 .u-clearfix::after { clear: both; content: ""; display: block; }
 
-.c-white { background: #fff !important; }
+.bg-white { background: #fff !important; }
 
-.c-black { background: #2F323B !important; }
+.bg-black { background: #2F323B !important; }
 
-.c-blue { background: #3675b4 !important; }
+.bg-blue { background: #3675b4 !important; }
 
-.c-red { background: #e74141 !important; }
+.bg-red { background: #e74141 !important; }
 
-.c-yellow { background: #ffba00 !important; }
+.bg-yellow { background: #ffba00 !important; }
 
-.c-light-grey { background: #858585 !important; }
+.bg-light-grey { background: #858585 !important; }
 
-.c-lighter-grey { background: #d1d1d1 !important; }
+.bg-lighter-grey { background: #d1d1d1 !important; }
 
-.c-lightest-grey { background: #f7f7f7 !important; }
+.bg-lightest-grey { background: #f7f7f7 !important; }
 
-.u-inline { display: inline !important; }
+.l-inline { display: inline !important; }
 
-.u-inline-block { display: inline-block !important; }
+.l-inline-block { display: inline-block !important; }
 
-.u-block { display: block !important; }
+.l-block { display: block !important; }
 
-.u-float-right { float: right !important; }
+.l-right { float: right !important; }
 
-.u-float-left { float: left !important; }
+.l-left { float: left !important; }
 
 .u-float-unset { float: none !important; }
 
-.u-centered { margin: 0 auto; }
+.l-centered { margin: 0 auto; }
 
 .row { padding: 0 60px; }
 
@@ -545,13 +545,13 @@ Utilities
 
 .t-heading { font-family: "Ubuntu", sans-serif !important; }
 
-.t-size-small { font-size: 14px !important; }
+.t-small { font-size: 14px !important; }
 
 .t-size { font-size: 16px !important; }
 
-.t-size-large { font-size: 21px !important; }
+.t-large { font-size: 21px !important; }
 
-.t-size-larger { font-size: 26px !important; }
+.t-larger { font-size: 26px !important; }
 
 .u-h1 { font-size: 40px !important; }
 
@@ -603,4 +603,4 @@ Utilities
 
 .u-vertical-align-top { vertical-align: bottom !important; }
 
-.u-maxwidth-640 { max-width: 640px !important; }
+.w-640px { max-width: 640px !important; }
