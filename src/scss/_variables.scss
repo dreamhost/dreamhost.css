@@ -1,13 +1,14 @@
-	// Variables
+/*
+	Variables
 
-	// To stay consistent, we set as many properties as variables as we can. We
-	// have five(???) options for margins and paddings and a something-point
-	// typographic scale. All colours should be defined in this file except #fff
-	// and #000.
+	To stay consistent, we set as many properties as variables as we can.
+	We have five(???) options for margins and paddings and a something-point typographic scale.
+	All colours should be defined in this file except #fff and #000.
 
-	// Look in utilities.scss for ways to use these same properties in html instead.
+	Look in utilities.scss for ways to use these same properties in html instead.
 
-	// Always use these variables when building components.
+	Always use these variables when building components.
+*/
 
 // Colours
 $black: #2F323B;
