@@ -69,9 +69,7 @@ gulp.task('dist', function(){
 
   return gulp.src('./src/scss/*.scss')
     .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
-    .pipe(prefix({
-			browsers: ['last 4 versions']
-		}))
+    .pipe(prefix({browsers: ['last 4 versions']}))
     .pipe(rename(file + '.css'))
     .pipe(gulp.dest(dest))
     .pipe(cleanCSS())
