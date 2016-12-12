@@ -4,10 +4,10 @@
 
 */
 @import url("https://fonts.googleapis.com/css?family=Ubuntu");
-/* Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
---------------------------------------------------------------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
+/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
 body { line-height: 1; }
@@ -145,7 +145,7 @@ hr { border: 1px solid #f7f7f7; margin: 30px 0; }
 	Currently set up with a sass grid but maybe it should be some sort of table or flexbox thing.
 
 */
-.header::after { clear: both; content: ""; display: block; }
+.header::after { clear: both; content: ""; display: table; }
 
 .header__logo { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
 
@@ -220,13 +220,17 @@ Utilities
 	Utilities are !important (see http://csswizardry.com/2016/05/the-importance-of-important/)
 
 */
-.u-clearfix::after { clear: both; content: ""; display: block; }
+.u-clearfix::after { clear: both; content: ""; display: table; }
 
 .bg-white, tbody tr:nth-child(odd), .option-box__content { background: #fff !important; }
 
 .bg-black, .header { background: #2F323B !important; }
 
 .bg-blue, .option-box__heading { background: #3675b4 !important; }
+
+.bg-light-blue { background: #528fcb; }
+
+.bg-dark-blue { background: #2a5c8d; }
 
 .bg-red { background: #e74141 !important; }
 
@@ -240,7 +244,7 @@ Utilities
 
 .container { max-width: 980px; margin-left: auto; margin-right: auto; }
 
-.container::after { clear: both; content: ""; display: block; }
+.container::after { clear: both; content: ""; display: table; }
 
 .g-1_6 { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
 

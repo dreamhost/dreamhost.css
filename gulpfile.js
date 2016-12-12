@@ -1,4 +1,5 @@
 var gulp        = require('gulp');
+var neat        = require('node-neat').includePaths;
 var browserSync = require('browser-sync').create();
 var cleanCSS    = require('gulp-clean-css');
 var sass        = require('gulp-sass');
@@ -45,7 +46,7 @@ gulp.task('styles', function () {
     	failAfterError: false,
       	reporters: [{formatter: 'string', console: true}]
     }))
-    .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
+    .pipe(sass({includePaths: neat, outputStyle: 'compact'}).on('error', sass.logError))
     .pipe(gulp.dest('./src/'))
     .pipe(browserSync.stream());
 });

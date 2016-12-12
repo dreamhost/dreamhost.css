@@ -6,7 +6,9 @@
     "type": "git",
     "url": "https://github.com/dreamhost/dreamhost.css.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-neat": "1.7.2"
+    },
   "devDependencies": {
     "gulp": "3.9",
     "gulp-clean-css": "2.0.13",
