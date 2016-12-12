@@ -1,5 +1,7 @@
-@import 'vendor/reset';
 @import 'vendor/remodal';
-@import "vendor/neat/neat-helpers";
+
+// Loaded via NPM
+@import 'bourbon';
+@import "neat-helpers";
 $max-width: 980px;
-@import "vendor/neat/neat";
+@import "neat";
