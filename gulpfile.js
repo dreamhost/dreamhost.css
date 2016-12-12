@@ -4,6 +4,7 @@ var browserSync = require('browser-sync').create();
 var cleanCSS    = require('gulp-clean-css');
 var sass        = require('gulp-sass');
 var stylelint 	= require('gulp-stylelint');
+var prefix 			= require('gulp-autoprefixer');
 var rename      = require('gulp-rename');
 var package     = require('./package.json');
 
@@ -69,6 +70,7 @@ gulp.task('dist', function(){
 
   return gulp.src('./src/scss/*.scss')
     .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
+    .pipe(prefix({browsers: ['last 4 versions']}))
     .pipe(rename(file + '.css'))
     .pipe(gulp.dest(dest))
     .pipe(cleanCSS())
