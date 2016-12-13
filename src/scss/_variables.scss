@@ -9,13 +9,31 @@
 // Always use these variables when building components.
 
 // Colours
-$black: #2F323B;
 $blue: #3675b4;
+$light-blue: lighten($blue, 10%);
+$dark-blue: darken($blue, 10%);
+
 $red: #e74141;
-$yellow: #ffba00;
-$light-grey: #858585;
+$light-red: lighten($red, 10%);
+$dark-red: darken($red, 10%);
+
+$yellow: #f1c40f;
+$light-yellow: lighten($yellow, 10%);
+$dark-yellow: darken($yellow, 10%);
+
+$green: #2ecc71;
+$light-green: lighten($green, 10%);
+$dark-green: darken($green, 10%);
+
+$light-grey: #999;
 $lighter-grey: #d1d1d1;
 $lightest-grey: #f7f7f7;
+
+$dark-grey: #888;
+$darker-grey: darken($dark-grey, 10%);
+$darkest-grey: darken($dark-grey, 20%);
+
+$black: #2F323B;
 
 // Spacing
 $s: 30px;
