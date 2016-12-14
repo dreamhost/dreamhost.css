@@ -22,7 +22,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* ========================================================================== Remodal's necessary styles ========================================================================== */
 /* Hide scroll bar */
-html.remodal-is-locked { overflow: hidden; touch-action: none; }
+html.remodal-is-locked { overflow: hidden; -ms-touch-action: none; touch-action: none; }
 
 /* Anti FOUC */
 .remodal, [data-remodal-id] { display: none; }
@@ -36,54 +36,69 @@ html.remodal-is-locked { overflow: hidden; touch-action: none; }
 .remodal-wrapper:after { display: inline-block; height: 100%; margin-left: -0.05em; content: ""; }
 
 /* Fix iPad, iPhone glitches */
-.remodal-overlay, .remodal-wrapper { backface-visibility: hidden; }
+.remodal-overlay, .remodal-wrapper { -webkit-backface-visibility: hidden; backface-visibility: hidden; }
 
 /* Necessary styles of the modal dialog */
-.remodal { position: relative; outline: none; text-size-adjust: 100%; }
+.remodal { position: relative; outline: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 .remodal-is-initialized { /* Disable Anti-FOUC */ display: inline-block; }
 
 /* ========================================================================== Remodal's default mobile first theme ========================================================================== */
 /* Default theme styles for the background */
-.remodal-bg.remodal-is-opening, .remodal-bg.remodal-is-opened { filter: blur(3px); }
+.remodal-bg.remodal-is-opening, .remodal-bg.remodal-is-opened { -webkit-filter: blur(3px); filter: blur(3px); }
 
 /* Default theme styles of the overlay */
 .remodal-overlay { background: rgba(43, 46, 56, 0.9); }
 
-.remodal-overlay.remodal-is-opening, .remodal-overlay.remodal-is-closing { animation-duration: 0.3s; animation-fill-mode: forwards; }
+.remodal-overlay.remodal-is-opening, .remodal-overlay.remodal-is-closing { -webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 
-.remodal-overlay.remodal-is-opening { animation-name: remodal-overlay-opening-keyframes; }
+.remodal-overlay.remodal-is-opening { -webkit-animation-name: remodal-overlay-opening-keyframes; animation-name: remodal-overlay-opening-keyframes; }
 
-.remodal-overlay.remodal-is-closing { animation-name: remodal-overlay-closing-keyframes; }
+.remodal-overlay.remodal-is-closing { -webkit-animation-name: remodal-overlay-closing-keyframes; animation-name: remodal-overlay-closing-keyframes; }
 
 /* Default theme styles of the wrapper */
 .remodal-wrapper { padding: 10px 10px 0; }
 
 /* Default theme styles of the modal dialog */
-.remodal { box-sizing: border-box; width: 100%; margin-bottom: 10px; padding: 35px; transform: translate3d(0, 0, 0); color: #2b2e38; background: #fff; }
+.remodal { box-sizing: border-box; width: 100%; margin-bottom: 10px; padding: 35px; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); color: #2b2e38; background: #fff; }
 
-.remodal.remodal-is-opening, .remodal.remodal-is-closing { animation-duration: 0.3s; animation-fill-mode: forwards; }
+.remodal.remodal-is-opening, .remodal.remodal-is-closing { -webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 
-.remodal.remodal-is-opening { animation-name: remodal-opening-keyframes; }
+.remodal.remodal-is-opening { -webkit-animation-name: remodal-opening-keyframes; animation-name: remodal-opening-keyframes; }
 
-.remodal.remodal-is-closing { animation-name: remodal-closing-keyframes; }
+.remodal.remodal-is-closing { -webkit-animation-name: remodal-closing-keyframes; animation-name: remodal-closing-keyframes; }
 
 /* Vertical align of the modal dialog */
 .remodal, .remodal-wrapper:after { vertical-align: middle; }
 
 /* Keyframes ========================================================================== */
-@keyframes remodal-opening-keyframes { from { transform: scale(1.05);
+@-webkit-keyframes remodal-opening-keyframes { from { -webkit-transform: scale(1.05); transform: scale(1.05);
     opacity: 0; }
-  to { transform: none;
+  to { -webkit-transform: none; transform: none;
+    opacity: 1; } }
+@keyframes remodal-opening-keyframes { from { -webkit-transform: scale(1.05); transform: scale(1.05);
+    opacity: 0; }
+  to { -webkit-transform: none; transform: none;
     opacity: 1; } }
 
-@keyframes remodal-closing-keyframes { from { transform: scale(1);
+@-webkit-keyframes remodal-closing-keyframes { from { -webkit-transform: scale(1); transform: scale(1);
     opacity: 1; }
-  to { transform: scale(0.95);
+  to { -webkit-transform: scale(0.95); transform: scale(0.95);
     opacity: 0; } }
+
+@keyframes remodal-closing-keyframes { from { -webkit-transform: scale(1); transform: scale(1);
+    opacity: 1; }
+  to { -webkit-transform: scale(0.95); transform: scale(0.95);
+    opacity: 0; } }
+
+@-webkit-keyframes remodal-overlay-opening-keyframes { from { opacity: 0; }
+  to { opacity: 1; } }
 
 @keyframes remodal-overlay-opening-keyframes { from { opacity: 0; }
   to { opacity: 1; } }
+
+@-webkit-keyframes remodal-overlay-closing-keyframes { from { opacity: 1; }
+  to { opacity: 0; } }
 
 @keyframes remodal-overlay-closing-keyframes { from { opacity: 1; }
   to { opacity: 0; } }
@@ -100,56 +115,11 @@ html { box-sizing: border-box; }
 
 *, *::after, *::before { box-sizing: inherit; }
 
-/*
-
-	Variables
-
-	To stay consistent, we set as many properties as variables as we can. We
-	have five(???) options for margins and paddings and a something-point
-	typographic scale. All colours should be defined in this file except #fff
-	and #000.
-
-	Look in utilities.scss for ways to use these same properties in html instead.
-
-	Always use these variables when building components.
-
-*/
-/* Box This mixin can be used in your scss to add a padded style to your content. Include it as a mixin on your meaningful classes so you can also apply specific, unrelated styles. To save time you can also use the class .box directly in your HTML. Usage [HTML] <section class="thing thing--background"> <h2>Heading</h2> <p>Content</p> <a href="#" class="btn">CTA</a> </section> Usage [CSS] .thing { @include box; } */
 .box { padding: 30px; background: #fff; }
 
 .box *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
-/*
-
-	Font face
-
-	taken from https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
-
-	usage: @include font-face(FontName, fonts/FontName);
-
-*/
-/* unlink
-
-	Sometimes we want to pretend like things aren't links e.g when active
-
-*/
-/*
-
-	Link
-
-	Makes something act like a link. Use 'invert' as a paramater to invert the colours.
-
-*/
-/*
-
-	Font face
-
-	taken from https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
-
-	usage: @include font-face(FontName, fonts/FontName);
-
-*/
-body { background: #f7f7f7; -webkit-font-smoothing: antialiased; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; }
+body { background: #f7f7f7; font-smoothing: antialiased; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; }
 
 h1, h2, h3, h4 { font-family: "Ubuntu", sans-serif; font-weight: 100; line-height: 1.6; }
 
