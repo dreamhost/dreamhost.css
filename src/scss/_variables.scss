@@ -10,14 +10,18 @@
 
 // Colours
 $blue: #3675b4;
-$light-blue: lighten($blue, 10%);
-$dark-blue: darken($blue, 10%);
+$light-blue: rgb(62,149,190);
+$dark-blue: rgb(30,50,68);
+
+$peach: rgb(241,102,107);
+$dark-peach: darken($peach, 10%);
+$light-peach: lighten($peach, 10%);
 
 $red: #e74141;
 $light-red: lighten($red, 10%);
 $dark-red: darken($red, 10%);
 
-$yellow: #f1c40f;
+$yellow: rgb(250,162,36);
 $light-yellow: lighten($yellow, 10%);
 $dark-yellow: darken($yellow, 10%);
 
@@ -57,4 +61,4 @@ $h2: 26px;
 $h3: $t-larger;
 $h4: $t-large;
 
-$border-size: 2px;
+$border-size: 3px;
