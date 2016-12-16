@@ -40,7 +40,12 @@ gulp.task('serve', ['styles'], function() {
 */
 
 gulp.task('lint', function() {
-	return gulp.src(['./src/scss/*.scss', '!./src/scss/_defaults.scss', '!./src/scss/_reset.scss'])
+	return gulp.src([
+		'./src/scss/*.scss',
+		'!./src/scss/_defaults.scss',
+		'!./src/scss/_reset.scss',
+		'!./src/scss/_variables.scss'
+	])
 	.pipe(stylelint({
 		failAfterError: false,
 		reporters: [{formatter: 'string', console: true}]
