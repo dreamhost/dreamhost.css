@@ -32,21 +32,33 @@ gulp.task('serve', ['styles'], function() {
 
 /*
 
-  ## gulp styles
+	## gulp style linting
 
-  1. Lint scss and log errors to console
-  2. Compile sass
-  3. Add minified, versioned(TODO) file to /dist folder
-  4. Inject into browser with BrowserSync
+	1. Lint sass and log any errors to the console.
+	2. Ignore defaults.scss and reset.scss
 
 */
 
-gulp.task('styles', function () {
+gulp.task('lint', function() {
+	return gulp.src(['./src/scss/*.scss', '!./src/scss/_defaults.scss', '!./src/scss/_reset.scss'])
+	.pipe(stylelint({
+		failAfterError: false,
+		reporters: [{formatter: 'string', console: true}]
+  }));
+});
+
+/*
+
+  ## gulp styles
+
+  1. Compile sass
+  2. Add minified, versioned(TODO) file to /dist folder
+  3. Inject into browser with BrowserSync
+
+*/
+
+gulp.task('styles', ['lint'], function () {
   return gulp.src('./src/scss/*.scss')
-    .pipe(stylelint({
-    	failAfterError: false,
-      	reporters: [{formatter: 'string', console: true}]
-    }))
     .pipe(sass({includePaths: neat, outputStyle: 'compact'}).on('error', sass.logError))
     .pipe(gulp.dest('./src/'))
     .pipe(browserSync.stream());
