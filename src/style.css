@@ -349,7 +349,7 @@ Utilities
 */
 .m-none { margin: 0 !important; }
 
-.m-auto { margin: auto !important; }
+.m-auto { margin-left: auto !important; margin-right: auto !important; }
 
 .m-smaller { margin: 7.5px !important; }
 

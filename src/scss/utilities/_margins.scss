@@ -9,7 +9,7 @@
 */
 
 .m-none {margin: 0 !important}
-.m-auto {margin: auto !important}
+.m-auto {margin-left: auto !important; margin-right: auto !important}
 .m-smaller {margin: $s-smaller !important}
 .m-small {margin: $s-small !important}
 .m {margin: $s !important}
