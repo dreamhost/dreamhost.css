@@ -349,6 +349,8 @@ Utilities
 */
 .m-none { margin: 0 !important; }
 
+.m-auto { margin: auto !important; }
+
 .m-smaller { margin: 7.5px !important; }
 
 .m-small { margin: 15px !important; }
