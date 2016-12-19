@@ -86,7 +86,7 @@ gulp.task('dist', function(){
       dest = './dist';
 
   return gulp.src('./src/scss/*.scss')
-    .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
+    .pipe(sass({includePaths: neat, outputStyle: 'compact'}).on('error', sass.logError))
     .pipe(prefix({browsers: ['last 4 versions']}))
     .pipe(rename(file + '.css'))
     .pipe(gulp.dest(dest))
