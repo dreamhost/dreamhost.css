@@ -1,30 +1,44 @@
 {
-  "name": "dreamhost-css",
-  "version": "0.0.1",
-  "description": "DreamHost's CSS framework",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dreamhost/dreamhost.css.git"
-  },
-  "dependencies": {
-    "node-neat": "1.7.2"
-    },
-  "devDependencies": {
-    "gulp": "3.9",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "2.0.13",
-    "gulp-rename": "1.2.2",
-    "gulp-sass": "2.3",
-    "gulp-stylelint": "3.4.0",
-    "browser-sync": "2.18.1"
-  },
-  "private": true,
-  "license": "Unlicensed",
-  "stylelint": {
-    "rules": {
-      "selector-max-empty-lines": 0,
-      "selector-max-specificity": "0,2,0",
-      "indentation": "tab"
-    }
-  }
+	"name": "dreamhost-css",
+	"version": "0.0.1",
+	"description": "DreamHost's CSS framework",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dreamhost/dreamhost.css.git"
+	},
+	"dependencies": {
+		"node-neat": "1.7.2"
+	},
+	"devDependencies": {
+		"gulp": "3.9",
+		"gulp-autoprefixer": "^3.1.1",
+		"gulp-clean-css": "2.0.13",
+		"gulp-rename": "1.2.2",
+		"gulp-sass": "2.3",
+		"gulp-stylelint": "3.4.0",
+		"browser-sync": "2.18.1"
+	},
+	"private": true,
+	"license": "Unlicensed",
+	"stylelint": {
+		"rules": {
+			"selector-no-id": true,
+			"selector-no-type": true,
+			"selector-max-empty-lines": 0,
+			"selector-max-specificity": "0,2,0",
+			"rule-nested-empty-line-before": ["always", {
+				"except": ["first-nested"],
+				"ignore": ["after-comment"]
+			}],
+			"no-missing-end-of-source-newline": true,
+			"no-eol-whitespace": true,
+			"no-extra-semicolons": true,
+			"no-duplicate-selectors": true,
+			"color-no-hex": true,
+			"comment-no-empty": true,
+			"length-zero-no-unit": true,
+			"value-no-vendor-prefix": true,
+			"indentation": "tab"
+		}
+	}
 }
