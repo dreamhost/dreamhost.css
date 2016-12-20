@@ -3,5 +3,9 @@
 // Loaded via NPM
 @import 'bourbon';
 @import "neat-helpers";
+
+/* stylelint-disable */
 $max-width: 980px;
+/* stylelint-enable */
+
 @import "neat";
