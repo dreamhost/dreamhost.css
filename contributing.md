@@ -2,15 +2,6 @@ DreamHost.css
 
 Thanks for contributing to DreamHost.css. Please start by [reading the documentation](http://dreamhost.github.io/dreamhost.css).
 
-## Building DreamHost.css
-
-Make sure you have [NPM](http://blog.npmjs.org/post/85484771375/how-to-install-npm) and [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) installed and then:
-
-1. `npm install`
-2. `gulp`
-
-The BrowserSync server will be running at `http://localhost:9999`. See gulpfile.js for more details.
-
 ## HTML Guidelines
 
 [@mdo HTML Guidelines](http://codeguide.co/#html)
