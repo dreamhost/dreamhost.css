@@ -605,6 +605,10 @@ Utilities
 
 .t-italic { font-weight: italic; }
 
+.t-transform-uppercase { text-transform: uppercase !important; }
+
+.t-transform-none { text-transform: none !important; }
+
 .t-line-height-1 { line-height: 1 !important; }
 
 .border, .form__input, tbody tr { border: 1px solid #f7f7f7 !important; }
