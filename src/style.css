@@ -605,7 +605,7 @@ Utilities
 
 .t-italic { font-weight: italic; }
 
-.t-uppercase { text-transform: uppercase !important; }
+.t-transform-uppercase { text-transform: uppercase !important; }
 
 .t-transform-none { text-transform: none !important; }
 
