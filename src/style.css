@@ -125,10 +125,10 @@ Animation Mixins
 
 /*
 
-Animation Mixins
+Transition Mixins
 
   A collection of Mixins that you can use in your scss to create and
-  control animations.
+  control transitions.
 
   Usage:
   .thing {
@@ -225,11 +225,11 @@ Animation Components
   </div>
 
 */
-.a-spin-right { -moz-animation: spin 1s infinite linear; -ms-animation: spin 1s infinite linear; -webkit-animation: spin 1s infinite linear; animation: spin 1s infinite linear; }
+.a-spin-right { -moz-animation: spin 2s infinite linear; -ms-animation: spin 2s infinite linear; -webkit-animation: spin 2s infinite linear; animation: spin 2s infinite linear; }
 
-.a-spin-left { -moz-animation: spin 1s infinite linear reverse; -ms-animation: spin 1s infinite linear reverse; -webkit-animation: spin 1s infinite linear reverse; animation: spin 1s infinite linear reverse; }
+.a-spin-left { -moz-animation: spin 2s infinite linear reverse; -ms-animation: spin 2s infinite linear reverse; -webkit-animation: spin 2s infinite linear reverse; animation: spin 2s infinite linear reverse; }
 
-.a-bounce { -moz-animation: bounce 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1); -ms-animation: bounce 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1); -webkit-animation: bounce 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1); animation: bounce 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1); }
+.a-bounce { -moz-animation: bounce 2s infinite cubic-bezier(0.075, 0.82, 0.165, 1); -ms-animation: bounce 2s infinite cubic-bezier(0.075, 0.82, 0.165, 1); -webkit-animation: bounce 2s infinite cubic-bezier(0.075, 0.82, 0.165, 1); animation: bounce 2s infinite cubic-bezier(0.075, 0.82, 0.165, 1); }
 
 @keyframes spin { 0% { -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -344,14 +344,13 @@ Transition Components
   </div>
 
 */
-/* Scale on hover Althought these have scaling animations, they also use a transition to the hover state. Therefore, the easing and duration are controlled as transitions. */
-.tr-scale-up-hover { -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; transition-duration: 0.3s; }
+.tr-scale-up-hover { -webkit-transition-duration: 0.1s; -moz-transition-duration: 0.1s; transition-duration: 0.1s; }
 
-.tr-scale-up-hover:hover { -moz-transform: scale(1.2); -ms-transform: scale(1.2); -webkit-transform: scale(1.2); transform: scale(1.2); }
+.tr-scale-up-hover:hover { -moz-transform: scale(1.1); -ms-transform: scale(1.1); -webkit-transform: scale(1.1); transform: scale(1.1); }
 
-.tr-scale-down-hover { -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; transition-duration: 0.3s; }
+.tr-scale-down-hover { -webkit-transition-duration: 0.1s; -moz-transition-duration: 0.1s; transition-duration: 0.1s; }
 
-.tr-scale-down-hover:hover { -moz-transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8); transform: scale(0.8); }
+.tr-scale-down-hover:hover { -moz-transform: scale(0.9); -ms-transform: scale(0.9); -webkit-transform: scale(0.9); transform: scale(0.9); }
 
 /*
 
@@ -373,9 +372,9 @@ Utilities
 
 Animation Utilities
 
-  These are pre-defined speeds and easings that can be used to override
-  the default values for each property of an animation. Use them together
-  with animation components from scss/components/_animations.scss.
+  These classes can be used to override the default values for each property
+  of an animation. Use them together with animation components from
+  scss/components/_animations.scss.
 
   Usage:
   <div class="a-bounce a-duration-xl a-easing-cb-scale-out">
@@ -385,30 +384,18 @@ Animation Utilities
   </div>
 
 */
-/*
-Timing
-Timings are t-shirt sized. (s)mall is the shortest duration, and (xxl)tra
-Large is the longest. Try to stick to these pre-defined timings. They help
-us maintain consistency, usability, and accessibility. For immediate
-(zero second) animations, you can use .a-duration-0.
-*/
 .a-duration-0 { -moz-animation-duration: 0s; -ms-animation-duration: 0s; -webkit-animation-duration: 0s; animation-duration: 0s; }
 
-.a-duration-s { -moz-animation-duration: 80ms; -ms-animation-duration: 80ms; -webkit-animation-duration: 80ms; animation-duration: 80ms; }
+.a-duration-s { -moz-animation-duration: 0.3s; -ms-animation-duration: 0.3s; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; }
 
-.a-duration-m { -moz-animation-duration: 0.15s; -ms-animation-duration: 0.15s; -webkit-animation-duration: 0.15s; animation-duration: 0.15s; }
+.a-duration-m { -moz-animation-duration: 0.5s; -ms-animation-duration: 0.5s; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; }
 
-.a-duration-l { -moz-animation-duration: 0.3s; -ms-animation-duration: 0.3s; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; }
+.a-duration-l { -moz-animation-duration: 1s; -ms-animation-duration: 1s; -webkit-animation-duration: 1s; animation-duration: 1s; }
 
-.a-duration-xl { -moz-animation-duration: 0.5s; -ms-animation-duration: 0.5s; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; }
+.a-duration-xl { -moz-animation-duration: 1.5s; -ms-animation-duration: 1.5s; -webkit-animation-duration: 1.5s; animation-duration: 1.5s; }
 
-.a-duration-xxl { -moz-animation-duration: 1s; -ms-animation-duration: 1s; -webkit-animation-duration: 1s; animation-duration: 1s; }
+.a-duration-xxl { -moz-animation-duration: 2s; -ms-animation-duration: 2s; -webkit-animation-duration: 2s; animation-duration: 2s; }
 
-/*
-Easing
-Linear, ease-in-out, and a few pre-definted cubic-bezier curves that,
-well, just look pimp.
-*/
 .a-easing-linear { -moz-animation-timing-function: linear; -ms-animation-timing-function: linear; -webkit-animation-timing-function: linear; animation-timing-function: linear; }
 
 .a-easing-ease { -moz-animation-timing-function: ease-in-out; -ms-animation-timing-function: ease-in-out; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
@@ -681,9 +668,9 @@ well, just look pimp.
 
 Transition Utilities
 
-  These are pre-defined speeds and easings that can be used to override
-  the default values for each property of an animation. Use them together
-  with animation components from scss/components/_transitions.scss.
+  These classes can be used to override the default values for each property
+  of a transition. Use them together with transition components from
+  scss/components/_transitions.scss.
 
   Usage:
   <div class="tr-scale-up-hover tr-duration-xl tr-easing-cb-scale-out">
@@ -693,30 +680,18 @@ Transition Utilities
   </div>
 
 */
-/*
-Timing
-Timings are t-shirt sized. (s)mall is the shortest duration, and (xxl)tra
-Large is the longest. Try to stick to these pre-defined timings. They help
-us maintain consistency, usability, and accessibility. For immediate
-(zero second) transitions, you can use .tr-duration-0.
-*/
 .tr-duration-0 { -moz-transition-duration: 0s; -ms-transition-duration: 0s; -webkit-transition-duration: 0s; transition-duration: 0s; }
 
-.tr-duration-s { -moz-transition-duration: 80ms; -ms-transition-duration: 80ms; -webkit-transition-duration: 80ms; transition-duration: 80ms; }
+.tr-duration-s { -moz-transition-duration: 0.05s; -ms-transition-duration: 0.05s; -webkit-transition-duration: 0.05s; transition-duration: 0.05s; }
 
-.tr-duration-m { -moz-transition-duration: 0.15s; -ms-transition-duration: 0.15s; -webkit-transition-duration: 0.15s; transition-duration: 0.15s; }
+.tr-duration-m { -moz-transition-duration: 0.07s; -ms-transition-duration: 0.07s; -webkit-transition-duration: 0.07s; transition-duration: 0.07s; }
 
-.tr-duration-l { -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
+.tr-duration-l { -moz-transition-duration: 0.1s; -ms-transition-duration: 0.1s; -webkit-transition-duration: 0.1s; transition-duration: 0.1s; }
 
-.tr-duration-xl { -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; }
+.tr-duration-xl { -moz-transition-duration: 0.2s; -ms-transition-duration: 0.2s; -webkit-transition-duration: 0.2s; transition-duration: 0.2s; }
 
-.tr-duration-xxl { -moz-transition-duration: 1s; -ms-transition-duration: 1s; -webkit-transition-duration: 1s; transition-duration: 1s; }
+.tr-duration-xxl { -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
 
-/*
-Easing
-Linear, ease-in-out, and a few pre-definted cubic-bezier curves that,
-well, just look pimp.
-*/
 .tr-easing-linear { -moz-transition-timing-function: linear; -ms-transition-timing-function: linear; -webkit-transition-timing-function: linear; transition-timing-function: linear; }
 
 .tr-easing-ease { -moz-transition-timing-function: ease-in-out; -ms-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; }
