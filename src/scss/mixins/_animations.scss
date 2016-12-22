@@ -1,20 +1,24 @@
-  // Animation Mixins
+/*
 
-  // A collection of Mixins that you can use in your scss to create and
-  // control animations.
+Animation Mixins
 
-  // Usage:
-  // .thing {
-  //   @include a-duration($a-fast);
-  //   @include a-easing($a-easing-linear);
-  //   @include animation(spin, $a-slow, $a-spin-duration, $a-easing-linear);
-  //   @include transition(all, $a-duration, $a-easing);
-  //   @include scale($a-scale);
-  //   @include rotate(40);
-  //   @include translate(3, 5);
-  //   @include skew(3, 5);
-  //   @include transform-origin(top left);
-  // }
+  A collection of Mixins that you can use in your scss to create and
+  control animations.
+
+  Usage:
+  .thing {
+    @include a-duration($a-fast);
+    @include a-easing($a-easing-linear);
+    @include animation(spin, $a-slow, $a-spin-duration, $a-easing-linear);
+    @include transition(all, $a-duration, $a-easing);
+    @include scale($a-scale);
+    @include rotate(40);
+    @include translate(3, 5);
+    @include skew(3, 5);
+    @include transform-origin(top left);
+  }
+
+*/
 
 // Timing - controls how fast your animation runs
 @mixin a-duration($timing) {
