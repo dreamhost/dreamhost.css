@@ -2,9 +2,9 @@
 
 Transition Utilities
 
-  These are pre-defined speeds and easings that can be used to override
-  the default values for each property of an animation. Use them together
-  with animation components from scss/components/_transitions.scss.
+  These classes can be used to override the default values for each property
+  of a transition. Use them together with transition components from
+  scss/components/_transitions.scss.
 
   Usage:
   <div class="tr-scale-up-hover tr-duration-xl tr-easing-cb-scale-out">
@@ -16,14 +16,8 @@ Transition Utilities
 */
 
 
-/*
-Timing
-Timings are t-shirt sized. (s)mall is the shortest duration, and (xxl)tra
-Large is the longest. Try to stick to these pre-defined timings. They help
-us maintain consistency, usability, and accessibility. For immediate
-(zero second) transitions, you can use .tr-duration-0.
-*/
 
+// Duration
 .tr-duration-0 {
   @include tr-duration(0s);
 }
@@ -49,28 +43,24 @@ us maintain consistency, usability, and accessibility. For immediate
 }
 
 
-/*
-Easing
-Linear, ease-in-out, and a few pre-definted cubic-bezier curves that,
-well, just look pimp.
-*/
 
+// Easing
 .tr-easing-linear {
-  @include tr-easing($a-easing-linear);
+  @include tr-easing(linear);
 }
 
 .tr-easing-ease {
-  @include tr-easing($a-easing);
+  @include tr-easing($tr-easing);
 }
 
 .tr-easing-cb-scale-in {
-  @include tr-easing($a-easing-cb-scale-in);
+  @include tr-easing(cubic-bezier(0,.89,.44,1));
 }
 
 .tr-easing-cb-scale-out {
-  @include tr-easing($a-easing-cb-scale-out);
+  @include tr-easing(cubic-bezier(.165,.84,.44,1));
 }
 
 .tr-easing-cb-scale-up {
-  @include tr-easing($a-easing-cb-scale-up);
+  @include tr-easing(cubic-bezier(.68,-.55,.265,1.55));
 }

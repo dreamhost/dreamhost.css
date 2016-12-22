@@ -14,12 +14,8 @@ Transition Components
 
 */
 
-/*
-Scale on hover
-  Althought these have scaling animations, they also use a transition to the
-  hover state. Therefore, the easing and duration are controlled as
-  transitions.
-*/
+
+// Scale on hover
 .tr-scale-up-hover {
   @include transition-duration($tr-duration);
 

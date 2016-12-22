@@ -17,17 +17,17 @@ Animation Components
 
 // Spin
 .a-spin-right {
-  @include animation(spin, $a-slowest, $a-spin-duration, $a-easing-linear);
+  @include animation(spin, $a-slowest, $a-spin-duration, linear);
 }
 
 .a-spin-left {
-  @include animation(spin, $a-slowest, $a-spin-duration, $a-easing-linear reverse);
+  @include animation(spin, $a-slowest, $a-spin-duration, linear reverse);
 }
 
 
 // Bounce
 .a-bounce {
-  @include animation(bounce, $a-slowest, $a-bounce-duration, $a-easing-cb-bounce);
+  @include animation(bounce, $a-slowest, $a-bounce-duration, cubic-bezier(.075,.82,.165,1));
 }
 
 

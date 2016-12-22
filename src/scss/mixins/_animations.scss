@@ -19,7 +19,7 @@ Animation Mixins
 
 */
 
-// Timing - controls how fast your animation runs
+// Duration - controls how fast your animation runs
 @mixin a-duration($timing) {
   -moz-animation-duration: $timing;
   -ms-animation-duration: $timing;
@@ -35,7 +35,7 @@ Animation Mixins
   animation-timing-function: $type;
 }
 
-// Animation - build a custom animation with this mixin
+// Animation - basic animation mixin
 @mixin animation($name, $duration, $length, $easing) {
   -moz-animation: $name $duration $length $easing;
   -ms-animation: $name $duration $length $easing;
@@ -43,8 +43,7 @@ Animation Mixins
   animation: $name $duration $length $easing;
 }
 
-// Transforms - shouldn't need to use this too often. This is mostly a
-// reference for the Mixins below.
+// Transforms
 @mixin transform($transforms) {
   -moz-transform: $transforms;
 	-ms-transform: $transforms;

@@ -14,7 +14,7 @@ Transition Mixins
 
 */
 
-// Timing - controls how fast your transition runs
+// Duration - controls how fast your transition runs
 @mixin tr-duration($timing) {
   -moz-transition-duration: $timing;
   -ms-transition-duration: $timing;
@@ -30,7 +30,7 @@ Transition Mixins
   transition-timing-function: $type;
 }
 
-// Transition - use for transitional effects
+// Transition - basic transition mixin
 @mixin transition($property, $time, $method) {
   -moz-transition: $property $time $method;
   -ms-transition: $property $time $method;

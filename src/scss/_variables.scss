@@ -63,39 +63,37 @@ $h4: $t-large;
 
 $border-size: 3px;
 
-// Animation Timing
-$a-fastest: 80ms;
-$a-fast: .15s;
-$a-duration: .3s;
-$a-slow: .5s;
-$a-slowest: 1s;
+// Animation Duration
+$a-fastest: .3s;
+$a-fast: .5s;
+$a-duration: 1s;
+$a-slow: 1.5s;
+$a-slowest: 2s;
 
-// Transition Timing
-$tr-fastest: 80ms;
-$tr-fast: .15s;
-$tr-duration: .3s;
-$tr-slow: .5s;
-$tr-slowest: 1s;
+// Transition Duration
+$tr-fastest: .05s;
+$tr-fast: .07s;
+$tr-duration: .1s;
+$tr-slow: .2s;
+$tr-slowest: .3s;
 
 // Animation Easing
-$a-easing-linear: linear;
 $a-easing: ease-in-out;
-$a-easing-cb-scale-in: cubic-bezier(0,.89,.44,1);
-$a-easing-cb-scale-out: cubic-bezier(.165,.84,.44,1);
-$a-easing-cb-scale-up: cubic-bezier(.68,-.55,.265,1.55);
-$a-easing-cb-bounce: cubic-bezier(.075,.82,.165,1);
 
-// Animation Spin
+// Transition Easing
+$tr-easing: ease-in-out;
+
+// Animation: Spin
 $a-spin-duration: infinite;
 $a-spin-start: 0;
 $a-spin-end: 360;
 
-// Animation Bounce
+// Animation: Bounce
 $a-bounce-duration: infinite;
 $a-bounce-1st: -5px;
 $a-bounce-2nd: -3px;
 
-// Animation Scale
-$a-scale-down: .8;
+// Animation: Scale
+$a-scale-down: .9;
 $a-scale: 1;
-$a-scale-up: 1.2;
+$a-scale-up: 1.1;
