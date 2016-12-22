@@ -10,7 +10,6 @@ Animation Mixins
     @include a-duration($a-fast);
     @include a-easing($a-easing-linear);
     @include animation(spin, $a-slow, $a-spin-duration, $a-easing-linear);
-    @include transition(all, $a-duration, $a-easing);
     @include scale($a-scale);
     @include rotate(40);
     @include translate(3, 5);
@@ -22,10 +21,6 @@ Animation Mixins
 
 // Timing - controls how fast your animation runs
 @mixin a-duration($timing) {
-  -moz-transition-duration: $timing;
-  -ms-transition-duration: $timing;
-  -webkit-transition-duration: $timing;
-  transition-duration: $timing;
   -moz-animation-duration: $timing;
   -ms-animation-duration: $timing;
   -webkit-animation-duration: $timing;
@@ -34,10 +29,6 @@ Animation Mixins
 
 // Easing - controls the way that your animation tweens
 @mixin a-easing($type) {
-  -moz-transition-timing-function: $type;
-  -ms-transition-timing-function: $type;
-  -webkit-transition-timing-function: $type;
-  transition-timing-function: $type;
   -moz-animation-timing-function: $type;
   -ms-animation-timing-function: $type;
   -webkit-animation-timing-function: $type;
@@ -52,14 +43,6 @@ Animation Mixins
   animation: $name $duration $length $easing;
 }
 
-// Transition - use for transitional effects
-@mixin transition($property, $time, $method) {
-  -moz-transition: $property $time $method;
-  -ms-transition: $property $time $method;
-  -webkit-transition: $property $time $method;
-  transition: $property $time $method;
-}
-
 // Transforms - shouldn't need to use this too often. This is mostly a
 // reference for the Mixins below.
 @mixin transform($transforms) {
@@ -70,7 +53,7 @@ Animation Mixins
 }
 
 // Rotate
-@mixin rotate ($deg) {
+@mixin rotate($deg) {
   @include transform(rotate(#{$deg}deg));
 }
 
@@ -80,17 +63,17 @@ Animation Mixins
 }
 
 // Translate
-@mixin translate ($x, $y) {
+@mixin translate($x, $y) {
   @include transform(translate($x, $y));
 }
 
 // Skew
-@mixin skew ($x, $y) {
+@mixin skew($x, $y) {
   @include transform(skew(#{$x}deg, #{$y}deg));
 }
 
 // Transform origin
-@mixin transform-origin ($origin) {
+@mixin transform-origin($origin) {
   -moz-transform-origin: $origin;
 	-ms-transform-origin: $origin;
 	-webkit-transform-origin: $origin;

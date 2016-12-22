@@ -99,10 +99,45 @@ html { box-sizing: border-box; }
 
 *, *::after, *::before { box-sizing: inherit; }
 
+/*
+
+Animation Mixins
+
+  A collection of Mixins that you can use in your scss to create and
+  control animations.
+
+  Usage:
+  .thing {
+    @include a-duration($a-fast);
+    @include a-easing($a-easing-linear);
+    @include animation(spin, $a-slow, $a-spin-duration, $a-easing-linear);
+    @include scale($a-scale);
+    @include rotate(40);
+    @include translate(3, 5);
+    @include skew(3, 5);
+    @include transform-origin(top left);
+  }
+
+*/
 .box { padding: 30px; background: #fff; }
 
 .box *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
+/*
+
+Animation Mixins
+
+  A collection of Mixins that you can use in your scss to create and
+  control animations.
+
+  Usage:
+  .thing {
+    @include tr-duration($tr-fast);
+    @include tr-easing($tr-easing-linear);
+    @include transition(all, $tr-duration, $tr-easing);
+  }
+
+*/
 body { background: #f7f7f7; font-smoothing: antialiased; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; }
 
 h1, h2, h3, h4 { font-family: "Ubuntu", sans-serif; font-weight: 100; line-height: 1.6; }
@@ -175,14 +210,21 @@ hr { border: 1px solid #f7f7f7; margin: 30px 0; }
 
 @font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-bi-webfont.eot"); src: url("fonts/ubuntu/ubuntu-bi-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-bi-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-bi-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-bi-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-bi-webfont.svg#ubuntubold_italic") format("svg"); font-weight: bold; font-style: italic; }
 
-.a-scale-up-hover { -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -moz-animation-duration: 0.3s; -ms-animation-duration: 0.3s; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; }
+/*
 
-.a-scale-up-hover:hover { -moz-transform: scale(1.2); -ms-transform: scale(1.2); -webkit-transform: scale(1.2); transform: scale(1.2); }
+Animation Components
 
-.a-scale-down-hover { -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -moz-animation-duration: 0.3s; -ms-animation-duration: 0.3s; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; }
+  These styles define the types of animations that we use, and default
+  values for each of their properties. Use utility classes from
+  scss/utilities/_animations.scss to override specific animation
+  properties.
 
-.a-scale-down-hover:hover { -moz-transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8); transform: scale(0.8); }
+  Usage:
+  <div class="a-bounce">
+    This is a bouncing div
+  </div>
 
+*/
 .a-spin-right { -moz-animation: spin 1s infinite linear; -ms-animation: spin 1s infinite linear; -webkit-animation: spin 1s infinite linear; animation: spin 1s infinite linear; }
 
 .a-spin-left { -moz-animation: spin 1s infinite linear reverse; -ms-animation: spin 1s infinite linear reverse; -webkit-animation: spin 1s infinite linear reverse; animation: spin 1s infinite linear reverse; }
@@ -289,6 +331,30 @@ thead tr { border-bottom: 3px solid #f7f7f7; }
 
 /*
 
+Transition Components
+
+  These styles define the types of transitions that we use, and default
+  values for each of their properties. Use utility classes from
+  scss/utilities/_transitions.scss to override specific transition
+  properties.
+
+  Usage:
+  <div class="tr-scale-up-hover">
+    This div scales up on hover
+  </div>
+
+*/
+/* Scale on hover Althought these have scaling animations, they also use a transition to the hover state. Therefore, the easing and duration are controlled as transitions. */
+.tr-scale-up-hover { -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; transition-duration: 0.3s; }
+
+.tr-scale-up-hover:hover { -moz-transform: scale(1.2); -ms-transform: scale(1.2); -webkit-transform: scale(1.2); transform: scale(1.2); }
+
+.tr-scale-down-hover { -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; transition-duration: 0.3s; }
+
+.tr-scale-down-hover:hover { -moz-transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8); transform: scale(0.8); }
+
+/*
+
 Utilities
 
 	Use these classes in your HTML to make non-repeatable styles. This saves
@@ -303,27 +369,55 @@ Utilities
 	Utilities are !important (see http://csswizardry.com/2016/05/the-importance-of-important/)
 
 */
-.a-duration-0 { -moz-transition-duration: 0s; -ms-transition-duration: 0s; -webkit-transition-duration: 0s; transition-duration: 0s; -moz-animation-duration: 0s; -ms-animation-duration: 0s; -webkit-animation-duration: 0s; animation-duration: 0s; }
+/*
 
-.a-duration-s { -moz-transition-duration: 80ms; -ms-transition-duration: 80ms; -webkit-transition-duration: 80ms; transition-duration: 80ms; -moz-animation-duration: 80ms; -ms-animation-duration: 80ms; -webkit-animation-duration: 80ms; animation-duration: 80ms; }
+Animation Utilities
 
-.a-duration-m { -moz-transition-duration: 0.15s; -ms-transition-duration: 0.15s; -webkit-transition-duration: 0.15s; transition-duration: 0.15s; -moz-animation-duration: 0.15s; -ms-animation-duration: 0.15s; -webkit-animation-duration: 0.15s; animation-duration: 0.15s; }
+  These are pre-defined speeds and easings that can be used to override
+  the default values for each property of an animation. Use them together
+  with animation components from scss/components/_animations.scss.
 
-.a-duration-l { -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -moz-animation-duration: 0.3s; -ms-animation-duration: 0.3s; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; }
+  Usage:
+  <div class="a-bounce a-duration-xl a-easing-cb-scale-out">
+    This div bounces slowly with a cubic bezier scaling effect. The
+    initial bounce is defined in the components doc, while the utility
+    classes override the component's default values.
+  </div>
 
-.a-duration-xl { -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; -moz-animation-duration: 0.5s; -ms-animation-duration: 0.5s; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; }
+*/
+/*
+Timing
+Timings are t-shirt sized. (s)mall is the shortest duration, and (xxl)tra
+Large is the longest. Try to stick to these pre-defined timings. They help
+us maintain consistency, usability, and accessibility. For immediate
+(zero second) animations, you can use .a-duration-0.
+*/
+.a-duration-0 { -moz-animation-duration: 0s; -ms-animation-duration: 0s; -webkit-animation-duration: 0s; animation-duration: 0s; }
 
-.a-duration-xxl { -moz-transition-duration: 1s; -ms-transition-duration: 1s; -webkit-transition-duration: 1s; transition-duration: 1s; -moz-animation-duration: 1s; -ms-animation-duration: 1s; -webkit-animation-duration: 1s; animation-duration: 1s; }
+.a-duration-s { -moz-animation-duration: 80ms; -ms-animation-duration: 80ms; -webkit-animation-duration: 80ms; animation-duration: 80ms; }
 
-.a-easing-linear { -moz-transition-timing-function: linear; -ms-transition-timing-function: linear; -webkit-transition-timing-function: linear; transition-timing-function: linear; -moz-animation-timing-function: linear; -ms-animation-timing-function: linear; -webkit-animation-timing-function: linear; animation-timing-function: linear; }
+.a-duration-m { -moz-animation-duration: 0.15s; -ms-animation-duration: 0.15s; -webkit-animation-duration: 0.15s; animation-duration: 0.15s; }
 
-.a-easing-ease { -moz-transition-timing-function: ease-in-out; -ms-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-animation-timing-function: ease-in-out; -ms-animation-timing-function: ease-in-out; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+.a-duration-l { -moz-animation-duration: 0.3s; -ms-animation-duration: 0.3s; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; }
 
-.a-easing-cb-scale-in { -moz-transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -ms-transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -webkit-transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -moz-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -ms-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -webkit-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); }
+.a-duration-xl { -moz-animation-duration: 0.5s; -ms-animation-duration: 0.5s; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; }
 
-.a-easing-cb-scale-out { -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -ms-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -moz-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -ms-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+.a-duration-xxl { -moz-animation-duration: 1s; -ms-animation-duration: 1s; -webkit-animation-duration: 1s; animation-duration: 1s; }
 
-.a-easing-cb-scale-up { -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -ms-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -moz-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -ms-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+/*
+Easing
+Linear, ease-in-out, and a few pre-definted cubic-bezier curves that,
+well, just look pimp.
+*/
+.a-easing-linear { -moz-animation-timing-function: linear; -ms-animation-timing-function: linear; -webkit-animation-timing-function: linear; animation-timing-function: linear; }
+
+.a-easing-ease { -moz-animation-timing-function: ease-in-out; -ms-animation-timing-function: ease-in-out; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+
+.a-easing-cb-scale-in { -moz-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -ms-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -webkit-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); }
+
+.a-easing-cb-scale-out { -moz-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -ms-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.a-easing-cb-scale-up { -moz-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -ms-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 .u-clearfix::after { clear: both; content: ""; display: table; }
 
@@ -582,6 +676,56 @@ Utilities
 .p-left-large { padding-left: 60px !important; }
 
 .p-left-larger { padding-left: 120px !important; }
+
+/*
+
+Transition Utilities
+
+  These are pre-defined speeds and easings that can be used to override
+  the default values for each property of an animation. Use them together
+  with animation components from scss/components/_transitions.scss.
+
+  Usage:
+  <div class="tr-scale-up-hover tr-duration-xl tr-easing-cb-scale-out">
+    This div scale up slowly on hover, with a cubic bezier scaling effect. The
+    initial scaling up is defined in the components doc, while the utility
+    classes override the component's default values.
+  </div>
+
+*/
+/*
+Timing
+Timings are t-shirt sized. (s)mall is the shortest duration, and (xxl)tra
+Large is the longest. Try to stick to these pre-defined timings. They help
+us maintain consistency, usability, and accessibility. For immediate
+(zero second) transitions, you can use .tr-duration-0.
+*/
+.tr-duration-0 { -moz-transition-duration: 0s; -ms-transition-duration: 0s; -webkit-transition-duration: 0s; transition-duration: 0s; }
+
+.tr-duration-s { -moz-transition-duration: 80ms; -ms-transition-duration: 80ms; -webkit-transition-duration: 80ms; transition-duration: 80ms; }
+
+.tr-duration-m { -moz-transition-duration: 0.15s; -ms-transition-duration: 0.15s; -webkit-transition-duration: 0.15s; transition-duration: 0.15s; }
+
+.tr-duration-l { -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
+
+.tr-duration-xl { -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; }
+
+.tr-duration-xxl { -moz-transition-duration: 1s; -ms-transition-duration: 1s; -webkit-transition-duration: 1s; transition-duration: 1s; }
+
+/*
+Easing
+Linear, ease-in-out, and a few pre-definted cubic-bezier curves that,
+well, just look pimp.
+*/
+.tr-easing-linear { -moz-transition-timing-function: linear; -ms-transition-timing-function: linear; -webkit-transition-timing-function: linear; transition-timing-function: linear; }
+
+.tr-easing-ease { -moz-transition-timing-function: ease-in-out; -ms-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; }
+
+.tr-easing-cb-scale-in { -moz-transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -ms-transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -webkit-transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); }
+
+.tr-easing-cb-scale-out { -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -ms-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.tr-easing-cb-scale-up { -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -ms-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 .t-body, .form__input { font-family: "Proxima Nova", sans-serif !important; }
 

@@ -15,24 +15,6 @@ Animation Components
 */
 
 
-// Scale on hover
-.a-scale-up-hover {
-  @include a-duration($a-duration);
-
-  &:hover {
-    @include scale($a-scale-up);
-  }
-}
-
-.a-scale-down-hover {
-  @include a-duration($a-duration);
-
-  &:hover {
-    @include scale($a-scale-down);
-  }
-}
-
-
 // Spin
 .a-spin-right {
   @include animation(spin, $a-slowest, $a-spin-duration, $a-easing-linear);

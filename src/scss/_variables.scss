@@ -70,6 +70,13 @@ $a-duration: .3s;
 $a-slow: .5s;
 $a-slowest: 1s;
 
+// Transition Timing
+$tr-fastest: 80ms;
+$tr-fast: .15s;
+$tr-duration: .3s;
+$tr-slow: .5s;
+$tr-slowest: 1s;
+
 // Animation Easing
 $a-easing-linear: linear;
 $a-easing: ease-in-out;
