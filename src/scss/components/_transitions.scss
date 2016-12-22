@@ -1,0 +1,37 @@
+/*
+
+Transition Components
+
+  These styles define the types of transitions that we use, and default
+  values for each of their properties. Use utility classes from
+  scss/utilities/_transitions.scss to override specific transition
+  properties.
+
+  Usage:
+  <div class="tr-scale-up-hover">
+    This div scales up on hover
+  </div>
+
+*/
+
+/*
+Scale on hover
+  Althought these have scaling animations, they also use a transition to the
+  hover state. Therefore, the easing and duration are controlled as
+  transitions.
+*/
+.tr-scale-up-hover {
+  @include transition-duration($tr-duration);
+
+  &:hover {
+    @include scale($a-scale-up);
+  }
+}
+
+.tr-scale-down-hover {
+  @include transition-duration($tr-duration);
+
+  &:hover {
+    @include scale($a-scale-down);
+  }
+}

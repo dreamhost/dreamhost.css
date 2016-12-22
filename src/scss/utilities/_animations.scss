@@ -17,12 +17,13 @@ Animation Utilities
 
 
 /*
-Animation timing
+Timing
 Timings are t-shirt sized. (s)mall is the shortest duration, and (xxl)tra
 Large is the longest. Try to stick to these pre-defined timings. They help
 us maintain consistency, usability, and accessibility. For immediate
-(zero second) transitions, you can use .a-duration-0.
+(zero second) animations, you can use .a-duration-0.
 */
+
 .a-duration-0 {
   @include a-duration(0s);
 }
@@ -47,11 +48,13 @@ us maintain consistency, usability, and accessibility. For immediate
   @include a-duration($a-slowest);
 }
 
+
 /*
-Animation easing
+Easing
 Linear, ease-in-out, and a few pre-definted cubic-bezier curves that,
 well, just look pimp.
 */
+
 .a-easing-linear {
   @include a-easing($a-easing-linear);
 }
