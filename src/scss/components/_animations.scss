@@ -1,0 +1,68 @@
+  // Animation Components
+
+  // These styles define the types of animations that we use, and default
+  // values for each of their properties. Use utility classes from
+  // scss/utilities/_animations.scss to override specific animation
+  // properties.
+
+  // Usage:
+  // <div class="a-bounce">
+  //   This is a bouncing div
+  // </div>
+
+
+// Scale on hover
+.a-scale-up-hover {
+  @include a-duration($a-duration);
+
+  &:hover {
+    @include scale($a-scale-up);
+  }
+}
+
+.a-scale-down-hover {
+  @include a-duration($a-duration);
+
+  &:hover {
+    @include scale($a-scale-down);
+  }
+}
+
+
+// Spin
+.a-spin-right {
+  @include animation(spin, $a-slowest, $a-spin-duration, $a-easing-linear);
+}
+
+.a-spin-left {
+  @include animation(spin, $a-slowest, $a-spin-duration, $a-easing-linear reverse);
+}
+
+
+// Bounce
+.a-bounce {
+  @include animation(bounce, $a-slowest, $a-bounce-duration, $a-easing-cb-bounce);
+}
+
+
+// Keyframe definitions
+@keyframes spin {
+  0% {
+    @include rotate($a-spin-start);
+  }
+  100% {
+    @include rotate($a-spin-end);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 70%, 100% {
+    @include translate(0, 0);
+  }
+  40% {
+    @include translate(0, $a-bounce-1st);
+  }
+  60% {
+    @include translate(0, $a-bounce-2nd);
+  }
+}

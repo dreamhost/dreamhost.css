@@ -1,0 +1,66 @@
+  // Animation Utilities
+
+  // These are pre-defined speeds and easings that can be used to override
+  // the default values for each property of an animation. Use them together
+  // with animation components from scss/components/_animations.scss.
+
+  // Usage:
+  // <div class="a-bounce a-duration-xl a-easing-cb-scale-out">
+  //   This div bounces slowly with a cubic bezier scaling effect. The
+  //   initial bounce is defined in the components doc, while the utility
+  //   classes override the component's default values.
+  // </div>
+
+
+// Animation timing
+// Timigs are t-shirt sized. (s)mall is the shortest duration, and (xxl)tra
+// Large is the longest. Try to stick to these pre-defined timings. They help
+// us maintain consistency, usability, and accessibility. For immediate
+// (zero second) transitions, you can use .a-duration-0.
+.a-duration-0 {
+  @include a-duration(0s);
+}
+
+.a-duration-s {
+  @include a-duration($a-fastest);
+}
+
+.a-duration-m {
+  @include a-duration($a-fast);
+}
+
+.a-duration-l {
+  @include a-duration($a-duration);
+}
+
+.a-duration-xl {
+  @include a-duration($a-slow);
+}
+
+.a-duration-xxl {
+  @include a-duration($a-slowest);
+}
+
+
+// Animation easing
+// Linear, ease-in-out, and a few pre-definted cubic-bezier curves that,
+// well, just look pimp.
+.a-easing-linear {
+  @include a-easing($a-easing-linear);
+}
+
+.a-easing-ease {
+  @include a-easing($a-easing);
+}
+
+.a-easing-cb-scale-in {
+  @include a-easing($a-easing-cb-scale-in);
+}
+
+.a-easing-cb-scale-out {
+  @include a-easing($a-easing-cb-scale-out);
+}
+
+.a-easing-cb-scale-up {
+  @include a-easing($a-easing-cb-scale-up);
+}

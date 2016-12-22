@@ -62,3 +62,33 @@ $h3: $t-larger;
 $h4: $t-large;
 
 $border-size: 3px;
+
+// Animation Timing
+$a-fastest: 80ms;
+$a-fast: .15s;
+$a-duration: .3s;
+$a-slow: .5s;
+$a-slowest: 1s;
+
+// Animation Easing
+$a-easing-linear: linear;
+$a-easing: ease-in-out;
+$a-easing-cb-scale-in: cubic-bezier(0,.89,.44,1);
+$a-easing-cb-scale-out: cubic-bezier(.165,.84,.44,1);
+$a-easing-cb-scale-up: cubic-bezier(.68,-.55,.265,1.55);
+$a-easing-cb-bounce: cubic-bezier(.075,.82,.165,1);
+
+// Animation Spin
+$a-spin-duration: infinite;
+$a-spin-start: 0;
+$a-spin-end: 360;
+
+// Animation Bounce
+$a-bounce-duration: infinite;
+$a-bounce-1st: -5px;
+$a-bounce-2nd: -3px;
+
+// Animation Scale
+$a-scale-down: .8;
+$a-scale: 1;
+$a-scale-up: 1.2;

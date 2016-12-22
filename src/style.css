@@ -175,6 +175,42 @@ hr { border: 1px solid #f7f7f7; margin: 30px 0; }
 
 @font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-bi-webfont.eot"); src: url("fonts/ubuntu/ubuntu-bi-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-bi-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-bi-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-bi-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-bi-webfont.svg#ubuntubold_italic") format("svg"); font-weight: bold; font-style: italic; }
 
+.a-scale-up-hover { -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -moz-animation-duration: 0.3s; -ms-animation-duration: 0.3s; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; }
+
+.a-scale-up-hover:hover { -moz-transform: scale(1.2); -ms-transform: scale(1.2); -webkit-transform: scale(1.2); transform: scale(1.2); }
+
+.a-scale-down-hover { -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -moz-animation-duration: 0.3s; -ms-animation-duration: 0.3s; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; }
+
+.a-scale-down-hover:hover { -moz-transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8); transform: scale(0.8); }
+
+.a-spin-right { -moz-animation: spin 1s infinite linear; -ms-animation: spin 1s infinite linear; -webkit-animation: spin 1s infinite linear; animation: spin 1s infinite linear; }
+
+.a-spin-left { -moz-animation: spin 1s infinite linear reverse; -ms-animation: spin 1s infinite linear reverse; -webkit-animation: spin 1s infinite linear reverse; animation: spin 1s infinite linear reverse; }
+
+.a-bounce { -moz-animation: bounce 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1); -ms-animation: bounce 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1); -webkit-animation: bounce 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1); animation: bounce 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+@keyframes spin { 0% { -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% { -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes bounce { 0%, 20%, 50%, 70%, 100% { -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  40% { -moz-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    transform: translate(0, -5px); }
+  60% { -moz-transform: translate(0, -3px);
+    -ms-transform: translate(0, -3px);
+    -webkit-transform: translate(0, -3px);
+    transform: translate(0, -3px); } }
+
 .btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 15px; display: inline-block; border: 0; font-size: 16px; }
 
 .btn:hover { cursor: pointer; }
@@ -267,6 +303,28 @@ Utilities
 	Utilities are !important (see http://csswizardry.com/2016/05/the-importance-of-important/)
 
 */
+.a-duration-0 { -moz-transition-duration: 0s; -ms-transition-duration: 0s; -webkit-transition-duration: 0s; transition-duration: 0s; -moz-animation-duration: 0s; -ms-animation-duration: 0s; -webkit-animation-duration: 0s; animation-duration: 0s; }
+
+.a-duration-s { -moz-transition-duration: 80ms; -ms-transition-duration: 80ms; -webkit-transition-duration: 80ms; transition-duration: 80ms; -moz-animation-duration: 80ms; -ms-animation-duration: 80ms; -webkit-animation-duration: 80ms; animation-duration: 80ms; }
+
+.a-duration-m { -moz-transition-duration: 0.15s; -ms-transition-duration: 0.15s; -webkit-transition-duration: 0.15s; transition-duration: 0.15s; -moz-animation-duration: 0.15s; -ms-animation-duration: 0.15s; -webkit-animation-duration: 0.15s; animation-duration: 0.15s; }
+
+.a-duration-l { -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -moz-animation-duration: 0.3s; -ms-animation-duration: 0.3s; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; }
+
+.a-duration-xl { -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; -moz-animation-duration: 0.5s; -ms-animation-duration: 0.5s; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; }
+
+.a-duration-xxl { -moz-transition-duration: 1s; -ms-transition-duration: 1s; -webkit-transition-duration: 1s; transition-duration: 1s; -moz-animation-duration: 1s; -ms-animation-duration: 1s; -webkit-animation-duration: 1s; animation-duration: 1s; }
+
+.a-easing-linear { -moz-transition-timing-function: linear; -ms-transition-timing-function: linear; -webkit-transition-timing-function: linear; transition-timing-function: linear; -moz-animation-timing-function: linear; -ms-animation-timing-function: linear; -webkit-animation-timing-function: linear; animation-timing-function: linear; }
+
+.a-easing-ease { -moz-transition-timing-function: ease-in-out; -ms-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-animation-timing-function: ease-in-out; -ms-animation-timing-function: ease-in-out; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+
+.a-easing-cb-scale-in { -moz-transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -ms-transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -webkit-transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -moz-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -ms-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -webkit-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); }
+
+.a-easing-cb-scale-out { -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -ms-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -moz-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -ms-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.a-easing-cb-scale-up { -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -ms-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -moz-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -ms-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
 .u-clearfix::after { clear: both; content: ""; display: table; }
 
 .bg-white, tbody tr:nth-child(odd), .option-box__content { background: #fff !important; }
