@@ -2,7 +2,7 @@
 
 Transition Components
 
-  These styles define the types of transitions that we use, and default
+  These styles define the basic transitions that we use, and default
   values for each of their properties. Use utility classes from
   scss/utilities/_transitions.scss to override specific transition
   properties.
@@ -17,17 +17,17 @@ Transition Components
 
 // Scale on hover
 .tr-scale-up-hover {
-  @include transition-duration($tr-duration);
+  transition-duration: $tr-duration;
 
   &:hover {
-    @include scale($a-scale-up);
+    @include scale(1.1);
   }
 }
 
 .tr-scale-down-hover {
-  @include transition-duration($tr-duration);
+  transition-duration: $tr-duration;
 
   &:hover {
-    @include scale($a-scale-down);
+    @include scale(.9);
   }
 }

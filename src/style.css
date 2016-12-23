@@ -99,42 +99,24 @@ html { box-sizing: border-box; }
 
 *, *::after, *::before { box-sizing: inherit; }
 
-/*
-
-Animation Mixins
-
-  A collection of Mixins that you can use in your scss to create and
-  control animations.
-
-  Usage:
-  .thing {
-    @include a-duration($a-fast);
-    @include a-easing($a-easing-linear);
-    @include animation(spin, $a-slow, $a-spin-duration, $a-easing-linear);
-    @include scale($a-scale);
-    @include rotate(40);
-    @include translate(3, 5);
-    @include skew(3, 5);
-    @include transform-origin(top left);
-  }
-
-*/
 .box { padding: 30px; background: #fff; }
 
 .box *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
 /*
 
-Transition Mixins
+Transform Mixins
 
   A collection of Mixins that you can use in your scss to create and
-  control transitions.
+  control transforms.
 
   Usage:
   .thing {
-    @include tr-duration($tr-fast);
-    @include tr-easing($tr-easing-linear);
-    @include transition(all, $tr-duration, $tr-easing);
+    @include scale($a-scale);
+    @include rotate(40);
+    @include translate(3, 5);
+    @include skew(3, 5);
+    @include transform-origin(top left);
   }
 
 */
@@ -214,44 +196,40 @@ hr { border: 1px solid #f7f7f7; margin: 30px 0; }
 
 Animation Components
 
-  These styles define the types of animations that we use, and default
+  These styles define the basic animations that we use, and default
   values for each of their properties. Use utility classes from
   scss/utilities/_animations.scss to override specific animation
   properties.
 
-  Usage:
+  Usage [HTML]:
   <div class="a-bounce">
     This is a bouncing div
   </div>
 
+  Usage [CSS]:
+  .a-bounce-hover:hover {
+    @extend .a-bounce;
+  }
+
 */
-.a-spin-right { -moz-animation: spin 2s infinite linear; -ms-animation: spin 2s infinite linear; -webkit-animation: spin 2s infinite linear; animation: spin 2s infinite linear; }
+.a-spin-right { animation: spin 2s 1 linear; }
 
-.a-spin-left { -moz-animation: spin 2s infinite linear reverse; -ms-animation: spin 2s infinite linear reverse; -webkit-animation: spin 2s infinite linear reverse; animation: spin 2s infinite linear reverse; }
+.a-spin-left { animation: spin 2s 1 linear reverse; }
 
-.a-bounce { -moz-animation: bounce 2s infinite cubic-bezier(0.075, 0.82, 0.165, 1); -ms-animation: bounce 2s infinite cubic-bezier(0.075, 0.82, 0.165, 1); -webkit-animation: bounce 2s infinite cubic-bezier(0.075, 0.82, 0.165, 1); animation: bounce 2s infinite cubic-bezier(0.075, 0.82, 0.165, 1); }
+.a-bounce { animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-@keyframes spin { 0% { -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% { -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
+.a-shake { animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-@keyframes bounce { 0%, 20%, 50%, 70%, 100% { -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0); }
-  40% { -moz-transform: translate(0, -5px);
-    -ms-transform: translate(0, -5px);
-    -webkit-transform: translate(0, -5px);
-    transform: translate(0, -5px); }
-  60% { -moz-transform: translate(0, -3px);
-    -ms-transform: translate(0, -3px);
-    -webkit-transform: translate(0, -3px);
-    transform: translate(0, -3px); } }
+@keyframes spin { 0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); } }
+
+@keyframes bounce { 0%, 20%, 50%, 70%, 100% { transform: translate(0, 0); }
+  40% { transform: translate(0, -5px); }
+  60% { transform: translate(0, -3px); } }
+
+@keyframes shake { 0%, 20%, 50%, 70%, 100% { transform: translate(0, 0); }
+  40% { transform: translate(-5px, 0); }
+  60% { transform: translate(-3px, 0); } }
 
 .btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 15px; display: inline-block; border: 0; font-size: 16px; }
 
@@ -333,7 +311,7 @@ thead tr { border-bottom: 3px solid #f7f7f7; }
 
 Transition Components
 
-  These styles define the types of transitions that we use, and default
+  These styles define the basic transitions that we use, and default
   values for each of their properties. Use utility classes from
   scss/utilities/_transitions.scss to override specific transition
   properties.
@@ -344,13 +322,13 @@ Transition Components
   </div>
 
 */
-.tr-scale-up-hover { -webkit-transition-duration: 0.1s; -moz-transition-duration: 0.1s; transition-duration: 0.1s; }
+.tr-scale-up-hover { transition-duration: 0.1s; }
 
-.tr-scale-up-hover:hover { -moz-transform: scale(1.1); -ms-transform: scale(1.1); -webkit-transform: scale(1.1); transform: scale(1.1); }
+.tr-scale-up-hover:hover { transform: scale(1.1); }
 
-.tr-scale-down-hover { -webkit-transition-duration: 0.1s; -moz-transition-duration: 0.1s; transition-duration: 0.1s; }
+.tr-scale-down-hover { transition-duration: 0.1s; }
 
-.tr-scale-down-hover:hover { -moz-transform: scale(0.9); -ms-transform: scale(0.9); -webkit-transform: scale(0.9); transform: scale(0.9); }
+.tr-scale-down-hover:hover { transform: scale(0.9); }
 
 /*
 
@@ -384,27 +362,31 @@ Animation Utilities
   </div>
 
 */
-.a-duration-0 { -moz-animation-duration: 0s; -ms-animation-duration: 0s; -webkit-animation-duration: 0s; animation-duration: 0s; }
+.a-duration-0 { animation-duration: 0s; }
 
-.a-duration-s { -moz-animation-duration: 0.3s; -ms-animation-duration: 0.3s; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; }
+.a-duration-s { animation-duration: 0.3s; }
 
-.a-duration-m { -moz-animation-duration: 0.5s; -ms-animation-duration: 0.5s; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; }
+.a-duration-m { animation-duration: 0.5s; }
 
-.a-duration-l { -moz-animation-duration: 1s; -ms-animation-duration: 1s; -webkit-animation-duration: 1s; animation-duration: 1s; }
+.a-duration-l { animation-duration: 1s; }
 
-.a-duration-xl { -moz-animation-duration: 1.5s; -ms-animation-duration: 1.5s; -webkit-animation-duration: 1.5s; animation-duration: 1.5s; }
+.a-duration-xl { animation-duration: 1.5s; }
 
-.a-duration-xxl { -moz-animation-duration: 2s; -ms-animation-duration: 2s; -webkit-animation-duration: 2s; animation-duration: 2s; }
+.a-duration-xxl { animation-duration: 2s; }
 
-.a-easing-linear { -moz-animation-timing-function: linear; -ms-animation-timing-function: linear; -webkit-animation-timing-function: linear; animation-timing-function: linear; }
+.a-easing-linear { animation-timing-function: linear; }
 
-.a-easing-ease { -moz-animation-timing-function: ease-in-out; -ms-animation-timing-function: ease-in-out; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+.a-easing-ease { animation-timing-function: ease-in-out; }
 
-.a-easing-cb-scale-in { -moz-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -ms-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -webkit-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); }
+.a-easing-cb-scale-in { animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1); }
 
-.a-easing-cb-scale-out { -moz-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -ms-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+.a-easing-cb-scale-out { animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
 
-.a-easing-cb-scale-up { -moz-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -ms-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.a-easing-cb-scale-up { animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.a-repeat-once { animation-iteration-count: 2; }
+
+.a-repeat { animation-iteration-count: infinite; }
 
 .u-clearfix::after { clear: both; content: ""; display: table; }
 
@@ -680,27 +662,27 @@ Transition Utilities
   </div>
 
 */
-.tr-duration-0 { -moz-transition-duration: 0s; -ms-transition-duration: 0s; -webkit-transition-duration: 0s; transition-duration: 0s; }
+.tr-duration-0 { transition-duration: 0s; }
 
-.tr-duration-s { -moz-transition-duration: 0.05s; -ms-transition-duration: 0.05s; -webkit-transition-duration: 0.05s; transition-duration: 0.05s; }
+.tr-duration-s { transition-duration: 0.05s; }
 
-.tr-duration-m { -moz-transition-duration: 0.07s; -ms-transition-duration: 0.07s; -webkit-transition-duration: 0.07s; transition-duration: 0.07s; }
+.tr-duration-m { transition-duration: 0.07s; }
 
-.tr-duration-l { -moz-transition-duration: 0.1s; -ms-transition-duration: 0.1s; -webkit-transition-duration: 0.1s; transition-duration: 0.1s; }
+.tr-duration-l { transition-duration: 0.1s; }
 
-.tr-duration-xl { -moz-transition-duration: 0.2s; -ms-transition-duration: 0.2s; -webkit-transition-duration: 0.2s; transition-duration: 0.2s; }
+.tr-duration-xl { transition-duration: 0.2s; }
 
-.tr-duration-xxl { -moz-transition-duration: 0.3s; -ms-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
+.tr-duration-xxl { transition-duration: 0.3s; }
 
-.tr-easing-linear { -moz-transition-timing-function: linear; -ms-transition-timing-function: linear; -webkit-transition-timing-function: linear; transition-timing-function: linear; }
+.tr-easing-linear { transition-timing-function: linear; }
 
-.tr-easing-ease { -moz-transition-timing-function: ease-in-out; -ms-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; }
+.tr-easing-ease { transition-timing-function: ease-in-out; }
 
-.tr-easing-cb-scale-in { -moz-transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -ms-transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); -webkit-transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); }
+.tr-easing-cb-scale-in { transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1); }
 
-.tr-easing-cb-scale-out { -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -ms-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+.tr-easing-cb-scale-out { transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
 
-.tr-easing-cb-scale-up { -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -ms-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.tr-easing-cb-scale-up { transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 .t-body, .form__input { font-family: "Proxima Nova", sans-serif !important; }
 

@@ -76,24 +76,3 @@ $tr-fast: .07s;
 $tr-duration: .1s;
 $tr-slow: .2s;
 $tr-slowest: .3s;
-
-// Animation Easing
-$a-easing: ease-in-out;
-
-// Transition Easing
-$tr-easing: ease-in-out;
-
-// Animation: Spin
-$a-spin-duration: infinite;
-$a-spin-start: 0;
-$a-spin-end: 360;
-
-// Animation: Bounce
-$a-bounce-duration: infinite;
-$a-bounce-1st: -5px;
-$a-bounce-2nd: -3px;
-
-// Animation: Scale
-$a-scale-down: .9;
-$a-scale: 1;
-$a-scale-up: 1.1;

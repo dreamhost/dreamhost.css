@@ -18,47 +18,56 @@ Animation Utilities
 
 // Duration
 .a-duration-0 {
-  @include a-duration(0s);
+  animation-duration: 0s;
 }
 
 .a-duration-s {
-  @include a-duration($a-fastest);
+  animation-duration: $a-fastest;
 }
 
 .a-duration-m {
-  @include a-duration($a-fast);
+  animation-duration: $a-fast;
 }
 
 .a-duration-l {
-  @include a-duration($a-duration);
+  animation-duration: $a-duration;
 }
 
 .a-duration-xl {
-  @include a-duration($a-slow);
+  animation-duration: $a-slow;
 }
 
 .a-duration-xxl {
-  @include a-duration($a-slowest);
+  animation-duration: $a-slowest;
 }
 
 
 // Easing
 .a-easing-linear {
-  @include a-easing(linear);
+  animation-timing-function: linear;
 }
 
 .a-easing-ease {
-  @include a-easing($a-easing);
+  animation-timing-function: ease-in-out;
 }
 
 .a-easing-cb-scale-in {
-  @include a-easing(cubic-bezier(0,.89,.44,1));
+  animation-timing-function: cubic-bezier(0,.89,.44,1);
 }
 
 .a-easing-cb-scale-out {
-  @include a-easing(cubic-bezier(.165,.84,.44,1));
+  animation-timing-function: cubic-bezier(.165,.84,.44,1);
 }
 
 .a-easing-cb-scale-up {
-  @include a-easing(cubic-bezier(.68,-.55,.265,1.55));
+  animation-timing-function: cubic-bezier(.68,-.55,.265,1.55);
+}
+
+// Repeat
+.a-repeat-once {
+  animation-iteration-count: 2;
+}
+
+.a-repeat {
+  animation-iteration-count: infinite;
 }

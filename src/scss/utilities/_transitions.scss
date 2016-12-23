@@ -16,51 +16,50 @@ Transition Utilities
 */
 
 
-
 // Duration
 .tr-duration-0 {
-  @include tr-duration(0s);
+  transition-duration: 0s;
 }
 
 .tr-duration-s {
-  @include tr-duration($tr-fastest);
+  transition-duration: $tr-fastest;
 }
 
 .tr-duration-m {
-  @include tr-duration($tr-fast);
+  transition-duration: $tr-fast;
 }
 
 .tr-duration-l {
-  @include tr-duration($tr-duration);
+  transition-duration: $tr-duration;
 }
 
 .tr-duration-xl {
-  @include tr-duration($tr-slow);
+  transition-duration: $tr-slow;
 }
 
 .tr-duration-xxl {
-  @include tr-duration($tr-slowest);
+  transition-duration: $tr-slowest;
 }
 
 
 
 // Easing
 .tr-easing-linear {
-  @include tr-easing(linear);
+  transition-timing-function: linear;
 }
 
 .tr-easing-ease {
-  @include tr-easing($tr-easing);
+  transition-timing-function: ease-in-out;
 }
 
 .tr-easing-cb-scale-in {
-  @include tr-easing(cubic-bezier(0,.89,.44,1));
+  transition-timing-function: cubic-bezier(0,.89,.44,1);
 }
 
 .tr-easing-cb-scale-out {
-  @include tr-easing(cubic-bezier(.165,.84,.44,1));
+  transition-timing-function: cubic-bezier(.165,.84,.44,1);
 }
 
 .tr-easing-cb-scale-up {
-  @include tr-easing(cubic-bezier(.68,-.55,.265,1.55));
+  transition-timing-function: cubic-bezier(.68,-.55,.265,1.55);
 }
