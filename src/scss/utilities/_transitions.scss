@@ -22,23 +22,23 @@ Transition Utilities
 }
 
 .tr-duration-s {
-  transition-duration: $tr-fastest;
+  transition-duration: $tr-smaller;
 }
 
 .tr-duration-m {
-  transition-duration: $tr-fast;
+  transition-duration: $tr-small;
 }
 
 .tr-duration-l {
-  transition-duration: $tr-duration;
+  transition-duration: $tr-size;
 }
 
 .tr-duration-xl {
-  transition-duration: $tr-slow;
+  transition-duration: $tr-large;
 }
 
 .tr-duration-xxl {
-  transition-duration: $tr-slowest;
+  transition-duration: $tr-larger;
 }
 
 

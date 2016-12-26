@@ -64,15 +64,15 @@ $h4: $t-large;
 $border-size: 3px;
 
 // Animation Duration
-$a-fastest: .3s;
-$a-fast: .5s;
-$a-duration: 1s;
-$a-slow: 1.5s;
-$a-slowest: 2s;
+$a-larger: 2s;
+$a-large: 1.5s;
+$a-size: 1s;
+$a-small: .5s;
+$a-smaller: .3s;
 
 // Transition Duration
-$tr-fastest: .05s;
-$tr-fast: .07s;
-$tr-duration: .1s;
-$tr-slow: .2s;
-$tr-slowest: .3s;
+$tr-larger: .3s;
+$tr-large: .2s;
+$tr-size: .1s;
+$tr-small: .07s;
+$tr-smaller: .05s;

@@ -22,23 +22,23 @@ Animation Utilities
 }
 
 .a-duration-s {
-  animation-duration: $a-fastest;
+  animation-duration: $a-smaller;
 }
 
 .a-duration-m {
-  animation-duration: $a-fast;
+  animation-duration: $a-small;
 }
 
 .a-duration-l {
-  animation-duration: $a-duration;
+  animation-duration: $a-size;
 }
 
 .a-duration-xl {
-  animation-duration: $a-slow;
+  animation-duration: $a-large;
 }
 
 .a-duration-xxl {
-  animation-duration: $a-slowest;
+  animation-duration: $a-larger;
 }
 
 

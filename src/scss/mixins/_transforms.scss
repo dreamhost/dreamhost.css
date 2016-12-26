@@ -7,7 +7,7 @@ Transform Mixins
 
   Usage:
   .thing {
-    @include scale($a-scale);
+    @include scale(1.1);
     @include rotate(40);
     @include translate(3, 5);
     @include skew(3, 5);

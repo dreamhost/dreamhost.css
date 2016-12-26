@@ -112,7 +112,7 @@ Transform Mixins
 
   Usage:
   .thing {
-    @include scale($a-scale);
+    @include scale(1.1);
     @include rotate(40);
     @include translate(3, 5);
     @include skew(3, 5);
@@ -212,9 +212,9 @@ Animation Components
   }
 
 */
-.a-spin-right { animation: spin 2s 1 linear; }
+.a-spin-right { animation: spin 0.3s 1 linear; }
 
-.a-spin-left { animation: spin 2s 1 linear reverse; }
+.a-spin-left { animation: spin 0.3s 1 linear reverse; }
 
 .a-bounce { animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
 

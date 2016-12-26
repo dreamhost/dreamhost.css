@@ -22,21 +22,21 @@ Animation Components
 
 // Spin
 .a-spin-right {
-  animation: spin $a-slowest 1 linear;
+  animation: spin $a-smaller 1 linear;
 }
 
 .a-spin-left {
-  animation: spin $a-slowest 1 linear reverse;
+  animation: spin $a-smaller 1 linear reverse;
 }
 
 // Bounce
 .a-bounce {
-  animation: bounce $a-duration 1 cubic-bezier(.075,.82,.165,1);
+  animation: bounce $a-size 1 cubic-bezier(.075,.82,.165,1);
 }
 
 // Shake
 .a-shake {
-  animation: shake $a-duration 1 cubic-bezier(.075,.82,.165,1);
+  animation: shake $a-size 1 cubic-bezier(.075,.82,.165,1);
 }
 
 
