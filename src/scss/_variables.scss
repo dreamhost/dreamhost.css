@@ -40,26 +40,24 @@ $darkest-grey: darken($dark-grey, 20%);
 $black: #2F323B;
 
 // Spacing
-$s: 30px;
-$s-smaller: $s/4;
-$s-small: $s/2;
-$s-large: $s*2;
-$s-larger: $s*4;
+// Uses an 8pt vertical grid for margins and padding
+// With 16px body copy, .5 increments ensure the grid is adhered to
+$s-smaller: .5rem; // 8px
+$s-small: 1.5rem; // 24px
+$s: 2rem; // 32px
+$s-large: 2.5rem; // 40px
+$s-larger: 3rem; // 48px
 
 // Typography
 $body: 'Proxima Nova', sans-serif;
 $heading: 'Ubuntu', sans-serif;
 
-$t-larger: 21px;
-$t-large: 18px;
-$t-size: 16px;
-$t-small: 14px;
-$t-smaller: 12px;
-
-$h1: 40px;
-$h2: 26px;
-$h3: $t-larger;
-$h4: $t-large;
+$t-h1: 2.5rem;
+$t-larger: 2rem;
+$t-large: 1.5rem;
+$t-size: 1rem;
+$t-small: .875rem; // legibility at small sizes > adhering to scales
+$t-smaller: .75em;
 
 $border-size: 3px;
 

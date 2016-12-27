@@ -99,7 +99,7 @@ html { box-sizing: border-box; }
 
 *, *::after, *::before { box-sizing: inherit; }
 
-.box { padding: 30px; background: #fff; }
+.box { padding: 2rem; background: #fff; }
 
 .box *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
@@ -120,19 +120,19 @@ Transform Mixins
   }
 
 */
-body { background: #f7f7f7; font-smoothing: antialiased; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; }
+body { background: #f7f7f7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; font-size: 16px; line-height: 1.5; }
 
-h1, h2, h3, h4 { font-family: "Ubuntu", sans-serif; font-weight: 100; line-height: 1.6; }
+h1, h2, h3, h4 { font-family: "Ubuntu", sans-serif; font-weight: 600; }
 
-h1 { font-size: 40px; margin-bottom: 60px; }
+h1 { font-size: 2.5rem; margin-bottom: 2.5rem; }
 
-h2 { font-size: 26px; margin-bottom: 30px; }
+h2 { font-size: 2rem; margin-bottom: 2rem; }
 
-h3 { font-size: 21px; margin-bottom: 15px; }
+h3 { font-size: 1.5rem; margin-bottom: 1.5rem; }
 
-h4 { font-size: 18px; margin-bottom: 15px; }
+h4 { font-size: 1rem; margin-bottom: 1.5rem; }
 
-p { color: #2F323B; line-height: 1.4; margin-bottom: 30px; }
+p { color: #2F323B; }
 
 a { color: #3675b4; text-decoration: none; }
 
@@ -142,7 +142,9 @@ strong { font-weight: 700; }
 
 img { max-width: 100%; height: auto; }
 
-hr { border: 1px solid #f7f7f7; margin: 30px 0; }
+p, section, img { margin-bottom: 2rem; }
+
+hr { border: 1px solid #f7f7f7; margin: 2rem 0; }
 
 /*
 
@@ -226,11 +228,11 @@ Animation Components
   40% { transform: translate(-5px, 0); }
   60% { transform: translate(-3px, 0); } }
 
-.btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 15px; display: inline-block; border: 0; font-size: 16px; }
+.btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
 .btn:hover { cursor: pointer; }
 
-.btn--warning { background: #e74141; color: #fff; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 15px; display: inline-block; border: 0; font-size: 16px; }
+.btn--warning { background: #e74141; color: #fff; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
 .btn--warning:hover { cursor: pointer; }
 
@@ -266,7 +268,7 @@ Animation Components
 	grid framework for positjoning.
 
 */
-.option-box__content { padding: 30px; background: #fff; }
+.option-box__content { padding: 2rem; background: #fff; }
 
 .option-box__content *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
@@ -274,7 +276,7 @@ Animation Components
 
 .tabs__nav-item:hover { cursor: pointer; color: #3675b4; }
 
-.tab { padding: 30px; background: #fff; }
+.tab { padding: 2rem; background: #fff; }
 
 .tab *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
@@ -357,6 +359,7 @@ Animation Utilities
   </div>
 
 */
+
 .a-duration-none { animation-duration: 0s !important; }
 
 .a-duration-smaller { animation-duration: 0.3s !important; }
@@ -514,63 +517,63 @@ Animation Utilities
 
 .m-auto { margin-left: auto !important; margin-right: auto !important; }
 
-.m-smaller { margin: 7.5px !important; }
+.m-smaller { margin: 0.5rem !important; }
 
-.m-small { margin: 15px !important; }
+.m-small { margin: 1.5rem !important; }
 
-.m { margin: 30px !important; }
+.m { margin: 2rem !important; }
 
-.m-large { margin: 60px !important; }
+.m-large { margin: 2.5rem !important; }
 
-.m-larger { margin: 120px !important; }
+.m-larger { margin: 3rem !important; }
 
 .m-top-none { margin-top: 0 !important; }
 
-.m-top-smaller { margin-top: 7.5px !important; }
+.m-top-smaller { margin-top: 0.5rem !important; }
 
-.m-top-small { margin-top: 7.5px !important; }
+.m-top-small { margin-top: 0.5rem !important; }
 
-.m-top { margin-top: 30px !important; }
+.m-top { margin-top: 2rem !important; }
 
-.m-top-large { margin-top: 60px !important; }
+.m-top-large { margin-top: 2.5rem !important; }
 
-.m-top-larger { margin-top: 120px !important; }
+.m-top-larger { margin-top: 3rem !important; }
 
 .m-bottom-none, .list, .option-box__heading { margin-bottom: 0 !important; }
 
-.m-bottom-smaller { margin-bottom: 7.5px !important; }
+.m-bottom-smaller { margin-bottom: 0.5rem !important; }
 
-.m-bottom-small, .form__label, .form__input, .list li:not(:last-child) { margin-bottom: 7.5px !important; }
+.m-bottom-small, .form__label, .form__input, .list li:not(:last-child) { margin-bottom: 0.5rem !important; }
 
-.m-bottom, .table { margin-bottom: 30px !important; }
+.m-bottom, .table { margin-bottom: 2rem !important; }
 
-.m-bottom-large, .header, .tabs { margin-bottom: 60px !important; }
+.m-bottom-large, .header, .tabs { margin-bottom: 2.5rem !important; }
 
-.m-bottom-larger { margin-bottom: 120px !important; }
+.m-bottom-larger { margin-bottom: 3rem !important; }
 
 .m-right-none, .list--inline li:last-child { margin-right: 0 !important; }
 
-.m-right-smaller { margin-right: 7.5px !important; }
+.m-right-smaller { margin-right: 0.5rem !important; }
 
-.m-right-small, .form__input[type="radio"] { margin-right: 7.5px !important; }
+.m-right-small, .form__input[type="radio"] { margin-right: 0.5rem !important; }
 
-.m-right, .list--inline li { margin-right: 30px !important; }
+.m-right, .list--inline li { margin-right: 2rem !important; }
 
-.m-right-large { margin-right: 60px !important; }
+.m-right-large { margin-right: 2.5rem !important; }
 
-.m-right-larger { margin-right: 120px !important; }
+.m-right-larger { margin-right: 3rem !important; }
 
 .m-left-none { margin-left: 0 !important; }
 
-.m-left-smaller { margin-left: 7.5px !important; }
+.m-left-smaller { margin-left: 0.5rem !important; }
 
-.m-left-small { margin-left: 7.5px !important; }
+.m-left-small { margin-left: 0.5rem !important; }
 
-.m-left, .list--bullets li { margin-left: 30px !important; }
+.m-left, .list--bullets li { margin-left: 2rem !important; }
 
-.m-left-large { margin-left: 60px !important; }
+.m-left-large { margin-left: 2.5rem !important; }
 
-.m-left-larger { margin-left: 120px !important; }
+.m-left-larger { margin-left: 3rem !important; }
 
 /*
 
@@ -583,63 +586,63 @@ Animation Utilities
 */
 .p-none, .list--inline li { padding: 0 !important; }
 
-.p-smaller { padding: 7.5px !important; }
+.p-smaller { padding: 0.5rem !important; }
 
-.p-small, td, .form__input, .option-box__heading { padding: 15px !important; }
+.p-small, td, .form__input, .option-box__heading { padding: 1.5rem !important; }
 
-.p, .header__logo, .tabs__nav-item { padding: 30px !important; }
+.p, .header__logo, .tabs__nav-item { padding: 2rem !important; }
 
-.p-large { padding: 60px !important; }
+.p-large { padding: 2.5rem !important; }
 
-.p-larger { padding: 120px !important; }
+.p-larger { padding: 3rem !important; }
 
 .p-top-none { padding-top: 0 !important; }
 
-.p-top-smaller { padding-top: 7.5px !important; }
+.p-top-smaller { padding-top: 0.5rem !important; }
 
-.p-top-small, th { padding-top: 7.5px !important; }
+.p-top-small, th { padding-top: 0.5rem !important; }
 
-.p-top, .header__links, .header__nav-item { padding-top: 30px !important; }
+.p-top, .header__links, .header__nav-item { padding-top: 2rem !important; }
 
-.p-top-large, .table--large-padding td { padding-top: 60px !important; }
+.p-top-large, .table--large-padding td { padding-top: 2.5rem !important; }
 
-.p-top-larger { padding-top: 120px !important; }
+.p-top-larger { padding-top: 3rem !important; }
 
 .p-bottom-none { padding-bottom: 0 !important; }
 
-.p-bottom-smaller { padding-bottom: 7.5px !important; }
+.p-bottom-smaller { padding-bottom: 0.5rem !important; }
 
-.p-bottom-small, th { padding-bottom: 7.5px !important; }
+.p-bottom-small, th { padding-bottom: 0.5rem !important; }
 
-.p-bottom, .header__links, .header__nav-item { padding-bottom: 30px !important; }
+.p-bottom, .header__links, .header__nav-item { padding-bottom: 2rem !important; }
 
-.p-bottom-large, .table--large-padding td { padding-bottom: 60px !important; }
+.p-bottom-large, .table--large-padding td { padding-bottom: 2.5rem !important; }
 
-.p-bottom-larger { padding-bottom: 120px !important; }
+.p-bottom-larger { padding-bottom: 3rem !important; }
 
 .p-right-none { padding-right: 0 !important; }
 
-.p-right-smaller { padding-right: 7.5px !important; }
+.p-right-smaller { padding-right: 0.5rem !important; }
 
-.p-right-small { padding-right: 7.5px !important; }
+.p-right-small { padding-right: 0.5rem !important; }
 
-.p-right, th, .table--large-padding td { padding-right: 30px !important; }
+.p-right, th, .table--large-padding td { padding-right: 2rem !important; }
 
-.p-right-large { padding-right: 60px !important; }
+.p-right-large { padding-right: 2.5rem !important; }
 
-.p-right-larger { padding-right: 120px !important; }
+.p-right-larger { padding-right: 3rem !important; }
 
 .p-left-none, .tabs__nav-item:first-child { padding-left: 0 !important; }
 
-.p-left-smaller { padding-left: 7.5px !important; }
+.p-left-smaller { padding-left: 0.5rem !important; }
 
-.p-left-small { padding-left: 7.5px !important; }
+.p-left-small { padding-left: 0.5rem !important; }
 
-.p-left, th, .table--large-padding td { padding-left: 30px !important; }
+.p-left, th, .table--large-padding td { padding-left: 2rem !important; }
 
-.p-left-large { padding-left: 60px !important; }
+.p-left-large { padding-left: 2.5rem !important; }
 
-.p-left-larger { padding-left: 120px !important; }
+.p-left-larger { padding-left: 3rem !important; }
 
 /*
 
@@ -683,15 +686,13 @@ Transition Utilities
 
 .t-heading, th, .tabs__nav-item { font-family: "Ubuntu", sans-serif !important; }
 
-.t-small, .form__input { font-size: 14px !important; }
+.t-smaller { font-size: 0.75em !important; }
 
-.t-book, .form__label--radio { font-weight: normal; }
+.t-small, .form__input { font-size: 0.875rem !important; }
 
-.t-size { font-size: 16px !important; }
+.t-large, th, .tabs__nav-item { font-size: 1.5rem !important; }
 
-.t-large, th, .tabs__nav-item { font-size: 21px !important; }
-
-.t-larger { font-size: 26px !important; }
+.t-larger { font-size: 2rem !important; }
 
 .t-white, .header__links a, .header__nav-item, .option-box__heading { color: #fff !important; }
 
