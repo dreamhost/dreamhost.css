@@ -3,11 +3,10 @@
 	dreamhost.css
 
 */
-@import url("https://fonts.googleapis.com/css?family=Ubuntu");
-/* Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
---------------------------------------------------------------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
+/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
 body { line-height: 1; }
@@ -143,11 +142,59 @@ img { max-width: 100%; height: auto; }
 
 hr { border: 1px solid #f7f7f7; margin: 30px 0; }
 
-.btn { background: #ffba00; color: #2F323B; text-decoration: none; border-radius: 2px; text-transform: uppercase; padding: 15px; display: inline-block; border: 0; font-size: 16px; }
+/*
+
+	Proxima Nova. The default font for DreamHost web properties.
+
+	Usage:
+	- font-family: 'Proxima Nova', sans-serif;
+
+*/
+@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proxima_nova_light-webfont.eot"); src: url("fonts/proxima-nova/proxima_nova_light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proxima_nova_light-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proxima_nova_light-webfont.woff") format("woff"), url("fonts/proxima-nova/proxima_nova_light-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proxima_nova_light-webfont.svg#proxima_novalight") format("svg"); font-weight: 300; font-style: normal; }
+
+@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-lightitalic-webfont.eot"); src: url("fonts/proxima-nova/proximanova-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-lightitalic-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-lightitalic-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-lightitalic-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-lightitalic-webfont.svg#proxima_novalight_italic") format("svg"); font-weight: 300; font-style: italic; }
+
+@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-reg-webfont.eot"); src: url("fonts/proxima-nova/proximanova-reg-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-reg-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-reg-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-reg-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-reg-webfont.svg#proxima_nova_rgregular") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-regitalic-webfont.eot"); src: url("fonts/proxima-nova/proximanova-regitalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-regitalic-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-regitalic-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-regitalic-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-regitalic-webfont.svg#proxima_novaregular_italic") format("svg"); font-weight: normal; font-style: italic; }
+
+@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-sbold-webfont.eot"); src: url("fonts/proxima-nova/proximanova-sbold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-sbold-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-sbold-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-sbold-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-sbold-webfont.svg#proxima_novasemibold") format("svg"); font-weight: 600; font-style: normal; }
+
+@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-sbolditalic-webfont.eot"); src: url("fonts/proxima-nova/proximanova-sbolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-sbolditalic-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-sbolditalic-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-sbolditalic-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-sbolditalic-webfont.svg#proxima_novasemibold_italic") format("svg"); font-weight: 600; font-style: italic; }
+
+@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-bold-webfont.eot"); src: url("fonts/proxima-nova/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-bold-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-bold-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-bold-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-bold-webfont.svg#proxima_nova_rgbold") format("svg"); font-weight: bold; font-style: normal; }
+
+@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-boldit-webfont.eot"); src: url("fonts/proxima-nova/proximanova-boldit-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-boldit-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-boldit-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-boldit-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-boldit-webfont.svg#proxima_nova_rgbold_italic") format("svg"); font-weight: bold; font-style: italic; }
+
+/*
+
+	Ubuntu. Used for headlines throughout DreamHost web properties.
+
+	Usage:
+	- font-family: 'Ubuntu', sans-serif;
+
+*/
+@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-l-webfont.eot"); src: url("fonts/ubuntu/ubuntu-l-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-l-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-l-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-l-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-l-webfont.svg#ubuntulight") format("svg"); font-weight: 300; font-style: normal; }
+
+@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-li-webfont.eot"); src: url("fonts/ubuntu/ubuntu-li-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-li-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-li-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-li-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-li-webfont.svg#ubuntulight_italic") format("svg"); font-weight: 300; font-style: italic; }
+
+@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-r-webfont.eot"); src: url("fonts/ubuntu/ubuntu-r-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-r-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-r-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-r-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-r-webfont.svg#ubunturegular") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-ri-webfont.eot"); src: url("fonts/ubuntu/ubuntu-ri-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-ri-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-ri-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-ri-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-ri-webfont.svg#ubuntuitalic") format("svg"); font-weight: normal; font-style: italic; }
+
+@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-m-webfont.eot"); src: url("fonts/ubuntu/ubuntu-m-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-m-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-m-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-m-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-m-webfont.svg#ubuntumedium") format("svg"); font-weight: 500; font-style: normal; }
+
+@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-mi-webfont.eot"); src: url("fonts/ubuntu/ubuntu-mi-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-mi-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-mi-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-mi-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-mi-webfont.svg#ubuntumedium_italic") format("svg"); font-weight: 500; font-style: italic; }
+
+@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-b-webfont.eot"); src: url("fonts/ubuntu/ubuntu-b-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-b-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-b-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-b-webfont.svg#ubuntubold") format("svg"); font-weight: bold; font-style: normal; }
+
+@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-bi-webfont.eot"); src: url("fonts/ubuntu/ubuntu-bi-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-bi-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-bi-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-bi-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-bi-webfont.svg#ubuntubold_italic") format("svg"); font-weight: bold; font-style: italic; }
+
+.btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 15px; display: inline-block; border: 0; font-size: 16px; }
 
 .btn:hover { cursor: pointer; }
 
-.btn--warning { background: #e74141; color: #fff; text-decoration: none; border-radius: 2px; text-transform: uppercase; padding: 15px; display: inline-block; border: 0; font-size: 16px; }
+.btn--warning { background: #e74141; color: #fff; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 15px; display: inline-block; border: 0; font-size: 16px; }
 
 .btn--warning:hover { cursor: pointer; }
 
@@ -160,7 +207,7 @@ hr { border: 1px solid #f7f7f7; margin: 30px 0; }
 	Currently set up with a sass grid but maybe it should be some sort of table or flexbox thing.
 
 */
-.header::after { clear: both; content: ""; display: block; }
+.header::after { clear: both; content: ""; display: table; }
 
 .header__logo { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
 
@@ -235,7 +282,7 @@ Utilities
 	Utilities are !important (see http://csswizardry.com/2016/05/the-importance-of-important/)
 
 */
-.u-clearfix::after { clear: both; content: ""; display: block; }
+.u-clearfix::after { clear: both; content: ""; display: table; }
 
 .bg-white, tbody tr:nth-child(odd), .option-box__content { background: #fff !important; }
 
@@ -243,19 +290,49 @@ Utilities
 
 .bg-blue, .option-box__heading { background: #3675b4 !important; }
 
+.bg-light-blue { background: #3e95be !important; }
+
+.bg-dark-blue { background: #1e3244 !important; }
+
+.bg-peach { background: #f1666b !important; }
+
+.bg-light-peach { background: #f59598 !important; }
+
+.bg-dark-peach { background: #ed373e !important; }
+
 .bg-red { background: #e74141 !important; }
 
-.bg-yellow { background: #ffba00 !important; }
+.bg-light-red { background: #ed6e6e !important; }
 
-.bg-light-grey { background: #858585 !important; }
+.bg-dark-red { background: #da1b1b !important; }
+
+.bg-yellow { background: #faa224 !important; }
+
+.bg-light-yellow { background: #fbb756 !important; }
+
+.bg-dark-yellow { background: #e68905 !important; }
+
+.bg-green { background: #2ecc71 !important; }
+
+.bg-light-green { background: #54d98c !important; }
+
+.bg-dark-green { background: #25a25a !important; }
+
+.bg-light-grey { background: #999 !important; }
 
 .bg-lighter-grey { background: #d1d1d1 !important; }
 
 .bg-lightest-grey { background: #f7f7f7 !important; }
 
+.bg-dark-grey { background: #888 !important; }
+
+.bg-darker-grey { background: #6f6f6f !important; }
+
+.bg-darkest-grey { background: #555555 !important; }
+
 .container { max-width: 980px; margin-left: auto; margin-right: auto; }
 
-.container::after { clear: both; content: ""; display: block; }
+.container::after { clear: both; content: ""; display: table; }
 
 .g-1_6 { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
 
@@ -333,6 +410,8 @@ Utilities
 
 */
 .m-none { margin: 0 !important; }
+
+.m-auto { margin-left: auto !important; margin-right: auto !important; }
 
 .m-smaller { margin: 7.5px !important; }
 
@@ -481,13 +560,39 @@ Utilities
 
 .t-blue { color: #3675b4 !important; }
 
-.t-light-grey { color: #858585 !important; }
+.t-light-blue { color: #3e95be !important; }
+
+.t-dark-blue { color: #1e3244 !important; }
+
+.t-red { color: #e74141 !important; }
+
+.t-light-red { color: #ed6e6e !important; }
+
+.t-dark-red { color: #da1b1b !important; }
+
+.t-yellow { color: #faa224 !important; }
+
+.t-light-yellow { color: #fbb756 !important; }
+
+.t-dark-yellow { color: #e68905 !important; }
+
+.t-green { color: #2ecc71 !important; }
+
+.t-light-green { color: #54d98c !important; }
+
+.t-dark-green { color: #25a25a !important; }
+
+.t-light-grey { color: #999 !important; }
 
 .t-lighter-grey { color: #d1d1d1 !important; }
 
 .t-lightest-grey { color: #f7f7f7 !important; }
 
-.t-yellow { color: #ffba00 !important; }
+.t-dark-grey { color: #888 !important; }
+
+.t-darker-grey { color: #6f6f6f !important; }
+
+.t-darkest-grey { color: #555555 !important; }
 
 .t-whitespace-normal { white-space: normal !important; }
 
@@ -521,7 +626,7 @@ Utilities
 
 .border-bottom, tbody tr { border-bottom: 1px solid #f7f7f7 !important; }
 
-.border-radius, .form__input { border-radius: 2px; }
+.border-radius, .form__input { border-radius: 3px; }
 
 .u-vertical-align-top { vertical-align: top !important; }
 
