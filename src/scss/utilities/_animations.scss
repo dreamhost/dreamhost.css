@@ -2,9 +2,9 @@
 
 Animation Utilities
 
-  These are pre-defined speeds and easings that can be used to override
-  the default values for each property of an animation. Use them together
-  with animation components from scss/components/_animations.scss.
+  These classes can be used to override the default values for each property
+  of an animation. Use them together with animation components from
+  scss/components/_animations.scss.
 
   Usage:
   <div class="a-bounce a-duration-xl a-easing-cb-scale-out">
@@ -16,58 +16,58 @@ Animation Utilities
 */
 
 
-/*
-Animation timing
-Timings are t-shirt sized. (s)mall is the shortest duration, and (xxl)tra
-Large is the longest. Try to stick to these pre-defined timings. They help
-us maintain consistency, usability, and accessibility. For immediate
-(zero second) transitions, you can use .a-duration-0.
-*/
+// Duration
 .a-duration-0 {
-  @include a-duration(0s);
+  animation-duration: 0s !important;
 }
 
 .a-duration-s {
-  @include a-duration($a-fastest);
+  animation-duration: $a-smaller !important;
 }
 
 .a-duration-m {
-  @include a-duration($a-fast);
+  animation-duration: $a-small !important;
 }
 
 .a-duration-l {
-  @include a-duration($a-duration);
+  animation-duration: $a-size !important;
 }
 
 .a-duration-xl {
-  @include a-duration($a-slow);
+  animation-duration: $a-large !important;
 }
 
 .a-duration-xxl {
-  @include a-duration($a-slowest);
+  animation-duration: $a-larger !important;
 }
 
-/*
-Animation easing
-Linear, ease-in-out, and a few pre-definted cubic-bezier curves that,
-well, just look pimp.
-*/
+
+// Easing
 .a-easing-linear {
-  @include a-easing($a-easing-linear);
+  animation-timing-function: linear !important;
 }
 
 .a-easing-ease {
-  @include a-easing($a-easing);
+  animation-timing-function: ease-in-out !important;
 }
 
 .a-easing-cb-scale-in {
-  @include a-easing($a-easing-cb-scale-in);
+  animation-timing-function: cubic-bezier(0,.89,.44,1) !important;
 }
 
 .a-easing-cb-scale-out {
-  @include a-easing($a-easing-cb-scale-out);
+  animation-timing-function: cubic-bezier(.165,.84,.44,1) !important;
 }
 
 .a-easing-cb-scale-up {
-  @include a-easing($a-easing-cb-scale-up);
+  animation-timing-function: cubic-bezier(.68,-.55,.265,1.55) !important;
+}
+
+// Repeat
+.a-repeat-once {
+  animation-iteration-count: 2 !important;
+}
+
+.a-repeat {
+  animation-iteration-count: infinite !important;
 }

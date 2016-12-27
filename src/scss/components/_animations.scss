@@ -2,60 +2,51 @@
 
 Animation Components
 
-  These styles define the types of animations that we use, and default
+  These styles define the basic animations that we use, and default
   values for each of their properties. Use utility classes from
   scss/utilities/_animations.scss to override specific animation
   properties.
 
-  Usage:
+  Usage [HTML]:
   <div class="a-bounce">
     This is a bouncing div
   </div>
 
+  Usage [CSS]:
+  .a-bounce-hover:hover {
+    @extend .a-bounce;
+  }
+
 */
-
-
-// Scale on hover
-.a-scale-up-hover {
-  @include a-duration($a-duration);
-
-  &:hover {
-    @include scale($a-scale-up);
-  }
-}
-
-.a-scale-down-hover {
-  @include a-duration($a-duration);
-
-  &:hover {
-    @include scale($a-scale-down);
-  }
-}
 
 
 // Spin
 .a-spin-right {
-  @include animation(spin, $a-slowest, $a-spin-duration, $a-easing-linear);
+  animation: spin $a-smaller 1 linear;
 }
 
 .a-spin-left {
-  @include animation(spin, $a-slowest, $a-spin-duration, $a-easing-linear reverse);
+  animation: spin $a-smaller 1 linear reverse;
 }
-
 
 // Bounce
 .a-bounce {
-  @include animation(bounce, $a-slowest, $a-bounce-duration, $a-easing-cb-bounce);
+  animation: bounce $a-size 1 cubic-bezier(.075,.82,.165,1);
+}
+
+// Shake
+.a-shake {
+  animation: shake $a-size 1 cubic-bezier(.075,.82,.165,1);
 }
 
 
 // Keyframe definitions
 @keyframes spin {
   0% {
-    @include rotate($a-spin-start);
+    @include rotate(0);
   }
   100% {
-    @include rotate($a-spin-end);
+    @include rotate(360);
   }
 }
 
@@ -64,9 +55,21 @@ Animation Components
     @include translate(0, 0);
   }
   40% {
-    @include translate(0, $a-bounce-1st);
+    @include translate(0, -5px);
   }
   60% {
-    @include translate(0, $a-bounce-2nd);
+    @include translate(0, -3px);
+  }
+}
+
+@keyframes shake {
+  0%, 20%, 50%, 70%, 100% {
+    @include translate(0, 0);
+  }
+  40% {
+    @include translate(-5px, 0);
+  }
+  60% {
+    @include translate(-3px, 0);
   }
 }
