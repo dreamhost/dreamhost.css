@@ -4,8 +4,8 @@
 
 .t-smaller {font-size: $t-smaller !important}
 .t-small {font-size: $t-small !important}
-.t-large {font-size: $h3 !important}
-.t-larger {font-size: $h2 !important}
+.t-large {font-size: $t-large !important}
+.t-larger {font-size: $t-larger !important}
 
 // Colors
 .t-white {color: #fff !important}
@@ -49,6 +49,10 @@
 .t-underline {text-decoration: underline !important}
 .t-decoration-none {text-decoration: none}
 .t-italic {font-weight: italic}
+
+// Transforms
+.t-transform-uppercase {text-transform: uppercase !important}
+.t-transform-none {text-transform: none !important}
 
 // Line Height
 .t-line-height-1 {line-height: 1 !important}

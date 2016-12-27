@@ -19,10 +19,6 @@ td {
 	@extend .l-block;
 	@extend .m-bottom-small;
 	@extend .t-bold;
-
-	&--radio {
-		@extend .t-book;
-	}
 }
 
 .form__input {

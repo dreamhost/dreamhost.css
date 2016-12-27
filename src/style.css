@@ -104,7 +104,7 @@ html { box-sizing: border-box; }
 
 .box *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
-body { background: #f7f7f7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; font-size: 16px; line-height: 1.5; }
+body { background: #f7f7f7; font-smoothing: antialiased; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; font-size: 16px; line-height: 1.5; }
 
 h1, h2, h3, h4 { font-family: "Ubuntu", sans-serif; font-weight: 600; }
 
@@ -116,7 +116,7 @@ h3 { font-size: 1.5rem; margin-bottom: 1.5rem; }
 
 h4 { font-size: 1rem; margin-bottom: 1.5rem; }
 
-p { color: #2F323B; line-height: 1.4; }
+p { color: #2F323B; }
 
 a { color: #3675b4; text-decoration: none; }
 
@@ -126,9 +126,9 @@ strong { font-weight: 700; }
 
 img { max-width: 100%; height: auto; }
 
-hr { border: 1px solid #f7f7f7; margin: 2rem 0; }
+p, section, img { margin-bottom: 2rem; }
 
-p, section { margin-bottom: 2rem; }
+hr { border: 1px solid #f7f7f7; margin: 2rem 0; }
 
 .btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
@@ -488,8 +488,6 @@ Utilities
 
 .t-small, .form__input { font-size: 0.875rem !important; }
 
-.t-book, .form__label--radio { font-weight: normal; }
-
 .t-large, th, .tabs__nav-item { font-size: 1.5rem !important; }
 
 .t-larger { font-size: 2rem !important; }
@@ -559,6 +557,10 @@ Utilities
 .t-decoration-none, .header__links a, .header__nav-item, .option-box { text-decoration: none; }
 
 .t-italic { font-weight: italic; }
+
+.t-transform-uppercase { text-transform: uppercase !important; }
+
+.t-transform-none { text-transform: none !important; }
 
 .t-line-height-1 { line-height: 1 !important; }
 
