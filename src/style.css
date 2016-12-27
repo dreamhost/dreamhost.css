@@ -120,7 +120,7 @@ Transform Mixins
   }
 
 */
-body { background: #f7f7f7; font-smoothing: antialiased; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; font-size: 16px; line-height: 1.5; }
+body { background: #f7f7f7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; font-size: 16px; line-height: 1.5; }
 
 h1, h2, h3, h4 { font-family: "Ubuntu", sans-serif; font-weight: 600; }
 

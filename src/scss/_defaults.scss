@@ -3,7 +3,8 @@
 
 body {
 	background: $lightest-grey;
-	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased; // autoprefixer does not incl. font-smoothing
+	-moz-osx-font-smoothing: grayscale;
 	font-feature-settings: "liga", "dlig";
 	color: $black;
 	font-family: $body;
