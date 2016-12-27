@@ -7,38 +7,37 @@ body {
 	font-feature-settings: "liga", "dlig";
 	color: $black;
 	font-family: $body;
+	font-size: 16px;
+	line-height: 1.5; // 24px
 }
 
 h1, h2, h3, h4 {
 	font-family: $heading;
-	font-weight: 100;
-	line-height: 1.6;
+	font-weight: 600;
 }
 
 h1 {
-	font-size: $h1;
+	font-size: $t-h1;
 	margin-bottom: $s-large;
 }
 
 h2 {
-	font-size: $h2;
+	font-size: $t-larger;
 	margin-bottom: $s;
 }
 
 h3 {
-	font-size: $h3;
+	font-size: $t-large;
 	margin-bottom: $s-small;
 }
 
 h4 {
-	font-size: $h4;
+	font-size: $t-size;
 	margin-bottom: $s-small;
 }
 
 p {
 	color: $black;
-	line-height: 1.4;
-	margin-bottom: $s;
 }
 
 a {
@@ -54,9 +53,12 @@ strong {
 }
 
 img {
-	// margin-bottom: $s; ???
 	max-width: 100%;
 	height: auto;
+}
+
+p, section, img {
+	margin-bottom: $s;
 }
 
 hr {
