@@ -7,35 +7,34 @@ Animation Components
   scss/utilities/_animations.scss to override specific animation
   properties.
 
-  Usage [HTML]:
-  <div class="a-bounce">
-    This is a bouncing div
+  Usage:
+  <div class="a-bounce-hover">
+    This div bounces on hover
   </div>
-
-  Usage [CSS]:
-  .a-bounce-hover:hover {
-    @extend .a-bounce;
-  }
 
 */
 
 
 // Spin
-.a-spin-right {
+.a-spin-right,
+.a-spin-right-hover:hover {
   animation: spin $a-smaller 1 linear;
 }
 
-.a-spin-left {
+.a-spin-left,
+.a-spin-left-hover:hover {
   animation: spin $a-smaller 1 linear reverse;
 }
 
 // Bounce
-.a-bounce {
+.a-bounce,
+.a-bounce-hover:hover {
   animation: bounce $a-size 1 cubic-bezier(.075,.82,.165,1);
 }
 
 // Shake
-.a-shake {
+.a-shake,
+.a-shake-hover:hover {
   animation: shake $a-size 1 cubic-bezier(.075,.82,.165,1);
 }
 
