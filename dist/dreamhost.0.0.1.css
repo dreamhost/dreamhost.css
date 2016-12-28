@@ -114,23 +114,40 @@ html { box-sizing: border-box; }
 
 *, *::after, *::before { box-sizing: inherit; }
 
-.box { padding: 30px; background: #fff; }
+.box { padding: 2rem; background: #fff; }
 
 .box *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
-body { background: #f7f7f7; font-smoothing: antialiased; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; }
+/*
 
-h1, h2, h3, h4 { font-family: "Ubuntu", sans-serif; font-weight: 100; line-height: 1.6; }
+Transform Mixins
 
-h1 { font-size: 40px; margin-bottom: 60px; }
+  A collection of Mixins that you can use in your scss to create and
+  control transforms.
 
-h2 { font-size: 26px; margin-bottom: 30px; }
+  Usage:
+  .thing {
+    @include scale(1.1);
+    @include rotate(40);
+    @include translate(3, 5);
+    @include skew(3, 5);
+    @include transform-origin(top left);
+  }
 
-h3 { font-size: 21px; margin-bottom: 15px; }
+*/
+body { background: #f7f7f7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; font-size: 16px; line-height: 1.5; }
 
-h4 { font-size: 18px; margin-bottom: 15px; }
+h1, h2, h3, h4 { font-family: "Ubuntu", sans-serif; font-weight: 600; }
 
-p { color: #2F323B; line-height: 1.4; margin-bottom: 30px; }
+h1 { font-size: 2.5rem; margin-bottom: 2.5rem; }
+
+h2 { font-size: 2rem; margin-bottom: 2rem; }
+
+h3 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+
+h4 { font-size: 1rem; margin-bottom: 1.5rem; }
+
+p { color: #2F323B; }
 
 a { color: #3675b4; text-decoration: none; }
 
@@ -140,7 +157,9 @@ strong { font-weight: 700; }
 
 img { max-width: 100%; height: auto; }
 
-hr { border: 1px solid #f7f7f7; margin: 30px 0; }
+p, section, img { margin-bottom: 2rem; }
+
+hr { border: 1px solid #f7f7f7; margin: 2rem 0; }
 
 /*
 
@@ -190,11 +209,61 @@ hr { border: 1px solid #f7f7f7; margin: 30px 0; }
 
 @font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-bi-webfont.eot"); src: url("fonts/ubuntu/ubuntu-bi-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-bi-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-bi-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-bi-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-bi-webfont.svg#ubuntubold_italic") format("svg"); font-weight: bold; font-style: italic; }
 
-.btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 15px; display: inline-block; border: 0; font-size: 16px; }
+/*
+
+Animation Components
+
+  These styles define the basic animations that we use, and default
+  values for each of their properties. Use utility classes from
+  scss/utilities/_animations.scss to override specific animation
+  properties.
+
+  Usage [HTML]:
+  <div class="a-bounce">
+    This is a bouncing div
+  </div>
+
+  Usage [CSS]:
+  .a-bounce-hover:hover {
+    @extend .a-bounce;
+  }
+
+*/
+.a-spin-right { -webkit-animation: spin 0.3s 1 linear; animation: spin 0.3s 1 linear; }
+
+.a-spin-left { -webkit-animation: spin 0.3s 1 linear reverse; animation: spin 0.3s 1 linear reverse; }
+
+.a-bounce { -webkit-animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+.a-shake { -webkit-animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+@-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+
+@keyframes spin { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+
+@-webkit-keyframes bounce { 0%, 20%, 50%, 70%, 100% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  40% { -webkit-transform: translate(0, -5px); transform: translate(0, -5px); }
+  60% { -webkit-transform: translate(0, -3px); transform: translate(0, -3px); } }
+
+@keyframes bounce { 0%, 20%, 50%, 70%, 100% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  40% { -webkit-transform: translate(0, -5px); transform: translate(0, -5px); }
+  60% { -webkit-transform: translate(0, -3px); transform: translate(0, -3px); } }
+
+@-webkit-keyframes shake { 0%, 20%, 50%, 70%, 100% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  40% { -webkit-transform: translate(-5px, 0); transform: translate(-5px, 0); }
+  60% { -webkit-transform: translate(-3px, 0); transform: translate(-3px, 0); } }
+
+@keyframes shake { 0%, 20%, 50%, 70%, 100% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  40% { -webkit-transform: translate(-5px, 0); transform: translate(-5px, 0); }
+  60% { -webkit-transform: translate(-3px, 0); transform: translate(-3px, 0); } }
+
+.btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
 .btn:hover { cursor: pointer; }
 
-.btn--warning { background: #e74141; color: #fff; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 15px; display: inline-block; border: 0; font-size: 16px; }
+.btn--warning { background: #e74141; color: #fff; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
 .btn--warning:hover { cursor: pointer; }
 
@@ -230,7 +299,7 @@ hr { border: 1px solid #f7f7f7; margin: 30px 0; }
 	grid framework for positjoning.
 
 */
-.option-box__content { padding: 30px; background: #fff; }
+.option-box__content { padding: 2rem; background: #fff; }
 
 .option-box__content *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
@@ -238,7 +307,7 @@ hr { border: 1px solid #f7f7f7; margin: 30px 0; }
 
 .tabs__nav-item:hover { cursor: pointer; color: #3675b4; }
 
-.tab { padding: 30px; background: #fff; }
+.tab { padding: 2rem; background: #fff; }
 
 .tab *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
@@ -268,6 +337,29 @@ thead tr { border-bottom: 3px solid #f7f7f7; }
 
 /*
 
+Transition Components
+
+  These styles define the basic transitions that we use, and default
+  values for each of their properties. Use utility classes from
+  scss/utilities/_transitions.scss to override specific transition
+  properties.
+
+  Usage:
+  <div class="tr-scale-up-hover">
+    This div scales up on hover
+  </div>
+
+*/
+.tr-scale-up-hover { transition-duration: 0.1s; }
+
+.tr-scale-up-hover:hover { -webkit-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1); }
+
+.tr-scale-down-hover { transition-duration: 0.1s; }
+
+.tr-scale-down-hover:hover { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
+
+/*
+
 Utilities
 
 	Use these classes in your HTML to make non-repeatable styles. This saves
@@ -282,6 +374,48 @@ Utilities
 	Utilities are !important (see http://csswizardry.com/2016/05/the-importance-of-important/)
 
 */
+/*
+
+Animation Utilities
+
+  These classes can be used to override the default values for each property
+  of an animation. Use them together with animation components from
+  scss/components/_animations.scss.
+
+  Usage:
+  <div class="a-bounce a-duration-xl a-easing-cb-scale-out">
+    This div bounces slowly with a cubic bezier scaling effect. The
+    initial bounce is defined in the components doc, while the utility
+    classes override the component's default values.
+  </div>
+
+*/
+.a-duration-0 { -webkit-animation-duration: 0s !important; animation-duration: 0s !important; }
+
+.a-duration-s { -webkit-animation-duration: 0.3s !important; animation-duration: 0.3s !important; }
+
+.a-duration-m { -webkit-animation-duration: 0.5s !important; animation-duration: 0.5s !important; }
+
+.a-duration-l { -webkit-animation-duration: 1s !important; animation-duration: 1s !important; }
+
+.a-duration-xl { -webkit-animation-duration: 1.5s !important; animation-duration: 1.5s !important; }
+
+.a-duration-xxl { -webkit-animation-duration: 2s !important; animation-duration: 2s !important; }
+
+.a-easing-linear { -webkit-animation-timing-function: linear !important; animation-timing-function: linear !important; }
+
+.a-easing-ease { -webkit-animation-timing-function: ease-in-out !important; animation-timing-function: ease-in-out !important; }
+
+.a-easing-cb-scale-in { -webkit-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1) !important; animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1) !important; }
+
+.a-easing-cb-scale-out { -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important; animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important; }
+
+.a-easing-cb-scale-up { -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important; animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important; }
+
+.a-repeat-once { -webkit-animation-iteration-count: 2 !important; animation-iteration-count: 2 !important; }
+
+.a-repeat { -webkit-animation-iteration-count: infinite !important; animation-iteration-count: infinite !important; }
+
 .u-clearfix::after { clear: both; content: ""; display: table; }
 
 .bg-white, tbody tr:nth-child(odd), .option-box__content { background: #fff !important; }
@@ -413,63 +547,63 @@ Utilities
 
 .m-auto { margin-left: auto !important; margin-right: auto !important; }
 
-.m-smaller { margin: 7.5px !important; }
+.m-smaller { margin: 0.5rem !important; }
 
-.m-small { margin: 15px !important; }
+.m-small { margin: 1.5rem !important; }
 
-.m { margin: 30px !important; }
+.m { margin: 2rem !important; }
 
-.m-large { margin: 60px !important; }
+.m-large { margin: 2.5rem !important; }
 
-.m-larger { margin: 120px !important; }
+.m-larger { margin: 3rem !important; }
 
 .m-top-none { margin-top: 0 !important; }
 
-.m-top-smaller { margin-top: 7.5px !important; }
+.m-top-smaller { margin-top: 0.5rem !important; }
 
-.m-top-small { margin-top: 7.5px !important; }
+.m-top-small { margin-top: 0.5rem !important; }
 
-.m-top { margin-top: 30px !important; }
+.m-top { margin-top: 2rem !important; }
 
-.m-top-large { margin-top: 60px !important; }
+.m-top-large { margin-top: 2.5rem !important; }
 
-.m-top-larger { margin-top: 120px !important; }
+.m-top-larger { margin-top: 3rem !important; }
 
 .m-bottom-none, .list, .option-box__heading { margin-bottom: 0 !important; }
 
-.m-bottom-smaller { margin-bottom: 7.5px !important; }
+.m-bottom-smaller { margin-bottom: 0.5rem !important; }
 
-.m-bottom-small, .form__label, .form__input, .list li:not(:last-child) { margin-bottom: 7.5px !important; }
+.m-bottom-small, .form__label, .form__input, .list li:not(:last-child) { margin-bottom: 0.5rem !important; }
 
-.m-bottom, .table { margin-bottom: 30px !important; }
+.m-bottom, .table { margin-bottom: 2rem !important; }
 
-.m-bottom-large, .header, .tabs { margin-bottom: 60px !important; }
+.m-bottom-large, .header, .tabs { margin-bottom: 2.5rem !important; }
 
-.m-bottom-larger { margin-bottom: 120px !important; }
+.m-bottom-larger { margin-bottom: 3rem !important; }
 
 .m-right-none, .list--inline li:last-child { margin-right: 0 !important; }
 
-.m-right-smaller { margin-right: 7.5px !important; }
+.m-right-smaller { margin-right: 0.5rem !important; }
 
-.m-right-small, .form__input[type="radio"] { margin-right: 7.5px !important; }
+.m-right-small, .form__input[type="radio"] { margin-right: 0.5rem !important; }
 
-.m-right, .list--inline li { margin-right: 30px !important; }
+.m-right, .list--inline li { margin-right: 2rem !important; }
 
-.m-right-large { margin-right: 60px !important; }
+.m-right-large { margin-right: 2.5rem !important; }
 
-.m-right-larger { margin-right: 120px !important; }
+.m-right-larger { margin-right: 3rem !important; }
 
 .m-left-none { margin-left: 0 !important; }
 
-.m-left-smaller { margin-left: 7.5px !important; }
+.m-left-smaller { margin-left: 0.5rem !important; }
 
-.m-left-small { margin-left: 7.5px !important; }
+.m-left-small { margin-left: 0.5rem !important; }
 
-.m-left, .list--bullets li { margin-left: 30px !important; }
+.m-left, .list--bullets li { margin-left: 2rem !important; }
 
-.m-left-large { margin-left: 60px !important; }
+.m-left-large { margin-left: 2.5rem !important; }
 
-.m-left-larger { margin-left: 120px !important; }
+.m-left-larger { margin-left: 3rem !important; }
 
 /*
 
@@ -482,77 +616,113 @@ Utilities
 */
 .p-none, .list--inline li { padding: 0 !important; }
 
-.p-smaller { padding: 7.5px !important; }
+.p-smaller { padding: 0.5rem !important; }
 
-.p-small, td, .form__input, .option-box__heading { padding: 15px !important; }
+.p-small, td, .form__input, .option-box__heading { padding: 1.5rem !important; }
 
-.p, .header__logo, .tabs__nav-item { padding: 30px !important; }
+.p, .header__logo, .tabs__nav-item { padding: 2rem !important; }
 
-.p-large { padding: 60px !important; }
+.p-large { padding: 2.5rem !important; }
 
-.p-larger { padding: 120px !important; }
+.p-larger { padding: 3rem !important; }
 
 .p-top-none { padding-top: 0 !important; }
 
-.p-top-smaller { padding-top: 7.5px !important; }
+.p-top-smaller { padding-top: 0.5rem !important; }
 
-.p-top-small, th { padding-top: 7.5px !important; }
+.p-top-small, th { padding-top: 0.5rem !important; }
 
-.p-top, .header__links, .header__nav-item { padding-top: 30px !important; }
+.p-top, .header__links, .header__nav-item { padding-top: 2rem !important; }
 
-.p-top-large, .table--large-padding td { padding-top: 60px !important; }
+.p-top-large, .table--large-padding td { padding-top: 2.5rem !important; }
 
-.p-top-larger { padding-top: 120px !important; }
+.p-top-larger { padding-top: 3rem !important; }
 
 .p-bottom-none { padding-bottom: 0 !important; }
 
-.p-bottom-smaller { padding-bottom: 7.5px !important; }
+.p-bottom-smaller { padding-bottom: 0.5rem !important; }
 
-.p-bottom-small, th { padding-bottom: 7.5px !important; }
+.p-bottom-small, th { padding-bottom: 0.5rem !important; }
 
-.p-bottom, .header__links, .header__nav-item { padding-bottom: 30px !important; }
+.p-bottom, .header__links, .header__nav-item { padding-bottom: 2rem !important; }
 
-.p-bottom-large, .table--large-padding td { padding-bottom: 60px !important; }
+.p-bottom-large, .table--large-padding td { padding-bottom: 2.5rem !important; }
 
-.p-bottom-larger { padding-bottom: 120px !important; }
+.p-bottom-larger { padding-bottom: 3rem !important; }
 
 .p-right-none { padding-right: 0 !important; }
 
-.p-right-smaller { padding-right: 7.5px !important; }
+.p-right-smaller { padding-right: 0.5rem !important; }
 
-.p-right-small { padding-right: 7.5px !important; }
+.p-right-small { padding-right: 0.5rem !important; }
 
-.p-right, th, .table--large-padding td { padding-right: 30px !important; }
+.p-right, th, .table--large-padding td { padding-right: 2rem !important; }
 
-.p-right-large { padding-right: 60px !important; }
+.p-right-large { padding-right: 2.5rem !important; }
 
-.p-right-larger { padding-right: 120px !important; }
+.p-right-larger { padding-right: 3rem !important; }
 
 .p-left-none, .tabs__nav-item:first-child { padding-left: 0 !important; }
 
-.p-left-smaller { padding-left: 7.5px !important; }
+.p-left-smaller { padding-left: 0.5rem !important; }
 
-.p-left-small { padding-left: 7.5px !important; }
+.p-left-small { padding-left: 0.5rem !important; }
 
-.p-left, th, .table--large-padding td { padding-left: 30px !important; }
+.p-left, th, .table--large-padding td { padding-left: 2rem !important; }
 
-.p-left-large { padding-left: 60px !important; }
+.p-left-large { padding-left: 2.5rem !important; }
 
-.p-left-larger { padding-left: 120px !important; }
+.p-left-larger { padding-left: 3rem !important; }
+
+/*
+
+Transition Utilities
+
+  These classes can be used to override the default values for each property
+  of a transition. Use them together with transition components from
+  scss/components/_transitions.scss.
+
+  Usage:
+  <div class="tr-scale-up-hover tr-duration-xl tr-easing-cb-scale-out">
+    This div scale up slowly on hover, with a cubic bezier scaling effect. The
+    initial scaling up is defined in the components doc, while the utility
+    classes override the component's default values.
+  </div>
+
+*/
+.tr-duration-0 { transition-duration: 0s !important; }
+
+.tr-duration-s { transition-duration: 0.05s !important; }
+
+.tr-duration-m { transition-duration: 0.07s !important; }
+
+.tr-duration-l { transition-duration: 0.1s !important; }
+
+.tr-duration-xl { transition-duration: 0.2s !important; }
+
+.tr-duration-xxl { transition-duration: 0.3s !important; }
+
+.tr-easing-linear { transition-timing-function: linear !important; }
+
+.tr-easing-ease { transition-timing-function: ease-in-out !important; }
+
+.tr-easing-cb-scale-in { transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1) !important; }
+
+.tr-easing-cb-scale-out { transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important; }
+
+.tr-easing-cb-scale-up { transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important; }
 
 .t-body, .form__input { font-family: "Proxima Nova", sans-serif !important; }
 
 .t-heading, th, .tabs__nav-item { font-family: "Ubuntu", sans-serif !important; }
 
-.t-small, .form__input { font-size: 14px !important; }
+.t-smaller { font-size: 0.75em !important; }
 
-.t-book, .form__label--radio { font-weight: normal; }
+.t-small, .form__input { font-size: 0.875rem !important; }
 
-.t-size { font-size: 16px !important; }
+.t-large, th, .tabs__nav-item { font-size: 1.5rem !important; }
 
-.t-large, th, .tabs__nav-item { font-size: 21px !important; }
-
-.t-larger { font-size: 26px !important; }
+.t-larger { font-size: 2rem !important; }
 
 .t-white, .header__links a, .header__nav-item, .option-box__heading { color: #fff !important; }
 
@@ -619,6 +789,10 @@ Utilities
 .t-decoration-none, .header__links a, .header__nav-item, .option-box { text-decoration: none; }
 
 .t-italic { font-weight: italic; }
+
+.t-transform-uppercase { text-transform: uppercase !important; }
+
+.t-transform-none { text-transform: none !important; }
 
 .t-line-height-1 { line-height: 1 !important; }
 

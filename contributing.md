@@ -17,7 +17,7 @@ Certain exceptions may apply to all rules of course but please check with the en
 ## General
 If code is unfinished, indicate with a TODO comment and any relevant JIRA tickets and expected completion dates.
 
-Code review to existing guidelines. If you disagree with a guideline, up a ticket to deal with that separately and follow the guidelines in the mean time.
+Code review to existing guidelines. If you disagree with a guideline, create a ticket to deal with that separately and follow the guidelines in the mean time.
 
 We currently use JIRA for tickets. Please reference any relevant tickets in your pull request.
 
