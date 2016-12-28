@@ -1,5 +1,3 @@
-DreamHost.css
-
 Thanks for contributing to DreamHost.css. Please start by [reading the documentation](http://dreamhost.github.io/dreamhost.css).
 
 ## HTML Guidelines
@@ -9,7 +7,7 @@ Thanks for contributing to DreamHost.css. Please start by [reading the documenta
 * No unsetting css
 * No !important except in _utilities.scss
 * No numbers or colours  outside of _variables.scss
-* No margin-top [read more](http://csswizardry.com/2012/06/single-direction-margin-declarations/)
+* No margin-top [(read more)](http://csswizardry.com/2012/06/single-direction-margin-declarations/)
 * The framework is for repeatable elements and sass functionality, not one-off styles
 * Components should be truly repeatable and built exclusively using @extends
 * Mobile first: (min-width), not (max-width)
