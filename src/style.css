@@ -359,7 +359,6 @@ Animation Utilities
   </div>
 
 */
-
 .a-duration-none { animation-duration: 0s !important; }
 
 .a-duration-smaller { animation-duration: 0.3s !important; }
