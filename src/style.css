@@ -385,6 +385,10 @@ Animation Utilities
 
 .a-repeat { animation-iteration-count: infinite !important; }
 
+.u-border-radius-m, .u-border-radius, .u-rounded-corners { border-radius: 3px !important; }
+
+.u-border-radius-l { border-radius: 5px !important; }
+
 .u-clearfix::after { clear: both; content: ""; display: table; }
 
 .bg-white, tbody tr:nth-child(odd), .option-box__content { background: #fff !important; }

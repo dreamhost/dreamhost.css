@@ -59,7 +59,11 @@ $t-size: 1rem;
 $t-small: .875rem; // legibility at small sizes > adhering to scales
 $t-smaller: .75em;
 
-$border-radius: 3px;
+$border-radius-m: 3px;
+$border-radius-l: 5px;
+
+// Shorthand!
+$border-radius: $border-radius-m;
 
 // Animation Duration
 $a-larger: 2s;
