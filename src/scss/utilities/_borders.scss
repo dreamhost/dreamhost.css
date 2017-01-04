@@ -12,8 +12,8 @@
 	b-{direction} to include or exclude only one side.
 	b-{color} to change border color
 	b-{style} to change border style
-	b-none or b-{direction-1} to change border width
-		// TODO do we want more widths?
+	b-{width}, b-{direction-width} to change border width
+		// TODO width values are only 1 and 0. do we want more?
 
 	// TODO pseudoclasses, e.g. color change on :focus
 
