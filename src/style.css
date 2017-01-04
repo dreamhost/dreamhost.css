@@ -228,11 +228,11 @@ Animation Components
   40% { transform: translate(-5px, 0); }
   60% { transform: translate(-3px, 0); } }
 
-.btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
+.btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 1px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
 .btn:hover { cursor: pointer; }
 
-.btn--warning { background: #e74141; color: #fff; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
+.btn--warning { background: #e74141; color: #fff; text-decoration: none; border-radius: 1px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
 .btn--warning:hover { cursor: pointer; }
 
@@ -384,6 +384,70 @@ Animation Utilities
 .a-repeat-once { animation-iteration-count: 2 !important; }
 
 .a-repeat { animation-iteration-count: infinite !important; }
+
+/*
+
+	Borders
+
+	Base:
+	.border is the default class that adds a basic solid border of 1px
+	with its color inherited from text color property unless overridden
+	by a color modifier.
+
+	e.g.
+	<div class="border t-red"></div> creates border: 1px solid $red
+	<div class="border border-white t-red"></div> creates border: 1px solid $white
+
+*/
+.border-black { border-color: #2F323B; }
+
+.border-white { border-color: #FFFFFF; }
+
+.border-blue { border-color: #3675b4; }
+
+.border-light-blue { border-color: #3e95be; }
+
+.border-dark-blue { border-color: #1e3244; }
+
+.border-red { border-color: #e74141; }
+
+.border-light-red { border-color: #ed6e6e; }
+
+.border-dark-red { border-color: #da1b1b; }
+
+.border-light-grey { border-color: #999; }
+
+.border-lighter-grey { border-color: #d1d1d1; }
+
+.border-lightest-grey { border-color: #f7f7f7; }
+
+.border-dark-grey { border-color: #888; }
+
+.border-darker-grey { border-color: #6f6f6f; }
+
+.border-darkest-grey { border-color: #555555; }
+
+.border-solid, .border, .form__input, tbody tr, .border-top, .border-bottom, .border-left, .border-right { border-style: solid; }
+
+.border-none { border-width: 0; }
+
+.border-top-none { border-top-width: 0; }
+
+.border-bottom-none { border-bottom-width: 0; }
+
+.border-left-none { border-left-width: 0; }
+
+.border-right-none { border-right-width: 0; }
+
+.border-1, .border, .form__input, tbody tr { border-width: 1px; }
+
+.border-top-1, .border-top { border-top-width: 1px; }
+
+.border-bottom-1, .border-bottom, tbody tr { border-bottom-width: 1px; }
+
+.border-left-1, .border-left { border-left-width: 1px; }
+
+.border-right-1, .border-right { border-right-width: 1px; }
 
 .u-clearfix::after { clear: both; content: ""; display: table; }
 
@@ -769,7 +833,7 @@ Transition Utilities
 
 .border-bottom, tbody tr { border-bottom: 1px solid #f7f7f7 !important; }
 
-.border-radius, .form__input { border-radius: 3px; }
+.border-radius, .form__input { border-radius: 1px; }
 
 .u-vertical-align-top { vertical-align: top !important; }
 

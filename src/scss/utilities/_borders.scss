@@ -3,81 +3,59 @@
 	Borders
 
 	Base:
-	.b is the default class that adds a basic solid border of 1px
-	with its color inherited from text color property.
+	.border is the default class that adds a basic solid border of 1px
+	with its color inherited from text color property unless overridden
+	by a color modifier.
 
-	e.g. <div class="b t-red"></div> creates border: 1px solid $red
-
-	Modifiers:
-	b-{direction} to include or exclude only one side.
-	b-{color} to change border color
-	b-{style} to change border style
-	b-{width}, b-{direction-width} to change border width
-		// TODO width values are only 1 and 0. do we want more?
-
-	// TODO pseudoclasses, e.g. color change on :focus
-
-	Based on:
-	http://tachyons.io/docs/themes/borders/
-	https://github.com/colmtuite/bantam
+	e.g.
+	<div class="border t-red"></div> creates border: 1px solid $red
+	<div class="border border-white t-red"></div> creates border: 1px solid $white
 
 */
 
 // default
-.b {@extend .b-1; @extend .b-solid;}
+.border {@extend .border-1; @extend .border-solid;}
 
 // directions
-.b-top {@extend .b-top-1; @extend .b-solid;}
-.b-bottom {@extend .b-bottom-1; @extend .b-solid;}
-.b-left {@extend .b-left-1; @extend .b-solid;}
-.b-right {@extend .b-right-1; @extend .b-solid;}
+.border-top {@extend .border-top-1; @extend .border-solid;}
+.border-bottom {@extend .border-bottom-1; @extend .border-solid;}
+.border-left {@extend .border-left-1; @extend .border-solid;}
+.border-right {@extend .border-right-1; @extend .border-solid;}
 
 // colors
-.b-black {border-color: $black}
-.b-white {border-color: $white}
+.border-black {border-color: $black}
+.border-white {border-color: $white}
 
-.b-blue {border-color: $blue}
-.b-light-blue {border-color: $light-blue}
-.b-dark-blue {border-color: $dark-blue}
+.border-blue {border-color: $blue}
+.border-light-blue {border-color: $light-blue}
+.border-dark-blue {border-color: $dark-blue}
 
-.b-peach {border-color: $peach}
-.b-light-peach {border-color: $light-peach}
-.b-dark-peach {border-color: $dark-peach}
+.border-red {border-color: $red}
+.border-light-red {border-color: $light-red}
+.border-dark-red {border-color:$dark-red}
 
-.b-red {border-color: $red}
-.b-light-red {border-color: $light-red}
-.b-dark-red {border-color:$dark-red}
+.border-light-grey {border-color: $light-grey}
+.border-lighter-grey {border-color: $lighter-grey}
+.border-lightest-grey {border-color: $lightest-grey}
 
-.b-yellow {border-color: $yellow}
-.b-light-yellow {border-color: $light-yellow}
-.b-dark-yellow {border-color: $dark-yellow}
-
-.b-green {border-color: $green}
-.b-light-green {border-color: $light-green}
-.b-dark-green {border-color: $dark-green}
-
-.b-light-grey {border-color: $light-grey}
-.b-lighter-grey {border-color: $lighter-grey}
-.b-lightest-grey {border-color: $lightest-grey}
-
-.b-dark-grey {border-color: $dark-grey}
-.b-darker-grey {border-color: $darker-grey}
-.b-darkest-grey {border-color: $darkest-grey}
+.border-dark-grey {border-color: $dark-grey}
+.border-darker-grey {border-color: $darker-grey}
+.border-darkest-grey {border-color: $darkest-grey}
 
 // styles
-.b-solid {border-style: solid}
-.b-dotted {border-style: dotted}
-.b-dashed {border-style: dashed}
+.border-solid {border-style: solid}
 
 // widths
-.b-none {border-width: $b-none}
-.b-top-none {border-top-width: $b-none}
-.b-bottom-none {border-bottom-width: $b-none}
-.b-left-none {border-left-width: $b-none}
-.b-right-none {border-right-width: $b-none}
+// zero widths to override an element with default styling
+// like an input, or to cancel individual border directions
+.border-none {border-width: 0}
+.border-top-none {border-top-width: 0}
+.border-bottom-none {border-bottom-width: 0}
+.border-left-none {border-left-width: 0}
+.border-right-none {border-right-width: 0}
 
-.b-1 {border-width: $b-size}
-.b-top-1 {border-top-width: $b-size}
-.b-bottom-1 {border-bottom-width: $b-size}
-.b-left-1 {border-left-width: $b-size}
-.b-right-1 {border-right-width: $b-size}
+.border-1 {border-width: $border-size}
+.border-top-1 {border-top-width: $border-size}
+.border-bottom-1 {border-bottom-width: $border-size}
+.border-left-1 {border-left-width: $border-size}
+.border-right-1 {border-right-width: $border-size}
