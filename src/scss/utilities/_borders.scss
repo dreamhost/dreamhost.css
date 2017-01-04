@@ -24,13 +24,13 @@
 */
 
 // default
-.b {@extend .b-width-1; @extend .b-solid;}
+.b {@extend .b-1; @extend .b-solid;}
 
 // directions
-.b-top {@extend .bt-width-1; @extend .b-solid;}
-.b-bottom {@extend .bb-width-1; @extend .b-solid;}
-.b-left {@extend .bl-width-1; @extend .b-solid;}
-.b-right {@extend .br-width-1; @extend .b-solid;}
+.b-top {@extend .b-top-1; @extend .b-solid;}
+.b-bottom {@extend .b-bottom-1; @extend .b-solid;}
+.b-left {@extend .b-left-1; @extend .b-solid;}
+.b-right {@extend .b-right-1; @extend .b-solid;}
 
 // colors
 .b-black {border-color: $black}
