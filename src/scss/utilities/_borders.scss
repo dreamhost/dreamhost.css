@@ -1,0 +1,83 @@
+/*
+
+	Borders
+
+	Base:
+	.b is the default class that adds a basic solid border of 1px
+	with its color inherited from text color property.
+
+	e.g. <div class="b t-red"></div> creates border: 1px solid $red
+
+	Modifiers:
+	b-{direction} to include or exclude only one side.
+	b-{color} to change border color
+	b-{style} to change border style
+	b-none or b-{direction-1} to change border width
+		// TODO do we want more widths?
+
+	// TODO pseudoclasses, e.g. color change on :focus
+
+	Based on:
+	http://tachyons.io/docs/themes/borders/
+	https://github.com/colmtuite/bantam
+
+*/
+
+// default
+.b {@extend .b-width-1; @extend .b-solid;}
+
+// directions
+.b-top {@extend .bt-width-1; @extend .b-solid;}
+.b-bottom {@extend .bb-width-1; @extend .b-solid;}
+.b-left {@extend .bl-width-1; @extend .b-solid;}
+.b-right {@extend .br-width-1; @extend .b-solid;}
+
+// colors
+.b-black {border-color: $black}
+.b-white {border-color: $white}
+
+.b-blue {border-color: $blue}
+.b-light-blue {border-color: $light-blue}
+.b-dark-blue {border-color: $dark-blue}
+
+.b-peach {border-color: $peach}
+.b-light-peach {border-color: $light-peach}
+.b-dark-peach {border-color: $dark-peach}
+
+.b-red {border-color: $red}
+.b-light-red {border-color: $light-red}
+.b-dark-red {border-color:$dark-red}
+
+.b-yellow {border-color: $yellow}
+.b-light-yellow {border-color: $light-yellow}
+.b-dark-yellow {border-color: $dark-yellow}
+
+.b-green {border-color: $green}
+.b-light-green {border-color: $light-green}
+.b-dark-green {border-color: $dark-green}
+
+.b-light-grey {border-color: $light-grey}
+.b-lighter-grey {border-color: $lighter-grey}
+.b-lightest-grey {border-color: $lightest-grey}
+
+.b-dark-grey {border-color: $dark-grey}
+.b-darker-grey {border-color: $darker-grey}
+.b-darkest-grey {border-color: $darkest-grey}
+
+// styles
+.b-solid {border-style: solid}
+.b-dotted {border-style: dotted}
+.b-dashed {border-style: dashed}
+
+// widths
+.b-none {border-width: $b-none}
+.b-top-none {border-top-width: $b-none}
+.b-bottom-none {border-bottom-width: $b-none}
+.b-left-none {border-left-width: $b-none}
+.b-right-none {border-right-width: $b-none}
+
+.b-1 {border-width: $b-size}
+.b-top-1 {border-top-width: $b-size}
+.b-bottom-1 {border-bottom-width: $b-size}
+.b-left-1 {border-left-width: $b-size}
+.b-right-1 {border-right-width: $b-size}
