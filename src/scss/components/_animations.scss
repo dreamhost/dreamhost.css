@@ -18,12 +18,12 @@ Animation Components
 // Spin
 .spin-right,
 .spin-right-hover:hover {
-  animation: spin $a-smaller 1 linear;
+  animation: spinRight $a-size 1 linear;
 }
 
 .spin-left,
 .spin-left-hover:hover {
-  animation: spin $a-smaller 1 linear reverse;
+  animation: spinRight $a-size 1 linear reverse;
 }
 
 // Bounce
@@ -62,7 +62,7 @@ Animation Components
 
 
 // Keyframe definitions
-@keyframes spin {
+@keyframes spinRight {
   0% {
     transform: rotate(0deg);
   }

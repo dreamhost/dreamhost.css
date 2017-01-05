@@ -194,9 +194,9 @@ Animation Components
   </div>
 
 */
-.spin-right, .spin-right-hover:hover { animation: spin 0.3s 1 linear; }
+.spin-right, .spin-right-hover:hover { animation: spinRight 1s 1 linear; }
 
-.spin-left, .spin-left-hover:hover { animation: spin 0.3s 1 linear reverse; }
+.spin-left, .spin-left-hover:hover { animation: spinRight 1s 1 linear reverse; }
 
 .bounce, .bounce-hover:hover { animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
 
@@ -210,7 +210,7 @@ Animation Components
 
 .slide-out, .slide-out-hover:hover { animation: slideIn 1s 1 linear reverse; }
 
-@keyframes spin { 0% { transform: rotate(0deg); }
+@keyframes spinRight { 0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); } }
 
 @keyframes bounce { 0%, 20%, 50%, 70%, 100% { transform: translate(0, 0); }
