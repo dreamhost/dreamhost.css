@@ -20,7 +20,7 @@ Transition Components
   transition-duration: $tr-size;
 
   &:hover {
-    @include scale(1.1);
+    transform: scale(1.1);
   }
 }
 
@@ -28,6 +28,6 @@ Transition Components
   transition-duration: $tr-size;
 
   &:hover {
-    @include scale(.9);
+    transform: scale(.9);
   }
 }

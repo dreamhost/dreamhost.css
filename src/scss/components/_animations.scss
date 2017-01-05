@@ -42,33 +42,33 @@ Animation Components
 // Keyframe definitions
 @keyframes spin {
   0% {
-    @include rotate(0);
+    transform: rotate(0deg);
   }
   100% {
-    @include rotate(360);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes bounce {
   0%, 20%, 50%, 70%, 100% {
-    @include translate(0, 0);
+    transform: translate(0, 0);
   }
   40% {
-    @include translate(0, -5px);
+    transform: translate(0, -5px);
   }
   60% {
-    @include translate(0, -3px);
+    transform: translate(0, -3px);
   }
 }
 
 @keyframes shake {
   0%, 20%, 50%, 70%, 100% {
-    @include translate(0, 0);
+    transform: translate(0, 0);
   }
   40% {
-    @include translate(-5px, 0);
+    transform: translate(-5px, 0);
   }
   60% {
-    @include translate(-3px, 0);
+    transform: translate(-3px, 0);
   }
 }

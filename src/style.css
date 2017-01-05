@@ -105,23 +105,6 @@ html { box-sizing: border-box; }
 
 .box *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
-/*
-
-Transform Mixins
-
-  A collection of Mixins that you can use in your scss to create and
-  control transforms.
-
-  Usage:
-  .thing {
-    @include scale(1.1);
-    @include rotate(40);
-    @include translate(3, 5);
-    @include skew(3, 5);
-    @include transform-origin(top left);
-  }
-
-*/
 body { background: #f7f7f7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; font-size: 16px; line-height: 1.5; }
 
 h1, h2, h3, h4 { font-family: "Ubuntu", sans-serif; font-weight: 600; }
