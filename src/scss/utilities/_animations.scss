@@ -7,7 +7,7 @@ Animation Utilities
   scss/components/_animations.scss.
 
   Usage:
-  <div class="a-bounce a-duration-large a-easing-cb-scale-out">
+  <div class="bounce a-duration-large a-easing-cb-scale-out">
     This div bounces slowly with a cubic bezier scaling effect. The
     initial bounce is defined in the components doc, while the utility
     classes override the component's default values.

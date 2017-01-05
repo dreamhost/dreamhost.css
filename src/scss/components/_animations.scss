@@ -8,7 +8,7 @@ Animation Components
   properties.
 
   Usage:
-  <div class="a-bounce-hover">
+  <div class="bounce-hover">
     This div bounces on hover
   </div>
 
@@ -16,25 +16,25 @@ Animation Components
 
 
 // Spin
-.a-spin-right,
-.a-spin-right-hover:hover {
+.spin-right,
+.spin-right-hover:hover {
   animation: spin $a-smaller 1 linear;
 }
 
-.a-spin-left,
-.a-spin-left-hover:hover {
+.spin-left,
+.spin-left-hover:hover {
   animation: spin $a-smaller 1 linear reverse;
 }
 
 // Bounce
-.a-bounce,
-.a-bounce-hover:hover {
+.bounce,
+.bounce-hover:hover {
   animation: bounce $a-size 1 cubic-bezier(.075,.82,.165,1);
 }
 
 // Shake
-.a-shake,
-.a-shake-hover:hover {
+.shake,
+.shake-hover:hover {
   animation: shake $a-size 1 cubic-bezier(.075,.82,.165,1);
 }
 
