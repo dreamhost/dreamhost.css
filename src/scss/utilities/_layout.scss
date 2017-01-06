@@ -4,3 +4,19 @@
 .l-inline {display: inline !important}
 .l-inline-block {display: inline-block !important}
 .l-block {display: block !important}
+
+.l-absolute {position: absolute !important}
+.l-relative {position: relative !important}
+.l-fixed {position: fixed !important}
+
+.l-pos-top {top: 0 !important}
+.l-pos-bottom {bottom: 0 !important}
+.l-pos-left {left: 0 !important}
+.l-pos-right {right: 0 !important}
+
+.l-pos-top-left {@extend .l-pos-top, .l-pos-left;}
+.l-pos-top-right {@extend .l-pos-top, .l-pos-right;}
+.l-pos-bottom-left {@extend .l-pos-bottom, .l-pos-left;}
+.l-pos-bottom-right {@extend .l-pos-bottom, .l-pos-right;}
+
+.l-pos-all {@extend .l-pos-top, .l-pos-bottom, .l-pos-left, .l-pos-right;}
