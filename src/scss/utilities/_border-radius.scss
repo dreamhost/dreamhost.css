@@ -1,6 +1,5 @@
-.u-border-radius-m {border-radius: $border-radius-m !important}
-.u-border-radius-l {border-radius: $border-radius-l !important}
+.u-border-radius {border-radius: $border-radius !important}
+.u-border-radius-large {border-radius: $border-radius-large !important}
 
 // Shorthand!
-.u-border-radius,
-.u-rounded-corners {@extend .u-border-radius-m}
+.u-rounded-corners {@extend .u-border-radius}
