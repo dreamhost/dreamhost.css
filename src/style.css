@@ -359,7 +359,6 @@ Animation Utilities
   </div>
 
 */
-
 .a-duration-none { animation-duration: 0s !important; }
 
 .a-duration-smaller { animation-duration: 0.3s !important; }
@@ -385,6 +384,10 @@ Animation Utilities
 .a-repeat-once { animation-iteration-count: 2 !important; }
 
 .a-repeat { animation-iteration-count: infinite !important; }
+
+.u-border-radius-m, .u-border-radius, .form__input, .u-rounded-corners { border-radius: 3px !important; }
+
+.u-border-radius-l { border-radius: 5px !important; }
 
 .u-clearfix::after { clear: both; content: ""; display: table; }
 
@@ -769,8 +772,6 @@ Transition Utilities
 .border, .form__input, tbody tr { border: 1px solid #f7f7f7 !important; }
 
 .border-bottom, tbody tr { border-bottom: 1px solid #f7f7f7 !important; }
-
-.border-radius, .form__input { border-radius: 3px; }
 
 .u-vertical-align-top { vertical-align: top !important; }
 
