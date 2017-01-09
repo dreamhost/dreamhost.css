@@ -8,7 +8,7 @@ Transition Components
   properties.
 
   Usage:
-  <div class="tr-scale-up-hover">
+  <div class="scale-up-hover">
     This div scales up on hover
   </div>
 
@@ -16,18 +16,18 @@ Transition Components
 
 
 // Scale on hover
-.tr-scale-up-hover {
+.scale-up-hover {
   transition-duration: $tr-size;
 
   &:hover {
-    @include scale(1.1);
+    transform: scale(1.1);
   }
 }
 
-.tr-scale-down-hover {
+.scale-down-hover {
   transition-duration: $tr-size;
 
   &:hover {
-    @include scale(.9);
+    transform: scale(.9);
   }
 }
