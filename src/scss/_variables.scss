@@ -60,8 +60,10 @@ $t-size: 1rem;
 $t-small: .875rem; // legibility at small sizes > adhering to scales
 $t-smaller: .75em;
 
-// border widths
+// Borders
 $border-size: 1px;
+$border-radius: 3px;
+$border-radius-large: 5px;
 
 // Animation Duration
 $a-larger: 2s;

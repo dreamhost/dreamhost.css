@@ -95,6 +95,8 @@ html.remodal-is-locked { overflow: hidden; touch-action: none; }
 
 .lt-ie9 .remodal { width: 700px; }
 
+/* stylelint-disable */
+/* stylelint-enable */
 html { box-sizing: border-box; }
 
 *, *::after, *::before { box-sizing: inherit; }
@@ -103,23 +105,6 @@ html { box-sizing: border-box; }
 
 .box *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
-/*
-
-Transform Mixins
-
-  A collection of Mixins that you can use in your scss to create and
-  control transforms.
-
-  Usage:
-  .thing {
-    @include scale(1.1);
-    @include rotate(40);
-    @include translate(3, 5);
-    @include skew(3, 5);
-    @include transform-origin(top left);
-  }
-
-*/
 body { background: #f7f7f7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; font-size: 16px; line-height: 1.5; }
 
 h1, h2, h3, h4 { font-family: "Ubuntu", sans-serif; font-weight: 600; }
@@ -204,20 +189,28 @@ Animation Components
   properties.
 
   Usage:
-  <div class="a-bounce-hover">
+  <div class="bounce-hover">
     This div bounces on hover
   </div>
 
 */
-.a-spin-right, .a-spin-right-hover:hover { animation: spin 0.3s 1 linear; }
+.spin-right, .spin-right-hover:hover { animation: spinRight 1s 1 linear; }
 
-.a-spin-left, .a-spin-left-hover:hover { animation: spin 0.3s 1 linear reverse; }
+.spin-left, .spin-left-hover:hover { animation: spinRight 1s 1 linear reverse; }
 
-.a-bounce, .a-bounce-hover:hover { animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
+.bounce, .bounce-hover:hover { animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-.a-shake, .a-shake-hover:hover { animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
+.shake, .shake-hover:hover { animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-@keyframes spin { 0% { transform: rotate(0deg); }
+.fade-in, .fade-in-hover:hover { animation: fadeIn 1s 1 linear; }
+
+.fade-out, .fade-out-hover:hover { animation: fadeIn 1s 1 linear reverse; }
+
+.slide-in, .slide-in-hover:hover { animation: slideIn 1s 1 cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.slide-out, .slide-out-hover:hover { animation: slideIn 1s 1 linear reverse; }
+
+@keyframes spinRight { 0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); } }
 
 @keyframes bounce { 0%, 20%, 50%, 70%, 100% { transform: translate(0, 0); }
@@ -228,7 +221,15 @@ Animation Components
   40% { transform: translate(-5px, 0); }
   60% { transform: translate(-3px, 0); } }
 
-.btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 1px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
+@keyframes fadeIn { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+
+@keyframes slideIn { 0% { transform: translateY(10px) translateZ(-30px);
+    opacity: 0; }
+  100% { transform: translateY(0) translateZ(0);
+    opacity: 1; } }
+
+.btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
 .btn:hover { cursor: pointer; }
 
@@ -314,18 +315,18 @@ Transition Components
   properties.
 
   Usage:
-  <div class="tr-scale-up-hover">
+  <div class="scale-up-hover">
     This div scales up on hover
   </div>
 
 */
-.tr-scale-up-hover { transition-duration: 0.1s; }
+.scale-up-hover { transition-duration: 0.1s; }
 
-.tr-scale-up-hover:hover { transform: scale(1.1); }
+.scale-up-hover:hover { transform: scale(1.1); }
 
-.tr-scale-down-hover { transition-duration: 0.1s; }
+.scale-down-hover { transition-duration: 0.1s; }
 
-.tr-scale-down-hover:hover { transform: scale(0.9); }
+.scale-down-hover:hover { transform: scale(0.9); }
 
 /*
 
@@ -352,7 +353,7 @@ Animation Utilities
   scss/components/_animations.scss.
 
   Usage:
-  <div class="a-bounce a-duration-large a-easing-cb-scale-out">
+  <div class="bounce a-duration-large a-easing-cb-scale-out">
     This div bounces slowly with a cubic bezier scaling effect. The
     initial bounce is defined in the components doc, while the utility
     classes override the component's default values.
@@ -448,6 +449,10 @@ Animation Utilities
 .border-left-1, .border-left { border-left-width: 1px; }
 
 .border-right-1, .border-right { border-right-width: 1px; }
+
+.u-border-radius-m, .u-border-radius, .form__input, .u-rounded-corners { border-radius: 3px !important; }
+
+.u-border-radius-l { border-radius: 5px !important; }
 
 .u-clearfix::after { clear: both; content: ""; display: table; }
 
@@ -716,7 +721,7 @@ Transition Utilities
   scss/components/_transitions.scss.
 
   Usage:
-  <div class="tr-scale-up-hover tr-duration-large tr-easing-cb-scale-out">
+  <div class="scale-up-hover tr-duration-large tr-easing-cb-scale-out">
     This div scale up slowly on hover, with a cubic bezier scaling effect. The
     initial scaling up is defined in the components doc, while the utility
     classes override the component's default values.
