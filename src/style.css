@@ -95,6 +95,8 @@ html.remodal-is-locked { overflow: hidden; touch-action: none; }
 
 .lt-ie9 .remodal { width: 700px; }
 
+/* stylelint-disable */
+/* stylelint-enable */
 html { box-sizing: border-box; }
 
 *, *::after, *::before { box-sizing: inherit; }
@@ -359,7 +361,6 @@ Animation Utilities
   </div>
 
 */
-
 .a-duration-none { animation-duration: 0s !important; }
 
 .a-duration-smaller { animation-duration: 0.3s !important; }
@@ -486,9 +487,11 @@ Animation Utilities
 
 .g-shift-11 { margin-left: 93.82785%; }
 
-.l-right { float: right !important; }
+.l-float-right { float: right !important; }
 
-.l-left { float: left !important; }
+.l-float-left { float: left !important; }
+
+.l-float-none { float: none !important; }
 
 .l-centered { margin: 0 auto !important; }
 
@@ -497,6 +500,20 @@ Animation Utilities
 .l-inline-block, .header__nav-item, .tabs__nav-item { display: inline-block !important; }
 
 .l-block, .form__label, .form__input { display: block !important; }
+
+.l-pos-absolute { position: absolute !important; }
+
+.l-pos-relative { position: relative !important; }
+
+.l-pos-fixed { position: fixed !important; }
+
+.l-pos-top, .l-pos-top-left, .l-pos-top-right, .l-pos-all { top: 0 !important; }
+
+.l-pos-bottom, .l-pos-bottom-left, .l-pos-bottom-right, .l-pos-all { bottom: 0 !important; }
+
+.l-pos-left, .l-pos-top-left, .l-pos-bottom-left, .l-pos-all { left: 0 !important; }
+
+.l-pos-right, .l-pos-top-right, .l-pos-bottom-right, .l-pos-all { right: 0 !important; }
 
 .u-overflow-visible { overflow: visible !important; }
 
