@@ -233,7 +233,7 @@ Animation Components
 
 .btn:hover { cursor: pointer; }
 
-.btn--warning { background: #e74141; color: #fff; text-decoration: none; border-radius: 1px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
+.btn--warning { background: #e74141; color: #fff; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
 .btn--warning:hover { cursor: pointer; }
 
@@ -260,7 +260,7 @@ Animation Components
 
 .header__links:last-child { margin-right: 0; }
 
-.list--bullets li { list-style-type: disc; }
+.list-disc { list-style-type: disc; list-style-position: outside; }
 
 /* Option Box
 
@@ -450,9 +450,9 @@ Animation Utilities
 
 .border-right-1, .border-right { border-right-width: 1px; }
 
-.u-border-radius-m, .u-border-radius, .form__input, .u-rounded-corners { border-radius: 3px !important; }
+.u-border-radius, .form__input, .u-rounded-corners { border-radius: 3px !important; }
 
-.u-border-radius-l { border-radius: 5px !important; }
+.u-border-radius-large { border-radius: 5px !important; }
 
 .u-clearfix::after { clear: both; content: ""; display: table; }
 
@@ -562,7 +562,7 @@ Animation Utilities
 
 .l-centered { margin: 0 auto !important; }
 
-.l-inline, .form__input[type="radio"], .list--inline li { display: inline !important; }
+.l-inline, .form__input[type="radio"], .list-inline > li { display: inline !important; }
 
 .l-inline-block, .header__nav-item, .tabs__nav-item { display: inline-block !important; }
 
@@ -623,25 +623,25 @@ Animation Utilities
 
 .m-top-larger { margin-top: 3rem !important; }
 
-.m-bottom-none, .list, .option-box__heading { margin-bottom: 0 !important; }
+.m-bottom-none, .option-box__heading { margin-bottom: 0 !important; }
 
 .m-bottom-smaller { margin-bottom: 0.5rem !important; }
 
-.m-bottom-small, .form__label, .form__input, .list li:not(:last-child) { margin-bottom: 0.5rem !important; }
+.m-bottom-small, .form__label, .form__input, .list > li:not(:last-child) { margin-bottom: 0.5rem !important; }
 
-.m-bottom, .table { margin-bottom: 2rem !important; }
+.m-bottom, .list, .table { margin-bottom: 2rem !important; }
 
 .m-bottom-large, .header, .tabs { margin-bottom: 2.5rem !important; }
 
 .m-bottom-larger { margin-bottom: 3rem !important; }
 
-.m-right-none, .list--inline li:last-child { margin-right: 0 !important; }
+.m-right-none, .list-inline:last-child { margin-right: 0 !important; }
 
 .m-right-smaller { margin-right: 0.5rem !important; }
 
 .m-right-small, .form__input[type="radio"] { margin-right: 0.5rem !important; }
 
-.m-right, .list--inline li { margin-right: 2rem !important; }
+.m-right, .list-inline > li { margin-right: 2rem !important; }
 
 .m-right-large { margin-right: 2.5rem !important; }
 
@@ -653,7 +653,7 @@ Animation Utilities
 
 .m-left-small { margin-left: 0.5rem !important; }
 
-.m-left, .list--bullets li { margin-left: 2rem !important; }
+.m-left, .list-disc > li { margin-left: 2rem !important; }
 
 .m-left-large { margin-left: 2.5rem !important; }
 
@@ -668,7 +668,7 @@ Animation Utilities
 	can be referenced using just p-direction.
 
 */
-.p-none, .list--inline li { padding: 0 !important; }
+.p-none, .list-inline > li { padding: 0 !important; }
 
 .p-smaller { padding: 0.5rem !important; }
 
@@ -853,8 +853,6 @@ Transition Utilities
 .border, .form__input, tbody tr { border: 1px solid #f7f7f7 !important; }
 
 .border-bottom, tbody tr { border-bottom: 1px solid #f7f7f7 !important; }
-
-.border-radius, .form__input { border-radius: 1px; }
 
 .u-vertical-align-top { vertical-align: top !important; }
 
