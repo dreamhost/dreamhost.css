@@ -1,0 +1,297 @@
+/*
+
+Popover Component
+
+  Popovers are used for any contextual content that shouldn't block
+  the user. Some common uses are dropdown menus, hovercards, tooltips.
+
+  Basic guidelines:
+  - Only shared styles are componentized globally. The rest are utility.
+  - Padding size can vary.
+  - Popover content can vary, there are no strict dos and don'ts.
+  - The caret is optional.
+  - The intro/outro animation is optional.
+
+  Usage:
+  <div class="popover--hover l-pos-relative l-inline-block">
+    <div class="popover popover--light popover--medium popover--top
+     popover--left-aligned has-animation has-caret">
+      <div class="p-small">
+        This is a light themed, medium width popover with small padding. It
+        appears on top of the hovered element, has intro and outro animations,
+        and has a caret that is left aligned. Note, popovers must live within
+        relative positioned, inline-block displayed containers. To enable
+        popovers on hover, the .popover--hover class must be included on each
+        container.
+      </div>
+    </div>
+    <button class="btn" data-popover="true">Click me</button>
+  </div>
+
+*/
+
+
+// Base
+.popover {
+  @extend .l-pos-absolute;
+  @extend .t-center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popover.has-animation {
+  transition-timing-function: cubic-bezier(.68,-.55,.265,1.55);
+  transition-duration: .3s;
+}
+
+.popover.has-caret:after {
+  @extend .l-block;
+  @extend .l-pos-absolute;
+  @extend .u-rounded-corners;
+  width: 12px;
+  height: 12px;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.popover.is-open,
+.popover--hover:hover > .popover {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/*
+  Themes:
+  - popover--light
+  - popover--dark
+  - popover--error
+  - popover--success
+*/
+.popover--light,
+.popover--dark,
+.popover--error,
+.popover--success {
+  box-shadow: 0 0 1px 1px rgba(31,45,61,.15);
+  border-width: 0;
+
+  &:after {
+    box-shadow: 1px 1px 0 0 rgba(31,45,61,.15);
+  }
+}
+
+.popover--light,
+.popover--light.has-caret:after {
+  @extend .bg-white;
+}
+
+.popover--dark,
+.popover--dark.has-caret:after {
+  @extend .bg-black;
+  @extend .t-white;
+}
+
+.popover--error,
+.popover--error.has-caret:after {
+  @extend .bg-dark-red;
+  @extend .t-white;
+}
+
+.popover--success,
+.popover--success.has-caret:after {
+  @extend .bg-dark-green;
+  @extend .t-white;
+}
+
+
+/*
+  Positioning:
+  - popover--top
+  - popover--bottom
+  - popover--left
+  - popover--right
+
+  Alignment:
+  - popover--left-aligned
+  - popover--right-aligned
+*/
+.popover--top {
+  bottom: 100%;
+}
+
+.popover--top,
+.popover--bottom {
+  @extend .m-bottom-small;
+  transform: translateX(-50%);
+}
+
+.popover--top:after,
+.popover--bottom:after {
+  margin-left: -6px;
+}
+
+.popover--top,
+.popover--top:after,
+.popover--bottom,
+.popover--bottom:after {
+  left: 50%;
+}
+
+.popover--top.has-caret:after {
+  box-shadow: 1px 1px 0 0 rgba(31,45,61,.15);
+  bottom: -6px;
+}
+
+.popover--top.has-animation {
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.popover--top.has-animation.is-open,
+.popover--hover:hover > .popover--top.has-animation {
+  transform: translateX(-50%) translateY(0);
+}
+
+.popover--top.popover--left-aligned,
+.popover--top.popover--right-aligned {
+  transform: translateX(0);
+}
+
+.popover--top.popover--left-aligned,
+.popover--bottom.popover--left-aligned {
+  @extend .l-pos-left;
+  transform-origin: left bottom;
+}
+
+.popover--top.popover--right-aligned,
+.popover--bottom.popover--right-aligned {
+  @extend .l-pos-right;
+  left: auto;
+  transform-origin: right bottom;
+}
+
+.popover--top.popover--left-aligned.has-animation,
+.popover--top.popover--right-aligned.has-animation,
+.popover--bottom.popover--left-aligned.has-animation,
+.popover--bottom.popover--right-aligned.has-animation {
+  transform: translateX(0) translateY(-5px);
+}
+
+.popover--top.popover--left-aligned.has-animation.is-open,
+.popover--top.popover--right-aligned.has-animation.is-open,
+.popover--hover:hover > .popover--top.popover--left-aligned,
+.popover--hover:hover > .popover--top.popover--right-aligned,
+.popover--bottom.popover--left-aligned.has-animation.is-open,
+.popover--bottom.popover--right-aligned.has-animation.is-open,
+.popover--hover:hover > .popover--bottom.popover--left-aligned,
+.popover--hover:hover > .popover--bottom.popover--right-aligned {
+  transform: translateX(0) translateY(0);
+}
+
+
+.popover--bottom {
+  @extend .m-top-small;
+  top: calc(100% + 5px);
+}
+
+.popover--bottom.has-caret:after {
+  box-shadow: -1px -1px 0 0 rgba(31,45,61,.15);
+  top: -6px;
+}
+
+.popover--bottom.has-animation {
+  transform: translateX(-50%) translateY(0);
+}
+
+.popover--bottom.has-animation.is-open,
+.popover--hover:hover > .popover--bottom.has-animation {
+  transform: translateX(-50%) translateY(-5px);
+}
+
+
+.popover--right {
+  @extend .m-left-small;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+.popover--left:after,
+.popover--right:after {
+  margin-top: -6px;
+}
+
+.popover--right,
+.popover--right:after,
+.popover--left,
+.popover--left:after {
+  top: 50%;
+}
+
+.popover--right.has-animation,
+.popover--left.has-animation {
+  transform: translateX(0) translateY(-50%);
+}
+
+.popover--right.has-animation.is-open,
+.popover--hover:hover > .popover--right.has-animation {
+  transform: translateX(-5px) translateY(-50%);
+}
+
+.popover--right.has-caret:after {
+  box-shadow: -1px 1px 0 0 rgba(31,45,61,.15);
+  left: -4px;
+}
+
+
+.popover--left {
+  @extend .m-right-small;
+  @extend .m-left-small;
+  right: 100%;
+  transform: translateY(-50%);
+}
+
+.popover--left.has-animation.is-open,
+.popover--hover:hover > .popover--left.has-animation {
+  transform: translateX(5px) translateY(-50%);
+}
+
+.popover--left.has-caret:after {
+  box-shadow: 1px -1px 0 0 rgba(31,45,61,.15);
+  right: -4px;
+}
+
+
+/*
+  Widths:
+  - popover--small
+  - popover--medium
+  - popover--large
+*/
+.popover--small,
+.popover--medium,
+.popover--large {
+  @extend .u-rounded-corners;
+
+  &.popover--bottom.popover--left-aligned.has-caret:after,
+  &.popover--top.popover--left-aligned.has-caret:after {
+    left: 28px;
+  }
+
+  &.popover--bottom.popover--right-aligned.has-caret:after,
+  &.popover--top.popover--right-aligned.has-caret:after {
+    right: 28px;
+    left: auto;
+  }
+}
+
+.popover--small {
+  width: 200px;
+}
+
+.popover--medium {
+  width: 300px;
+}
+
+.popover--large {
+  width: 400px;
+}
