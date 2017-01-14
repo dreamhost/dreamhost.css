@@ -6,23 +6,21 @@ Popover Component
   the user. Some common uses are dropdown menus, hovercards, tooltips.
 
   Basic guidelines:
-  - Only shared styles are componentized globally. The rest are utility.
+  - Only shared styles are componentized globally.
   - Padding size can vary.
   - Popover content can vary, there are no strict dos and don'ts.
   - The caret is optional.
-  - The intro/outro animation is optional.
 
   Usage:
   <div class="popover--hover l-pos-relative l-inline-block">
-    <div class="popover popover--light popover--medium popover--top
-     popover--left-aligned has-animation has-caret">
+    <div class="popover popover--light popover--top popover--left-aligned
+     has-caret">
       <div class="p-small">
-        This is a light themed, medium width popover with small padding. It
-        appears on top of the hovered element, has intro and outro animations,
-        and has a caret that is left aligned. Note, popovers must live within
-        relative positioned, inline-block displayed containers. To enable
-        popovers on hover, the .popover--hover class must be included on each
-        container.
+        This is a light themed popover with small padding. It appears on
+        top of the hovered element, and has a caret that is left aligned.
+        Note, popovers must live within relative positioned, inline-block
+        displayed containers. To enable popovers on hover, the
+        .popover--hover class must be included on each container.
       </div>
     </div>
     <button class="btn" data-popover="true">Click me</button>
@@ -35,14 +33,13 @@ Popover Component
 .popover {
   @extend .l-pos-absolute;
   @extend .t-center;
+  @extend .u-rounded-corners;
+  width: 300px;
   z-index: 999;
   opacity: 0;
-  visibility: hidden;
-}
-
-.popover.has-animation {
   transition-timing-function: cubic-bezier(.68,-.55,.265,1.55);
   transition-duration: .3s;
+  visibility: hidden;
 }
 
 .popover.has-caret:after {
@@ -56,7 +53,8 @@ Popover Component
 }
 
 .popover.is-open,
-.popover--hover:hover > .popover {
+.popover--hover:hover > .popover,
+.popover--hover:focus > .popover {
   opacity: 1;
   visibility: visible;
 }
@@ -73,8 +71,8 @@ Popover Component
 .popover--dark,
 .popover--error,
 .popover--success {
+  @extend .border-none;
   box-shadow: 0 0 1px 1px rgba(31,45,61,.15);
-  border-width: 0;
 
   &:after {
     box-shadow: 1px 1px 0 0 rgba(31,45,61,.15);
@@ -118,6 +116,7 @@ Popover Component
 */
 .popover--top {
   bottom: 100%;
+  transform: translateX(-50%) translateY(-5px);
 }
 
 .popover--top,
@@ -143,12 +142,9 @@ Popover Component
   bottom: -6px;
 }
 
-.popover--top.has-animation {
-  transform: translateX(-50%) translateY(-5px);
-}
-
-.popover--top.has-animation.is-open,
-.popover--hover:hover > .popover--top.has-animation {
+.popover--top.is-open,
+.popover--hover:hover > .popover--top,
+.popover--hover:focus > .popover--top {
   transform: translateX(-50%) translateY(0);
 }
 
@@ -170,28 +166,44 @@ Popover Component
   transform-origin: right bottom;
 }
 
-.popover--top.popover--left-aligned.has-animation,
-.popover--top.popover--right-aligned.has-animation,
-.popover--bottom.popover--left-aligned.has-animation,
-.popover--bottom.popover--right-aligned.has-animation {
+.popover--top.popover--left-aligned,
+.popover--top.popover--right-aligned,
+.popover--bottom.popover--left-aligned,
+.popover--bottom.popover--right-aligned {
   transform: translateX(0) translateY(-5px);
 }
 
-.popover--top.popover--left-aligned.has-animation.is-open,
-.popover--top.popover--right-aligned.has-animation.is-open,
+.popover--top.popover--left-aligned.is-open,
+.popover--top.popover--right-aligned.is-open,
 .popover--hover:hover > .popover--top.popover--left-aligned,
 .popover--hover:hover > .popover--top.popover--right-aligned,
-.popover--bottom.popover--left-aligned.has-animation.is-open,
-.popover--bottom.popover--right-aligned.has-animation.is-open,
+.popover--hover:focus > .popover--top.popover--left-aligned,
+.popover--hover:focus > .popover--top.popover--right-aligned,
+.popover--bottom.popover--left-aligned.is-open,
+.popover--bottom.popover--right-aligned.is-open,
 .popover--hover:hover > .popover--bottom.popover--left-aligned,
-.popover--hover:hover > .popover--bottom.popover--right-aligned {
+.popover--hover:hover > .popover--bottom.popover--right-aligned,
+.popover--hover:focus > .popover--bottom.popover--left-aligned,
+.popover--hover:focus > .popover--bottom.popover--right-aligned {
   transform: translateX(0) translateY(0);
+}
+
+.popover--bottom.popover--left-aligned.has-caret:after,
+.popover--top.popover--left-aligned.has-caret:after {
+  left: 28px;
+}
+
+.popover--bottom.popover--right-aligned.has-caret:after,
+.popover--top.popover--right-aligned.has-caret:after {
+  right: 28px;
+  left: auto;
 }
 
 
 .popover--bottom {
   @extend .m-top-small;
   top: calc(100% + 5px);
+  transform: translateX(-50%) translateY(0);
 }
 
 .popover--bottom.has-caret:after {
@@ -199,12 +211,9 @@ Popover Component
   top: -6px;
 }
 
-.popover--bottom.has-animation {
-  transform: translateX(-50%) translateY(0);
-}
-
-.popover--bottom.has-animation.is-open,
-.popover--hover:hover > .popover--bottom.has-animation {
+.popover--bottom.is-open,
+.popover--hover:hover > .popover--bottom,
+.popover--hover:focus > .popover--bottom {
   transform: translateX(-50%) translateY(-5px);
 }
 
@@ -212,7 +221,6 @@ Popover Component
 .popover--right {
   @extend .m-left-small;
   left: 100%;
-  transform: translateY(-50%);
 }
 
 .popover--left:after,
@@ -227,13 +235,14 @@ Popover Component
   top: 50%;
 }
 
-.popover--right.has-animation,
-.popover--left.has-animation {
+.popover--right,
+.popover--left {
   transform: translateX(0) translateY(-50%);
 }
 
-.popover--right.has-animation.is-open,
-.popover--hover:hover > .popover--right.has-animation {
+.popover--right.is-open,
+.popover--hover:hover > .popover--right,
+.popover--hover:focus > .popover--right {
   transform: translateX(-5px) translateY(-50%);
 }
 
@@ -247,51 +256,15 @@ Popover Component
   @extend .m-right-small;
   @extend .m-left-small;
   right: 100%;
-  transform: translateY(-50%);
 }
 
-.popover--left.has-animation.is-open,
-.popover--hover:hover > .popover--left.has-animation {
+.popover--left.is-open,
+.popover--hover:hover > .popover--left,
+.popover--hover:focus > .popover--left {
   transform: translateX(5px) translateY(-50%);
 }
 
 .popover--left.has-caret:after {
   box-shadow: 1px -1px 0 0 rgba(31,45,61,.15);
   right: -4px;
-}
-
-
-/*
-  Widths:
-  - popover--small
-  - popover--medium
-  - popover--large
-*/
-.popover--small,
-.popover--medium,
-.popover--large {
-  @extend .u-rounded-corners;
-
-  &.popover--bottom.popover--left-aligned.has-caret:after,
-  &.popover--top.popover--left-aligned.has-caret:after {
-    left: 28px;
-  }
-
-  &.popover--bottom.popover--right-aligned.has-caret:after,
-  &.popover--top.popover--right-aligned.has-caret:after {
-    right: 28px;
-    left: auto;
-  }
-}
-
-.popover--small {
-  width: 200px;
-}
-
-.popover--medium {
-  width: 300px;
-}
-
-.popover--large {
-  width: 400px;
 }
