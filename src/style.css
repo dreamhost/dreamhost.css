@@ -283,10 +283,10 @@ Popover Component
 
   Usage:
   <div class="popover--hover l-pos-relative l-inline-block">
-    <div class="popover popover--light popover--top popover--left-aligned
+    <div class="popover popover--dark popover--top popover--left-aligned
      has-caret">
       <div class="p-small">
-        This is a light themed popover with small padding. It appears on
+        This is a dark themed popover with small padding. It appears on
         top of the hovered element, and has a caret that is left aligned.
         Note, popovers must live within relative positioned, inline-block
         displayed containers. To enable popovers on hover, the
@@ -297,43 +297,37 @@ Popover Component
   </div>
 
 */
-.popover { width: 300px; z-index: 999; opacity: 0; transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); transition-duration: .3s; visibility: hidden; }
+.popover { bottom: 100%; transform: translateX(-50%) translateY(-5px); box-shadow: 0 0 1px 1px rgba(31, 45, 61, 0.15); width: 300px; z-index: 999; opacity: 0; transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); transition-duration: .3s; visibility: hidden; }
 
-.popover.has-caret:after { width: 12px; height: 12px; content: ''; transform: rotate(45deg); }
+.popover:after { box-shadow: 1px 1px 0 0 rgba(31, 45, 61, 0.15); }
+
+.popover.has-caret:after { width: 12px; height: 12px; content: ''; transform: rotate(45deg); box-shadow: 1px 1px 0 0 rgba(31, 45, 61, 0.15); bottom: -6px; }
 
 .popover.is-open, .popover--hover:hover > .popover, .popover--hover:focus > .popover { opacity: 1; visibility: visible; }
 
-/* Themes: - popover--light - popover--dark - popover--error - popover--success */
-.popover--light, .popover--dark, .popover--error, .popover--success { box-shadow: 0 0 1px 1px rgba(31, 45, 61, 0.15); }
+/* Themes: - popover--dark - popover--error - popover--success */
+/* Positioning: - popover--bottom - popover--left - popover--right Alignment: - popover--left-aligned - popover--right-aligned */
+.popover--bottom { transform: translateX(-50%); }
 
-.popover--light:after, .popover--dark:after, .popover--error:after, .popover--success:after { box-shadow: 1px 1px 0 0 rgba(31, 45, 61, 0.15); }
+.popover:after, .popover--bottom:after { margin-left: -6px; }
 
-/* Positioning: - popover--top - popover--bottom - popover--left - popover--right Alignment: - popover--left-aligned - popover--right-aligned */
-.popover--top { bottom: 100%; transform: translateX(-50%) translateY(-5px); }
+.popover, .popover:after, .popover--bottom, .popover--bottom:after { left: 50%; }
 
-.popover--top, .popover--bottom { transform: translateX(-50%); }
+.popover.is-open, .popover--hover:hover > .popover, .popover--hover:focus > .popover { transform: translateX(-50%) translateY(0); }
 
-.popover--top:after, .popover--bottom:after { margin-left: -6px; }
+.popover.popover--left-aligned, .popover.popover--right-aligned { transform: translateX(0); }
 
-.popover--top, .popover--top:after, .popover--bottom, .popover--bottom:after { left: 50%; }
+.popover.popover--left-aligned, .popover--bottom.popover--left-aligned { transform-origin: left bottom; }
 
-.popover--top.has-caret:after { box-shadow: 1px 1px 0 0 rgba(31, 45, 61, 0.15); bottom: -6px; }
+.popover.popover--right-aligned, .popover--bottom.popover--right-aligned { left: auto; transform-origin: right bottom; }
 
-.popover--top.is-open, .popover--hover:hover > .popover--top, .popover--hover:focus > .popover--top { transform: translateX(-50%) translateY(0); }
+.popover.popover--left-aligned, .popover.popover--right-aligned, .popover--bottom.popover--left-aligned, .popover--bottom.popover--right-aligned { transform: translateX(0) translateY(-5px); }
 
-.popover--top.popover--left-aligned, .popover--top.popover--right-aligned { transform: translateX(0); }
+.popover.popover--left-aligned.is-open, .popover.popover--right-aligned.is-open, .popover--hover:hover > .popover.popover--left-aligned, .popover--hover:hover > .popover.popover--right-aligned, .popover--hover:focus > .popover.popover--left-aligned, .popover--hover:focus > .popover.popover--right-aligned, .popover--bottom.popover--left-aligned.is-open, .popover--bottom.popover--right-aligned.is-open, .popover--hover:hover > .popover--bottom.popover--left-aligned, .popover--hover:hover > .popover--bottom.popover--right-aligned, .popover--hover:focus > .popover--bottom.popover--left-aligned, .popover--hover:focus > .popover--bottom.popover--right-aligned { transform: translateX(0) translateY(0); }
 
-.popover--top.popover--left-aligned, .popover--bottom.popover--left-aligned { transform-origin: left bottom; }
+.popover--bottom.popover--left-aligned.has-caret:after, .popover.popover--left-aligned.has-caret:after { left: 28px; }
 
-.popover--top.popover--right-aligned, .popover--bottom.popover--right-aligned { left: auto; transform-origin: right bottom; }
-
-.popover--top.popover--left-aligned, .popover--top.popover--right-aligned, .popover--bottom.popover--left-aligned, .popover--bottom.popover--right-aligned { transform: translateX(0) translateY(-5px); }
-
-.popover--top.popover--left-aligned.is-open, .popover--top.popover--right-aligned.is-open, .popover--hover:hover > .popover--top.popover--left-aligned, .popover--hover:hover > .popover--top.popover--right-aligned, .popover--hover:focus > .popover--top.popover--left-aligned, .popover--hover:focus > .popover--top.popover--right-aligned, .popover--bottom.popover--left-aligned.is-open, .popover--bottom.popover--right-aligned.is-open, .popover--hover:hover > .popover--bottom.popover--left-aligned, .popover--hover:hover > .popover--bottom.popover--right-aligned, .popover--hover:focus > .popover--bottom.popover--left-aligned, .popover--hover:focus > .popover--bottom.popover--right-aligned { transform: translateX(0) translateY(0); }
-
-.popover--bottom.popover--left-aligned.has-caret:after, .popover--top.popover--left-aligned.has-caret:after { left: 28px; }
-
-.popover--bottom.popover--right-aligned.has-caret:after, .popover--top.popover--right-aligned.has-caret:after { right: 28px; left: auto; }
+.popover--bottom.popover--right-aligned.has-caret:after, .popover.popover--right-aligned.has-caret:after { right: 28px; left: auto; }
 
 .popover--bottom { top: calc(100% + 5px); transform: translateX(-50%) translateY(0); }
 
@@ -349,15 +343,17 @@ Popover Component
 
 .popover--right, .popover--left { transform: translateX(0) translateY(-50%); }
 
+.popover--right, .popover--left, .popover--bottom { bottom: auto; }
+
 .popover--right.is-open, .popover--hover:hover > .popover--right, .popover--hover:focus > .popover--right { transform: translateX(-5px) translateY(-50%); }
 
-.popover--right.has-caret:after { box-shadow: -1px 1px 0 0 rgba(31, 45, 61, 0.15); left: -4px; }
+.popover--right.has-caret:after { box-shadow: -1px 1px 0 0 rgba(31, 45, 61, 0.15); left: 0; }
 
-.popover--left { right: 100%; }
+.popover--left { right: 100%; left: auto; }
 
 .popover--left.is-open, .popover--hover:hover > .popover--left, .popover--hover:focus > .popover--left { transform: translateX(5px) translateY(-50%); }
 
-.popover--left.has-caret:after { box-shadow: 1px -1px 0 0 rgba(31, 45, 61, 0.15); right: -4px; }
+.popover--left.has-caret:after { box-shadow: 1px -1px 0 0 rgba(31, 45, 61, 0.15); right: -6px; left: auto; }
 
 .tabs__nav-item { color: #2F323B; }
 
@@ -516,7 +512,7 @@ Animation Utilities
 
 .border-solid, .border, .form__input, tbody tr, .border-top, .border-bottom, .border-left, .border-right { border-style: solid; }
 
-.border-none, .popover--light, .popover--dark, .popover--error, .popover--success { border-width: 0; }
+.border-none, .popover { border-width: 0; }
 
 .border-top-none { border-top-width: 0; }
 
@@ -542,7 +538,7 @@ Animation Utilities
 
 .u-clearfix::after { clear: both; content: ""; display: table; }
 
-.bg-white, tbody tr:nth-child(odd), .option-box__content, .popover--light, .popover--light.has-caret:after { background: #fff !important; }
+.bg-white, tbody tr:nth-child(odd), .option-box__content, .popover, .popover.has-caret:after { background: #fff !important; }
 
 .bg-black, .header, .popover--dark, .popover--dark.has-caret:after { background: #2F323B !important; }
 
@@ -664,9 +660,9 @@ Animation Utilities
 
 .l-pos-bottom, .l-pos-bottom-left, .l-pos-bottom-right, .l-pos-all { bottom: 0 !important; }
 
-.l-pos-left, .popover--top.popover--left-aligned, .popover--bottom.popover--left-aligned, .l-pos-top-left, .l-pos-bottom-left, .l-pos-all { left: 0 !important; }
+.l-pos-left, .popover.popover--left-aligned, .popover--bottom.popover--left-aligned, .l-pos-top-left, .l-pos-bottom-left, .l-pos-all { left: 0 !important; }
 
-.l-pos-right, .popover--top.popover--right-aligned, .popover--bottom.popover--right-aligned, .l-pos-top-right, .l-pos-bottom-right, .l-pos-all { right: 0 !important; }
+.l-pos-right, .popover.popover--right-aligned, .popover--bottom.popover--right-aligned, .l-pos-top-right, .l-pos-bottom-right, .l-pos-all { right: 0 !important; }
 
 .u-overflow-visible { overflow: visible !important; }
 
@@ -713,7 +709,7 @@ Animation Utilities
 
 .m-bottom-smaller { margin-bottom: 0.5rem !important; }
 
-.m-bottom-small, .form__label, .form__input, .list li:not(:last-child), .popover--top, .popover--bottom { margin-bottom: 1.5rem !important; }
+.m-bottom-small, .form__label, .form__input, .list li:not(:last-child), .popover, .popover--bottom { margin-bottom: 1.5rem !important; }
 
 .m-bottom, .table { margin-bottom: 2rem !important; }
 

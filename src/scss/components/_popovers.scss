@@ -13,10 +13,10 @@ Popover Component
 
   Usage:
   <div class="popover--hover l-pos-relative l-inline-block">
-    <div class="popover popover--light popover--top popover--left-aligned
+    <div class="popover popover--dark popover--top popover--left-aligned
      has-caret">
       <div class="p-small">
-        This is a light themed popover with small padding. It appears on
+        This is a dark themed popover with small padding. It appears on
         top of the hovered element, and has a caret that is left aligned.
         Note, popovers must live within relative positioned, inline-block
         displayed containers. To enable popovers on hover, the
@@ -34,12 +34,26 @@ Popover Component
   @extend .l-pos-absolute;
   @extend .t-center;
   @extend .u-rounded-corners;
+  @extend .border-none;
+  @extend .m-bottom-small;
+  bottom: 100%;
+  transform: translateX(-50%) translateY(-5px);
+  box-shadow: 0 0 1px 1px rgba(31,45,61,.15);
   width: 300px;
   z-index: 999;
   opacity: 0;
   transition-timing-function: cubic-bezier(.68,-.55,.265,1.55);
   transition-duration: .3s;
   visibility: hidden;
+
+  &:after {
+    box-shadow: 1px 1px 0 0 rgba(31,45,61,.15);
+  }
+}
+
+.popover,
+.popover.has-caret:after {
+  @extend .bg-white;
 }
 
 .popover.has-caret:after {
@@ -50,6 +64,8 @@ Popover Component
   height: 12px;
   content: '';
   transform: rotate(45deg);
+  box-shadow: 1px 1px 0 0 rgba(31,45,61,.15);
+  bottom: -6px;
 }
 
 .popover.is-open,
@@ -62,28 +78,10 @@ Popover Component
 
 /*
   Themes:
-  - popover--light
   - popover--dark
   - popover--error
   - popover--success
 */
-.popover--light,
-.popover--dark,
-.popover--error,
-.popover--success {
-  @extend .border-none;
-  box-shadow: 0 0 1px 1px rgba(31,45,61,.15);
-
-  &:after {
-    box-shadow: 1px 1px 0 0 rgba(31,45,61,.15);
-  }
-}
-
-.popover--light,
-.popover--light.has-caret:after {
-  @extend .bg-white;
-}
-
 .popover--dark,
 .popover--dark.has-caret:after {
   @extend .bg-black;
@@ -105,7 +103,6 @@ Popover Component
 
 /*
   Positioning:
-  - popover--top
   - popover--bottom
   - popover--left
   - popover--right
@@ -114,71 +111,60 @@ Popover Component
   - popover--left-aligned
   - popover--right-aligned
 */
-.popover--top {
-  bottom: 100%;
-  transform: translateX(-50%) translateY(-5px);
-}
-
-.popover--top,
 .popover--bottom {
   @extend .m-bottom-small;
   transform: translateX(-50%);
 }
 
-.popover--top:after,
+.popover:after,
 .popover--bottom:after {
   margin-left: -6px;
 }
 
-.popover--top,
-.popover--top:after,
+.popover,
+.popover:after,
 .popover--bottom,
 .popover--bottom:after {
   left: 50%;
 }
 
-.popover--top.has-caret:after {
-  box-shadow: 1px 1px 0 0 rgba(31,45,61,.15);
-  bottom: -6px;
-}
-
-.popover--top.is-open,
-.popover--hover:hover > .popover--top,
-.popover--hover:focus > .popover--top {
+.popover.is-open,
+.popover--hover:hover > .popover,
+.popover--hover:focus > .popover {
   transform: translateX(-50%) translateY(0);
 }
 
-.popover--top.popover--left-aligned,
-.popover--top.popover--right-aligned {
+.popover.popover--left-aligned,
+.popover.popover--right-aligned {
   transform: translateX(0);
 }
 
-.popover--top.popover--left-aligned,
+.popover.popover--left-aligned,
 .popover--bottom.popover--left-aligned {
   @extend .l-pos-left;
   transform-origin: left bottom;
 }
 
-.popover--top.popover--right-aligned,
+.popover.popover--right-aligned,
 .popover--bottom.popover--right-aligned {
   @extend .l-pos-right;
   left: auto;
   transform-origin: right bottom;
 }
 
-.popover--top.popover--left-aligned,
-.popover--top.popover--right-aligned,
+.popover.popover--left-aligned,
+.popover.popover--right-aligned,
 .popover--bottom.popover--left-aligned,
 .popover--bottom.popover--right-aligned {
   transform: translateX(0) translateY(-5px);
 }
 
-.popover--top.popover--left-aligned.is-open,
-.popover--top.popover--right-aligned.is-open,
-.popover--hover:hover > .popover--top.popover--left-aligned,
-.popover--hover:hover > .popover--top.popover--right-aligned,
-.popover--hover:focus > .popover--top.popover--left-aligned,
-.popover--hover:focus > .popover--top.popover--right-aligned,
+.popover.popover--left-aligned.is-open,
+.popover.popover--right-aligned.is-open,
+.popover--hover:hover > .popover.popover--left-aligned,
+.popover--hover:hover > .popover.popover--right-aligned,
+.popover--hover:focus > .popover.popover--left-aligned,
+.popover--hover:focus > .popover.popover--right-aligned,
 .popover--bottom.popover--left-aligned.is-open,
 .popover--bottom.popover--right-aligned.is-open,
 .popover--hover:hover > .popover--bottom.popover--left-aligned,
@@ -189,12 +175,12 @@ Popover Component
 }
 
 .popover--bottom.popover--left-aligned.has-caret:after,
-.popover--top.popover--left-aligned.has-caret:after {
+.popover.popover--left-aligned.has-caret:after {
   left: 28px;
 }
 
 .popover--bottom.popover--right-aligned.has-caret:after,
-.popover--top.popover--right-aligned.has-caret:after {
+.popover.popover--right-aligned.has-caret:after {
   right: 28px;
   left: auto;
 }
@@ -240,6 +226,12 @@ Popover Component
   transform: translateX(0) translateY(-50%);
 }
 
+.popover--right,
+.popover--left,
+.popover--bottom {
+  bottom: auto;
+}
+
 .popover--right.is-open,
 .popover--hover:hover > .popover--right,
 .popover--hover:focus > .popover--right {
@@ -248,7 +240,7 @@ Popover Component
 
 .popover--right.has-caret:after {
   box-shadow: -1px 1px 0 0 rgba(31,45,61,.15);
-  left: -4px;
+  left: 0;
 }
 
 
@@ -256,6 +248,7 @@ Popover Component
   @extend .m-right-small;
   @extend .m-left-small;
   right: 100%;
+  left: auto;
 }
 
 .popover--left.is-open,
@@ -266,5 +259,6 @@ Popover Component
 
 .popover--left.has-caret:after {
   box-shadow: 1px -1px 0 0 rgba(31,45,61,.15);
-  right: -4px;
+  right: -6px;
+  left: auto;
 }
