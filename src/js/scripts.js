@@ -15,8 +15,9 @@ $link.click(function(){
 var $button = $('.btn,.popover');
 
 $button.on('click', function (e) {
-	var $popover = $(this).closest('.js-popover-container:not(.popover-container--hover)')
-	.find('.popover');
+	var $popover = $(this)
+		.closest('.js-popover-container--click:not(.popover-container--hover)')
+		.find('.popover');
 
 	if ($(this).attr('data-popover')) {
 		if ($popover.hasClass('is-open')) {
