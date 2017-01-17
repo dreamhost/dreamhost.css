@@ -323,9 +323,9 @@ Popover Component
 
 .popover.popover--right-aligned, .popover--bottom.popover--right-aligned { left: auto; transform-origin: right bottom; }
 
-.popover.popover--left-aligned, .popover.popover--right-aligned, .popover--bottom.popover--left-aligned, .popover--bottom.popover--right-aligned { transform: translateX(0) translateY(-5px); }
+.popover.popover--left-aligned, .popover.popover--right-aligned, .popover--bottom.popover--left-aligned.is-open, .popover--bottom.popover--right-aligned.is-open, .popover-container--hover:hover > .popover--bottom.popover--left-aligned, .popover-container--hover:hover > .popover--bottom.popover--right-aligned, .popover-container--hover:focus > .popover--bottom.popover--left-aligned, .popover-container--hover:focus > .popover--bottom.popover--right-aligned { transform: translateX(0) translateY(-5px); }
 
-.popover.popover--left-aligned.is-open, .popover.popover--right-aligned.is-open, .popover-container--hover:hover > .popover.popover--left-aligned, .popover-container--hover:hover > .popover.popover--right-aligned, .popover-container--hover:focus > .popover.popover--left-aligned, .popover-container--hover:focus > .popover.popover--right-aligned, .popover-container--hover:hover > .popover--bottom.popover--left-aligned, .popover-container--hover:hover > .popover--bottom.popover--right-aligned, .popover-container--hover:focus > .popover--bottom.popover--left-aligned, .popover-container--hover:focus > .popover--bottom.popover--right-aligned { transform: translateX(0) translateY(0); }
+.popover--bottom.popover--left-aligned, .popover--bottom.popover--right-aligned, .popover:not(.popover--bottom).popover--left-aligned.is-open, .popover:not(.popover--bottom).popover--right-aligned.is-open, .popover-container--hover:hover > .popover:not(.popover--bottom).popover--left-aligned, .popover-container--hover:hover > .popover:not(.popover--bottom).popover--right-aligned, .popover-container--hover:focus > .popover:not(.popover--bottom).popover--left-aligned, .popover-container--hover:focus > .popover:not(.popover--bottom).popover--right-aligned { transform: translateX(0) translateY(0); }
 
 .popover--bottom.popover--left-aligned.has-caret:after, .popover.popover--left-aligned.has-caret:after { left: 28px; }
 
