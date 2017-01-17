@@ -12,15 +12,16 @@ Popover Component
   - The caret is optional.
 
   Usage:
-  <div class="popover--container popover-container-container--hover">
+  <div class="popover-container js-popover-container">
     <div class="popover popover--dark popover--top popover--left-aligned
      has-caret">
       <div class="p-small">
         This is a dark themed popover with small padding. It appears on
-        top of the hovered element, and has a caret that is left aligned.
+        top of the clicked element, and has a caret that is left aligned.
         Note, popovers must live within popover-container. To enable
-        popovers on hover, the .popover-container-container--hover class must be
-        included on each container.
+        popovers on hover, the .popover-container--hover class must be
+        included on the container. The .js-popover-container class is not
+        required for hover popovers, but is required for click.
       </div>
     </div>
     <button class="btn" data-popover="true">Click me</button>
