@@ -171,7 +171,11 @@ Popover Component
 .popover-container--hover:hover > .popover.popover--left-aligned,
 .popover-container--hover:hover > .popover.popover--right-aligned,
 .popover-container--hover:focus > .popover.popover--left-aligned,
-.popover-container--hover:focus > .popover.popover--right-aligned {
+.popover-container--hover:focus > .popover.popover--right-aligned,
+.popover-container--hover:hover > .popover--bottom.popover--left-aligned,
+.popover-container--hover:hover > .popover--bottom.popover--right-aligned,
+.popover-container--hover:focus > .popover--bottom.popover--left-aligned,
+.popover-container--hover:focus > .popover--bottom.popover--right-aligned {
   transform: translateX(0) translateY(0);
 }
 
