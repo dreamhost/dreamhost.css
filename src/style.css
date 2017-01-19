@@ -95,6 +95,8 @@ html.remodal-is-locked { overflow: hidden; touch-action: none; }
 
 .lt-ie9 .remodal { width: 700px; }
 
+/* stylelint-disable */
+/* stylelint-enable */
 html { box-sizing: border-box; }
 
 *, *::after, *::before { box-sizing: inherit; }
@@ -103,23 +105,6 @@ html { box-sizing: border-box; }
 
 .box *:last-child:not(input):not(textarea) { margin-bottom: 0; }
 
-/*
-
-Transform Mixins
-
-  A collection of Mixins that you can use in your scss to create and
-  control transforms.
-
-  Usage:
-  .thing {
-    @include scale(1.1);
-    @include rotate(40);
-    @include translate(3, 5);
-    @include skew(3, 5);
-    @include transform-origin(top left);
-  }
-
-*/
 body { background: #f7f7f7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-feature-settings: "liga", "dlig"; color: #2F323B; font-family: "Proxima Nova", sans-serif; font-size: 16px; line-height: 1.5; }
 
 h1, h2, h3, h4 { font-family: "Ubuntu", sans-serif; font-weight: 600; }
@@ -203,26 +188,29 @@ Animation Components
   scss/utilities/_animations.scss to override specific animation
   properties.
 
-  Usage [HTML]:
-  <div class="a-bounce">
-    This is a bouncing div
+  Usage:
+  <div class="bounce-hover">
+    This div bounces on hover
   </div>
 
-  Usage [CSS]:
-  .a-bounce-hover:hover {
-    @extend .a-bounce;
-  }
-
 */
-.a-spin-right { animation: spin 0.3s 1 linear; }
+.spin-right, .spin-right-hover:hover { animation: spinRight 1s 1 linear; }
 
-.a-spin-left { animation: spin 0.3s 1 linear reverse; }
+.spin-left, .spin-left-hover:hover { animation: spinRight 1s 1 linear reverse; }
 
-.a-bounce { animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
+.bounce, .bounce-hover:hover { animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-.a-shake { animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
+.shake, .shake-hover:hover { animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-@keyframes spin { 0% { transform: rotate(0deg); }
+.fade-in, .fade-in-hover:hover { animation: fadeIn 1s 1 linear; }
+
+.fade-out, .fade-out-hover:hover { animation: fadeIn 1s 1 linear reverse; }
+
+.slide-in, .slide-in-hover:hover { animation: slideIn 1s 1 cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.slide-out, .slide-out-hover:hover { animation: slideIn 1s 1 linear reverse; }
+
+@keyframes spinRight { 0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); } }
 
 @keyframes bounce { 0%, 20%, 50%, 70%, 100% { transform: translate(0, 0); }
@@ -233,11 +221,19 @@ Animation Components
   40% { transform: translate(-5px, 0); }
   60% { transform: translate(-3px, 0); } }
 
+@keyframes fadeIn { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+
+@keyframes slideIn { 0% { transform: translateY(10px) translateZ(-30px);
+    opacity: 0; }
+  100% { transform: translateY(0) translateZ(0);
+    opacity: 1; } }
+
 .btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
 .btn:hover { cursor: pointer; }
 
-.btn--warning { background: #e74141; color: #fff; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
+.btn--warning { background: #e74141; color: #fff; text-decoration: none; border-radius: 1px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
 .btn--warning:hover { cursor: pointer; }
 
@@ -319,18 +315,18 @@ Transition Components
   properties.
 
   Usage:
-  <div class="tr-scale-up-hover">
+  <div class="scale-up-hover">
     This div scales up on hover
   </div>
 
 */
-.tr-scale-up-hover { transition-duration: 0.1s; }
+.scale-up-hover { transition-duration: 0.1s; }
 
-.tr-scale-up-hover:hover { transform: scale(1.1); }
+.scale-up-hover:hover { transform: scale(1.1); }
 
-.tr-scale-down-hover { transition-duration: 0.1s; }
+.scale-down-hover { transition-duration: 0.1s; }
 
-.tr-scale-down-hover:hover { transform: scale(0.9); }
+.scale-down-hover:hover { transform: scale(0.9); }
 
 /*
 
@@ -357,24 +353,24 @@ Animation Utilities
   scss/components/_animations.scss.
 
   Usage:
-  <div class="a-bounce a-duration-xl a-easing-cb-scale-out">
+  <div class="bounce a-duration-large a-easing-cb-scale-out">
     This div bounces slowly with a cubic bezier scaling effect. The
     initial bounce is defined in the components doc, while the utility
     classes override the component's default values.
   </div>
 
 */
-.a-duration-0 { animation-duration: 0s !important; }
+.a-duration-none { animation-duration: 0s !important; }
 
-.a-duration-s { animation-duration: 0.3s !important; }
+.a-duration-smaller { animation-duration: 0.3s !important; }
 
-.a-duration-m { animation-duration: 0.5s !important; }
+.a-duration-small { animation-duration: 0.5s !important; }
 
-.a-duration-l { animation-duration: 1s !important; }
+.a-duration { animation-duration: 1s !important; }
 
-.a-duration-xl { animation-duration: 1.5s !important; }
+.a-duration-large { animation-duration: 1.5s !important; }
 
-.a-duration-xxl { animation-duration: 2s !important; }
+.a-duration-larger { animation-duration: 2s !important; }
 
 .a-easing-linear { animation-timing-function: linear !important; }
 
@@ -389,6 +385,74 @@ Animation Utilities
 .a-repeat-once { animation-iteration-count: 2 !important; }
 
 .a-repeat { animation-iteration-count: infinite !important; }
+
+/*
+
+	Borders
+
+	Base:
+	.border is the default class that adds a basic solid border of 1px
+	with its color inherited from text color property unless overridden
+	by a color modifier.
+
+	e.g.
+	<div class="border t-red"></div> creates border: 1px solid $red
+	<div class="border border-white t-red"></div> creates border: 1px solid $white
+
+*/
+.border-black { border-color: #2F323B; }
+
+.border-white { border-color: #FFFFFF; }
+
+.border-blue { border-color: #3675b4; }
+
+.border-light-blue { border-color: #3e95be; }
+
+.border-dark-blue { border-color: #1e3244; }
+
+.border-red { border-color: #e74141; }
+
+.border-light-red { border-color: #ed6e6e; }
+
+.border-dark-red { border-color: #da1b1b; }
+
+.border-light-grey { border-color: #999; }
+
+.border-lighter-grey { border-color: #d1d1d1; }
+
+.border-lightest-grey { border-color: #f7f7f7; }
+
+.border-dark-grey { border-color: #888; }
+
+.border-darker-grey { border-color: #6f6f6f; }
+
+.border-darkest-grey { border-color: #555555; }
+
+.border-solid, .border, .form__input, tbody tr, .border-top, .border-bottom, .border-left, .border-right { border-style: solid; }
+
+.border-none { border-width: 0; }
+
+.border-top-none { border-top-width: 0; }
+
+.border-bottom-none { border-bottom-width: 0; }
+
+.border-left-none { border-left-width: 0; }
+
+.border-right-none { border-right-width: 0; }
+
+.border-1, .border, .form__input, tbody tr { border-width: 1px; }
+
+.border-top-1, .border-top { border-top-width: 1px; }
+
+.border-bottom-1, .border-bottom, tbody tr { border-bottom-width: 1px; }
+
+.border-left-1, .border-left { border-left-width: 1px; }
+
+.border-right-1, .border-right { border-right-width: 1px; }
+
+.u-border-radius-m, .u-border-radius, .form__input, .u-rounded-corners { border-radius: 3px !important; }
+
+.u-border-radius-l { border-radius: 5px !important; }
 
 .u-clearfix::after { clear: both; content: ""; display: table; }
 
@@ -490,9 +554,11 @@ Animation Utilities
 
 .g-shift-11 { margin-left: 93.82785%; }
 
-.l-right { float: right !important; }
+.l-float-right { float: right !important; }
 
-.l-left { float: left !important; }
+.l-float-left { float: left !important; }
+
+.l-float-none { float: none !important; }
 
 .l-centered { margin: 0 auto !important; }
 
@@ -501,6 +567,20 @@ Animation Utilities
 .l-inline-block, .header__nav-item, .tabs__nav-item { display: inline-block !important; }
 
 .l-block, .form__label, .form__input { display: block !important; }
+
+.l-pos-absolute { position: absolute !important; }
+
+.l-pos-relative { position: relative !important; }
+
+.l-pos-fixed { position: fixed !important; }
+
+.l-pos-top, .l-pos-top-left, .l-pos-top-right, .l-pos-all { top: 0 !important; }
+
+.l-pos-bottom, .l-pos-bottom-left, .l-pos-bottom-right, .l-pos-all { bottom: 0 !important; }
+
+.l-pos-left, .l-pos-top-left, .l-pos-bottom-left, .l-pos-all { left: 0 !important; }
+
+.l-pos-right, .l-pos-top-right, .l-pos-bottom-right, .l-pos-all { right: 0 !important; }
 
 .u-overflow-visible { overflow: visible !important; }
 
@@ -657,24 +737,24 @@ Transition Utilities
   scss/components/_transitions.scss.
 
   Usage:
-  <div class="tr-scale-up-hover tr-duration-xl tr-easing-cb-scale-out">
+  <div class="scale-up-hover tr-duration-large tr-easing-cb-scale-out">
     This div scale up slowly on hover, with a cubic bezier scaling effect. The
     initial scaling up is defined in the components doc, while the utility
     classes override the component's default values.
   </div>
 
 */
-.tr-duration-0 { transition-duration: 0s !important; }
+.tr-duration-none { transition-duration: 0s !important; }
 
-.tr-duration-s { transition-duration: 0.05s !important; }
+.tr-duration-smaller { transition-duration: 0.05s !important; }
 
-.tr-duration-m { transition-duration: 0.07s !important; }
+.tr-duration-small { transition-duration: 0.07s !important; }
 
-.tr-duration-l { transition-duration: 0.1s !important; }
+.tr-duration { transition-duration: 0.1s !important; }
 
-.tr-duration-xl { transition-duration: 0.2s !important; }
+.tr-duration-large { transition-duration: 0.2s !important; }
 
-.tr-duration-xxl { transition-duration: 0.3s !important; }
+.tr-duration-larger { transition-duration: 0.3s !important; }
 
 .tr-easing-linear { transition-timing-function: linear !important; }
 
@@ -774,7 +854,7 @@ Transition Utilities
 
 .border-bottom, tbody tr { border-bottom: 1px solid #f7f7f7 !important; }
 
-.border-radius, .form__input { border-radius: 3px; }
+.border-radius, .form__input { border-radius: 1px; }
 
 .u-vertical-align-top { vertical-align: top !important; }
 

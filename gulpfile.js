@@ -6,7 +6,7 @@ var sass        = require('gulp-sass');
 var stylelint 	= require('gulp-stylelint');
 var prefix 			= require('gulp-autoprefixer');
 var rename      = require('gulp-rename');
-var package     = require('./package.json');
+var lintconfig     = require('./stylelint.config.js');
 
 /*
 

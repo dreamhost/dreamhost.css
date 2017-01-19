@@ -1,6 +1,24 @@
-.l-right {float: right !important}
-.l-left {float: left !important}
+.l-float-right {float: right !important}
+.l-float-left {float: left !important}
+.l-float-none {float: none !important}
+
 .l-centered {margin: 0 auto !important}
 .l-inline {display: inline !important}
 .l-inline-block {display: inline-block !important}
 .l-block {display: block !important}
+
+.l-pos-absolute {position: absolute !important}
+.l-pos-relative {position: relative !important}
+.l-pos-fixed {position: fixed !important}
+
+.l-pos-top {top: 0 !important}
+.l-pos-bottom {bottom: 0 !important}
+.l-pos-left {left: 0 !important}
+.l-pos-right {right: 0 !important}
+
+.l-pos-top-left {@extend .l-pos-top, .l-pos-left;}
+.l-pos-top-right {@extend .l-pos-top, .l-pos-right;}
+.l-pos-bottom-left {@extend .l-pos-bottom, .l-pos-left;}
+.l-pos-bottom-right {@extend .l-pos-bottom, .l-pos-right;}
+
+.l-pos-all {@extend .l-pos-top, .l-pos-bottom, .l-pos-left, .l-pos-right;}
