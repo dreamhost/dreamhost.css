@@ -12,26 +12,24 @@ $link.click(function(){
 })
 
 // Popovers
-var $button = $('.js-btn-popover,.popover');
+var $button = $('.js-btn-popover'),
+	$popover = $('.popover');
 
 $button.on('click', function (e) {
-	var $popover = $(this)
+	var $thisPopover = $(this)
 		.closest('.js-popover-container--click:not(.popover-container--hover)')
 		.find('.popover');
 
-	if ($(this).hasClass('js-btn-popover')) {
-		if ($popover.hasClass('is-open')) {
-			$('.popover').removeClass('is-open');
-		} else {
-			$('.popover').removeClass('is-open');
-			$popover.addClass('is-open');
-		}
-	}
+	$thisPopover.toggleClass('is-open');
+	$('.popover').not($thisPopover).removeClass('is-open');
 
 	e.stopPropagation();
 });
 
+$popover.on('click', function (e) {
+	e.stopPropagation();
+});
+
 $(document).on('click', function (e) {
-	if (!$(this).hasClass('js-btn-popover'))
-		$('.popover').removeClass('is-open');
+	$('.popover').removeClass('is-open');
 });

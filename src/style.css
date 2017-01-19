@@ -202,13 +202,13 @@ Animation Components
 
 .shake, .shake-hover:hover { animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-.fade-in, .fade-in-hover:hover { animation: fadeIn 1s 1 linear; animation-fill-mode: forwards; }
+.fade-in, .fade-in-hover:hover { animation: fadeIn 1s 1 linear; }
 
-.fade-out, .fade-out-hover:hover { animation: fadeIn 1s 1 linear reverse; animation-fill-mode: forwards; }
+.fade-out, .fade-out-hover:hover { animation: fadeIn 1s 1 linear reverse; }
 
-.slide-in, .slide-in-hover:hover { transform: translateY(0); }
+.slide-in, .slide-in-hover:hover { animation: slideIn 1s 1 cubic-bezier(0.165, 0.84, 0.44, 1); }
 
-.slide-out, .slide-out-hover:hover { transform: translateY(-5px); }
+.slide-out, .slide-out-hover:hover { animation: slideIn 1s 1 linear reverse; }
 
 @keyframes spinRight { 0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); } }
@@ -223,6 +223,11 @@ Animation Components
 
 @keyframes fadeIn { 0% { opacity: 0; }
   100% { opacity: 1; } }
+
+@keyframes slideIn { 0% { transform: translateY(10px) translateZ(-30px);
+    opacity: 0; }
+  100% { transform: translateY(0) translateZ(0);
+    opacity: 1; } }
 
 .btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
@@ -300,9 +305,7 @@ Popover Component
   </div>
 
 */
-.popover { margin-bottom: 1rem; bottom: 100%; transform: translateX(-50%) translateY(-5px); box-shadow: 0 0 1px 1px rgba(31, 45, 61, 0.15); z-index: 999; opacity: 0; transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); transition-duration: .3s; visibility: hidden; }
-
-.popover:after { box-shadow: 1px 1px 0 0 rgba(31, 45, 61, 0.15); }
+.popover { margin-bottom: 1rem; bottom: 100%; transform: translateX(-50%) translateY(-5px); box-shadow: 0 0 1px 1px rgba(31, 45, 61, 0.15); z-index: 999; opacity: 0; visibility: hidden; }
 
 .popover.has-caret:after { width: 12px; height: 12px; content: ''; transform: rotate(45deg); box-shadow: 1px 1px 0 0 rgba(31, 45, 61, 0.15); bottom: -5px; }
 
@@ -320,9 +323,9 @@ Popover Component
 
 .popover.popover--flush-left, .popover.popover--flush-right { transform: translateX(0); }
 
-.popover.popover--flush-left, .popover--bottom.popover--flush-left { transform-origin: left bottom; }
+.popover.popover--flush-right, .popover--bottom.popover--flush-right { left: auto; }
 
-.popover.popover--flush-right, .popover--bottom.popover--flush-right { left: auto; transform-origin: right bottom; }
+.popover.popover--flush-left, .popover--bottom.popover--flush-left, .popover.popover--flush-right, .popover--bottom.popover--flush-right { transform-origin: left bottom; }
 
 .popover.popover--flush-left, .popover.popover--flush-right, .popover--bottom.popover--flush-left.is-open, .popover--bottom.popover--flush-right.is-open, .popover-container--hover:hover > .popover--bottom.popover--flush-left, .popover-container--hover:hover > .popover--bottom.popover--flush-right, .popover-container--hover:focus > .popover--bottom.popover--flush-left, .popover-container--hover:focus > .popover--bottom.popover--flush-right { transform: translateX(0) translateY(-5px); }
 
@@ -340,7 +343,7 @@ Popover Component
 
 .popover--right { margin-left: 1rem; left: 100%; }
 
-.popover--left:after, .popover--right:after { margin-top: -6px; }
+.popover--left:after, .popover--right:after { margin-top: -4px; }
 
 .popover--right, .popover--right:after, .popover--left, .popover--left:after { top: 50%; }
 
@@ -360,7 +363,7 @@ Popover Component
 
 .popover--flush-top.has-caret:after { top: 2rem; }
 
-.popover--flush-bottom.has-caret:after { bottom: 2rem; top: auto; }
+.popover--flush-bottom.has-caret:after { bottom: 1.9rem; top: auto; }
 
 .popover--right.has-caret:after { box-shadow: -1px 1px 0 0 rgba(31, 45, 61, 0.15); left: 1px; }
 
@@ -380,11 +383,13 @@ Popover Component
 /* Dropdown: - popover-dropdown - popover-separator */
 .popover-dropdown a { padding-left: 1rem; padding-right: 1rem; padding-bottom: 1rem; }
 
-.popover-dropdown a, .popover-dropdown a:link { transition: all .15s linear; cursor: pointer; }
+.popover-dropdown a, .popover-dropdown a:link { cursor: pointer; }
 
 .popover-dropdown a:first-child { padding-top: 1rem; }
 
-.popover-separator { height: 1px; margin-bottom: 1rem; background-color: #eaeaea; }
+.popover-separator { height: 1px; margin-bottom: 1rem; background: #eaeaea; }
+
+.popover--dark .popover-separator { background: #484848; }
 
 .tabs__nav-item { color: #2F323B; }
 
@@ -863,15 +868,15 @@ Transition Utilities
 
 .tr-duration-small { transition-duration: 0.07s !important; }
 
-.tr-duration { transition-duration: 0.1s !important; }
+.tr-duration, .popover-dropdown a, .popover-dropdown a:link { transition-duration: 0.1s !important; }
 
-.tr-duration-large { transition-duration: 0.2s !important; }
+.tr-duration-large, .popover, .popover.has-caret:after { transition-duration: 0.2s !important; }
 
 .tr-duration-larger { transition-duration: 0.3s !important; }
 
-.tr-easing-linear { transition-timing-function: linear !important; }
+.tr-easing-linear, .popover-dropdown a, .popover-dropdown a:link { transition-timing-function: linear !important; }
 
-.tr-easing-ease { transition-timing-function: ease-in-out !important; }
+.tr-easing-ease, .popover, .popover.has-caret:after { transition-timing-function: ease-in-out !important; }
 
 .tr-easing-cb-scale-in { transition-timing-function: cubic-bezier(0, 0.89, 0.44, 1) !important; }
 

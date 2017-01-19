@@ -42,24 +42,22 @@ Animation Components
 .fade-in,
 .fade-in-hover:hover {
   animation: fadeIn $a-size 1 linear;
-  animation-fill-mode: forwards;
 }
 
 .fade-out,
 .fade-out-hover:hover {
   animation: fadeIn $a-size 1 linear reverse;
-  animation-fill-mode: forwards;
 }
 
 // slide
 .slide-in,
 .slide-in-hover:hover {
-  transform: translateY(0);
+  animation: slideIn $a-size 1 cubic-bezier(0.165,0.84,0.44,1);
 }
 
 .slide-out,
 .slide-out-hover:hover {
-  transform: translateY(-5px);
+  animation: slideIn $a-size 1 linear reverse;
 }
 
 
@@ -102,6 +100,17 @@ Animation Components
     opacity: 0;
   }
   100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(10px) translateZ(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) translateZ(0);
     opacity: 1;
   }
 }
