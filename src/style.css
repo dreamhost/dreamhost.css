@@ -237,6 +237,18 @@ Animation Components
 
 .btn--warning:hover { cursor: pointer; }
 
+.container { max-width: 960px; margin-left: auto; margin-right: auto; }
+
+.container::after { clear: both; content: ""; display: table; }
+
+.container--small { max-width: 640px; }
+
+.container--normal { max-width: 960px; }
+
+.container--large { max-width: 1280px; }
+
+.container--full { max-width: 100%; }
+
 /*
 
 	Header
@@ -502,10 +514,6 @@ Animation Utilities
 
 .bg-darkest-grey { background: #555555 !important; }
 
-.container { max-width: 980px; margin-left: auto; margin-right: auto; }
-
-.container::after { clear: both; content: ""; display: table; }
-
 .g-1_6 { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
 
 .g-1_6:last-child { margin-right: 0; }
@@ -708,7 +716,7 @@ Animation Utilities
 
 .p-right-smaller { padding-right: 0.5rem !important; }
 
-.p-right-small { padding-right: 0.5rem !important; }
+.p-right-small, .container--pad { padding-right: 0.5rem !important; }
 
 .p-right, th, .table--large-padding td { padding-right: 2rem !important; }
 
@@ -720,7 +728,7 @@ Animation Utilities
 
 .p-left-smaller { padding-left: 0.5rem !important; }
 
-.p-left-small { padding-left: 0.5rem !important; }
+.p-left-small, .container--pad { padding-left: 0.5rem !important; }
 
 .p-left, th, .table--large-padding td { padding-left: 2rem !important; }
 

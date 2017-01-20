@@ -1,0 +1,28 @@
+// Container
+.container {
+	@include outer-container(960px);
+}
+
+// Container Sizes
+// Overrides max-width only
+.container--small {
+    max-width: 640px; // 320 x 2
+}
+
+.container--normal {
+	max-width: 960px; // 320 x 3
+}
+
+.container--large {
+    max-width: 1280px; // 320 x 4
+}
+
+.container--full {
+    max-width: 100%;
+}
+
+// Container Padding
+.container--pad {
+	@extend .p-right-small;
+	@extend .p-left-small;
+}
