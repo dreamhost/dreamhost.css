@@ -9,7 +9,7 @@
     max-width: 640px; // 320 x 2
 }
 
-.container--normal {
+.container--medium {
 	max-width: 960px; // 320 x 3
 }
 
@@ -17,12 +17,12 @@
     max-width: 1280px; // 320 x 4
 }
 
-.container--full {
+.container--full-width {
     max-width: 100%;
 }
 
 // Container Padding
-.container--pad {
+.container--has-padding {
 	@extend .p-right-small;
 	@extend .p-left-small;
 }
