@@ -1,1 +1,11 @@
+/*
+
+	Clearfix
+
+	Use this class if you've floated elements to line up an interface and
+	need to clear them. This is not required on elements using a container
+	classes, as that will already have floats cleared.
+
+*/
+
 .u-clearfix {@include clearfix;}

@@ -15,22 +15,21 @@ Popover Component
     for hover popovers.
 
   Usage:
-  <div class="popover-container js-popover-container--click">
-    <div class="popover popover--dark popover--bottom
-    popover--flush-left has-caret">
-      <div class="p-small">
-        This is a dark themed popover with small padding. It appears
-        below the clicked element, is flushed left, and has a caret.
-        Note, popovers must live within .popover-container. To enable
-        popovers on hover, the .popover-container--hover class must be
-        included on the container.
+    <div class="popover-container js-popover-container--click">
+      <div class="popover popover--dark popover--bottom
+      popover--flush-left has-caret">
+        <div class="p-small">
+          This is a dark themed popover with small padding. It appears
+          below the clicked element, is flushed left, and has a caret.
+          Note, popovers must live within .popover-container. To enable
+          popovers on hover, the .popover-container--hover class must be
+          included on the container.
+        </div>
       </div>
+      <a class="btn js-btn-popover">Click me</a>
     </div>
-    <a class="btn js-btn-popover">Click me</a>
-  </div>
 
 */
-
 
 // Base
 .popover-container {
