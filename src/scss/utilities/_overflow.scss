@@ -1,3 +1,15 @@
+/*
+
+	Overflow
+
+	This controls what happens when content inside of an element expands
+	past it's container's width. You can hide this content, show it,
+	or create scrollbars as needed. This is mostly used when moving
+	elements via javascript, as the default behaviour to expand the
+	content is usually desired.
+
+*/
+
 .u-overflow-visible {overflow: visible !important}
 .u-overflow-hidden {overflow: hidden !important}
 .u-overflow-scroll {overflow: scroll !important}

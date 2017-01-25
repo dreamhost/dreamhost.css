@@ -1,3 +1,19 @@
+/*
+
+	Grid
+
+	We use neat.bourbon.io as our grid. There are 12 fluid columns and
+	helper css classes to quickly create halfs, quarters, thirds or sixths.
+	Use omega classes on final rows to fix margins. There are shift classes
+	available for additional spacing options.
+
+	Usage [html]:
+		<div class="g-1_2"></div>
+	Usage [sass]:
+		div {@include span-columns(6)};
+
+*/
+
 .container {@include outer-container}
 
 .g-1_6 {@include span-columns(2)}

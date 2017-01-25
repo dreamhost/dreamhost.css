@@ -2,51 +2,47 @@
 
 	Borders
 
-	Base:
-	.border is the default class that adds a basic solid border of 1px
-	with its color inherited from text color property unless overridden
-	by a color modifier.
+	These classes allow you to create solid borders on any side of an element.
+	The default 1px solid border is "border", with additional modifiers for
+	more specific sides or colors. The default border color will be inherited
+	from the text color of the element.
 
-	e.g.
-	<div class="border t-red"></div> creates border: 1px solid $red
-	<div class="border border-white t-red"></div> creates border: 1px solid $white
+	Usage:
+		<div class="border"></div>
+		<div class="border border-white t-red"></div>
 
 */
 
-// default
+// Default
 .border {@extend .border-1; @extend .border-solid;}
 
-// directions
+// Directions
 .border-top {@extend .border-top-1; @extend .border-solid;}
 .border-bottom {@extend .border-bottom-1; @extend .border-solid;}
 .border-left {@extend .border-left-1; @extend .border-solid;}
 .border-right {@extend .border-right-1; @extend .border-solid;}
 
-// colors
+// Colors
 .border-black {border-color: $black}
 .border-white {border-color: $white}
-
 .border-blue {border-color: $blue}
 .border-light-blue {border-color: $light-blue}
 .border-dark-blue {border-color: $dark-blue}
-
 .border-red {border-color: $red}
 .border-light-red {border-color: $light-red}
 .border-dark-red {border-color:$dark-red}
-
 .border-light-grey {border-color: $light-grey}
 .border-lighter-grey {border-color: $lighter-grey}
 .border-lightest-grey {border-color: $lightest-grey}
-
 .border-dark-grey {border-color: $dark-grey}
 .border-darker-grey {border-color: $darker-grey}
 .border-darkest-grey {border-color: $darkest-grey}
 
-// styles
+// Styles
 .border-solid {border-style: solid}
 
-// widths
-// zero widths to override an element with default styling
+// Widths
+// Use zero widths to override an element with default styling
 // like an input, or to cancel individual border directions
 .border-none {border-width: 0}
 .border-top-none {border-top-width: 0}
