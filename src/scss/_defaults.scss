@@ -66,3 +66,13 @@ hr {
 	border: 1px solid $lightest-grey;
 	margin: $s 0;
 }
+
+code {
+	padding: 0 $s-smaller;
+	font-size: $t-small;
+	display: inline-block;
+	border: $border-size solid $lighter-grey;
+	border-radius: $border-radius;
+	background: $white;
+	font-family: monospace;
+}
