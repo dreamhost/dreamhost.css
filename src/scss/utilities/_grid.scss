@@ -1,4 +1,4 @@
-.container {@include outer-container}
+// Relies on .container utility to wrap
 
 .g-1_6 {@include span-columns(2)}
 .g-1_4 {@include span-columns(3)}
@@ -18,4 +18,3 @@
 .g-shift-9 {@include shift(9)}
 .g-shift-10 {@include shift(10)}
 .g-shift-11 {@include shift(11)}
-

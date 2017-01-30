@@ -620,9 +620,21 @@ Animation Utilities
 
 .bg-darkest-grey { background: #555555 !important; }
 
-.container { max-width: 980px; margin-left: auto; margin-right: auto; }
+.container-small { max-width: 640px; margin-left: auto; margin-right: auto; }
 
-.container::after { clear: both; content: ""; display: table; }
+.container-small::after { clear: both; content: ""; display: table; }
+
+.container-medium { max-width: 960px; margin-left: auto; margin-right: auto; }
+
+.container-medium::after { clear: both; content: ""; display: table; }
+
+.container-large { max-width: 1280px; margin-left: auto; margin-right: auto; }
+
+.container-large::after { clear: both; content: ""; display: table; }
+
+.container-full-width { max-width: 100%; margin-left: auto; margin-right: auto; }
+
+.container-full-width::after { clear: both; content: ""; display: table; }
 
 .g-1_6 { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
 
