@@ -1,25 +1,8 @@
-.list { // maybe this should be applied to all lists? maybe not. lists are annoying sometimes.
-	@extend .m-bottom-none;
-	li:not(:last-child) {
-		@extend .m-bottom-small;
-	}
-}
+.list {@extend .m-bottom;}
+.list > li:not(:last-child) {@extend .m-bottom-small;}
 
-.list--bullets {
-	li {
-		@extend .m-left;
-		list-style-type: disc;
-	}
-}
+.list-disc {list-style-type: disc; list-style-position: outside}
+.list-disc > li {@extend .m-left;}
 
-.list--inline {
-	li {
-		@extend .p-none;
-		@extend .l-inline;
-		@extend .m-right;
-
-		&:last-child {
-			@extend .m-right-none;
-		}
-	}
-}
+.list-inline > li {@extend .p-none, .l-inline, .m-right;}
+.list-inline:last-child {@extend .m-right-none;}

@@ -260,7 +260,7 @@ Animation Components
 
 .header__links:last-child { margin-right: 0; }
 
-.list--bullets li { list-style-type: disc; }
+.list-disc { list-style-type: disc; list-style-position: outside; }
 
 /* Option Box
 
@@ -692,7 +692,7 @@ Animation Utilities
 
 .l-centered { margin: 0 auto !important; }
 
-.l-inline, .form__input[type="radio"], .list--inline li { display: inline !important; }
+.l-inline, .form__input[type="radio"], .list-inline > li { display: inline !important; }
 
 .l-inline-block, .header__nav-item, .popover-container, .tabs__nav-item { display: inline-block !important; }
 
@@ -753,25 +753,25 @@ Animation Utilities
 
 .m-top-larger { margin-top: 3rem !important; }
 
-.m-bottom-none, .list, .option-box__heading { margin-bottom: 0 !important; }
+.m-bottom-none, .option-box__heading { margin-bottom: 0 !important; }
 
 .m-bottom-smaller { margin-bottom: 0.5rem !important; }
 
 .m-bottom-small, .form__label, .form__input, .list li:not(:last-child) { margin-bottom: 1.5rem !important; }
 
-.m-bottom, .table { margin-bottom: 2rem !important; }
+.m-bottom, .list, .table { margin-bottom: 2rem !important; }
 
 .m-bottom-large, .header, .tabs { margin-bottom: 2.5rem !important; }
 
 .m-bottom-larger { margin-bottom: 3rem !important; }
 
-.m-right-none, .list--inline li:last-child { margin-right: 0 !important; }
+.m-right-none, .list-inline:last-child { margin-right: 0 !important; }
 
 .m-right-smaller { margin-right: 0.5rem !important; }
 
 .m-right-small, .form__input[type="radio"] { margin-right: 1.5rem !important; }
 
-.m-right, .list--inline li { margin-right: 2rem !important; }
+.m-right, .list-inline > li { margin-right: 2rem !important; }
 
 .m-right-large { margin-right: 2.5rem !important; }
 
@@ -783,7 +783,7 @@ Animation Utilities
 
 .m-left-small { margin-left: 1.5rem !important; }
 
-.m-left, .list--bullets li { margin-left: 2rem !important; }
+.m-left, .list-disc > li { margin-left: 2rem !important; }
 
 .m-left-large { margin-left: 2.5rem !important; }
 
@@ -798,7 +798,7 @@ Animation Utilities
 	can be referenced using just p-direction.
 
 */
-.p-none, .list--inline li { padding: 0 !important; }
+.p-none, .list-inline > li { padding: 0 !important; }
 
 .p-smaller { padding: 0.5rem !important; }
 
