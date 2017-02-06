@@ -3,10 +3,11 @@ var neat        = require('node-neat').includePaths;
 var browserSync = require('browser-sync').create();
 var cleanCSS    = require('gulp-clean-css');
 var sass        = require('gulp-sass');
-var stylelint 	= require('gulp-stylelint');
-var prefix 			= require('gulp-autoprefixer');
+var stylelint   = require('gulp-stylelint');
+var prefix      = require('gulp-autoprefixer');
 var rename      = require('gulp-rename');
-var lintconfig     = require('./stylelint.config.js');
+var lintconfig  = require('./stylelint.config.js');
+var package     = require('./package.json');
 
 /*
 
