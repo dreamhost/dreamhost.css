@@ -212,6 +212,14 @@ Animation Components
 
 .slide-out, .slide-out-hover:hover { animation: slideIn 1s 1 linear reverse; }
 
+.slide-out-left, .slide-out-left-hover:hover { animation: slideLeft 0.5s 1 ease-in; }
+
+.slide-in-left, .slide-in-left-hover:hover, .slide-out-right.is-entering { animation: slideLeft 0.5s 1 ease-in reverse; }
+
+.slide-out-right, .slide-out-right-hover:hover { animation: slideRight 0.5s 1 ease-in; }
+
+.slide-in-right, .slide-in-right-hover:hover, .slide-out-left.is-entering { animation: slideRight 0.5s 1 ease-in reverse; }
+
 @keyframes spinRight { 0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); } }
 
@@ -230,6 +238,18 @@ Animation Components
     opacity: 0; }
   100% { transform: translateY(0) translateZ(0);
     opacity: 1; } }
+
+@keyframes slideLeft { 0% { opacity: 1; }
+  50% { opacity: 0;
+    transform: translateX(10%); }
+  100% { opacity: 0;
+    transform: translateX(100%); } }
+
+@keyframes slideRight { 0% { opacity: 1; }
+  50% { opacity: 0;
+    transform: translateX(-10%); }
+  100% { opacity: 0;
+    transform: translateX(-100%); } }
 
 .btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
@@ -759,7 +779,7 @@ Animation Utilities
 
 .m-bottom-smaller { margin-bottom: 0.5rem !important; }
 
-.m-bottom-small, .form__label, .form__input, .list li:not(:last-child) { margin-bottom: 1.5rem !important; }
+.m-bottom-small, .form__label, .form__input, .list > li:not(:last-child) { margin-bottom: 1.5rem !important; }
 
 .m-bottom, .list, .table { margin-bottom: 2rem !important; }
 

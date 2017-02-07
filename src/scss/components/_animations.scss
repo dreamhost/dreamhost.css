@@ -60,6 +60,28 @@ Animation Components
   animation: slideIn $a-size 1 linear reverse;
 }
 
+.slide-out-left,
+.slide-out-left-hover:hover {
+  animation: slideLeft $a-small 1 ease-in;
+}
+
+.slide-in-left,
+.slide-in-left-hover:hover,
+.slide-out-right.is-entering {
+  animation: slideLeft $a-small 1 ease-in reverse;
+}
+
+.slide-out-right,
+.slide-out-right-hover:hover {
+  animation: slideRight $a-small 1 ease-in;
+}
+
+.slide-in-right,
+.slide-in-right-hover:hover,
+.slide-out-left.is-entering {
+  animation: slideRight $a-small 1 ease-in reverse;
+}
+
 
 // Keyframe definitions
 @keyframes spinRight {
@@ -113,4 +135,32 @@ Animation Components
     transform: translateY(0) translateZ(0);
     opacity: 1;
   }
+}
+
+@keyframes slideLeft {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+		transform: translateX(10%);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+}
+
+@keyframes slideRight {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+		transform: translateX(-10%);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
 }

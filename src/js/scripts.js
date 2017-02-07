@@ -33,3 +33,12 @@ $popover.on('click', function (e) {
 $(document).on('click', function (e) {
 	$('.popover').removeClass('is-open');
 });
+
+// Page transitions
+var $pt = $('[data-pt]');
+
+$pt.on('click', function () {
+	ptType = $(this).data('pt');
+
+	$(this).closest('.page-transition').addClass(ptType);
+});
