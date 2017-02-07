@@ -759,7 +759,7 @@ Animation Utilities
 
 .m-bottom-smaller { margin-bottom: 0.5rem !important; }
 
-.m-bottom-small, .form__label, .form__input, .list li:not(:last-child) { margin-bottom: 1.5rem !important; }
+.m-bottom-small, .form__label, .form__input, .list > li:not(:last-child) { margin-bottom: 1.5rem !important; }
 
 .m-bottom, .list, .table { margin-bottom: 2rem !important; }
 
