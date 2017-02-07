@@ -65,7 +65,7 @@ gulp.task('lint', function() {
 gulp.task('styles', ['lint'], function () {
 	return gulp.src('./src/scss/*.scss')
 		.pipe(sass({includePaths: neat, outputStyle: 'compact'}).on('error', sass.logError))
-		.pipe(gulp.dest('./src/'))
+		.pipe(gulp.dest('./src/css/'))
 		.pipe(browserSync.stream());
 });
 
