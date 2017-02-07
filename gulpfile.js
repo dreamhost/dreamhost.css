@@ -11,24 +11,24 @@ var package     = require('./package.json');
 
 /*
 
-  ## gulp serve
+	## gulp serve
 
-  1. Run the BrowserSync server at http://localhost:9999
-  2. Compile .scss and inject into browser
-  3. Live-reload .html
+	1. Run the BrowserSync server at http://localhost:9999
+	2. Compile .scss and inject into browser
+	3. Live-reload .html
 
 */
 
 gulp.task('serve', ['styles'], function() {
 
-    browserSync.init({
-        server: "./",
-        port: 9999,
-        open: false
-    });
+		browserSync.init({
+				server: "./",
+				port: 9999,
+				open: false
+		});
 
-    gulp.watch("./src/scss/**/*.scss", ['styles']);
-    gulp.watch("./**/*.html").on('change', browserSync.reload);
+		gulp.watch("./src/scss/**/*.scss", ['styles']);
+		gulp.watch("./**/*.html").on('change', browserSync.reload);
 });
 
 /*
@@ -50,58 +50,58 @@ gulp.task('lint', function() {
 	.pipe(stylelint({
 		failAfterError: false,
 		reporters: [{formatter: 'string', console: true}]
-  }));
+	}));
 });
 
 /*
 
-  ## gulp styles
+	## gulp styles
 
-  1. Compile sass
-  2. Add minified, versioned(TODO) file to /dist folder
-  3. Inject into browser with BrowserSync
+	1. Compile sass
+	2. Add minified, versioned(TODO) file to /dist folder
+	3. Inject into browser with BrowserSync
 
 */
 
 gulp.task('styles', ['lint'], function () {
-  return gulp.src('./src/scss/*.scss')
-    .pipe(sass({includePaths: neat, outputStyle: 'compact'}).on('error', sass.logError))
-    .pipe(gulp.dest('./src/'))
-    .pipe(browserSync.stream());
+	return gulp.src('./src/scss/*.scss')
+		.pipe(sass({includePaths: neat, outputStyle: 'compact'}).on('error', sass.logError))
+		.pipe(gulp.dest('./src/css/'))
+		.pipe(browserSync.stream());
 });
 
 /*
 
-  ## gulp dist
+	## gulp dist
 
-  Compile css for distribution. Use version from package.json.
-  Place the following files in /dist/:
+	Compile css for distribution. Use version from package.json.
+	Place the following files in /dist/:
 
-  1. dreamhost.[version].css
-  2. dreamhost.[version].min.css
+	1. dreamhost.[version].css
+	2. dreamhost.[version].min.css
 
 */
 
 gulp.task('dist', function(){
-  var file = 'dreamhost.' + package.version,
-      dest = './dist';
+	var file = 'dreamhost.' + package.version,
+			dest = './dist';
 
-  return gulp.src('./src/scss/*.scss')
-    .pipe(sass({includePaths: neat, outputStyle: 'compact'}).on('error', sass.logError))
-    .pipe(prefix({browsers: ['last 4 versions']}))
-    .pipe(rename(file + '.css'))
-    .pipe(gulp.dest(dest))
-    .pipe(cleanCSS())
-    .pipe(rename(file + '.min.css'))
-    .pipe(gulp.dest(dest));
+	return gulp.src('./src/scss/*.scss')
+		.pipe(sass({includePaths: neat, outputStyle: 'compact'}).on('error', sass.logError))
+		.pipe(prefix({browsers: ['last 4 versions']}))
+		.pipe(rename(file + '.css'))
+		.pipe(gulp.dest(dest))
+		.pipe(cleanCSS())
+		.pipe(rename(file + '.min.css'))
+		.pipe(gulp.dest(dest));
 })
 
 /*
 
-  ## gulp
+	## gulp
 
-  The default gulp task will run the server which watches,
-  compiles and updates HTML and SCSS.
+	The default gulp task will run the server which watches,
+	compiles and updates HTML and SCSS.
 
 */
 

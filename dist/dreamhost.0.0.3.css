@@ -21,7 +21,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* ========================================================================== Remodal's necessary styles ========================================================================== */
 /* Hide scroll bar */
-html.remodal-is-locked { overflow: hidden; touch-action: none; }
+html.remodal-is-locked { overflow: hidden; -ms-touch-action: none; touch-action: none; }
 
 /* Anti FOUC */
 .remodal, [data-remodal-id] { display: none; }
@@ -35,54 +35,69 @@ html.remodal-is-locked { overflow: hidden; touch-action: none; }
 .remodal-wrapper:after { display: inline-block; height: 100%; margin-left: -0.05em; content: ""; }
 
 /* Fix iPad, iPhone glitches */
-.remodal-overlay, .remodal-wrapper { backface-visibility: hidden; }
+.remodal-overlay, .remodal-wrapper { -webkit-backface-visibility: hidden; backface-visibility: hidden; }
 
 /* Necessary styles of the modal dialog */
-.remodal { position: relative; outline: none; text-size-adjust: 100%; }
+.remodal { position: relative; outline: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 .remodal-is-initialized { /* Disable Anti-FOUC */ display: inline-block; }
 
 /* ========================================================================== Remodal's default mobile first theme ========================================================================== */
 /* Default theme styles for the background */
-.remodal-bg.remodal-is-opening, .remodal-bg.remodal-is-opened { filter: blur(3px); }
+.remodal-bg.remodal-is-opening, .remodal-bg.remodal-is-opened { -webkit-filter: blur(3px); filter: blur(3px); }
 
 /* Default theme styles of the overlay */
 .remodal-overlay { background: rgba(43, 46, 56, 0.9); }
 
-.remodal-overlay.remodal-is-opening, .remodal-overlay.remodal-is-closing { animation-duration: 0.3s; animation-fill-mode: forwards; }
+.remodal-overlay.remodal-is-opening, .remodal-overlay.remodal-is-closing { -webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 
-.remodal-overlay.remodal-is-opening { animation-name: remodal-overlay-opening-keyframes; }
+.remodal-overlay.remodal-is-opening { -webkit-animation-name: remodal-overlay-opening-keyframes; animation-name: remodal-overlay-opening-keyframes; }
 
-.remodal-overlay.remodal-is-closing { animation-name: remodal-overlay-closing-keyframes; }
+.remodal-overlay.remodal-is-closing { -webkit-animation-name: remodal-overlay-closing-keyframes; animation-name: remodal-overlay-closing-keyframes; }
 
 /* Default theme styles of the wrapper */
 .remodal-wrapper { padding: 10px 10px 0; }
 
 /* Default theme styles of the modal dialog */
-.remodal { box-sizing: border-box; width: 100%; margin-bottom: 10px; padding: 35px; transform: translate3d(0, 0, 0); color: #2b2e38; background: #fff; }
+.remodal { box-sizing: border-box; width: 100%; margin-bottom: 10px; padding: 35px; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); color: #2b2e38; background: #fff; }
 
-.remodal.remodal-is-opening, .remodal.remodal-is-closing { animation-duration: 0.3s; animation-fill-mode: forwards; }
+.remodal.remodal-is-opening, .remodal.remodal-is-closing { -webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 
-.remodal.remodal-is-opening { animation-name: remodal-opening-keyframes; }
+.remodal.remodal-is-opening { -webkit-animation-name: remodal-opening-keyframes; animation-name: remodal-opening-keyframes; }
 
-.remodal.remodal-is-closing { animation-name: remodal-closing-keyframes; }
+.remodal.remodal-is-closing { -webkit-animation-name: remodal-closing-keyframes; animation-name: remodal-closing-keyframes; }
 
 /* Vertical align of the modal dialog */
 .remodal, .remodal-wrapper:after { vertical-align: middle; }
 
 /* Keyframes ========================================================================== */
-@keyframes remodal-opening-keyframes { from { transform: scale(1.05);
+@-webkit-keyframes remodal-opening-keyframes { from { -webkit-transform: scale(1.05); transform: scale(1.05);
     opacity: 0; }
-  to { transform: none;
+  to { -webkit-transform: none; transform: none;
+    opacity: 1; } }
+@keyframes remodal-opening-keyframes { from { -webkit-transform: scale(1.05); transform: scale(1.05);
+    opacity: 0; }
+  to { -webkit-transform: none; transform: none;
     opacity: 1; } }
 
-@keyframes remodal-closing-keyframes { from { transform: scale(1);
+@-webkit-keyframes remodal-closing-keyframes { from { -webkit-transform: scale(1); transform: scale(1);
     opacity: 1; }
-  to { transform: scale(0.95);
+  to { -webkit-transform: scale(0.95); transform: scale(0.95);
     opacity: 0; } }
+
+@keyframes remodal-closing-keyframes { from { -webkit-transform: scale(1); transform: scale(1);
+    opacity: 1; }
+  to { -webkit-transform: scale(0.95); transform: scale(0.95);
+    opacity: 0; } }
+
+@-webkit-keyframes remodal-overlay-opening-keyframes { from { opacity: 0; }
+  to { opacity: 1; } }
 
 @keyframes remodal-overlay-opening-keyframes { from { opacity: 0; }
   to { opacity: 1; } }
+
+@-webkit-keyframes remodal-overlay-closing-keyframes { from { opacity: 1; }
+  to { opacity: 0; } }
 
 @keyframes remodal-overlay-closing-keyframes { from { opacity: 1; }
   to { opacity: 0; } }
@@ -141,21 +156,21 @@ code { padding: 0 0.5rem; font-size: 0.875rem; display: inline-block; border: 1p
 	- font-family: 'Proxima Nova', sans-serif;
 
 */
-@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proxima_nova_light-webfont.eot"); src: url("fonts/proxima-nova/proxima_nova_light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proxima_nova_light-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proxima_nova_light-webfont.woff") format("woff"), url("fonts/proxima-nova/proxima_nova_light-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proxima_nova_light-webfont.svg#proxima_novalight") format("svg"); font-weight: 300; font-style: normal; }
+@font-face { font-family: "Proxima Nova"; font-style: normal; font-weight: 300; src: url("../fonts/proxima-nova/proximanova_light-webfont.eot?") format("eot"), url("../fonts/proxima-nova/proximanova_light-webfont.woff2") format("woff2"), url("../fonts/proxima-nova/proximanova_light-webfont.woff") format("woff"), url("../fonts/proxima-nova/proximanova_light-webfont.ttf") format("truetype"), url("../fonts/proxima-nova/proximanova_light-webfont.svg#Proxima_Nova") format("svg"); }
 
-@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-lightitalic-webfont.eot"); src: url("fonts/proxima-nova/proximanova-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-lightitalic-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-lightitalic-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-lightitalic-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-lightitalic-webfont.svg#proxima_novalight_italic") format("svg"); font-weight: 300; font-style: italic; }
+@font-face { font-family: "Proxima Nova"; font-style: italic; font-weight: 300; src: url("../fonts/proxima-nova/proximanova-lightitalic-webfont.eot?") format("eot"), url("../fonts/proxima-nova/proximanova-lightitalic-webfont.woff2") format("woff2"), url("../fonts/proxima-nova/proximanova-lightitalic-webfont.woff") format("woff"), url("../fonts/proxima-nova/proximanova-lightitalic-webfont.ttf") format("truetype"), url("../fonts/proxima-nova/proximanova-lightitalic-webfont.svg#Proxima_Nova") format("svg"); }
 
-@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-reg-webfont.eot"); src: url("fonts/proxima-nova/proximanova-reg-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-reg-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-reg-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-reg-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-reg-webfont.svg#proxima_nova_rgregular") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Proxima Nova"; font-style: normal; font-weight: normal; src: url("../fonts/proxima-nova/proximanova-reg-webfont.eot?") format("eot"), url("../fonts/proxima-nova/proximanova-reg-webfont.woff2") format("woff2"), url("../fonts/proxima-nova/proximanova-reg-webfont.woff") format("woff"), url("../fonts/proxima-nova/proximanova-reg-webfont.ttf") format("truetype"), url("../fonts/proxima-nova/proximanova-reg-webfont.svg#Proxima_Nova") format("svg"); }
 
-@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-regitalic-webfont.eot"); src: url("fonts/proxima-nova/proximanova-regitalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-regitalic-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-regitalic-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-regitalic-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-regitalic-webfont.svg#proxima_novaregular_italic") format("svg"); font-weight: normal; font-style: italic; }
+@font-face { font-family: "Proxima Nova"; font-style: italic; font-weight: normal; src: url("../fonts/proxima-nova/proximanova-regitalic-webfont.eot?") format("eot"), url("../fonts/proxima-nova/proximanova-regitalic-webfont.woff2") format("woff2"), url("../fonts/proxima-nova/proximanova-regitalic-webfont.woff") format("woff"), url("../fonts/proxima-nova/proximanova-regitalic-webfont.ttf") format("truetype"), url("../fonts/proxima-nova/proximanova-regitalic-webfont.svg#Proxima_Nova") format("svg"); }
 
-@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-sbold-webfont.eot"); src: url("fonts/proxima-nova/proximanova-sbold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-sbold-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-sbold-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-sbold-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-sbold-webfont.svg#proxima_novasemibold") format("svg"); font-weight: 600; font-style: normal; }
+@font-face { font-family: "Proxima Nova"; font-style: normal; font-weight: 600; src: url("../fonts/proxima-nova/proximanova-sbold-webfont.eot?") format("eot"), url("../fonts/proxima-nova/proximanova-sbold-webfont.woff2") format("woff2"), url("../fonts/proxima-nova/proximanova-sbold-webfont.woff") format("woff"), url("../fonts/proxima-nova/proximanova-sbold-webfont.ttf") format("truetype"), url("../fonts/proxima-nova/proximanova-sbold-webfont.svg#Proxima_Nova") format("svg"); }
 
-@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-sbolditalic-webfont.eot"); src: url("fonts/proxima-nova/proximanova-sbolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-sbolditalic-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-sbolditalic-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-sbolditalic-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-sbolditalic-webfont.svg#proxima_novasemibold_italic") format("svg"); font-weight: 600; font-style: italic; }
+@font-face { font-family: "Proxima Nova"; font-style: italic; font-weight: 600; src: url("../fonts/proxima-nova/proximanova-sbolditalic-webfont.eot?") format("eot"), url("../fonts/proxima-nova/proximanova-sbolditalic-webfont.woff2") format("woff2"), url("../fonts/proxima-nova/proximanova-sbolditalic-webfont.woff") format("woff"), url("../fonts/proxima-nova/proximanova-sbolditalic-webfont.ttf") format("truetype"), url("../fonts/proxima-nova/proximanova-sbolditalic-webfont.svg#Proxima_Nova") format("svg"); }
 
-@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-bold-webfont.eot"); src: url("fonts/proxima-nova/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-bold-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-bold-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-bold-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-bold-webfont.svg#proxima_nova_rgbold") format("svg"); font-weight: bold; font-style: normal; }
+@font-face { font-family: "Proxima Nova"; font-style: normal; font-weight: bold; src: url("../fonts/proxima-nova/proximanova-bold-webfont.eot?") format("eot"), url("../fonts/proxima-nova/proximanova-bold-webfont.woff2") format("woff2"), url("../fonts/proxima-nova/proximanova-bold-webfont.woff") format("woff"), url("../fonts/proxima-nova/proximanova-bold-webfont.ttf") format("truetype"), url("../fonts/proxima-nova/proximanova-bold-webfont.svg#Proxima_Nova") format("svg"); }
 
-@font-face { font-family: 'Proxima Nova'; src: url("fonts/proxima-nova/proximanova-boldit-webfont.eot"); src: url("fonts/proxima-nova/proximanova-boldit-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proxima-nova/proximanova-boldit-webfont.woff2") format("woff2"), url("fonts/proxima-nova/proximanova-boldit-webfont.woff") format("woff"), url("fonts/proxima-nova/proximanova-boldit-webfont.ttf") format("truetype"), url("fonts/proxima-nova/proximanova-boldit-webfont.svg#proxima_nova_rgbold_italic") format("svg"); font-weight: bold; font-style: italic; }
+@font-face { font-family: "Proxima Nova"; font-style: italic; font-weight: bold; src: url("../fonts/proxima-nova/proximanova-bolditalic-webfont.eot?") format("eot"), url("../fonts/proxima-nova/proximanova-bolditalic-webfont.woff2") format("woff2"), url("../fonts/proxima-nova/proximanova-bolditalic-webfont.woff") format("woff"), url("../fonts/proxima-nova/proximanova-bolditalic-webfont.ttf") format("truetype"), url("../fonts/proxima-nova/proximanova-bolditalic-webfont.svg#Proxima_Nova") format("svg"); }
 
 /*
 
@@ -165,21 +180,21 @@ code { padding: 0 0.5rem; font-size: 0.875rem; display: inline-block; border: 1p
 	- font-family: 'Ubuntu', sans-serif;
 
 */
-@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-l-webfont.eot"); src: url("fonts/ubuntu/ubuntu-l-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-l-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-l-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-l-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-l-webfont.svg#ubuntulight") format("svg"); font-weight: 300; font-style: normal; }
+@font-face { font-family: "Ubuntu"; font-style: normal; font-weight: 300; src: url("../fonts/ubuntu/ubuntu-l-webfont.eot?") format("eot"), url("../fonts/ubuntu/ubuntu-l-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-l-webfont.woff") format("woff"), url("../fonts/ubuntu/ubuntu-l-webfont.ttf") format("truetype"), url("../fonts/ubuntu/ubuntu-l-webfont.svg#Ubuntu") format("svg"); }
 
-@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-li-webfont.eot"); src: url("fonts/ubuntu/ubuntu-li-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-li-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-li-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-li-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-li-webfont.svg#ubuntulight_italic") format("svg"); font-weight: 300; font-style: italic; }
+@font-face { font-family: "Ubuntu"; font-style: italic; font-weight: 300; src: url("../fonts/ubuntu/ubuntu-li-webfont.eot?") format("eot"), url("../fonts/ubuntu/ubuntu-li-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-li-webfont.woff") format("woff"), url("../fonts/ubuntu/ubuntu-li-webfont.ttf") format("truetype"), url("../fonts/ubuntu/ubuntu-li-webfont.svg#Ubuntu") format("svg"); }
 
-@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-r-webfont.eot"); src: url("fonts/ubuntu/ubuntu-r-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-r-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-r-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-r-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-r-webfont.svg#ubunturegular") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Ubuntu"; font-style: normal; font-weight: normal; src: url("../fonts/ubuntu/ubuntu-r-webfont.eot?") format("eot"), url("../fonts/ubuntu/ubuntu-r-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-r-webfont.woff") format("woff"), url("../fonts/ubuntu/ubuntu-r-webfont.ttf") format("truetype"), url("../fonts/ubuntu/ubuntu-r-webfont.svg#Ubuntu") format("svg"); }
 
-@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-ri-webfont.eot"); src: url("fonts/ubuntu/ubuntu-ri-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-ri-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-ri-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-ri-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-ri-webfont.svg#ubuntuitalic") format("svg"); font-weight: normal; font-style: italic; }
+@font-face { font-family: "Ubuntu"; font-style: italic; font-weight: normal; src: url("../fonts/ubuntu/ubuntu-ri-webfont.eot?") format("eot"), url("../fonts/ubuntu/ubuntu-ri-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-ri-webfont.woff") format("woff"), url("../fonts/ubuntu/ubuntu-ri-webfont.ttf") format("truetype"), url("../fonts/ubuntu/ubuntu-ri-webfont.svg#Ubuntu") format("svg"); }
 
-@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-m-webfont.eot"); src: url("fonts/ubuntu/ubuntu-m-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-m-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-m-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-m-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-m-webfont.svg#ubuntumedium") format("svg"); font-weight: 500; font-style: normal; }
+@font-face { font-family: "Ubuntu"; font-style: normal; font-weight: 500; src: url("../fonts/ubuntu/ubuntu-m-webfont.eot?") format("eot"), url("../fonts/ubuntu/ubuntu-m-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-m-webfont.woff") format("woff"), url("../fonts/ubuntu/ubuntu-m-webfont.ttf") format("truetype"), url("../fonts/ubuntu/ubuntu-m-webfont.svg#Ubuntu") format("svg"); }
 
-@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-mi-webfont.eot"); src: url("fonts/ubuntu/ubuntu-mi-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-mi-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-mi-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-mi-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-mi-webfont.svg#ubuntumedium_italic") format("svg"); font-weight: 500; font-style: italic; }
+@font-face { font-family: "Ubuntu"; font-style: italic; font-weight: 500; src: url("../fonts/ubuntu/ubuntu-mi-webfont.eot?") format("eot"), url("../fonts/ubuntu/ubuntu-mi-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-mi-webfont.woff") format("woff"), url("../fonts/ubuntu/ubuntu-mi-webfont.ttf") format("truetype"), url("../fonts/ubuntu/ubuntu-mi-webfont.svg#Ubuntu") format("svg"); }
 
-@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-b-webfont.eot"); src: url("fonts/ubuntu/ubuntu-b-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-b-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-b-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-b-webfont.svg#ubuntubold") format("svg"); font-weight: bold; font-style: normal; }
+@font-face { font-family: "Ubuntu"; font-style: normal; font-weight: bold; src: url("../fonts/ubuntu/ubuntu-b-webfont.eot?") format("eot"), url("../fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-b-webfont.woff") format("woff"), url("../fonts/ubuntu/ubuntu-b-webfont.ttf") format("truetype"), url("../fonts/ubuntu/ubuntu-b-webfont.svg#Ubuntu") format("svg"); }
 
-@font-face { font-family: 'Ubuntu'; src: url("fonts/ubuntu/ubuntu-bi-webfont.eot"); src: url("fonts/ubuntu/ubuntu-bi-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ubuntu/ubuntu-bi-webfont.woff2") format("woff2"), url("fonts/ubuntu/ubuntu-bi-webfont.woff") format("woff"), url("fonts/ubuntu/ubuntu-bi-webfont.ttf") format("truetype"), url("fonts/ubuntu/ubuntu-bi-webfont.svg#ubuntubold_italic") format("svg"); font-weight: bold; font-style: italic; }
+@font-face { font-family: "Ubuntu"; font-style: italic; font-weight: bold; src: url("../fonts/ubuntu/ubuntu-bi-webfont.eot?") format("eot"), url("../fonts/ubuntu/ubuntu-bi-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-bi-webfont.woff") format("woff"), url("../fonts/ubuntu/ubuntu-bi-webfont.ttf") format("truetype"), url("../fonts/ubuntu/ubuntu-bi-webfont.svg#Ubuntu") format("svg"); }
 
 /*
 
@@ -196,39 +211,58 @@ Animation Components
   </div>
 
 */
-.spin-right, .spin-right-hover:hover { animation: spinRight 1s 1 linear; }
+.spin-right, .spin-right-hover:hover { -webkit-animation: spinRight 1s 1 linear; animation: spinRight 1s 1 linear; }
 
-.spin-left, .spin-left-hover:hover { animation: spinRight 1s 1 linear reverse; }
+.spin-left, .spin-left-hover:hover { -webkit-animation: spinRight 1s 1 linear reverse; animation: spinRight 1s 1 linear reverse; }
 
-.bounce, .bounce-hover:hover { animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
+.bounce, .bounce-hover:hover { -webkit-animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-.shake, .shake-hover:hover { animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
+.shake, .shake-hover:hover { -webkit-animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-.fade-in, .fade-in-hover:hover { animation: fadeIn 1s 1 linear; }
+.fade-in, .fade-in-hover:hover { -webkit-animation: fadeIn 1s 1 linear; animation: fadeIn 1s 1 linear; }
 
-.fade-out, .fade-out-hover:hover { animation: fadeIn 1s 1 linear reverse; }
+.fade-out, .fade-out-hover:hover { -webkit-animation: fadeIn 1s 1 linear reverse; animation: fadeIn 1s 1 linear reverse; }
 
-.slide-in, .slide-in-hover:hover { animation: slideIn 1s 1 cubic-bezier(0.165, 0.84, 0.44, 1); }
+.slide-in, .slide-in-hover:hover { -webkit-animation: slideIn 1s 1 cubic-bezier(0.165, 0.84, 0.44, 1); animation: slideIn 1s 1 cubic-bezier(0.165, 0.84, 0.44, 1); }
 
-.slide-out, .slide-out-hover:hover { animation: slideIn 1s 1 linear reverse; }
+.slide-out, .slide-out-hover:hover { -webkit-animation: slideIn 1s 1 linear reverse; animation: slideIn 1s 1 linear reverse; }
 
-@keyframes spinRight { 0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); } }
+@-webkit-keyframes spinRight { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
 
-@keyframes bounce { 0%, 20%, 50%, 70%, 100% { transform: translate(0, 0); }
-  40% { transform: translate(0, -5px); }
-  60% { transform: translate(0, -3px); } }
+@keyframes spinRight { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
 
-@keyframes shake { 0%, 20%, 50%, 70%, 100% { transform: translate(0, 0); }
-  40% { transform: translate(-5px, 0); }
-  60% { transform: translate(-3px, 0); } }
+@-webkit-keyframes bounce { 0%, 20%, 50%, 70%, 100% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  40% { -webkit-transform: translate(0, -5px); transform: translate(0, -5px); }
+  60% { -webkit-transform: translate(0, -3px); transform: translate(0, -3px); } }
+
+@keyframes bounce { 0%, 20%, 50%, 70%, 100% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  40% { -webkit-transform: translate(0, -5px); transform: translate(0, -5px); }
+  60% { -webkit-transform: translate(0, -3px); transform: translate(0, -3px); } }
+
+@-webkit-keyframes shake { 0%, 20%, 50%, 70%, 100% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  40% { -webkit-transform: translate(-5px, 0); transform: translate(-5px, 0); }
+  60% { -webkit-transform: translate(-3px, 0); transform: translate(-3px, 0); } }
+
+@keyframes shake { 0%, 20%, 50%, 70%, 100% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  40% { -webkit-transform: translate(-5px, 0); transform: translate(-5px, 0); }
+  60% { -webkit-transform: translate(-3px, 0); transform: translate(-3px, 0); } }
+
+@-webkit-keyframes fadeIn { 0% { opacity: 0; }
+  100% { opacity: 1; } }
 
 @keyframes fadeIn { 0% { opacity: 0; }
   100% { opacity: 1; } }
 
-@keyframes slideIn { 0% { transform: translateY(10px) translateZ(-30px);
+@-webkit-keyframes slideIn { 0% { -webkit-transform: translateY(10px) translateZ(-30px); transform: translateY(10px) translateZ(-30px);
     opacity: 0; }
-  100% { transform: translateY(0) translateZ(0);
+  100% { -webkit-transform: translateY(0) translateZ(0); transform: translateY(0) translateZ(0);
+    opacity: 1; } }
+
+@keyframes slideIn { 0% { -webkit-transform: translateY(10px) translateZ(-30px); transform: translateY(10px) translateZ(-30px);
+    opacity: 0; }
+  100% { -webkit-transform: translateY(0) translateZ(0); transform: translateY(0) translateZ(0);
     opacity: 1; } }
 
 .btn { background: #faa224; color: #2F323B; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
@@ -307,41 +341,41 @@ Popover Component
   </div>
 
 */
-.popover { margin-bottom: 1rem; bottom: 100%; transform: translateX(-50%) translateY(-5px); box-shadow: 0 0 1px 1px rgba(31, 45, 61, 0.15); z-index: 999; opacity: 0; visibility: hidden; }
+.popover { margin-bottom: 1rem; bottom: 100%; -webkit-transform: translateX(-50%) translateY(-5px); -ms-transform: translateX(-50%) translateY(-5px); transform: translateX(-50%) translateY(-5px); box-shadow: 0 0 1px 1px rgba(31, 45, 61, 0.15); z-index: 999; opacity: 0; visibility: hidden; }
 
-.popover.has-caret:after { width: 12px; height: 12px; content: ''; transform: rotate(45deg); box-shadow: 1px 1px 0 0 rgba(31, 45, 61, 0.15); bottom: -5px; }
+.popover.has-caret:after { width: 12px; height: 12px; content: ''; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); box-shadow: 1px 1px 0 0 rgba(31, 45, 61, 0.15); bottom: -5px; }
 
 .popover.is-open, .popover-container--hover:hover > .popover, .popover-container--hover:focus > .popover { opacity: 1; visibility: visible; }
 
 /* Themes: - popover--dark - popover--error - popover--success */
 /* Positioning: - popover--right - popover--bottom - popover--left Alignment: - popover--flush-top - popover--flush-right - popover--flush-bottom - popover--flush-left */
-.popover--bottom { margin-bottom: 2rem; transform: translateX(-50%); }
+.popover--bottom { margin-bottom: 2rem; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 
 .popover:after, .popover--bottom:after { margin-left: -6px; }
 
 .popover, .popover:after, .popover--bottom, .popover--bottom:after { left: 50%; }
 
-.popover.is-open, .popover-container--hover:hover > .popover, .popover-container--hover:focus > .popover { transform: translateX(-50%) translateY(0); }
+.popover.is-open, .popover-container--hover:hover > .popover, .popover-container--hover:focus > .popover { -webkit-transform: translateX(-50%) translateY(0); -ms-transform: translateX(-50%) translateY(0); transform: translateX(-50%) translateY(0); }
 
-.popover.popover--flush-left, .popover.popover--flush-right { transform: translateX(0); }
+.popover.popover--flush-left, .popover.popover--flush-right { -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
 
 .popover.popover--flush-right, .popover--bottom.popover--flush-right { left: auto; }
 
-.popover.popover--flush-left, .popover--bottom.popover--flush-left, .popover.popover--flush-right, .popover--bottom.popover--flush-right { transform-origin: left bottom; }
+.popover.popover--flush-left, .popover--bottom.popover--flush-left, .popover.popover--flush-right, .popover--bottom.popover--flush-right { -webkit-transform-origin: left bottom; -ms-transform-origin: left bottom; transform-origin: left bottom; }
 
-.popover.popover--flush-left, .popover.popover--flush-right, .popover--bottom.popover--flush-left.is-open, .popover--bottom.popover--flush-right.is-open, .popover-container--hover:hover > .popover--bottom.popover--flush-left, .popover-container--hover:hover > .popover--bottom.popover--flush-right, .popover-container--hover:focus > .popover--bottom.popover--flush-left, .popover-container--hover:focus > .popover--bottom.popover--flush-right { transform: translateX(0) translateY(-5px); }
+.popover.popover--flush-left, .popover.popover--flush-right, .popover--bottom.popover--flush-left.is-open, .popover--bottom.popover--flush-right.is-open, .popover-container--hover:hover > .popover--bottom.popover--flush-left, .popover-container--hover:hover > .popover--bottom.popover--flush-right, .popover-container--hover:focus > .popover--bottom.popover--flush-left, .popover-container--hover:focus > .popover--bottom.popover--flush-right { -webkit-transform: translateX(0) translateY(-5px); -ms-transform: translateX(0) translateY(-5px); transform: translateX(0) translateY(-5px); }
 
-.popover--bottom.popover--flush-left, .popover--bottom.popover--flush-right, .popover:not(.popover--bottom).popover--flush-left.is-open, .popover:not(.popover--bottom).popover--flush-right.is-open, .popover-container--hover:hover > .popover--top.popover--flush-left, .popover-container--hover:hover > .popover--top.popover--flush-right, .popover-container--hover:focus > .popover--top.popover--flush-left, .popover-container--hover:focus > .popover--top.popover--flush-right { transform: translateX(0) translateY(0); }
+.popover--bottom.popover--flush-left, .popover--bottom.popover--flush-right, .popover:not(.popover--bottom).popover--flush-left.is-open, .popover:not(.popover--bottom).popover--flush-right.is-open, .popover-container--hover:hover > .popover--top.popover--flush-left, .popover-container--hover:hover > .popover--top.popover--flush-right, .popover-container--hover:focus > .popover--top.popover--flush-left, .popover-container--hover:focus > .popover--top.popover--flush-right { -webkit-transform: translateX(0) translateY(0); -ms-transform: translateX(0) translateY(0); transform: translateX(0) translateY(0); }
 
 .popover--bottom.popover--flush-left.has-caret:after, .popover.popover--flush-left.has-caret:after { left: 28px; }
 
 .popover--bottom.popover--flush-right.has-caret:after, .popover.popover--flush-right.has-caret:after { right: 28px; left: auto; }
 
-.popover--bottom { margin-top: 1rem; top: calc(100% + 5px); transform: translateX(-50%) translateY(0); }
+.popover--bottom { margin-top: 1rem; top: calc(100% + 5px); -webkit-transform: translateX(-50%) translateY(0); -ms-transform: translateX(-50%) translateY(0); transform: translateX(-50%) translateY(0); }
 
 .popover--bottom.has-caret:after { box-shadow: -1px -1px 0 0 rgba(31, 45, 61, 0.15); top: -5px; }
 
-.popover--bottom.is-open, .popover-container--hover:hover > .popover--bottom, .popover-container--hover:focus > .popover--bottom { transform: translateX(-50%) translateY(-5px); }
+.popover--bottom.is-open, .popover-container--hover:hover > .popover--bottom, .popover-container--hover:focus > .popover--bottom { -webkit-transform: translateX(-50%) translateY(-5px); -ms-transform: translateX(-50%) translateY(-5px); transform: translateX(-50%) translateY(-5px); }
 
 .popover--right { margin-left: 1rem; left: 100%; }
 
@@ -349,19 +383,19 @@ Popover Component
 
 .popover--right, .popover--right:after, .popover--left, .popover--left:after { top: 50%; }
 
-.popover--right, .popover--left { transform: translateX(0) translateY(-50%); }
+.popover--right, .popover--left { -webkit-transform: translateX(0) translateY(-50%); -ms-transform: translateX(0) translateY(-50%); transform: translateX(0) translateY(-50%); }
 
 .popover--right, .popover--left, .popover--bottom { bottom: auto; }
 
-.popover--right.is-open, .popover-container--hover:hover > .popover--right, .popover-container--hover:focus > .popover--right { transform: translateX(-5px) translateY(-50%); }
+.popover--right.is-open, .popover-container--hover:hover > .popover--right, .popover-container--hover:focus > .popover--right { -webkit-transform: translateX(-5px) translateY(-50%); -ms-transform: translateX(-5px) translateY(-50%); transform: translateX(-5px) translateY(-50%); }
 
-.popover--right.popover--flush-bottom, .popover--left.popover--flush-bottom.is-open, .popover-container--hover:focus > .popover--left.popover--flush-bottom, .popover-container--hover:hover > .popover--left.popover--flush-bottom { transform: translateX(0) translateY(calc(-100% + 2.24rem)); }
+.popover--right.popover--flush-bottom, .popover--left.popover--flush-bottom.is-open, .popover-container--hover:focus > .popover--left.popover--flush-bottom, .popover-container--hover:hover > .popover--left.popover--flush-bottom { -webkit-transform: translateX(0) translateY(calc(-100% + 2.24rem)); -ms-transform: translateX(0) translateY(calc(-100% + 2.24rem)); transform: translateX(0) translateY(calc(-100% + 2.24rem)); }
 
-.popover--right.popover--flush-bottom.is-open, .popover--left.popover--flush-bottom, .popover-container--hover:focus > .popover--right.popover--flush-bottom, .popover-container--hover:hover > .popover--right.popover--flush-bottom { transform: translateX(-5px) translateY(calc(-100% + 2.24rem)); }
+.popover--right.popover--flush-bottom.is-open, .popover--left.popover--flush-bottom, .popover-container--hover:focus > .popover--right.popover--flush-bottom, .popover-container--hover:hover > .popover--right.popover--flush-bottom { -webkit-transform: translateX(-5px) translateY(calc(-100% + 2.24rem)); -ms-transform: translateX(-5px) translateY(calc(-100% + 2.24rem)); transform: translateX(-5px) translateY(calc(-100% + 2.24rem)); }
 
-.popover--right.popover--flush-top, .popover--left.popover--flush-top.is-open, .popover-container--hover:focus > .popover--left.popover--flush-top, .popover-container--hover:hover > .popover--left.popover--flush-top { transform: translateX(0) translateY(calc(0% - 2.24rem)); }
+.popover--right.popover--flush-top, .popover--left.popover--flush-top.is-open, .popover-container--hover:focus > .popover--left.popover--flush-top, .popover-container--hover:hover > .popover--left.popover--flush-top { -webkit-transform: translateX(0) translateY(calc(0% - 2.24rem)); -ms-transform: translateX(0) translateY(calc(0% - 2.24rem)); transform: translateX(0) translateY(calc(0% - 2.24rem)); }
 
-.popover--right.popover--flush-top.is-open, .popover--left.popover--flush-top, .popover-container--hover:focus > .popover--right.popover--flush-top, .popover-container--hover:hover > .popover--right.popover--flush-top { transform: translateX(-5px) translateY(calc(0% - 2.24rem)); }
+.popover--right.popover--flush-top.is-open, .popover--left.popover--flush-top, .popover-container--hover:focus > .popover--right.popover--flush-top, .popover-container--hover:hover > .popover--right.popover--flush-top { -webkit-transform: translateX(-5px) translateY(calc(0% - 2.24rem)); -ms-transform: translateX(-5px) translateY(calc(0% - 2.24rem)); transform: translateX(-5px) translateY(calc(0% - 2.24rem)); }
 
 .popover--flush-top.has-caret:after { top: 2rem; }
 
@@ -371,7 +405,7 @@ Popover Component
 
 .popover--left { margin-left: 1rem; margin-right: 1rem; right: 100%; left: auto; }
 
-.popover--left.is-open, .popover-container--hover:hover > .popover--left, .popover-container--hover:focus > .popover--left { transform: translateX(5px) translateY(-50%); }
+.popover--left.is-open, .popover-container--hover:hover > .popover--left, .popover-container--hover:focus > .popover--left { -webkit-transform: translateX(5px) translateY(-50%); -ms-transform: translateX(5px) translateY(-50%); transform: translateX(5px) translateY(-50%); }
 
 .popover--left.has-caret:after { box-shadow: 1px -1px 0 0 rgba(31, 45, 61, 0.15); right: -5px; left: auto; }
 
@@ -442,11 +476,11 @@ Transition Components
 */
 .scale-up-hover { transition-duration: 0.1s; }
 
-.scale-up-hover:hover { transform: scale(1.1); }
+.scale-up-hover:hover { -webkit-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1); }
 
 .scale-down-hover { transition-duration: 0.1s; }
 
-.scale-down-hover:hover { transform: scale(0.95); }
+.scale-down-hover:hover { -webkit-transform: scale(0.95); -ms-transform: scale(0.95); transform: scale(0.95); }
 
 /*
 
@@ -480,31 +514,31 @@ Animation Utilities
   </div>
 
 */
-.a-duration-none { animation-duration: 0s !important; }
+.a-duration-none { -webkit-animation-duration: 0s !important; animation-duration: 0s !important; }
 
-.a-duration-smaller { animation-duration: 0.3s !important; }
+.a-duration-smaller { -webkit-animation-duration: 0.3s !important; animation-duration: 0.3s !important; }
 
-.a-duration-small { animation-duration: 0.5s !important; }
+.a-duration-small { -webkit-animation-duration: 0.5s !important; animation-duration: 0.5s !important; }
 
-.a-duration { animation-duration: 1s !important; }
+.a-duration { -webkit-animation-duration: 1s !important; animation-duration: 1s !important; }
 
-.a-duration-large { animation-duration: 1.5s !important; }
+.a-duration-large { -webkit-animation-duration: 1.5s !important; animation-duration: 1.5s !important; }
 
-.a-duration-larger { animation-duration: 2s !important; }
+.a-duration-larger { -webkit-animation-duration: 2s !important; animation-duration: 2s !important; }
 
-.a-easing-linear { animation-timing-function: linear !important; }
+.a-easing-linear { -webkit-animation-timing-function: linear !important; animation-timing-function: linear !important; }
 
-.a-easing-ease { animation-timing-function: ease-in-out !important; }
+.a-easing-ease { -webkit-animation-timing-function: ease-in-out !important; animation-timing-function: ease-in-out !important; }
 
-.a-easing-cb-scale-in { animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1) !important; }
+.a-easing-cb-scale-in { -webkit-animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1) !important; animation-timing-function: cubic-bezier(0, 0.89, 0.44, 1) !important; }
 
-.a-easing-cb-scale-out { animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important; }
+.a-easing-cb-scale-out { -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important; animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important; }
 
-.a-easing-cb-scale-up { animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important; }
+.a-easing-cb-scale-up { -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important; animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important; }
 
-.a-repeat-once { animation-iteration-count: 2 !important; }
+.a-repeat-once { -webkit-animation-iteration-count: 2 !important; animation-iteration-count: 2 !important; }
 
-.a-repeat { animation-iteration-count: infinite !important; }
+.a-repeat { -webkit-animation-iteration-count: infinite !important; animation-iteration-count: infinite !important; }
 
 /*
 
@@ -759,7 +793,7 @@ Animation Utilities
 
 .m-bottom-smaller { margin-bottom: 0.5rem !important; }
 
-.m-bottom-small, .form__label, .form__input, .list li:not(:last-child) { margin-bottom: 1.5rem !important; }
+.m-bottom-small, .form__label, .form__input, .list > li:not(:last-child) { margin-bottom: 1.5rem !important; }
 
 .m-bottom, .list, .table { margin-bottom: 2rem !important; }
 
