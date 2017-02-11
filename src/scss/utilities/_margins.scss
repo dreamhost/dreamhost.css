@@ -32,6 +32,13 @@
 .m-bottom-l {margin-bottom: $s-l !important}
 .m-bottom-xl {margin-bottom: $s-xl !important}
 
+.m-y-0 { @extend .m-top-0; @extend .m-bottom-0; }
+.m-y-xs { @extend .m-top-xs; @extend .m-bottom-xs; }
+.m-y-s { @extend .m-top-s; @extend .m-bottom-s; }
+.m-y-m { @extend .m-top-m; @extend .m-bottom-m; }
+.m-y-l { @extend .m-top-l; @extend .m-bottom-l; }
+.m-y-xl { @extend .m-top-xl; @extend .m-bottom-xl; }
+
 .m-right-0 {margin-right: 0 !important}
 .m-right-auto {margin-right: auto !important}
 .m-right-xs {margin-right: $s-xs !important}
@@ -49,3 +56,7 @@
 .m-left-m {margin-left: $s-m !important}
 .m-left-l {margin-left: $s-l !important}
 .m-left-xl {margin-left: $s-xl !important}
+
+.m-x-0 { @extend .m-left-0; @extend .m-right-0; }
+.m-x-auto {	@extend .m-left-auto; @extend .m-right-auto; }
+// Do we need more sizes here? Why would we add horizontal margin to something?

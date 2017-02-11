@@ -32,6 +32,13 @@
 .p-bottom-l {padding-bottom: $s-l !important}
 .p-bottom-xl {padding-bottom: $s-xl !important}
 
+.p-y-0 {@extend .p-top-0; @extend .p-bottom-0;}
+.p-y-xs {@extend .p-top-xs; @extend .p-bottom-xs;}
+.p-y-s {@extend .p-top-s; @extend .p-bottom-s;}
+.p-y-m {@extend .p-top-m; @extend .p-bottom-m;}
+.p-y-l {@extend .p-top-l; @extend .p-bottom-l;}
+.p-y-xl {@extend .p-top-xl; @extend .p-bottom-xl;}
+
 .p-right-0 {padding-right: 0 !important}
 .p-right-xs {padding-right: $s-xs !important}
 .p-right-s {padding-right: $s-s !important}
@@ -47,3 +54,10 @@
 .p-left-m {padding-left: $s-m !important}
 .p-left-l {padding-left: $s-l !important}
 .p-left-xl {padding-left: $s-xl !important}
+
+.p-x-0 {@extend .p-left-0; @extend .p-right-0;}
+.p-x-xs {@extend .p-left-xs; @extend .p-right-xs;}
+.p-x-s {@extend .p-left-s; @extend .p-right-s;}
+.p-x-m {@extend .p-left-m; @extend .p-right-m;}
+.p-x-l {@extend .p-left-l; @extend .p-right-l;}
+.p-x-xl {@extend .p-left-xl; @extend .p-right-xl;}
