@@ -83,22 +83,20 @@ gulp.task('styles', ['lint'], function () {
 */
 
 gulp.task('dist', function(){
-	var version = 'dreamhost.' + package.version,
-		latest = 'dreamhost.latest',
-		dest = './dist';
+	var file = 'dreamhost',
+		destVersion = './dist/' + package.version,
+		destLatest = './dist/latest';
 
 	return gulp.src('./src/scss/*.scss')
 		.pipe(sass({includePaths: neat, outputStyle: 'compact'}).on('error', sass.logError))
 		.pipe(prefix({browsers: ['last 4 versions']}))
-		.pipe(rename(version + '.css'))
-		.pipe(gulp.dest(dest))
-		.pipe(rename(latest + '.css'))
-		.pipe(gulp.dest(dest))
+		.pipe(rename(file + '.css'))
+		.pipe(gulp.dest(destVersion))
+		.pipe(gulp.dest(destLatest))
 		.pipe(cleanCSS())
-		.pipe(rename(version + '.min.css'))
-		.pipe(gulp.dest(dest))
-		.pipe(rename(latest + '.min.css'))
-		.pipe(gulp.dest(dest));
+		.pipe(rename(file + '.min.css'))
+		.pipe(gulp.dest(destVersion))
+		.pipe(gulp.dest(destLatest));
 })
 
 /*
