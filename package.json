@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/dreamhost/dreamhost.css.git"
   },
+  "scripts": {
+    "postversion": "gulp dist && git add -A && git commit --amend --no-edit"
+  },
   "dependencies": {
     "node-neat": "1.7.2"
   },
