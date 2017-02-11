@@ -1,5 +1,5 @@
 .list {@extend .m-bottom;}
-.list > li:not(:last-child) {@extend .m-bottom-small;}
+.list > li:not(:last-child) {@extend .m-bottom-s;}
 
 .list-disc {list-style-type: disc; list-style-position: outside}
 .list-disc > li {@extend .m-left;}

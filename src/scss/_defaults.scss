@@ -18,23 +18,23 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-size: $t-h1;
-	margin-bottom: $s-large;
+	font-size: $t-2xl;
+	margin-bottom: $s-l;
 }
 
 h2 {
-	font-size: $t-larger;
-	margin-bottom: $s;
+	font-size: $t-l;
+	margin-bottom: $s-m;
 }
 
 h3 {
-	font-size: $t-large;
-	margin-bottom: $s-small;
+	font-size: $t-l;
+	margin-bottom: $s-s;
 }
 
 h4 {
-	font-size: $t-size;
-	margin-bottom: $s-small;
+	font-size: $t-m;
+	margin-bottom: $s-s;
 }
 
 p {
@@ -68,8 +68,8 @@ hr {
 }
 
 code {
-	padding: 0 $s-smaller;
-	font-size: $t-small;
+	padding: 0 $s-xs;
+	font-size: $t-s;
 	display: inline-block;
 	border: $border-size solid $lighter-grey;
 	border-radius: $border-radius;

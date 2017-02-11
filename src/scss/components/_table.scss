@@ -22,9 +22,9 @@ thead tr {
 th {
 	@extend .p-left;
 	@extend .p-right;
-	@extend .p-top-small;
-	@extend .p-bottom-small;
-	@extend .t-large;
+	@extend .p-top-s;
+	@extend .p-bottom-s;
+	@extend .t-l;
 	@extend .t-heading;
 	@extend .t-black;
 }
@@ -33,13 +33,13 @@ tbody tr {@extend .border;}
 tbody tr:nth-child(odd) {@extend .bg-white;}
 
 td {
-	@extend .p-small;
+	@extend .p-s;
 	@extend .u-vertical-align-middle;
 }
 
 .table--large-padding td {
 	@extend .p-left;
 	@extend .p-right;
-	@extend .p-top-large;
-	@extend .p-bottom-large;
+	@extend .p-top-l;
+	@extend .p-bottom-l;
 }

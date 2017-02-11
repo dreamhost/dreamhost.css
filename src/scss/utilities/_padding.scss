@@ -8,37 +8,42 @@
 
 */
 
-.p-none {padding: 0 !important}
-.p-smaller {padding: $s-smaller !important}
-.p-small {padding: $s-small !important}
-.p {padding: $s !important}
-.p-large {padding: $s-large !important}
-.p-larger {padding: $s-larger !important}
+.p-0 {padding: 0 !important}
+.p-xs {padding: $s-xs !important}
+.p-s {padding: $s-s !important}
+.p,
+.p-m {padding: $s-m !important}
+.p-l {padding: $s-l !important}
+.p-xl {padding: $s-xl !important}
 
-.p-top-none {padding-top: 0 !important}
-.p-top-smaller {padding-top: $s-smaller !important}
-.p-top-small {padding-top: $s-smaller !important}
-.p-top {padding-top: $s !important}
-.p-top-large {padding-top: $s-large !important}
-.p-top-larger {padding-top: $s-larger !important}
+.p-top-0 {padding-top: 0 !important}
+.p-top-xs {padding-top: $s-xs !important}
+.p-top-s {padding-top: $s-s !important}
+.p-top,
+.p-top-m {padding-top: $s-m !important}
+.p-top-l {padding-top: $s-l !important}
+.p-top-xl {padding-top: $s-xl !important}
 
-.p-bottom-none {padding-bottom: 0 !important}
-.p-bottom-smaller {padding-bottom: $s-smaller !important}
-.p-bottom-small {padding-bottom: $s-smaller !important}
-.p-bottom {padding-bottom: $s !important}
-.p-bottom-large {padding-bottom: $s-large !important}
-.p-bottom-larger {padding-bottom: $s-larger !important}
+.p-bottom-0 {padding-bottom: 0 !important}
+.p-bottom-xs {padding-bottom: $s-xs !important}
+.p-bottom-s {padding-bottom: $s-s !important}
+.p-bottom,
+.p-bottom-m {padding-bottom: $s-m !important}
+.p-bottom-l {padding-bottom: $s-l !important}
+.p-bottom-xl {padding-bottom: $s-xl !important}
 
-.p-right-none {padding-right: 0 !important}
-.p-right-smaller {padding-right: $s-smaller !important}
-.p-right-small {padding-right: $s-smaller !important}
-.p-right {padding-right: $s !important}
-.p-right-large {padding-right: $s-large !important}
-.p-right-larger {padding-right: $s-larger !important}
+.p-right-0 {padding-right: 0 !important}
+.p-right-xs {padding-right: $s-xs !important}
+.p-right-s {padding-right: $s-s !important}
+.p-right,
+.p-right-m {padding-right: $s-m !important}
+.p-right-l {padding-right: $s-l !important}
+.p-right-xl {padding-right: $s-xl !important}
 
-.p-left-none {padding-left: 0 !important}
-.p-left-smaller {padding-left: $s-smaller !important}
-.p-left-small {padding-left: $s-smaller !important}
-.p-left {padding-left: $s !important}
-.p-left-large {padding-left: $s-large !important}
-.p-left-larger {padding-left: $s-larger !important}
+.p-left-0 {padding-left: 0 !important}
+.p-left-xs {padding-left: $s-xs !important}
+.p-left-s {padding-left: $s-s !important}
+.p-left,
+.p-left-m {padding-left: $s-m !important}
+.p-left-l {padding-left: $s-l !important}
+.p-left-xl {padding-left: $s-xl !important}
