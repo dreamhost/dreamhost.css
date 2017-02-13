@@ -59,12 +59,12 @@ img {
 }
 
 p, section, img {
-	margin-bottom: $s;
+	margin-bottom: $s-m;
 }
 
 hr {
 	border: 1px solid $lightest-grey;
-	margin: $s 0;
+	margin: $s-m 0;
 }
 
 code {
