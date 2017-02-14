@@ -46,16 +46,15 @@
 .t-lighter {font-weight: 100 !important}
 
 // Styles
-.t-underline {text-decoration: underline !important}
-.t-decoration-none {text-decoration: none}
-.t-italic {font-weight: italic}
+.t-decoration-underline {text-decoration: underline !important}
+.t-decoration-none {text-decoration: none !important}
+.t-style-italic {font-style: italic !important}
 
 // Transforms
+.t-transform-capitalize {text-transform: capitalize !important}
+.t-transform-lowercase {text-transform: lowercase !important}
 .t-transform-uppercase {text-transform: uppercase !important}
 .t-transform-none {text-transform: none !important}
 
 // Line Height
 .t-line-height-1 {line-height: 1 !important}
-
-.border {border: 1px solid $lightest-grey !important}
-.border-bottom {border-bottom: 1px solid $lightest-grey !important}
