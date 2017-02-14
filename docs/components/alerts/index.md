@@ -1,4 +1,0 @@
----
-title: Alerts
-layout: page
----

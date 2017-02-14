@@ -1,4 +1,0 @@
----
-title: Modals
-layout: page
----
