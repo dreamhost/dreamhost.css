@@ -9,9 +9,6 @@
   "scripts": {
     "postversion": "gulp dist && git add -A && git commit --amend --no-edit"
   },
-  "dependencies": {
-    "node-neat": "1.7.2"
-  },
   "devDependencies": {
     "browser-sync": "2.18.1",
     "gulp": "3.9",
