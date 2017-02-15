@@ -1,8 +1,0 @@
-.list {@extend .m-bottom;}
-.list > li:not(:last-child) {@extend .m-bottom-small;}
-
-.list-disc {list-style-type: disc; list-style-position: outside}
-.list-disc > li {@extend .m-left;}
-
-.list-inline > li {@extend .p-none, .l-inline, .m-right;}
-.list-inline:last-child {@extend .m-right-none;}
