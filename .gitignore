@@ -1,3 +1,5 @@
 node_modules/
 .sass-cache/
-style.css
+.jekyll-metadata
+framework/src/css/style.css
+docs/_site
