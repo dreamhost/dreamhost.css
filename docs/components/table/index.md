@@ -1,0 +1,4 @@
+---
+title: Table
+layout: page
+---

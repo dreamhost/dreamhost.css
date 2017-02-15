@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dreamhost.css</title>
+	<link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+
+<div class="container-large p-left-small p-right-small">
+
+	<ul class="list m-top m-bottom">
+		<li><a href="./docs/examples/dp/index.html">DreamPress demo</a></li>
+		<li><a href="./docs/examples/support/index.html">Support demo</a></li>
+		<li><a href="docs/index.html">Documentation</a></li>
+	</ul>
+
+	<section class="box u-border-radius m-bottom">
+		<h1>Colours</h1>
+
+		<p>These can be used directly in sass with their variable names or in html via bg-color for backgrounds or t-color for text color.</p>
+
+		<div class="u-clearfix t-bold">
+			<div class="g-1_3">
+				<div class="bg-blue l-block p-small t-white u-border-radius m-bottom-small">$blue</div>
+				<div class="bg-light-blue l-block p-small t-white u-border-radius m-bottom-small">$light-blue</div>
+				<div class="bg-dark-blue l-block p-small t-white u-border-radius">$dark-blue</div>
+			</div>
+			<div class="g-1_3">
+				<div class="bg-yellow l-block p-small u-border-radius m-bottom-small">$yellow</div>
+				<div class="bg-light-yellow l-block p-small u-border-radius m-bottom-small">$light-yellow</div>
+				<div class="bg-dark-yellow l-block p-small u-border-radius">$dark-yellow</div>
+			</div>
+			<div class="g-1_3 omega m-bottom">
+				<div class="bg-peach l-block p-small t-white u-border-radius m-bottom-small">$peach</div>
+				<div class="bg-light-peach l-block p-small t-white u-border-radius m-bottom-small">$light-peach</div>
+				<div class="bg-dark-peach l-block p-small t-white u-border-radius">$dark-peach</div>
+			</div>
+		</div>
+		<div class="u-clearfix t-bold">
+			<div class="g-1_2 m-bottom">
+				<div class="bg-red l-block p-small t-white u-border-radius">$red</div>
+			</div>
+			<div class="g-1_2 m-bottom">
+				<div class="bg-green l-block p-small t-white u-border-radius">$green</div>
+			</div>
+		</div>
+
+		<div class="u-clearfix t-bold m-bottom">
+			<div class="g-1_6 bg-lightest-grey l-block p-small u-border-radius">$lightest-grey</div>
+			<div class="g-1_6 bg-lighter-grey l-block p-small u-border-radius">$lighter-grey</div>
+			<div class="g-1_6 bg-light-grey l-block p-small t-white u-border-radius">$light-grey</div>
+			<div class="g-1_6 bg-dark-grey l-block p-small t-white u-border-radius">$dark-grey</div>
+			<div class="g-1_6 bg-darker-grey l-block p-small t-white u-border-radius">$darker-grey</div>
+			<div class="g-1_6 bg-darkest-grey l-block p-small t-white u-border-radius">$darkest-grey</div>
+		</div>
+
+		<div class="bg-black l-block p-small t-white t-bold u-border-radius">$black</div>
+	</section>
+
+	<section>
+		<div class="popover-container js-popover-container--click">
+			<div class="popover has-caret">
+				<div class="popover-dropdown">
+					<a href="#">Twitter</a>
+					<a href="#">Facebook</a>
+					<a href="#">Google</a>
+					<div class="popover-separator"></div>
+					<a href="#">Contact us</a>
+				</div>
+			</div>
+			<a class="btn js-btn-popover">Top Popover</a>
+		</div>
+	</section>
+	<h1>Page title</h1>
+	<ul class="list list--inline m-bottom">
+		<li><strong>IPv4:</strong> 208.113.135.188</li>
+		<li><strong>IPv6:</strong> 2607:f298:5:101d:f816:3eff:fe98:d242</li>
+	</ul>
+
+	<section class="container-medium">
+		<div class="t-center g-1_2">
+			<div class="bg-blue t-white p-small m-bottom-none is-active">Empty volume</div>
+			<p class="box">Creates a new volume/block device without anything on it</p>
+		</div>
+		<div class="t-center g-1_2">
+			<div class="bg-blue t-white p-small m-bottom-none">Bootable volume</div>
+			<p class="box">Creates a bootable volume pre-loaded with your operating system of choice.</p>
+		</div>
+	</section>
+
+	<section>
+		<h2 class="m-bottom-small">Name</h2>
+		<p class="m-bottom-small">This is what your volume will be called.</p>
+		<input type="text" class="form__input" placeholder="My Volume Name" />
+	</section>
+
+	<section class="container-medium">
+		<a class="option-box g-1_2" href="#">
+			<div class="option-box__heading is-active">Empty volume</div>
+			<p class="option-box__content">Creates a new volume/block device without anything on it</p>
+		</a>
+		<a class="option-box g-1_2" href="#">
+			<div class="option-box__heading">Bootable volume</div>
+			<p class="option-box__content">Creates a bootable volume pre-loaded with your operating system of choice.</p>
+		</a>
+	</section>
+
+	<section class="tabs">
+		<ul>
+			<li class="tabs__nav-item is-active" data-tab="caching">Caching</li>
+			<li class="tabs__nav-item" data-tab="staging">Staging</li>
+			<li class="tabs__nav-item" data-tab="backup">Backup</li>
+			<li class="tabs__nav-item" data-tab="domain">Domain</li>
+			<li class="tabs__nav-item" data-tab="advanced">Advanced</li>
+		</ul>
+		<div class="tab" data-tab="caching">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptate et quibusdam debitis saepe ab, ratione molestias! Error rem quos iure deserunt assumenda magni, veritatis tenetur, impedit repellat soluta numquam.</p>
+		</div>
+	</section>
+
+	<section class="box m-bottom-large">
+		<h1>Typography</h1>
+		<p class="t-large">Large non-heading text!</p>
+		<h2>Heading two</h2>
+		<h3>Heading three</h3>
+		<h4>Heading four</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quidem mollitia optio temporibus cum eius deserunt, eum tenetur minima nulla hic inventore quo tempore reprehenderit. Laboriosam maiores odio debitis, in?</p>
+
+		<h2>Sizes</h2>
+		<p class="t-larger">.t-larger</p>
+		<p class="t-large">.t-large</p>
+		<p class="t-small">.t-small</p>
+		<p class="t-smaller">.t-smaller</p>
+		<ul class="list">
+			<li>List item</li>
+			<li>List item</li>
+			<li>List item</li>
+		</ul>
+		<ul class="list list-disc">
+			<li>List with bullets</li>
+			<li>List with bullets</li>
+			<li>List with bullets</li>
+		</ul>
+		<ul class="list list-inline">
+			<li>Inline list</li>
+			<li>Inline list</li>
+			<li>Inline list</li>
+		</ul>
+		<p><a href="javascript::" class="btn--warning">Button</a></p>
+
+	</section>
+
+	<div class="remodal t-left" data-remodal-id="modal">
+		<h2>I'm a modal</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nemo praesentium aliquid optio labore qui, voluptate consequatur provident quos sed aperiam animi, placeat! Asperiores dicta, fuga modi temporibus laborum, culpa?</p>
+		<form>
+			<fieldset>
+				<label class="form__label">Something</label>
+				<input class="form__input" />
+			</fieldset>
+			<fieldset>
+				<label class="form__label">Something else</label>
+				<input class="form__input" />
+			</fieldset>
+			<button class="btn" data-remodal-action="close">Close</button>
+		</form>
+	</div>
+
+	<table class="table">
+		<thead>
+			<th>OS</th>
+			<th style="width: 45%">Name</th>
+			<th>Location</th>
+			<th>IP Address</th>
+			<th>Launched</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td>
+					<p class="m-bottom-smaller">
+						<a href="#">Server Name</a>
+					</p>
+					<ul class="list list--inline m-none t-small t-light-grey">
+						<li>VCPU: 1</li>
+						<li>RAM: 512MB</li>
+					</ul>
+				</td>
+				<td> US East-2</td>
+				<td>208.123.123.123</td>
+				<td>1 Month Ago</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<p class="m-bottom-smaller">
+						<a href="#">Server Name</a>
+					</p>
+					<ul class="list list--inline m-none t-small t-light-grey">
+						<li>VCPU: 1</li>
+						<li>RAM: 512MB</li>
+					</ul>
+				</td>
+				<td> US East-2</td>
+				<td>208.123.123.123</td>
+				<td>1 Month Ago</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<p class="m-bottom-smaller">
+						<a href="#">Server Name</a>
+					</p>
+					<ul class="list list--inline m-none t-small t-light-grey">
+						<li>VCPU: 1</li>
+						<li>RAM: 512MB</li>
+					</ul>
+				</td>
+				<td> US East-2</td>
+				<td>208.123.123.123</td>
+				<td>1 Month Ago</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="table table--large-padding">
+		<thead>
+			<th>Thing</th>
+			<th>Other Thing</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="t-light-grey">Ok</td>
+				<td>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio saepe ratione dicta ad nobis, perspiciatis aut nam tenetur eligendi id praesentium consequatur quod blanditiis, itaque libero ducimus et similique dolorem.
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<section class="container-medium">
+		<div class="g-1_2 box m-bottom">
+			<h2>Whatever</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+			<a href="#" class="btn">Go!</a>
+		</div>
+
+		<div class="g-1_2 g-omega box m-bottom">
+			<h2>Whatever</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+			<a href="#" class="btn">Go!</a>
+		</div>
+
+		<div class="g-1_2 box m-bottom">
+			<h2>Whatever</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+			<a href="#" class="btn">Go!</a>
+		</div>
+		<div class="g-1_2 g-omega box m-bottom">
+			<h2>Whatever</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+			<a href="#" class="btn">Go!</a>
+		</div>
+		<div class="g-1_2 box">
+			<h2>Whatever</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+			<a href="#" class="btn">Go!</a>
+		</div>
+		<div class="g-1_2 g-omega box">
+			<h2>Whatever</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+			<a href="#" class="btn--warning">Go!</a>
+		</div>
+	</section>
+
+	<form class="form box m-bottom-large">
+		<fieldset>
+			<label class="form__label" for="name" class="form__label">Site name</label>
+			<input type="text" class="form__input" placeholder="This can be changed later">
+		</fieldset>
+		<fieldset>
+			<label class="form__label" for="admin-username" class="form__label">Admin username</label>
+			<input name="admin-username" type="text" class="form__input" placeholder="This can not be changed later" value="admin">
+		</fieldset>
+		<fieldset>
+			<label class="form__label" for="domain">Choose a domain</label>
+			<select class="form__input" id="domain">
+				<option>--</option>
+				<option>emptydomain.com</option>
+				<option id="existing">domainwithsomethinginstalledonit.com</option>
+				<option>---</option>
+				<option id="buy-new">Buy a new domain</option>
+				<option id="migrate">Migrate external site</option>
+				<option id="decide-later">Decide later</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<label class="form__label form__label--radio"><input class="form__input" type="radio" name="radio" value="one" />Option one</label>
+			<label class="form__label form__label--radio"><input class="form__input" type="radio" name="radio" value="two" />Option two</label>
+			<label class="form__label form__label--radio"><input class="form__input" type="radio" name="radio" value="three" />Option three</label>
+		</fieldset>
+		<fieldset>
+			<textarea class="form__input">Hey</textarea>
+		</fieldset>
+		<input type="submit" class="btn"></input>
+	</form>
+
+	<section class="container-medium">
+		<h1>Border Radius</h1>
+		<div class="g-1_3 box m-bottom bg-dark-grey">
+			<p>No border</p>
+		</div>
+
+		<div class="g-1_3 box m-bottom u-border-radius bg-dark-grey">
+			<p>Normal rounded corners</p>
+		</div>
+
+		<div class="g-1_3 g-omega box m-bottom u-border-radius-large bg-dark-grey">
+			<p>Large rounded corners</p>
+		</div>
+	</section>
+</div>
+
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="./src/js/remodal.js"></script>
+<script src="./src/js/scripts.js"></script>
+
+</body>
+</html>

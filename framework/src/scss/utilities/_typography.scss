@@ -1,0 +1,60 @@
+// Fonts
+.t-body {font-family: $body !important}
+.t-heading {font-family: $heading !important}
+
+.t-smaller {font-size: $t-smaller !important}
+.t-small {font-size: $t-small !important}
+.t-large {font-size: $t-large !important}
+.t-larger {font-size: $t-larger !important}
+
+// Colors
+.t-white {color: #fff !important}
+.t-black {color: $black !important}
+.t-blue {color: $blue !important}
+.t-light-blue {color: $light-blue !important}
+.t-dark-blue {color: $dark-blue !important}
+.t-red {color: $red !important}
+.t-light-red {color: $light-red !important}
+.t-dark-red {color: $dark-red !important}
+.t-yellow {color: $yellow !important}
+.t-light-yellow {color: $light-yellow !important}
+.t-dark-yellow {color: $dark-yellow !important}
+.t-green {color: $green !important}
+.t-light-green {color: $light-green !important}
+.t-dark-green {color: $dark-green !important}
+.t-light-grey {color: $light-grey !important}
+.t-lighter-grey {color: $lighter-grey !important}
+.t-lightest-grey {color: $lightest-grey !important}
+.t-dark-grey {color: $dark-grey !important}
+.t-darker-grey {color: $darker-grey !important}
+.t-darkest-grey {color: $darkest-grey !important}
+
+// Whitespace
+.t-whitespace-normal {white-space: normal !important}
+.t-whitespace-nowrap {white-space: nowrap !important}
+
+// Alignment
+.t-left {text-align: left !important}
+.t-right {text-align: right !important}
+.t-center {text-align: center !important}
+.t-justify {text-align: justify !important}
+
+// Weights
+.t-heavy {font-weight: 900 !important}
+.t-bold {font-weight: 700 !important}
+.t-light {font-weight: 300 !important}
+.t-lighter {font-weight: 100 !important}
+
+// Styles
+.t-decoration-underline {text-decoration: underline !important}
+.t-decoration-none {text-decoration: none !important}
+.t-style-italic {font-style: italic !important}
+
+// Transforms
+.t-transform-capitalize {text-transform: capitalize !important}
+.t-transform-lowercase {text-transform: lowercase !important}
+.t-transform-uppercase {text-transform: uppercase !important}
+.t-transform-none {text-transform: none !important}
+
+// Line Height
+.t-line-height-1 {line-height: 1 !important}

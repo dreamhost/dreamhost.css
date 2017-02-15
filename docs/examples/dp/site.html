@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manage your site - DreamPress</title>
+	<link rel="stylesheet" href="https://rawgit.com/dreamhost/dreamhost.css/master/dist/dreamhost.0.0.1.min.css" />
+</head>
+<body>
+
+<header class="bg-black t-white p m-bottom">
+	<div class="w-640px l-centered">
+		<span class="t-white t-bold t-center l-block">DreamHost</span>
+	</div>
+</header>
+
+<section class="container m-bottom-large">
+	<div class="g-1_2 box">
+		<h1 class="m-bottom">urlofsite.com</h1>
+		<p>Running version 2.1. <small>Last updated 01/01/01</small></p>
+		<p>You have <a href="#">5</a> plugins that need updating</p>
+<!-- 		<ul>
+			<li><a href="#">WordPress dashboard</a>
+			<li><a href="#">PHP myAdmin</a>
+			<li><a href="#">mySql</a>
+		</ul> -->
+	</div>
+	<div class="g-1_2 p">
+		<p class="t-large">You've used 4GB of your 10GB plan</p>
+		<p><em>chart</em></p>
+	</div>
+</section>
+
+<div class="container">
+	<section class="tabs">
+		<ul>
+			<li class="tabs__nav-item is-active" data-tab="caching">Caching</li>
+			<li class="tabs__nav-item" data-tab="staging">Staging</li>
+			<li class="tabs__nav-item" data-tab="backup">Backup</li>
+			<li class="tabs__nav-item" data-tab="domain">Domain</li>
+			<li class="tabs__nav-item" data-tab="advanced">Advanced</li>
+		</ul>
+		<div class="tab" data-tab="caching">
+			<div class="container">
+			<p>DreamPress comes with caching provided by Varnish to allow something or other. Information about what it’s used for and the benefits and why you’d want to mess with these options.</p>
+			<div class="g-1_2">
+				<label class="label toggle">
+					<input type="checkbox" class="toggle_input" checked="">
+					<div class="toggle-control cache"></div>
+				</label>
+			</div>
+			<div class="grid-1__2">
+				<a href="#" class="btn">Clear cache</a>
+			</div>
+			</div>
+		</div>
+		<div class="tab" data-tab="staging">
+			<div class="container">
+				<div class="grid__1-2">
+					<p class="t-large">Your staging url is <a href="#">staging.yourdomain.com</a></p>
+					<p class="t-small">The last time your staging server was used was October 31st, 1988.</p>
+					<a href="#" class="btn">Copy server to staging</a> <a href="#" class="btn">Push live</a>
+				</div>
+				<div class="grid__1-2">
+					<p class="t-light-grey">A staging server is a copy of your site where you can test changes without your visitors seeing them.</p>
+					<p class="t-light-grey">When you want to add a new feature to your site, click 'COPY SERVER TO STAGING'. When you're done making your changes, click 'PUSH LIVE'.</p>
+					<p class="t-light-grey">Note: There is only one staging server, so once you click either of those buttons the changes are irreversable.</p>
+				</div>
+			</div>
+		</div>
+		<div class="tab" data-tab="backup">
+			<p>Total backup storage. Other things about backups? Allow you to create one? Manual? Automatic? Things?</p>
+		</div>
+		<div class="tab p-top-none" data-tab="domain">
+			<table class="table">
+				<thead>
+					<th>Domain</th>
+					<th>Type</th>
+					<th></th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>http://whateversite.com</td>
+						<td>Main</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>http://whateversite.ca</td>
+						<td>Redirect</td>
+						<td><a href="#">Manage</a></td>
+					</tr>
+				</tbody>
+		</div>
+		<div class="tab" data-tab="advanced">
+			<form action="">
+				<fieldset>
+					<input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+					<input type="checkbox" name="vehicle" value="Car">I have a car
+
+				</fieldset>
+			</form>
+		</div>
+	</section>
+</div>
+
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="/src/js/remodal.js"></script>
+<script src="/src/js/scripts.js"></script>
+
+</body>
+</html>

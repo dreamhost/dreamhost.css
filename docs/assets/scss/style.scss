@@ -1,0 +1,22 @@
+@import '../../node_modules/dreamhost-css/src/scss/style';
+
+code.hljs {
+	font-family: monospace;
+    background-color: $lightest-grey;
+    padding: $s;
+    font-size: $t-small;
+    border-radius: $border-radius;
+    margin-bottom: $s;
+    width: 100%;
+}
+
+.hljs-type,
+.hljs-string,
+.hljs-number,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+	color: $red;
+}
