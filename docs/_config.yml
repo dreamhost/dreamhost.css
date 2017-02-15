@@ -5,3 +5,4 @@ exclude:
 baseurl: /dreamhost.css
 sass:
   sass_dir: /assets/scss
+include: ['node_modules']
