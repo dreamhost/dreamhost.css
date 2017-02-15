@@ -20,7 +20,7 @@
 
 
 @mixin box($color: #fff){
-	padding: $s;
+	padding: $s-m;
 	background: $color;
 
 	*:last-child {
@@ -46,4 +46,3 @@
 .box {
 	@include box;
 }
-

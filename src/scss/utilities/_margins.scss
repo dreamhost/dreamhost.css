@@ -8,38 +8,55 @@
 
 */
 
-.m-none {margin: 0 !important}
-.m-auto {margin-left: auto !important; margin-right: auto !important}
-.m-smaller {margin: $s-smaller !important}
-.m-small {margin: $s-small !important}
-.m {margin: $s !important}
-.m-large {margin: $s-large !important}
-.m-larger {margin: $s-larger !important}
+.m-0 {margin: 0 !important}
+.m-xs {margin: $s-xs !important}
+.m-s {margin: $s-s !important}
+.m,
+.m-m {margin: $s-m !important}
+.m-l {margin: $s-l !important}
+.m-xl {margin: $s-xl !important}
 
-.m-top-none {margin-top: 0 !important}
-.m-top-smaller {margin-top: $s-smaller !important}
-.m-top-small {margin-top: $s-small !important}
-.m-top {margin-top: $s !important}
-.m-top-large {margin-top: $s-large !important}
-.m-top-larger {margin-top: $s-larger !important}
+.m-top-0 {margin-top: 0 !important}
+.m-top-xs {margin-top: $s-xs !important}
+.m-top-s {margin-top: $s-s !important}
+.m-top,
+.m-top-m {margin-top: $s-m !important}
+.m-top-l {margin-top: $s-l !important}
+.m-top-xl {margin-top: $s-xl !important}
 
-.m-bottom-none {margin-bottom: 0 !important}
-.m-bottom-smaller {margin-bottom: $s-smaller !important}
-.m-bottom-small {margin-bottom: $s-small !important}
-.m-bottom {margin-bottom: $s !important}
-.m-bottom-large {margin-bottom: $s-large !important}
-.m-bottom-larger {margin-bottom: $s-larger !important}
+.m-bottom-0 {margin-bottom: 0 !important}
+.m-bottom-xs {margin-bottom: $s-xs !important}
+.m-bottom-s {margin-bottom: $s-s !important}
+.m-bottom,
+.m-bottom-m {margin-bottom: $s-m !important}
+.m-bottom-l {margin-bottom: $s-l !important}
+.m-bottom-xl {margin-bottom: $s-xl !important}
 
-.m-right-none {margin-right: 0 !important}
-.m-right-smaller {margin-right: $s-smaller !important}
-.m-right-small {margin-right: $s-small !important}
-.m-right {margin-right: $s !important}
-.m-right-large {margin-right: $s-large !important}
-.m-right-larger {margin-right: $s-larger !important}
+.m-y-0 { @extend .m-top-0; @extend .m-bottom-0; }
+.m-y-xs { @extend .m-top-xs; @extend .m-bottom-xs; }
+.m-y-s { @extend .m-top-s; @extend .m-bottom-s; }
+.m-y-m { @extend .m-top-m; @extend .m-bottom-m; }
+.m-y-l { @extend .m-top-l; @extend .m-bottom-l; }
+.m-y-xl { @extend .m-top-xl; @extend .m-bottom-xl; }
 
-.m-left-none {margin-left: 0 !important}
-.m-left-smaller {margin-left: $s-smaller !important}
-.m-left-small {margin-left: $s-small !important}
-.m-left {margin-left: $s !important}
-.m-left-large {margin-left: $s-large !important}
-.m-left-larger {margin-left: $s-larger !important}
+.m-right-0 {margin-right: 0 !important}
+.m-right-auto {margin-right: auto !important}
+.m-right-xs {margin-right: $s-xs !important}
+.m-right-s {margin-right: $s-s !important}
+.m-right,
+.m-right-m {margin-right: $s-m !important}
+.m-right-l {margin-right: $s-l !important}
+.m-right-xl {margin-right: $s-xl !important}
+
+.m-left-0 {margin-left: 0 !important}
+.m-left-auto {margin-left: auto !important}
+.m-left-xs {margin-left: $s-xs !important}
+.m-left-s {margin-left: $s-s !important}
+.m-left,
+.m-left-m {margin-left: $s-m !important}
+.m-left-l {margin-left: $s-l !important}
+.m-left-xl {margin-left: $s-xl !important}
+
+.m-x-0 { @extend .m-left-0; @extend .m-right-0; }
+.m-x-auto {	@extend .m-left-auto; @extend .m-right-auto; }
+// Do we need more sizes here? Why would we add horizontal margin to something?
