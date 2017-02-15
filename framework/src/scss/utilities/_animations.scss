@@ -22,23 +22,23 @@ Animation Utilities
 }
 
 .a-duration-smaller {
-  animation-duration: $a-smaller !important;
+  animation-duration: $a-xs !important;
 }
 
 .a-duration-small {
-  animation-duration: $a-small !important;
+  animation-duration: $a-s !important;
 }
 
 .a-duration {
-  animation-duration: $a-size !important;
+  animation-duration: $a-m !important;
 }
 
 .a-duration-large {
-  animation-duration: $a-large !important;
+  animation-duration: $a-l !important;
 }
 
 .a-duration-larger {
-  animation-duration: $a-larger !important;
+  animation-duration: $a-xl !important;
 }
 
 

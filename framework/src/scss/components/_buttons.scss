@@ -10,10 +10,10 @@
     text-decoration: none;
     border-radius: $border-radius;
     text-transform: uppercase;
-    padding: $s-small;
+    padding: $s-s;
     display: inline-block;
     border: 0; // strip input[type="submit"] default
-    font-size: $t-size;
+    font-size: $t-m;
 
     &:hover {
         cursor: pointer;

@@ -11,7 +11,7 @@
 .header {
 	@include clearfix;
 	@extend .bg-black;
-	@extend .m-bottom-large;
+	@extend .m-bottom-l;
 }
 
 .header__logo {

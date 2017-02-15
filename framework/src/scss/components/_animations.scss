@@ -9,7 +9,7 @@ Animation Components
 
   Usage:
   <div class="bounce-hover">
-    This div bounces on hover
+	This div bounces on hover
   </div>
 
 */
@@ -18,99 +18,99 @@ Animation Components
 // Spin
 .spin-right,
 .spin-right-hover:hover {
-  animation: spinRight $a-size 1 linear;
+	animation: spinRight $a-m 1 linear;
 }
 
 .spin-left,
 .spin-left-hover:hover {
-  animation: spinRight $a-size 1 linear reverse;
+	animation: spinRight $a-m 1 linear reverse;
 }
 
 // Bounce
 .bounce,
 .bounce-hover:hover {
-  animation: bounce $a-size 1 cubic-bezier(.075,.82,.165,1);
+	animation: bounce $a-m 1 cubic-bezier(.075,.82,.165,1);
 }
 
 // Shake
 .shake,
 .shake-hover:hover {
-  animation: shake $a-size 1 cubic-bezier(.075,.82,.165,1);
+	animation: shake $a-m 1 cubic-bezier(.075,.82,.165,1);
 }
 
 // Fade
 .fade-in,
 .fade-in-hover:hover {
-  animation: fadeIn $a-size 1 linear;
+	animation: fadeIn $a-m 1 linear;
 }
 
 .fade-out,
 .fade-out-hover:hover {
-  animation: fadeIn $a-size 1 linear reverse;
+	animation: fadeIn $a-m 1 linear reverse;
 }
 
 // slide
 .slide-in,
 .slide-in-hover:hover {
-  animation: slideIn $a-size 1 cubic-bezier(0.165,0.84,0.44,1);
+	animation: slideIn $a-m 1 cubic-bezier(0.165,0.84,0.44,1);
 }
 
 .slide-out,
 .slide-out-hover:hover {
-  animation: slideIn $a-size 1 linear reverse;
+	animation: slideIn $a-m 1 linear reverse;
 }
 
 
 // Keyframe definitions
 @keyframes spinRight {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 70%, 100% {
-    transform: translate(0, 0);
-  }
-  40% {
-    transform: translate(0, -5px);
-  }
-  60% {
-    transform: translate(0, -3px);
-  }
+	0%, 20%, 50%, 70%, 100% {
+		transform: translate(0, 0);
+	}
+	40% {
+		transform: translate(0, -5px);
+	}
+	60% {
+		transform: translate(0, -3px);
+	}
 }
 
 @keyframes shake {
-  0%, 20%, 50%, 70%, 100% {
-    transform: translate(0, 0);
-  }
-  40% {
-    transform: translate(-5px, 0);
-  }
-  60% {
-    transform: translate(-3px, 0);
-  }
+	0%, 20%, 50%, 70%, 100% {
+		transform: translate(0, 0);
+	}
+	40% {
+		transform: translate(-5px, 0);
+	}
+	60% {
+		transform: translate(-3px, 0);
+	}
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @keyframes slideIn {
-  0% {
-    transform: translateY(10px) translateZ(-30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0) translateZ(0);
-    opacity: 1;
-  }
+	0% {
+		transform: translateY(10px) translateZ(-30px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0) translateZ(0);
+		opacity: 1;
+	}
 }

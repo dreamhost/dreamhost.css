@@ -1,16 +1,16 @@
 .tabs {
-	@extend .m-bottom-large;
+	@extend .m-bottom-l;
 }
 
 .tabs__nav-item {
 	@include link(dark);
 	@extend .t-heading;
 	@extend .p;
-	@extend .t-large;
+	@extend .t-l;
 	@extend .l-inline-block;
 
 	&:first-child {
-		@extend .p-left-none; // to align with hard-left start of box below
+		@extend .p-left-0; // to align with hard-left start of box below
 	}
 }
 
@@ -24,5 +24,3 @@
 	@include unlink;
 	@extend .t-bold;
 }
-
-

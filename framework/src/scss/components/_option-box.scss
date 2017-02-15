@@ -16,8 +16,8 @@
 
 .option-box__heading {
 	@extend .bg-blue;
-	@extend .p-small;
-	@extend .m-bottom-none;
+	@extend .p-s;
+	@extend .m-bottom-0;
 	@extend .t-white;
 }
 
@@ -25,4 +25,3 @@
 	@include box;
 	@extend .bg-white;
 }
-

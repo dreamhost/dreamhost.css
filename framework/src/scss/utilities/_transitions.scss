@@ -17,49 +17,17 @@ Transition Utilities
 
 
 // Duration
-.tr-duration-none {
-  transition-duration: 0s !important;
-}
-
-.tr-duration-smaller {
-  transition-duration: $tr-smaller !important;
-}
-
-.tr-duration-small {
-  transition-duration: $tr-small !important;
-}
-
-.tr-duration {
-  transition-duration: $tr-size !important;
-}
-
-.tr-duration-large {
-  transition-duration: $tr-large !important;
-}
-
-.tr-duration-larger {
-  transition-duration: $tr-larger !important;
-}
-
-
+.tr-duration-0 {transition-duration: 0s !important;}
+.tr-duration-xs {transition-duration: $tr-xs !important;}
+.tr-duration-s {transition-duration: $tr-s !important;}
+.tr-duration,
+.tr-duration-m {transition-duration: $tr-m !important;}
+.tr-duration-l {transition-duration: $tr-l !important;}
+.tr-duration-xl {transition-duration: $tr-xl !important;}
 
 // Easing
-.tr-easing-linear {
-  transition-timing-function: linear !important;
-}
-
-.tr-easing-ease {
-  transition-timing-function: ease-in-out !important;
-}
-
-.tr-easing-cb-scale-in {
-  transition-timing-function: cubic-bezier(0,.89,.44,1) !important;
-}
-
-.tr-easing-cb-scale-out {
-  transition-timing-function: cubic-bezier(.165,.84,.44,1) !important;
-}
-
-.tr-easing-cb-scale-up {
-  transition-timing-function: cubic-bezier(.68,-.55,.265,1.55) !important;
-}
+.tr-easing-linear {transition-timing-function: linear !important;}
+.tr-easing-ease {transition-timing-function: ease-in-out !important;}
+.tr-easing-cb-scale-in {transition-timing-function: cubic-bezier(0,.89,.44,1) !important;}
+.tr-easing-cb-scale-out {transition-timing-function: cubic-bezier(.165,.84,.44,1) !important;}
+.tr-easing-cb-scale-up {transition-timing-function: cubic-bezier(.68,-.55,.265,1.55) !important;}
