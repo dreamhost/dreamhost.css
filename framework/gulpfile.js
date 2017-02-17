@@ -1,5 +1,4 @@
 var gulp        = require('gulp');
-var neat        = require('node-neat').includePaths;
 var browserSync = require('browser-sync').create();
 var cleanCSS    = require('gulp-clean-css');
 var sass        = require('gulp-sass');
@@ -65,7 +64,7 @@ gulp.task('lint', function() {
 
 gulp.task('styles', ['lint'], function () {
 	return gulp.src('./src/scss/*.scss')
-		.pipe(sass({includePaths: neat, outputStyle: 'compact'}).on('error', sass.logError))
+		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
 		.pipe(gulp.dest('./src/css/'))
 		.pipe(browserSync.stream());
 });
@@ -88,7 +87,7 @@ gulp.task('dist', function(){
 		destLatest = './dist/latest';
 
 	return gulp.src('./src/scss/*.scss')
-		.pipe(sass({includePaths: neat, outputStyle: 'compact'}).on('error', sass.logError))
+		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
 		.pipe(prefix({browsers: ['last 4 versions']}))
 		.pipe(rename(file + '.css'))
 		.pipe(gulp.dest(destVersion))
