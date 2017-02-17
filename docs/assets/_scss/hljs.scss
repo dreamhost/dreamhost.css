@@ -1,15 +1,12 @@
----
----
-
-@import '../../node_modules/dreamhost-css/src/scss/style';
+@import 'src/scss/style';
 
 code.hljs {
 	font-family: monospace;
     background-color: $lightest-grey;
-    padding: $s;
-    font-size: $t-small;
+    padding: $s-m;
+    font-size: $t-s;
     border-radius: $border-radius;
-    margin-bottom: $s;
+    margin-bottom: $s-m;
     width: 100%;
 }
 

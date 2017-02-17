@@ -4,5 +4,5 @@ exclude:
   - Gemfile.lock
 baseurl: /dreamhost.css
 sass:
-  sass_dir: /assets/scss
-include: ['node_modules']
+  sass_dir: assets/_scss
+  style: compressed
