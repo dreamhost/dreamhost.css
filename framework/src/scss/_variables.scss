@@ -9,35 +9,34 @@
 // Always use these variables when building components.
 
 // Colours
-$blue: #3675b4;
-$light-blue: rgb(62,149,190);
-$dark-blue: rgb(30,50,68);
+$blue: #4cc8fe;
+$light-blue: #7ed2f7;
+$dark-blue: #2aade8;
+$darker-blue: #1b6e94; // This color is mainly used for hyperlink text.
 
-$peach: rgb(241,102,107);
-$dark-peach: darken($peach, 10%);
-$light-peach: lighten($peach, 10%);
+$peach: #ff6d71;
+$light-peach: #ff8a8e;
+$dark-peach: #ce423b;
 
-$red: #e74141;
-$light-red: lighten($red, 10%);
-$dark-red: darken($red, 10%);
+$red: #d7180f;
+$light-red: #ef2b1f;
+$dark-red: #b80d03;
 
-$yellow: rgb(250,162,36);
-$light-yellow: lighten($yellow, 10%);
-$dark-yellow: darken($yellow, 10%);
+$yellow: #fee235;
+$light-yellow: #ffeb78;
+$dark-yellow: #ffda00;
 
-$green: #2ecc71;
-$light-green: lighten($green, 10%);
-$dark-green: darken($green, 10%);
+$green: #50dbbb;
+$light-green: #57f1cf;
+$dark-green: #44c4a7;
 
-$light-grey: #999;
-$lighter-grey: #d1d1d1;
-$lightest-grey: #f7f7f7;
+$lighter-grey: #f5f6f9;
+$light-grey: #dfe4e8;
+$grey: #afbfc9;
+$dark-grey: #5d6d78;
+$darker-grey: #424f58;
 
-$dark-grey: #888;
-$darker-grey: darken($dark-grey, 10%);
-$darkest-grey: darken($dark-grey, 20%);
-
-$black: #2F323B;
+$black: #2b3032;
 $white: #FFFFFF;
 
 // Spacing

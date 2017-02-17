@@ -359,9 +359,9 @@ Popover Component
 .popover-separator {
 	height: 1px;
 	margin-bottom: 1rem;
-	background: darken($lightest-grey, 5%);
+	background: darken($lighter-grey, 5%);
 }
 
 .popover--dark .popover-separator {
-	background: darken($darkest-grey, 5%);
+	background: darken($darker-grey, 5%);
 }

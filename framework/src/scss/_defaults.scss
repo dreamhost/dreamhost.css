@@ -2,7 +2,7 @@
 // Some sort of scale
 
 body {
-	background: $lightest-grey;
+	background: $lighter-grey;
 	-webkit-font-smoothing: antialiased; // autoprefixer does not incl. font-smoothing
 	-moz-osx-font-smoothing: grayscale;
 	font-feature-settings: "liga", "dlig";
@@ -42,10 +42,10 @@ p {
 }
 
 a {
-	color: $blue;
+	color: $darker-blue;
 	text-decoration: none;
 	&:hover {
-		color: darken($blue, 10);
+		color: darken($darker-blue, 10);
 	}
 }
 
@@ -63,7 +63,7 @@ p, section, img {
 }
 
 hr {
-	border: 1px solid $lightest-grey;
+	border: 1px solid $lighter-grey;
 	margin: $s-m 0;
 }
 
