@@ -49,9 +49,9 @@ Color Utilities
 .bg-light-blue {background: $light-blue !important}
 .bg-dark-blue {background: $dark-blue !important}
 
-.bg-peach {background: $peach !important}
-.bg-light-peach {background: $light-peach !important}
-.bg-dark-peach {background: $dark-peach !important}
+.bg-salmon {background: $salmon !important}
+.bg-light-salmon {background: $light-salmon !important}
+.bg-dark-salmon {background: $dark-salmon !important}
 
 .bg-red {background: $red !important}
 .bg-light-red {background: $light-red !important}
@@ -61,51 +61,62 @@ Color Utilities
 .bg-light-yellow {background: $light-yellow !important}
 .bg-dark-yellow {background: $dark-yellow !important}
 
+.bg-orange {background: $orange !important}
+.bg-light-orange {background: $light-orange !important}
+.bg-dark-orange {background: $dark-orange !important}
+
 .bg-green {background: $green !important}
 .bg-light-green {background: $light-green !important}
 .bg-dark-green {background: $dark-green !important}
 
+.bg-teal {background: $teal !important}
+.bg-light-teal {background: $light-teal !important}
+.bg-dark-teal {background: $dark-teal !important}
+
 // Typography Colors
 .t-white {color: #fff !important}
-.t-black {color: #000 !important}
-.t-blue {color: darken($dark-blue, 37%) !important}
-.t-peach {color: darken($dark-peach, 30%) !important}
-.t-red {color: $red !important}
-.t-yellow {color: darken($dark-yellow, 30%) !important}
-.t-green {color: darken($green, 40%) !important}
-.t-grey {color: $darker-grey !important}
+.t-black {color: $black !important}
 
 // Combo Colors
 .c-blue,
-.c-light-blue,
-.c-dark-blue {@extend .t-blue;}
+.c-light-blue {@extend .t-black;}
 .c-blue {@extend .bg-blue;}
 .c-light-blue {@extend .bg-light-blue;}
-.c-dark-blue {@extend .bg-dark-blue;}
+.c-dark-blue {@extend .bg-dark-blue; @extend .t-white;}
 
 .c-yellow,
 .c-light-yellow,
-.c-dark-yellow {@extend .t-yellow;}
+.c-dark-yellow {@extend .t-black;}
 .c-yellow {@extend .bg-yellow;}
 .c-light-yellow {@extend .bg-light-yellow;}
 .c-dark-yellow {@extend .bg-dark-yellow;}
 
-.c-peach,
-.c-light-peach {@extend .t-peach;}
-.c-peach {@extend .bg-peach;}
-.c-light-peach {@extend .bg-light-peach;}
-.c-dark-peach {@extend .bg-dark-peach; @extend .t-white;}
+.c-orange,
+.c-light-orange {@extend .t-black;}
+.c-orange {@extend .bg-orange;}
+.c-light-orange {@extend .bg-light-orange;}
+.c-dark-orange {@extend .bg-dark-orange; @extend .t-white;}
+
+.c-salmon,
+.c-light-salmon {@extend .t-black;}
+.c-salmon {@extend .bg-salmon;}
+.c-light-salmon {@extend .bg-light-salmon;}
+.c-dark-salmon {@extend .bg-dark-salmon; @extend .t-white;}
 
 .c-red,
-.c-light-red,
 .c-dark-red {@extend .t-white;}
 .c-red {@extend .bg-red;}
 .c-light-red {@extend .bg-light-red;}
 .c-dark-red {@extend .bg-dark-red;}
 
 .c-green,
-.c-light-green,
-.c-dark-green {@extend .t-green;}
+.c-light-green {@extend .t-black;}
 .c-green {@extend .bg-green;}
 .c-light-green {@extend .bg-light-green;}
-.c-dark-green {@extend .bg-dark-green;}
+.c-dark-green {@extend .bg-dark-green; @extend .t-white;}
+
+.c-teal,
+.c-light-teal {@extend .t-black;}
+.c-teal {@extend .bg-teal;}
+.c-light-teal {@extend .bg-light-teal;}
+.c-dark-teal {@extend .bg-dark-teal; @extend .t-white;}

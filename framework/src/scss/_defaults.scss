@@ -42,10 +42,10 @@ p {
 }
 
 a {
-	color: $darker-blue;
-	text-decoration: none;
+	color: $black;
+	text-decoration: underline;
 	&:hover {
-		color: darken($darker-blue, 10);
+		text-decoration: none;
 	}
 }
 
