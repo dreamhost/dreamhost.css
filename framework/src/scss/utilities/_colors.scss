@@ -17,14 +17,8 @@ Color Utilities
 
   Usage [html]:
   <div class="c-light-yellow">
-    This div will have a light yellow background, with matching yellow text
+    This div will have a light yellow background, with high-contrast text
     that has WCAG compliant contrast.
-  </div>
-
-  <div class="c-dark-peach">
-    Because the hue of dark-peach is too dark to support peach text, this
-    element will have a dark-peach background with white text, in order to
-    preserve contrast compliancy.
   </div>
 
   Usage [css]:
