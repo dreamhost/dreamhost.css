@@ -12,13 +12,13 @@ Color Utilities
   The combo color classes constrain text color based on background color.
   This is to ensure that contrast between an element's background and
   foreground colors always meets WCAG AA compliancy. It is recommended to
-  use the combo color classes as often as possible. See the HTML examples
+  use the combo color classes as often as possible. See the HTML example
   below.
 
   Usage [html]:
   <div class="c-light-yellow">
     This div will have a light yellow background, with high-contrast text
-    that has WCAG compliant contrast.
+    that is WCAG compliant.
   </div>
 
   Usage [css]:
