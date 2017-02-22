@@ -69,32 +69,33 @@ Color Utilities
 
 // Typography Colors
 .t-white {color: #fff !important}
+.t-grey {color: $dark-grey !important}
 .t-black {color: $black !important}
+.t-blue {color: $dark-blue !important}
+.t-salmon {color: $dark-salmon !important}
+.t-red {color: $dark-red !important}
+.t-yellow {color: $dark-yellow !important}
+.t-orange {color: $dark-orange !important}
+.t-green {color: $dark-green !important}
+.t-teal {color: $dark-teal !important}
 
 // Combo Colors
-.c-blue,
-.c-light-blue {@extend .t-black;}
-.c-blue {@extend .bg-blue;}
-.c-light-blue {@extend .bg-light-blue;}
+.c-blue {@extend .bg-blue; @extend .t-black;}
+.c-light-blue {@extend .bg-light-blue; @extend .t-blue;}
 .c-dark-blue {@extend .bg-dark-blue; @extend .t-white;}
 
 .c-yellow,
-.c-light-yellow,
 .c-dark-yellow {@extend .t-black;}
 .c-yellow {@extend .bg-yellow;}
-.c-light-yellow {@extend .bg-light-yellow;}
+.c-light-yellow {@extend .bg-light-yellow; @extend .t-yellow;}
 .c-dark-yellow {@extend .bg-dark-yellow;}
 
-.c-orange,
-.c-light-orange {@extend .t-black;}
-.c-orange {@extend .bg-orange;}
-.c-light-orange {@extend .bg-light-orange;}
+.c-orange {@extend .bg-orange; @extend .t-black;}
+.c-light-orange {@extend .bg-light-orange; @extend .t-orange;}
 .c-dark-orange {@extend .bg-dark-orange; @extend .t-white;}
 
-.c-salmon,
-.c-light-salmon {@extend .t-black;}
-.c-salmon {@extend .bg-salmon;}
-.c-light-salmon {@extend .bg-light-salmon;}
+.c-salmon {@extend .bg-salmon; @extend .t-black;}
+.c-light-salmon {@extend .bg-light-salmon; @extend .t-salmon;}
 .c-dark-salmon {@extend .bg-dark-salmon; @extend .t-white;}
 
 .c-red,
@@ -103,14 +104,10 @@ Color Utilities
 .c-light-red {@extend .bg-light-red;}
 .c-dark-red {@extend .bg-dark-red;}
 
-.c-green,
-.c-light-green {@extend .t-black;}
-.c-green {@extend .bg-green;}
-.c-light-green {@extend .bg-light-green;}
+.c-green {@extend .bg-green; @extend .t-black;}
+.c-light-green {@extend .bg-light-green; @extend .t-green;}
 .c-dark-green {@extend .bg-dark-green; @extend .t-white;}
 
-.c-teal,
-.c-light-teal {@extend .t-black;}
-.c-teal {@extend .bg-teal;}
-.c-light-teal {@extend .bg-light-teal;}
+.c-teal {@extend .bg-teal; @extend .t-black;}
+.c-light-teal {@extend .bg-light-teal; @extend .t-teal;}
 .c-dark-teal {@extend .bg-dark-teal; @extend .t-white;}
