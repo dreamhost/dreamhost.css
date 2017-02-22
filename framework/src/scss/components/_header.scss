@@ -47,6 +47,10 @@
 	@extend .t-lighter-grey;
 	@extend .t-s;
 	@extend .l-inline-block;
+
+	&:hover {
+		@extend .t-light-blue;
+	}
 }
 
 .header__nav-link.is-active,
@@ -55,6 +59,10 @@
 	@extend .border-bottom-2;
 	@extend .border-light-blue;
 	@extend .border-solid;
+
+	&:hover {
+		@extend .t-white;
+	}
 }
 
 .header__subnav {
@@ -70,6 +78,14 @@
 	@extend .l-inline-block;
 
 	.icon {
-		opacity: .8;
+		opacity: .3;
+	}
+
+	&:hover {
+		@extend .t-light-blue;
+
+		.icon {
+			opacity: 1;
+		}
 	}
 }
