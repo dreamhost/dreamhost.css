@@ -4,7 +4,7 @@
 
 @mixin link($invert: 'false'){
 	@if $invert == 'false'{
-		color: $blue;
+		color: $black;
 		&:hover {
 			cursor: pointer;
 			color: $black;
@@ -13,9 +13,8 @@
 		color: $black;
 		&:hover {
 			cursor: pointer;
-			color: $blue;
+			color: $black;
 		}
 	}
 
 }
-

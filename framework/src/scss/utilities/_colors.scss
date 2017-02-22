@@ -1,25 +1,116 @@
-// Missing dark blue?
+/*
 
+Color Utilities
+
+  These classes are used to define colors throughout the app. There are 3
+  different types of color classes:
+
+  - Background color classes, which use the .bg- prefix
+  - Text color classes, which use the .t- prefix
+  - Combo color classes, which use the .c- prefix
+
+  The combo color classes constrain text color based on background color.
+  This is to ensure that contrast between an element's background and
+  foreground colors always meets WCAG AA compliancy. It is recommended to
+  use the combo color classes as often as possible. See the HTML example
+  below.
+
+  Usage [html]:
+  <div class="c-light-yellow">
+    This div will have a light yellow background, with high-contrast text
+    that is WCAG compliant.
+  </div>
+
+  Usage [css]:
+  .class {
+    @extend .bg-black;
+    @extend .t-white;
+  }
+
+ */
+
+// Background colors
 .bg-white {background: #fff !important}
 .bg-black {background: $black !important}
+
+.bg-lighter-grey {background: $lighter-grey !important}
+.bg-light-grey {background: $light-grey !important}
+.bg-grey {background: $grey !important}
+.bg-dark-grey {background: $dark-grey !important}
+.bg-darker-grey {background: $darker-grey !important}
+
 .bg-blue {background: $blue !important}
 .bg-light-blue {background: $light-blue !important}
 .bg-dark-blue {background: $dark-blue !important}
-.bg-peach {background: $peach !important}
-.bg-light-peach {background: $light-peach !important}
-.bg-dark-peach {background: $dark-peach !important}
+
+.bg-salmon {background: $salmon !important}
+.bg-light-salmon {background: $light-salmon !important}
+.bg-dark-salmon {background: $dark-salmon !important}
+
 .bg-red {background: $red !important}
 .bg-light-red {background: $light-red !important}
 .bg-dark-red {background: $dark-red !important}
+
 .bg-yellow {background: $yellow !important}
 .bg-light-yellow {background: $light-yellow !important}
 .bg-dark-yellow {background: $dark-yellow !important}
+
+.bg-orange {background: $orange !important}
+.bg-light-orange {background: $light-orange !important}
+.bg-dark-orange {background: $dark-orange !important}
+
 .bg-green {background: $green !important}
 .bg-light-green {background: $light-green !important}
 .bg-dark-green {background: $dark-green !important}
-.bg-light-grey {background: $light-grey !important}
-.bg-lighter-grey {background: $lighter-grey !important}
-.bg-lightest-grey {background: $lightest-grey !important}
-.bg-dark-grey {background: $dark-grey !important}
-.bg-darker-grey {background: $darker-grey !important}
-.bg-darkest-grey {background: $darkest-grey !important}
+
+.bg-teal {background: $teal !important}
+.bg-light-teal {background: $light-teal !important}
+.bg-dark-teal {background: $dark-teal !important}
+
+// Typography Colors
+.t-white {color: #fff !important}
+.t-black {color: $black !important}
+
+// Combo Colors
+.c-blue,
+.c-light-blue {@extend .t-black;}
+.c-blue {@extend .bg-blue;}
+.c-light-blue {@extend .bg-light-blue;}
+.c-dark-blue {@extend .bg-dark-blue; @extend .t-white;}
+
+.c-yellow,
+.c-light-yellow,
+.c-dark-yellow {@extend .t-black;}
+.c-yellow {@extend .bg-yellow;}
+.c-light-yellow {@extend .bg-light-yellow;}
+.c-dark-yellow {@extend .bg-dark-yellow;}
+
+.c-orange,
+.c-light-orange {@extend .t-black;}
+.c-orange {@extend .bg-orange;}
+.c-light-orange {@extend .bg-light-orange;}
+.c-dark-orange {@extend .bg-dark-orange; @extend .t-white;}
+
+.c-salmon,
+.c-light-salmon {@extend .t-black;}
+.c-salmon {@extend .bg-salmon;}
+.c-light-salmon {@extend .bg-light-salmon;}
+.c-dark-salmon {@extend .bg-dark-salmon; @extend .t-white;}
+
+.c-red,
+.c-dark-red {@extend .t-white;}
+.c-red {@extend .bg-red;}
+.c-light-red {@extend .bg-light-red;}
+.c-dark-red {@extend .bg-dark-red;}
+
+.c-green,
+.c-light-green {@extend .t-black;}
+.c-green {@extend .bg-green;}
+.c-light-green {@extend .bg-light-green;}
+.c-dark-green {@extend .bg-dark-green; @extend .t-white;}
+
+.c-teal,
+.c-light-teal {@extend .t-black;}
+.c-teal {@extend .bg-teal;}
+.c-light-teal {@extend .bg-light-teal;}
+.c-dark-teal {@extend .bg-dark-teal; @extend .t-white;}

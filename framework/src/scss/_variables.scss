@@ -9,36 +9,42 @@
 // Always use these variables when building components.
 
 // Colours
-$blue: #3675b4;
-$light-blue: rgb(62,149,190);
-$dark-blue: rgb(30,50,68);
+$blue: #2BADE9;
+$light-blue: #CCEFFF;
+$dark-blue: #061C26;
 
-$peach: rgb(241,102,107);
-$dark-peach: darken($peach, 10%);
-$light-peach: lighten($peach, 10%);
+$teal: #109CA3;
+$light-teal: #7FF9FF;
+$dark-teal: #064145;
 
-$red: #e74141;
-$light-red: lighten($red, 10%);
-$dark-red: darken($red, 10%);
+$green: #46C3A7;
+$light-green: #7FFFE4;
+$dark-green: #0B4C3E;
 
-$yellow: rgb(250,162,36);
-$light-yellow: lighten($yellow, 10%);
-$dark-yellow: darken($yellow, 10%);
+$red: #B80C03;
+$light-red: #E6BAB8;
+$dark-red: #590400;
 
-$green: #2ecc71;
-$light-green: lighten($green, 10%);
-$dark-green: darken($green, 10%);
+$salmon: #F36058;
+$light-salmon: #FFCCCE;
+$dark-salmon: #B55651;
 
-$light-grey: #999;
-$lighter-grey: #d1d1d1;
-$lightest-grey: #f7f7f7;
+$orange: #FFA700;
+$light-orange: #FFEECC;
+$dark-orange: #8A5900;
 
-$dark-grey: #888;
-$darker-grey: darken($dark-grey, 10%);
-$darkest-grey: darken($dark-grey, 20%);
+$yellow: #FFDA00;
+$light-yellow: #FFF9CC;
+$dark-yellow: #A38B00;
 
-$black: #2F323B;
-$white: #FFFFFF;
+$lighter-grey: #f5f6f9;
+$light-grey: #dfe4e8;
+$grey: #afbfc9;
+$dark-grey: #5d6d78;
+$darker-grey: #424f58;
+
+$black: $dark-blue;
+$white: #fff;
 
 // Spacing
 // Uses an 8pt vertical grid for margins and padding
