@@ -55,6 +55,7 @@ Popover Component
 .popover,
 .popover.has-caret:after {
 	@extend .bg-white;
+	@extend .t-black;
 	@extend .tr-duration-l;
 	@extend .tr-easing-ease;
 }
@@ -328,40 +329,18 @@ Popover Component
 
 
 /*
-	Dropdown:
-	- popover-dropdown
-	- popover-separator
+	Dropdown Content:
+	- popover__section
 */
 
-.popover-dropdown {
-	@extend .t-left;
+.popover__section + .popover__section {
+	border-top: 1px solid darken($lightest-grey, 5%);
+
+	.popover--dark & {
+		border-color: darken($darkest-grey, 5%);
+	}
 }
 
-.popover-dropdown a {
-	@extend .l-block;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-bottom: 1rem;
-}
-
-.popover-dropdown a,
-.popover-dropdown a:link {
-	@extend .t-decoration-none;
-	@extend .tr-duration;
-	@extend .tr-easing-linear;
-	cursor: pointer;
-}
-
-.popover-dropdown a:first-child {
-	padding-top: 1rem;
-}
-
-.popover-separator {
-	height: 1px;
-	margin-bottom: 1rem;
-	background: darken($lightest-grey, 5%);
-}
-
-.popover--dark .popover-separator {
-	background: darken($darkest-grey, 5%);
+.popover__section:last-child {
+	border-radius: 0 0 $border-radius $border-radius;
 }

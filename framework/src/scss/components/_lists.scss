@@ -1,7 +1,72 @@
-.list > li:not(:last-child) {@extend .m-bottom-s;}
+.list {
+	@extend .t-left; // All lists should be left aligned unless specified
+	> li {
+		@extend .m-bottom-s;
 
+		&:last-child {
+			@extend .m-bottom-0;
+		}
+	}
+}
 .list--disc {list-style-type: disc; list-style-position: outside}
 .list--disc > li {@extend .m-left;}
 
 .list--inline > li {@extend .p-0, .l-inline, .m-right;}
-.list--inline:last-child {@extend .m-right-0;}
+.list--inline > li:last-child {@extend .m-right-0;}
+
+.list.list--padding {
+	@extend .p-y-xs;
+
+	> li {
+		@extend .m-bottom-0;
+
+		> * {
+			@extend .l-block;
+			padding: $s-xs $s-xs*2;
+
+			@extend .tr-duration;
+			@extend .tr-easing-linear;
+		}
+	}
+}
+
+.list--small-bold {
+	& > li {
+		& > * {
+			@extend .t-bold;
+			@extend .t-black;
+			@extend .t-s;
+		}
+
+		// Don't give hover states to non-links
+		& > a:hover,
+		& > button:hover,
+		& > .is-link:hover {
+			@extend .t-light-blue;
+		}
+
+		// Disabled state
+		& > .is-disabled {
+			pointer-events: none;
+			opacity: .3;
+		}
+	}
+}
+
+.list--icon-right {
+	> li {
+		@extend .l-pos-relative;
+
+		& > * {
+			padding-right: 3.5em;
+		}
+	}
+
+	.icon {
+		@extend .l-pos-absolute;
+		top: 50%;
+		margin-top: -.725em;
+		margin-right: 0;
+		right: 1.5em;
+	}
+}

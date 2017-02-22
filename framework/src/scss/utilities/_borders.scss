@@ -54,8 +54,14 @@
 .border-left-none {border-left-width: 0}
 .border-right-none {border-right-width: 0}
 
-.border-1 {border-width: $border-size}
-.border-top-1 {border-top-width: $border-size}
-.border-bottom-1 {border-bottom-width: $border-size}
-.border-left-1 {border-left-width: $border-size}
-.border-right-1 {border-right-width: $border-size}
+.border-1 {border-width: 1px}
+.border-top-1 {border-top-width: 1px}
+.border-bottom-1 {border-bottom-width: 1px}
+.border-left-1 {border-left-width: 1px}
+.border-right-1 {border-right-width: 1px}
+
+.border-2 {border-width: 2px}
+.border-top-2 {border-top-width: 2px}
+.border-bottom-2 {border-bottom-width: 2px}
+.border-left-2 {border-left-width: 2px}
+.border-right-2 {border-right-width: 2px}

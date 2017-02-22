@@ -1,0 +1,14 @@
+.fluid-row {
+	@extend .l-table-row;
+}
+
+.fluid-row__item {
+	@extend .l-table-cell;
+	@extend .u-ws-nowrap;
+	@extend .w-1;
+	@extend .u-vertical-align-middle;
+}
+
+.fluid-row__item--primary {
+	@extend .w-100;
+}
