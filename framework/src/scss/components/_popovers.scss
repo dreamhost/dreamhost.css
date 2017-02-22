@@ -333,14 +333,21 @@ Popover Component
 	- popover__section
 */
 
-.popover__section + .popover__section {
-	border-top: 1px solid darken($lightest-grey, 5%);
+.popover__section {
+	// Separator classes
+	&--separator {
+		border-top: 1px solid darken($lightest-grey, 5%);
 
-	.popover--dark & {
-		border-color: darken($darkest-grey, 5%);
+		.popover--dark & {
+			border-color: darken($darkest-grey, 5%);
+		}
 	}
-}
 
-.popover__section:last-child {
-	border-radius: 0 0 $border-radius $border-radius;
+	// Round corners on first/last section
+	&:first-child {
+		border-radius: $border-radius $border-radius 0 0;
+	}
+	&:last-child {
+		border-radius: 0 0 $border-radius $border-radius;
+	}
 }
