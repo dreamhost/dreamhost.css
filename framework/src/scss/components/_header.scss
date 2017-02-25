@@ -16,6 +16,13 @@
 	@extend .t-white;
 }
 
+.page-header--overlay {
+	@extend .bg-transparent;
+	@extend .l-pos-absolute;
+	@extend .w-100;
+	z-index: 100;
+}
+
 .page-header__container {
 	@include clearfix;
 	@extend .fluid-row;
