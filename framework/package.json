@@ -14,6 +14,7 @@
     "gulp": "3.9",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "2.0.13",
+    "gulp-concat": "^2.6.1",
     "gulp-rename": "1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-stylelint": "^3.7.0"
