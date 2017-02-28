@@ -5,6 +5,8 @@ var sass        = require('gulp-sass');
 var stylelint   = require('gulp-stylelint');
 var prefix      = require('gulp-autoprefixer');
 var rename      = require('gulp-rename');
+var concat 			= require('gulp-concat');
+var uglify 			= require('gulp-uglify');
 var lintconfig  = require('./stylelint.config.js');
 var package     = require('./package.json');
 
@@ -18,7 +20,7 @@ var package     = require('./package.json');
 
 */
 
-gulp.task('serve', ['styles'], function() {
+gulp.task('serve', ['styles', 'js'], function() {
 
 		browserSync.init({
 				server: "./",
@@ -26,6 +28,7 @@ gulp.task('serve', ['styles'], function() {
 				open: false
 		});
 
+		gulp.watch("./src/js/*.js", ['js']);
 		gulp.watch("./src/scss/**/*.scss", ['styles']);
 		gulp.watch("./**/*.html").on('change', browserSync.reload);
 });
@@ -71,6 +74,34 @@ gulp.task('styles', ['lint'], function () {
 
 /*
 
+	## gulp js
+
+	Compile js for distribution. Use version from package.json.
+	Place the following files in /dist/:
+
+	1. main.js
+
+*/
+
+gulp.task('js', function() {
+	return gulp.src([
+			'./src/js/*.js',
+			'!./src/js/bundle.js'
+		])
+		.pipe(concat('bundle.js'))
+		.pipe(gulp.dest('./src/js/'))
+		.pipe(browserSync.reload({stream: true}))
+});
+
+gulp.task('js-dist', function() {
+	return gulp.src('./src/js/bundle.js')
+		.pipe(rename('bundle.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('./dist/'))
+});
+
+/*
+
 	## gulp dist
 
 	Compile css for distribution. Use version from package.json.
@@ -81,7 +112,7 @@ gulp.task('styles', ['lint'], function () {
 
 */
 
-gulp.task('dist', function(){
+gulp.task('dist', ['js-dist'], function() {
 	var file = 'dreamhost',
 		destVersion = './dist/' + package.version,
 		destLatest = './dist/latest';
