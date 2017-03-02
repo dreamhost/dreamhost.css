@@ -2,7 +2,7 @@ markdown: kramdown
 exclude:
   - Gemfile
   - Gemfile.lock
-baseurl: /dreamhost.css
+baseurl: /docs
 sass:
   sass_dir: assets/_scss
   style: compressed

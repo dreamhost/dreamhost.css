@@ -3,7 +3,7 @@ title: Sass variables
 layout: page
 ---
 
-<p class="t-large">Most interfaces can be created using css, but there are sass varaibles available for building custom elements or the framework itself.</p>
+<p class="t-l">Most interfaces can be created using css, but there are sass varaibles available for building custom elements or the framework itself.</p>
 
 <hr />
 
@@ -70,15 +70,15 @@ $heading: 'Ubuntu', sans-serif;
 
 {% highlight css %}
 $t-h1: 2.5rem;
-$t-larger: 2rem;
-$t-large: 1.5rem;
+$t-xl: 2rem;
+$t-l: 1.5rem;
 $t-size: 1rem;
-$t-small: .875rem;
-$t-smaller: .75em;
+$t-s: .875rem;
+$t-xs: .75em;
 {% endhighlight %}
 
 {% highlight css %}
-.whatever {font-size: $t-large}
+.whatever {font-size: $t-l}
 {% endhighlight %}
 
 ## Borders
@@ -90,7 +90,7 @@ $border-radius-large: 5px;
 {% endhighlight %}
 
 {% highlight css %}
-.whatever {font-size: $t-large}
+.whatever {font-size: $t-l}
 {% endhighlight %}
 
 ## Durations
