@@ -49,6 +49,8 @@ Popover Component
 	box-shadow: 0 0 1px 1px rgba(31,45,61,.15);
 	z-index: 999;
 	opacity: 0;
+	height: 0;
+	overflow: hidden;
 	visibility: hidden;
 }
 
@@ -76,6 +78,8 @@ Popover Component
 .popover-container--hover:hover > .popover,
 .popover-container--hover:focus > .popover {
 	opacity: 1;
+	height: auto;
+	overflow: visible;
 	visibility: visible;
 }
 
