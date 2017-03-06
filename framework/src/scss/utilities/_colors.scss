@@ -30,10 +30,6 @@ Color Utilities
  */
 
 // Background colors
-.bg-transparent {background: transparent !important}
-.bg-white {background: #fff !important}
-.bg-black {background: $black !important}
-
 .bg-lighter-grey {background: $lighter-grey !important}
 .bg-light-grey {background: $light-grey !important}
 .bg-grey {background: $grey !important}
@@ -67,6 +63,10 @@ Color Utilities
 .bg-teal {background: $teal !important}
 .bg-light-teal {background: $light-teal !important}
 .bg-dark-teal {background: $dark-teal !important}
+
+.bg-white {background: #fff !important}
+.bg-black {background: $black !important}
+.bg-transparent {background: transparent !important}
 
 // Typography Colors
 .t-white {color: #fff !important}

@@ -25,12 +25,7 @@
 
 .page-header__container {
 	@include clearfix;
-	@extend .fluid-row;
 	@extend .w-100;
-
-	> * {
-		@extend .fluid-row__item;
-	}
 }
 
 .page-header__logo {
@@ -45,7 +40,6 @@
 .page-header__nav {
 	@extend .list;
 	@extend .list--inline;
-	@extend .fluid-row__item--primary;
 }
 
 .page-header__nav-link {
@@ -96,3 +90,75 @@
 		}
 	}
 }
+
+button.page-header__subnav-link {
+	@extend .bg-transparent;
+	@extend .border-none;
+	cursor: pointer;
+}
+
+.page-header.mobile-is-open {
+	@extend .bg-black;
+	min-height: 100vh;
+	@extend .m-bottom-0;
+
+	// Hide all other page elements other than nav
+	& + * {
+		@extend .l-none;
+	}
+
+	.page-header__container {
+		@extend .l-block;
+
+		> * {
+			@extend .l-block;
+			@extend .m-top-0;
+			@extend .m-x-auto;
+			margin-bottom: 3em !important;
+			@extend .p-0;
+			@extend .t-center;
+			@extend .w-100;
+
+			> li {
+				@extend .l-block;
+				margin: 0 0 1.5rem !important;
+			}
+		}
+	}
+
+	.page-header__subnav {
+		@extend .p-0;
+	}
+
+	.popover {
+		@extend .l-pos-static;
+		@extend .m-0;
+		transform: translateX(0) translateY(-5px);
+	}
+
+	.popover.is-open {
+		@extend .m-y-s;
+		@extend .m-x-auto;
+		transform: none !important;
+	}
+}
+
+// Breakpoint Mixin!
+@mixin page-header--responsive($bp) {
+	@media (max-width: $bp - 1px) {
+		.page-header__only-show-small {/* let stay default */ }
+		.page-header__only-show-large { display: none !important; }
+	}
+	@media (min-width: $bp) {
+		.page-header__only-show-small { display: none !important; }
+		.page-header__only-show-large { /* let stay default */ }
+	}
+}
+
+// Predefined breakpoints!
+.page-header--responsive-s { @include page-header--responsive(600px) }
+.page-header--responsive-m { @include page-header--responsive(900px) }
+.page-header--responsive-l { @include page-header--responsive(1400px) }
+
+// Custom breakpoints (write this within an app)
+// .page-header { @include page-header--responsive(756px) }

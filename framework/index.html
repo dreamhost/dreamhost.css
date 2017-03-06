@@ -8,9 +8,9 @@
 <body>
 
 	<div class="page-header">
-		<div class="page-header__container">
-			<a class="page-header__logo" href="//www.dreamhost.com"><img src="https://www.dreamhost.com/assets/images/logo.dreamhost.white.svg" width="157" height="23"></a>
-			<ul class="page-header__nav">
+		<div class="page-header__container fluid-row">
+			<a class="page-header__logo fluid-row__item" href="//www.dreamhost.com"><img src="https://www.dreamhost.com/assets/images/logo.dreamhost.white.svg" width="157" height="23"></a>
+			<ul class="page-header__nav page-header__only-show-large fluid-row__item fluid-row__item--primary">
 				<li><a class="page-header__nav-link is-active" href="./docs/examples/dp/index.html">DreamPress demo</a></li>
 				<li><a class="page-header__nav-link" href="./docs/examples/support/index.html">Support demo</a></li>
 				<li><a class="page-header__nav-link" href="docs/index.html">Documentation</a></li>
@@ -34,7 +34,7 @@
 					</div>
 				</li>
 			</ul>
-			<ul class="page-header__subnav">
+			<ul class="page-header__subnav page-header__only-show-large fluid-row__item">
 				<li class="popover-container js-popover-container--click">
 					<button class="page-header__subnav-link has-text-caret js-btn-popover button-unset">
 						<svg class="icon icon-user-webid" viewBox="0 0 18 18">
@@ -140,6 +140,14 @@
 						</div>
 					</div>
 				</li>
+			</ul>
+			<ul class="page-header__subnav page-header__only-show-small fluid-row__item fluid-row__item--primary t-right">
+				<li><button class="page-header__subnav-link js-toggle-mobile-menu">
+					<svg class="icon icon-hamburger" viewBox="0 0 24 18">
+						<path d="M0 5.9L0 7.1C0 7.1 0 7.1 0 7.1L24 7.1C24 7.1 24 7.1 24 7.1L24 5.9C24 5.9 24 5.9 24 5.9L0 5.9C0 5.9 0 5.9 0 5.9ZM0 0.9L0 2.1C0 2.1 0 2.1 0 2.1L24 2.1C24 2.1 24 2.1 24 2.1L24 0.9C24 0.9 24 0.9 24 0.9L0 0.9C0 0.9 0 0.9 0 0.9ZM0 15.9L0 17.1C0 17.1 0 17.1 0 17.1L24 17.1C24 17.1 24 17.1 24 17.1L24 15.9C24 15.9 24 15.9 24 15.9L0 15.9C0 15.9 0 15.9 0 15.9ZM0 12.2C0 12.2 24 12.2 24 12.2L24 10.9C24 10.9 0 10.9 0 10.9L0 12.2Z"></path>
+					</svg><!-- remove whitespace
+					-->Menu
+				</button></li>
 			</ul>
 		</div>
 	</div>
