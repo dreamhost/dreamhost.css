@@ -51,7 +51,7 @@
 .page-header__nav-link {
 	@extend .t-decoration-none;
 	@extend .t-bold;
-	@extend .t-lighter-grey;
+	@extend .t-light-grey;
 	@extend .t-s;
 	@extend .l-inline-block;
 
@@ -64,7 +64,7 @@
 .page-header__nav-link--active {
 	@extend .t-white;
 	@extend .border-bottom-2;
-	@extend .border-light-blue;
+	@extend .border-blue;
 	@extend .border-solid;
 
 	&:hover {
