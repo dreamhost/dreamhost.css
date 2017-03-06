@@ -4,27 +4,27 @@ layout: page
 ---
 
 
-<p class="t-large">Layout utilities are prefixed with l- and control the positioning of elements.</p>
+<p class="t-l">Layout utilities are prefixed with l- and control the positioning of elements.</p>
 
 <hr />
 
 ## Floats
 
 <div>
-	<p class="m-bottom-none t-small t-red t-bold">.t-float-left</p>
+	<p class="m-bottom-0 t-s t-red t-bold">.t-float-left</p>
 	<div class="u-clearfix">
-		<p class="border p-small l-left">Left</p>
+		<p class="border p-s l-left">Left</p>
 	</div>
 </div>
 <div>
-	<p class="m-bottom-none t-small t-red t-bold">.l-float-right</p>
+	<p class="m-bottom-0 t-s t-red t-bold">.l-float-right</p>
 	<div class="u-clearfix">
-		<p class="border p-small l-right">Right</p>
+		<p class="border p-s l-right">Right</p>
 	</div>
 </div>
 <div>
-	<p class="m-bottom-none t-small t-red t-bold">.l-float-none</p>
-	<p class="border p-small l-none">None</p>
+	<p class="m-bottom-0 t-s t-red t-bold">.l-float-none</p>
+	<p class="border p-s l-none">None</p>
 </div>
 
 {% highlight html %}
@@ -37,22 +37,22 @@ layout: page
 ## Display
 
 <div>
-	<p class="m-bottom-none t-small t-red t-bold">.l-centered</p>
+	<p class="m-bottom-0 t-s t-red t-bold">.l-centered</p>
 	<div class="u-clearfix">
-		<p class="border p-small l-centered" style="width: 400px;">Centered</p>
+		<p class="border p-s l-centered" style="width: 400px;">Centered</p>
 	</div>
 </div>
 <div class="m-bottom">
-	<p class="m-bottom-none t-small t-red t-bold l-inline">.l-inline</p>
-	<p class="border p-small l-inline">Inline</p>
+	<p class="m-bottom-0 t-s t-red t-bold l-inline">.l-inline</p>
+	<p class="border p-s l-inline">Inline</p>
 </div>
 <div>
-	<p class="m-bottom-none t-small t-red t-bold l-inline">.l-inline-block</p>
-	<p class="border p-small l-inline-block">Inline-block</p>
+	<p class="m-bottom-0 t-s t-red t-bold l-inline">.l-inline-block</p>
+	<p class="border p-s l-inline-block">Inline-block</p>
 </div>
 <div>
-	<p class="m-bottom-none t-small t-red t-bold">.l-block</p>
-	<p class="border p-small l-block">Block</p>
+	<p class="m-bottom-0 t-s t-red t-bold">.l-block</p>
+	<p class="border p-s l-block">Block</p>
 </div>
 
 {% highlight html %}

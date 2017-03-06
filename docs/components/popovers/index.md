@@ -26,7 +26,7 @@ layout: page
   <div class="container">
     <div class="popover-container js-popover-container--click g-1_4">
       <div class="popover has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a top popover with a caret.
         </div>
       </div>
@@ -35,7 +35,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_4">
       <div class="popover popover--right has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a right popover with a caret.
         </div>
       </div>
@@ -44,7 +44,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_4">
       <div class="popover popover--bottom has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a bottom popover with a caret.
         </div>
       </div>
@@ -53,7 +53,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_4">
       <div class="popover popover--left has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a left popover with a caret.
         </div>
       </div>
@@ -75,7 +75,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_2">
       <div class="popover popover--flush-left has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a top positioned popover that is flushed left with the clicked element.
         </div>
       </div>
@@ -84,7 +84,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_2 p-bottom-large">
       <div class="popover popover--flush-right has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a top positioned popover that is flushed right with the clicked element.
         </div>
       </div>
@@ -101,7 +101,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_2">
       <div class="popover popover--left popover--flush-top has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a left positioned popover that is flushed top with the clicked element.
         </div>
       </div>
@@ -110,7 +110,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_2">
       <div class="popover popover--left popover--flush-bottom has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a left positioned popover that is flushed bottom with the clicked element.
         </div>
       </div>
@@ -133,7 +133,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_4">
       <div class="popover has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a popover using the default theme.
         </div>
       </div>
@@ -142,7 +142,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_4">
       <div class="popover popover--dark has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a popover using the dark theme.
         </div>
       </div>
@@ -151,7 +151,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_4">
       <div class="popover popover--error has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a popover using the error theme.
         </div>
       </div>
@@ -160,7 +160,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_4">
       <div class="popover popover--success has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a popover using the success theme.
         </div>
       </div>
@@ -183,7 +183,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_3">
       <div class="popover popover--small has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a small width popover.
         </div>
       </div>
@@ -192,7 +192,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_3">
       <div class="popover has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a medium width popover.
         </div>
       </div>
@@ -201,7 +201,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_3">
       <div class="popover popover--large has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This is a large width popover.
         </div>
       </div>
@@ -261,7 +261,7 @@ layout: page
 
   <div class="popover-container js-popover-container--click p-bottom-larger">
     <div class="popover has-caret">
-      <div class="p-small">
+      <div class="p-s">
         This popover only activates on click.
       </div>
     </div>
@@ -274,7 +274,7 @@ layout: page
 
   <div class="popover-container popover-container--hover">
     <div class="popover has-caret">
-      <div class="p-small">
+      <div class="p-s">
         This popover only activates on hover.
       </div>
     </div>
@@ -295,7 +295,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_2">
       <div class="popover has-caret">
-        <div class="p-small">
+        <div class="p-s">
           This popover has a caret.
         </div>
       </div>
@@ -304,7 +304,7 @@ layout: page
 
     <div class="popover-container js-popover-container--click g-1_2">
       <div class="popover">
-        <div class="p-small">
+        <div class="p-s">
           This popover does not have a caret.
         </div>
       </div>

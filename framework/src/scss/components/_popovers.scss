@@ -18,7 +18,7 @@ Popover Component
 	<div class="popover-container js-popover-container--click">
 		<div class="popover popover--dark popover--bottom
 		popover--flush-left has-caret">
-			<div class="p-small">
+			<div class="p-s">
 				This is a dark themed popover with small padding. It appears
 				below the clicked element, is flushed left, and has a caret.
 				Note, popovers must live within .popover-container. To enable
@@ -336,10 +336,10 @@ Popover Component
 .popover__section {
 	// Separator classes
 	&--separator {
-		border-top: 1px solid darken($lightest-grey, 5%);
+		border-top: 1px solid darken($lighter-grey, 5%);
 
 		.popover--dark & {
-			border-color: darken($darkest-grey, 5%);
+			border-color: darken($darker-grey, 5%);
 		}
 	}
 
