@@ -90,24 +90,43 @@ Popover Component
 	- popover--error
 	- popover--success
 */
-.popover--dark,
-.popover--dark.has-caret:after {
-	@extend .bg-black;
-	@extend .t-white;
-}
+.popover{
+	&.popover--dark {
+		&,
+		& a {
+			@extend .t-white;
+		}
 
-.popover--error,
-.popover--error.has-caret:after {
-	@extend .bg-dark-red;
-	@extend .t-white;
-}
+		&,
+		&.has-caret:after {
+			@extend .bg-black;
+		}
+	}
 
-.popover--success,
-.popover--success.has-caret:after {
-	@extend .bg-dark-green;
-	@extend .t-white;
-}
+	&.popover--error {
+		&,
+		& a {
+			@extend .t-white;
+		}
 
+		&,
+		&.has-caret:after {
+			@extend .bg-dark-red;
+		}
+	}
+
+	&.popover--success{
+		&,
+		& a {
+			@extend .t-white;
+		}
+
+		&,
+		&.has-caret:after {
+			@extend .bg-dark-green;
+		}
+	}
+}
 
 /*
 	Positioning:
