@@ -1,5 +1,6 @@
 .list {
 	@extend .t-left; // All lists should be left aligned unless specified
+
 	> li {
 		@extend .m-bottom-s;
 
