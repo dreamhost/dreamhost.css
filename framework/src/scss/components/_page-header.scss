@@ -62,7 +62,17 @@ Page Header Component
 
 .page-header__container {
 	@include clearfix;
+	@extend .fluid-row;
 	@extend .w-100;
+
+	> * {
+		@extend .fluid-row__item;
+	}
+}
+
+.page-header__nav,
+.page-header__mobile-button {
+	@extend .fluid-row__item--primary;
 }
 
 .page-header__logo {
