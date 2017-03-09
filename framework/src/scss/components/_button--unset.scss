@@ -1,4 +1,4 @@
-@mixin button-unset {
+@mixin button--unset {
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -7,6 +7,6 @@
 	margin: 0;
 }
 
-button.button-unset {
-	@include button-unset;
+button.button--unset {
+	@include button--unset;
 }
