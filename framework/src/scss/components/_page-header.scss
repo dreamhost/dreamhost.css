@@ -57,7 +57,7 @@ Page Header Component
 	@extend .bg-transparent;
 	@extend .l-pos-absolute;
 	@extend .w-100;
-	@extend .u-z-index-l;
+	@extend .z-3;
 }
 
 .page-header__container {
