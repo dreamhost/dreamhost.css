@@ -5,10 +5,18 @@ var sass        = require('gulp-sass');
 var stylelint   = require('gulp-stylelint');
 var prefix      = require('gulp-autoprefixer');
 var rename      = require('gulp-rename');
-var concat 			= require('gulp-concat');
-var uglify 			= require('gulp-uglify');
+var concat      = require('gulp-concat');
+var uglify      = require('gulp-uglify');
 var lintconfig  = require('./stylelint.config.js');
 var package     = require('./package.json');
+
+var dist = {
+	fileName: 'dreamhost',
+	path: {
+		version: './dist/' + package.version,
+		latest: './dist/latest'
+	}
+};
 
 /*
 
@@ -94,10 +102,30 @@ gulp.task('js', function() {
 });
 
 gulp.task('js-dist', function() {
-	return gulp.src('./src/js/bundle.js')
-		.pipe(rename('bundle.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('./dist/'))
+	return gulp.src([
+			'./src/js/*.js',
+			'!./src/js/bundle.js'
+		])
+		.pipe(concat(dist.fileName + '.js'))
+		.pipe(gulp.dest(dist.path.version))
+		.pipe(gulp.dest(dist.path.latest))
+		.pipe(cleanCSS())
+		.pipe(rename(dist.fileName + '.min.js'))
+		.pipe(gulp.dest(dist.path.version))
+		.pipe(gulp.dest(dist.path.latest));
+});
+
+gulp.task('css-dist', function() {
+	return gulp.src('./src/scss/*.scss')
+		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
+		.pipe(prefix({browsers: ['last 4 versions']}))
+		.pipe(rename(dist.fileName + '.css'))
+		.pipe(gulp.dest(dist.path.version))
+		.pipe(gulp.dest(dist.path.latest))
+		.pipe(cleanCSS())
+		.pipe(rename(dist.fileName + '.min.css'))
+		.pipe(gulp.dest(dist.path.version))
+		.pipe(gulp.dest(dist.path.latest));
 });
 
 /*
@@ -112,21 +140,8 @@ gulp.task('js-dist', function() {
 
 */
 
-gulp.task('dist', ['js-dist'], function() {
-	var file = 'dreamhost',
-		destVersion = './dist/' + package.version,
-		destLatest = './dist/latest';
-
-	return gulp.src('./src/scss/*.scss')
-		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
-		.pipe(prefix({browsers: ['last 4 versions']}))
-		.pipe(rename(file + '.css'))
-		.pipe(gulp.dest(destVersion))
-		.pipe(gulp.dest(destLatest))
-		.pipe(cleanCSS())
-		.pipe(rename(file + '.min.css'))
-		.pipe(gulp.dest(destVersion))
-		.pipe(gulp.dest(destLatest));
+gulp.task('dist', ['css-dist', 'js-dist'], function() {
+	return; // This just runs css-dist and js-dist
 })
 
 /*
