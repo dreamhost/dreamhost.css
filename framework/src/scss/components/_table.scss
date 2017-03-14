@@ -13,28 +13,31 @@ Table
 	@extend .w-100;
 	@extend .m-bottom;
 	@extend .t-left;
-}
 
-thead tr {
-	border-bottom: 3px solid $lighter-grey;
-}
+	thead tr {
+		border-bottom: 3px solid $lighter-grey;
+	}
 
-th {
-	@extend .p-left;
-	@extend .p-right;
-	@extend .p-top-s;
-	@extend .p-bottom-s;
-	@extend .t-l;
-	@extend .t-heading;
-	@extend .t-black;
-}
+	th {
+		@extend .p-left;
+		@extend .p-right;
+		@extend .p-top-s;
+		@extend .p-bottom-s;
+		@extend .t-l;
+		@extend .t-heading;
+		@extend .t-black;
+	}
 
-tbody tr {@extend .border;}
-tbody tr:nth-child(odd) {@extend .bg-white;}
+	tbody tr {
+		@extend .border;
+		@extend .border-light-grey;
+	}
+	tbody tr:nth-child(odd) {@extend .bg-white;}
 
-td {
-	@extend .p-s;
-	@extend .u-vertical-align-middle;
+	td {
+		@extend .p-s;
+		@extend .u-vertical-align-middle;
+	}
 }
 
 .table--large-padding td {
