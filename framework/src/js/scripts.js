@@ -33,3 +33,8 @@ $popover.on('click', function (e) {
 $(document).on('click', function (e) {
 	$('.popover').removeClass('is-open');
 });
+
+$(document).on('click', '.js-toggle-mobile-menu', function(e) {
+	e.preventDefault();
+	$('.page-header').toggleClass('mobile-is-open');
+});

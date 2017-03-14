@@ -1,7 +1,75 @@
-.list > li:not(:last-child) {@extend .m-bottom-s;}
+/*
+	Default list component
+
+	.list is for a general purpose list of text
+	.list--disc gives the list dots, for an unordered list
+	.list--inline makes the list horizontal
+*/
+.list {@extend .t-left;} // All lists should be left aligned unless specified
+.list > li {@extend .m-bottom-s;}
+.list > li:last-child {@extend .m-bottom-0;}
 
 .list--disc {list-style-type: disc; list-style-position: outside}
 .list--disc > li {@extend .m-left;}
 
 .list--inline > li {@extend .p-0, .l-inline, .m-right;}
-.list--inline:last-child {@extend .m-right-0;}
+.list--inline > li:last-child {@extend .m-right-0;}
+
+
+/*
+	List style variations
+
+	Add to the default .list component for consistent styles
+	- list--padding adds some default padding around the list items for larger click areas
+	- list--small-bold is a slightly smaller and bolder list with no link underlines
+*/
+// .list--padding
+.list.list--padding {@extend .p-y-xs;}
+.list.list--padding > li {@extend .m-bottom-0;}
+
+.list.list--padding > li > * {
+	@extend .l-block;
+	padding: $s-xs $s-xs*2;
+
+	@extend .tr-duration;
+	@extend .tr-easing-linear;
+}
+
+// .list--small-bold
+.list--small-bold > li > * {
+	@extend .t-bold;
+	@extend .t-black;
+	@extend .t-decoration-none;
+	@extend .t-s;
+}
+
+// Don't give hover states to non-links
+.list--small-bold > li > a:hover,
+.list--small-bold > li > button:hover,
+.list--small-bold > li > .is-link:hover {
+	@extend .t-blue;
+}
+
+// Disabled state
+.list--small-bold > li  > .is-disabled {
+	pointer-events: none;
+	opacity: .3;
+}
+
+/*
+	Makes icons display in a right-aligned column in the list, instead of left
+
+	<ul class="list list--icon-right">
+		<li><a><svg class="icon">...</svg>Link</a></li>
+	</ul>
+*/
+.list--icon-right > li {@extend .l-pos-relative;}
+.list--icon-right > li > * {padding-right: 3.5em;}
+
+.list--icon-right .icon {
+	@extend .l-pos-absolute;
+	top: 50%;
+	margin-top: -.725em;
+	margin-right: 0;
+	right: 1.5em;
+}

@@ -49,12 +49,15 @@ Popover Component
 	box-shadow: 0 0 1px 1px rgba(31,45,61,.15);
 	z-index: 999;
 	opacity: 0;
+	height: 0;
+	overflow: hidden;
 	visibility: hidden;
 }
 
 .popover,
 .popover.has-caret:after {
 	@extend .bg-white;
+	@extend .t-black;
 	@extend .tr-duration-l;
 	@extend .tr-easing-ease;
 }
@@ -75,6 +78,8 @@ Popover Component
 .popover-container--hover:hover > .popover,
 .popover-container--hover:focus > .popover {
 	opacity: 1;
+	height: auto;
+	overflow: visible;
 	visibility: visible;
 }
 
@@ -85,24 +90,43 @@ Popover Component
 	- popover--error
 	- popover--success
 */
-.popover--dark,
-.popover--dark.has-caret:after {
-	@extend .bg-black;
-	@extend .t-white;
-}
+.popover {
+	&.popover--dark {
+		&,
+		& a {
+			@extend .t-white;
+		}
 
-.popover--error,
-.popover--error.has-caret:after {
-	@extend .bg-dark-red;
-	@extend .t-white;
-}
+		&,
+		&.has-caret:after {
+			@extend .bg-black;
+		}
+	}
 
-.popover--success,
-.popover--success.has-caret:after {
-	@extend .bg-dark-green;
-	@extend .t-white;
-}
+	&.popover--error {
+		&,
+		& a {
+			@extend .t-white;
+		}
 
+		&,
+		&.has-caret:after {
+			@extend .bg-dark-red;
+		}
+	}
+
+	&.popover--success{
+		&,
+		& a {
+			@extend .t-white;
+		}
+
+		&,
+		&.has-caret:after {
+			@extend .bg-dark-green;
+		}
+	}
+}
 
 /*
 	Positioning:
@@ -328,40 +352,25 @@ Popover Component
 
 
 /*
-	Dropdown:
-	- popover-dropdown
-	- popover-separator
+	Dropdown Content:
+	- popover__section
 */
 
-.popover-dropdown {
-	@extend .t-left;
-}
+.popover__section {
+	// Separator classes
+	&--separator {
+		border-top: 1px solid darken($lighter-grey, 5%);
 
-.popover-dropdown a {
-	@extend .l-block;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-bottom: 1rem;
-}
+		.popover--dark & {
+			border-color: darken($darker-grey, 5%);
+		}
+	}
 
-.popover-dropdown a,
-.popover-dropdown a:link {
-	@extend .t-decoration-none;
-	@extend .tr-duration;
-	@extend .tr-easing-linear;
-	cursor: pointer;
-}
-
-.popover-dropdown a:first-child {
-	padding-top: 1rem;
-}
-
-.popover-separator {
-	height: 1px;
-	margin-bottom: 1rem;
-	background: darken($lighter-grey, 5%);
-}
-
-.popover--dark .popover-separator {
-	background: darken($darker-grey, 5%);
+	// Round corners on first/last section
+	&:first-child {
+		border-radius: $border-radius $border-radius 0 0;
+	}
+	&:last-child {
+		border-radius: 0 0 $border-radius $border-radius;
+	}
 }

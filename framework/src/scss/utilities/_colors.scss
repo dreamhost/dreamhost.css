@@ -30,9 +30,6 @@ Color Utilities
  */
 
 // Background colors
-.bg-white {background: #fff !important}
-.bg-black {background: $black !important}
-
 .bg-lighter-grey {background: $lighter-grey !important}
 .bg-light-grey {background: $light-grey !important}
 .bg-grey {background: $grey !important}
@@ -67,35 +64,64 @@ Color Utilities
 .bg-light-teal {background: $light-teal !important}
 .bg-dark-teal {background: $dark-teal !important}
 
+.bg-white {background: #fff !important}
+.bg-black {background: $black !important}
+.bg-transparent {background: transparent !important}
+
 // Typography Colors
 .t-white {color: #fff !important}
-.t-grey {color: $dark-grey !important}
+.t-lighter-grey {color: $lighter-grey !important}
+.t-light-grey {color: $light-grey !important}
+.t-grey {color: $grey !important}
+.t-dark-grey {color: $dark-grey !important}
+.t-darker-grey {color: $darker-grey !important}
 .t-black {color: $black !important}
-.t-blue {color: $dark-blue !important}
-.t-salmon {color: $dark-salmon !important}
-.t-red {color: $dark-red !important}
-.t-yellow {color: $dark-yellow !important}
-.t-orange {color: $dark-orange !important}
-.t-green {color: $dark-green !important}
-.t-teal {color: $dark-teal !important}
+
+.t-light-blue {color: $light-blue !important}
+.t-blue {color: $blue !important}
+.t-dark-blue {color: $dark-blue !important}
+
+.t-light-salmon {color: $light-salmon !important}
+.t-salmon {color: $salmon !important}
+.t-dark-salmon {color: $dark-salmon !important}
+
+.t-light-red {color: $light-red !important}
+.t-red {color: $red !important}
+.t-dark-red {color: $dark-red !important}
+
+.t-light-yellow {color: $light-yellow !important}
+.t-yellow {color: $yellow !important}
+.t-dark-yellow {color: $dark-yellow !important}
+
+.t-light-orange {color: $light-orange !important}
+.t-orange {color: $orange !important}
+.t-dark-orange {color: $dark-orange !important}
+
+.t-light-green {color: $light-green !important}
+.t-green {color: $green !important}
+.t-dark-green {color: $dark-green !important}
+
+.t-light-teal {color: $light-teal !important}
+.t-teal {color: $teal !important}
+.t-dark-teal {color: $dark-teal !important}
 
 // Combo Colors
 .c-blue {@extend .bg-blue; @extend .t-black;}
-.c-light-blue {@extend .bg-light-blue; @extend .t-blue;}
+.c-light-blue {@extend .bg-light-blue; @extend .t-dark-blue;}
 .c-dark-blue {@extend .bg-dark-blue; @extend .t-white;}
 
 .c-yellow,
 .c-dark-yellow {@extend .t-black;}
 .c-yellow {@extend .bg-yellow;}
-.c-light-yellow {@extend .bg-light-yellow; @extend .t-yellow;}
+.c-light-yellow {@extend .bg-light-yellow; @extend .t-dark-yellow;}
 .c-dark-yellow {@extend .bg-dark-yellow;}
 
 .c-orange {@extend .bg-orange; @extend .t-black;}
-.c-light-orange {@extend .bg-light-orange; @extend .t-orange;}
+.c-light-orange {@extend .bg-light-orange; @extend .t-dark-orange;}
 .c-dark-orange {@extend .bg-dark-orange; @extend .t-white;}
 
 .c-salmon {@extend .bg-salmon; @extend .t-black;}
-.c-light-salmon {@extend .bg-light-salmon; @extend .t-salmon;}
+.c-light-salmon {@extend .bg-light-salmon; @extend .t-dark-salmon;}
 .c-dark-salmon {@extend .bg-dark-salmon; @extend .t-white;}
 
 .c-red,
@@ -105,9 +131,9 @@ Color Utilities
 .c-dark-red {@extend .bg-dark-red;}
 
 .c-green {@extend .bg-green; @extend .t-black;}
-.c-light-green {@extend .bg-light-green; @extend .t-green;}
+.c-light-green {@extend .bg-light-green; @extend .t-dark-green;}
 .c-dark-green {@extend .bg-dark-green; @extend .t-white;}
 
 .c-teal {@extend .bg-teal; @extend .t-black;}
-.c-light-teal {@extend .bg-light-teal; @extend .t-teal;}
+.c-light-teal {@extend .bg-light-teal; @extend .t-dark-teal;}
 .c-dark-teal {@extend .bg-dark-teal; @extend .t-white;}

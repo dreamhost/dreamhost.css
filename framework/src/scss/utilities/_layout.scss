@@ -5,6 +5,11 @@
 .l-inline {display: inline !important}
 .l-inline-block {display: inline-block !important}
 .l-block {display: block !important}
+.l-none {display: none !important}
+
+.l-table {display: table !important}
+.l-table-cell {display: table-cell !important}
+.l-table-row {display: table-row !important}
 
 .l-table {display: table !important}
 .l-table-row {display: table-row !important}
@@ -13,6 +18,7 @@
 .l-pos-absolute {position: absolute !important}
 .l-pos-relative {position: relative !important}
 .l-pos-fixed {position: fixed !important}
+.l-pos-static {position: static !important}
 
 .l-pos-top {top: 0 !important}
 .l-pos-bottom {bottom: 0 !important}
