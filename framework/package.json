@@ -7,7 +7,7 @@
     "url": "https://github.com/dreamhost/dreamhost.css.git"
   },
   "scripts": {
-    "postversion": "gulp dist && git add -A && git commit --amend --no-edit"
+    "version": "gulp dist && git add -A"
   },
   "devDependencies": {
     "browser-sync": "2.18.1",
