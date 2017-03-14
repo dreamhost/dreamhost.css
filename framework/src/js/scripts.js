@@ -12,10 +12,7 @@ $link.click(function(){
 })
 
 // Popovers
-var $button = $('.js-btn-popover'),
-	$popover = $('.popover');
-
-$button.on('click', function (e) {
+$(document).on('click', '.js-btn-popover', function (e) {
 	var $thisPopover = $(this)
 		.closest('.js-popover-container--click:not(.popover-container--hover)')
 		.find('.popover');
@@ -26,7 +23,7 @@ $button.on('click', function (e) {
 	e.stopPropagation();
 });
 
-$popover.on('click', function (e) {
+$(document).on('click', '.popover', function (e) {
 	e.stopPropagation();
 });
 
