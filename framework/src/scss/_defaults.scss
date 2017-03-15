@@ -44,8 +44,14 @@ p {
 a {
 	color: $black;
 	text-decoration: underline;
+
 	&:hover {
 		text-decoration: none;
+	}
+
+	&.is-disabled {
+		pointer-events: none;
+		opacity: .3;
 	}
 }
 
