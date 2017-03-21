@@ -33,6 +33,7 @@ Table
 		@extend .border-light-grey;
 	}
 	tbody tr:nth-child(odd) {@extend .bg-white;}
+	tbody tr:nth-child(even) {@extend .bg-lighter-grey;}
 
 	td {
 		@extend .p-s;
