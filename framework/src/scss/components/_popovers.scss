@@ -34,15 +34,15 @@ Popover Component
 
 // Base
 .popover-container {
-	@extend .l-inline-block;
-	@extend .l-pos-relative;
+	display: inline-block;
+	position: relative;
 }
 
 .popover {
-	@extend .l-pos-absolute;
-	@extend .t-center;
-	@extend .u-rounded-corners;
-	@extend .border-none;
+	position: absolute;
+	text-align: center;
+	border-radius: $border-radius;
+	border-width: 0;
 	margin-bottom: 1rem;
 	bottom: 100%;
 	transform: translateX(-50%) translateY(-5px);
@@ -56,16 +56,16 @@ Popover Component
 
 .popover,
 .popover.has-caret:after {
-	@extend .bg-white;
-	@extend .t-black;
-	@extend .tr-duration-l;
-	@extend .tr-easing-ease;
+	background: #fff;
+	color: $black;
+	transition-duration: $tr-l;
+	transition-timing-function: ease-in-out;
 }
 
 .popover.has-caret:after {
-	@extend .l-block;
-	@extend .l-pos-absolute;
-	@extend .u-rounded-corners;
+	display: block;
+	position: absolute;
+	border-radius: $border-radius;
 	width: 12px;
 	height: 12px;
 	content: '';
@@ -94,36 +94,36 @@ Popover Component
 	&.popover--dark {
 		&,
 		& a {
-			@extend .t-white;
+			color: #fff;
 		}
 
 		&,
 		&.has-caret:after {
-			@extend .bg-black;
+			background: $black;
 		}
 	}
 
 	&.popover--error {
 		&,
 		& a {
-			@extend .t-white;
+			color: #fff;
 		}
 
 		&,
 		&.has-caret:after {
-			@extend .bg-dark-red;
+			background: $dark-red;
 		}
 	}
 
 	&.popover--success{
 		&,
 		& a {
-			@extend .t-white;
+			color: #fff;
 		}
 
 		&,
 		&.has-caret:after {
-			@extend .bg-dark-green;
+			background: $dark-green;
 		}
 	}
 }
@@ -170,12 +170,12 @@ Popover Component
 
 .popover.popover--flush-left,
 .popover--bottom.popover--flush-left {
-	@extend .l-pos-left;
+	left: 0;
 }
 
 .popover.popover--flush-right,
 .popover--bottom.popover--flush-right {
-	@extend .l-pos-right;
+	right: 0;
 	left: auto;
 }
 

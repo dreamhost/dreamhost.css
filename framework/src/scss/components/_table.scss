@@ -10,39 +10,39 @@ Table
 */
 
 .table {
-	@extend .w-100;
-	@extend .m-bottom;
-	@extend .t-left;
+	width: 100%;
+	margin-bottom: $s-m;
+	text-align: left;
 
 	thead tr {
 		border-bottom: 3px solid $lighter-grey;
 	}
 
 	th {
-		@extend .p-left;
-		@extend .p-right;
-		@extend .p-top-s;
-		@extend .p-bottom-s;
-		@extend .t-l;
-		@extend .t-heading;
-		@extend .t-black;
+		padding-left: $s-m;
+		padding-right: $s-m;
+		padding-top: $s-s;
+		padding-bottom: $s-s;
+		font-size: $t-l;
+		font-family: $heading;
+		color: $black;
 	}
 
 	tbody tr {
 		@extend .border;
 		@extend .border-light-grey;
 	}
-	tbody tr:nth-child(odd) {@extend .bg-white;}
+	tbody tr:nth-child(odd) {background: #fff;}
 
 	td {
-		@extend .p-s;
-		@extend .u-vertical-align-middle;
+		padding: $s-s;
+		vertical-align: middle;
 	}
 }
 
 .table--large-padding td {
-	@extend .p-left;
-	@extend .p-right;
-	@extend .p-top-l;
-	@extend .p-bottom-l;
+	padding-left: $s-m;
+	padding-right: $s-m;
+	padding-top: $s-l;
+	padding-bottom: $s-l;
 }

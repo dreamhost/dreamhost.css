@@ -7,21 +7,21 @@
 */
 
 .option-box {
-	@extend .t-center;
+	text-align: center;
 
 	//unlink
-	@extend .t-decoration-none;
-	@extend .t-black;
+	text-decoration: none;
+	color: $black;
 }
 
 .option-box__heading {
-	@extend .bg-blue;
-	@extend .p-s;
-	@extend .m-bottom-0;
-	@extend .t-black;
+	background: $blue;
+	padding: $s-s;
+	margin-bottom: 0;
+	color: $black;
 }
 
 .option-box__content {
 	@include box;
-	@extend .bg-white;
+	background: #fff;
 }
