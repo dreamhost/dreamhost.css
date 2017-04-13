@@ -14,13 +14,24 @@ $link.click(function(){
 // Popovers
 $(document).on('click', '.js-btn-popover', function (e) {
 	var $thisPopover = $(this)
-		.closest('.js-popover-container--click:not(.popover-container--hover)')
-		.find('.popover');
+		.closest('.js-popover-container--click')
+		.children('.popover');
 
 	$thisPopover.toggleClass('is-open');
+	$(this).toggleClass('is-open');
 	$('.popover').not($thisPopover).removeClass('is-open');
 
 	e.stopPropagation();
+});
+
+$(document).on('mouseover', '.popover-container--hover', function () {
+	$(this).find('.js-btn-popover').addClass('is-open');
+});
+
+$(document).on('mouseout', '.popover-container--hover', function () {
+	$('.popover-container--hover')
+		.find('.js-btn-popover')
+		.removeClass('is-open');
 });
 
 $(document).on('click', '.popover', function (e) {
@@ -28,7 +39,7 @@ $(document).on('click', '.popover', function (e) {
 });
 
 $(document).on('click', function (e) {
-	$('.popover').removeClass('is-open');
+	$('.popover, .js-btn-popover').removeClass('is-open');
 });
 
 $(document).on('click', '.js-toggle-mobile-menu', function(e) {

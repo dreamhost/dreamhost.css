@@ -96,7 +96,7 @@ Page Header Component
 	@extend .t-s;
 	@extend .l-inline-block;
 
-	&:hover {
+	&:hover, &.is-open {
 		@extend .t-light-blue;
 	}
 }
@@ -129,7 +129,7 @@ Page Header Component
 		opacity: .3;
 	}
 
-	&:hover {
+	&:hover, &.is-open {
 		@extend .t-light-blue;
 
 		.icon {
