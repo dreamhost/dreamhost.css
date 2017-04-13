@@ -66,9 +66,12 @@ $t-m: 1rem;
 $t-s: .875rem; // legibility at small sizes > adhering to scales
 $t-xs: .75em;
 
-// Borders
+// Border radius
 $border-radius: 3px;
 $border-radius-l: 5px;
+
+// Border size
+$border-size: 2px;
 
 // Animation Duration
 $a-xl: 2s;
