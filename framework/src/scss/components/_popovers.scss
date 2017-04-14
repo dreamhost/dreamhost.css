@@ -9,10 +9,9 @@ Popover Component
 	- The default theme is light.
 	- The default width is medium.
 	- Popover content can vary, there are no strict dos and don'ts.
+	- The max-height class is optional. It enforces a 60vh max-height.
 	- It is possible to nest hover popovers inside of click popovers.
-	- To enforce an optional 60vh max-height, include <div class="popover__max-height">
-		after <div class="popover">
-	- Popovers with the max-height declared cannot contain nested popovers.
+	- Popovers with max-height cannot contain nested popovers.
 	- Padding size can vary.
 	- The caret is optional.
 	- Replace .js-popover-container--click with .popover-container--hover
@@ -21,13 +20,14 @@ Popover Component
 	Usage:
 	<div class="popover-container js-popover-container--click">
 		<div class="popover popover--dark popover--bottom
-		popover--flush-left has-caret">
-			<div class="p-s">
-				This is a dark themed popover with small padding. It appears
-				below the clicked element, is flushed left, and has a caret.
-				Note, popovers must live within .popover-container. To enable
-				popovers on hover, the .popover-container--hover class must be
-				included on the container.
+		popover--flush-left popover--max-height has-caret">
+			<div class="popover__wrapper">
+				<div class="p-s">
+					This is a dark themed popover with small padding. It appears
+					below the clicked element, is flushed left, has max-height
+					enforced, and has a caret. Note, popovers must live within .popover-container. To enable popovers on hover, the .popover-container--hover class must be included on the
+					container.
+				</div>
 			</div>
 		</div>
 		<a class="btn js-btn-popover">Click me</a>
@@ -40,12 +40,6 @@ Popover Component
 .popover-container {
 	@extend .l-inline-block;
 	@extend .l-pos-relative;
-}
-
-.popover__max-height {
-	max-height: 60vh;
-	height: 100%;
-	overflow: hidden;
 }
 
 .popover {
@@ -91,7 +85,17 @@ Popover Component
 	visibility: visible;
 }
 
-.popover.is-open .popover__max-height {
+/*
+	Max height:
+	Enforces 60% viewport maximum height.
+ */
+.popover--max-height .popover__wrapper{
+	max-height: 60vh;
+	height: 100%;
+	overflow: hidden;
+}
+
+.popover--max-height.is-open .popover__wrapper {
 	overflow: scroll;
 }
 
