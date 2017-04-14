@@ -9,6 +9,10 @@ Popover Component
 	- The default theme is light.
 	- The default width is medium.
 	- Popover content can vary, there are no strict dos and don'ts.
+	- It is possible to nest hover popovers inside of click popovers.
+	- To enforce an optional 60vh max-height, include <div class="popover__max-height">
+		after <div class="popover">
+	- Popovers with the max-height declared cannot contain nested popovers.
 	- Padding size can vary.
 	- The caret is optional.
 	- Replace .js-popover-container--click with .popover-container--hover
@@ -36,6 +40,12 @@ Popover Component
 .popover-container {
 	@extend .l-inline-block;
 	@extend .l-pos-relative;
+}
+
+.popover__max-height {
+	max-height: 60vh;
+	height: 100%;
+	overflow: hidden;
 }
 
 .popover {
@@ -79,6 +89,10 @@ Popover Component
 	height: auto;
 	overflow: visible;
 	visibility: visible;
+}
+
+.popover.is-open .popover__max-height {
+	overflow: scroll;
 }
 
 

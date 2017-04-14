@@ -14,7 +14,7 @@ $link.click(function(){
 // Popovers
 $(document).on('click', '.js-btn-popover', function (e) {
 	var $thisPopover = $(this)
-		.closest('.js-popover-container--click')
+		.parent()
 		.children('.popover');
 
 	$thisPopover.toggleClass('is-open');
