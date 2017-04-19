@@ -39,7 +39,7 @@ layout: page
 </div>
 {% endhighlight %}
 
-See [Neat docs](http://neat.bourbon.io/) for more information on using Sass if the helper classes aren't enough.
+<p class="m-bottom">See [Neat docs](http://neat.bourbon.io/) for more information on using Sass if the helper classes aren't enough.</p>
 
 
 
