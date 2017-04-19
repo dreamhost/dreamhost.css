@@ -1,0 +1,50 @@
+/*
+
+Table
+
+	Minimal table stylings. Sets padding, alignment and alternate
+	row backgrounds.
+
+	Adding .table--large-padding will double the padding.
+
+*/
+
+.table {
+	width: 100%;
+	margin-bottom: $s-m;
+	text-align: left;
+
+	thead tr {
+		border-bottom: 3px solid $lighter-grey;
+	}
+
+	th {
+		padding-left: $s-m;
+		padding-right: $s-m;
+		padding-top: $s-s;
+		padding-bottom: $s-s;
+		font-size: $t-l;
+		font-family: $heading;
+		color: $black;
+	}
+
+	tbody tr {
+		@extend .border;
+		@extend .border-light-grey;
+	}
+
+	tbody tr:nth-child(odd) {background: #fff;}
+	tbody tr:nth-child(even) {background: $lighter-grey;}
+
+	td {
+		padding: $s-s;
+		vertical-align: middle;
+	}
+}
+
+.table--large-padding td {
+	padding-left: $s-m;
+	padding-right: $s-m;
+	padding-top: $s-l;
+	padding-bottom: $s-l;
+}

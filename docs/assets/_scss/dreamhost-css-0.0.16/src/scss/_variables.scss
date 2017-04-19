@@ -1,0 +1,102 @@
+// Variables
+
+// To stay consistent, we set as many properties as variables as we can.
+// We have five(???) options for margins and paddings and a something-point typographic scale.
+// All colours should be defined in this file except #fff and #000.
+
+// Look in utilities.scss for ways to use these same properties in html instead.
+
+// Always use these variables when building components.
+
+// Colours
+$blue: #2BADE9;
+$light-blue: #ecfaff;
+$dark-blue: #061C26;
+
+$teal: #109CA3;
+$light-teal: #f2feff;
+$dark-teal: #064145;
+
+$green: #46C3A7;
+$light-green: #ebfffb;
+$dark-green: #0B4C3E;
+
+$red: #B80C03;
+$light-red: #E6BAB8;
+$dark-red: #590400;
+
+$salmon: #F36058;
+$light-salmon: #feecec;
+$dark-salmon: #B55651;
+
+$orange: #FFA700;
+$light-orange: #ffedcc;
+$dark-orange: #8A5900;
+
+$yellow: #FFDA00;
+$light-yellow: #FFF9CC;
+$dark-yellow: #837000;
+
+$lighter-grey: #f5f6f9;
+$light-grey: #dfe4e8;
+$grey: #afbfc9;
+$dark-grey: #5d6d78;
+$darker-grey: #424f58;
+
+$black: $dark-blue;
+$white: #fff;
+
+// Spacing
+// Uses an 8pt vertical grid for margins and padding
+// With 16px body copy, .5 increments ensure the grid is adhered to
+$s-xs: .5rem; // 8px
+$s-s: 1.5rem; // 24px
+$s-m: 2rem; // 32px
+$s-l: 2.5rem; // 40px
+$s-xl: 3rem; // 48px
+
+// Typography
+$body: 'Proxima Nova', sans-serif;
+$heading: 'Ubuntu', sans-serif;
+
+$t-xxl: 2.5rem;
+$t-xl: 2rem;
+$t-l: 1.5rem;
+$t-m: 1rem;
+$t-s: .875rem; // legibility at small sizes > adhering to scales
+$t-xs: .75em;
+
+// Font weight
+$t-lighter: 100;
+$t-light: 300;
+$t-bold: 700;
+$t-heavy: 900;
+
+// Borders
+$border-radius: 3px;
+$border-radius-l: 5px;
+
+// Border size
+$border-size: 2px;
+
+// Animation Duration
+$a-xl: 2s;
+$a-l: 1.5s;
+$a-m: 1s;
+$a-s: .5s;
+$a-xs: .3s;
+
+// Transition Duration
+$tr-xl: .3s;
+$tr-l: .2s;
+$tr-m: .1s;
+$tr-s: .07s;
+$tr-xs: .05s;
+
+// Z-indexes
+$z-0: -1;
+$z-1: 1;
+$z-2: 10;
+$z-3: 100;
+$z-4: 1000;
+$z-5: 10000;

@@ -1,0 +1,31 @@
+// TO-DO
+// This is mostly copy/pasted from sunrise
+// There is more involved with hovers and stuff
+// to steal as well
+// Also maybe these should be built using mixins, probably
+
+@mixin btn($background: $yellow, $color: $black){
+    background: $background;
+    color: $color;
+    text-decoration: none;
+    border-radius: $border-radius;
+    text-transform: uppercase;
+    padding: $s-s;
+    display: inline-block;
+    border: 0; // strip input[type="submit"] default
+    font-size: $t-m;
+
+    &:hover {
+        cursor: pointer;
+        color: $color;
+        background: darken($background, 5%);
+    }
+}
+
+.btn {
+    @include btn;
+}
+
+.btn--warning {
+    @include btn($red, #fff);
+}

@@ -2,7 +2,20 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "../_scss/hljs";
+// TO-DO:
+// The framework should be loaded in an automatic way, ideally through
+// package.json and node modules. Github Pages doesn't seem to work with
+// node_modules, so we need to find a workaround. Pronbably involving
+// symlinks. Until then, we'll have to manually add it like below.
+@import "dreamhost-css-0.0.16/src/scss/style";
+
+@import "hljs";
 
 // TODO: why is this so harsh in the framework right now?
 .border {border: 1px solid $light-grey !important;}
+
+// should this be in the framework?
+img {
+	max-width: 100%;
+	height: auto;
+}
