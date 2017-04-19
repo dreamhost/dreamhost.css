@@ -13,26 +13,31 @@ layout: page
 $blue
 $light-blue
 $dark-blue
-$peach
-$dark-peach
-$light-peach
-$red
-$light-red
-$dark-red
-$yellow
-$light-yellow
-$dark-yellow
+$teal
+$light-teal
+$dark-teal
 $green
 $light-green
 $dark-green
-$light-grey
+$red
+$light-red
+$dark-red
+$salmon
+$light-salmon
+$dark-salmon
+$orange
+$light-orange
+$dark-orange
+$yellow
+$light-yellow
+$dark-yellow
 $lighter-grey
-$lightest-grey
+$light-grey
+$grey
 $dark-grey
 $darker-grey
-$darkest-grey
-$black
-$white
+$black: $dark-blue;
+$white: #fff;
 {% endhighlight %}
 
 {% highlight css %}
