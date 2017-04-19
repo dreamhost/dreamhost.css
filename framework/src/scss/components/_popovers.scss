@@ -25,7 +25,9 @@ Popover Component
 				<div class="p-s">
 					This is a dark themed popover with small padding. It appears
 					below the clicked element, is flushed left, has max-height
-					enforced, and has a caret. Note, popovers must live within .popover-container. To enable popovers on hover, the .popover-container--hover class must be included on the
+					enforced, and has a caret. Note, popovers must live within
+					.popover-container. To enable popovers on hover, the
+					.popover-container--hover class must be included on the
 					container.
 				</div>
 			</div>
@@ -127,7 +129,7 @@ Popover Component
 
 		&,
 		&.has-caret:after {
-			background: $dark-red;
+			background: $red;
 		}
 	}
 
@@ -145,12 +147,12 @@ Popover Component
 }
 
 /*
-	Positioning:
+	Alignment:
 	- popover--right
 	- popover--bottom
 	- popover--left
 
-	Alignment:
+	Positioning:
 	- popover--flush-top
 	- popover--flush-right
 	- popover--flush-bottom
