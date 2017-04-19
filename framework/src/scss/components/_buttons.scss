@@ -15,7 +15,7 @@
     border: 0; // strip input[type="submit"] default
     font-size: $t-m;
 
-    &:hover {
+    &:hover, &.is-open {
         cursor: pointer;
         color: $color;
         background: darken($background, 5%);

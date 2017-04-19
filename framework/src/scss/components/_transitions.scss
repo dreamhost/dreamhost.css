@@ -19,7 +19,7 @@ Transition Components
 .scale-up-hover {
 	transition-duration: $tr-m;
 
-	&:hover {
+	&:hover, &.is-open {
 		transform: scale(1.1);
 	}
 }
@@ -27,7 +27,7 @@ Transition Components
 .scale-down-hover {
 	transition-duration: $tr-m;
 
-	&:hover {
+	&:hover, &.is-open {
 		transform: scale(.95);
 	}
 }
