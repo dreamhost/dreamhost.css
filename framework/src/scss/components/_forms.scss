@@ -1,23 +1,23 @@
 .form__label {
-	@extend .l-block;
-	@extend .m-bottom-s;
-	@extend .t-bold;
+	display: block;
+	margin-bottom: $s-s;
+	font-weight: $t-bold;
 }
 
 .form__input {
-	@extend .l-block;
-	@extend .w-100;
-	@extend .m-bottom-s;
-	@extend .p-s;
+	display: block;
+	width: 100%;
+	margin-bottom: $s-s;
+	padding: $s-s;
 	@extend .border;
-	@extend .u-border-radius;
-	@extend .t-s;
-	@extend .t-body;
+	border-radius: $border-radius;
+	font-size: $t-s;
+	font-family: $body;
 
 	&[type="radio"] {
 		// overriding
-		@extend .l-inline;
-		@extend .w-auto;
-		@extend .m-right-s;
+		display: inline;
+		width: auto;
+		margin-right: $s-s;
 	}
 }

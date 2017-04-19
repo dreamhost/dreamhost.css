@@ -66,7 +66,13 @@ $t-m: 1rem;
 $t-s: .875rem; // legibility at small sizes > adhering to scales
 $t-xs: .75em;
 
-// Border radius
+// Font weight
+$t-lighter: 100;
+$t-light: 300;
+$t-bold: 700;
+$t-heavy: 900;
+
+// Borders
 $border-radius: 3px;
 $border-radius-l: 5px;
 
@@ -86,3 +92,11 @@ $tr-l: .2s;
 $tr-m: .1s;
 $tr-s: .07s;
 $tr-xs: .05s;
+
+// Z-indexes
+$z-0: -1;
+$z-1: 1;
+$z-2: 10;
+$z-3: 100;
+$z-4: 1000;
+$z-5: 10000;

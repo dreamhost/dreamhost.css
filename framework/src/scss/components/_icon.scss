@@ -1,6 +1,6 @@
 // Class for SVG icons to make them work inline with text
 .icon {
-	@extend .u-vertical-align-middle;
+	vertical-align: middle;
 	width: 1.45em;
 	height: 1.45em;
 	margin-right: .75em;

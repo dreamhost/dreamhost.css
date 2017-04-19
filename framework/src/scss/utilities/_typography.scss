@@ -15,10 +15,10 @@
 .t-justify {text-align: justify !important}
 
 // Weights
-.t-heavy {font-weight: 900 !important}
-.t-bold {font-weight: 700 !important}
-.t-light {font-weight: 300 !important}
-.t-lighter {font-weight: 100 !important}
+.t-heavy {font-weight: $t-heavy !important}
+.t-bold {font-weight: $t-bold !important}
+.t-light {font-weight: $t-light !important}
+.t-lighter {font-weight: $t-lighter !important}
 
 // Styles
 .t-decoration-underline {text-decoration: underline !important}
