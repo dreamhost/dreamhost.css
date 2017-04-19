@@ -1,0 +1,374 @@
+/*
+
+Popover Component
+
+	Popovers are used for any contextual content that shouldn't block
+	the user. Some common uses are dropdown menus, hovercards, tooltips.
+
+	Basic guidelines:
+	- The default theme is light.
+	- The default width is medium.
+	- Popover content can vary, there are no strict dos and don'ts.
+	- Padding size can vary.
+	- The caret is optional.
+	- Replace .js-popover-container--click with .popover-container--hover
+		for hover popovers.
+
+	Usage:
+	<div class="popover-container js-popover-container--click">
+		<div class="popover popover--dark popover--bottom
+		popover--flush-left has-caret">
+			<div class="p-s">
+				This is a dark themed popover with small padding. It appears
+				below the clicked element, is flushed left, and has a caret.
+				Note, popovers must live within .popover-container. To enable
+				popovers on hover, the .popover-container--hover class must be
+				included on the container.
+			</div>
+		</div>
+		<a class="btn js-btn-popover">Click me</a>
+	</div>
+
+*/
+
+
+// Base
+.popover-container {
+	display: inline-block;
+	position: relative;
+}
+
+.popover {
+	position: absolute;
+	text-align: center;
+	border-radius: $border-radius;
+	border-width: 0;
+	margin-bottom: 1rem;
+	bottom: 100%;
+	transform: translateX(-50%) translateY(-5px);
+	box-shadow: 0 0 1px 1px rgba(31,45,61,.15);
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.popover,
+.popover.has-caret:after {
+	background: #fff;
+	color: $black;
+	transition-duration: $tr-l;
+	transition-timing-function: ease-in-out;
+}
+
+.popover.has-caret:after {
+	display: block;
+	position: absolute;
+	border-radius: $border-radius;
+	width: 12px;
+	height: 12px;
+	content: '';
+	transform: rotate(45deg);
+	box-shadow: 1px 1px 0 0 rgba(31,45,61,.15);
+	bottom: -5px;
+}
+
+.popover.is-open,
+.popover-container--hover:hover > .popover,
+.popover-container--hover:focus > .popover {
+	opacity: 1;
+	height: auto;
+	overflow: visible;
+	visibility: visible;
+}
+
+
+/*
+	Themes:
+	- popover--dark
+	- popover--error
+	- popover--success
+*/
+.popover {
+	&.popover--dark {
+		&,
+		& a {
+			color: #fff;
+		}
+
+		&,
+		&.has-caret:after {
+			background: $black;
+		}
+	}
+
+	&.popover--error {
+		&,
+		& a {
+			color: #fff;
+		}
+
+		&,
+		&.has-caret:after {
+			background: $dark-red;
+		}
+	}
+
+	&.popover--success{
+		&,
+		& a {
+			color: #fff;
+		}
+
+		&,
+		&.has-caret:after {
+			background: $dark-green;
+		}
+	}
+}
+
+/*
+	Positioning:
+	- popover--right
+	- popover--bottom
+	- popover--left
+
+	Alignment:
+	- popover--flush-top
+	- popover--flush-right
+	- popover--flush-bottom
+	- popover--flush-left
+*/
+.popover--bottom {
+	margin-bottom: 2rem;
+	transform: translateX(-50%);
+}
+
+.popover:after,
+.popover--bottom:after {
+	margin-left: -6px;
+}
+
+.popover,
+.popover:after,
+.popover--bottom,
+.popover--bottom:after {
+	left: 50%;
+}
+
+.popover.is-open,
+.popover-container--hover:hover > .popover,
+.popover-container--hover:focus > .popover {
+	transform: translateX(-50%) translateY(0);
+}
+
+.popover.popover--flush-left,
+.popover.popover--flush-right {
+	transform: translateX(0);
+}
+
+.popover.popover--flush-left,
+.popover--bottom.popover--flush-left {
+	left: 0;
+}
+
+.popover.popover--flush-right,
+.popover--bottom.popover--flush-right {
+	right: 0;
+	left: auto;
+}
+
+.popover.popover--flush-left,
+.popover--bottom.popover--flush-left,
+.popover.popover--flush-right,
+.popover--bottom.popover--flush-right {
+	transform-origin: left bottom;
+}
+
+.popover.popover--flush-left,
+.popover.popover--flush-right,
+.popover--bottom.popover--flush-left.is-open,
+.popover--bottom.popover--flush-right.is-open,
+.popover-container--hover:hover > .popover--bottom.popover--flush-left,
+.popover-container--hover:hover > .popover--bottom.popover--flush-right,
+.popover-container--hover:focus > .popover--bottom.popover--flush-left,
+.popover-container--hover:focus > .popover--bottom.popover--flush-right {
+	transform: translateX(0) translateY(-5px);
+}
+
+.popover--bottom.popover--flush-left,
+.popover--bottom.popover--flush-right,
+.popover:not(.popover--bottom).popover--flush-left.is-open,
+.popover:not(.popover--bottom).popover--flush-right.is-open,
+.popover-container--hover:hover > .popover--top.popover--flush-left,
+.popover-container--hover:hover > .popover--top.popover--flush-right,
+.popover-container--hover:focus > .popover--top.popover--flush-left,
+.popover-container--hover:focus > .popover--top.popover--flush-right {
+	transform: translateX(0) translateY(0);
+}
+
+.popover--bottom.popover--flush-left.has-caret:after,
+.popover.popover--flush-left.has-caret:after {
+	left: 28px;
+}
+
+.popover--bottom.popover--flush-right.has-caret:after,
+.popover.popover--flush-right.has-caret:after {
+	right: 28px;
+	left: auto;
+}
+
+.popover--bottom {
+	margin-top: 1rem;
+	top: calc(100% + 5px);
+	transform: translateX(-50%) translateY(0);
+}
+
+.popover--bottom.has-caret:after {
+	box-shadow: -1px -1px 0 0 rgba(31,45,61,.15);
+	top: -5px;
+}
+
+.popover--bottom.is-open,
+.popover-container--hover:hover > .popover--bottom,
+.popover-container--hover:focus > .popover--bottom {
+	transform: translateX(-50%) translateY(-5px);
+}
+
+.popover--right {
+	margin-left: 1rem;
+	left: 100%;
+}
+
+.popover--left:after,
+.popover--right:after {
+	margin-top: -4px;
+}
+
+.popover--right,
+.popover--right:after,
+.popover--left,
+.popover--left:after {
+	top: 50%;
+}
+
+.popover--right,
+.popover--left {
+	transform: translateX(0) translateY(-50%);
+}
+
+.popover--right,
+.popover--left,
+.popover--bottom {
+	bottom: auto;
+}
+
+.popover--right.is-open,
+.popover-container--hover:hover > .popover--right,
+.popover-container--hover:focus > .popover--right {
+	transform: translateX(-5px) translateY(-50%);
+}
+
+.popover--right.popover--flush-bottom,
+.popover--left.popover--flush-bottom.is-open,
+.popover-container--hover:focus > .popover--left.popover--flush-bottom,
+.popover-container--hover:hover > .popover--left.popover--flush-bottom {
+	transform: translateX(0) translateY(calc(-100% + 2.24rem));
+}
+
+.popover--right.popover--flush-bottom.is-open,
+.popover--left.popover--flush-bottom,
+.popover-container--hover:focus > .popover--right.popover--flush-bottom,
+.popover-container--hover:hover > .popover--right.popover--flush-bottom {
+	transform: translateX(-5px) translateY(calc(-100% + 2.24rem));
+}
+
+.popover--right.popover--flush-top,
+.popover--left.popover--flush-top.is-open,
+.popover-container--hover:focus > .popover--left.popover--flush-top,
+.popover-container--hover:hover > .popover--left.popover--flush-top {
+	transform: translateX(0) translateY(calc(0% - 2.24rem));
+}
+
+.popover--right.popover--flush-top.is-open,
+.popover--left.popover--flush-top,
+.popover-container--hover:focus > .popover--right.popover--flush-top,
+.popover-container--hover:hover > .popover--right.popover--flush-top {
+	transform: translateX(-5px) translateY(calc(0% - 2.24rem));
+}
+
+.popover--flush-top.has-caret:after {
+	top: 2rem;
+}
+
+.popover--flush-bottom.has-caret:after {
+	bottom: 1.9rem;
+	top: auto;
+}
+
+.popover--right.has-caret:after {
+	box-shadow: -1px 1px 0 0 rgba(31,45,61,.15);
+	left: 1px;
+}
+
+.popover--left {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	right: 100%;
+	left: auto;
+}
+
+.popover--left.is-open,
+.popover-container--hover:hover > .popover--left,
+.popover-container--hover:focus > .popover--left {
+	transform: translateX(5px) translateY(-50%);
+}
+
+.popover--left.has-caret:after {
+	box-shadow: 1px -1px 0 0 rgba(31,45,61,.15);
+	right: -5px;
+	left: auto;
+}
+
+
+/*
+	Sizes:
+	- popover--small
+	- popover--large
+*/
+
+.popover {
+	width: 300px;
+}
+
+.popover--small {
+	width: 200px;
+}
+
+.popover--large {
+	width: 400px;
+}
+
+
+/*
+	Dropdown Content:
+	- popover__section
+*/
+
+.popover__section {
+	// Separator classes
+	&--separator {
+		border-top: 1px solid darken($lighter-grey, 5%);
+
+		.popover--dark & {
+			border-color: darken($darker-grey, 5%);
+		}
+	}
+
+	// Round corners on first/last section
+	&:first-child {
+		border-radius: $border-radius $border-radius 0 0;
+	}
+	&:last-child {
+		border-radius: 0 0 $border-radius $border-radius;
+	}
+}
