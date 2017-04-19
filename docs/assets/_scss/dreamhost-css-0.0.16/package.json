@@ -1,0 +1,61 @@
+{
+  "name": "dreamhost-css",
+  "version": "0.0.15",
+  "description": "DreamHost's CSS framework",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreamhost/dreamhost.css.git"
+  },
+  "scripts": {
+    "version": "gulp dist && git add -A"
+  },
+  "devDependencies": {
+    "browser-sync": "2.18.1",
+    "gulp": "3.9",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "2.0.13",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-stylelint": "^3.7.0",
+    "gulp-uglify": "^2.0.1"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dreamhost/dreamhost.css/issues"
+  },
+  "homepage": "https://github.com/dreamhost/dreamhost.css#readme",
+  "_id": "dreamhost-css@0.0.15",
+  "_shasum": "8c954e541ac12df69fc142eca0831e3dde614242",
+  "_from": "dreamhost-css@0.0.15",
+  "_npmVersion": "2.14.2",
+  "_nodeVersion": "4.0.0",
+  "_npmUser": {
+    "name": "scottfowles",
+    "email": "sfowles@gmail.com"
+  },
+  "dist": {
+    "shasum": "8c954e541ac12df69fc142eca0831e3dde614242",
+    "tarball": "https://registry.npmjs.org/dreamhost-css/-/dreamhost-css-0.0.15.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "mattfelten",
+      "email": "m@mattfelten.com"
+    },
+    {
+      "name": "matthewlyle",
+      "email": "matt.dunn@dreamhost.com"
+    },
+    {
+      "name": "scottfowles",
+      "email": "sfowles@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/dreamhost-css-0.0.15.tgz_1490888085883_0.004313822602853179"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/dreamhost-css/-/dreamhost-css-0.0.15.tgz"
+}

@@ -1,0 +1,35 @@
+// Fonts
+.t-body {font-family: $body !important}
+.t-heading {font-family: $heading !important}
+
+.t-xs {font-size: $t-xs !important}
+.t-s {font-size: $t-s !important}
+.t-m {font-size: $t-m !important}
+.t-l {font-size: $t-l !important}
+.t-xl {font-size: $t-xl !important}
+
+// Alignment
+.t-left {text-align: left !important}
+.t-right {text-align: right !important}
+.t-center {text-align: center !important}
+.t-justify {text-align: justify !important}
+
+// Weights
+.t-heavy {font-weight: $t-heavy !important}
+.t-bold {font-weight: $t-bold !important}
+.t-light {font-weight: $t-light !important}
+.t-lighter {font-weight: $t-lighter !important}
+
+// Styles
+.t-decoration-underline {text-decoration: underline !important}
+.t-decoration-none {text-decoration: none !important}
+.t-style-italic {font-style: italic !important}
+
+// Transforms
+.t-transform-capitalize {text-transform: capitalize !important}
+.t-transform-lowercase {text-transform: lowercase !important}
+.t-transform-uppercase {text-transform: uppercase !important}
+.t-transform-none {text-transform: none !important}
+
+// Line Height
+.t-line-height-1 {line-height: 1 !important}

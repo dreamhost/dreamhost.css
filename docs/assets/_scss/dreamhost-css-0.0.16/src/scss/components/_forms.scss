@@ -1,0 +1,23 @@
+.form__label {
+	display: block;
+	margin-bottom: $s-s;
+	font-weight: $t-bold;
+}
+
+.form__input {
+	display: block;
+	width: 100%;
+	margin-bottom: $s-s;
+	padding: $s-s;
+	@extend .border;
+	border-radius: $border-radius;
+	font-size: $t-s;
+	font-family: $body;
+
+	&[type="radio"] {
+		// overriding
+		display: inline;
+		width: auto;
+		margin-right: $s-s;
+	}
+}

@@ -1,0 +1,14 @@
+.fluid-row {
+	display: table-row;
+}
+
+.fluid-row__item {
+	display: table-cell;
+	white-space: nowrap;
+	width: 1%;
+	vertical-align: middle;
+}
+
+.fluid-row__item--primary {
+	width: 100%;
+}

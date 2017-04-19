@@ -1,0 +1,84 @@
+// TO-DO
+// Some sort of scale
+
+body {
+	background: $lighter-grey;
+	-webkit-font-smoothing: antialiased; // autoprefixer does not incl. font-smoothing
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: "liga", "dlig";
+	color: $black;
+	font-family: $body;
+	font-size: 16px;
+	line-height: 1.5; // 24px
+}
+
+h1, h2, h3, h4 {
+	font-family: $heading;
+	font-weight: 600;
+}
+
+h1 {
+	font-size: $t-xxl;
+	margin-bottom: $s-l;
+}
+
+h2 {
+	font-size: $t-l;
+	margin-bottom: $s-m;
+}
+
+h3 {
+	font-size: $t-l;
+	margin-bottom: $s-s;
+}
+
+h4 {
+	font-size: $t-m;
+	margin-bottom: $s-s;
+}
+
+p {
+	color: $black;
+}
+
+a {
+	color: $black;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&.is-disabled {
+		pointer-events: none;
+		opacity: .3;
+	}
+}
+
+strong {
+	font-weight: 700;
+}
+
+img.responsive-image {
+	max-width: 100%;
+	height: auto;
+}
+
+p, section, img {
+	margin-bottom: $s-m;
+}
+
+hr {
+	border: 1px solid $lighter-grey;
+	margin: $s-m 0;
+}
+
+code {
+	padding: 0 $s-xs;
+	font-size: $t-s;
+	display: inline-block;
+	border: 1px solid $lighter-grey;
+	border-radius: $border-radius;
+	background: $white;
+	font-family: monospace;
+}
