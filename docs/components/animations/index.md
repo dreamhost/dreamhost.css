@@ -109,22 +109,6 @@ layout: page
       <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-left</code></p>
     </div>
 
-    <div class="bg-yellow slide-up a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
-      &nbsp;
-    </div>
-
-    <div class="bg-yellow slide-right a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
-      &nbsp;
-    </div>
-
-    <div class="bg-yellow slide-down a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
-      &nbsp;
-    </div>
-
-    <div class="bg-yellow slide-left a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
-      &nbsp;
-    </div>
-
   </div>
 
   {% highlight html %}
@@ -266,22 +250,6 @@ layout: page
         &nbsp;
       </div>
       <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-left-hover</code></p>
-    </div>
-
-    <div class="bg-yellow slide-up-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
-      &nbsp;
-    </div>
-
-    <div class="bg-yellow slide-right-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
-      &nbsp;
-    </div>
-
-    <div class="bg-yellow slide-down-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
-      &nbsp;
-    </div>
-
-    <div class="bg-yellow slide-left-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
-      &nbsp;
     </div>
 
   </div>
