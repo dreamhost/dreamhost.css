@@ -53,6 +53,22 @@ layout: page
       &nbsp;
     </div>
 
+    <div class="bg-yellow slide-up a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
+      &nbsp;
+    </div>
+
+    <div class="bg-yellow slide-right a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
+      &nbsp;
+    </div>
+
+    <div class="bg-yellow slide-down a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
+      &nbsp;
+    </div>
+
+    <div class="bg-yellow slide-left a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
+      &nbsp;
+    </div>
+
   </div>
 
   {% highlight html %}
@@ -79,6 +95,18 @@ layout: page
 
   <!-- Animation: slide-out -->
   <div class="slide-out"></div>
+
+  <!-- Animation: slide-up -->
+  <div class="slide-up"></div>
+
+  <!-- Animation: slide-right -->
+  <div class="slide-right"></div>
+
+  <!-- Animation: slide-down -->
+  <div class="slide-down"></div>
+
+  <!-- Animation: slide-left -->
+  <div class="slide-left"></div>
 
   {% endhighlight %}
 
@@ -128,6 +156,22 @@ layout: page
       &nbsp;
     </div>
 
+    <div class="bg-yellow slide-up-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
+      &nbsp;
+    </div>
+
+    <div class="bg-yellow slide-right-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
+      &nbsp;
+    </div>
+
+    <div class="bg-yellow slide-down-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
+      &nbsp;
+    </div>
+
+    <div class="bg-yellow slide-left-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l g-1_4">
+      &nbsp;
+    </div>
+
   </div>
 
   {% highlight html %}
@@ -154,6 +198,18 @@ layout: page
 
   <!-- Hover animation: slide-out -->
   <div class="slide-out-hover"></div>
+
+  <!-- Hover animation: slide-up -->
+  <div class="slide-up-hover"></div>
+
+  <!-- Hover animation: slide-right -->
+  <div class="slide-right-hover"></div>
+
+  <!-- Hover animation: slide-down -->
+  <div class="slide-down-hover"></div>
+
+  <!-- Hover animation: slide-left -->
+  <div class="slide-left-hover"></div>
 
   {% endhighlight %}
 
