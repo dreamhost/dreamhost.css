@@ -19,45 +19,77 @@ Animation Components
 .spin-right,
 .spin-right-hover:hover {
 	animation: spinRight $a-m 1 linear;
+	animation-fill-mode: forwards;
 }
 
 .spin-left,
 .spin-left-hover:hover {
 	animation: spinRight $a-m 1 linear reverse;
+	animation-fill-mode: forwards;
 }
 
 // Bounce
 .bounce,
 .bounce-hover:hover {
 	animation: bounce $a-m 1 cubic-bezier(.075,.82,.165,1);
+	animation-fill-mode: forwards;
 }
 
 // Shake
 .shake,
 .shake-hover:hover {
 	animation: shake $a-m 1 cubic-bezier(.075,.82,.165,1);
+	animation-fill-mode: forwards;
 }
 
 // Fade
 .fade-in,
 .fade-in-hover:hover {
 	animation: fadeIn $a-m 1 linear;
+	animation-fill-mode: forwards;
 }
 
 .fade-out,
 .fade-out-hover:hover {
 	animation: fadeIn $a-m 1 linear reverse;
+	animation-fill-mode: forwards;
 }
 
 // slide
 .slide-in,
 .slide-in-hover:hover {
 	animation: slideIn $a-m 1 cubic-bezier(0.165,0.84,0.44,1);
+	animation-fill-mode: forwards;
 }
 
 .slide-out,
 .slide-out-hover:hover {
 	animation: slideIn $a-m 1 linear reverse;
+	animation-fill-mode: forwards;
+}
+
+.slide-up,
+.slide-up-hover:hover {
+	animation: slideUp $a-xs 1 linear;
+	animation-fill-mode: forwards;
+}
+
+.slide-down,
+.slide-down-hover:hover {
+	animation: slideDown $a-xs 1 linear reverse;
+	animation-fill-mode: forwards;
+}
+
+.slide-left,
+.slide-left-hover:hover {
+	animation: slideLeft $a-xs 1 linear;
+	animation-fill-mode: forwards;
+}
+
+.slide-right,
+.slide-right-hover:hover {
+	animation: slideRight $a-xs 1 linear reverse;
+	animation-fill-mode: forwards;
 }
 
 
@@ -112,5 +144,41 @@ Animation Components
 	100% {
 		transform: translateY(0) translateZ(0);
 		opacity: 1;
+	}
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(5px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(5px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-5px);
+	}
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-5px);
 	}
 }

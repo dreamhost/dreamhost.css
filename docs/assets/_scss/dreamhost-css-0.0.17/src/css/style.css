@@ -121,7 +121,7 @@ p { color: #061C26; }
 
 a { color: #061C26; text-decoration: underline; }
 
-a:hover { text-decoration: none; }
+a:hover, a.is-open { text-decoration: none; }
 
 a.is-disabled { pointer-events: none; opacity: .3; }
 
@@ -235,11 +235,11 @@ Animation Components
 
 .btn { background: #FFDA00; color: #061C26; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
-.btn:hover { cursor: pointer; color: #061C26; background: #e6c400; }
+.btn:hover, .btn.is-open { cursor: pointer; color: #061C26; background: #e6c400; }
 
 .btn--warning { background: #B80C03; color: #fff; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
 
-.btn--warning:hover { cursor: pointer; color: #fff; background: #9f0a03; }
+.btn--warning:hover, .btn--warning.is-open { cursor: pointer; color: #fff; background: #9f0a03; }
 
 button.button--unset { background: none; border: none; cursor: pointer; font: inherit; padding: 0; margin: 0; }
 
@@ -434,6 +434,9 @@ Popover Component
 	- The default theme is light.
 	- The default width is medium.
 	- Popover content can vary, there are no strict dos and don'ts.
+	- The max-height class is optional. It enforces a 60vh max-height.
+	- It is possible to nest hover popovers inside of click popovers.
+	- Popovers with max-height cannot contain nested popovers.
 	- Padding size can vary.
 	- The caret is optional.
 	- Replace .js-popover-container--click with .popover-container--hover
@@ -442,13 +445,16 @@ Popover Component
 	Usage:
 	<div class="popover-container js-popover-container--click">
 		<div class="popover popover--dark popover--bottom
-		popover--flush-left has-caret">
-			<div class="p-s">
-				This is a dark themed popover with small padding. It appears
-				below the clicked element, is flushed left, and has a caret.
-				Note, popovers must live within .popover-container. To enable
-				popovers on hover, the .popover-container--hover class must be
-				included on the container.
+		popover--flush-left popover--max-height has-caret">
+			<div class="popover__wrapper">
+				<div class="p-s">
+					This is a dark themed popover with small padding. It appears
+					below the clicked element, is flushed left, has max-height
+					enforced, and has a caret. Note, popovers must live within
+					.popover-container. To enable popovers on hover, the
+					.popover-container--hover class must be included on the
+					container.
+				</div>
 			</div>
 		</div>
 		<a class="btn js-btn-popover">Click me</a>
@@ -465,6 +471,11 @@ Popover Component
 
 .popover.is-open, .popover-container--hover:hover > .popover, .popover-container--hover:focus > .popover { opacity: 1; height: auto; overflow: visible; visibility: visible; }
 
+/* Max height: Enforces 60% viewport maximum height. */
+.popover--max-height .popover__wrapper { max-height: 60vh; height: 100%; overflow: hidden; }
+
+.popover--max-height.is-open .popover__wrapper { overflow: scroll; }
+
 /* Themes: - popover--dark - popover--error - popover--success */
 .popover.popover--dark, .popover.popover--dark a { color: #fff; }
 
@@ -472,13 +483,13 @@ Popover Component
 
 .popover.popover--error, .popover.popover--error a { color: #fff; }
 
-.popover.popover--error, .popover.popover--error.has-caret:after { background: #590400; }
+.popover.popover--error, .popover.popover--error.has-caret:after { background: #B80C03; }
 
 .popover.popover--success, .popover.popover--success a { color: #fff; }
 
 .popover.popover--success, .popover.popover--success.has-caret:after { background: #0B4C3E; }
 
-/* Positioning: - popover--right - popover--bottom - popover--left Alignment: - popover--flush-top - popover--flush-right - popover--flush-bottom - popover--flush-left */
+/* Alignment: - popover--right - popover--bottom - popover--left Positioning: - popover--flush-top - popover--flush-right - popover--flush-bottom - popover--flush-left */
 .popover--bottom { margin-bottom: 2rem; transform: translateX(-50%); }
 
 .popover:after, .popover--bottom:after { margin-left: -6px; }
@@ -624,11 +635,11 @@ Transition Components
 */
 .scale-up-hover { transition-duration: 0.1s; }
 
-.scale-up-hover:hover { transform: scale(1.1); }
+.scale-up-hover:hover, .scale-up-hover.is-open { transform: scale(1.1); }
 
 .scale-down-hover { transition-duration: 0.1s; }
 
-.scale-down-hover:hover { transform: scale(0.95); }
+.scale-down-hover:hover, .scale-down-hover.is-open { transform: scale(0.95); }
 
 /*
 
@@ -655,24 +666,24 @@ Animation Utilities
   scss/components/_animations.scss.
 
   Usage:
-  <div class="bounce a-duration-large a-easing-cb-scale-out">
-    This div bounces slowly with a cubic bezier scaling effect. The
-    initial bounce is defined in the components doc, while the utility
-    classes override the component's default values.
+  <div class="bounce a-duration-l a-easing-cb-scale-out">
+    This div bounces slowly with a cubic bezier scaling effect. The initial
+    bounce is defined in the components doc, while the utility classes override
+    the component's default values.
   </div>
 
 */
 .a-duration-none { animation-duration: 0s !important; }
 
-.a-duration-smaller { animation-duration: 0.3s !important; }
+.a-duration-xs { animation-duration: 0.3s !important; }
 
-.a-duration-small { animation-duration: 0.5s !important; }
+.a-duration-s { animation-duration: 0.5s !important; }
 
-.a-duration { animation-duration: 1s !important; }
+.a-duration, .a-duration-m { animation-duration: 1s !important; }
 
-.a-duration-large { animation-duration: 1.5s !important; }
+.a-duration-l { animation-duration: 1.5s !important; }
 
-.a-duration-larger { animation-duration: 2s !important; }
+.a-duration-xl { animation-duration: 2s !important; }
 
 .a-easing-linear { animation-timing-function: linear !important; }
 
@@ -1277,7 +1288,7 @@ Transition Utilities
 
 .w-66 { width: 66.66% !important; }
 
-.w-50 { width: 75% !important; }
+.w-75 { width: 75% !important; }
 
 .w-99 { width: 99% !important; }
 
