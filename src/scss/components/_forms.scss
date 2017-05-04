@@ -1,0 +1,40 @@
+th {
+	@extend .p-left;
+	@extend .p-bottom-small;
+	@extend .t-large;
+	@extend .t-heading;
+	@extend .t-black;
+}
+
+tbody tr {@extend .border-bottom;}
+tbody tr:nth-child(odd) {@extend .bg-white;}
+
+td {
+	@extend .p-small;
+	@extend .u-vertical-align-middle;
+}
+
+
+.form__label {
+	@extend .l-block;
+	@extend .m-bottom-small;
+	@extend .t-bold;
+}
+
+.form__input {
+	@extend .l-block;
+	@extend .w-100;
+	@extend .m-bottom-small;
+	@extend .p-small;
+	@extend .border;
+	@extend .border-radius;
+	@extend .t-small;
+	@extend .t-body;
+
+	&[type="radio"] {
+		// overriding
+		@extend .l-inline;
+		@extend .w-auto;
+		@extend .m-right-small;
+	}
+}
