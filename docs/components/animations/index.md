@@ -82,28 +82,28 @@ layout: page
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-up a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-yellow slide-up a-duration a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
       <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-up</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-right a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-yellow slide-right a-duration a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
       <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-right</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-down a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-yellow slide-down a-duration a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
       <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-down</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-left a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-yellow slide-left a-duration a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
       <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-left</code></p>
