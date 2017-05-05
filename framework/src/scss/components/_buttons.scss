@@ -9,16 +9,19 @@
     color: $color;
     text-decoration: none;
     border-radius: $border-radius;
-    text-transform: uppercase;
-    padding: $s-s;
+    padding: $s-xs;
     display: inline-block;
     border: 0; // strip input[type="submit"] default
-    font-size: $t-m;
+    text-transform: uppercase;
+    font-size: $t-s;
+    font-weight: bold;
+    transition: .2s;
+    letter-spacing: .2;
 
     &:hover, &.is-open {
         cursor: pointer;
         color: $color;
-        background: darken($background, 5%);
+        background: darken($background, 2%);
     }
 }
 
