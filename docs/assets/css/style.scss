@@ -7,7 +7,7 @@
 // package.json and node modules. Github Pages doesn't seem to work with
 // node_modules, so we need to find a workaround. Pronbably involving
 // symlinks. Until then, we'll have to manually add it like below.
-@import "dreamhost-css-0.0.18/src/scss/style";
+@import "dreamhost-css/src/scss/style";
 
 @import "hljs";
 

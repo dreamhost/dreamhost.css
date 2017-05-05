@@ -632,6 +632,3 @@ layout: page
   {% endhighlight %}
 
 </section>
-
-<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/scripts.js"></script>
