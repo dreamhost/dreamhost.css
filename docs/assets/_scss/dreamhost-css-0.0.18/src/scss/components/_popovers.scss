@@ -14,11 +14,11 @@ Popover Component
 	- Popovers with max-height cannot contain nested popovers.
 	- Padding size can vary.
 	- The caret is optional.
-	- Replace .js-popover-container--click with .popover-container--hover
+	- Replace .on-click with .on-hover
 		for hover popovers.
 
 	Usage:
-	<div class="popover-container js-popover-container--click">
+	<div class="popover-container on-click">
 		<div class="popover popover--dark popover--bottom
 		popover--flush-left popover--max-height has-caret">
 			<div class="popover__wrapper">
@@ -27,12 +27,12 @@ Popover Component
 					below the clicked element, is flushed left, has max-height
 					enforced, and has a caret. Note, popovers must live within
 					.popover-container. To enable popovers on hover, the
-					.popover-container--hover class must be included on the
+					.on-hover class must be included on the
 					container.
 				</div>
 			</div>
 		</div>
-		<a class="btn js-btn-popover">Click me</a>
+		<a class="btn js-toggle-popover">Click me</a>
 	</div>
 
 */
@@ -79,8 +79,8 @@ Popover Component
 }
 
 .popover.is-open,
-.popover-container--hover:hover > .popover,
-.popover-container--hover:focus > .popover {
+.on-hover:hover > .popover,
+.on-hover:focus > .popover {
 	opacity: 1;
 	height: auto;
 	overflow: visible;
@@ -176,8 +176,8 @@ Popover Component
 }
 
 .popover.is-open,
-.popover-container--hover:hover > .popover,
-.popover-container--hover:focus > .popover {
+.on-hover:hover > .popover,
+.on-hover:focus > .popover {
 	transform: translateX(-50%) translateY(0);
 }
 
@@ -208,10 +208,10 @@ Popover Component
 .popover.popover--flush-right,
 .popover--bottom.popover--flush-left.is-open,
 .popover--bottom.popover--flush-right.is-open,
-.popover-container--hover:hover > .popover--bottom.popover--flush-left,
-.popover-container--hover:hover > .popover--bottom.popover--flush-right,
-.popover-container--hover:focus > .popover--bottom.popover--flush-left,
-.popover-container--hover:focus > .popover--bottom.popover--flush-right {
+.on-hover:hover > .popover--bottom.popover--flush-left,
+.on-hover:hover > .popover--bottom.popover--flush-right,
+.on-hover:focus > .popover--bottom.popover--flush-left,
+.on-hover:focus > .popover--bottom.popover--flush-right {
 	transform: translateX(0) translateY(-5px);
 }
 
@@ -219,10 +219,10 @@ Popover Component
 .popover--bottom.popover--flush-right,
 .popover:not(.popover--bottom).popover--flush-left.is-open,
 .popover:not(.popover--bottom).popover--flush-right.is-open,
-.popover-container--hover:hover > .popover--top.popover--flush-left,
-.popover-container--hover:hover > .popover--top.popover--flush-right,
-.popover-container--hover:focus > .popover--top.popover--flush-left,
-.popover-container--hover:focus > .popover--top.popover--flush-right {
+.on-hover:hover > .popover--top.popover--flush-left,
+.on-hover:hover > .popover--top.popover--flush-right,
+.on-hover:focus > .popover--top.popover--flush-left,
+.on-hover:focus > .popover--top.popover--flush-right {
 	transform: translateX(0) translateY(0);
 }
 
@@ -249,8 +249,8 @@ Popover Component
 }
 
 .popover--bottom.is-open,
-.popover-container--hover:hover > .popover--bottom,
-.popover-container--hover:focus > .popover--bottom {
+.on-hover:hover > .popover--bottom,
+.on-hover:focus > .popover--bottom {
 	transform: translateX(-50%) translateY(-5px);
 }
 
@@ -283,36 +283,36 @@ Popover Component
 }
 
 .popover--right.is-open,
-.popover-container--hover:hover > .popover--right,
-.popover-container--hover:focus > .popover--right {
+.on-hover:hover > .popover--right,
+.on-hover:focus > .popover--right {
 	transform: translateX(-5px) translateY(-50%);
 }
 
 .popover--right.popover--flush-bottom,
 .popover--left.popover--flush-bottom.is-open,
-.popover-container--hover:focus > .popover--left.popover--flush-bottom,
-.popover-container--hover:hover > .popover--left.popover--flush-bottom {
+.on-hover:focus > .popover--left.popover--flush-bottom,
+.on-hover:hover > .popover--left.popover--flush-bottom {
 	transform: translateX(0) translateY(calc(-100% + 2.24rem));
 }
 
 .popover--right.popover--flush-bottom.is-open,
 .popover--left.popover--flush-bottom,
-.popover-container--hover:focus > .popover--right.popover--flush-bottom,
-.popover-container--hover:hover > .popover--right.popover--flush-bottom {
+.on-hover:focus > .popover--right.popover--flush-bottom,
+.on-hover:hover > .popover--right.popover--flush-bottom {
 	transform: translateX(-5px) translateY(calc(-100% + 2.24rem));
 }
 
 .popover--right.popover--flush-top,
 .popover--left.popover--flush-top.is-open,
-.popover-container--hover:focus > .popover--left.popover--flush-top,
-.popover-container--hover:hover > .popover--left.popover--flush-top {
+.on-hover:focus > .popover--left.popover--flush-top,
+.on-hover:hover > .popover--left.popover--flush-top {
 	transform: translateX(0) translateY(calc(0% - 2.24rem));
 }
 
 .popover--right.popover--flush-top.is-open,
 .popover--left.popover--flush-top,
-.popover-container--hover:focus > .popover--right.popover--flush-top,
-.popover-container--hover:hover > .popover--right.popover--flush-top {
+.on-hover:focus > .popover--right.popover--flush-top,
+.on-hover:hover > .popover--right.popover--flush-top {
 	transform: translateX(-5px) translateY(calc(0% - 2.24rem));
 }
 
@@ -338,8 +338,8 @@ Popover Component
 }
 
 .popover--left.is-open,
-.popover-container--hover:hover > .popover--left,
-.popover-container--hover:focus > .popover--left {
+.on-hover:hover > .popover--left,
+.on-hover:focus > .popover--left {
 	transform: translateX(5px) translateY(-50%);
 }
 

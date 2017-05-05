@@ -198,21 +198,29 @@ Animation Components
   </div>
 
 */
-.spin-right, .spin-right-hover:hover { animation: spinRight 1s 1 linear; }
+.spin-right, .spin-right-hover:hover { animation: spinRight 1s 1 linear; animation-fill-mode: forwards; }
 
-.spin-left, .spin-left-hover:hover { animation: spinRight 1s 1 linear reverse; }
+.spin-left, .spin-left-hover:hover { animation: spinRight 1s 1 linear reverse; animation-fill-mode: forwards; }
 
-.bounce, .bounce-hover:hover { animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
+.bounce, .bounce-hover:hover { animation: bounce 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); animation-fill-mode: forwards; }
 
-.shake, .shake-hover:hover { animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); }
+.shake, .shake-hover:hover { animation: shake 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1); animation-fill-mode: forwards; }
 
-.fade-in, .fade-in-hover:hover { animation: fadeIn 1s 1 linear; }
+.fade-in, .fade-in-hover:hover { animation: fadeIn 1s 1 linear; animation-fill-mode: forwards; }
 
-.fade-out, .fade-out-hover:hover { animation: fadeIn 1s 1 linear reverse; }
+.fade-out, .fade-out-hover:hover { animation: fadeIn 1s 1 linear reverse; animation-fill-mode: forwards; }
 
-.slide-in, .slide-in-hover:hover { animation: slideIn 1s 1 cubic-bezier(0.165, 0.84, 0.44, 1); }
+.slide-in, .slide-in-hover:hover { animation: slideIn 1s 1 cubic-bezier(0.165, 0.84, 0.44, 1); animation-fill-mode: forwards; }
 
-.slide-out, .slide-out-hover:hover { animation: slideIn 1s 1 linear reverse; }
+.slide-out, .slide-out-hover:hover { animation: slideIn 1s 1 linear reverse; animation-fill-mode: forwards; }
+
+.slide-up, .slide-up-hover:hover { animation: slideUp 0.3s 1 linear; animation-fill-mode: forwards; }
+
+.slide-down, .slide-down-hover:hover { animation: slideDown 0.3s 1 linear reverse; animation-fill-mode: forwards; }
+
+.slide-left, .slide-left-hover:hover { animation: slideLeft 0.3s 1 linear; animation-fill-mode: forwards; }
+
+.slide-right, .slide-right-hover:hover { animation: slideRight 0.3s 1 linear reverse; animation-fill-mode: forwards; }
 
 @keyframes spinRight { 0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); } }
@@ -233,13 +241,25 @@ Animation Components
   100% { transform: translateY(0) translateZ(0);
     opacity: 1; } }
 
-.btn { background: #FFDA00; color: #061C26; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
+@keyframes slideDown { 0% { transform: translateY(5px); }
+  100% { transform: translateY(0); } }
 
-.btn:hover, .btn.is-open { cursor: pointer; color: #061C26; background: #e6c400; }
+@keyframes slideRight { 0% { transform: translateX(5px); }
+  100% { transform: translateX(0); } }
 
-.btn--warning { background: #B80C03; color: #fff; text-decoration: none; border-radius: 3px; text-transform: uppercase; padding: 1.5rem; display: inline-block; border: 0; font-size: 1rem; }
+@keyframes slideUp { 0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); } }
 
-.btn--warning:hover, .btn--warning.is-open { cursor: pointer; color: #fff; background: #9f0a03; }
+@keyframes slideLeft { 0% { transform: translateX(0); }
+  100% { transform: translateX(-5px); } }
+
+.btn { background: #FFDA00; color: #061C26; text-decoration: none; border-radius: 3px; padding: 0.5rem; display: inline-block; border: 0; text-transform: uppercase; font-size: 0.875rem; font-weight: bold; transition: .2s; letter-spacing: .2; }
+
+.btn:hover, .btn.is-open { cursor: pointer; color: #061C26; background: #f5d100; }
+
+.btn--warning { background: #B80C03; color: #fff; text-decoration: none; border-radius: 3px; padding: 0.5rem; display: inline-block; border: 0; text-transform: uppercase; font-size: 0.875rem; font-weight: bold; transition: .2s; letter-spacing: .2; }
+
+.btn--warning:hover, .btn--warning.is-open { cursor: pointer; color: #fff; background: #ae0b03; }
 
 button.button--unset { background: none; border: none; cursor: pointer; font: inherit; padding: 0; margin: 0; }
 
@@ -369,11 +389,11 @@ Page Header Component
 
 .page-header__logo img { margin: 0; vertical-align: text-bottom; }
 
-.page-header__nav-link { text-decoration: none; font-weight: 700; color: #dfe4e8; font-size: 0.875rem; display: inline-block; }
+.page-header__nav-link { text-decoration: none; font-weight: 700; color: #dfe4e8; font-size: 0.875rem; display: inline-block; outline: none; }
 
-.page-header__nav-link:hover { color: #ecfaff; }
+.page-header__nav-link:hover, .page-header__nav-link.is-open { color: #ecfaff; }
 
-.page-header__nav-link.is-active:hover, .page-header__nav-link--active:hover { color: #fff; }
+.page-header__nav-link.is-active:hover, .page-header__nav-link.is-active.is-open, .page-header__nav-link--active:hover, .page-header__nav-link--active.is-open { color: #fff; }
 
 .page-header__subnav { padding-left: 2rem; }
 
@@ -381,11 +401,11 @@ Page Header Component
 
 .page-header__subnav-link .icon { opacity: .3; }
 
-.page-header__subnav-link:hover { color: #ecfaff; }
+.page-header__subnav-link:hover, .page-header__subnav-link.is-open { color: #ecfaff; }
 
-.page-header__subnav-link:hover .icon { opacity: 1; }
+.page-header__subnav-link:hover .icon, .page-header__subnav-link.is-open .icon { opacity: 1; }
 
-button.page-header__subnav-link { background: transparent; border-width: 0; cursor: pointer; }
+button.page-header__subnav-link { background: transparent; border-width: 0; cursor: pointer; outline: none; }
 
 .page-header.mobile-is-open { background: #061C26; min-height: 100vh; margin-bottom: 0; }
 
@@ -439,11 +459,11 @@ Popover Component
 	- Popovers with max-height cannot contain nested popovers.
 	- Padding size can vary.
 	- The caret is optional.
-	- Replace .js-popover-container--click with .popover-container--hover
+	- Replace .on-click with .on-hover
 		for hover popovers.
 
 	Usage:
-	<div class="popover-container js-popover-container--click">
+	<div class="popover-container on-click">
 		<div class="popover popover--dark popover--bottom
 		popover--flush-left popover--max-height has-caret">
 			<div class="popover__wrapper">
@@ -452,12 +472,12 @@ Popover Component
 					below the clicked element, is flushed left, has max-height
 					enforced, and has a caret. Note, popovers must live within
 					.popover-container. To enable popovers on hover, the
-					.popover-container--hover class must be included on the
+					.on-hover class must be included on the
 					container.
 				</div>
 			</div>
 		</div>
-		<a class="btn js-btn-popover">Click me</a>
+		<a class="btn js-toggle-popover">Click me</a>
 	</div>
 
 */
@@ -469,7 +489,7 @@ Popover Component
 
 .popover.has-caret:after { display: block; position: absolute; border-radius: 3px; width: 12px; height: 12px; content: ''; transform: rotate(45deg); box-shadow: 1px 1px 0 0 rgba(31, 45, 61, 0.15); bottom: -5px; }
 
-.popover.is-open, .popover-container--hover:hover > .popover, .popover-container--hover:focus > .popover { opacity: 1; height: auto; overflow: visible; visibility: visible; }
+.popover.is-open, .on-hover:hover > .popover, .on-hover:focus > .popover { opacity: 1; height: auto; overflow: visible; visibility: visible; }
 
 /* Max height: Enforces 60% viewport maximum height. */
 .popover--max-height .popover__wrapper { max-height: 60vh; height: 100%; overflow: hidden; }
@@ -496,7 +516,7 @@ Popover Component
 
 .popover, .popover:after, .popover--bottom, .popover--bottom:after { left: 50%; }
 
-.popover.is-open, .popover-container--hover:hover > .popover, .popover-container--hover:focus > .popover { transform: translateX(-50%) translateY(0); }
+.popover.is-open, .on-hover:hover > .popover, .on-hover:focus > .popover { transform: translateX(-50%) translateY(0); }
 
 .popover.popover--flush-left, .popover.popover--flush-right { transform: translateX(0); }
 
@@ -506,9 +526,9 @@ Popover Component
 
 .popover.popover--flush-left, .popover--bottom.popover--flush-left, .popover.popover--flush-right, .popover--bottom.popover--flush-right { transform-origin: left bottom; }
 
-.popover.popover--flush-left, .popover.popover--flush-right, .popover--bottom.popover--flush-left.is-open, .popover--bottom.popover--flush-right.is-open, .popover-container--hover:hover > .popover--bottom.popover--flush-left, .popover-container--hover:hover > .popover--bottom.popover--flush-right, .popover-container--hover:focus > .popover--bottom.popover--flush-left, .popover-container--hover:focus > .popover--bottom.popover--flush-right { transform: translateX(0) translateY(-5px); }
+.popover.popover--flush-left, .popover.popover--flush-right, .popover--bottom.popover--flush-left.is-open, .popover--bottom.popover--flush-right.is-open, .on-hover:hover > .popover--bottom.popover--flush-left, .on-hover:hover > .popover--bottom.popover--flush-right, .on-hover:focus > .popover--bottom.popover--flush-left, .on-hover:focus > .popover--bottom.popover--flush-right { transform: translateX(0) translateY(-5px); }
 
-.popover--bottom.popover--flush-left, .popover--bottom.popover--flush-right, .popover:not(.popover--bottom).popover--flush-left.is-open, .popover:not(.popover--bottom).popover--flush-right.is-open, .popover-container--hover:hover > .popover--top.popover--flush-left, .popover-container--hover:hover > .popover--top.popover--flush-right, .popover-container--hover:focus > .popover--top.popover--flush-left, .popover-container--hover:focus > .popover--top.popover--flush-right { transform: translateX(0) translateY(0); }
+.popover--bottom.popover--flush-left, .popover--bottom.popover--flush-right, .popover:not(.popover--bottom).popover--flush-left.is-open, .popover:not(.popover--bottom).popover--flush-right.is-open, .on-hover:hover > .popover--top.popover--flush-left, .on-hover:hover > .popover--top.popover--flush-right, .on-hover:focus > .popover--top.popover--flush-left, .on-hover:focus > .popover--top.popover--flush-right { transform: translateX(0) translateY(0); }
 
 .popover--bottom.popover--flush-left.has-caret:after, .popover.popover--flush-left.has-caret:after { left: 28px; }
 
@@ -518,7 +538,7 @@ Popover Component
 
 .popover--bottom.has-caret:after { box-shadow: -1px -1px 0 0 rgba(31, 45, 61, 0.15); top: -5px; }
 
-.popover--bottom.is-open, .popover-container--hover:hover > .popover--bottom, .popover-container--hover:focus > .popover--bottom { transform: translateX(-50%) translateY(-5px); }
+.popover--bottom.is-open, .on-hover:hover > .popover--bottom, .on-hover:focus > .popover--bottom { transform: translateX(-50%) translateY(-5px); }
 
 .popover--right { margin-left: 1rem; left: 100%; }
 
@@ -530,15 +550,15 @@ Popover Component
 
 .popover--right, .popover--left, .popover--bottom { bottom: auto; }
 
-.popover--right.is-open, .popover-container--hover:hover > .popover--right, .popover-container--hover:focus > .popover--right { transform: translateX(-5px) translateY(-50%); }
+.popover--right.is-open, .on-hover:hover > .popover--right, .on-hover:focus > .popover--right { transform: translateX(-5px) translateY(-50%); }
 
-.popover--right.popover--flush-bottom, .popover--left.popover--flush-bottom.is-open, .popover-container--hover:focus > .popover--left.popover--flush-bottom, .popover-container--hover:hover > .popover--left.popover--flush-bottom { transform: translateX(0) translateY(calc(-100% + 2.24rem)); }
+.popover--right.popover--flush-bottom, .popover--left.popover--flush-bottom.is-open, .on-hover:focus > .popover--left.popover--flush-bottom, .on-hover:hover > .popover--left.popover--flush-bottom { transform: translateX(0) translateY(calc(-100% + 2.24rem)); }
 
-.popover--right.popover--flush-bottom.is-open, .popover--left.popover--flush-bottom, .popover-container--hover:focus > .popover--right.popover--flush-bottom, .popover-container--hover:hover > .popover--right.popover--flush-bottom { transform: translateX(-5px) translateY(calc(-100% + 2.24rem)); }
+.popover--right.popover--flush-bottom.is-open, .popover--left.popover--flush-bottom, .on-hover:focus > .popover--right.popover--flush-bottom, .on-hover:hover > .popover--right.popover--flush-bottom { transform: translateX(-5px) translateY(calc(-100% + 2.24rem)); }
 
-.popover--right.popover--flush-top, .popover--left.popover--flush-top.is-open, .popover-container--hover:focus > .popover--left.popover--flush-top, .popover-container--hover:hover > .popover--left.popover--flush-top { transform: translateX(0) translateY(calc(0% - 2.24rem)); }
+.popover--right.popover--flush-top, .popover--left.popover--flush-top.is-open, .on-hover:focus > .popover--left.popover--flush-top, .on-hover:hover > .popover--left.popover--flush-top { transform: translateX(0) translateY(calc(0% - 2.24rem)); }
 
-.popover--right.popover--flush-top.is-open, .popover--left.popover--flush-top, .popover-container--hover:focus > .popover--right.popover--flush-top, .popover-container--hover:hover > .popover--right.popover--flush-top { transform: translateX(-5px) translateY(calc(0% - 2.24rem)); }
+.popover--right.popover--flush-top.is-open, .popover--left.popover--flush-top, .on-hover:focus > .popover--right.popover--flush-top, .on-hover:hover > .popover--right.popover--flush-top { transform: translateX(-5px) translateY(calc(0% - 2.24rem)); }
 
 .popover--flush-top.has-caret:after { top: 2rem; }
 
@@ -548,7 +568,7 @@ Popover Component
 
 .popover--left { margin-left: 1rem; margin-right: 1rem; right: 100%; left: auto; }
 
-.popover--left.is-open, .popover-container--hover:hover > .popover--left, .popover-container--hover:focus > .popover--left { transform: translateX(5px) translateY(-50%); }
+.popover--left.is-open, .on-hover:hover > .popover--left, .on-hover:focus > .popover--left { transform: translateX(5px) translateY(-50%); }
 
 .popover--left.has-caret:after { box-shadow: 1px -1px 0 0 rgba(31, 45, 61, 0.15); right: -5px; left: auto; }
 

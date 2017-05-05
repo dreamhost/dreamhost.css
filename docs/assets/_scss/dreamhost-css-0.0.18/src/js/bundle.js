@@ -789,25 +789,27 @@ $link.click(function(){
 })
 
 // Popovers
-$(document).on('click', '.js-btn-popover', function (e) {
-	var $thisPopover = $(this)
-		.parent()
-		.children('.popover');
+$(document).on('click', '.js-toggle-popover', function (e) {
+	var $this = $(this),
+		$thisPopover = $this
+			.parent()
+			.children('.popover');
 
+	$('.js-toggle-popover').not($this).removeClass('is-open');
 	$thisPopover.toggleClass('is-open');
-	$(this).toggleClass('is-open');
+	$this.toggleClass('is-open');
 	$('.popover').not($thisPopover).removeClass('is-open');
 
 	e.stopPropagation();
 });
 
-$(document).on('mouseover', '.popover-container--hover', function () {
-	$(this).find('.js-btn-popover').addClass('is-open');
+$(document).on('mouseover', '.on-hover', function () {
+	$(this).find('.js-toggle-popover').addClass('is-open');
 });
 
-$(document).on('mouseout', '.popover-container--hover', function () {
-	$('.popover-container--hover')
-		.find('.js-btn-popover')
+$(document).on('mouseout', '.on-hover', function () {
+	$('.on-hover')
+		.find('.js-toggle-popover')
 		.removeClass('is-open');
 });
 
@@ -816,7 +818,7 @@ $(document).on('click', '.popover', function (e) {
 });
 
 $(document).on('click', function (e) {
-	$('.popover, .js-btn-popover').removeClass('is-open');
+	$('.popover, .js-toggle-popover').removeClass('is-open');
 });
 
 $(document).on('click', '.js-toggle-mobile-menu', function(e) {
