@@ -95,8 +95,10 @@ Page Header Component
 	color: $light-grey;
 	font-size: $t-s;
 	display: inline-block;
+	outline: none;
 
-	&:hover {
+	&:hover,
+	&.is-open {
 		color: $light-blue;
 	}
 }
@@ -108,7 +110,8 @@ Page Header Component
 	@extend .border-blue;
 	@extend .border-solid;
 
-	&:hover {
+	&:hover,
+	&.is-open {
 		color: #fff;
 	}
 }
@@ -129,7 +132,8 @@ Page Header Component
 		opacity: .3;
 	}
 
-	&:hover {
+	&:hover,
+	&.is-open {
 		color: $light-blue;
 
 		.icon {
@@ -142,6 +146,7 @@ button.page-header__subnav-link {
 	background: transparent;
 	border-width: 0;
 	cursor: pointer;
+	outline: none;
 }
 
 .page-header.mobile-is-open {

@@ -13,12 +13,14 @@ $link.click(function(){
 
 // Popovers
 $(document).on('click', '.js-btn-popover', function (e) {
-	var $thisPopover = $(this)
-		.parent()
-		.children('.popover');
+	var $this = $(this),
+		$thisPopover = $this
+			.parent()
+			.children('.popover');
 
+	$('.js-btn-popover').not($this).removeClass('is-open');
 	$thisPopover.toggleClass('is-open');
-	$(this).toggleClass('is-open');
+	$this.toggleClass('is-open');
 	$('.popover').not($thisPopover).removeClass('is-open');
 
 	e.stopPropagation();
