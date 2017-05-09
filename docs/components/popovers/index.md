@@ -137,7 +137,7 @@ layout: page
   <h2>Caret</h2>
 
   <p>
-    The popover caret it optional. Append <code>.has-caret</code> accordingly.
+    The popover caret it optional. Append <code>.has-caret</code> accordingly. Generally, carets should only be used when the triggering element (ex: the yellow button below) does not also use a caret. That will protect against potential caret alignment issues.
   </p>
 
   <div class="container u-clearfix bg-lighter-grey p-s">
