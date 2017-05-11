@@ -22,4 +22,4 @@ Code review to existing guidelines. If you disagree with a guideline, create a t
 We currently use JIRA for tickets. Please reference any relevant tickets in your pull request.
 
 ## Distributing
-We will be using [SemVer](http://semver.org) for versioning.
+Check [distribution.md](distribution.md) for info about how to update the framework.
