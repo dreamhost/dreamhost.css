@@ -1,23 +1,111 @@
+/*
+
+Form Component
+
+*/
+
+%form-border { border: 1px solid $light-grey; }
+%form-description {
+	color: $dark-grey;
+	font-size: $t-s;
+}
+%form-no-outline { outline: none; }
+%form-text-style {
+	color: $black;
+	font-size: $t-m;
+	font-family: $body;
+}
+
+.form {}
+
+.form__group {
+	margin-bottom: $s-m;
+
+	& + & {
+		margin-bottom: 0;
+	}
+}
+
+.form__group--actions {
+	margin-top: $s-xl;
+
+}
+
 .form__label {
+	color: $darker-grey;
 	display: block;
-	margin-bottom: $s-s;
+	font-size: $t-s;
 	font-weight: $t-bold;
+	margin-bottom: $s-xs;
+}
+
+.form__description {
+	@extend %form-description;
+
+	margin-top: -$s-xs; // Haha. Reverse margin to unset .form__label's bottom margin.
+	margin-bottom: $s-xs*2;
+	max-width: 35em; // Should give this a good width to break at
 }
 
 .form__input {
+	@extend %form-border;
+	@extend %form-no-outline;
+	@extend %form-text-style;
+
+	display: block;
+	margin: 0;
+	width: 100%;
+
+	border-radius: $border-radius-l;
+	padding: .65rem;
+
+	&::placeholder {
+		color: $dark-grey;
+	}
+}
+
+textarea.form__input {
+	min-height: 140px;
+}
+
+.form__radio-check {
+	@extend %form-text-style;
+
+	cursor: pointer;
+	display: block;
+	padding-left: 1.4rem;
+	position: relative;
+
+	margin-bottom: $s-xs;
+
+	input {
+		@extend %form-no-outline;
+		position: absolute;
+		left: 0;
+		top: 2px;
+	}
+}
+
+.form__radio-check-label {
+	display: block;
+}
+
+.form__radio-check-description {
+	@extend %form-description;
+	display: block;
+	margin-bottom: $s-xs*2;
+}
+
+// Maybe we should create a custom style for these?
+// This looks kinda crazy in Safari. Looks decent elsewhere though.
+// This is the only way to get a native select box to stay at a height though.
+.form__select {
+	@extend %form-border;
+	@extend %form-no-outline;
+	@extend %form-text-style;
+
 	display: block;
 	width: 100%;
-	margin-bottom: $s-s;
-	padding: $s-s;
-	@extend .border;
-	border-radius: $border-radius;
-	font-size: $t-s;
-	font-family: $body;
-
-	&[type="radio"] {
-		// overriding
-		display: inline;
-		width: auto;
-		margin-right: $s-s;
-	}
+	height: 42px;
+	line-height: 42px;
 }
