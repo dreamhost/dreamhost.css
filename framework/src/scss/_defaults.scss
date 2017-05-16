@@ -17,22 +17,22 @@ h1, h2, h3, h4 {
 	font-weight: 600;
 }
 
-h1 {
+h1, .t-h1 {
 	font-size: $t-xxl;
 	margin-bottom: $s-l;
 }
 
-h2 {
+h2, .t-h2 {
 	font-size: $t-l;
 	margin-bottom: $s-m;
 }
 
-h3 {
+h3, .t-h3 {
 	font-size: $t-l;
 	margin-bottom: $s-s;
 }
 
-h4 {
+h4, .t-h4 {
 	font-size: $t-m;
 	margin-bottom: $s-s;
 }
