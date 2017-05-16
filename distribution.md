@@ -17,7 +17,7 @@ Now that we have a new version of the framework merged, we want to publish that 
 ## Updating each app
 Each DreamHost app uses the framework either as a dependency, or as a devDependency in its `package.json`.
 
-For DreamHost.com, to update the framework to the latest version, simply change the version number for `dreamhost-css` in the `package.json` file to the latest version, run `npm install` and commit the changes.
+For dreamhost.com, to update the framework to the latest version, simply run `npm install dreamhost-css@latest --save-dev` and commit the changes. `package.json` should update and we're committing some of the framework files to the repo until our build process is updated.
 
 For all other repositories, to update the `package.json` to the current latest version of the framework that has been published to NPM:
 `npm install dreamhost-css@latest --save` if dependency
