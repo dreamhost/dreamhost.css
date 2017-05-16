@@ -33,12 +33,12 @@ Page Header Component
 				<li><a class="page-header__nav-link is-active" href="#">Link</a></li>
 			</ul>
 			<ul class="page-header__subnav page-header__only-show-small fluid-row__item fluid-row__item--primary t-right">
-				<li><button class="page-header__subnav-link js-toggle-mobile-menu">
+				<li><a href="javascript:void(0)" class="page-header__subnav-link js-toggle-mobile-menu">
 					<svg class="icon icon-hamburger" viewBox="0 0 24 18">
 						<path d="M0 5.9L0 7.1C0 7.1 0 7.1 0 7.1L24 7.1C24 7.1 24 7.1 24 7.1L24 5.9C24 5.9 24 5.9 24 5.9L0 5.9C0 5.9 0 5.9 0 5.9ZM0 0.9L0 2.1C0 2.1 0 2.1 0 2.1L24 2.1C24 2.1 24 2.1 24 2.1L24 0.9C24 0.9 24 0.9 24 0.9L0 0.9C0 0.9 0 0.9 0 0.9ZM0 15.9L0 17.1C0 17.1 0 17.1 0 17.1L24 17.1C24 17.1 24 17.1 24 17.1L24 15.9C24 15.9 24 15.9 24 15.9L0 15.9C0 15.9 0 15.9 0 15.9ZM0 12.2C0 12.2 24 12.2 24 12.2L24 10.9C24 10.9 0 10.9 0 10.9L0 12.2Z"></path>
 					</svg><!-- remove whitespace
 					-->Menu
-				</button></li>
+				</a></li>
 			</ul>
 		</div>
 	</div>
@@ -95,7 +95,6 @@ Page Header Component
 	color: $light-grey;
 	font-size: $t-s;
 	display: inline-block;
-	outline: none;
 
 	&:hover,
 	&.is-open {
@@ -142,11 +141,9 @@ Page Header Component
 	}
 }
 
-button.page-header__subnav-link {
+.page-header__subnav-link {
 	background: transparent;
 	border-width: 0;
-	cursor: pointer;
-	outline: none;
 }
 
 .page-header.mobile-is-open {
