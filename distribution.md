@@ -2,7 +2,7 @@
 We made a Pull Request and got some code merged. Great! Now what?
 
 ### Create new version
-We want to make a new commit updating package.json to the newest version and check in the compiled CSS / JS.  
+We want to make a new commit updating package.json to the newest version and check in the compiled CSS / JS.
 `npm version <newversion>` where `newversion = major | minor | patch`
 
 See [Semantic Versioning](http://semver.org) for what major, minor, and patch mean.
@@ -17,8 +17,10 @@ Now that we have a new version of the framework merged, we want to publish that 
 ## Updating each app
 Each DreamHost app uses the framework either as a dependency, or as a devDependency in its `package.json`.
 
-To update the `package.json` to the current latest version of the framework that has been published to NPM:  
-`npm install dreamhost-css@latest --save` if dependency  
+For DreamHost.com, to update the framework to the latest version, simply change the version number for `dreamhost-css` in the `package.json` file to the latest version, run `npm install` and commit the changes.
+
+For all other repositories, to update the `package.json` to the current latest version of the framework that has been published to NPM:
+`npm install dreamhost-css@latest --save` if dependency
 `npm install dreamhost-css@latest --save-dev` if devDependency
 
 Until the framework is stable, once the package has been installed and updated, we need to compile CSS and check the app to see if anything has changed and should be fixed. Once we get to a stable version, we should only need to take this safety precaution on major releases.
