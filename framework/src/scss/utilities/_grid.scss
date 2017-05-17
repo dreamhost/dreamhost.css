@@ -18,3 +18,48 @@
 .g-shift-9 {@include shift(9)}
 .g-shift-10 {@include shift(10)}
 .g-shift-11 {@include shift(11)}
+
+// Relies g-responsive-{size} class to wrap grid
+.g-responsive-640, .g-responsive-960, .g-responsive-1280 {
+	.g-1_6, .g-1_4, .g-1_3, .g-1_2, .g-2_3, .g-3_4 {
+		width: 100%;
+		float: none;
+		display: block;
+		margin-top: $s-s;
+	}
+}
+
+.g-responsive-640 {
+	@media (min-width: 640px) {
+		margin-top: 0;
+		.g-1_6 {@include span-columns(2)}
+		.g-1_4 {@include span-columns(3)}
+		.g-1_3 {@include span-columns(4)}
+		.g-1_2 {@include span-columns(6)}
+		.g-2_3 {@include span-columns(8)}
+		.g-3_4 {@include span-columns(9)}
+	}
+}
+
+.g-responsive-960 {
+	@media (min-width: 960px) {
+		margin-top: 0;
+		.g-1_6 {@include span-columns(2)}
+		.g-1_4 {@include span-columns(3)}
+		.g-1_3 {@include span-columns(4)}
+		.g-1_2 {@include span-columns(6)}
+		.g-2_3 {@include span-columns(8)}
+		.g-3_4 {@include span-columns(9)}
+	}
+}
+.g-responsive-1280 {
+	@media (min-width: 1280px) {
+		margin-top: 0;
+		.g-1_6 {@include span-columns(2)}
+		.g-1_4 {@include span-columns(3)}
+		.g-1_3 {@include span-columns(4)}
+		.g-1_2 {@include span-columns(6)}
+		.g-2_3 {@include span-columns(8)}
+		.g-3_4 {@include span-columns(9)}
+	}
+}
