@@ -1,0 +1,52 @@
+/*
+
+Pills
+
+	Creates 'tags' for things like categories or maybe a 'SALE' tag.
+
+*/
+
+.pill {
+	padding: 2px $s-xs;
+	background: $black;
+	color: $white;
+	display: inline-block;
+	font-weight: bold;
+	font-size: $t-s;
+}
+
+.pill--m {
+	font-size: $t-m;
+}
+
+.pill--blue {background-color: $blue}
+.pill--light-blue {background-color: $light-blue; color: $dark-blue}
+.pill--dark-blue {background-color: $dark-blue}
+
+.pill--teal {background-color: $teal}
+.pill--light-teal {background-color: $light-teal; color: $dark-teal}
+.pill--dark-teal {background-color: $dark-teal}
+
+.pill--green {background-color: $green}
+.pill--light-green {background-color: $light-green; color: $dark-green}
+.pill--dark-green {background-color: $dark-green}
+
+.pill--red {background-color: $red}
+.pill--light-red {background-color: $light-red; color: $dark-red}
+.pill--dark-red {background-color: $dark-red}
+
+.pill--salmon {background-color: $salmon}
+.pill--light-salmon {background-color: $light-salmon; color: $dark-salmon}
+.pill--dark-salmon {background-color: $dark-salmon}
+
+.pill--orange {background-color: $orange}
+.pill--light-orange {background-color: $light-orange; color: $dark-orange}
+.pill--dark-orange {background-color: $dark-orange}
+
+.pill--yellow {background-color: $yellow}
+.pill--light-yellow {background-color: $light-yellow; color: $dark-yellow}
+.pill--dark-yellow {background-color: $dark-yellow}
+
+.pill--grey {background-color: $grey}
+.pill--light-grey {background-color: $light-grey; color: $dark-grey}
+.pill--dark-grey {background-color: $dark-grey}
