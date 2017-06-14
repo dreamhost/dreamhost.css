@@ -37,11 +37,11 @@ $yellow: #FFDA00;
 $light-yellow: #FFF9CC;
 $dark-yellow: #837000;
 
-$lighter-grey: #f5f6f9;
-$light-grey: #dfe4e8;
-$grey: #afbfc9;
-$dark-grey: #5d6d78;
-$darker-grey: #424f58;
+$lighter-grey: #F4F6F9;
+$light-grey: #E0E4E8;
+$grey: #AFBFCA;
+$dark-grey: #5E6D78;
+$darker-grey: #434F58;
 
 $black: $dark-blue;
 $white: #fff;
@@ -59,12 +59,12 @@ $s-xl: 3rem; // 48px
 $body: 'Proxima Nova', sans-serif;
 $heading: 'Ubuntu', sans-serif;
 
-$t-xxl: 2.5rem;
-$t-xl: 2rem;
-$t-l: 1.5rem;
-$t-m: 1rem;
-$t-s: .875rem; // legibility at small sizes > adhering to scales
-$t-xs: .75em;
+$t-xxl: 2.5rem; // 40px
+$t-xl: 2rem; // 32px
+$t-l: 1.5rem; // 24px
+$t-m: 1rem; // 16px
+$t-s: .875rem; // 14px. legibility at small sizes > adhering to scales
+$t-xs: .75em; // 12px
 
 // Font weight
 $t-lighter: 100;

@@ -154,8 +154,133 @@
 		</div>
 	</div>
 
-<div class="container-l p-left-s p-right-s">
+<div class="container-m p-left-s p-right-s">
+	<section class="box u-border-radius m-bottom">
+		<h2>Form</h2>
 
+		<form class="form">
+			<div class="form__group">
+				<label class="form__label">Text label</label>
+				<input type="text" class="form__input" placeholder="Example placeholder content">
+			</div>
+
+			<div class="container-full-width">
+				<div class="form__group g-1_2">
+					<label class="form__label">Half label</label>
+					<input type="text" class="form__input" placeholder="Example placeholder content">
+				</div>
+				<div class="form__group g-1_2">
+					<label class="form__label">Half label</label>
+					<input type="text" class="form__input" placeholder="Example placeholder content">
+				</div>
+			</div>
+
+			<div class="form__group">
+				<label class="form__label">Text label</label>
+				<p class="form__description">Put in some text! Only good text, not bad text, obviously. What is this input for? Are there any formatting requirements? This is for a text input so we might need to say a lot of things. There might be some <strong>bolded</strong> text, or maybe <em>italics</em>. Maybe we end with some sort of <a href="#">help link</a>.</p>
+				<textarea class="form__input" placeholder="Example placeholder content"></textarea>
+			</div>
+
+			<div class="container-full-width">
+				<div class="form__group g-1_2">
+					<label class="form__label">Radio label</label>
+					<label class="form__radio-check">
+						<input type="radio" name="radio1" checked>
+						<span class="form__radio-check-label">Example radio label</span>
+					</label>
+					<label class="form__radio-check">
+						<input type="radio" name="radio1">
+						<span class="form__radio-check-label">Example radio label</span>
+					</label>
+					<label class="form__radio-check">
+						<input type="radio" name="radio1">
+						<span class="form__radio-check-label">Example radio label</span>
+					</label>
+					<label class="form__radio-check">
+						<input type="radio" name="radio1">
+						<span class="form__radio-check-label">Example radio label</span>
+					</label>
+				</div>
+
+				<div class="form__group g-1_2">
+					<label class="form__label">Checkbox label</label>
+					<label class="form__radio-check">
+						<input type="checkbox" name="check1" checked>
+						<span class="form__radio-check-label">Example checkbox label</span>
+					</label>
+					<label class="form__radio-check">
+						<input type="checkbox" name="check1">
+						<span class="form__radio-check-label">Example checkbox label</span>
+					</label>
+					<label class="form__radio-check">
+						<input type="checkbox" name="check1">
+						<span class="form__radio-check-label">Example checkbox label</span>
+					</label>
+					<label class="form__radio-check">
+						<input type="checkbox" name="check1">
+						<span class="form__radio-check-label">Example checkbox label</span>
+					</label>
+				</div>
+			</div>
+
+			<div class="container-full-width">
+				<div class="form__group g-1_2">
+					<label class="form__label">Radio label</label>
+					<label class="form__radio-check">
+						<input type="radio" name="radio1" checked>
+						<span class="form__radio-check-label">Example radio label</span>
+						<span class="form__radio-check-description">Help explain what this choice is</span>
+					</label>
+					<label class="form__radio-check">
+						<input type="radio" name="radio1" checked>
+						<span class="form__radio-check-label">Example radio label that is really long and probably wraps really awkwardly</span>
+						<span class="form__radio-check-description">Help explain what this choice is in more text than should be necessary to see how text wraps</span>
+					</label>
+					<label class="form__radio-check">
+						<input type="radio" name="radio1">
+						<span class="form__radio-check-label">Example radio label</span>
+					</label>
+					<label class="form__radio-check">
+						<input type="radio" name="radio1">
+						<span class="form__radio-check-label">Example radio label</span>
+					</label>
+				</div>
+
+				<div class="form__group g-1_2">
+					<label class="form__label">Checkbox label</label>
+					<label class="form__radio-check">
+						<input type="checkbox" name="check1" checked>
+						<span class="form__radio-check-label">Example checkbox label that is really long and probably wraps really awkwardly</span>
+						<span class="form__radio-check-description">Help explain what this choice is in more text than should be necessary to see how text wraps</span>
+					</label>
+					<label class="form__radio-check">
+						<input type="checkbox" name="check1">
+						<span class="form__radio-check-label">Example checkbox label that is really long and probably wraps really awkwardly</span>
+						<span class="form__radio-check-description">Help explain what this choice is in more text than should be necessary to see how text wraps</span>
+					</label>
+				</div>
+			</div>
+
+			<div class="form__group">
+				<label class="form__label">Select label</label>
+				<select class="form__select">
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+					<option>Option 4</option>
+					<option>Option 5</option>
+				</select>
+			</div>
+
+			<div class="form__group form__group--actions">
+				<input type="submit" class="btn" value="Submit">
+				<input type="button" class="btn btn--outline" value="Cancel">
+			</div>
+		</form>
+	</section>
+</div>
+
+<div class="container-l p-left-s p-right-s">
 	<section class="box u-border-radius m-bottom">
 		<h1>Colours</h1>
 
@@ -443,38 +568,6 @@
 			<a href="#" class="btn--warning">Go!</a>
 		</div>
 	</section>
-
-	<form class="form box m-bottom-l">
-		<fieldset>
-			<label class="form__label" for="name" class="form__label">Site name</label>
-			<input type="text" class="form__input" placeholder="This can be changed later">
-		</fieldset>
-		<fieldset>
-			<label class="form__label" for="admin-username" class="form__label">Admin username</label>
-			<input name="admin-username" type="text" class="form__input" placeholder="This can not be changed later" value="admin">
-		</fieldset>
-		<fieldset>
-			<label class="form__label" for="domain">Choose a domain</label>
-			<select class="form__input" id="domain">
-				<option>--</option>
-				<option>emptydomain.com</option>
-				<option id="existing">domainwithsomethinginstalledonit.com</option>
-				<option>---</option>
-				<option id="buy-new">Buy a new domain</option>
-				<option id="migrate">Migrate external site</option>
-				<option id="decide-later">Decide later</option>
-			</select>
-		</fieldset>
-		<fieldset>
-			<label class="form__label form__label--radio"><input class="form__input" type="radio" name="radio" value="one" />Option one</label>
-			<label class="form__label form__label--radio"><input class="form__input" type="radio" name="radio" value="two" />Option two</label>
-			<label class="form__label form__label--radio"><input class="form__input" type="radio" name="radio" value="three" />Option three</label>
-		</fieldset>
-		<fieldset>
-			<textarea class="form__input">Hey</textarea>
-		</fieldset>
-		<input type="submit" class="btn"></input>
-	</form>
 
 	<section class="container-m">
 		<h1>Border Radius</h1>
