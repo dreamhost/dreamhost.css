@@ -144,15 +144,10 @@ Styleguide Base.buttons
 	text-shadow: none;
 	pointer-events: none;
 
-	background: white(95%);
-	color: white(32%);
-	&:hover, &:active {
-		background: white(85%);
-		color: white(40%);
-	}
+	background: #E0E4E8;
+	color: #606362;
 
-	&.btn--outline, &.btn--text {color: white(60%); background: transparent; }
-	&.btn--outline:hover, &.btn--text:hover {color: white(40%); background: transparent; }
+	&.btn--outline, &.btn--text {color: #576B79; background: transparent; }
 }
 
 // Sizes
