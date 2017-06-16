@@ -46,14 +46,10 @@ $darker-grey: #434F58;
 $black: $dark-blue;
 $white: #fff;
 
-// Spacing
+// Sizing Scale
 // Uses an 8pt vertical grid for margins and padding
-// With 16px body copy, .5 increments ensure the grid is adhered to
-$s-xs: .5rem; // 8px
-$s-s: 1.5rem; // 24px
-$s-m: 2rem; // 32px
-$s-l: 2.5rem; // 40px
-$s-xl: 3rem; // 48px
+$baseScale: 8; // Goes in 8px increments
+$maxSize: 16; // Build 16 increments, 128px
 
 // Typography
 $body: 'Proxima Nova', sans-serif;
