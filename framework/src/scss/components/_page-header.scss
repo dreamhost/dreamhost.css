@@ -46,7 +46,7 @@ Page Header Component
 */
 
 .page-header {
-	padding: $s-s;
+	padding: convertScaleToRem(3);
 
 	background: $black;
 	color: #fff;
@@ -75,7 +75,7 @@ Page Header Component
 }
 
 .page-header__logo {
-	padding-right: $s-m;
+	padding-right: convertScaleToRem(4);
 
 	img {
 		margin: 0;
@@ -118,7 +118,7 @@ Page Header Component
 .page-header__subnav {
 	@extend .list;
 	@extend .list--inline;
-	padding-left: $s-m;
+	padding-left: convertScaleToRem(4);
 }
 
 .page-header__subnav-link {
@@ -188,14 +188,14 @@ button.page-header__subnav-link {
 	}
 
 	.popover.is-open {
-		margin: $s-s auto;
+		margin: convertScaleToRem(3) auto;
 		transform: none !important;
 	}
 
 	.page-header__mobile-button button {
 		position: absolute;
-		top: $s-s;
-		right: $s-s;
+		top: convertScaleToRem(3);
+		right: convertScaleToRem(3);
 	}
 }
 

@@ -19,7 +19,7 @@ Form Component
 .form {}
 
 .form__group {
-	margin-bottom: $s-m;
+	margin-bottom: convertScaleToRem(4);
 
 	& + & {
 		margin-bottom: 0;
@@ -27,7 +27,7 @@ Form Component
 }
 
 .form__group--actions {
-	margin-top: $s-xl;
+	margin-top: convertScaleToRem(6);
 
 }
 
@@ -36,14 +36,14 @@ Form Component
 	display: block;
 	font-size: $t-s;
 	font-weight: $t-bold;
-	margin-bottom: $s-xs;
+	margin-bottom: convertScaleToRem(1);
 }
 
 .form__description {
 	@extend %form-description;
 
-	margin-top: -$s-xs; // Haha. Reverse margin to unset .form__label's bottom margin.
-	margin-bottom: $s-xs*2;
+	margin-top: -convertScaleToRem(1); // Haha. Reverse margin to unset .form__label's bottom margin.
+	margin-bottom: convertScaleToRem(2);
 	max-width: 35em; // Should give this a good width to break at
 }
 
@@ -76,7 +76,7 @@ textarea.form__input {
 	padding-left: 1.4rem;
 	position: relative;
 
-	margin-bottom: $s-xs;
+	margin-bottom: convertScaleToRem(1);
 
 	input {
 		@extend %form-no-outline;
@@ -93,7 +93,7 @@ textarea.form__input {
 .form__radio-check-description {
 	@extend %form-description;
 	display: block;
-	margin-bottom: $s-xs*2;
+	margin-bottom: convertScaleToRem(2);
 }
 
 // Maybe we should create a custom style for these?
