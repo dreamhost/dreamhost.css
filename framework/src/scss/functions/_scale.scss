@@ -1,6 +1,7 @@
 @mixin createClasses( $props, $class) {
 	@include createClass( #{$class}-0, $props, 0 );
 	@include createClass( #{$class}-half, $props, convertScaleToRem(.5) );
+	@include createClass( #{$class}-auto, $props, auto );
 	@for $i from 1 through $maxSize {
 		 @include createClass( #{$class}-#{$i}, $props, convertScaleToRem($i) );
 	}
