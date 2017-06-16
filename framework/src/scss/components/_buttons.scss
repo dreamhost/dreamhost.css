@@ -9,7 +9,7 @@
     color: $color;
     text-decoration: none;
     border-radius: $border-radius;
-    padding: $s-xs;
+    padding: convertScaleToRem(1);
     display: inline-block;
     border: 0; // strip input[type="submit"] default
     text-transform: uppercase;
