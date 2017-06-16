@@ -77,13 +77,13 @@ Styleguide Base.buttons
 .btn--outline {
 	background: transparent;
 	border: 1px solid currentColor;
-	color: $blue-on-light;
+	color: $dark-blue;
 
 	&:hover,
 	&:active {
 		background: transparent;
 		border-color: currentColor;
-		color: darken($blue-on-light, 10%);
+		color: darken($dark-blue, 10%);
 	}
 
 	&:visited { border-color: currentColor; }
@@ -92,14 +92,14 @@ Styleguide Base.buttons
 .btn--text {
 	background: transparent;
 	border: none;
-	color: $blue-on-light;
+	color: $dark-blue;
 	text-decoration: underline;
 	padding: 0;
 
 	&:hover,
 	&:active {
 		background: transparent;
-		color: darken($blue-on-light, 10%);
+		color: darken($dark-blue, 10%);
 	}
 }
 
