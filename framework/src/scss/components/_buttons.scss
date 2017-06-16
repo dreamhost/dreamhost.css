@@ -1,34 +1,163 @@
-// TO-DO
-// This is mostly copy/pasted from sunrise
-// There is more involved with hovers and stuff
-// to steal as well
-// Also maybe these should be built using mixins, probably
+/*
 
-@mixin btn($background: $yellow, $color: $black){
-    background: $background;
-    color: $color;
-    text-decoration: none;
-    border-radius: $border-radius;
-    padding: convertScaleToRem(1);
-    display: inline-block;
-    border: 0; // strip input[type="submit"] default
-    text-transform: uppercase;
-    font-size: $t-s;
-    font-weight: bold;
-    transition: .2s;
-    letter-spacing: .2;
+Buttons
 
-    &:hover, &.is-open {
-        cursor: pointer;
-        color: $color;
-        background: darken($background, 2%);
-    }
-}
+Can be used with anchor or button tags. When updating colors, make sure to update _tags.scss as well
+
+Shapes
+.btn            - Normal button
+.btn--outline   - 1px border button, transparent bg
+.btn--text      - Underlined text
+
+Colors
+.btn            - Blue
+.btn--red       - Red
+.btn--orange    - Orange
+.btn--yellow    - Yellow
+.btn--disabled  - Grey
+
+Sizes
+.btn            - 16px
+.btn--small     - 12px
+.btn--large     - 20px
+
+Markup:
+<a href="#" class="btn {{modifier_class}}">Text</a>
+
+Styleguide Base.buttons
+
+*/
 
 .btn {
-    @include btn;
+	font-family: $body;
+	color: $black;
+	background: $blue;
+	border: none;
+	border-radius: 3px;
+	display: inline-block;
+	font-size: $t-m;
+	line-height: 1;
+	padding: .8em 1em .7em;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	vertical-align: middle;
+
+	@include transition (all .1s ease-in-out);
+
+	// Allow buttons to work on elements that aren't <a>
+	cursor: pointer;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	&:hover,
+	&:active {
+		background: lighten($blue, 10%);
+		color: $black;
+	}
+
+	&:active {
+		transform: scale(.99);
+	}
+
+	svg {
+		vertical-align: middle;
+
+		&:first-child { margin-right: .3em; }
+		&:last-child { margin-left: .3em; }
+
+		path { fill: currentColor };
+	}
 }
 
-.btn--warning {
-    @include btn($red, #fff);
+// Outline
+.btn--outline {
+	background: transparent;
+	border: 1px solid currentColor;
+	color: $dark-blue;
+
+	&:hover,
+	&:active {
+		background: transparent;
+		border-color: currentColor;
+		color: darken($dark-blue, 10%);
+	}
+
+	&:visited { border-color: currentColor; }
+}
+
+.btn--text {
+	background: transparent;
+	border: none;
+	color: $dark-blue;
+	text-decoration: underline;
+	padding: 0;
+
+	&:hover,
+	&:active {
+		background: transparent;
+		color: darken($dark-blue, 10%);
+	}
+}
+
+
+// Colors
+.btn--red {
+	background: $red;
+	color: $white;
+	&:hover, &:active {	color: $white; background: darken($red, 10%); }
+
+	&.btn--outline, &.btn--text {color: $red; background: transparent; }
+	&.btn--outline:hover, &.btn--text:hover {color: darken($red, 10%); background: transparent; }
+}
+
+.btn--orange {
+	background: $orange;
+	color: $black;
+	&:hover, &:active {
+		background: lighten($orange, 10%);
+		color: $black;
+	}
+
+	&.btn--outline, &.btn--text {color: $orange; background: transparent; }
+	&.btn--outline:hover, &.btn--text:hover {color: darken($orange, 10%); background: transparent; }
+}
+
+.btn--yellow {
+	background: $yellow;
+	color: $black;
+	&:hover, &:active {
+		background: lighten($yellow, 10%);
+		color: $black;
+	}
+
+	&.btn--outline, &.btn--text {color: $yellow; background: transparent; }
+	&.btn--outline:hover, &.btn--text:hover {color: darken($yellow, 10%); background: transparent; }
+}
+
+.btn--disabled {
+	// Disable Button
+	cursor: default;
+	text-shadow: none;
+	pointer-events: none;
+
+	background: #E0E4E8;
+	color: #606362;
+
+	&.btn--outline, &.btn--text {color: #576B79; background: transparent; }
+}
+
+// Sizes
+.btn--small { font-size: $t-xs; }
+.btn--large { font-size: 1.25rem; }
+
+// Widths
+.btn--block { display: block; }
+
+// Spacing
+.btn + .btn {
+	margin-left: 2em;
 }
