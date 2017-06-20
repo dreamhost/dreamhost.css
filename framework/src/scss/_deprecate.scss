@@ -93,3 +93,11 @@
 .u-border-radius-l--right {@extend .u-border-radius--right;}
 .u-border-radius-l--bottom {@extend .u-border-radius--bottom;}
 .u-border-radius-l--left {@extend .u-border-radius--left;}
+
+// Depreciate text-size tshirt classes
+.t-xs {@extend .t-1;}
+.t-s {@extend .t-2;}
+.t-m {@extend .t-3;}
+.t-l {@extend .t-4;}
+.t-xl {@extend .t-5;}
+.t-xxl {@extend .t-6;}
