@@ -82,3 +82,14 @@
 .m-y,.m-x-m { @extend .m-x-4;}
 .m-x-l { @extend .m-x-5;}
 .m-x-xl { @extend .m-x-6;}
+
+// Depreciate 5px border-radius
+.u-border-radius-l {@extend .u-border-radius;}
+.u-border-radius-l--top-left {@extend .u-border-radius--top-left;}
+.u-border-radius-l--top-right {@extend .u-border-radius--top-right;}
+.u-border-radius-l--bottom-right {@extend .u-border-radius--bottom-right;}
+.u-border-radius-l--bottom-left {@extend .u-border-radius--bottom-left;}
+.u-border-radius-l--top {@extend .u-border-radius--top;}
+.u-border-radius-l--right {@extend .u-border-radius--right;}
+.u-border-radius-l--bottom {@extend .u-border-radius--bottom;}
+.u-border-radius-l--left {@extend .u-border-radius--left;}
