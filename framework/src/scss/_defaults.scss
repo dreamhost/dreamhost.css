@@ -20,22 +20,22 @@ h1, h2, h3, h4,
 
 h1, .h1 {
 	font-size: $t-xxl;
-	margin-bottom: convertScaleToRem(5);
+	margin-bottom: $s-l;
 }
 
 h2, .h2 {
 	font-size: $t-xl;
-	margin-bottom: convertScaleToRem(4);
+	margin-bottom: $s-m;
 }
 
 h3, .h3 {
 	font-size: $t-l;
-	margin-bottom: convertScaleToRem(3);
+	margin-bottom: $s-s;
 }
 
 h4, .h4 {
 	font-size: $t-m;
-	margin-bottom: convertScaleToRem(3);
+	margin-bottom: $s-s;
 }
 
 p {
@@ -66,16 +66,16 @@ img.responsive-image {
 }
 
 p, section, img {
-	margin-bottom: convertScaleToRem(4);
+	margin-bottom: $s-m;
 }
 
 hr {
 	border: 1px solid $lighter-grey;
-	margin: convertScaleToRem(4) 0;
+	margin: $s-m 0;
 }
 
 code {
-	padding: 0 convertScaleToRem(1);
+	padding: 0 $s-xs;
 	font-size: $t-s;
 	display: inline-block;
 	border: 1px solid $lighter-grey;
