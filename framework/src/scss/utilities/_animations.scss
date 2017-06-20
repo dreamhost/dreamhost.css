@@ -17,29 +17,28 @@ Animation Utilities
 
 
 // Duration
-.a-duration-none {
+.a-duration-0 {
   animation-duration: 0s !important;
 }
 
-.a-duration-xs {
-  animation-duration: $a-xs !important;
+.a-duration-1 {
+  animation-duration: $a-1 !important;
 }
 
-.a-duration-s {
-  animation-duration: $a-s !important;
+.a-duration-2 {
+  animation-duration: $a-2 !important;
 }
 
-.a-duration,
-.a-duration-m {
-  animation-duration: $a-m !important;
+.a-duration-3 {
+  animation-duration: $a-3 !important;
 }
 
-.a-duration-l {
-  animation-duration: $a-l !important;
+.a-duration-4 {
+  animation-duration: $a-4 !important;
 }
 
-.a-duration-xl {
-  animation-duration: $a-xl !important;
+.a-duration-5 {
+  animation-duration: $a-5 !important;
 }
 
 

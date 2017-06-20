@@ -18,77 +18,77 @@ Animation Components
 // Spin
 .spin-right,
 .spin-right-hover:hover {
-	animation: spinRight $a-m 1 linear;
+	animation: spinRight $a-3 1 linear;
 	animation-fill-mode: forwards;
 }
 
 .spin-left,
 .spin-left-hover:hover {
-	animation: spinRight $a-m 1 linear reverse;
+	animation: spinRight $a-3 1 linear reverse;
 	animation-fill-mode: forwards;
 }
 
 // Bounce
 .bounce,
 .bounce-hover:hover {
-	animation: bounce $a-m 1 cubic-bezier(.075,.82,.165,1);
+	animation: bounce $a-3 1 cubic-bezier(.075,.82,.165,1);
 	animation-fill-mode: forwards;
 }
 
 // Shake
 .shake,
 .shake-hover:hover {
-	animation: shake $a-m 1 cubic-bezier(.075,.82,.165,1);
+	animation: shake $a-3 1 cubic-bezier(.075,.82,.165,1);
 	animation-fill-mode: forwards;
 }
 
 // Fade
 .fade-in,
 .fade-in-hover:hover {
-	animation: fadeIn $a-m 1 linear;
+	animation: fadeIn $a-3 1 linear;
 	animation-fill-mode: forwards;
 }
 
 .fade-out,
 .fade-out-hover:hover {
-	animation: fadeIn $a-m 1 linear reverse;
+	animation: fadeIn $a-3 1 linear reverse;
 	animation-fill-mode: forwards;
 }
 
 // slide
 .slide-in,
 .slide-in-hover:hover {
-	animation: slideIn $a-m 1 cubic-bezier(0.165,0.84,0.44,1);
+	animation: slideIn $a-3 1 cubic-bezier(0.165,0.84,0.44,1);
 	animation-fill-mode: forwards;
 }
 
 .slide-out,
 .slide-out-hover:hover {
-	animation: slideIn $a-m 1 linear reverse;
+	animation: slideIn $a-3 1 linear reverse;
 	animation-fill-mode: forwards;
 }
 
 .slide-up,
 .slide-up-hover:hover {
-	animation: slideUp $a-xs 1 linear;
+	animation: slideUp $a-1 1 linear;
 	animation-fill-mode: forwards;
 }
 
 .slide-down,
 .slide-down-hover:hover {
-	animation: slideDown $a-xs 1 linear reverse;
+	animation: slideDown $a-1 1 linear reverse;
 	animation-fill-mode: forwards;
 }
 
 .slide-left,
 .slide-left-hover:hover {
-	animation: slideLeft $a-xs 1 linear;
+	animation: slideLeft $a-1 1 linear;
 	animation-fill-mode: forwards;
 }
 
 .slide-right,
 .slide-right-hover:hover {
-	animation: slideRight $a-xs 1 linear reverse;
+	animation: slideRight $a-1 1 linear reverse;
 	animation-fill-mode: forwards;
 }
 
