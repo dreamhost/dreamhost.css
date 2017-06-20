@@ -109,3 +109,10 @@
 .a-duration, .a-duration-m {@extend .a-duration-3;}
 .a-duration-l {@extend .a-duration-4;}
 .a-duration-xl {@extend .a-duration-5;}
+
+// Deprecate transition tshirt classes
+.tr-duration-xs {@extend .tr-duration-1;}
+.tr-duration-s {@extend .tr-duration-2;}
+.tr-duration, .tr-duration-m {@extend .tr-duration-3;}
+.tr-duration-l {@extend .tr-duration-4;}
+.tr-duration-xl {@extend .tr-duration-5;}
