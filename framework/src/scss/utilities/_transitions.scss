@@ -7,7 +7,7 @@ Transition Utilities
   scss/components/_transitions.scss.
 
   Usage:
-  <div class="scale-up-hover tr-duration-large tr-easing-cb-scale-out">
+  <div class="scale-up-hover tr-duration-4 tr-easing-cb-scale-out">
     This div scale up slowly on hover, with a cubic bezier scaling effect. The
     initial scaling up is defined in the components doc, while the utility
     classes override the component's default values.
