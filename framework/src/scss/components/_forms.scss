@@ -42,7 +42,7 @@ Form Component
 .form__description {
 	@extend %form-description;
 
-	margin-top: -convertScaleToRem(1); // Haha. Reverse margin to unset .form__label's bottom margin.
+	margin-top: -(convertScaleToRem(1)); // Haha. Reverse margin to unset .form__label's bottom margin.
 	margin-bottom: convertScaleToRem(2);
 	max-width: 35em; // Should give this a good width to break at
 }
