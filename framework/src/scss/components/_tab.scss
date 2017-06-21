@@ -1,11 +1,11 @@
 .tabs {
-	margin-bottom: convertScaleToRem(5);
+	margin-bottom: $s-l;
 }
 
 .tabs__nav-item {
 	@include link(dark);
 	font-family: $heading;
-	padding: convertScaleToRem(4);
+	padding: $s-m;
 	font-size: $t-l;
 	display: inline-block;
 

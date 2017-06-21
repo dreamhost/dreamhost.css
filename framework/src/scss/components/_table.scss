@@ -11,7 +11,7 @@ Table
 
 .table {
 	width: 100%;
-	margin-bottom: convertScaleToRem(4);
+	margin-bottom: $s-m;
 	text-align: left;
 
 	thead tr {
@@ -19,7 +19,10 @@ Table
 	}
 
 	th {
-		padding: convertScaleToRem(3) convertScaleToRem(4);
+		padding-left: $s-m;
+		padding-right: $s-m;
+		padding-top: $s-s;
+		padding-bottom: $s-s;
 		font-size: $t-l;
 		font-family: $heading;
 		color: $black;
@@ -34,11 +37,14 @@ Table
 	tbody tr:nth-child(even) {background: $lighter-grey;}
 
 	td {
-		padding: convertScaleToRem(3);
+		padding: $s-s;
 		vertical-align: middle;
 	}
 }
 
 .table--large-padding td {
-	padding: convertScaleToRem(5) convertScaleToRem(4);
+	padding-left: $s-m;
+	padding-right: $s-m;
+	padding-top: $s-l;
+	padding-bottom: $s-l;
 }
