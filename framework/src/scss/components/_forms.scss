@@ -7,12 +7,12 @@ Form Component
 %form-border { border: 1px solid $light-grey; }
 %form-description {
 	color: $dark-grey;
-	font-size: $t-s;
+	font-size: $t-2;
 }
 %form-no-outline { outline: none; }
 %form-text-style {
 	color: $black;
-	font-size: $t-m;
+	font-size: $t-3;
 	font-family: $body;
 }
 
@@ -34,7 +34,7 @@ Form Component
 .form__label {
 	color: $darker-grey;
 	display: block;
-	font-size: $t-s;
+	font-size: $t-2;
 	font-weight: $t-bold;
 	margin-bottom: convertScaleToRem(1);
 }
@@ -56,7 +56,7 @@ Form Component
 	margin: 0;
 	width: 100%;
 
-	border-radius: $border-radius-l;
+	border-radius: $border-radius;
 	padding: .65rem;
 
 	&::placeholder {

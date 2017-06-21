@@ -6,7 +6,7 @@
 	@include link(dark);
 	font-family: $heading;
 	padding: convertScaleToRem(4);
-	font-size: $t-l;
+	font-size: $t-4;
 	display: inline-block;
 
 	&:first-child {

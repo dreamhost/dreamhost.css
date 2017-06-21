@@ -92,7 +92,7 @@ Page Header Component
 	text-decoration: none;
 	font-weight: $t-bold;
 	color: $light-grey;
-	font-size: $t-s;
+	font-size: $t-2;
 	display: inline-block;
 	outline: none;
 
@@ -124,7 +124,7 @@ Page Header Component
 .page-header__subnav-link {
 	text-decoration: none;
 	color: #fff;
-	font-size: $t-s;
+	font-size: $t-2;
 	display: inline-block;
 
 	.icon {

@@ -1,4 +1,4 @@
-// Depricate tshirt classes
+// Deprecate tshirt classes
 .p-xs { @extend .p-1;}
 .p-s { @extend .p-3;}
 .p,.p-m { @extend .p-4;}
@@ -82,3 +82,37 @@
 .m-y,.m-x-m { @extend .m-x-4;}
 .m-x-l { @extend .m-x-5;}
 .m-x-xl { @extend .m-x-6;}
+
+// Deprecate 5px border-radius
+.u-border-radius-l {@extend .u-border-radius;}
+.u-border-radius-l--top-left {@extend .u-border-radius--top-left;}
+.u-border-radius-l--top-right {@extend .u-border-radius--top-right;}
+.u-border-radius-l--bottom-right {@extend .u-border-radius--bottom-right;}
+.u-border-radius-l--bottom-left {@extend .u-border-radius--bottom-left;}
+.u-border-radius-l--top {@extend .u-border-radius--top;}
+.u-border-radius-l--right {@extend .u-border-radius--right;}
+.u-border-radius-l--bottom {@extend .u-border-radius--bottom;}
+.u-border-radius-l--left {@extend .u-border-radius--left;}
+
+// Deprecate text-size tshirt classes
+.t-xs {@extend .t-1;}
+.t-s {@extend .t-2;}
+.t-m {@extend .t-3;}
+.t-l {@extend .t-4;}
+.t-xl {@extend .t-5;}
+.t-xxl {@extend .t-6;}
+
+// Deprecate animation tshirt classes
+.a-duration-none {@extend .a-duration-0;}
+.a-duration-xs {@extend .a-duration-1;}
+.a-duration-s {@extend .a-duration-2;}
+.a-duration, .a-duration-m {@extend .a-duration-3;}
+.a-duration-l {@extend .a-duration-4;}
+.a-duration-xl {@extend .a-duration-5;}
+
+// Deprecate transition tshirt classes
+.tr-duration-xs {@extend .tr-duration-1;}
+.tr-duration-s {@extend .tr-duration-2;}
+.tr-duration, .tr-duration-m {@extend .tr-duration-3;}
+.tr-duration-l {@extend .tr-duration-4;}
+.tr-duration-xl {@extend .tr-duration-5;}
