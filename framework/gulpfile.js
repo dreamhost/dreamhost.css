@@ -109,7 +109,7 @@ gulp.task('js-dist', function() {
 		.pipe(concat(dist.fileName + '.js'))
 		.pipe(gulp.dest(dist.path.version))
 		.pipe(gulp.dest(dist.path.latest))
-		.pipe(cleanCSS())
+		.pipe(uglify())
 		.pipe(rename(dist.fileName + '.min.js'))
 		.pipe(gulp.dest(dist.path.version))
 		.pipe(gulp.dest(dist.path.latest));
