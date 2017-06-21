@@ -384,7 +384,7 @@ Styleguide Base.buttons
 
 .btn--large { font-size: 1.25rem; }
 
-.btn--block { display: block; }
+.btn--block { display: block; width: 100%; }
 
 .btn + .btn { margin-left: 2em; }
 
