@@ -1,6 +1,6 @@
 {
   "name": "dreamhost-css",
-  "version": "0.0.20",
+  "version": "0.1.0",
   "description": "DreamHost's CSS framework",
   "repository": {
     "type": "git",

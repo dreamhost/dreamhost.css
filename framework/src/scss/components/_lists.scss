@@ -6,16 +6,16 @@
 	.list--inline makes the list horizontal
 */
 .list {text-align: left;} // All lists should be left aligned unless specified
-.list > li {margin-bottom: $s-s;}
+.list > li {margin-bottom: convertScaleToRem(3);}
 .list > li:last-child {margin-bottom: 0;}
 
 .list--disc {list-style-type: disc; list-style-position: outside}
-.list--disc > li {margin-left: $s-m;}
+.list--disc > li {margin-left: convertScaleToRem(4);}
 
 .list--inline > li {
 	padding: 0;
 	display: inline;
-	margin-right: $s-m;
+	margin-right: convertScaleToRem(4);
 }
 
 .list--inline > li:last-child {margin-right: 0;}
@@ -28,14 +28,14 @@
 	- list--small-bold is a slightly smaller and bolder list with no link underlines
 */
 // .list--padding
-.list.list--padding {padding-top: $s-xs; padding-bottom: $s-xs;}
+.list.list--padding {padding-top: convertScaleToRem(1); padding-bottom: convertScaleToRem(1);}
 .list.list--padding > li {margin-bottom: 0;}
 
 .list.list--padding > li > * {
 	display: block;
-	padding: $s-xs $s-xs*2;
+	padding: convertScaleToRem(1) convertScaleToRem(2);
 
-	transition-duration: $tr-m;
+	transition-duration: $tr-3;
 	transition-timing-function: linear
 }
 
@@ -44,7 +44,7 @@
 	font-weight: $t-bold;
 	color: $black;
 	text-decoration: none;
-	font-size: $t-s;
+	font-size: $t-2;
 }
 
 // Don't give hover states to non-links

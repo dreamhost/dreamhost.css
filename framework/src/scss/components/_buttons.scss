@@ -35,7 +35,7 @@ Styleguide Base.buttons
 	border: none;
 	border-radius: 3px;
 	display: inline-block;
-	font-size: $t-m;
+	font-size: $t-3;
 	line-height: 1;
 	padding: .8em 1em .7em;
 	text-align: center;
@@ -151,11 +151,14 @@ Styleguide Base.buttons
 }
 
 // Sizes
-.btn--small { font-size: $t-xs; }
+.btn--small { font-size: $t-1; }
 .btn--large { font-size: 1.25rem; }
 
 // Widths
-.btn--block { display: block; }
+.btn--block {
+	display: block;
+	width: 100%;
+}
 
 // Spacing
 .btn + .btn {
