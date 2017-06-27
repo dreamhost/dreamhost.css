@@ -80,12 +80,16 @@ DreamHost uses Ubuntu for headings and Proxima Nova for body text.
 ## Weight
 
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-heavy</p>
-	<p class="t-heavy">The quick brown fox jumps over the lazy dog.</p>
+	<p class="m-bottom-0 t-s t-salmon t-bold">.t-extrabold</p>
+	<p class="t-extrabold">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
 	<p class="m-bottom-0 t-s t-salmon t-bold">.t-bold</p>
 	<p class="t-bold">The quick brown fox jumps over the lazy dog.</p>
+</div>
+<div>
+	<p class="m-bottom-0 t-s t-salmon t-bold">.t-normal</p>
+	<p class="t-normal">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
 	<p class="m-bottom-0 t-s t-salmon t-bold">.t-light</p>
@@ -97,8 +101,9 @@ DreamHost uses Ubuntu for headings and Proxima Nova for body text.
 </div>
 
 {% highlight html %}
-<p class="t-heavy">The quick brown fox jumps over the lazy dog.</p>
+<p class="t-extrabold">The quick brown fox jumps over the lazy dog.</p>
 <p class="t-bold">The quick brown fox jumps over the lazy dog.</p>
+<p class="t-normal">The quick brown fox jumps over the lazy dog.</p>
 <p class="t-light">The quick brown fox jumps over the lazy dog.</p>
 <p class="t-lighter">The quick brown fox jumps over the lazy dog.</p>
 {% endhighlight %}
