@@ -20,10 +20,6 @@ Form Component
 
 .form__group {
 	margin-bottom: convertScaleToRem(4);
-
-	& + & {
-		margin-bottom: 0;
-	}
 }
 
 .inline-input-container {
@@ -50,7 +46,12 @@ Form Component
 
 .form__group--actions {
 	margin-top: convertScaleToRem(6);
+}
 
+.form__group--stacked {
+	.form__input + .form__input {
+		margin-top: 1rem;
+	}
 }
 
 .form__label {
@@ -59,6 +60,7 @@ Form Component
 	font-size: $t-3;
 	font-weight: $t-bold;
 	cursor: pointer;
+	max-width: 35rem;
 }
 
 .form__description {
@@ -163,8 +165,9 @@ textarea.form__input {
 	cursor: pointer;
 }
 
-.select {
+.select-icon {
 	position: relative;
+	top: -1.5rem;
 
 	&:after {
 		content: '';
@@ -175,8 +178,8 @@ textarea.form__input {
 		border-style: solid;
 		border-width: .35rem .35rem 0 .35rem;
 	}
+}
 
-	&:hover:after {
-		border-color: $dark-grey transparent;
-	}
+.form__group:hover > .select-icon:after {
+	border-color: $dark-grey transparent;
 }
