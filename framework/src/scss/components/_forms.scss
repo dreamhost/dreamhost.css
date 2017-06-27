@@ -7,7 +7,7 @@ Form Component
 %form-border { border: 1px solid $light-grey; }
 %form-description {
 	color: $dark-grey;
-	font-size: $t-2;
+	font-size: $t-3;
 }
 %form-no-outline { outline: none; }
 %form-text-style {
@@ -26,6 +26,29 @@ Form Component
 	}
 }
 
+.inline-input-container {
+	max-width: 100%;
+	margin: 0 auto 2rem;
+	overflow: hidden;
+}
+
+.inline-input-grid {
+	margin: 0 -2rem;
+}
+
+.inline-input-row {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 2rem 0;
+}
+
+.form__group--inline {
+	display: table-cell;
+	vertical-align: top;
+}
+
 .form__group--actions {
 	margin-top: convertScaleToRem(6);
 
@@ -34,17 +57,16 @@ Form Component
 .form__label {
 	color: $darker-grey;
 	display: block;
-	font-size: $t-2;
+	font-size: $t-3;
 	font-weight: $t-bold;
-	margin-bottom: convertScaleToRem(1);
+	cursor: pointer;
 }
 
 .form__description {
 	@extend %form-description;
 
-	margin-top: -(convertScaleToRem(1)); // Haha. Reverse margin to unset .form__label's bottom margin.
-	margin-bottom: convertScaleToRem(2);
-	max-width: 35em; // Should give this a good width to break at
+	font-weight: $t-regular;
+	margin-bottom: 0;
 }
 
 .form__input {
@@ -54,14 +76,36 @@ Form Component
 
 	display: block;
 	margin: 0;
+	margin-top: .5rem;
 	width: 100%;
 
 	border-radius: $border-radius;
 	padding: .65rem;
 
+	&:active,
+	&:focus {
+		box-shadow: 2px 2px 0 0 $light-grey;
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			color: $white;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+			color: $white;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+			color: $white;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+			color: $white;
+		}
+	}
+
 	&::placeholder {
 		color: $dark-grey;
 	}
+}
+
+.form__label > .form__description {
+	margin-bottom: 1rem;
 }
 
 textarea.form__input {
@@ -104,8 +148,36 @@ textarea.form__input {
 	@extend %form-no-outline;
 	@extend %form-text-style;
 
+	border-radius: $border-radius;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	padding: 0 0 0 .75rem;
+	background: $lighter-grey; /* Old browsers */
+	background: -moz-linear-gradient(top, $lighter-grey 0%, lighten($lighter-grey, 2%) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, $lighter-grey 0%, lighten($lighter-grey, 2%) 100%); /* Chrome10-25, Safari5.1-6 */
+	background: linear-gradient(to bottom, $lighter-grey 0%, lighten($lighter-grey, 2%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$lighter-grey', endColorstr='lighten($lighter-grey, 3%)', GradientType=0 ); /* IE6-9 */
 	display: block;
 	width: 100%;
 	height: 42px;
 	line-height: 42px;
+	cursor: pointer;
+}
+
+.select {
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 2.7rem;
+		right: 1rem;
+		border-color: $grey transparent;
+		border-style: solid;
+		border-width: .35rem .35rem 0 .35rem;
+	}
+
+	&:hover:after {
+		border-color: $dark-grey transparent;
+	}
 }
