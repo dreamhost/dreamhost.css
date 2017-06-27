@@ -6,16 +6,14 @@ layout: page
 ## Block inputs
 
 <div class="form__group">
-	<label class="form__label">Text label
-		<input type="text" class="form__input" placeholder="Example placeholder content">
-	</label>
+	<label for="input1" class="form__label">Text label</label>
+	<input id="input1" type="text" class="form__input" placeholder="Example placeholder content">
 </div>
 
 {% highlight html %}
 <div class="form__group">
-	<label class="form__label">Text label
-		<input type="text" class="form__input" placeholder="Example placeholder content">
-	</label>
+	<label for="input1" class="form__label">Text label</label>
+	<input id="input1" type="text" class="form__input" placeholder="Example placeholder content">
 </div>
 {% endhighlight %}
 
@@ -25,14 +23,12 @@ layout: page
 	<div class="inline-input-grid">
 		<div class="inline-input-row">
 			<div class="form__group form__group--inline">
-				<label class="form__label">Half label
-					<input type="text" class="form__input" placeholder="Example placeholder content">
-				</label>
+				<label for="input2" class="form__label">Half label</label>
+				<input id="input2" type="text" class="form__input" placeholder="Example placeholder content">
 			</div>
 			<div class="form__group form__group--inline">
-				<label class="form__label">Half label
-					<input type="text" class="form__input" placeholder="Example placeholder content">
-				</label>
+				<label for="input3" class="form__label">Half label</label>
+				<input id="input3" type="text" class="form__input" placeholder="Example placeholder content">
 			</div>
 		</div>
 	</div>
@@ -43,14 +39,12 @@ layout: page
 	<div class="inline-input-grid">
 		<div class="inline-input-row">
 			<div class="form__group form__group--inline">
-				<label class="form__label">Half label
-					<input type="text" class="form__input" placeholder="Example placeholder content">
-				</label>
+				<label for="input2" class="form__label">Half label</label>
+				<input id="input2" type="text" class="form__input" placeholder="Example placeholder content">
 			</div>
 			<div class="form__group form__group--inline">
-				<label class="form__label">Half label
-					<input type="text" class="form__input" placeholder="Example placeholder content">
-				</label>
+				<label for="input3" class="form__label">Half label</label>
+				<input id="input3" type="text" class="form__input" placeholder="Example placeholder content">
 			</div>
 		</div>
 	</div>
@@ -60,18 +54,16 @@ layout: page
 ## Textareas
 
 <div class="form__group">
-	<label class="form__label">Text label
-		<p class="form__description">This caption supports a <strong>non-ludicrous</strong> amount of text. <a href="#">Learn more.</a></p>
-		<textarea class="form__input" placeholder="Example placeholder content"></textarea>
-	</label>
+	<label for="textarea1" class="form__label">Text label</label>
+	<p class="form__description">This caption supports a <strong>non-ludicrous</strong> amount of text. <a href="#">Learn more.</a></p>
+	<textarea id="textarea1" class="form__input" placeholder="Example placeholder content"></textarea>
 </div>
 
 {% highlight html %}
 <div class="form__group">
-	<label class="form__label">Text label
-		<p class="form__description">This caption supports a <strong>non-ludicrous</strong> amount of text. <a href="#">Learn more.</a></p>
-		<textarea class="form__input" placeholder="Example placeholder content"></textarea>
-	</label>
+	<label for="textarea1" class="form__label">Text label</label>
+	<p class="form__description">This caption supports a <strong>non-ludicrous</strong> amount of text. <a href="#">Learn more.</a></p>
+	<textarea id="textarea1" class="form__input" placeholder="Example placeholder content"></textarea>
 </div>
 {% endhighlight %}
 
@@ -213,29 +205,27 @@ layout: page
 
 ## Select menus
 
-<div class="form__group">
-	<label class="form__label select">Select label
-		<select class="form__select">
-			<option>Option 1</option>
-			<option>Option 2</option>
-			<option>Option 3</option>
-			<option>Option 4</option>
-			<option>Option 5</option>
-		</select>
-	</label>
+<div class="form__group form__group--select">
+	<label for="select1" class="form__label">Select label</label>
+	<select id="select1" class="form__select">
+		<option>Option 1</option>
+		<option>Option 2</option>
+		<option>Option 3</option>
+		<option>Option 4</option>
+		<option>Option 5</option>
+	</select>
 </div>
 
 {% highlight html %}
-<div class="form__group">
-	<label class="form__label select">Select label
-		<select class="form__select">
-			<option>Option 1</option>
-			<option>Option 2</option>
-			<option>Option 3</option>
-			<option>Option 4</option>
-			<option>Option 5</option>
-		</select>
-	</label>
+<div class="form__group form__group--select">
+	<label for="select1" class="form__label">Select label</label>
+	<select id="select1" class="form__select">
+		<option>Option 1</option>
+		<option>Option 2</option>
+		<option>Option 3</option>
+		<option>Option 4</option>
+		<option>Option 5</option>
+	</select>
 </div>
 {% endhighlight %}
 
