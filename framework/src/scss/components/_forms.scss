@@ -165,7 +165,7 @@ textarea.form__input {
 	cursor: pointer;
 }
 
-.select-icon {
+.form__group--select {
 	position: relative;
 	top: -1.5rem;
 
@@ -178,8 +178,8 @@ textarea.form__input {
 		border-style: solid;
 		border-width: .35rem .35rem 0 .35rem;
 	}
-}
 
-.form__group:hover > .select-icon:after {
-	border-color: $dark-grey transparent;
+	&:hover:after {
+		border-color: $dark-grey transparent;
+	}
 }
