@@ -9,7 +9,7 @@
 @mixin createClass( $class, $props, $value ) {
 	.#{$class} {
 		@each $prop in $props {
-			#{$prop}: $value;
+			#{$prop}: $value !important;
 		}
 	}
 }
