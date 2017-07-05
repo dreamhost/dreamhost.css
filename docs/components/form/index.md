@@ -19,14 +19,14 @@ layout: page
 
 ## Inline-block inputs
 
-<div class="inline-input-container">
-	<div class="inline-input-grid">
-		<div class="inline-input-row">
-			<div class="form__group form__group--inline">
+<div class="form__group form__group--inline">
+	<div class="form__group--inline-grid">
+		<div class="form__group--inline-row">
+			<div class="form__group">
 				<label for="input2" class="form__label">Half label</label>
 				<input id="input2" type="text" class="form__input" placeholder="Example placeholder content">
 			</div>
-			<div class="form__group form__group--inline">
+			<div class="form__group">
 				<label for="input3" class="form__label">Half label</label>
 				<input id="input3" type="text" class="form__input" placeholder="Example placeholder content">
 			</div>
@@ -35,14 +35,14 @@ layout: page
 </div>
 
 {% highlight html %}
-<div class="inline-input-container">
-	<div class="inline-input-grid">
-		<div class="inline-input-row">
-			<div class="form__group form__group--inline">
+<div class="form__group form__group--inline">
+	<div class="form__group--inline-grid">
+		<div class="form__group--inline-row">
+			<div class="form__group">
 				<label for="input2" class="form__label">Half label</label>
 				<input id="input2" type="text" class="form__input" placeholder="Example placeholder content">
 			</div>
-			<div class="form__group form__group--inline">
+			<div class="form__group">
 				<label for="input3" class="form__label">Half label</label>
 				<input id="input3" type="text" class="form__input" placeholder="Example placeholder content">
 			</div>

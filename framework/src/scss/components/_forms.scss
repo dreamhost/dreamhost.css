@@ -19,29 +19,27 @@ Form Component
 .form {}
 
 .form__group {
-	margin-bottom: convertScaleToRem(4);
-}
-
-.inline-input-container {
 	max-width: 100%;
 	margin: 0 auto 2rem;
 }
 
-.inline-input-grid {
+.form__group--inline {
+	.form__group {
+		display: table-cell;
+		vertical-align: top;
+	}
+}
+
+.form__group--inline-grid {
 	margin: 0 -2rem;
 }
 
-.inline-input-row {
+.form__group--inline-row {
 	display: table;
 	table-layout: fixed;
 	width: 100%;
 	border-collapse: separate;
 	border-spacing: 2rem 0;
-}
-
-.form__group--inline {
-	display: table-cell;
-	vertical-align: top;
 }
 
 .form__group--actions {
@@ -167,7 +165,6 @@ textarea.form__input {
 
 .form__group--select {
 	position: relative;
-	top: -1.5rem;
 
 	&:after {
 		content: '';
