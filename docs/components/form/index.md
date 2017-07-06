@@ -19,9 +19,9 @@ layout: page
 
 ## Inline-block inputs
 
-<div class="form__group form__group--inline">
-	<div class="form__group--inline-grid">
-		<div class="form__group--inline-row">
+<div class="form__inline">
+	<div class="form__inline-grid">
+		<div class="form__inline-row">
 			<div class="form__group">
 				<label for="input2" class="form__label">Half label</label>
 				<input id="input2" type="text" class="form__input" placeholder="Example placeholder content">
@@ -35,9 +35,9 @@ layout: page
 </div>
 
 {% highlight html %}
-<div class="form__group form__group--inline">
-	<div class="form__group--inline-grid">
-		<div class="form__group--inline-row">
+<div class="form__inline">
+	<div class="form__inline-grid">
+		<div class="form__inline-row">
 			<div class="form__group">
 				<label for="input2" class="form__label">Half label</label>
 				<input id="input2" type="text" class="form__input" placeholder="Example placeholder content">
