@@ -23,18 +23,20 @@ Form Component
 	margin: 0 auto 2rem;
 }
 
-.form__group--inline {
+.form__inline {
+		margin: 0 auto 2rem;
+
 	.form__group {
 		display: table-cell;
 		vertical-align: top;
 	}
 }
 
-.form__group--inline-grid {
+.form__inline-grid {
 	margin: 0 -2rem;
 }
 
-.form__group--inline-row {
+.form__inline-row {
 	display: table;
 	table-layout: fixed;
 	width: 100%;
