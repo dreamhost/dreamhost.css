@@ -160,25 +160,35 @@
 
 		<form class="form">
 			<div class="form__group">
-				<label class="form__label">Text label</label>
+				<label for="textlabel1" class="form__label">Text label</label>
+				<input id="textlabel1" type="text" class="form__input" placeholder="Example placeholder content">
+			</div>
+
+			<div class="form__inline">
+				<div class="form__inline-grid">
+					<div class="form__inline-row">
+						<div class="form__group">
+							<label for="halflabel1" class="form__label">Half label</label>
+							<input id="halflabel1" type="text" class="form__input" placeholder="Example placeholder content">
+						</div>
+						<div class="form__group">
+							<label for="halflabel2" class="form__label">Half label</label>
+							<input id="halflabel2" type="text" class="form__input" placeholder="Example placeholder content">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="form__group form__group--stacked">
+				<label for="stackedlabel" class="form__label">Stacked label</label>
+				<input id="stackedlabel" type="text" class="form__input" placeholder="Example placeholder content">
 				<input type="text" class="form__input" placeholder="Example placeholder content">
 			</div>
 
-			<div class="container-full-width">
-				<div class="form__group g-1_2">
-					<label class="form__label">Half label</label>
-					<input type="text" class="form__input" placeholder="Example placeholder content">
-				</div>
-				<div class="form__group g-1_2">
-					<label class="form__label">Half label</label>
-					<input type="text" class="form__input" placeholder="Example placeholder content">
-				</div>
-			</div>
-
 			<div class="form__group">
-				<label class="form__label">Text label</label>
-				<p class="form__description">Put in some text! Only good text, not bad text, obviously. What is this input for? Are there any formatting requirements? This is for a text input so we might need to say a lot of things. There might be some <strong>bolded</strong> text, or maybe <em>italics</em>. Maybe we end with some sort of <a href="#">help link</a>.</p>
-				<textarea class="form__input" placeholder="Example placeholder content"></textarea>
+				<label for="textarealabel" class="form__label">Text label</label>
+				<p class="form__description">This caption supports a <strong>non-ludicrous</strong> amount of text. <a href="#">Learn more.</a></p>
+				<textarea id="textarealabel" class="form__input" placeholder="Example placeholder content"></textarea>
 			</div>
 
 			<div class="container-full-width">
@@ -261,9 +271,9 @@
 				</div>
 			</div>
 
-			<div class="form__group">
-				<label class="form__label">Select label</label>
-				<select class="form__select">
+			<div class="form__group form__group--select">
+				<label for="selectlabel" class="form__label">Select label</label>
+				<select id="selectlabel" class="form__select">
 					<option>Option 1</option>
 					<option>Option 2</option>
 					<option>Option 3</option>
