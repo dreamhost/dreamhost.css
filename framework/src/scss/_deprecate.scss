@@ -116,3 +116,7 @@
 .tr-duration, .tr-duration-m {@extend .tr-duration-3;}
 .tr-duration-l {@extend .tr-duration-4;}
 .tr-duration-xl {@extend .tr-duration-5;}
+
+// Deprecate popover tshirt classes
+.popover--small {@extend .popover--1;}
+.popover--large {@extend .popover--3;}
