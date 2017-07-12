@@ -5,10 +5,10 @@
 code.hljs {
 	font-family: monospace;
     background-color: $lighter-grey;
-    padding: $s-xs;
-    font-size: $t-s;
+    padding: convertScaleToRem(1);
+    font-size: $t-2;
     border-radius: $border-radius;
-    margin-bottom: $s-m;
+    margin-bottom: convertScaleToRem(2);
     width: 100%;
 }
 
