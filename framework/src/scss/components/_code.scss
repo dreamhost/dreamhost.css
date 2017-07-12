@@ -1,0 +1,26 @@
+// Highlight.js (https://highlightjs.org/) is an optional syntax highlighter
+// But if you have it loaded, these styles will automatically apply
+// TODO: Document this
+
+code.hljs {
+	font-family: monospace;
+    background-color: $lighter-grey;
+    padding: $s-xs;
+    font-size: $t-s;
+    border-radius: $border-radius;
+    margin-bottom: $s-m;
+    width: 100%;
+}
+
+.hljs-type,
+.hljs-string,
+.hljs-number,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+	color: $red;
+}
+
+.hljs .p {padding: 0 !important;}
