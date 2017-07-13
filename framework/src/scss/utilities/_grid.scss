@@ -1,8 +1,5 @@
 // https://dreamhost.github.io/dreamhost.css/grid/
 
-$medium-breakpoint: 800px;
-$large-breakpoint: 1040px;
-
 .g-1_6 {@include span-columns(2)}
 .g-1_4 {@include span-columns(3)}
 .g-1_3 {@include span-columns(4)}
@@ -43,7 +40,7 @@ $large-breakpoint: 1040px;
 	.g-shift-11__m {@include shift(11)}
 }
 
-@media screen and (min-width: $medium-breakpoint){
+@media screen and (min-width: $large-breakpoint){
 	.g-1_6__l {@include span-columns(2)}
 	.g-1_4__l {@include span-columns(3)}
 	.g-1_3__l {@include span-columns(4)}
