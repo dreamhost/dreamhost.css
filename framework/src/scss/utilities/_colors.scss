@@ -93,6 +93,27 @@ Background colors
 .bg-black {background: $black !important}
 .bg-transparent {background: transparent !important}
 
+// Darken
+.bg-darken-10 {background: rgba(0, 0, 0, 0.1) !important}
+.bg-darken-20 {background: rgba(0, 0, 0, 0.2) !important}
+.bg-darken-30 {background: rgba(0, 0, 0, 0.3) !important}
+.bg-darken-40 {background: rgba(0, 0, 0, 0.4) !important}
+.bg-darken-50 {background: rgba(0, 0, 0, 0.5) !important}
+.bg-darken-60 {background: rgba(0, 0, 0, 0.6) !important}
+.bg-darken-70 {background: rgba(0, 0, 0, 0.7) !important}
+.bg-darken-80 {background: rgba(0, 0, 0, 0.8) !important}
+.bg-darken-90 {background: rgba(0, 0, 0, 0.9) !important}
+
+// Lighten
+.bg-lighten-10 {background: rgba(255, 255, 255, 0.1) !important}
+.bg-lighten-20 {background: rgba(255, 255, 255, 0.2) !important}
+.bg-lighten-30 {background: rgba(255, 255, 255, 0.3) !important}
+.bg-lighten-40 {background: rgba(255, 255, 255, 0.4) !important}
+.bg-lighten-50 {background: rgba(255, 255, 255, 0.5) !important}
+.bg-lighten-60 {background: rgba(255, 255, 255, 0.6) !important}
+.bg-lighten-70 {background: rgba(255, 255, 255, 0.7) !important}
+.bg-lighten-80 {background: rgba(255, 255, 255, 0.8) !important}
+.bg-lighten-90 {background: rgba(255, 255, 255, 0.9) !important}
 
 /*
 Typography Colors
