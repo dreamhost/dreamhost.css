@@ -51,13 +51,6 @@
 	.l-pos-bottom__m {bottom: 0 !important}
 	.l-pos-left__m {left: 0 !important}
 	.l-pos-right__m {right: 0 !important}
-
-	.l-pos-top-left__m {@extend .l-pos-top, .l-pos-left;}
-	.l-pos-top-right__m {@extend .l-pos-top, .l-pos-right;}
-	.l-pos-bottom-left__m {@extend .l-pos-bottom, .l-pos-left;}
-	.l-pos-bottom-right__m {@extend .l-pos-bottom, .l-pos-right;}
-
-	.l-pos-all__m {@extend .l-pos-top, .l-pos-bottom, .l-pos-left, .l-pos-right;}
 }
 
 
@@ -84,11 +77,4 @@
 	.l-pos-bottom__l {bottom: 0 !important}
 	.l-pos-left__l {left: 0 !important}
 	.l-pos-right__l {right: 0 !important}
-
-	.l-pos-top-left__l {@extend .l-pos-top, .l-pos-left;}
-	.l-pos-top-right__l {@extend .l-pos-top, .l-pos-right;}
-	.l-pos-bottom-left__l {@extend .l-pos-bottom, .l-pos-left;}
-	.l-pos-bottom-right__l {@extend .l-pos-bottom, .l-pos-right;}
-
-	.l-pos-all__l {@extend .l-pos-top, .l-pos-bottom, .l-pos-left, .l-pos-right;}
 }
