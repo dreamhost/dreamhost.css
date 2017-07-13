@@ -8,7 +8,7 @@ layout: page
 <hr />
 
 ## Margins
-<p class="t-l">Margin utilities are prefixed with m- and can be used to push other elements away from any side in t-shirt sizes.</p>
+<p class="t-l">Margin utilities are prefixed with m- and can be used to push other elements away from any side.</p>
 
 <p>Use the convention m-size or m-side-size, e.g m-l or m-bottom-l.</p>
 
@@ -51,7 +51,7 @@ layout: page
 {% endhighlight %}
 
 ## Padding
-<p class="t-l">Padding utilities are prefixed with p- and can be used to add space inside an element on any side in t-shirt sizes.</p>
+<p class="t-l">Padding utilities are prefixed with p- and can be used to add space inside an element on any side.</p>
 
 <p>Use the convention p-size or m-side-size, e.g m-large or m-bottom-l.</p>
 <div class="m-bottom-1 bg-grey p-half">.p-half</div>
