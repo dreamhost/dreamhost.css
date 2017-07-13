@@ -156,6 +156,19 @@
 
 <div class="container-m p-left-3 p-right-3">
 
+	<section class="box u-border-radius m-bottom-4" >
+		<h2>Modal</h2>
+		<p>DreamHost uses https://github.com/vodkabears/Remodal with some customized styling.</p>
+		<p>To call the modal, use</p>
+		<button class="btn" data-remodal-target="modal">Open modal</button>
+		<div class="remodal modal" data-remodal-id="modal">
+			<h1 class="modal__heading">I'm a modal</h1>
+			<p class="modal__introduction">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nemo praesentium aliquid optio labore qui, voluptate consequatur provident quos sed aperiam animi, placeat! Asperiores dicta, fuga modi temporibus laborum, culpa?</p>
+			<button class="btn btn--orange" data-remodal-action="close">Close</button>
+		</div>
+	</section>
+
 	<section class="box u-border-radius m-bottom-4">
 		<h2>Alerts</h2>
 		<div class="alert alert--error">
@@ -541,22 +554,6 @@
 		<p><a href="javascript::" class="btn--warning">Button</a></p>
 
 	</section>
-
-	<div class="remodal t-left" data-remodal-id="modal">
-		<h2>I'm a modal</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nemo praesentium aliquid optio labore qui, voluptate consequatur provident quos sed aperiam animi, placeat! Asperiores dicta, fuga modi temporibus laborum, culpa?</p>
-		<form>
-			<fieldset>
-				<label class="form__label">Something</label>
-				<input class="form__input" />
-			</fieldset>
-			<fieldset>
-				<label class="form__label">Something else</label>
-				<input class="form__input" />
-			</fieldset>
-			<button class="btn" data-remodal-action="close">Close</button>
-		</form>
-	</div>
 
 	<table class="table">
 		<thead>

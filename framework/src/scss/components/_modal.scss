@@ -1,0 +1,22 @@
+// use remodal.js
+// https://github.com/vodkabears/Remodal
+
+.modal {
+	@extend .p-6;
+	@extend .t-left;
+	@extend .u-border-radius-l;
+	@extend .remodal;
+}
+
+.modal__introduction {
+	@extend .t-5;
+}
+
+.modal__heading {
+	@extend .t-6;
+	@extend .m-bottom-1;
+}
+
+.remodal-overlay {
+	background: rgba($blue, .9) !important;
+}
