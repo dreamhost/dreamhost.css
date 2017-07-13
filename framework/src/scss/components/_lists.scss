@@ -6,7 +6,7 @@
 	.list--inline makes the list horizontal
 */
 .list {text-align: left;} // All lists should be left aligned unless specified
-.list > li {margin-bottom: convertScaleToRem(2);}
+.list > li {margin-bottom: convertScaleToRem(1);}
 .list > li:last-child {margin-bottom: 0;}
 
 .list--disc {list-style-type: disc; list-style-position: outside}
