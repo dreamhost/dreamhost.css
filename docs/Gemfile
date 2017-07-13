@@ -9,3 +9,10 @@ gem "jekyll", "3.3.1"
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
 end
+
+# rb-fsevent > 0.9.4 no longer supports OS X 10.6 through 10.8.\
+# Please add the following to your Gemfile to avoid polling for changes:
+require 'rbconfig'
+if RbConfig::CONFIG['target_os'] =~ /darwin(1[0-3])/i
+gem 'rb-fsevent', '<= 0.9.4'
+end
