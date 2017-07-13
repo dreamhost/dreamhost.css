@@ -3,6 +3,9 @@ title: Form
 layout: page
 ---
 
+<p class="t-5">Mix and match inputs to create your own forms.</p>
+
+<hr />
 ## Block inputs
 
 <div class="form__group">
@@ -17,6 +20,7 @@ layout: page
 </div>
 {% endhighlight %}
 
+<hr />
 ## Inline-block inputs
 
 <div class="form__inline">
@@ -51,6 +55,7 @@ layout: page
 </div>
 {% endhighlight %}
 
+<hr />
 ## Textareas
 
 <div class="form__group">
@@ -67,6 +72,7 @@ layout: page
 </div>
 {% endhighlight %}
 
+<hr />
 ## Simple radios and check boxes
 
 <div class="container-full-width">
@@ -139,8 +145,8 @@ layout: page
 </div>
 {% endhighlight %}
 
+<hr />
 ## Complex radios and checkboxes
-
 <div class="container-full-width">
 	<div class="form__group">
 		<label class="form__label">Radio label</label>
@@ -203,8 +209,8 @@ layout: page
 </div>
 {% endhighlight %}
 
+<hr />
 ## Select menus
-
 <div class="form__group form__group--select">
 	<label for="select1" class="form__label">Select label</label>
 	<select id="select1" class="form__select">
@@ -229,6 +235,7 @@ layout: page
 </div>
 {% endhighlight %}
 
+<hr />
 ## Submit and cancel buttons
 
 <div class="form__group form__group--actions">

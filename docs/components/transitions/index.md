@@ -21,9 +21,9 @@ layout: page
 
   <div class="container u-clearfix bg-lighter-grey p-s">
 
-    <a class="btn t-center scale-up-hover p-s g-1_2">Scale up</a>
+    <a class="btn t-center scale-up-hover p-s">Scale up</a>
 
-    <a class="btn t-center scale-down-hover p-s g-1_2">Scale down</a>
+    <a class="btn t-center scale-down-hover p-s">Scale down</a>
 
   </div>
 
@@ -55,21 +55,21 @@ layout: page
 
   <div class="container u-clearfix bg-lighter-grey p-s">
 
-    <a class="btn t-center scale-up-hover tr-duration-xs g-1_3">xs duration</a>
+    <a class="btn t-center scale-up-hover tr-duration-xs">xs duration</a>
 
-    <a class="btn t-center scale-up-hover tr-duration-s g-1_3">s duration</a>
+    <a class="btn t-center scale-up-hover tr-duration-s">s duration</a>
 
-    <a class="btn t-center scale-up-hover tr-duration g-1_3">m duration</a>
+    <a class="btn t-center scale-up-hover tr-duration">m duration</a>
 
   </div>
 
   <div class="container u-clearfix bg-lighter-grey p-s">
 
-    <a class="btn t-center scale-up-hover tr-duration-l g-1_3">l duration</a>
+    <a class="btn t-center scale-up-hover tr-duration-l">l duration</a>
 
-    <a class="btn t-center scale-up-hover tr-duration-xl g-1_3">xl duration</a>
+    <a class="btn t-center scale-up-hover tr-duration-xl">xl duration</a>
 
-    <a class="btn t-center scale-up-hover tr-duration-0 g-1_3">0 duration</a>
+    <a class="btn t-center scale-up-hover tr-duration-0">0 duration</a>
 
   </div>
 
@@ -107,19 +107,19 @@ layout: page
 
   <div class="container u-clearfix bg-lighter-grey p-s">
 
-    <a class="btn t-center scale-up-hover tr-duration-xl tr-easing-linear g-1_3">Linear</a>
+    <a class="btn t-center scale-up-hover tr-duration-xl tr-easing-linear">Linear</a>
 
-    <a class="btn t-center scale-up-hover tr-duration-xl tr-easing-ease g-1_3">Ease</a>
+    <a class="btn t-center scale-up-hover tr-duration-xl tr-easing-ease">Ease</a>
 
-    <a class="btn t-center scale-up-hover tr-duration-xl tr-easing-cb-scale-up g-1_3">Scale Up</a>
+    <a class="btn t-center scale-up-hover tr-duration-xl tr-easing-cb-scale-up">Scale Up</a>
 
   </div>
 
   <div class="container u-clearfix bg-lighter-grey p-s">
 
-    <a class="btn t-center scale-up-hover tr-duration-xl tr-easing-cb-scale-in g-1_3">Scale In</a>
+    <a class="btn t-center scale-up-hover tr-duration-xl tr-easing-cb-scale-in">Scale In</a>
 
-    <a class="btn t-center scale-up-hover tr-duration-xl tr-easing-cb-scale-out g-1_3">Scale Out</a>
+    <a class="btn t-center scale-up-hover tr-duration-xl tr-easing-cb-scale-out">Scale Out</a>
 
   </div>
 

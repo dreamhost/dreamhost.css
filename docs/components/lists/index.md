@@ -7,7 +7,8 @@ layout: page
 
 <p class="t-l">Basic list styling, using BEM notation.</p>
 
-<h3>Standard list</h3>
+<hr />
+
 <ul class="list m-bottom">
 	<li>List item</li>
 	<li>List item</li>
@@ -20,20 +21,8 @@ layout: page
 </ul>
 {% endhighlight%}
 
-<h3>Big list</h3>
-<ul class="list list--padding m-bottom">
-	<li>List item</li>
-	<li>List item</li>
-</ul>
-
-{% highlight html %}
-<ul class="list">
-	<li>List item</li>
-	<li>List item</li>
-</ul>
-{% endhighlight%}
-
-<h3>Bulleted list</h3>
+<hr />
+## Bullets
 <ul class="list list--disc m-bottom">
 	<li>List item</li>
 	<li>List item</li>
@@ -46,7 +35,8 @@ layout: page
 </ul>
 {% endhighlight%}
 
-<h3>Inline list</h3>
+<hr />
+## Inline
 <ul class="list list--inline m-bottom">
 	<li>List item</li>
 	<li>List item</li>
@@ -58,3 +48,35 @@ layout: page
 	<li>List item</li>
 </ul>
 {% endhighlight%}
+
+<hr />
+## Link lists
+
+### Small bold
+A slightly smaller and bolder list with no link underlines.
+<ul class="list list--small-bold m-bottom">
+	<li><a href="#">List item</a></li>
+	<li><a href="#">List item</a></li>
+</ul>
+
+{% highlight html %}
+<ul class="list list--small-bold">
+	<li><a href="#">List item</a></li>
+	<li><a href="#">List item</a></li>
+</ul>
+{% endhighlight%}
+
+### Padding
+Adds default padding around the list items for larger click areas.
+<ul class="list list--padding m-bottom">
+	<li><a href="#">List item</a></li>
+	<li><a href="#">List item</a></li>
+</ul>
+
+{% highlight html %}
+<ul class="list list--padding">
+	<li><a href="#">List item</a></li>
+	<li><a href="#">List item</a></li>
+</ul>
+{% endhighlight%}
+
