@@ -70,9 +70,13 @@ $darker-grey: #434F58;
 $black: $darkest-blue;
 
 // Sizing Scale
-// Uses an 8pt vertical grid for margins and padding
+// Use baseScale with convertScaleToRem() to ensure consistent margins.
 $baseScale: 8; // Goes in 8px increments
 $maxSize: 16; // Build 16 increments, 128px
+
+// Responsive
+$medium-breakpoint: 750px;
+$large-breakpoint: 1050px;
 
 // Typography
 $body: 'Proxima Nova', sans-serif;
@@ -89,7 +93,7 @@ $t-1: .75em; // 12px
 $t-lighter: 100;
 $t-light: 300;
 $t-regular: 500;
-$t-bold: 700;
+$t-bold: 600;
 $t-extrabold: 900;
 
 // Borders
