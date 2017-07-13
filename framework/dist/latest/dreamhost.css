@@ -142,7 +142,7 @@ strong { font-weight: 700; }
 
 img { max-width: 100%; height: auto; }
 
-p, section, img { margin-bottom: 2rem; }
+p, section, img { margin-bottom: 1rem; }
 
 hr { border: 1px solid #F4F6F9; margin: 2rem 0; }
 
@@ -195,6 +195,14 @@ code { padding: 0 0.5rem; font-size: 1rem; display: inline-block; border: 1px so
 @font-face { font-family: "Ubuntu"; font-style: normal; font-weight: bold; src: url("../fonts/ubuntu/ubuntu-b-webfont.eot?") format("eot"), url("../fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-b-webfont.woff") format("woff"), url("../fonts/ubuntu/ubuntu-b-webfont.ttf") format("truetype"), url("../fonts/ubuntu/ubuntu-b-webfont.svg#Ubuntu") format("svg"); }
 
 @font-face { font-family: "Ubuntu"; font-style: italic; font-weight: bold; src: url("../fonts/ubuntu/ubuntu-bi-webfont.eot?") format("eot"), url("../fonts/ubuntu/ubuntu-bi-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-bi-webfont.woff") format("woff"), url("../fonts/ubuntu/ubuntu-bi-webfont.ttf") format("truetype"), url("../fonts/ubuntu/ubuntu-bi-webfont.svg#Ubuntu") format("svg"); }
+
+.alert *:last-child { margin-bottom: 0; }
+
+.alert--success { background: #EEFDF1; color: #074C15; border-left: 0.5rem solid #027F1B; }
+
+.alert--error { background: #FFD6D4; color: #8C0700; border-left: 0.5rem solid #B80C03; }
+
+.alert:not(.alert--success):not(.alert--error) { background: #FFF9CC; color: #837000; border-left: 0.5rem solid #FFDA00; }
 
 /*
 
@@ -388,7 +396,7 @@ Styleguide Base.buttons
 
 .button--unset { background: none; border: none; cursor: pointer; font: inherit; padding: 0; margin: 0; }
 
-code.hljs { font-family: monospace; background-color: #F4F6F9; padding: 0.5rem; font-size: 0.875rem; border-radius: 3px; margin-bottom: 1rem; width: 100%; }
+code.hljs { font-family: monospace; background-color: #F4F6F9; padding: 0.5rem; font-size: 0.875rem; border-radius: 3px; margin-bottom: 1rem; width: 100%; overflow-y: scroll; }
 
 .hljs-type, .hljs-string, .hljs-number, .hljs-selector-id, .hljs-selector-class, .hljs-quote, .hljs-template-tag, .hljs-deletion { color: #B80C03; }
 
@@ -478,7 +486,7 @@ textarea.form__input { min-height: 140px; }
 /* Default list component .list is for a general purpose list of text .list--disc gives the list dots, for an unordered list .list--inline makes the list horizontal */
 .list, .page-header__nav, .page-header__subnav { text-align: left; }
 
-.list > li, .page-header__nav > li, .page-header__subnav > li { margin-bottom: 1rem; }
+.list > li, .page-header__nav > li, .page-header__subnav > li { margin-bottom: 0.5rem; }
 
 .list > li:last-child, .page-header__nav > li:last-child, .page-header__subnav > li:last-child { margin-bottom: 0; }
 
@@ -820,8 +828,6 @@ Table
 
 .table td { padding: 1.5rem; vertical-align: middle; }
 
-.table--large-padding td { padding: 2.5rem 2rem; }
-
 .toggle .toggle-control { transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035); width: 4em; height: 2em; display: block; border: 2px solid #8E8E93; border-radius: 2em; background-color: rgba(0, 0, 0, 0.06); position: relative; }
 
 .toggle .toggle-control:after { transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035); content: ""; width: 2em; height: 2em; display: block; background-color: #fff; border-radius: 50%; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 3px 2px rgba(0, 0, 0, 0.4); position: absolute; top: 0; left: 0; }
@@ -987,7 +993,7 @@ Border Radius Utility
 	combination, or --top|bottom|left|right respectively. All corners are specified by default.
 
 */
-.u-border-radius, .u-rounded-corners, .u-border-radius-l { border-radius: 3px !important; }
+.u-border-radius, .alert, .u-rounded-corners, .u-border-radius-l { border-radius: 3px !important; }
 
 .u-border-radius--top-left, .u-border-radius-l--top-left { border-radius: 3px 0 0 0 !important; }
 
@@ -1399,7 +1405,7 @@ Combo Colors
 
 .p-2 { padding: 1rem !important; }
 
-.p-3, .p-s { padding: 1.5rem !important; }
+.p-3, .alert, .p-s { padding: 1.5rem !important; }
 
 .p-4, .p, .p-m { padding: 2rem !important; }
 
@@ -1579,7 +1585,7 @@ Combo Colors
 
 .p-right-16 { padding-right: 8rem !important; }
 
-.m-bottom-0 { margin-bottom: 0 !important; }
+.m-bottom-0, .alert__heading { margin-bottom: 0 !important; }
 
 .m-bottom-half { margin-bottom: 0.25rem !important; }
 
@@ -1591,7 +1597,7 @@ Combo Colors
 
 .m-bottom-3, .m-bottom-s { margin-bottom: 1.5rem !important; }
 
-.m-bottom-4, .m-bottom, .m-bottom-m { margin-bottom: 2rem !important; }
+.m-bottom-4, .m-bottom, .alert, .m-bottom-m { margin-bottom: 2rem !important; }
 
 .m-bottom-5, .m-bottom-l { margin-bottom: 2.5rem !important; }
 
@@ -1923,7 +1929,7 @@ Transition Utilities
 
 .t-body { font-family: "Proxima Nova", sans-serif !important; }
 
-.t-heading { font-family: "Ubuntu", sans-serif !important; }
+.t-heading, .alert__heading { font-family: "Ubuntu", sans-serif !important; }
 
 .t-1, .t-xs { font-size: 0.75em !important; }
 
@@ -1947,7 +1953,7 @@ Transition Utilities
 
 .t-extrabold { font-weight: 900 !important; }
 
-.t-bold { font-weight: 700 !important; }
+.t-bold, .alert__heading { font-weight: 700 !important; }
 
 .t-light { font-weight: 300 !important; }
 
