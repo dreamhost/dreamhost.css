@@ -2,11 +2,12 @@
 .t-body {font-family: $body !important}
 .t-heading {font-family: $heading !important}
 
-.t-xs {font-size: $t-xs !important}
-.t-s {font-size: $t-s !important}
-.t-m {font-size: $t-m !important}
-.t-l {font-size: $t-l !important}
-.t-xl {font-size: $t-xl !important}
+.t-1 {font-size: $t-1 !important}
+.t-2 {font-size: $t-2 !important}
+.t-3 {font-size: $t-3 !important}
+.t-4 {font-size: $t-4 !important}
+.t-5 {font-size: $t-5 !important}
+.t-6 {font-size: $t-6 !important}
 
 // Alignment
 .t-left {text-align: left !important}
@@ -15,7 +16,7 @@
 .t-justify {text-align: justify !important}
 
 // Weights
-.t-heavy {font-weight: $t-heavy !important}
+.t-extrabold {font-weight: $t-extrabold !important}
 .t-bold {font-weight: $t-bold !important}
 .t-light {font-weight: $t-light !important}
 .t-lighter {font-weight: $t-lighter !important}

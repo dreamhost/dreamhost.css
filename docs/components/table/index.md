@@ -5,7 +5,6 @@ layout: page
 
 <p class="t-l">A basic table style, including headings and zebra striping.</p>
 
-Cell padding can be doubled the by adding the class <code>table--large-padding</code>.
 <hr />
 
 <table class="table">

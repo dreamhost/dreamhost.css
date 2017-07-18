@@ -12,33 +12,30 @@ body {
 	line-height: 1.5; // 24px
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
 	font-family: $heading;
 	font-weight: 600;
 }
 
-h1 {
-	font-size: $t-xxl;
-	margin-bottom: $s-l;
+h1, .h1 {
+	font-size: $t-6;
+	margin-bottom: convertScaleToRem(5);
 }
 
-h2 {
-	font-size: $t-l;
-	margin-bottom: $s-m;
+h2, .h2 {
+	font-size: $t-5;
+	margin-bottom: convertScaleToRem(4);
 }
 
-h3 {
-	font-size: $t-l;
-	margin-bottom: $s-s;
+h3, .h3 {
+	font-size: $t-4;
+	margin-bottom: convertScaleToRem(3);
 }
 
-h4 {
-	font-size: $t-m;
-	margin-bottom: $s-s;
-}
-
-p {
-	color: $black;
+h4, .h4 {
+	font-size: $t-3;
+	margin-bottom: convertScaleToRem(3);
 }
 
 a {
@@ -59,23 +56,23 @@ strong {
 	font-weight: 700;
 }
 
-img.responsive-image {
+img {
 	max-width: 100%;
 	height: auto;
 }
 
 p, section, img {
-	margin-bottom: $s-m;
+	margin-bottom: convertScaleToRem(2);
 }
 
 hr {
 	border: 1px solid $lighter-grey;
-	margin: $s-m 0;
+	margin: convertScaleToRem(4) 0;
 }
 
 code {
-	padding: 0 $s-xs;
-	font-size: $t-s;
+	padding: 0 convertScaleToRem(1);
+	font-size: $t-3;
 	display: inline-block;
 	border: 1px solid $lighter-grey;
 	border-radius: $border-radius;

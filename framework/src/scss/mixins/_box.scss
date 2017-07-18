@@ -20,10 +20,14 @@
 
 
 @mixin box($color: #fff){
-	padding: $s-m;
+	padding: convertScaleToRem(4);
 	background: $color;
 
-	*:last-child {
+	// TODO: Make this less confusing.
+	// Maybe we have a rule saying that stock components shouldn't have top or bottom margin by default. They're "self contained".
+	// We only add margin through utility classes in specific contexts.
+	// That way if a box has inconsistent padding, it's from an improper use of a margin class.
+	> *:last-child {
 		// To keep the padding consistent in the box on all sides.
 		// We don't need to remove the margin-top because nothing
 		// should be applying a top margin.

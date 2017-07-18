@@ -1,0 +1,33 @@
+.alert {
+	@extend .p-3;
+	@extend .u-border-radius;
+	@extend .m-bottom;
+
+	*:last-child {margin-bottom: 0;}
+
+	&__heading {
+		@extend .t-bold;
+		@extend .t-heading;
+		@extend .m-bottom-0
+	}
+
+}
+
+.alert--success {
+	background: $lighter-green;
+	color: $dark-green;
+	border-left: convertScaleToRem(1) solid $green;
+}
+
+.alert--error {
+	background: $lighter-red;
+	color: $dark-red;
+	border-left: convertScaleToRem(1) solid $red;
+}
+
+.alert:not(.alert--success):not(.alert--error) {
+	background: $lighter-yellow;
+	color: $darker-yellow;
+	border-left: convertScaleToRem(1) solid $yellow;
+}
+
