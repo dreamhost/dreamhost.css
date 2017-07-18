@@ -19,6 +19,24 @@
 .g-shift-10 {@include shift(10)}
 .g-shift-11 {@include shift(11)}
 
+.g-1_6__s,
+.g-1_4__s,
+.g-1_3__s,
+.g-1_2__s,
+.g-2_3__s,
+.g-3_4__s,
+.g-omega__s,
+.g-shift-1__s,
+.g-shift-2__s,
+.g-shift-3__s,
+.g-shift-4__s,
+.g-shift-5__s,
+.g-shift-6__s,
+.g-shift-7__s,
+.g-shift-8__s,
+.g-shift-9__s,
+.g-shift-10__s,
+.g-shift-11__s,
 .g-1_6__m,
 .g-1_4__m,
 .g-1_3__m,
@@ -56,6 +74,27 @@
 .g-shift-10__l,
 .g-shift-11__l {
 	width: 100%;
+}
+
+@media screen and (min-width: $small-breakpoint){
+	.g-1_6__s {@include span-columns(2)}
+	.g-1_4__s {@include span-columns(3)}
+	.g-1_3__s {@include span-columns(4)}
+	.g-1_2__s {@include span-columns(6)}
+	.g-2_3__s {@include span-columns(8)}
+	.g-3_4__s {@include span-columns(9)}
+	.g-omega__s {@include omega()}
+	.g-shift-1__s {@include shift(1)}
+	.g-shift-2__s {@include shift(2)}
+	.g-shift-3__s {@include shift(3)}
+	.g-shift-4__s {@include shift(4)}
+	.g-shift-5__s {@include shift(5)}
+	.g-shift-6__s {@include shift(6)}
+	.g-shift-7__s {@include shift(7)}
+	.g-shift-8__s {@include shift(8)}
+	.g-shift-9__s {@include shift(9)}
+	.g-shift-10__s {@include shift(10)}
+	.g-shift-11__s {@include shift(11)}
 }
 
 @media screen and (min-width: $medium-breakpoint){
