@@ -35,3 +35,22 @@
 
 // Line Height
 .t-line-height-1 {line-height: 1 !important}
+
+@media screen and (min-width: $medium-breakpoint){
+	.t-1__m {font-size: $t-1 !important}
+	.t-2__m {font-size: $t-2 !important}
+	.t-3__m {font-size: $t-3 !important}
+	.t-4__m {font-size: $t-4 !important}
+	.t-5__m {font-size: $t-5 !important}
+	.t-6__m {font-size: $t-6 !important}
+}
+
+@media screen and (min-width: $large-breakpoint){
+	.t-1__l {font-size: $t-1 !important}
+	.t-2__l {font-size: $t-2 !important}
+	.t-3__l {font-size: $t-3 !important}
+	.t-4__l {font-size: $t-4 !important}
+	.t-5__l {font-size: $t-5 !important}
+	.t-6__l {font-size: $t-6 !important}
+}
+
