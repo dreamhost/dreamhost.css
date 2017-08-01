@@ -28,6 +28,9 @@
 
 .l-pos-all {@extend .l-pos-top, .l-pos-bottom, .l-pos-left, .l-pos-right;}
 
+.l-border-box {box-sizing: border-box !important}
+.l-content-box {box-sizing: content-box !important}
+
 @media screen and (min-width: $medium-breakpoint){
 	.l-float-right__m {float: right !important}
 	.l-float-left__m {float: left !important}
