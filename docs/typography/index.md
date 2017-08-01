@@ -17,10 +17,15 @@ DreamHost uses Ubuntu for headings and Proxima Nova for body text.
 	<p class="m-bottom-0 t-s t-salmon t-bold">.t-body</p>
 	<p class="t-body">The quick brown fox jumps over the lazy dog.</p>
 </div>
+<div>
+	<p class="m-bottom-0 t-s t-salmon t-bold">.t-mono</p>
+	<p class="t-body">The quick brown fox jumps over the lazy dog.</p>
+</div>
 
 {% highlight html %}
 <p class="t-heading">The quick brown fox jumps over the lazy dog.</p>
 <p class="t-body">The quick brown fox jumps over the lazy dog.</p>
+<p class="t-mono">The quick brown fox jumps over the lazy dog.</p>
 {% endhighlight %}
 
 <hr />

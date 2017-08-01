@@ -34,3 +34,14 @@
 @include font-face('Ubuntu', '../fonts/ubuntu/ubuntu-mi-webfont', 500, italic);
 @include font-face('Ubuntu', '../fonts/ubuntu/ubuntu-b-webfont', bold, normal);
 @include font-face('Ubuntu', '../fonts/ubuntu/ubuntu-bi-webfont', bold, italic);
+
+/*
+
+	Ubuntu Mono. Used for code.
+
+	Usage:
+	- font-family: 'Ubuntu Mono', sans-serif;
+
+*/
+
+@include font-face('Ubuntu Mono', '../fonts/ubuntu/UbuntuMono-Regular', normal, normal);
