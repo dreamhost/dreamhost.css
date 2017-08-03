@@ -10,16 +10,16 @@ Shapes
 .button--text      - Underlined text
 
 Colors
-.button            - Blue
-.button--red       - Red
-.button--orange    - Orange
-.button--yellow    - Yellow
-.button--disabled  - Grey
+.Button            - Blue
+.Button--red       - Red
+.Button--orange    - Orange
+.Button--yellow    - Yellow
+.Button--disabled  - Grey
 
 Sizes
-.button            - 16px
-.button--small     - 12px
-.button--large     - 20px
+.Button            - 16px
+.Button--small     - 12px
+.Button--large     - 20px
 
 Markup:
 <a href="#" class="button {{modifier_class}}">Text</a>
@@ -28,7 +28,7 @@ Styleguide Base.buttons
 
 */
 
-.button {
+.Button {
 	font-family: $body;
 	color: $black;
 	background: $blue;
@@ -74,7 +74,7 @@ Styleguide Base.buttons
 }
 
 // Outline
-.button--outline {
+.Button--outline {
 	background: transparent;
 	border: 1px solid currentColor;
 	color: $dark-blue;
@@ -89,7 +89,7 @@ Styleguide Base.buttons
 	&:visited { border-color: currentColor; }
 }
 
-.button--text {
+.Button--text {
 	background: transparent;
 	border: none;
 	color: $dark-blue;
@@ -105,7 +105,7 @@ Styleguide Base.buttons
 
 
 // Colors
-.button--red {
+.Button--red {
 	background: $red;
 	color: $white;
 	&:hover, &:active {	color: $white; background: darken($red, 10%); }
@@ -114,7 +114,7 @@ Styleguide Base.buttons
 	&.button--outline:hover, &.button--text:hover {color: darken($red, 10%); background: transparent; }
 }
 
-.button--orange {
+.Button--orange {
 	background: $orange;
 	color: $black;
 	&:hover, &:active {
@@ -126,7 +126,7 @@ Styleguide Base.buttons
 	&.button--outline:hover, &.button--text:hover {color: darken($orange, 10%); background: transparent; }
 }
 
-.button--yellow {
+.Button--yellow {
 	background: $yellow;
 	color: $black;
 	&:hover, &:active {
@@ -138,7 +138,7 @@ Styleguide Base.buttons
 	&.button--outline:hover, &.button--text:hover {color: darken($yellow, 10%); background: transparent; }
 }
 
-.button--disabled {
+.Button--disabled {
 	// Disable Button
 	cursor: default;
 	text-shadow: none;
@@ -151,16 +151,16 @@ Styleguide Base.buttons
 }
 
 // Sizes
-.button--small { font-size: $t-1; }
-.button--large { font-size: 1.25rem; }
+.Button--small { font-size: $t-1; }
+.Button--large { font-size: 1.25rem; }
 
 // Widths
-.button--block {
+.Button--block {
 	display: block;
 	width: 100%;
 }
 
 // Spacing
-.button + .button {
+.Button + .button {
 	margin-left: 2em;
 }
