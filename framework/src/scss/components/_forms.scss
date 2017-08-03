@@ -16,27 +16,27 @@ Form Component
 	font-family: $body;
 }
 
-.form {}
+.Form {}
 
-.form__group {
+.Form__group {
 	max-width: 100%;
 	margin: 0 auto 2rem;
 }
 
-.form__inline {
+.Form__inline {
 		margin: 0 auto 2rem;
 
-	.form__group {
+	.Form__group {
 		display: table-cell;
 		vertical-align: top;
 	}
 }
 
-.form__inline-grid {
+.Form__inline-grid {
 	margin: 0 -2rem;
 }
 
-.form__inline-row {
+.Form__inline-row {
 	display: table;
 	table-layout: fixed;
 	width: 100%;
@@ -48,13 +48,13 @@ Form Component
 	margin-top: convertScaleToRem(6);
 }
 
-.form__group--stacked {
-	.form__input + .form__input {
+.Form__group--stacked {
+	.Form__input + .Form__input {
 		margin-top: 1rem;
 	}
 }
 
-.form__label {
+.Form__label {
 	color: $darker-grey;
 	display: block;
 	font-size: $t-3;
@@ -63,14 +63,14 @@ Form Component
 	max-width: 35rem;
 }
 
-.form__description {
+.Form__description {
 	@extend %form-description;
 
 	font-weight: $t-regular;
 	margin-bottom: 0;
 }
 
-.form__input {
+.Form__input {
 	@extend %form-border;
 	@extend %form-no-outline;
 	@extend %form-text-style;
@@ -105,7 +105,7 @@ Form Component
 	}
 }
 
-.form__label > .form__description {
+.Form__label > .Form__description {
 	margin-bottom: 1rem;
 }
 
@@ -113,7 +113,7 @@ textarea.form__input {
 	min-height: 140px;
 }
 
-.form__radio-check {
+.Form__radio-check {
 	@extend %form-text-style;
 
 	cursor: pointer;
@@ -131,11 +131,11 @@ textarea.form__input {
 	}
 }
 
-.form__radio-check-label {
+.Form__radio-check-label {
 	display: block;
 }
 
-.form__radio-check-description {
+.Form__radio-check-description {
 	@extend %form-description;
 	display: block;
 	margin-bottom: convertScaleToRem(2);
@@ -144,7 +144,7 @@ textarea.form__input {
 // Maybe we should create a custom style for these?
 // This looks kinda crazy in Safari. Looks decent elsewhere though.
 // This is the only way to get a native select box to stay at a height though.
-.form__select {
+.Form__select {
 	@extend %form-border;
 	@extend %form-no-outline;
 	@extend %form-text-style;
@@ -165,7 +165,7 @@ textarea.form__input {
 	cursor: pointer;
 }
 
-.form__group--select {
+.Form__group--select {
 	position: relative;
 
 	&:after {

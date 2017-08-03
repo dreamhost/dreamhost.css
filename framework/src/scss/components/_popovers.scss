@@ -10,23 +10,23 @@ Popover Component
 	- The default width is medium.
 	- Popover content can vary, there are no strict dos and don'ts.
 	- The max-height class is optional. It enforces a 60vh max-height.
-	- It is possible to nest hover popovers inside of click popovers.
-	- Popovers with max-height cannot contain nested popovers.
+	- It is possible to nest hover Popovers inside of click Popovers.
+	- Popovers with max-height cannot contain nested Popovers.
 	- Padding size can vary.
 	- The caret is optional.
 	- Replace .on-click with .on-hover
-		for hover popovers.
+		for hover Popovers.
 
 	Usage:
-	<div class="popover-container on-click">
-		<div class="popover popover--dark popover--bottom
-		popover--flush-left popover--max-height has-caret">
-			<div class="popover__wrapper">
+	<div class="Popover-container on-click">
+		<div class="Popover Popover--dark Popover--bottom
+		Popover--flush-left Popover--max-height has-caret">
+			<div class="Popover__wrapper">
 				<div class="p-3">
-					This is a dark themed popover with small padding. It appears
+					This is a dark themed Popover with small padding. It appears
 					below the clicked element, is flushed left, has max-height
-					enforced, and has a caret. Note, popovers must live within
-					.popover-container. To enable popovers on hover, the
+					enforced, and has a caret. Note, Popovers must live within
+					.Popover-container. To enable Popovers on hover, the
 					.on-hover class must be included on the
 					container.
 				</div>
@@ -39,12 +39,12 @@ Popover Component
 
 
 // Base
-.popover-container {
+.Popover-container {
 	display: inline-block;
 	position: relative;
 }
 
-.popover {
+.Popover {
 	position: absolute;
 	text-align: center;
 	border-radius: $border-radius;
@@ -58,15 +58,15 @@ Popover Component
 	visibility: hidden;
 }
 
-.popover,
-.popover.has-caret:after {
+.Popover,
+.Popover.has-caret:after {
 	background: #fff;
 	color: $black;
 	transition-duration: $tr-4;
 	transition-timing-function: ease-in-out;
 }
 
-.popover.has-caret:after {
+.Popover.has-caret:after {
 	display: block;
 	position: absolute;
 	border-radius: $border-radius;
@@ -78,9 +78,9 @@ Popover Component
 	bottom: -5px;
 }
 
-.popover.is-open,
-.on-hover:hover > .popover,
-.on-hover:focus > .popover {
+.Popover.is-open,
+.on-hover:hover > .Popover,
+.on-hover:focus > .Popover {
 	opacity: 1;
 	height: auto;
 	overflow: visible;
@@ -91,25 +91,25 @@ Popover Component
 	Max height:
 	Enforces 60% viewport maximum height.
  */
-.popover--max-height .popover__wrapper{
+.Popover--max-height .Popover__wrapper{
 	max-height: 60vh;
 	height: 100%;
 	overflow: hidden;
 }
 
-.popover--max-height.is-open .popover__wrapper {
+.Popover--max-height.is-open .Popover__wrapper {
 	overflow: scroll;
 }
 
 
 /*
 	Themes:
-	- popover--dark
-	- popover--error
-	- popover--success
+	- Popover--dark
+	- Popover--error
+	- Popover--success
 */
-.popover {
-	&.popover--dark {
+.Popover {
+	&.Popover--dark {
 		&,
 		& a {
 			color: #fff;
@@ -121,7 +121,7 @@ Popover Component
 		}
 	}
 
-	&.popover--error {
+	&.Popover--error {
 		&,
 		& a {
 			color: #fff;
@@ -133,7 +133,7 @@ Popover Component
 		}
 	}
 
-	&.popover--success{
+	&.Popover--success{
 		&,
 		& a {
 			color: #fff;
@@ -148,202 +148,202 @@ Popover Component
 
 /*
 	Alignment:
-	- popover--right
-	- popover--bottom
-	- popover--left
+	- Popover--right
+	- Popover--bottom
+	- Popover--left
 
 	Positioning:
-	- popover--flush-top
-	- popover--flush-right
-	- popover--flush-bottom
-	- popover--flush-left
+	- Popover--flush-top
+	- Popover--flush-right
+	- Popover--flush-bottom
+	- Popover--flush-left
 */
-.popover--bottom {
+.Popover--bottom {
 	margin-bottom: 2rem;
 	transform: translateX(-50%);
 }
 
-.popover:after,
-.popover--bottom:after {
+.Popover:after,
+.Popover--bottom:after {
 	margin-left: -6px;
 }
 
-.popover,
-.popover:after,
-.popover--bottom,
-.popover--bottom:after {
+.Popover,
+.Popover:after,
+.Popover--bottom,
+.Popover--bottom:after {
 	left: 50%;
 }
 
-.popover.is-open,
-.on-hover:hover > .popover,
-.on-hover:focus > .popover {
+.Popover.is-open,
+.on-hover:hover > .Popover,
+.on-hover:focus > .Popover {
 	transform: translateX(-50%) translateY(0);
 }
 
-.popover.popover--flush-left,
-.popover.popover--flush-right {
+.Popover.Popover--flush-left,
+.Popover.Popover--flush-right {
 	transform: translateX(0);
 }
 
-.popover.popover--flush-left,
-.popover--bottom.popover--flush-left {
+.Popover.Popover--flush-left,
+.Popover--bottom.Popover--flush-left {
 	left: 0;
 }
 
-.popover.popover--flush-right,
-.popover--bottom.popover--flush-right {
+.Popover.Popover--flush-right,
+.Popover--bottom.Popover--flush-right {
 	right: 0;
 	left: auto;
 }
 
-.popover.popover--flush-left,
-.popover--bottom.popover--flush-left,
-.popover.popover--flush-right,
-.popover--bottom.popover--flush-right {
+.Popover.Popover--flush-left,
+.Popover--bottom.Popover--flush-left,
+.Popover.Popover--flush-right,
+.Popover--bottom.Popover--flush-right {
 	transform-origin: left bottom;
 }
 
-.popover.popover--flush-left,
-.popover.popover--flush-right,
-.popover--bottom.popover--flush-left.is-open,
-.popover--bottom.popover--flush-right.is-open,
-.on-hover:hover > .popover--bottom.popover--flush-left,
-.on-hover:hover > .popover--bottom.popover--flush-right,
-.on-hover:focus > .popover--bottom.popover--flush-left,
-.on-hover:focus > .popover--bottom.popover--flush-right {
+.Popover.Popover--flush-left,
+.Popover.Popover--flush-right,
+.Popover--bottom.Popover--flush-left.is-open,
+.Popover--bottom.Popover--flush-right.is-open,
+.on-hover:hover > .Popover--bottom.Popover--flush-left,
+.on-hover:hover > .Popover--bottom.Popover--flush-right,
+.on-hover:focus > .Popover--bottom.Popover--flush-left,
+.on-hover:focus > .Popover--bottom.Popover--flush-right {
 	transform: translateX(0) translateY(-5px);
 }
 
-.popover--bottom.popover--flush-left,
-.popover--bottom.popover--flush-right,
-.popover:not(.popover--bottom).popover--flush-left.is-open,
-.popover:not(.popover--bottom).popover--flush-right.is-open,
-.on-hover:hover > .popover--top.popover--flush-left,
-.on-hover:hover > .popover--top.popover--flush-right,
-.on-hover:focus > .popover--top.popover--flush-left,
-.on-hover:focus > .popover--top.popover--flush-right {
+.Popover--bottom.Popover--flush-left,
+.Popover--bottom.Popover--flush-right,
+.Popover:not(.Popover--bottom).Popover--flush-left.is-open,
+.Popover:not(.Popover--bottom).Popover--flush-right.is-open,
+.on-hover:hover > .Popover--top.Popover--flush-left,
+.on-hover:hover > .Popover--top.Popover--flush-right,
+.on-hover:focus > .Popover--top.Popover--flush-left,
+.on-hover:focus > .Popover--top.Popover--flush-right {
 	transform: translateX(0) translateY(0);
 }
 
-.popover--bottom.popover--flush-left.has-caret:after,
-.popover.popover--flush-left.has-caret:after {
+.Popover--bottom.Popover--flush-left.has-caret:after,
+.Popover.Popover--flush-left.has-caret:after {
 	left: 28px;
 }
 
-.popover--bottom.popover--flush-right.has-caret:after,
-.popover.popover--flush-right.has-caret:after {
+.Popover--bottom.Popover--flush-right.has-caret:after,
+.Popover.Popover--flush-right.has-caret:after {
 	right: 28px;
 	left: auto;
 }
 
-.popover--bottom {
+.Popover--bottom {
 	margin-top: 1rem;
 	top: calc(100% + 5px);
 	transform: translateX(-50%) translateY(0);
 }
 
-.popover--bottom.has-caret:after {
+.Popover--bottom.has-caret:after {
 	box-shadow: -1px -1px 0 0 rgba(31,45,61,.15);
 	top: -5px;
 }
 
-.popover--bottom.is-open,
-.on-hover:hover > .popover--bottom,
-.on-hover:focus > .popover--bottom {
+.Popover--bottom.is-open,
+.on-hover:hover > .Popover--bottom,
+.on-hover:focus > .Popover--bottom {
 	transform: translateX(-50%) translateY(-5px);
 }
 
-.popover--right {
+.Popover--right {
 	margin-left: 1rem;
 	left: 100%;
 }
 
-.popover--left:after,
-.popover--right:after {
+.Popover--left:after,
+.Popover--right:after {
 	margin-top: -4px;
 }
 
-.popover--right,
-.popover--right:after,
-.popover--left,
-.popover--left:after {
+.Popover--right,
+.Popover--right:after,
+.Popover--left,
+.Popover--left:after {
 	top: 50%;
 }
 
-.popover--right,
-.popover--left {
+.Popover--right,
+.Popover--left {
 	transform: translateX(0) translateY(-50%);
 }
 
-.popover--right,
-.popover--left,
-.popover--bottom {
+.Popover--right,
+.Popover--left,
+.Popover--bottom {
 	bottom: auto;
 }
 
-.popover--right.is-open,
-.on-hover:hover > .popover--right,
-.on-hover:focus > .popover--right {
+.Popover--right.is-open,
+.on-hover:hover > .Popover--right,
+.on-hover:focus > .Popover--right {
 	transform: translateX(-5px) translateY(-50%);
 }
 
-.popover--right.popover--flush-bottom,
-.popover--left.popover--flush-bottom.is-open,
-.on-hover:focus > .popover--left.popover--flush-bottom,
-.on-hover:hover > .popover--left.popover--flush-bottom {
+.Popover--right.Popover--flush-bottom,
+.Popover--left.Popover--flush-bottom.is-open,
+.on-hover:focus > .Popover--left.Popover--flush-bottom,
+.on-hover:hover > .Popover--left.Popover--flush-bottom {
 	transform: translateX(0) translateY(calc(-100% + 2.24rem));
 }
 
-.popover--right.popover--flush-bottom.is-open,
-.popover--left.popover--flush-bottom,
-.on-hover:focus > .popover--right.popover--flush-bottom,
-.on-hover:hover > .popover--right.popover--flush-bottom {
+.Popover--right.Popover--flush-bottom.is-open,
+.Popover--left.Popover--flush-bottom,
+.on-hover:focus > .Popover--right.Popover--flush-bottom,
+.on-hover:hover > .Popover--right.Popover--flush-bottom {
 	transform: translateX(-5px) translateY(calc(-100% + 2.24rem));
 }
 
-.popover--right.popover--flush-top,
-.popover--left.popover--flush-top.is-open,
-.on-hover:focus > .popover--left.popover--flush-top,
-.on-hover:hover > .popover--left.popover--flush-top {
+.Popover--right.Popover--flush-top,
+.Popover--left.Popover--flush-top.is-open,
+.on-hover:focus > .Popover--left.Popover--flush-top,
+.on-hover:hover > .Popover--left.Popover--flush-top {
 	transform: translateX(0) translateY(calc(0% - 2.24rem));
 }
 
-.popover--right.popover--flush-top.is-open,
-.popover--left.popover--flush-top,
-.on-hover:focus > .popover--right.popover--flush-top,
-.on-hover:hover > .popover--right.popover--flush-top {
+.Popover--right.Popover--flush-top.is-open,
+.Popover--left.Popover--flush-top,
+.on-hover:focus > .Popover--right.Popover--flush-top,
+.on-hover:hover > .Popover--right.Popover--flush-top {
 	transform: translateX(-5px) translateY(calc(0% - 2.24rem));
 }
 
-.popover--flush-top.has-caret:after {
+.Popover--flush-top.has-caret:after {
 	top: 2rem;
 }
 
-.popover--flush-bottom.has-caret:after {
+.Popover--flush-bottom.has-caret:after {
 	bottom: 1.9rem;
 	top: auto;
 }
 
-.popover--right.has-caret:after {
+.Popover--right.has-caret:after {
 	box-shadow: -1px 1px 0 0 rgba(31,45,61,.15);
 	left: 1px;
 }
 
-.popover--left {
+.Popover--left {
 	margin-left: 1rem;
 	margin-right: 1rem;
 	right: 100%;
 	left: auto;
 }
 
-.popover--left.is-open,
-.on-hover:hover > .popover--left,
-.on-hover:focus > .popover--left {
+.Popover--left.is-open,
+.on-hover:hover > .Popover--left,
+.on-hover:focus > .Popover--left {
 	transform: translateX(5px) translateY(-50%);
 }
 
-.popover--left.has-caret:after {
+.Popover--left.has-caret:after {
 	box-shadow: 1px -1px 0 0 rgba(31,45,61,.15);
 	right: -5px;
 	left: auto;
@@ -352,34 +352,34 @@ Popover Component
 
 /*
 	Sizes:
-	- popover--small
-	- popover--large
+	- Popover--small
+	- Popover--large
 */
 
-.popover {
+.Popover {
 	width: 300px;
 }
 
-.popover--small {
+.Popover--small {
 	width: 200px;
 }
 
-.popover--large {
+.Popover--large {
 	width: 400px;
 }
 
 
 /*
 	Dropdown Content:
-	- popover__section
+	- Popover__section
 */
 
-.popover__section {
+.Popover__section {
 	// Separator classes
 	&--separator {
 		border-top: 1px solid darken($lighter-grey, 5%);
 
-		.popover--dark & {
+		.Popover--dark & {
 			border-color: darken($darker-grey, 5%);
 		}
 	}

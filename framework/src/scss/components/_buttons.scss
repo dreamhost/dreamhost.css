@@ -5,30 +5,30 @@ Buttons
 Can be used with anchor or button tags. When updating colors, make sure to update _tags.scss as well
 
 Shapes
-.btn            - Normal button
-.btn--outline   - 1px border button, transparent bg
-.btn--text      - Underlined text
+.button            - Normal button
+.button--outline   - 1px border button, transparent bg
+.button--text      - Underlined text
 
 Colors
-.btn            - Blue
-.btn--red       - Red
-.btn--orange    - Orange
-.btn--yellow    - Yellow
-.btn--disabled  - Grey
+.Button            - Blue
+.Button--red       - Red
+.Button--orange    - Orange
+.Button--yellow    - Yellow
+.Button--disabled  - Grey
 
 Sizes
-.btn            - 16px
-.btn--small     - 12px
-.btn--large     - 20px
+.Button            - 16px
+.Button--small     - 12px
+.Button--large     - 20px
 
 Markup:
-<a href="#" class="btn {{modifier_class}}">Text</a>
+<a href="#" class="button {{modifier_class}}">Text</a>
 
 Styleguide Base.buttons
 
 */
 
-.btn {
+.Button {
 	font-family: $body;
 	color: $black;
 	background: $blue;
@@ -74,7 +74,7 @@ Styleguide Base.buttons
 }
 
 // Outline
-.btn--outline {
+.Button--outline {
 	background: transparent;
 	border: 1px solid currentColor;
 	color: $dark-blue;
@@ -89,7 +89,7 @@ Styleguide Base.buttons
 	&:visited { border-color: currentColor; }
 }
 
-.btn--text {
+.Button--text {
 	background: transparent;
 	border: none;
 	color: $dark-blue;
@@ -105,16 +105,16 @@ Styleguide Base.buttons
 
 
 // Colors
-.btn--red {
+.Button--red {
 	background: $red;
 	color: $white;
 	&:hover, &:active {	color: $white; background: darken($red, 10%); }
 
-	&.btn--outline, &.btn--text {color: $red; background: transparent; }
-	&.btn--outline:hover, &.btn--text:hover {color: darken($red, 10%); background: transparent; }
+	&.button--outline, &.button--text {color: $red; background: transparent; }
+	&.button--outline:hover, &.button--text:hover {color: darken($red, 10%); background: transparent; }
 }
 
-.btn--orange {
+.Button--orange {
 	background: $orange;
 	color: $black;
 	&:hover, &:active {
@@ -122,11 +122,11 @@ Styleguide Base.buttons
 		color: $black;
 	}
 
-	&.btn--outline, &.btn--text {color: $orange; background: transparent; }
-	&.btn--outline:hover, &.btn--text:hover {color: darken($orange, 10%); background: transparent; }
+	&.button--outline, &.button--text {color: $orange; background: transparent; }
+	&.button--outline:hover, &.button--text:hover {color: darken($orange, 10%); background: transparent; }
 }
 
-.btn--yellow {
+.Button--yellow {
 	background: $yellow;
 	color: $black;
 	&:hover, &:active {
@@ -134,11 +134,11 @@ Styleguide Base.buttons
 		color: $black;
 	}
 
-	&.btn--outline, &.btn--text {color: $yellow; background: transparent; }
-	&.btn--outline:hover, &.btn--text:hover {color: darken($yellow, 10%); background: transparent; }
+	&.button--outline, &.button--text {color: $yellow; background: transparent; }
+	&.button--outline:hover, &.button--text:hover {color: darken($yellow, 10%); background: transparent; }
 }
 
-.btn--disabled {
+.Button--disabled {
 	// Disable Button
 	cursor: default;
 	text-shadow: none;
@@ -147,20 +147,20 @@ Styleguide Base.buttons
 	background: #E0E4E8;
 	color: #606362;
 
-	&.btn--outline, &.btn--text {color: #576B79; background: transparent; }
+	&.button--outline, &.button--text {color: #576B79; background: transparent; }
 }
 
 // Sizes
-.btn--small { font-size: $t-1; }
-.btn--large { font-size: 1.25rem; }
+.Button--small { font-size: $t-1; }
+.Button--large { font-size: 1.25rem; }
 
 // Widths
-.btn--block {
+.Button--block {
 	display: block;
 	width: 100%;
 }
 
 // Spacing
-.btn + .btn {
+.Button + .button {
 	margin-left: 2em;
 }

@@ -7,7 +7,7 @@ layout: page
 
 <hr />
 
-<table class="table">
+<table class="Table">
 	<thead>
 		<th>Heading</th>
 		<th>Heading</th>
@@ -29,7 +29,7 @@ layout: page
 </table>
 
 {% highlight html %}
-<table class="table">
+<table class="Table">
 	<thead>
 		<tr>Heading</tr>
 		<tr>Heading</tr>
