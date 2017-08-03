@@ -1,7 +1,7 @@
 .alert {
 	@extend .p-3;
 	@extend .u-border-radius;
-	@extend .m-bottom;
+	margin-bottom: convertScaleToRem(4);
 
 	*:last-child {margin-bottom: 0;}
 
