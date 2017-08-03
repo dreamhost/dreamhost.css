@@ -463,38 +463,39 @@ layout: page
   <h2>Sizes</h2>
 
   <p>
-    There are 3 popover widths: small, medium, and large. Those don't apply inner padding, but instead change the width of the overall popover. Apply <code>.popover--small</code> or <code>.popover--large</code> accordingly. For medium width popoovers, omit all of the above.
+    There are 3 popover widths: 1 (small), 2 (medium), and 3 (large). Those don't apply inner padding, but instead change the width of the overall popover. Apply <code>.popover--1</code>, <code>.popover--2</code>, or <code>.popover--3</code> accordingly.
   </p>
 
   <div class="container u-clearfix bg-lighter-grey p-s">
 
     <div class="popover-container on-click g-1_3">
-      <div class="popover popover--small has-caret">
+      <div class="popover popover--1 has-caret">
         <div class="p-s">
           This is a small width popover.
         </div>
       </div>
       <a class="btn js-toggle-popover w-100 t-center">Small Width</a>
-      <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.popover--small</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.popover--1</code></p>
     </div>
 
     <div class="popover-container on-click g-1_3">
-      <div class="popover has-caret">
+      <div class="popover popover--2 has-caret">
         <div class="p-s">
           This is a medium width popover.
         </div>
       </div>
       <a class="btn js-toggle-popover w-100 t-center">Medium Width</a>
+      <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.popover--2</code></p>
     </div>
 
     <div class="popover-container on-click g-1_3">
-      <div class="popover popover--large has-caret">
+      <div class="popover popover--3 has-caret">
         <div class="p-s">
           This is a large width popover.
         </div>
       </div>
       <a class="btn js-toggle-popover w-100 t-center">Large Width</a>
-      <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.popover--large</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.popover--3</code></p>
     </div>
 
   </div>
@@ -502,7 +503,7 @@ layout: page
   {% highlight html %}
   <!-- Small width popover -->
   <div class="popover-container on-click">
-    <div class="popover popover--small">
+    <div class="popover popover--1">
       <div class="popover__wrapper">
         <div class="p-s">...</div>
       </div>
@@ -512,7 +513,7 @@ layout: page
 
   <!-- Large width popover -->
   <div class="popover-container on-click">
-    <div class="popover popover--large">
+    <div class="popover popover--3">
       <div class="popover__wrapper">
         <div class="p-s">...</div>
       </div>

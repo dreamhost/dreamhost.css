@@ -352,19 +352,21 @@ Popover Component
 
 /*
 	Sizes:
-	- popover--small
-	- popover--large
+	- popover--1 (small)
+	- popover--2 (medium)
+	- popover--3 (large)
 */
 
-.popover {
-	width: 300px;
-}
-
-.popover--small {
+.popover--1 {
 	width: 200px;
 }
 
-.popover--large {
+.popover,
+.popover--2 {
+	width: 300px;
+}
+
+.popover--3 {
 	width: 400px;
 }
 
