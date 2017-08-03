@@ -2,19 +2,20 @@
 // https://github.com/vodkabears/Remodal
 
 .modal {
-	@extend .p-6;
+	padding: convertScaleToRem(3);
 	@extend .t-left;
 	@extend .u-border-radius-l;
 	@extend .remodal;
 }
 
-.modal__introduction {
-	@extend .t-5;
+.modal__heading {
+	@extend .m-bottom-1;
 }
 
-.modal__heading {
-	@extend .t-6;
-	@extend .m-bottom-1;
+@media screen and (min-width: $medium-breakpoint){
+	.modal {padding: convertScaleToRem(6)}
+	.modal__heading {font-size: $t-6;}
+	.modal__introduction font-size: $t-5;}
 }
 
 .remodal-overlay {
