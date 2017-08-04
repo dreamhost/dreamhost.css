@@ -239,13 +239,13 @@ layout: page
 ## Submit and cancel buttons
 
 <div class="Form__group Form__group--actions">
-	<input type="submit" class="btn" value="Submit">
-	<input type="button" class="btn btn--outline" value="Cancel">
+	<input type="submit" class="Button" value="Submit">
+	<input type="button" class="Button Button--outline" value="Cancel">
 </div>
 
 {% highlight html %}
 <div class="Form__group Form__group--actions">
-	<input type="submit" class="btn" value="Submit">
-	<input type="button" class="btn btn--outline" value="Cancel">
+	<input type="submit" class="Button" value="Submit">
+	<input type="button" class="Button Button--outline" value="Cancel">
 </div>
 {% endhighlight %}
