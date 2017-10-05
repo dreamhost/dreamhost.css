@@ -50,11 +50,17 @@
 .border-left-none {border-left-width: 0}
 .border-right-none {border-right-width: 0}
 
-.border-1 {border-width: $border-size}
-.border-top-1 {border-top-width: $border-size}
-.border-bottom-1 {border-bottom-width: $border-size}
-.border-left-1 {border-left-width: $border-size}
-.border-right-1 {border-right-width: $border-size}
+.border-1 {border-width: $border-size-1}
+.border-top-1 {border-top-width: $border-size-1}
+.border-bottom-1 {border-bottom-width: $border-size-1}
+.border-left-1 {border-left-width: $border-size-1}
+.border-right-1 {border-right-width: $border-size-1}
+
+.border-2 {border-width: $border-size-2}
+.border-top-2 {border-top-width: $border-size-2}
+.border-bottom-2 {border-bottom-width: $border-size-2}
+.border-left-2 {border-left-width: $border-size-2}
+.border-right-2 {border-right-width: $border-size-2}
 
 // colors
 .border-black {border-color: $black}
