@@ -44,11 +44,11 @@
 // widths
 // zero widths to override an element with default styling
 // like an input, or to cancel individual border directions
-.border-none {border-width: 0}
-.border-top-none {border-top-width: 0}
-.border-bottom-none {border-bottom-width: 0}
-.border-left-none {border-left-width: 0}
-.border-right-none {border-right-width: 0}
+.border-none, .border-0 {border-width: 0; border-style: none}
+.border-top-none, .border-top-0 {border-top-width: 0; border-top-style: none}
+.border-bottom-none, .border-bottom-0 {border-bottom-width: 0; border-bottom-style: none}
+.border-left-none, .border-left-0 {border-left-width: 0; border-left-style: none}
+.border-right-none, .border-right-0 {border-right-width: 0; border-right-style: none}
 
 .border-1 {border-width: $border-size-1}
 .border-top-1 {border-top-width: $border-size-1}
