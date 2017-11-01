@@ -8,9 +8,9 @@
 	&__heading {
 		@extend .t-bold;
 		@extend .t-heading;
-		@extend .m-bottom-0
+		@extend .m-top-0;
+		@extend .m-bottom-0;
 	}
-
 }
 
 .Alert--success {
