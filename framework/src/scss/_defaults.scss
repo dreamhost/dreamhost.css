@@ -79,3 +79,7 @@ code {
 	background: $white;
 	font-family: monospace;
 }
+
+a[disabled] {
+	pointer-events: none;
+}
