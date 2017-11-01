@@ -21,6 +21,7 @@
 .t-bold {font-weight: $t-bold !important}
 .t-light {font-weight: $t-light !important}
 .t-lighter {font-weight: $t-lighter !important}
+.t-regular {font-weight: $t-regular !important}
 
 // Styles
 .t-decoration-underline {text-decoration: underline !important}
@@ -43,6 +44,17 @@
 	.t-4__m {font-size: $t-4 !important}
 	.t-5__m {font-size: $t-5 !important}
 	.t-6__m {font-size: $t-6 !important}
+
+	.t-left__m {text-align: left !important}
+	.t-right__m {text-align: right !important}
+	.t-center__m {text-align: center !important}
+	.t-justify__m {text-align: justify !important}
+
+	.t-extrabold__m {font-weight: $t-extrabold !important}
+	.t-bold__m {font-weight: $t-bold !important}
+	.t-light__m {font-weight: $t-light !important}
+	.t-lighter__m {font-weight: $t-lighter !important}
+	.t-regular__m {font-weight: $t-regular !important}
 }
 
 @media screen and (min-width: $large-breakpoint){
@@ -52,5 +64,16 @@
 	.t-4__l {font-size: $t-4 !important}
 	.t-5__l {font-size: $t-5 !important}
 	.t-6__l {font-size: $t-6 !important}
+
+	.t-left__l {text-align: left !important}
+	.t-right__l {text-align: right !important}
+	.t-center__l {text-align: center !important}
+	.t-justify__l {text-align: justify !important}
+
+	.t-extrabold__l {font-weight: $t-extrabold !important}
+	.t-bold__l {font-weight: $t-bold !important}
+	.t-light__l {font-weight: $t-light !important}
+	.t-lighter__l {font-weight: $t-lighter !important}
+	.t-regular__l {font-weight: $t-regular !important}
 }
 
