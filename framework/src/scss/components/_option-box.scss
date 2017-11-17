@@ -28,12 +28,13 @@
 }
 
 .option-box-label {
-	cursor: pointer;
-	min-width: 200px;
-	display: block;
 	border-radius: 3px;
-	transition: all .2s ease-in-out;
 	box-shadow: inset 0 0 0 1px $light-grey;
+	cursor: pointer;
+	display: block;
+	min-width: 200px;
+	padding: convertScaleToRem(2);
+	transition: all .2s ease-in-out;
 
 	&:hover {
 		background: $lighter-grey;
@@ -41,32 +42,31 @@
 }
 
 .option-box-title {
-	display: block;
-	width: 100%;
-	padding: convertScaleToRem(2) convertScaleToRem(2) convertScaleToRem(1);
-	text-align: center;
 	color: $black;
+	display: block;
 	overflow: hidden;
+	padding-bottom: convertScaleToRem(2);
+	text-align: center;
 	transition: all .2s ease-in-out;
+	width: 100%;
 }
 
 .option-box-content {
-	padding: convertScaleToRem(1) convertScaleToRem(2) convertScaleToRem(2);
-	text-align: center;
-	color: $darker-grey;
 	border-top: 0;
+	color: $darker-grey;
 	overflow: hidden;
+	text-align: center;
 	transition: all .2s ease-in-out;
 }
 
 .option-box {
-	width: 100%;
-	min-width: convertScaleToRem(25);
-	margin-right: convertScaleToRem(1);
-	margin-bottom: convertScaleToRem(1);
 	display: inline-block;
 	font-size: convertScaleToRem(2); // Weird inline-block gap fix
+	margin-bottom: convertScaleToRem(1);
+	margin-right: convertScaleToRem(1);
+	min-width: convertScaleToRem(25);
 	vertical-align: top;
+	width: 100%;
 
 	&:hover {
 		.option-box-title {
