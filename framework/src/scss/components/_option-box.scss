@@ -7,7 +7,7 @@
 	Usage:
 	<ul class="u-clearfix">
 		<li class="option-box g-1_2__m">
-			<input type="radio" class="form__radio hidden"
+			<input type="radio" class="form__radio"
 				name="example" id="example" value="example" />
 			<label for="example" class="option-box-label">
 				<div class="option-box-title">
@@ -22,10 +22,6 @@
 	</ul>
 
 */
-
-.form__radio.hidden {
-	display: none;
-}
 
 .option-box-label {
 	border-radius: 3px;
@@ -67,17 +63,18 @@
 	width: 100%;
 
 	&:hover {
-		.option-box-title {
-			color: $black;
-		}
-
+		.option-box-title,
 		.option-box-content {
 			color: $black;
 		}
 	}
 }
 
-.option-box input[type="radio"] + label {
+.option-box .form__radio {
+	display: none;
+}
+
+.option-box .form__radio + .option-box-label {
 	display: block;
 
 	&:active {
@@ -85,7 +82,7 @@
 	}
 }
 
-.option-box input[type="radio"]:checked + label {
+.option-box .form__radio:checked + .option-box-label {
 	box-shadow: inset 0 0 0 2px $blue;
 	position: relative;
 
