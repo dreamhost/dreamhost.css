@@ -10,10 +10,10 @@
 			<input type="radio" class="form__radio hidden"
 				name="example" id="example" value="example" />
 			<label for="example" class="option-box-label">
-				<div class="option-box-label__title">
+				<div class="option-box-title">
 					Example Title
 				</div>
-				<div class="option-box-label__content">
+				<div class="option-box-content">
 					This is one of two option boxes that appear
 					next to each other.
 				</div>
@@ -40,7 +40,7 @@
 	}
 }
 
-.option-box-label__title {
+.option-box-title {
 	display: block;
 	width: 100%;
 	padding: convertScaleToRem(2) convertScaleToRem(2) convertScaleToRem(1);
@@ -50,7 +50,7 @@
 	transition: all .2s ease-in-out;
 }
 
-.option-box-label__content {
+.option-box-content {
 	padding: convertScaleToRem(1) convertScaleToRem(2) convertScaleToRem(2);
 	text-align: center;
 	color: $darker-grey;
@@ -69,11 +69,11 @@
 	vertical-align: top;
 
 	&:hover {
-		.option-box-label__title {
+		.option-box-title {
 			color: $black;
 		}
 
-		.option-box-label__content {
+		.option-box-content {
 			color: $black;
 		}
 	}
@@ -95,11 +95,11 @@
 		transform: scale(1.02);
 	}
 
-	.option-box-label__title {
+	.option-box-title {
 		font-weight: bold;
 	}
 
-	.option-box-label__content {
+	.option-box-content {
 		color: $black;
 	}
 
