@@ -32,7 +32,6 @@
 	box-shadow: inset 0 0 0 1px $light-grey;
 	cursor: pointer;
 	display: block;
-	min-width: 200px;
 	padding: convertScaleToRem(2);
 	transition: all .2s ease-in-out;
 
@@ -64,7 +63,6 @@
 	font-size: convertScaleToRem(2); // Weird inline-block gap fix
 	margin-bottom: convertScaleToRem(1);
 	margin-right: convertScaleToRem(1);
-	min-width: convertScaleToRem(25);
 	vertical-align: top;
 	width: 100%;
 
