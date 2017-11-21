@@ -6,20 +6,20 @@ Can be used with anchor or button tags. When updating colors, make sure to updat
 
 Shapes
 .button            - Normal button
-.button--outline   - 1px border button, transparent bg
 .button--text      - Underlined text
 
-Colors
-.Button            - Blue
-.Button--red       - Red
-.Button--orange    - Orange
-.Button--yellow    - Yellow
-.Button--disabled  - Grey
+Usage
+.button--primary           - Primary
+.button                    - Secondary 
+.button--pill              - Secondary w/Pill Positive
+.button--pill--neutral     - Secondary w/Pill Neutral
+.button--pill--negative    - Secondary w/Pill Negative
+.button--transaction       - Transaction
+.button--negative          - Negative
+.button--disabled          - Disabled
 
 Sizes
-.Button            - 16px
-.Button--small     - 12px
-.Button--large     - 20px
+.button            - 12px
 
 Markup:
 <a href="#" class="button {{modifier_class}}">Text</a>
@@ -28,22 +28,25 @@ Styleguide Base.buttons
 
 */
 
-.Button {
+button, .button {
 	font-family: $body;
 	color: $black;
-	background: $blue;
-	border: none;
+	background: none;
+	border: solid 1px $light-grey;
 	border-radius: 3px;
 	display: inline-block;
-	font-size: $t-3;
-	line-height: 1;
-	padding: .8em 1em .7em;
+	font-size: $t-1;
+	padding:1em 2em;
+	margin:0;
 	text-align: center;
 	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: $t-bold;
 	text-shadow: none;
 	vertical-align: middle;
+	outline: none;
 
-	@include transition (all .1s ease-in-out);
+	@include transition (all $tr-3 ease-in-out);
 
 	// Allow buttons to work on elements that aren't <a>
 	cursor: pointer;
@@ -55,12 +58,15 @@ Styleguide Base.buttons
 
 	&:hover,
 	&:active {
-		background: lighten($blue, 10%);
+		border: solid 1px $blue;
+		background: none;
 		color: $black;
+		//transform: scale($s-magnify);
+		//box-shadow: 5px 5px 10px rgba($black, .1);
 	}
 
 	&:active {
-		transform: scale(.99);
+		transform: scale($s-shrink);
 	}
 
 	svg {
@@ -73,94 +79,159 @@ Styleguide Base.buttons
 	}
 }
 
-// Outline
-.Button--outline {
-	background: transparent;
-	border: 1px solid currentColor;
-	color: $dark-blue;
-
-	&:hover,
-	&:active {
-		background: transparent;
-		border-color: currentColor;
-		color: darken($dark-blue, 10%);
-	}
-
-	&:visited { border-color: currentColor; }
+// Colors
+.button--primary {
+	background: $darkest-blue;
+	color: $white;
+	border: solid 1px $darkest-blue;
+	&:hover, &:active {	color: $black; background:none; border-color:$darkest-blue;}
 }
 
-.Button--text {
+// Pills
+.button--pill {
+	position: relative;
+	padding-left:4em;
+	margin-left:2.5em;
+	&:before{
+	content:'label';
+	background-color: $blue;
+	color:$white;
+    position: absolute;
+    left: -2.5em;
+	top: 15%;
+	padding:0.5em 1em;
+	border-radius: 50px;
+	}
+
+	&.button--pill--neutral{
+		&:hover{border-color:$yellow;}
+		&:before{background-color:$yellow; color:$darker-yellow;}
+	}
+
+	&.button--pill--negative{
+		&:hover{border-color:$red;}
+		&:before{background-color: $red;}
+	}
+
+	&.button--tertiary{
+		padding-left:2.5em;
+			&:before{	
+			padding:0.3em 0.6em;
+			left: -24%;
+			top: 7%;
+		}
+	}
+
+	&.button--block{ margin-left:0;}
+}
+
+// Transaction
+.button--transaction {
+	background: $orange;
+	border-color:$orange;
+	color: $white;
+	&:hover, &:active {
+		background: none;
+		border-color:$orange;
+		color: $black;
+	}
+
+	&.button--text {color: $orange; background: transparent; }
+	&.button--text:hover {color: darken($orange, 10%); background: transparent; }
+}
+
+// Negative
+.button--negative {
+	background: $red;
+	border-color:$red;
+	color: $white;
+	&:hover, &:active {	
+		background: none;
+		border-color:$red;
+		color: $black; }
+
+	&.button--text {color: $red; background: transparent; }
+	&.button--text:hover {color: darken($red, 10%); background: transparent; }
+}
+
+// Tertiary
+.button--tertiary {
+	padding:0.5em 1em;
+}
+
+// Disabled
+button:disabled, .button:disabled, .button--disabled {
+	// Disable Button
+	cursor: not-allowed; 
+	text-shadow: none;
+	background: $light-grey;
+	color: $dark-grey;
+
+	&:hover, &:active{
+		background: $light-grey;
+		color: $dark-grey;
+		transform: scale($s-initial);
+		box-shadow: none;
+		border-color: $light-grey;
+	}
+
+	&:active{
+			pointer-events: none;
+	}
+
+	&.button--text {color: $dark-grey; background: transparent; }
+}
+
+// Text
+.button--text {
 	background: transparent;
 	border: none;
 	color: $dark-blue;
-	text-decoration: underline;
+	text-decoration: none;
 	padding: 0;
-
-	&:hover,
-	&:active {
+	&:hover,&:active {
+		border:none;
 		background: transparent;
+		box-shadow: none;
 		color: darken($dark-blue, 10%);
+		transform: scale($s-initial);
 	}
+	&:active {color:rgba($darkest-blue, 0.6);}
 }
 
+.button--text:before{
+	content: "";
+	position: absolute;
+	z-index: $z-0;
+	left: 0;
+	right: 100%;
+	bottom: 0;
+	background: currentColor;
+	height: 1px;
 
-// Colors
-.Button--red {
-	background: $red;
-	color: $white;
-	&:hover, &:active {	color: $white; background: darken($red, 10%); }
-
-	&.button--outline, &.button--text {color: $red; background: transparent; }
-	&.button--outline:hover, &.button--text:hover {color: darken($red, 10%); background: transparent; }
+	@include transition (right $tr-4 ease-out);
 }
 
-.Button--orange {
-	background: $orange;
-	color: $black;
-	&:hover, &:active {
-		background: lighten($orange, 10%);
-		color: $black;
-	}
-
-	&.button--outline, &.button--text {color: $orange; background: transparent; }
-	&.button--outline:hover, &.button--text:hover {color: darken($orange, 10%); background: transparent; }
+.button--text:hover:before{
+	right:0%;
 }
 
-.Button--yellow {
-	background: $yellow;
-	color: $black;
-	&:hover, &:active {
-		background: lighten($yellow, 10%);
-		color: $black;
-	}
-
-	&.button--outline, &.button--text {color: $yellow; background: transparent; }
-	&.button--outline:hover, &.button--text:hover {color: darken($yellow, 10%); background: transparent; }
-}
-
-.Button--disabled {
-	// Disable Button
-	cursor: default;
-	text-shadow: none;
-	pointer-events: none;
-
-	background: #E0E4E8;
-	color: #606362;
-
-	&.button--outline, &.button--text {color: #576B79; background: transparent; }
-}
-
-// Sizes
-.Button--small { font-size: $t-1; }
-.Button--large { font-size: 1.25rem; }
 
 // Widths
-.Button--block {
+.button--block {
 	display: block;
 	width: 100%;
+	margin:0;
+
+	&:active {
+		transform: scale($s-shrink-less);
+	}
 }
 
 // Spacing
-.Button + .button {
-	margin-left: 2em;
+.button + .button {
+	margin-left: 1em;
+	&.button--pill{margin-left:3.5em;}
+	&.button--pill.button-tertiary{margin-left:0em;}
+	&.button--block, &.button--pill.button--block{margin-left:0;}
 }
