@@ -5,21 +5,21 @@ Buttons
 Can be used with anchor or button tags. When updating colors, make sure to update _tags.scss as well
 
 Shapes
-.button            - Normal button
-.button--text      - Underlined text
+.button  - Normal button
+.button--text  - Underlined text
 
 Usage
-.button--primary           - Primary
-.button                    - Secondary 
-.button--pill              - Secondary w/Pill Positive
-.button--pill--neutral     - Secondary w/Pill Neutral
-.button--pill--negative    - Secondary w/Pill Negative
-.button--transaction       - Transaction
-.button--negative          - Negative
-.button--disabled          - Disabled
+.button--primary        - Primary
+.button                 - Secondary 
+.button__tag            - Secondary w/Tag Neutral
+.button__tag--postive   - Secondary w/Tag Positive
+.button__tag--negative  - Secondary w/Tag Negative
+.button--transaction    - Transaction
+.button--negative       - Negative
+.button--disabled       - Disabled
 
 Sizes
-.button            - 12px
+.button  - 11px
 
 Markup:
 <a href="#" class="button {{modifier_class}}">Text</a>
@@ -35,9 +35,9 @@ button, .button {
 	border: solid 1px $light-grey;
 	border-radius: 3px;
 	display: inline-block;
-	font-size: $t-1;
-	padding:1em 2em;
-	margin:0;
+	font-size: $t-0;
+	padding: 1em 3em;
+	margin: 0;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -84,45 +84,51 @@ button, .button {
 	background: $darkest-blue;
 	color: $white;
 	border: solid 1px $darkest-blue;
-	&:hover, &:active {	color: $black; background:none; border-color:$darkest-blue;}
+	&:hover, &:active {	color: $black; background: none; border-color: $darkest-blue; }
 }
 
-// Pills
-.button--pill {
+// Tags
+.button__tag {
 	position: relative;
-	padding-left:4em;
-	margin-left:2.5em;
+	padding-left: 4em;
+	margin-left: 2.5em;
+	
+	&:hover{
+		&:hover{ border-color: $yellow; }
+	}
+
 	&:before{
-	content:'label';
-	background-color: $blue;
-	color:$white;
-    position: absolute;
-    left: -2.5em;
-	top: 15%;
-	padding:0.5em 1em;
-	border-radius: 50px;
+		content: 'label';
+		background-color: $yellow;
+		color: $darker-yellow;
+    	position: absolute;
+    	left: -2.5em;
+		top: 15%;
+		padding: 0.5em 1em;
+		border-radius: 50px;
 	}
 
-	&.button--pill--neutral{
-		&:hover{border-color:$yellow;}
-		&:before{background-color:$yellow; color:$darker-yellow;}
+	&.button__tag--positive{
+		&:hover{ border-color: $blue; }
+		&:before{ background-color: $blue; color: $white; }
 	}
 
-	&.button--pill--negative{
-		&:hover{border-color:$red;}
-		&:before{background-color: $red;}
+	&.button__tag--negative{
+		&:hover{ border-color: $red; }
+		&:before{ background-color: $red; color: $white; }
 	}
 
 	&.button--tertiary{
-		padding-left:2.5em;
-			&:before{	
-			padding:0.3em 0.6em;
-			left: -24%;
-			top: 7%;
+		padding-left: 3em;
+		
+		&:before{	
+			padding: 0.3em 0.75em;
+			left: -2.0em;
+			top: 0.3em;
 		}
 	}
 
-	&.button--block{ margin-left:0;}
+	&.button--block{ margin-left:0; }
 }
 
 // Transaction
@@ -130,33 +136,35 @@ button, .button {
 	background: $orange;
 	border-color:$orange;
 	color: $white;
+	
 	&:hover, &:active {
 		background: none;
-		border-color:$orange;
+		border-color: $orange;
 		color: $black;
 	}
 
-	&.button--text {color: $orange; background: transparent; }
-	&.button--text:hover {color: darken($orange, 10%); background: transparent; }
+	&.button--text { color: $orange; background: transparent; }
+	&.button--text:hover { color: darken($orange, 10%); background: transparent; }
 }
 
 // Negative
 .button--negative {
 	background: $red;
-	border-color:$red;
+	border-color: $red;
 	color: $white;
+
 	&:hover, &:active {	
 		background: none;
-		border-color:$red;
+		border-color: $red;
 		color: $black; }
 
-	&.button--text {color: $red; background: transparent; }
-	&.button--text:hover {color: darken($red, 10%); background: transparent; }
+	&.button--text { color: $red; background: transparent; }
+	&.button--text:hover { color: darken($red, 10%); background: transparent; }
 }
 
 // Tertiary
 .button--tertiary {
-	padding:0.5em 1em;
+	padding:0.65em 1em;
 }
 
 // Disabled
@@ -175,10 +183,7 @@ button:disabled, .button:disabled, .button--disabled {
 		border-color: $light-grey;
 	}
 
-	&:active{
-			pointer-events: none;
-	}
-
+	&:active{ pointer-events: none; }
 	&.button--text {color: $dark-grey; background: transparent; }
 }
 
@@ -189,13 +194,15 @@ button:disabled, .button:disabled, .button--disabled {
 	color: $dark-blue;
 	text-decoration: none;
 	padding: 0;
+
 	&:hover,&:active {
-		border:none;
+		border: none;
 		background: transparent;
 		box-shadow: none;
 		color: darken($dark-blue, 10%);
 		transform: scale($s-initial);
 	}
+
 	&:active {color:rgba($darkest-blue, 0.6);}
 }
 
@@ -231,7 +238,8 @@ button:disabled, .button:disabled, .button--disabled {
 // Spacing
 .button + .button {
 	margin-left: 1em;
-	&.button--pill{margin-left:3.5em;}
-	&.button--pill.button-tertiary{margin-left:0em;}
-	&.button--block, &.button--pill.button--block{margin-left:0;}
+	
+	&.button__tag{ margin-left:3.25em; }
+	&.button__tag.button--tertiary{ margin-left:2.75em; }
+	&.button--block, &.button__tag.button--block{ margin-left:0; }
 }
