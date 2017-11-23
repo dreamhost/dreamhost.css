@@ -42,6 +42,68 @@ $c-r500: #B80C03; //rust
 $c-r300: #FF4A48; //coral
 $c-r100: #FFCCCE; //rose
 
+// Brand Colors
+
+// Blues
+$lightest-blue: #EEFAFF;
+$lighter-blue: #CCEFFF;
+$light-blue: #80CDF0;
+$blue: #2BADE9;
+$dark-blue: #1176A5;
+$darker-blue: #073F59;
+$darkest-blue: #061C26;
+
+// Teal
+$lighter-teal: #E5FEFF;
+$light-teal: #5CB4B9;
+$teal: #109CA3;
+$dark-teal: #0D8288;
+$darker-teal: #064145;
+
+// Green
+$lighter-green: #EEFDF1;
+$light-green: #B0DBB9;
+$green: #027F1B;
+$dark-green: #074C15;
+$darker-green: #072C0E;
+
+// Yellow
+$lighter-yellow: #FFF9CC;
+$light-yellow: #F4E171;
+$yellow: #FFDA00;
+$dark-yellow: #C7A900;
+$darker-yellow: #837000;
+
+// Orange
+$lighter-orange: #FFEECC;
+$light-orange: #FFCA63;
+$orange: #FFA700;
+$dark-orange: #D78B00;
+$darker-orange: #8A5900;
+
+// Red
+$lighter-red: #FFD6D4;
+$light-red: #D45F59;
+$red: #B80C03;
+$dark-red: #8C0700;
+$darker-red: #590400;
+
+// Salmon
+$lighter-salmon: #FFCCCE;
+$light-salmon: #FC9A95;
+$salmon: #F36058;
+$dark-salmon: #C04740;
+$darker-salmon: #853834;
+
+// Greys
+$white: #fff;
+$lighter-grey: #F4F6F9;
+$light-grey: #E0E4E8;
+$grey: #AFBFCA;
+$dark-grey: #5E6D78;
+$darker-grey: #434F58;
+$black: $darkest-blue;
+
 // Sizing Scale
 // Use baseScale with convertScaleToRem() to ensure consistent margins.
 $baseScale: 8; // Goes in 8px increments
