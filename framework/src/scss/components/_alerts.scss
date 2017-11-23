@@ -25,7 +25,13 @@
 	border-left: convertScaleToRem(1) solid $red;
 }
 
-.Alert:not(.Alert--success):not(.Alert--error) {
+.Alert--info {
+	background: $lighter-blue;
+	color: $dark-blue;
+	border-left: convertScaleToRem(1) solid $blue;
+}
+
+.Alert:not(.Alert--success):not(.Alert--error):not(.Alert--info) {
 	background: $lighter-yellow;
 	color: $darker-yellow;
 	border-left: convertScaleToRem(1) solid $yellow;
