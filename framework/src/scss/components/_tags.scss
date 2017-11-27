@@ -8,10 +8,40 @@ Pills
 */
 
 .tag {
-	padding: $s-1;
-	background: $black;
+	text-transform: uppercase;
+	background: $c-b300;
 	color: $white;
 	display: inline-block;
 	font-weight: bold;
 	font-size: $t-1;
+	border-radius: 20px;
+	padding: 0.25em 0.75em;
+
+	&.tag--square {
+		border-radius: 0;
+	}
+
+	&.tag--red {
+		background: $c-r300;
+	}
+
+	&.tag--turquoise {
+		background: $c-t300;
+	}
+
+	&.tag--orange {
+		background: $c-o300;
+	}
+}
+
+.tag-button {
+	position: relative;
+	display: inline-block;
+	.tag {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 85%; // position from right so tag text doesnt overlap button
+		white-space: nowrap;
+	}
 }
