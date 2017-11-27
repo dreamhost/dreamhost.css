@@ -80,6 +80,7 @@ $t-4: 1.5rem; // 24px
 $t-3: 1rem; // 16px
 $t-2: .875rem; // 14px. legibility at small sizes > adhering to scales
 $t-1: .75em; // 12px
+$t-0: .688em; //11px
 
 // Font weight
 $t-lighter: 100;
@@ -109,6 +110,15 @@ $tr-4: .2s;
 $tr-3: .1s;
 $tr-2: .07s;
 $tr-1: .05s;
+
+// Transform Scale 
+
+$s-5: 1.02; //magnify
+$s-4: 1.01; //magnify less
+$s-3: 1; //initial
+$s-2: .99; //shrink less
+$s-1: .98; //shrink
+
 
 // Z-indexes
 $z-0: -1;
