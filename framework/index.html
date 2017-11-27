@@ -160,12 +160,12 @@
 		<h2>Modal</h2>
 		<p>DreamHost uses https://github.com/vodkabears/Remodal with some customized styling.</p>
 		<p>To call the modal, use</p>
-		<button class="Button" data-remodal-target="modal">Open modal</button>
+		<button class="dh-button" data-remodal-target="modal">Open modal</button>
 		<div class="remodal modal" data-remodal-id="modal">
 			<h1 class="modal__heading">I'm a modal</h1>
 			<p class="modal__introduction">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nemo praesentium aliquid optio labore qui, voluptate consequatur provident quos sed aperiam animi, placeat! Asperiores dicta, fuga modi temporibus laborum, culpa?</p>
-			<button class="Button Button--orange" data-remodal-action="close">Close</button>
+			<button class="dh-button dh-button" data-remodal-action="close">Close</button>
 		</div>
 	</section>
 
@@ -340,8 +340,8 @@
 			</div>
 
 			<div class="Form__group Form__group--actions">
-				<input type="submit" class="Button" value="Submit">
-				<input type="button" class="Button Button--outline" value="Cancel">
+				<input type="submit" class="dh-button" value="Submit">
+				<input type="button" class="dh-button dh-button" value="Cancel">
 			</div>
 		</Form>
 	</section>
@@ -351,17 +351,17 @@
 
 		<div class="m-bottom-l">
 			<h4 class="m-bottom-xs">Colors</h4>
-			<p><span role="button" class="dh-button dh-button--primary">Primary Button</span>
-			<span role="button" class="dh-button">Secondary Button</span>
-			<span role="button" class="dh-button dh-button--transaction">Transaction Button</span>
+			<p><span role="button" class="dh-button dh-button--primary">Primary button</span>
+			<span role="button" class="dh-button">Secondary button</span>
+			<span role="button" class="dh-button dh-button--transaction">Transaction button</span>
 			<span role="button" class="dh-button dh-button--negative">Negative</span>
 			<span role="button" class="dh-button dh-button--disabled">Disabled</span></p>
 		</div>
 		<div>
 			<h4 class="m-bottom-xs">Tags</h4>
-			<p><span role="button" class="dh-button dh-button__tag">Tag Button</span>
-			<span role="button" class="dh-button dh-button__tag dh-button__tag--positive">Positive Tag Button </span>
-			<span role="button" class="dh-button dh-button__tag dh-button__tag--negative">Negative Tag Button</span>
+			<p><span role="button" class="dh-button dh-button__tag">Tag button</span>
+			<span role="button" class="dh-button dh-button__tag dh-button__tag--positive">Positive Tag button </span>
+			<span role="button" class="dh-button dh-button__tag dh-button__tag--negative">Negative Tag button</span>
 			<span role="button" class="dh-button dh-button__tag dh-button--tertiary">Tertiary Tag</span></p>
 		</div>
 
@@ -383,28 +383,340 @@
 			<h4 class="m-bottom-xs">Widths</h4>
 			<p><span role="button" class="dh-button">Normal width</span></p>
 			<p><span role="button" class="dh-button dh-button--block">Full-width block button</span></p>
-			<p><span role="button" class="dh-button dh-button--primary dh-button--block">Full-width Primary Button</span></p>
-			<p><span role="button" class="dh-button dh-button--block">Full-width Secondary Button</span></p>
-			<p><span role="button" class="dh-button dh-button--transaction dh-button--block">Full-width Transaction Button</span></p>
-			<p><span role="button" class="dh-button dh-button__tag dh-button--block">Full-width Tag Button</span></p>
+			<p><span role="button" class="dh-button dh-button--primary dh-button--block">Full-width Primary button</span></p>
+			<p><span role="button" class="dh-button dh-button--block">Full-width Secondary button</span></p>
+			<p><span role="button" class="dh-button dh-button--transaction dh-button--block">Full-width Transaction button</span></p>
+			<p><span role="button" class="dh-button dh-button__tag dh-button--block">Full-width Tag button</span></p>
 		</div>
 	</section>
-</div>
 
-<div class="container-l p-left-3 p-right-3">
 	<section class="box u-border-radius m-bottom-4">
-		<h1>Colours</h1>
+		<h1>Colors</h1>
 
+		<h3>Site Panel Palette</h3>
+		<p>These can be used directly in sass with their variable names or in html via <strong>bg-</strong> for backgrounds or <strong>t-</strong> for text color.</p>
+
+		<h4>Primary Palette</h4>
+		<div class="u-clearfix m-bottom-4">
+			<div class="g-1_3 bg-c-b300 p-top-12">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Sky Blue</strong><br />Sass $c-b300<br />Hex #2BADE9<br />rgb(43,173,233)</p>
+			</div><!--SkyBlue-->
+
+			<div class="g-1_3 bg-c-b700 p-top-12">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Midnight</strong><br />Sass $c-b700<br />Hex #071C26<br />rgb(7,28,38)</p>		
+			</div><!--Midnight-->
+
+			<div class="g-1_3 bg-c-w100 p-top-12">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>White</strong><br />Sass $c-w100<br />Hex #FFFFFF<br />rgb(255,255,255)</p>		
+			</div><!--White-->
+		</div><!--Primary-->
+		
+		<h4>Secondary Palette</h4>
+
+		<div class="u-clearfix m-bottom-4">
+			<div class="g-1_4 bg-c-r300 p-top-12">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Coral</strong><br />Sass $c-r300<br />Hex #FFA700<br />rgb(255,74,72)</p>
+			</div><!--Coral-->
+	
+			<div class="g-1_4 bg-c-t300 p-top-12">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Turquoise</strong><br />Sass $c-y300<br />Hex #FFDA00<br />rgb(255,218,0)</p>		
+			</div><!--Turquoise-->
+	
+			<div class="g-1_4 bg-c-o300 p-top-12">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Orange</strong><br />Sass $c-o300<br />Hex #FFA700<br />rgb(255,167,0)</p>		
+			</div><!--Orange-->
+
+			<div class="g-1_4 bg-c-y300 p-top-12">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Sunflower</strong><br />Sass $c-t300<br />Hex #FFDA00<br />rgb(202,170,100)</p>		
+			</div><!--Sunflower-->
+		</div><!--Secondary-->
+
+		<h3>Extended Palette &amp; Usage</h3>
+
+		<h4>Backgrounds</h4>
+		<div class="u-clearfix m-bottom-4">
+			<div class="g-1_2 bg-c-b700 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Midnight</strong><br />Sass $c-b700<br />Hex #071C26<br />rgb(7,28,38)</p>		
+			</div><!--Midnight-->
+
+			<div class="g-1_2 bg-c-white p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>White</strong><br />Sass $c-white<br />Hex #FFFFFF<br />rgb(255,255,255)</p>		
+			</div><!--White-->
+		</div><!--Backgrounds-->
+
+		<h4>Type / Delineators</h4>
+		<div class="u-clearfix m-bottom-4">
+			<div class="g-1_4 bg-c-g500 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Metal</strong><br />Sass $c-g500<br />Hex#434F58<br />rgb(67,79,88)</p>		
+			</div><!--Metal-->
+
+			<div class="g-1_4 bg-c-g300 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Cloudy</strong><br />Sass $c-g300<br />Hex #AFBFC9<br />rgb(175,191,201)</p>		
+			</div><!--Cloudy-->
+
+			<div class="g-1_4 bg-c-g200 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Smoke</strong><br />Sass $c-g200<br />Hex #E0E4E8<br />rgb(224,228,232)</p>		
+			</div><!--Smoke-->
+
+			<div class="g-1_4 bg-c-g100 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Off White</strong><br />Sass $c-g100<br />Hex #F4F6F9<br />rgb(244,246,249)</p>		
+			</div><!--Off White-->
+		</div><!--Delineators-->
+
+		<h4>Extended Accents - Brand/Default</h4>
+		<div class="u-clearfix m-bottom-4">
+			<div class="g-1_3 bg-c-b500 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Royal Blue</strong><br />Sass $c-b500<br />Hex #1176A5<br />rgb(17,118,165)</p>		
+			</div><!--Royal Blue-->
+
+			<div class="g-1_3 bg-c-b300 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Sky Blue</strong><br />Sass $c-b300<br />Hex #2BADE9<br />rgb(43,173,233)</p>		
+			</div><!--Sky Blue-->
+
+			<div class="g-1_3 bg-c-b100 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Baby Blue</strong><br />Sass $c-b100<br />Hex #CCEFFF<br />rgb(204,239,255)</p>		
+			</div><!--Baby Blue-->
+		</div><!--Primary Accents-->
+
+		<h4>Extended Accents - Transactional</h4>
+		<div class="u-clearfix m-bottom-4">
+			<div class="g-1_3 bg-c-o500 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Autumn</strong><br />Sass $c-o500<br />Hex #C97400<br />rgb(201,116,0)</p>		
+			</div><!--Autumn-->
+
+			<div class="g-1_3 bg-c-o300 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Orange</strong><br />Sass $c-o300<br />Hex #FFA700<br />rgb(255,167,0)</p>		
+			</div><!--Orange-->
+
+			<div class="g-1_3 bg-c-o100 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Peach</strong><br />Sass $c-o100<br />Hex #FFE0A6<br />rgb(255,224,166)</p>		
+			</div><!--Peach-->
+		</div><!--Transaction Accents-->
+
+		<h4>Extended Accents - Positive</h4>
+		<div class="u-clearfix m-bottom-4">
+			<div class="g-1_3 bg-c-t500 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>	
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Marina</strong><br />Sass $c-t500<br />Hex #0D8288<br />rgb(13,130,136)</p>		
+			</div><!--Marina-->
+
+			<div class="g-1_3 bg-c-t300 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>	
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Turquoise</strong><br />Sass $c-t300<br />Hex #00CAAA<br />rgb(0,202,170)</p>		
+			</div><!--Turquoise-->
+
+			<div class="g-1_3 bg-c-t100 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>	
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Ice</strong><br />Sass $c-t100<br />Hex #E5FEFF<br />rgb(229,254,255)</p>		
+			</div><!--Ice-->
+		</div><!--Positive Accents-->
+
+		<h4>Extended Accents - Neutral/Informative</h4>
+		<div class="u-clearfix m-bottom-4">
+			<div class="g-1_3 bg-c-y500 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>	
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Leather</strong><br />Sass $c-y500<br />Hex #AC942A<br />rgb(172,148,42)</p>		
+			</div><!--Leather-->
+
+			<div class="g-1_3 bg-c-y300 p-top-3">
+					<ul class="t-center p-2 u-clearfix">
+						<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+						<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+						<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+						<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>	
+					</ul>
+					<p class="p-3 bg-c-g100 m-0"><strong>Sunflower</strong><br />Sass $c-y300<br />Hex #FFDA00<br />rgb(255,218,0)</p>		
+			</div><!--Sunflower-->
+
+			<div class="g-1_3 bg-c-y100 p-top-3">
+					<ul class="t-center p-2 u-clearfix">
+						<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+						<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+						<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+						<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>	
+					</ul>
+					<p class="p-3 bg-c-g100 m-0"><strong>Magnolia</strong><br />Sass $c-y100<br />Hex #FFF4B6<br />rgb(255,244,182)</p>		
+			</div><!--Magnolia-->
+		</div><!--Neutral Accents-->
+
+		<h4>Extended Accents - Negative</h4>
+		<div class="u-clearfix m-bottom-4">
+			<div class="g-1_3 bg-c-r500 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128557;</li>	
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Rust</strong><br />Sass $c-r500<br />Hex #C97400<br />rgb(184,12,3)</p>		
+			</div><!--Rust-->
+
+			<div class="g-1_3 bg-c-r300 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>	
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Coral</strong><br />Sass $c-r300<br />Hex #FFA700<br />rgb(255,74,72)</p>		
+			</div><!--Coral-->
+			
+			<div class="g-1_3 bg-c-r100 p-top-3">
+				<ul class="t-center p-2 u-clearfix">
+					<li class="t-center t-c-white g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+					<li class="t-center t-c-white g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+					<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+					<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>	
+				</ul>
+				<p class="p-3 bg-c-g100 m-0"><strong>Rose</strong><br />Sass $c-r100<br />Hex #FFE0A6<br />rgb(255,204,206)</p>		
+			</div><!--Coral-->
+		</div><!--Negative Accents-->
+
+		<h3>Full Dreamhost Brand Palette</h3>
 		<p>These can be used directly in sass with their variable names or in html via bg-color for backgrounds or t-color for text color.</p>
 
-		<div class="u-clearfix t-bold m-bottom-4">
-			<div class="g-1_4 c-lightest-blue l-block p-3 m-right-0">$lightest-blue</div>
-			<div class="g-1_4 c-lighter-blue l-block p-3 m-right-0">$lighter-blue</div>
-			<div class="g-1_4 c-light-blue l-block p-3 m-right-0">$light-blue</div>
-			<div class="g-1_4 c-blue l-block p-3 m-right-0">$blue</div>
-			<div class="g-1_4 c-dark-blue l-block p-3 m-right-0">$dark-blue</div>
-			<div class="g-1_4 c-darker-blue l-block p-3 m-right-0">$darker-blue</div>
-			<div class="g-1_4 c-darkest-blue l-block p-3 m-right-0">$darkest-blue</div>
+		<div class="u-clearfix t-bold">
+			<div class="g-1_4 c-lightest-blue l-block p-3 m-bottom-3">$lightest-blue</div>
+			<div class="g-1_4 c-lighter-blue l-block p-3 m-bottom-3">$lighter-blue</div>
+			<div class="g-1_4 c-light-blue l-block p-3 m-bottom-3">$light-blue</div>
+			<div class="g-1_4 c-blue l-block p-3">$blue</div>
+			<div class="g-1_4 c-dark-blue l-block p-3 m-bottom-3">$dark-blue</div>
+			<div class="g-1_4 c-darker-blue l-block p-3 m-bottom-3">$darker-blue</div>
+			<div class="g-1_4 c-darkest-blue l-block p-3 m-bottom-3">$darkest-blue</div>
 		</div>
 
 		<div class="u-clearfix t-bold m-bottom-4">
@@ -460,15 +772,18 @@
 		</div>
 
 		<div class="u-clearfix t-bold m-bottom-4">
-			<div class="g-1_6 c-lighter-grey p-3 m-right-0">$lighter-grey</div>
-			<div class="g-1_6 c-light-grey p-3 m-right-0">$light-grey</div>
-			<div class="g-1_6 c-grey p-3 m-right-0">$grey</div>
-			<div class="g-1_6 c-dark-grey p-3 m-right-0">$dark-grey</div>
-			<div class="g-1_6 c-darker-grey p-3 m-right-0">$darker-grey</div>
-			<div class="g-1_6 c-black p-3 m-right-0">$black</div>
+			<div class="g-1_6 c-lighter-grey p-2 m-bottom-3">$lighter-grey</div>
+			<div class="g-1_6 c-light-grey p-2 m-bottom-3">$light-grey</div>
+			<div class="g-1_6 c-grey p-2 m-bottom-3">$grey</div>
+			<div class="g-1_6 c-dark-grey p-2 m-bottom-3">$dark-grey</div>
+			<div class="g-1_6 c-darker-grey p-2 m-bottom-3">$darker-grey</div>
+			<div class="g-1_6 c-black p-2 m-bottom-3">$black</div>
 		</div>
 
 	</section>
+</div>
+
+<div class="container-l p-left-3 p-right-3">
 
 	<section>
 		<div class="Popover-container on-click">
@@ -496,7 +811,7 @@
 					</ul>
 				</div>
 			</div>
-			<a class="Button js-toggle-popover scale-down-hover tr-duration-3 tr-easing-ease">Top Popover</a>
+			<a class="dh-button js-toggle-popover scale-down-hover tr-duration-3 tr-easing-ease">Top Popover</a>
 
 
 <li>
@@ -563,11 +878,12 @@
 
 	<section class="box m-bottom-5">
 		<h1>Typography</h1>
-		<p class="t-4">Large non-heading text!</p>
 		<h2>Heading two</h2>
 		<h3>Heading three</h3>
 		<h4>Heading four</h4>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quidem mollitia optio temporibus cum eius deserunt, eum tenetur minima nulla hic inventore quo tempore reprehenderit. Laboriosam maiores odio debitis, in?</p>
+
+		<hr />
 
 		<h2>Sizes</h2>
 		<p class="t-6">.t-6</p>
@@ -591,7 +907,7 @@
 			<li>Inline list</li>
 			<li>Inline list</li>
 		</ul>
-		<p><a href="javascript::" class="Button--warning">Button</a></p>
+		<p><a href="javascript::" class="dh-button">Button</a></p>
 
 	</section>
 
@@ -671,34 +987,34 @@
 		<div class="g-1_2 box m-bottom-4">
 			<h2>Whatever</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
-			<a href="#" class="Button">Go!</a>
+			<a href="#" class="dh-button">Go!</a>
 		</div>
 
 		<div class="g-1_2 g-omega box m-bottom-4">
 			<h2>Whatever</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
-			<a href="#" class="Button">Go!</a>
+			<a href="#" class="dh-button">Go!</a>
 		</div>
 
 		<div class="g-1_2 box m-bottom-4">
 			<h2>Whatever</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
-			<a href="#" class="Button">Go!</a>
+			<a href="#" class="dh-button">Go!</a>
 		</div>
 		<div class="g-1_2 g-omega box m-bottom-4">
 			<h2>Whatever</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
-			<a href="#" class="Button">Go!</a>
+			<a href="#" class="dh-button">Go!</a>
 		</div>
 		<div class="g-1_2 box">
 			<h2>Whatever</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
-			<a href="#" class="Button">Go!</a>
+			<a href="#" class="dh-button">Go!</a>
 		</div>
 		<div class="g-1_2 g-omega box">
 			<h2>Whatever</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
-			<a href="#" class="Button--warning">Go!</a>
+			<a href="#" class="dh-button">Go!</a>
 		</div>
 	</section>
 
