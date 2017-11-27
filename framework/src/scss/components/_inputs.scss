@@ -1,0 +1,64 @@
+/*
+
+Inputs Component
+
+*/
+
+.dh-input__label {
+	color: $darker-grey;
+	display: block;
+	font-size: $t-3;
+	font-weight: $t-bold;
+	cursor: pointer;
+	max-width: 35rem;
+}
+
+.dh-input__description {
+	@extend %form-description;
+
+	font-weight: $t-regular;
+	margin-bottom: 0;
+}
+
+.dh-input {
+	@extend %form-border;
+	@extend %form-no-outline;
+	@extend %form-text-style;
+
+	display: block;
+	margin: 0;
+	margin-top: .5rem;
+	width: 100%;
+
+	border-radius: $border-radius;
+	padding: .65rem;
+
+	&:active,
+	&:focus {
+		box-shadow: 2px 2px 0 0 $light-grey;
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			color: $white;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+			color: $white;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+			color: $white;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+			color: $white;
+		}
+	}
+
+	&::placeholder {
+		color: $dark-grey;
+	}
+}
+
+.dh-input__label > .dh-input__description {
+	margin-bottom: 1rem;
+}
+
+textarea.dh-input {
+	min-height: 140px;
+}

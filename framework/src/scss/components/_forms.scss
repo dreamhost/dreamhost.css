@@ -16,27 +16,27 @@ Form Component
 	font-family: $body;
 }
 
-.Form {}
+.dh-form {}
 
-.Form__group {
+.dh-form__group {
 	max-width: 100%;
 	margin: 0 auto 2rem;
 }
 
-.Form__inline {
+.dh-form__inline {
 		margin: 0 auto 2rem;
 
-	.Form__group {
+	.dh-form__group {
 		display: table-cell;
 		vertical-align: top;
 	}
 }
 
-.Form__inline-grid {
+.dh-form__inline-grid {
 	margin: 0 -2rem;
 }
 
-.Form__inline-row {
+.dh-form__inline-row {
 	display: table;
 	table-layout: fixed;
 	width: 100%;
@@ -44,128 +44,17 @@ Form Component
 	border-spacing: 2rem 0;
 }
 
-.form__group--actions {
+.dh-form__group--actions {
 	margin-top: convertScaleToRem(6);
 }
 
-.Form__group--stacked {
-	.Form__input + .Form__input {
+.dh-form__group--stacked {
+	.dh-input + .dh-input {
 		margin-top: 1rem;
 	}
 }
 
-.Form__label {
-	color: $darker-grey;
-	display: block;
-	font-size: $t-3;
-	font-weight: $t-bold;
-	cursor: pointer;
-	max-width: 35rem;
-}
-
-.Form__description {
-	@extend %form-description;
-
-	font-weight: $t-regular;
-	margin-bottom: 0;
-}
-
-.Form__input {
-	@extend %form-border;
-	@extend %form-no-outline;
-	@extend %form-text-style;
-
-	display: block;
-	margin: 0;
-	margin-top: .5rem;
-	width: 100%;
-
-	border-radius: $border-radius;
-	padding: .65rem;
-
-	&:active,
-	&:focus {
-		box-shadow: 2px 2px 0 0 $light-grey;
-		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-			color: $white;
-		}
-		&::-moz-placeholder { /* Firefox 19+ */
-			color: $white;
-		}
-		&:-ms-input-placeholder { /* IE 10+ */
-			color: $white;
-		}
-		&:-moz-placeholder { /* Firefox 18- */
-			color: $white;
-		}
-	}
-
-	&::placeholder {
-		color: $dark-grey;
-	}
-}
-
-.Form__label > .Form__description {
-	margin-bottom: 1rem;
-}
-
-textarea.form__input {
-	min-height: 140px;
-}
-
-.Form__radio-check {
-	@extend %form-text-style;
-
-	cursor: pointer;
-	display: block;
-	padding-left: 1.4rem;
-	position: relative;
-
-	margin-bottom: convertScaleToRem(1);
-
-	input {
-		@extend %form-no-outline;
-		position: absolute;
-		left: 0;
-		top: 2px;
-	}
-}
-
-.Form__radio-check-label {
-	display: block;
-}
-
-.Form__radio-check-description {
-	@extend %form-description;
-	display: block;
-	margin-bottom: convertScaleToRem(2);
-}
-
-// Maybe we should create a custom style for these?
-// This looks kinda crazy in Safari. Looks decent elsewhere though.
-// This is the only way to get a native select box to stay at a height though.
-.Form__select {
-	@extend %form-border;
-	@extend %form-no-outline;
-	@extend %form-text-style;
-
-	border-radius: $border-radius;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	padding: 0 0 0 .75rem;
-	background: $lighter-grey; /* Old browsers */
-	background: -moz-linear-gradient(top, $lighter-grey 0%, lighten($lighter-grey, 2%) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, $lighter-grey 0%, lighten($lighter-grey, 2%) 100%); /* Chrome10-25, Safari5.1-6 */
-	background: linear-gradient(to bottom, $lighter-grey 0%, lighten($lighter-grey, 2%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$lighter-grey', endColorstr='lighten($lighter-grey, 3%)', GradientType=0 ); /* IE6-9 */
-	display: block;
-	width: 100%;
-	height: 42px;
-	line-height: 42px;
-	cursor: pointer;
-}
-
-.Form__group--select {
+.dh-form__group--select {
 	position: relative;
 
 	&:after {
@@ -176,6 +65,7 @@ textarea.form__input {
 		border-color: $grey transparent;
 		border-style: solid;
 		border-width: .35rem .35rem 0 .35rem;
+		transition: all .2s ease-in-out;
 	}
 
 	&:hover:after {
