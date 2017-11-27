@@ -1,4 +1,4 @@
 ---
-title: Sass
+title: Widths
 layout: page
 ---

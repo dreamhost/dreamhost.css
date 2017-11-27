@@ -1,4 +1,0 @@
----
-title: Pills
-layout: page
----
