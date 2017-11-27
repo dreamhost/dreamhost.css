@@ -5,45 +5,49 @@ Buttons
 Can be used with anchor or button tags. When updating colors, make sure to update _tags.scss as well
 
 Shapes
-.button            - Normal button
-.button--outline   - 1px border button, transparent bg
-.button--text      - Underlined text
+.dh-button  - Normal button
+.dh-button--text  - Underlined text
 
-Colors
-.Button            - Blue
-.Button--red       - Red
-.Button--orange    - Orange
-.Button--yellow    - Yellow
-.Button--disabled  - Grey
+Usage
+.dh-button--primary        - Primary
+.dh-button                 - Secondary
+.dh-button__tag            - Secondary w/Tag Neutral
+.dh-button__tag--postive   - Secondary w/Tag Positive
+.dh-button__tag--negative  - Secondary w/Tag Negative
+.dh-button--transaction    - Transaction
+.dh-button--negative       - Negative
+.dh-button--disabled       - Disabled
 
 Sizes
-.Button            - 16px
-.Button--small     - 12px
-.Button--large     - 20px
+.dh-button  - 11px
 
 Markup:
 <a href="#" class="button {{modifier_class}}">Text</a>
 
-Styleguide Base.buttons
+Styleguide Base.dh-buttons
 
 */
 
-.Button {
+.dh-button {
 	font-family: $body;
 	color: $black;
-	background: $blue;
-	border: none;
+	background: none;
+	border: solid 1px $light-grey;
 	border-radius: 3px;
 	display: inline-block;
-	font-size: $t-3;
-	line-height: 1;
-	padding: .8em 1em .7em;
+	font-size: $t-0;
+	padding: 1em 3em;
+	letter-spacing: .55px;
+	margin: 0;
 	text-align: center;
 	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: $t-bold;
 	text-shadow: none;
 	vertical-align: middle;
+	outline: none;
 
-	@include transition (all .1s ease-in-out);
+	@include transition (all $tr-3 ease-in-out);
 
 	// Allow buttons to work on elements that aren't <a>
 	cursor: pointer;
@@ -55,12 +59,13 @@ Styleguide Base.buttons
 
 	&:hover,
 	&:active {
-		background: lighten($blue, 10%);
+		border: solid 1px $blue;
+		background: none;
 		color: $black;
 	}
 
 	&:active {
-		transform: scale(.99);
+		transform: scale($s-1);
 	}
 
 	svg {
@@ -73,94 +78,167 @@ Styleguide Base.buttons
 	}
 }
 
-// Outline
-.Button--outline {
-	background: transparent;
-	border: 1px solid currentColor;
-	color: $dark-blue;
-
-	&:hover,
-	&:active {
-		background: transparent;
-		border-color: currentColor;
-		color: darken($dark-blue, 10%);
-	}
-
-	&:visited { border-color: currentColor; }
+// Colors
+.dh-button--primary {
+	background: $darkest-blue;
+	color: $white;
+	border: solid 1px $darkest-blue;
+	&:hover, &:active {	color: $black; background: none; border-color: $darkest-blue; }
 }
 
-.Button--text {
+// Tags
+.dh-button__tag {
+	position: relative;
+	padding-left: 4em;
+	margin-left: 2.5em;
+
+	&:hover{
+		&:hover{ border-color: $yellow; }
+	}
+
+	&:before{
+		content: 'label';
+		background-color: $yellow;
+		color: $darker-yellow;
+    	position: absolute;
+    	left: -2.5em;
+		top: 15%;
+		padding: 0.5em 1em;
+		border-radius: 50px;
+	}
+
+	&.dh-button__tag--positive{
+		&:hover{ border-color: $blue; }
+		&:before{ background-color: $blue; color: $white; }
+	}
+
+	&.dh-button__tag--negative{
+		&:hover{ border-color: $red; }
+		&:before{ background-color: $red; color: $white; }
+	}
+
+	&.dh-button--tertiary{
+		padding-left: 3em;
+
+		&:before{
+			padding: 0.3em 0.75em;
+			left: -2.0em;
+			top: 0.3em;
+		}
+	}
+
+	&.dh-button--block{ margin-left:0; }
+}
+
+// Transaction
+.dh-button--transaction {
+	background: $orange;
+	border-color:$orange;
+	color: $white;
+
+	&:hover, &:active {
+		background: none;
+		border-color: $orange;
+		color: $black;
+	}
+
+	&.dh-button--text { color: $orange; background: transparent; }
+	&.dh-button--text:hover { color: darken($orange, 10%); background: transparent; }
+}
+
+// Negative
+.dh-button--negative {
+	background: $red;
+	border-color: $red;
+	color: $white;
+
+	&:hover, &:active {
+		background: none;
+		border-color: $red;
+		color: $black; }
+
+	&.dh-button--text { color: $red; background: transparent; }
+	&.dh-button--text:hover { color: darken($red, 10%); background: transparent; }
+}
+
+// Tertiary
+.dh-button--tertiary {
+	padding:0.65em 1em;
+}
+
+// Disabled
+.dh-button:disabled, .dh-button--disabled {
+	// Disable Button
+	cursor: not-allowed;
+	text-shadow: none;
+	background: $light-grey;
+	color: $dark-grey;
+
+	&:hover, &:active{
+		background: $light-grey;
+		color: $dark-grey;
+		transform: scale($s-3);
+		box-shadow: none;
+		border-color: $light-grey;
+	}
+
+	&:active{ pointer-events: none; }
+	&.dh-button--text {color: $dark-grey; background: transparent; }
+}
+
+// Text
+.dh-button--text {
 	background: transparent;
 	border: none;
 	color: $dark-blue;
-	text-decoration: underline;
+	text-decoration: none;
 	padding: 0;
 
-	&:hover,
-	&:active {
+	&:hover,&:active {
+		border: none;
 		background: transparent;
+		box-shadow: none;
 		color: darken($dark-blue, 10%);
-	}
-}
-
-
-// Colors
-.Button--red {
-	background: $red;
-	color: $white;
-	&:hover, &:active {	color: $white; background: darken($red, 10%); }
-
-	&.button--outline, &.button--text {color: $red; background: transparent; }
-	&.button--outline:hover, &.button--text:hover {color: darken($red, 10%); background: transparent; }
-}
-
-.Button--orange {
-	background: $orange;
-	color: $black;
-	&:hover, &:active {
-		background: lighten($orange, 10%);
-		color: $black;
+		transform: scale($s-3);
 	}
 
-	&.button--outline, &.button--text {color: $orange; background: transparent; }
-	&.button--outline:hover, &.button--text:hover {color: darken($orange, 10%); background: transparent; }
+	&:active {color:rgba($darkest-blue, 0.6);}
 }
 
-.Button--yellow {
-	background: $yellow;
-	color: $black;
-	&:hover, &:active {
-		background: lighten($yellow, 10%);
-		color: $black;
-	}
+.dh-button--text:before{
+	content: "";
+	position: absolute;
+	z-index: $z-0;
+	left: 0;
+	right: 100%;
+	bottom: 0;
+	background: currentColor;
+	height: 1px;
 
-	&.button--outline, &.button--text {color: $yellow; background: transparent; }
-	&.button--outline:hover, &.button--text:hover {color: darken($yellow, 10%); background: transparent; }
+	@include transition (right $tr-4 ease-out);
 }
 
-.Button--disabled {
-	// Disable Button
-	cursor: default;
-	text-shadow: none;
-	pointer-events: none;
-
-	background: #E0E4E8;
-	color: #606362;
-
-	&.button--outline, &.button--text {color: #576B79; background: transparent; }
+.dh-button--text:hover:before{
+	right:0%;
 }
 
-// Sizes
-.Button--small { font-size: $t-1; }
-.Button--large { font-size: 1.25rem; }
 
 // Widths
-.Button--block {
+.dh-button--block {
 	display: block;
 	width: 100%;
+	margin:0;
+
+	&:active {
+		transform: scale($s-2);
+	}
 }
 
 // Spacing
-.Button + .button {
-	margin-left: 2em;
+.dh-button + .dh-button {
+	margin-left: 1em;
+
+	&.dh-button__tag{ margin-left:3.25em; }
+	&.dh-button__tag.dh-button--tertiary{ margin-left:2.75em; }
+	&.dh-button--block, &.dh-button__tag.dh-button--block{ margin-left:0; }
 }

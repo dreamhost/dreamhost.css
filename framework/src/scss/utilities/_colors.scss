@@ -29,6 +29,123 @@ Color Utilities
 
  */
 
+/* Site Panel Specific */
+
+//Background colors
+
+//blue
+.bg-c-b700 {background: $c-b700 !important}
+.bg-c-b500 {background: $c-b500 !important}
+.bg-c-b300 {background: $c-b300 !important}
+.bg-c-b100 {background: $c-b100 !important}
+
+//grey
+.bg-c-g500 {background: $c-g500 !important}
+.bg-c-g300 {background: $c-g300 !important}
+.bg-c-g200 {background: $c-g200 !important}
+.bg-c-g100 {background: $c-g100 !important}
+
+//orange
+.bg-c-o500 {background: $c-o500 !important}
+.bg-c-o300 {background: $c-o300 !important}
+.bg-c-o100 {background: $c-o100 !important}
+
+//teal
+.bg-c-t500 {background: $c-t500 !important}
+.bg-c-t300 {background: $c-t300 !important}
+.bg-c-t100 {background: $c-t100 !important}
+
+//yellow
+.bg-c-y500 {background: $c-y500 !important}
+.bg-c-y300 {background: $c-y300 !important}
+.bg-c-y100 {background: $c-y100 !important}
+
+//red
+.bg-c-r500 {background: $c-r500 !important}
+.bg-c-r300 {background: $c-r300 !important}
+.bg-c-r100 {background: $c-r100 !important}
+
+//white
+.bg-c-w100 {background: $c-w100 !important}
+
+//Typography Colors
+
+// blue
+.t-c-b700 {color: $c-b700 !important}
+.t-c-b500 {color: $c-b500 !important}
+.t-c-b300 {color: $c-b300 !important}
+.t-c-b100 {color: $c-b100 !important}
+
+//grey
+.t-c-g500 {color: $c-g500 !important}
+.t-c-g300 {color: $c-g300 !important}
+.t-c-g200 {color: $c-g200 !important}
+.t-c-g100 {color: $c-g100 !important}
+
+//orange
+.t-c-o500 {color: $c-o500 !important}
+.t-c-o300 {color: $c-o300 !important}
+.t-c-o100 {color: $c-o100 !important}
+
+//teal
+.t-c-t500 {color: $c-t500 !important}
+.t-c-t300 {color: $c-t300 !important}
+.t-c-t100 {color: $c-t100 !important}
+
+//yellow
+.t-c-y500 {color: $c-y500 !important}
+.t-c-y300 {color: $c-y300 !important}
+.t-c-y100 {color: $c-y100 !important}
+
+//red
+.t-c-r500 {color: $c-r500 !important}
+.t-c-r300 {color: $c-r300 !important}
+.t-c-r100 {color: $c-r100 !important}
+
+//white
+.t-c-w100 {color: $c-w100 !important}
+
+/*
+Combo Colors
+*/
+// blue
+.c-c-b700 {@extend .bg-c-b700; @extend .t-c-w100;}
+.c-c-b500 {@extend .bg-c-b500; @extend .t-c-w100;}
+.c-c-b300 {@extend .bg-c-b300; @extend .t-c-b700;}
+.c-c-b100 {@extend .bg-c-b100; @extend .t-c-b700;}
+
+//grey
+.c-c-g500 {@extend .bg-c-g500; @extend .t-c-w100;}
+.c-c-g300 {@extend .bg-c-g300; @extend .t-c-b700;}
+.c-c-g200 {@extend .bg-c-g200; @extend .t-c-b700;}
+.c-c-g100 {@extend .bg-c-g100; @extend .t-c-b700;}
+
+//orange
+.c-c-o500 {@extend .bg-c-o500; @extend .t-c-w100;}
+.c-c-o300 {@extend .bg-c-o300; @extend .t-c-b700;}
+.c-c-o100 {@extend .bg-c-o100; @extend .t-c-b700;}
+
+//teal
+.c-c-t500 {@extend .bg-c-t500; @extend .t-c-b700;}
+.c-c-t300 {@extend .bg-c-t300; @extend .t-c-b700;}
+.c-c-t100 {@extend .bg-c-t100; @extend .t-c-b700;}
+
+//yellow
+.c-c-y500 {@extend .bg-c-y500; @extend .t-c-b700;}
+.c-c-y300 {@extend .bg-c-y300; @extend .t-c-b700;}
+.c-c-y100 {@extend .bg-c-y100; @extend .t-c-b700;}
+
+//red
+.c-c-r500 {@extend .bg-c-r500; @extend .t-c-w100;}
+.c-c-r300 {@extend .bg-c-r300; @extend .t-c-b700;}
+.c-c-r100 {@extend .bg-c-r100; @extend .t-c-b700;}
+
+//white
+.c-c-w100 {@extend .bg-c-w100; @extend .t-c-b700;}
+
+
+/* Brand specific */
+
 /*
 Background colors
 */

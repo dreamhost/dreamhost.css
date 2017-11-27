@@ -4,3 +4,74 @@
 
 // TODO: why is this so harsh in the framework right now?
 .border {border: 1px solid #ccc !important;}
+
+// TODO: Sitepanel based framework updates
+body {
+    background: #fff;
+}
+
+// Sidenav styles
+.dh-sidenav {
+    background: #061C26;
+    color: #fff;
+    display: none;
+    height: 100vh;
+    overflow-y: scroll;
+    position: fixed;
+    width: 100vw;
+
+    @media (min-width: 1050px) {
+        display: block;
+        width: 23.23176%;
+    }
+}
+
+.dh-sidenav-mobile {
+    position: fixed;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    z-index: 999;
+
+    @media (min-width: 1050px) {
+        display: none;
+    }
+}
+
+.dh-sidenav-mobile--white {
+    .icon-hamburger path {
+        fill: #fff;
+    }
+}
+
+.dh-sidenav--show {
+    display: block;
+}
+
+.dh-sidenav__nav-link {
+    color: #CCEFFF;
+    text-decoration: none;
+    display: block;
+    padding: .3rem 0;
+    margin: .3rem 0;
+    border-radius: 3px;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background: #073F59;
+        padding: .3rem 1rem;
+    }
+}
+
+.dh-sidenav__nav-link.is-active {
+    background: #1176A5;
+    font-weight: bold;
+    padding: .3rem 1rem;
+}
+
+.dh-sidenav__label {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
