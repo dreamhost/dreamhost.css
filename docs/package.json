@@ -3,6 +3,6 @@
   "version": "0.0.1",
   "description": "Documentation for DreamHost's CSS framework",
   "dependencies": {
-    "dreamhost-css": "^0.1.2"
+    "dreamhost-css": "^0.1.3"
   }
 }
