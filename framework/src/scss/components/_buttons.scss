@@ -5,30 +5,30 @@ Buttons
 Can be used with anchor or button tags. When updating colors, make sure to update _tags.scss as well
 
 Shapes
-.button  - Normal button
-.button--text  - Underlined text
+.dh-button  - Normal button
+.dh-button--text  - Underlined text
 
 Usage
-.button--primary        - Primary
-.button                 - Secondary 
-.button__tag            - Secondary w/Tag Neutral
-.button__tag--postive   - Secondary w/Tag Positive
-.button__tag--negative  - Secondary w/Tag Negative
-.button--transaction    - Transaction
-.button--negative       - Negative
-.button--disabled       - Disabled
+.dh-button--primary        - Primary
+.dh-button                 - Secondary 
+.dh-button__tag            - Secondary w/Tag Neutral
+.dh-button__tag--postive   - Secondary w/Tag Positive
+.dh-button__tag--negative  - Secondary w/Tag Negative
+.dh-button--transaction    - Transaction
+.dh-button--negative       - Negative
+.dh-button--disabled       - Disabled
 
 Sizes
-.button  - 11px
+.dh-button  - 11px
 
 Markup:
 <a href="#" class="button {{modifier_class}}">Text</a>
 
-Styleguide Base.buttons
+Styleguide Base.dh-buttons
 
 */
 
-button, .button {
+.dh-button {
 	font-family: $body;
 	color: $black;
 	background: none;
@@ -80,7 +80,7 @@ button, .button {
 }
 
 // Colors
-.button--primary {
+.dh-button--primary {
 	background: $darkest-blue;
 	color: $white;
 	border: solid 1px $darkest-blue;
@@ -88,7 +88,7 @@ button, .button {
 }
 
 // Tags
-.button__tag {
+.dh-button__tag {
 	position: relative;
 	padding-left: 4em;
 	margin-left: 2.5em;
@@ -108,17 +108,17 @@ button, .button {
 		border-radius: 50px;
 	}
 
-	&.button__tag--positive{
+	&.dh-button__tag--positive{
 		&:hover{ border-color: $blue; }
 		&:before{ background-color: $blue; color: $white; }
 	}
 
-	&.button__tag--negative{
+	&.dh-button__tag--negative{
 		&:hover{ border-color: $red; }
 		&:before{ background-color: $red; color: $white; }
 	}
 
-	&.button--tertiary{
+	&.dh-button--tertiary{
 		padding-left: 3em;
 		
 		&:before{	
@@ -128,11 +128,11 @@ button, .button {
 		}
 	}
 
-	&.button--block{ margin-left:0; }
+	&.dh-button--block{ margin-left:0; }
 }
 
 // Transaction
-.button--transaction {
+.dh-button--transaction {
 	background: $orange;
 	border-color:$orange;
 	color: $white;
@@ -143,12 +143,12 @@ button, .button {
 		color: $black;
 	}
 
-	&.button--text { color: $orange; background: transparent; }
-	&.button--text:hover { color: darken($orange, 10%); background: transparent; }
+	&.dh-button--text { color: $orange; background: transparent; }
+	&.dh-button--text:hover { color: darken($orange, 10%); background: transparent; }
 }
 
 // Negative
-.button--negative {
+.dh-button--negative {
 	background: $red;
 	border-color: $red;
 	color: $white;
@@ -158,17 +158,17 @@ button, .button {
 		border-color: $red;
 		color: $black; }
 
-	&.button--text { color: $red; background: transparent; }
-	&.button--text:hover { color: darken($red, 10%); background: transparent; }
+	&.dh-button--text { color: $red; background: transparent; }
+	&.dh-button--text:hover { color: darken($red, 10%); background: transparent; }
 }
 
 // Tertiary
-.button--tertiary {
+.dh-button--tertiary {
 	padding:0.65em 1em;
 }
 
 // Disabled
-button:disabled, .button:disabled, .button--disabled {
+.dh-button:disabled, .dh-button--disabled {
 	// Disable Button
 	cursor: not-allowed; 
 	text-shadow: none;
@@ -184,11 +184,11 @@ button:disabled, .button:disabled, .button--disabled {
 	}
 
 	&:active{ pointer-events: none; }
-	&.button--text {color: $dark-grey; background: transparent; }
+	&.dh-button--text {color: $dark-grey; background: transparent; }
 }
 
 // Text
-.button--text {
+.dh-button--text {
 	background: transparent;
 	border: none;
 	color: $dark-blue;
@@ -206,7 +206,7 @@ button:disabled, .button:disabled, .button--disabled {
 	&:active {color:rgba($darkest-blue, 0.6);}
 }
 
-.button--text:before{
+.dh-button--text:before{
 	content: "";
 	position: absolute;
 	z-index: $z-0;
@@ -219,13 +219,13 @@ button:disabled, .button:disabled, .button--disabled {
 	@include transition (right $tr-4 ease-out);
 }
 
-.button--text:hover:before{
+.dh-button--text:hover:before{
 	right:0%;
 }
 
 
 // Widths
-.button--block {
+.dh-button--block {
 	display: block;
 	width: 100%;
 	margin:0;
@@ -236,10 +236,10 @@ button:disabled, .button:disabled, .button--disabled {
 }
 
 // Spacing
-.button + .button {
+.dh-button + .dh-button {
 	margin-left: 1em;
 	
-	&.button__tag{ margin-left:3.25em; }
-	&.button__tag.button--tertiary{ margin-left:2.75em; }
-	&.button--block, &.button__tag.button--block{ margin-left:0; }
+	&.dh-button__tag{ margin-left:3.25em; }
+	&.dh-button__tag.dh-button--tertiary{ margin-left:2.75em; }
+	&.dh-button--block, &.dh-button__tag.dh-button--block{ margin-left:0; }
 }
