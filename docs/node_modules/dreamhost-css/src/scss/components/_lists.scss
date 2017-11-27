@@ -5,20 +5,20 @@
 	.list--disc gives the list dots, for an unordered list
 	.list--inline makes the list horizontal
 */
-.list {text-align: left;} // All lists should be left aligned unless specified
-.list > li {margin-bottom: $s-s;}
-.list > li:last-child {margin-bottom: 0;}
+.List {text-align: left;} // All lists should be left aligned unless specified
+.List > li {margin-bottom: convertScaleToRem(1);}
+.List > li:last-child {margin-bottom: 0;}
 
-.list--disc {list-style-type: disc; list-style-position: outside}
-.list--disc > li {margin-left: $s-m;}
+.List--disc {list-style-type: disc; list-style-position: outside}
+.List--disc > li {margin-left: convertScaleToRem(4);}
 
-.list--inline > li {
+.List--inline > li {
 	padding: 0;
 	display: inline;
-	margin-right: $s-m;
+	margin-right: convertScaleToRem(4);
 }
 
-.list--inline > li:last-child {margin-left: 0;}
+.List--inline > li:last-child {margin-right: 0;}
 
 /*
 	List style variations
@@ -28,34 +28,34 @@
 	- list--small-bold is a slightly smaller and bolder list with no link underlines
 */
 // .list--padding
-.list.list--padding {padding-top: $s-xs; padding-bottom: $s-xs;}
-.list.list--padding > li {margin-bottom: 0;}
+.List.List--padding {padding-top: convertScaleToRem(1); padding-bottom: convertScaleToRem(1);}
+.List.List--padding > li {margin-bottom: 0;}
 
-.list.list--padding > li > * {
+.List.List--padding > li > * {
 	display: block;
-	padding: $s-xs $s-xs*2;
+	padding: convertScaleToRem(1) convertScaleToRem(2);
 
-	transition-duration: $tr-m;
+	transition-duration: $tr-3;
 	transition-timing-function: linear
 }
 
 // .list--small-bold
-.list--small-bold > li > * {
+.List--small-bold > li > * {
 	font-weight: $t-bold;
 	color: $black;
 	text-decoration: none;
-	font-size: $t-s;
+	font-size: $t-2;
 }
 
 // Don't give hover states to non-links
-.list--small-bold > li > a:hover,
-.list--small-bold > li > button:hover,
-.list--small-bold > li > .is-link:hover {
+.List--small-bold > li > a:hover,
+.List--small-bold > li > button:hover,
+.List--small-bold > li > .is-link:hover {
 	color: $blue;
 }
 
 // Disabled state
-.list--small-bold > li  > .is-disabled {
+.List--small-bold > li  > .is-disabled {
 	pointer-events: none;
 	opacity: .3;
 }
@@ -67,10 +67,10 @@
 		<li><a><svg class="icon">...</svg>Link</a></li>
 	</ul>
 */
-.list--icon-right > li {position: relative;}
-.list--icon-right > li > * {padding-right: 3.5em;}
+.List--icon-right > li {position: relative;}
+.List--icon-right > li > * {padding-right: 3.5em;}
 
-.list--icon-right .icon {
+.List--icon-right .icon {
 	position: absolute;
 	top: 50%;
 	margin-top: -.725em;
