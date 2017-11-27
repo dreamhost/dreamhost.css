@@ -113,11 +113,12 @@ $tr-1: .05s;
 
 // Transform Scale 
 
-$s-magnify: 1.02;
-$s-magnify-less: 1.01;
-$s-initial: 1;
-$s-shrink: .98;
-$s-shrink-less: .99;
+$s-5: 1.02; //magnify
+$s-4: 1.01; //magnify less
+$s-3: 1; //initial
+$s-2: .99; //shrink less
+$s-1: .98; //shrink
+
 
 // Z-indexes
 $z-0: -1;

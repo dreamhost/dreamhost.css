@@ -61,12 +61,10 @@ Styleguide Base.dh-buttons
 		border: solid 1px $blue;
 		background: none;
 		color: $black;
-		//transform: scale($s-magnify);
-		//box-shadow: 5px 5px 10px rgba($black, .1);
 	}
 
 	&:active {
-		transform: scale($s-shrink);
+		transform: scale($s-1);
 	}
 
 	svg {
@@ -178,7 +176,7 @@ Styleguide Base.dh-buttons
 	&:hover, &:active{
 		background: $light-grey;
 		color: $dark-grey;
-		transform: scale($s-initial);
+		transform: scale($s-3);
 		box-shadow: none;
 		border-color: $light-grey;
 	}
@@ -200,7 +198,7 @@ Styleguide Base.dh-buttons
 		background: transparent;
 		box-shadow: none;
 		color: darken($dark-blue, 10%);
-		transform: scale($s-initial);
+		transform: scale($s-3);
 	}
 
 	&:active {color:rgba($darkest-blue, 0.6);}
@@ -231,7 +229,7 @@ Styleguide Base.dh-buttons
 	margin:0;
 
 	&:active {
-		transform: scale($s-shrink-less);
+		transform: scale($s-2);
 	}
 }
 
