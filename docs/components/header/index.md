@@ -1,4 +1,0 @@
----
-title: Header
-layout: page
----

@@ -1,27 +1,104 @@
 /* Option Box
 
-	A style for larger box-style options in a form setting. Includes
-	a background heading and content underneath it. Use alongside
-	grid framework for positjoning.
+	A style for larger box-style radio buttons. Includes
+	a heading and content underneath it. Use alongside
+	grid framework for positioning.
+
+	Usage:
+	<ul class="u-clearfix">
+		<li class="option-box g-1_2__m">
+			<input type="radio" class="form__radio"
+				name="example" id="example" value="example" />
+			<label for="example" class="option-box-label">
+				<div class="option-box-title">
+					Example Title
+				</div>
+				<div class="option-box-content">
+					This is one of two option boxes that appear
+					next to each other.
+				</div>
+			</label>
+		</li>
+	</ul>
 
 */
 
-.option-box {
+.option-box-label {
+	border-radius: 3px;
+	box-shadow: inset 0 0 0 1px $light-grey;
+	cursor: pointer;
+	display: block;
+	padding: convertScaleToRem(2);
+	transition: all .2s ease-in-out;
+
+	&:hover {
+		background: $lighter-grey;
+	}
+}
+
+.option-box-title {
+	color: $black;
+	display: block;
+	overflow: hidden;
+	padding-bottom: convertScaleToRem(1);
 	text-align: center;
-
-	//unlink
-	text-decoration: none;
-	color: $black;
+	transition: all .2s ease-in-out;
+	width: 100%;
 }
 
-.option-box__heading {
-	background: $blue;
-	padding: $s-s;
-	margin-bottom: 0;
-	color: $black;
+.option-box-content {
+	border-top: 0;
+	color: $darker-grey;
+	overflow: hidden;
+	text-align: center;
+	transition: all .2s ease-in-out;
 }
 
-.option-box__content {
-	@include box;
-	background: #fff;
+.option-box {
+	display: inline-block;
+	font-size: convertScaleToRem(2); // Weird inline-block gap fix
+	margin-bottom: convertScaleToRem(1);
+	margin-right: convertScaleToRem(1);
+	vertical-align: top;
+	width: 100%;
+
+	&:hover {
+		.option-box-title,
+		.option-box-content {
+			color: $black;
+		}
+	}
+}
+
+.option-box .form__radio {
+	display: none;
+}
+
+.option-box .form__radio + .option-box-label {
+	display: block;
+
+	&:active {
+		transform: scale(.98);
+	}
+}
+
+.option-box .form__radio:checked + .option-box-label {
+	box-shadow: inset 0 0 0 2px $blue;
+	position: relative;
+
+	&:active {
+		transform: scale(1.02);
+	}
+
+	.option-box-title {
+		font-weight: bold;
+	}
+
+	.option-box-content {
+		color: $black;
+	}
+
+	&:hover {
+		background: $white;
+	}
 }
