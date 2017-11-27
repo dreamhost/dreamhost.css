@@ -73,9 +73,7 @@ Form Component
 	}
 }
 
-
-// Inputs
-.dh-input__label {
+.dh-form__label {
 	color: $darker-grey;
 	display: block;
 	font-size: $t-3;
@@ -84,13 +82,15 @@ Form Component
 	max-width: 35rem;
 }
 
-.dh-input__description {
+.dh-form__description {
 	@extend %form-description;
 
 	font-weight: $t-regular;
 	margin-bottom: 0;
 }
 
+
+// Inputs
 .dh-input {
 	@extend %form-border;
 	@extend %form-no-outline;
@@ -103,11 +103,6 @@ Form Component
 	transition: all .2s ease-in-out;
 	border-radius: $border-radius;
 	padding: .65rem;
-
-	&:hover,
-	&:focus {
-		border-color: $grey;
-	}
 
 	&:active,
 	&:focus {
@@ -131,7 +126,13 @@ Form Component
 	}
 }
 
-.dh-input__label > .dh-input__description {
+.dh-input--error,
+.dh-input--error:hover,
+.dh-input--error:focus {
+	border-color: $red;
+}
+
+.dh-form__label > .dh-form__description {
 	margin-bottom: 1rem;
 }
 
@@ -167,6 +168,12 @@ textarea.dh-input {
 	}
 }
 
+.dh-select--error,
+.dh-select--error:hover,
+.dh-select--error:focus {
+	border-color: $red;
+}
+
 
 // Choice: styles both radios and checkboxes
 .dh-choice {
@@ -195,4 +202,8 @@ textarea.dh-input {
 	@extend %form-description;
 	display: block;
 	margin-bottom: convertScaleToRem(2);
+}
+
+.dh-choice--error > .dh-choice__label {
+	color: $red;
 }

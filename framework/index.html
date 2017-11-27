@@ -190,7 +190,7 @@
 
 		<form class="dh-form">
 			<div class="dh-form__group">
-				<label for="textlabel1" class="dh-input__label">Text label</label>
+				<label for="textlabel1" class="dh-form__label">Text label</label>
 				<input id="textlabel1" type="text" class="dh-input" placeholder="Example placeholder content">
 			</div>
 
@@ -198,11 +198,11 @@
 				<div class="dh-form__inline-grid">
 					<div class="dh-form__inline-row">
 						<div class="dh-form__group">
-							<label for="halflabel1" class="dh-input__label">Half label</label>
+							<label for="halflabel1" class="dh-form__label">Half label</label>
 							<input id="halflabel1" type="text" class="dh-input" placeholder="Example placeholder content">
 						</div>
 						<div class="dh-form__group">
-							<label for="halflabel2" class="dh-input__label">Half label</label>
+							<label for="halflabel2" class="dh-form__label">Half label</label>
 							<input id="halflabel2" type="text" class="dh-input" placeholder="Example placeholder content">
 						</div>
 					</div>
@@ -210,20 +210,20 @@
 			</div>
 
 			<div class="dh-form__group dh-form__group--stacked">
-				<label for="stackedlabel" class="dh-input__label">Stacked label</label>
+				<label for="stackedlabel" class="dh-form__label">Stacked label</label>
 				<input id="stackedlabel" type="text" class="dh-input" placeholder="Example placeholder content">
 				<input type="text" class="dh-input" placeholder="Example placeholder content">
 			</div>
 
 			<div class="dh-form__group">
-				<label for="textarealabel" class="dh-input__label">Text label</label>
+				<label for="textarealabel" class="dh-form__label">Text label</label>
 				<p class="dh-form__description">This caption supports a <strong>non-ludicrous</strong> amount of text. <a href="#">Learn more.</a></p>
 				<textarea id="textarealabel" class="dh-input" placeholder="Example placeholder content"></textarea>
 			</div>
 
 			<div class="container-full-width">
 				<div class="dh-form__group g-1_2">
-					<label class="dh-input__label">Radio label</label>
+					<label class="dh-form__label">Radio label</label>
 					<label class="dh-choice">
 						<input type="radio" name="radio1" checked>
 						<span class="dh-choice__label">Example radio label</span>
@@ -243,7 +243,7 @@
 				</div>
 
 				<div class="dh-form__group g-1_2">
-					<label class="dh-input__label">Checkbox label</label>
+					<label class="dh-form__label">Checkbox label</label>
 					<label class="dh-choice">
 						<input type="checkbox" name="check1" checked>
 						<span class="dh-choice__label">Example checkbox label</span>
@@ -265,7 +265,7 @@
 
 			<div class="container-full-width">
 				<div class="dh-form__group g-1_2">
-					<label class="dh-input__label">Radio label</label>
+					<label class="dh-form__label">Radio label</label>
 					<label class="dh-choice">
 						<input type="radio" name="radio1" checked>
 						<span class="dh-choice__label">Example radio label</span>
@@ -287,7 +287,7 @@
 				</div>
 
 				<div class="dh-form__group g-1_2">
-					<label class="dh-input__label">Checkbox label</label>
+					<label class="dh-form__label">Checkbox label</label>
 					<label class="dh-choice">
 						<input type="checkbox" name="check1" checked>
 						<span class="dh-choice__label">Example checkbox label that is really long and probably wraps really awkwardly</span>
@@ -328,14 +328,25 @@
 				</ul>
 			</div>
 
+			<div class="dh-toggle">
+				<input class="dh-toggle__input" type="checkbox" id="toggle" />
+				<label for="toggle" class="dh-toggle__label">
+					<span class="dh-toggle__visible"></span>
+					<span class="dh-toggle__description">
+						<span class="dh-toggle__checked">On</span>
+						<span class="dh-toggle__unchecked">Off</span>
+					</span>
+				</label>
+			</div>
+
 			<div class="dh-form__group dh-form__group--select">
-				<label for="selectlabel" class="dh-input__label">Select label</label>
+				<label for="selectlabel" class="dh-form__label">Select label</label>
 				<select id="selectlabel" class="dh-select">
-					<choice>Option 1</choice>
-					<choice>Option 2</choice>
-					<choice>Option 3</choice>
-					<choice>Option 4</choice>
-					<choice>Option 5</choice>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+					<option>Option 4</option>
+					<option>Option 5</option>
 				</select>
 			</div>
 
