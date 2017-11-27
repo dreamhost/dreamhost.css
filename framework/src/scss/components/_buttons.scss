@@ -10,7 +10,7 @@ Shapes
 
 Usage
 .dh-button--primary        - Primary
-.dh-button                 - Secondary 
+.dh-button                 - Secondary
 .dh-button__tag            - Secondary w/Tag Neutral
 .dh-button__tag--postive   - Secondary w/Tag Positive
 .dh-button__tag--negative  - Secondary w/Tag Negative
@@ -37,6 +37,7 @@ Styleguide Base.dh-buttons
 	display: inline-block;
 	font-size: $t-0;
 	padding: 1em 3em;
+	letter-spacing: .55px;
 	margin: 0;
 	text-align: center;
 	text-decoration: none;
@@ -90,7 +91,7 @@ Styleguide Base.dh-buttons
 	position: relative;
 	padding-left: 4em;
 	margin-left: 2.5em;
-	
+
 	&:hover{
 		&:hover{ border-color: $yellow; }
 	}
@@ -118,8 +119,8 @@ Styleguide Base.dh-buttons
 
 	&.dh-button--tertiary{
 		padding-left: 3em;
-		
-		&:before{	
+
+		&:before{
 			padding: 0.3em 0.75em;
 			left: -2.0em;
 			top: 0.3em;
@@ -134,7 +135,7 @@ Styleguide Base.dh-buttons
 	background: $orange;
 	border-color:$orange;
 	color: $white;
-	
+
 	&:hover, &:active {
 		background: none;
 		border-color: $orange;
@@ -151,7 +152,7 @@ Styleguide Base.dh-buttons
 	border-color: $red;
 	color: $white;
 
-	&:hover, &:active {	
+	&:hover, &:active {
 		background: none;
 		border-color: $red;
 		color: $black; }
@@ -168,7 +169,7 @@ Styleguide Base.dh-buttons
 // Disabled
 .dh-button:disabled, .dh-button--disabled {
 	// Disable Button
-	cursor: not-allowed; 
+	cursor: not-allowed;
 	text-shadow: none;
 	background: $light-grey;
 	color: $dark-grey;
@@ -236,7 +237,7 @@ Styleguide Base.dh-buttons
 // Spacing
 .dh-button + .dh-button {
 	margin-left: 1em;
-	
+
 	&.dh-button__tag{ margin-left:3.25em; }
 	&.dh-button__tag.dh-button--tertiary{ margin-left:2.75em; }
 	&.dh-button--block, &.dh-button__tag.dh-button--block{ margin-left:0; }
