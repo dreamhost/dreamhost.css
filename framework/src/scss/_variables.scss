@@ -3,10 +3,11 @@
 //Backgrounds
 
 $c-b700: #071c26; //midnight
-$c-w100: #ffffff; //off white
+$c-w100: #ffffff; //white
 
 //Type/Delineator
 
+$c-black: #000000; //black
 $c-g500: #434F58; //metal
 $c-g300: #AFBFC9; //cloudy
 $c-g200: #E0E4E8; //smoke
@@ -102,7 +103,7 @@ $light-grey: #E0E4E8;
 $grey: #AFBFCA;
 $dark-grey: #5E6D78;
 $darker-grey: #434F58;
-$black: $darkest-blue;
+$black: #000000;
 
 // Sizing Scale
 // Use baseScale with convertScaleToRem() to ensure consistent margins.
