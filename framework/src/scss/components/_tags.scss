@@ -1,0 +1,17 @@
+/*
+
+Pills
+
+	Creates 'tags' for things like categories or maybe a 'SALE' tag.
+	Use with _colors.scss colour classes e.g 'pill c-light-blue'
+
+*/
+
+.tag {
+	padding: $s-xs;
+	background: $black;
+	color: $white;
+	display: inline-block;
+	font-weight: bold;
+	font-size: $t-s;
+}
