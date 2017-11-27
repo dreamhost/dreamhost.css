@@ -1,0 +1,30 @@
+/*
+
+Select Component
+
+*/
+
+// Maybe we should create a custom style for these?
+// This looks kinda crazy in Safari. Looks decent elsewhere though.
+// This is the only way to get a native select box to stay at a height though.
+.dh-select {
+	@extend %form-border;
+	@extend %form-no-outline;
+	@extend %form-text-style;
+
+	border-radius: $border-radius;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	padding: 0 0 0 .75rem;
+	background: $white;
+	display: block;
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+
+	&:hover {
+		background: $lighter-grey;
+	}
+}
