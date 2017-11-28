@@ -10,19 +10,19 @@ layout: page
 ## Headings
 
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">h1, .h1</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">h1, .h1</p>
 	<h1>Heading One</h1>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">h2, .h2</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">h2, .h2</p>
 	<h2>Heading Two</h2>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">h3, .h3</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">h3, .h3</p>
 	<h3>Heading Three</h3>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">h4, .h4</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">h4, .h4</p>
 	<h4>Heading Four</h4>
 </div>
 
@@ -39,15 +39,15 @@ layout: page
 DreamHost uses Ubuntu for headings and Proxima Nova for body text.
 
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-heading</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-heading</p>
 	<p class="t-heading">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-body</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-body</p>
 	<p class="t-body">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-mono</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-mono</p>
 	<p class="t-mono">The quick brown fox jumps over the lazy dog.</p>
 </div>
 
@@ -62,23 +62,23 @@ DreamHost uses Ubuntu for headings and Proxima Nova for body text.
 ## Sizes
 
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-5  <span class="p-left-s t-light t-dark-grey">2rem, 32px</span></p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-5  <span class="p-left-s t-light t-dark-grey">2rem, 32px</span></p>
 	<p class="t-5">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-4  <span class="p-left-s t-light t-dark-grey">1.5rem, 24px</span></p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-4  <span class="p-left-s t-light t-dark-grey">1.5rem, 24px</span></p>
 	<p class="t-4">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-3 (default)  <span class="p-left-s t-light t-dark-grey">1rem, 16px</span></p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-3 (default)  <span class="p-left-s t-light t-dark-grey">1rem, 16px</span></p>
 	<p>The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-2 <span class="p-left-s t-light t-dark-grey">0.875rem, 14px</span></p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-2 <span class="p-left-s t-light t-dark-grey">0.875rem, 14px</span></p>
 	<p class="t-2">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-1 <span class="p-left-s t-light t-dark-grey">0.75rem, 12px</span></p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-1 <span class="p-left-s t-light t-dark-grey">0.75rem, 12px</span></p>
 	<p class="t-1">The quick brown fox jumps over the lazy dog.</p>
 </div>
 
@@ -95,15 +95,15 @@ DreamHost uses Ubuntu for headings and Proxima Nova for body text.
 ## Alignment
 
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-left</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-left</p>
 	<p class="t-left p-xs border">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-right</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-right</p>
 	<p class="t-right p-xs border">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-center</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-center</p>
 	<p class="t-center p-xs border">The quick brown fox jumps over the lazy dog.</p>
 </div>
 
@@ -119,19 +119,19 @@ DreamHost uses Ubuntu for headings and Proxima Nova for body text.
 ## Weight
 
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-bold</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-bold</p>
 	<p class="t-bold">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-regular</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-regular</p>
 	<p class="t-regular">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-light</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-light</p>
 	<p class="t-light">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-lighter</p>
+	<p class="m-bottom-0 t-2 t-salmon t-bold">.t-lighter</p>
 	<p class="t-lighter">The quick brown fox jumps over the lazy dog.</p>
 </div>
 
