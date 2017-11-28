@@ -5,7 +5,7 @@ layout: page
 
 <!-- TO-DO: Document variations -->
 
-<p class="t-l">Basic list styling, using BEM notation.</p>
+<p class="t-4">Basic list styling, using BEM notation.</p>
 
 <hr />
 

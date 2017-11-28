@@ -58,13 +58,15 @@ Styleguide Base.dh-buttons
 	user-select: none;
 
 	&:hover,
-	&:active {
+	&:active,
+	&.is-open {
 		border: solid 1px $blue;
 		background: none;
 		color: $black;
 	}
 
-	&:active {
+	&:active,
+	&.is-open {
 		transform: scale($s-1);
 	}
 
@@ -83,7 +85,7 @@ Styleguide Base.dh-buttons
 	background: $darkest-blue;
 	color: $white;
 	border: solid 1px $darkest-blue;
-	&:hover, &:active {	color: $black; background: none; border-color: $darkest-blue; }
+	&:hover, &:active, &.is-open {	color: $black; background: none; border-color: $darkest-blue; }
 }
 
 // Tags
@@ -92,11 +94,11 @@ Styleguide Base.dh-buttons
 	padding-left: 4em;
 	margin-left: 2.5em;
 
-	&:hover{
-		&:hover{ border-color: $yellow; }
+	&:hover {
+		&:hover { border-color: $yellow; }
 	}
 
-	&:before{
+	&:before {
 		content: 'label';
 		background-color: $yellow;
 		color: $darker-yellow;
@@ -107,27 +109,27 @@ Styleguide Base.dh-buttons
 		border-radius: 50px;
 	}
 
-	&.dh-button__tag--positive{
-		&:hover{ border-color: $blue; }
-		&:before{ background-color: $blue; color: $white; }
+	&.dh-button__tag--positive {
+		&:hover, &.is-open { border-color: $blue; }
+		&:before { background-color: $blue; color: $white; }
 	}
 
-	&.dh-button__tag--negative{
-		&:hover{ border-color: $red; }
-		&:before{ background-color: $red; color: $white; }
+	&.dh-button__tag--negative {
+		&:hover, &.is-open { border-color: $red; }
+		&:before { background-color: $red; color: $white; }
 	}
 
-	&.dh-button--tertiary{
+	&.dh-button--tertiary {
 		padding-left: 3em;
 
-		&:before{
+		&:before {
 			padding: 0.3em 0.75em;
 			left: -2.0em;
 			top: 0.3em;
 		}
 	}
 
-	&.dh-button--block{ margin-left:0; }
+	&.dh-button--block { margin-left:0; }
 }
 
 // Transaction
@@ -136,7 +138,7 @@ Styleguide Base.dh-buttons
 	border-color:$orange;
 	color: $white;
 
-	&:hover, &:active {
+	&:hover, &:active, &.is-open {
 		background: none;
 		border-color: $orange;
 		color: $black;
@@ -152,7 +154,7 @@ Styleguide Base.dh-buttons
 	border-color: $red;
 	color: $white;
 
-	&:hover, &:active {
+	&:hover, &:active, &.is-open {
 		background: none;
 		border-color: $red;
 		color: $black; }
@@ -174,7 +176,7 @@ Styleguide Base.dh-buttons
 	background: $light-grey;
 	color: $dark-grey;
 
-	&:hover, &:active{
+	&:hover, &:active, &.is-open {
 		background: $light-grey;
 		color: $dark-grey;
 		transform: scale($s-3);
@@ -194,7 +196,7 @@ Styleguide Base.dh-buttons
 	text-decoration: none;
 	padding: 0;
 
-	&:hover,&:active {
+	&:hover, &:active, &.is-open {
 		border: none;
 		background: transparent;
 		box-shadow: none;
@@ -229,7 +231,7 @@ Styleguide Base.dh-buttons
 	width: 100%;
 	margin:0;
 
-	&:active {
+	&:active, &.is-open {
 		transform: scale($s-2);
 	}
 }

@@ -3,7 +3,7 @@ title: Alerts
 layout: page
 ---
 
-<p class="t-l">Alerts! For good things, bad things and neutral things.</p>
+<p class="t-4">Alerts! For good things, bad things and neutral things.</p>
 
 <hr />
 

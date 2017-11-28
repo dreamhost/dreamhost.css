@@ -10,18 +10,18 @@ layout: page
 ## Floats
 
 <div class="m-bottom">
-	<p class="m-bottom-0 t-s t-c-r300 t-bold">.l-float-left</p>
+	<p class="m-bottom-0 t-2 t-c-r300 t-bold">.l-float-left</p>
 	<div class="border t-c-g100">
 		<div class="u-clearfix">
-			<p class="bg-c-g300 p-s l-float-left t-c-g500">Left</p>
+			<p class="bg-c-g300 p-2 l-float-left t-c-g500">Left</p>
 		</div>
 	</div>
 </div>
 <div class="m-bottom">
-	<p class="m-bottom-0 t-s t-c-r300 t-bold">.l-float-right</p>
+	<p class="m-bottom-0 t-2 t-c-r300 t-bold">.l-float-right</p>
 	<div class="border t-c-g100">
 		<div class="u-clearfix">
-			<p class="bg-c-g300 p-s l-float-right t-c-g500">Right</p>
+			<p class="bg-c-g300 p-2 l-float-right t-c-g500">Right</p>
 		</div>
 	</div>
 </div>
@@ -38,16 +38,16 @@ layout: page
 ## Display
 
 <div class="m-bottom">
-	<p class="m-bottom-0 t-s t-c-r300 t-bold l-inline">.l-inline</p>
-	<p class="bg-c-g300 p-s l-inline">Inline</p>
+	<p class="m-bottom-0 t-2 t-c-r300 t-bold l-inline">.l-inline</p>
+	<p class="bg-c-g300 p-2 l-inline">Inline</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-c-r300 t-bold l-inline">.l-inline-block</p>
-	<p class="bg-c-g300 p-s l-inline-block">Inline-block</p>
+	<p class="m-bottom-0 t-2 t-c-r300 t-bold l-inline">.l-inline-block</p>
+	<p class="bg-c-g300 p-2 l-inline-block">Inline-block</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-c-r300 t-bold">.l-block</p>
-	<p class="bg-c-g300 p-s l-block">Block</p>
+	<p class="m-bottom-0 t-2 t-c-r300 t-bold">.l-block</p>
+	<p class="bg-c-g300 p-2 l-block">Block</p>
 </div>
 
 {% highlight html %}

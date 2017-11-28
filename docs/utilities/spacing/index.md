@@ -3,12 +3,12 @@ title: Spacing
 layout: page
 ---
 
-<p class="t-l">All spacing is done using an 8pt scale. Starting with n-half at 8px and going to n-16 at 128px.</p>
+<p class="t-4">All spacing is done using an 8pt scale. Starting with n-half at 8px and going to n-16 at 128px.</p>
 
 <hr />
 
 ## Margins
-<p class="t-l">Margin utilities are prefixed with m- and can be used to push other elements away from any side.</p>
+<p class="t-4">Margin utilities are prefixed with m- and can be used to push other elements away from any side.</p>
 
 <p>Use the convention m-size or m-side-size, e.g m-l or m-bottom-l.</p>
 
