@@ -7,7 +7,7 @@ Pills
 
 */
 
-.tag {
+.dh-tag {
 	text-transform: uppercase;
 	background: $c-b300;
 	color: $white;
@@ -17,27 +17,27 @@ Pills
 	border-radius: 20px;
 	padding: 0.25em 0.75em;
 
-	&.tag--square {
+	&.dh-tag--square {
 		border-radius: 0;
 	}
 
-	&.tag--red {
+	&.dh-tag--red {
 		background: $c-r300;
 	}
 
-	&.tag--turquoise {
+	&.dh-tag--turquoise {
 		background: $c-t300;
 	}
 
-	&.tag--orange {
+	&.dh-tag--orange {
 		background: $c-o300;
 	}
 }
 
-.tag-button {
+.dh-tag-button {
 	position: relative;
 	display: inline-block;
-	.tag {
+	.dh-tag {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
