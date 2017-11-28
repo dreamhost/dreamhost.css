@@ -3,7 +3,7 @@ title: Animations
 layout: page
 ---
 
-<p class="bg-white">
+<p class="bg-c-w100">
   <p class="t-l">
     Animations provide additional context between states. They enhance things like loading content, process paths, microinteractions, etc.
   </p>
@@ -19,94 +19,94 @@ layout: page
     Adding animations to an element is simple. Here is a small collection of predefined and reusable animations, useful for loading spinners, carousels, validation states, notices, etc.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="g-1_6">
-      <div class="bg-yellow spin-right a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.spin-right</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.spin-right</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow spin-left a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-left a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.spin-left</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.spin-left</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow bounce a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 bounce a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.bounce</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.bounce</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow shake a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 shake a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.shake</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.shake</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow fade-in a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 fade-in a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.fade-in</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.fade-in</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow fade-out a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 fade-out a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.fade-out</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.fade-out</code></p>
     </div>
 
   </div>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-in a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 slide-in a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-in</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.slide-in</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-out a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 slide-out a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-out</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.slide-out</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-up a-duration a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 slide-up a-duration a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-up</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.slide-up</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-right a-duration a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 slide-right a-duration a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-right</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.slide-right</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-down a-duration a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 slide-down a-duration a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-down</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.slide-down</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-left a-duration a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 slide-left a-duration a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-left</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative"><code class="t-xs t-center bg-c-g100 t-c-g500">.slide-left</code></p>
     </div>
 
   </div>
@@ -162,94 +162,94 @@ layout: page
     Animations trigger on page load, but can be set to trigger on hover by appending <code>-hover</code> to the class name. For example, <code>.bounce</code> will trigger on page load, whereas <code>.bounce-hover</code> will trigger on hover.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="g-1_6">
-      <div class="bg-yellow spin-right-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.spin-right-hover</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.spin-right-hover</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow spin-left-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-left-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.spin-left-hover</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.spin-left-hover</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow bounce-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 bounce-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.bounce-hover</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.bounce-hover</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow shake-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 shake-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.shake-hover</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.shake-hover</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow fade-in-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 fade-in-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.fade-in-hover</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.fade-in-hover</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow fade-out-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 fade-out-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.fade-out-hover</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.fade-out-hover</code></p>
     </div>
 
   </div>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-in-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 slide-in-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-in-hover</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.slide-in-hover</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-out-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 slide-out-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-out-hover</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.slide-out-hover</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-up-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 slide-up-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-up-hover</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.slide-up-hover</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-right-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 slide-right-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-right-hover</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.slide-right-hover</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-down-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 slide-down-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-down-hover</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.slide-down-hover</code></p>
     </div>
 
     <div class="g-1_6">
-      <div class="bg-yellow slide-left-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 slide-left-hover a-repeat p-s p-y-xs m-s h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.slide-left-hover</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.slide-left-hover</code></p>
     </div>
 
   </div>
@@ -311,52 +311,52 @@ layout: page
     <code>.a-duration</code> can also be used as shorthand for <code>.a-duration-m</code>.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat a-duration-xs p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat a-duration-xs p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-duration-xs</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-duration-xs</code></p>
     </div>
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat a-duration-s p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat a-duration-s p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-duration-s</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-duration-s</code></p>
     </div>
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat a-duration p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat a-duration p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-duration-m</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-duration-m</code></p>
     </div>
 
   </div>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat a-duration-l p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat a-duration-l p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-duration-l</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-duration-l</code></p>
     </div>
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat a-duration-xl p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat a-duration-xl p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-duration-xl</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-duration-xl</code></p>
     </div>
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat a-duration-0 p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat a-duration-0 p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-duration-0</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-duration-0</code></p>
     </div>
 
   </div>
@@ -393,45 +393,45 @@ layout: page
     Easing defines the curve on which the animation takes place. Each of the 5 easing options provide a different feel to the animation.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat a-easing-linear p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat a-easing-linear p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-easing-linear</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-easing-linear</code></p>
     </div>
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat a-easing-ease p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat a-easing-ease p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-easing-ease</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-easing-ease</code></p>
     </div>
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat a-easing-cb-scale-up p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat a-easing-cb-scale-up p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-easing-cb-scale-up</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-easing-cb-scale-up</code></p>
     </div>
 
   </div>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat a-easing-cb-scale-in p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat a-easing-cb-scale-in p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-easing-cb-scale-in</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-easing-cb-scale-in</code></p>
     </div>
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat a-easing-cb-scale-out p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat a-easing-cb-scale-out p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-easing-cb-scale-out</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-easing-cb-scale-out</code></p>
     </div>
 
   </div>
@@ -464,26 +464,26 @@ layout: page
     By default, animations run only once. Animations can also be set to repeat once <code>.a-repeat-once</code>, or repeat indefinitely <code>.a-repeat</code>.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
     </div>
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat-once p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat-once p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-repeat-once</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-repeat-once</code></p>
     </div>
 
     <div class="g-1_3">
-      <div class="bg-yellow spin-right a-repeat p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
+      <div class="bg-c-b300 spin-right a-repeat p-s p-y-xs m-s m-x-auto h-0 w-0 u-border-radius-l">
         &nbsp;
       </div>
-      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.a-repeat</code></p>
+      <p class="m-top-xs m-bottom-0 l-pos-relative w-100"><code class="t-xs w-100 t-center bg-c-g100 t-c-g500">.a-repeat</code></p>
     </div>
 
   </div>

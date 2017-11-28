@@ -3,22 +3,26 @@ title: Layout
 layout: page
 ---
 
-<p class="t-l">Layout utilities are prefixed with l- and control the positioning of elements.</p>
+<p class="t-4">Layout utilities are prefixed with l- and control the positioning of elements.</p>
 
 <hr />
 
 ## Floats
 
-<div>
-	<p class="m-bottom-0 t-s t-red t-bold">.l-float-left</p>
-	<div class="u-clearfix">
-		<p class="bg-grey p-s l-float-left">Left</p>
+<div class="m-bottom">
+	<p class="m-bottom-0 t-s t-c-r300 t-bold">.l-float-left</p>
+	<div class="border t-c-g100">
+		<div class="u-clearfix">
+			<p class="bg-c-g300 p-s l-float-left t-c-g500">Left</p>
+		</div>
 	</div>
 </div>
-<div>
-	<p class="m-bottom-0 t-s t-red t-bold">.l-float-right</p>
-	<div class="u-clearfix">
-		<p class="bg-grey p-s l-float-right">Right</p>
+<div class="m-bottom">
+	<p class="m-bottom-0 t-s t-c-r300 t-bold">.l-float-right</p>
+	<div class="border t-c-g100">
+		<div class="u-clearfix">
+			<p class="bg-c-g300 p-s l-float-right t-c-g500">Right</p>
+		</div>
 	</div>
 </div>
 
@@ -34,16 +38,16 @@ layout: page
 ## Display
 
 <div class="m-bottom">
-	<p class="m-bottom-0 t-s t-red t-bold l-inline">.l-inline</p>
-	<p class="bg-grey p-s l-inline">Inline</p>
+	<p class="m-bottom-0 t-s t-c-r300 t-bold l-inline">.l-inline</p>
+	<p class="bg-c-g300 p-s l-inline">Inline</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-red t-bold l-inline">.l-inline-block</p>
-	<p class="bg-grey p-s l-inline-block">Inline-block</p>
+	<p class="m-bottom-0 t-s t-c-r300 t-bold l-inline">.l-inline-block</p>
+	<p class="bg-c-g300 p-s l-inline-block">Inline-block</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-red t-bold">.l-block</p>
-	<p class="bg-grey p-s l-block">Block</p>
+	<p class="m-bottom-0 t-s t-c-r300 t-bold">.l-block</p>
+	<p class="bg-c-g300 p-s l-block">Block</p>
 </div>
 
 {% highlight html %}

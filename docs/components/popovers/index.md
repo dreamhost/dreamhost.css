@@ -3,7 +3,7 @@ title: Popovers
 layout: page
 ---
 
-<p class="bg-white">
+<p class="bg-c-w100">
   <p class="t-l">
     Popovers are used for any contextual content that shouldn't block the the user. Some common uses are dropdown link menus, hovercards, complex tooltips, etc. Below are some guidelines for usage and structure.
   </p>
@@ -82,7 +82,7 @@ layout: page
     Popovers can be triggered two ways: on click or hover. Click events require JavaScript. To enable click Popovers, append <code>.on-click</code> to the <code>.Popover-container</code>. For hover Popovers, append <code>.on-hover</code> instead.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click g-1_2">
       <div class="Popover has-caret">
@@ -90,7 +90,7 @@ layout: page
           This Popover only activates on click.
         </div>
       </div>
-      <a class="Button js-toggle-popover t-center w-100">Click Popover</a>
+      <a class="dh-button js-toggle-popover t-center w-100">Click Popover</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.on-click</code></p>
     </div>
 
@@ -100,7 +100,7 @@ layout: page
           This Popover only activates on hover.
         </div>
       </div>
-      <a class="Button t-center w-100">Hover Popover</a>
+      <a class="dh-button t-center w-100">Hover Popover</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.on-hover</code></p>
     </div>
 
@@ -114,7 +114,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Hover Popover -->
@@ -124,7 +124,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
@@ -140,7 +140,7 @@ layout: page
     The Popover caret it optional. Append <code>.has-caret</code> accordingly. Generally, carets should only be used when the triggering element (ex: the yellow button below) does not also use a caret. That will protect against potential caret alignment issues.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click g-1_2">
       <div class="Popover">
@@ -148,7 +148,7 @@ layout: page
           This Popover does not have a caret.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Popover Without Caret</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Popover Without Caret</a>
     </div>
 
     <div class="Popover-container on-click g-1_2">
@@ -157,7 +157,7 @@ layout: page
           This Popover has a caret.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Popover With Caret</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Popover With Caret</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.has-caret</code></p>
     </div>
 
@@ -171,7 +171,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
@@ -186,16 +186,16 @@ layout: page
     Popovers can be aligned top, right, bottom, or left. By default, they are top aligned.
   </p>
 
-  <p class="t-salmon t-bold m-bottom-0">Popover Alignment</p>
+  <p class="t-c-r300 t-bold m-bottom-0">Popover Alignment</p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
     <div class="Popover-container on-click g-1_4">
       <div class="Popover has-caret">
         <div class="p-xs">
           This is a top aligned Popover with a caret.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Top Aligned</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Top Aligned</a>
     </div>
 
     <div class="Popover-container on-click g-1_4">
@@ -204,7 +204,7 @@ layout: page
           This is a right aligned Popover with a caret.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Right Aligned</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Right Aligned</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.Popover--right</code></p>
     </div>
 
@@ -214,7 +214,7 @@ layout: page
           This is a bottom aligned Popover with a caret.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Bottom Aligned</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Bottom Aligned</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.Popover--bottom</code></p>
     </div>
 
@@ -224,7 +224,7 @@ layout: page
           This is a left aligned Popover with a caret.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Left Aligned</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Left Aligned</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.Popover--left</code></p>
     </div>
   </div>
@@ -237,7 +237,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Bottom aligned Popover -->
@@ -247,7 +247,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Left aligned Popover -->
@@ -257,7 +257,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
@@ -265,13 +265,13 @@ layout: page
 
 <section class="Popover-alignment p-bottom-larger">
 
-  <p class="t-salmon t-bold m-bottom-0">Popover Positioning</p>
+  <p class="t-c-r300 t-bold m-bottom-0">Popover Positioning</p>
 
   <p>
     There are left and right positioning classes for Popovers that are top and bottom aligned. Adding a class <code>Popover--flush-left</code> or <code>Popover--flush-right</code> will adjust the Popover's positioning and transform origin accordingly. By default, Popovers are center positioned.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click g-1_2">
       <div class="Popover Popover--flush-left has-caret">
@@ -279,7 +279,7 @@ layout: page
           This is a top aligned Popover that is flushed left with the clicked element.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Flush Left</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Flush Left</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.Popover--flush-left</code></p>
     </div>
 
@@ -289,7 +289,7 @@ layout: page
           This is a top aligned Popover that is flushed right with the clicked element.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Flush Right</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Flush Right</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.Popover--flush-right</code></p>
     </div>
 
@@ -303,7 +303,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Flushed right Popover -->
@@ -313,7 +313,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
@@ -321,7 +321,7 @@ layout: page
     There are also top and bottom positioning classes for Popover that are left or right aligned. Adding classes <code>Popover--flush-top</code> or <code>Popover--flush-bottom</code> will adjust the Popover's positioning and transform origin accordingly. By default, Popovers are middle positioned.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click g-1_2">
       <div class="Popover Popover--left Popover--flush-top has-caret">
@@ -329,7 +329,7 @@ layout: page
           This is a left aligned Popover that is flushed top with the clicked element.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Flush Top</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Flush Top</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.Popover--flush-top</code></p>
     </div>
 
@@ -339,7 +339,7 @@ layout: page
           This is a left aligned Popover that is flushed bottom with the clicked element.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Flush Bottom</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Flush Bottom</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.Popover--flush-bottom</code></p>
     </div>
 
@@ -353,7 +353,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Flushed bottom Popover -->
@@ -363,7 +363,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
@@ -379,7 +379,7 @@ layout: page
     There are 4 Popover themes: default (light), dark, error, and success. Apply <code>.Popover--dark</code>, <code>.Popover--error</code>, or <code>.Popover--success</code> accordingly. Omit all of the above to use the default theme.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click g-1_4">
       <div class="Popover has-caret">
@@ -387,7 +387,7 @@ layout: page
           This is a Popover using the default theme.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Default</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Default</a>
     </div>
 
     <div class="Popover-container on-click g-1_4">
@@ -396,7 +396,7 @@ layout: page
           This is a Popover using the dark theme.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Dark</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Dark</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.Popover--dark</code></p>
     </div>
 
@@ -406,7 +406,7 @@ layout: page
           This is a Popover using the error theme.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Error</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Error</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.Popover--error</code></p>
     </div>
 
@@ -416,7 +416,7 @@ layout: page
           This is a Popover using the success theme.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Success</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Success</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.Popover--success</code></p>
     </div>
 
@@ -430,7 +430,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Error theme Popover -->
@@ -440,7 +440,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Success theme Popover -->
@@ -450,7 +450,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
@@ -466,7 +466,7 @@ layout: page
     There are 3 Popover widths: small, medium, and large. Those don't apply inner padding, but instead change the width of the overall Popover. Apply <code>.Popover--small</code> or <code>.Popover--large</code> accordingly. For medium width popoovers, omit all of the above.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click g-1_3">
       <div class="Popover Popover--small has-caret">
@@ -474,7 +474,7 @@ layout: page
           This is a small width Popover.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Small Width</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Small Width</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.Popover--small</code></p>
     </div>
 
@@ -484,7 +484,7 @@ layout: page
           This is a medium width Popover.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Medium Width</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Medium Width</a>
     </div>
 
     <div class="Popover-container on-click g-1_3">
@@ -493,7 +493,7 @@ layout: page
           This is a large width Popover.
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Large Width</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Large Width</a>
       <p class="m-top-xs m-bottom-0 l-pos-absolute w-100"><code class="t-xs w-100 t-center bg-lighter-grey t-darker-grey">.Popover--large</code></p>
     </div>
 
@@ -507,7 +507,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Large width Popover -->
@@ -517,7 +517,7 @@ layout: page
         <div class="p-s">...</div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
@@ -537,9 +537,9 @@ layout: page
     Note that <code>Popover__section</code> dividers are only required for dropdown menu Popovers.
   </p>
 
-  <p class="t-salmon t-bold m-bottom-0">Basic Dropdown Menu</p>
+  <p class="t-c-r300 t-bold m-bottom-0">Basic Dropdown Menu</p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click w-100">
       <div class="Popover Popover--bottom has-caret">
@@ -555,7 +555,7 @@ layout: page
   				</div>
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Basic Dropdown</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Basic Dropdown</a>
     </div>
 
   </div>
@@ -576,13 +576,13 @@ layout: page
         </div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
-  <p class="t-salmon t-bold m-bottom-0">Dropdown Menu With Separator</p>
+  <p class="t-c-r300 t-bold m-bottom-0">Dropdown Menu With Separator</p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click w-100">
       <div class="Popover Popover--bottom has-caret">
@@ -602,7 +602,7 @@ layout: page
   				</div>
         </div>
       </div>
-      <a class="Button js-toggle-popover w-100 t-center">Dropdown with Separator</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Dropdown with Separator</a>
     </div>
 
   </div>
@@ -627,7 +627,7 @@ layout: page
         </div>
       </div>
     </div>
-    <a class="Button js-toggle-popover">Click here</a>
+    <a class="dh-button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
