@@ -3,4 +3,4 @@ title: Payment Module
 layout: page
 ---
 
-<p class="t-5">This page describes payment module styles.</p>
+<p class="t-4">This page describes payment module styles.</p>

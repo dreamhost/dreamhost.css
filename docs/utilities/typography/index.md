@@ -3,7 +3,7 @@ title: Typography
 layout: page
 ---
 
-<p class="t-l">Typography utilities are prefixed with t-.</p>
+<p class="t-4">Typography utilities are prefixed with t-.</p>
 
 <hr />
 

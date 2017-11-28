@@ -3,7 +3,7 @@ title: Inputs & Select
 layout: page
 ---
 
-<p class="t-5">Mix and match inputs to create your own Forms.</p>
+<p class="t-4">Mix and match inputs to create your own Forms.</p>
 
 <hr />
 ## Block inputs
