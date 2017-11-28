@@ -2,7 +2,7 @@
 // Some sort of scale
 
 body {
-	background: $lighter-grey;
+	background: $white;
 	-webkit-font-smoothing: antialiased; // autoprefixer does not incl. font-smoothing
 	-moz-osx-font-smoothing: grayscale;
 	font-feature-settings: "liga", "dlig";
@@ -54,10 +54,10 @@ h4, .h4 {
 
 a {
 	color: $dark-blue;
-	text-decoration: underline;
+	text-decoration: none;
 
 	&:hover, &.is-open {
-		text-decoration: none;
+		text-decoration: underline;
 	}
 
 	&.is-disabled {

@@ -2,39 +2,70 @@
 
 Table
 
-	Minimal table stylings. Sets padding, alignment and alternate
-	row backgrounds.
+	There are two table styles.
 
-	Adding .table--large-padding will double the padding.
+	The default table (.dh-table) has 24px by 16px padding, and no
+	zebra striping.
+
+	The condensed table (.dh-table--condensed) has 16px padding
+	all around, and zebra striping.
+
+	Usage:
+	<table class="dh-table dh-table--condensed">
+		<thead>
+			<tr>
+				<th>Table head</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Table data</td>
+			</tr>
+		</tbody>
+	</table>
 
 */
 
-.Table {
+// Default
+.dh-table {
 	width: 100%;
 	margin-bottom: convertScaleToRem(4);
 	text-align: left;
 
 	thead tr {
-		border-bottom: 3px solid $lighter-grey;
+		border-bottom: 2px solid $c-g500;
 	}
 
 	th {
-		padding: convertScaleToRem(3) convertScaleToRem(4);
-		font-size: $t-4;
+		padding: convertScaleToRem(2) convertScaleToRem(1);
+		font-size: $t-2;
 		font-family: $heading;
-		color: $black;
+		color: $c-black;
+		text-transform: uppercase;
 	}
-
-	tbody tr {
-		@extend .border;
-		@extend .border-light-grey;
-	}
-
-	tbody tr:nth-child(odd) {background: #fff;}
-	tbody tr:nth-child(even) {background: $lighter-grey;}
 
 	td {
-		padding: convertScaleToRem(3);
+		padding: convertScaleToRem(2) convertScaleToRem(1);
 		vertical-align: middle;
+		border-bottom: 1px solid $c-g300;
+		font-size: $t-2;
 	}
+}
+
+// Condensed
+.dh-table--condensed {
+	thead tr {
+		border-bottom: 1px solid $c-g300;
+	}
+
+	th, td {
+		padding: convertScaleToRem(1);
+	}
+
+	td {
+		border-bottom: 1px solid $c-g200;
+	}
+
+	tbody tr:nth-child(odd) {background: $c-w100;}
+	tbody tr:nth-child(even) {background: $c-g100;}
 }
