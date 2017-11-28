@@ -3,7 +3,7 @@ title: Popovers
 layout: page
 ---
 
-<p class="bg-white">
+<p class="bg-c-w100">
   <p class="t-l">
     Popovers are used for any contextual content that shouldn't block the the user. Some common uses are dropdown link menus, hovercards, complex tooltips, etc. Below are some guidelines for usage and structure.
   </p>
@@ -82,7 +82,7 @@ layout: page
     Popovers can be triggered two ways: on click or hover. Click events require JavaScript. To enable click Popovers, append <code>.on-click</code> to the <code>.Popover-container</code>. For hover Popovers, append <code>.on-hover</code> instead.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click g-1_2">
       <div class="Popover has-caret">
@@ -140,7 +140,7 @@ layout: page
     The Popover caret it optional. Append <code>.has-caret</code> accordingly. Generally, carets should only be used when the triggering element (ex: the yellow button below) does not also use a caret. That will protect against potential caret alignment issues.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click g-1_2">
       <div class="Popover">
@@ -186,9 +186,9 @@ layout: page
     Popovers can be aligned top, right, bottom, or left. By default, they are top aligned.
   </p>
 
-  <p class="t-salmon t-bold m-bottom-0">Popover Alignment</p>
+  <p class="t-c-r300 t-bold m-bottom-0">Popover Alignment</p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
     <div class="Popover-container on-click g-1_4">
       <div class="Popover has-caret">
         <div class="p-xs">
@@ -265,13 +265,13 @@ layout: page
 
 <section class="Popover-alignment p-bottom-larger">
 
-  <p class="t-salmon t-bold m-bottom-0">Popover Positioning</p>
+  <p class="t-c-r300 t-bold m-bottom-0">Popover Positioning</p>
 
   <p>
     There are left and right positioning classes for Popovers that are top and bottom aligned. Adding a class <code>Popover--flush-left</code> or <code>Popover--flush-right</code> will adjust the Popover's positioning and transform origin accordingly. By default, Popovers are center positioned.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click g-1_2">
       <div class="Popover Popover--flush-left has-caret">
@@ -321,7 +321,7 @@ layout: page
     There are also top and bottom positioning classes for Popover that are left or right aligned. Adding classes <code>Popover--flush-top</code> or <code>Popover--flush-bottom</code> will adjust the Popover's positioning and transform origin accordingly. By default, Popovers are middle positioned.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click g-1_2">
       <div class="Popover Popover--left Popover--flush-top has-caret">
@@ -379,7 +379,7 @@ layout: page
     There are 4 Popover themes: default (light), dark, error, and success. Apply <code>.Popover--dark</code>, <code>.Popover--error</code>, or <code>.Popover--success</code> accordingly. Omit all of the above to use the default theme.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click g-1_4">
       <div class="Popover has-caret">
@@ -466,7 +466,7 @@ layout: page
     There are 3 Popover widths: small, medium, and large. Those don't apply inner padding, but instead change the width of the overall Popover. Apply <code>.Popover--small</code> or <code>.Popover--large</code> accordingly. For medium width popoovers, omit all of the above.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click g-1_3">
       <div class="Popover Popover--small has-caret">
@@ -537,9 +537,9 @@ layout: page
     Note that <code>Popover__section</code> dividers are only required for dropdown menu Popovers.
   </p>
 
-  <p class="t-salmon t-bold m-bottom-0">Basic Dropdown Menu</p>
+  <p class="t-c-r300 t-bold m-bottom-0">Basic Dropdown Menu</p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click w-100">
       <div class="Popover Popover--bottom has-caret">
@@ -580,9 +580,9 @@ layout: page
   </div>
   {% endhighlight %}
 
-  <p class="t-salmon t-bold m-bottom-0">Dropdown Menu With Separator</p>
+  <p class="t-c-r300 t-bold m-bottom-0">Dropdown Menu With Separator</p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <div class="Popover-container on-click w-100">
       <div class="Popover Popover--bottom has-caret">
