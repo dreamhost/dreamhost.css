@@ -3,7 +3,7 @@ title: Page Header
 layout: page
 ---
 
-<p class="t-5">The page header is the bar at the top of every DreamHost application that contains the logo and navigation</p>
+<p class="t-4">The page header is the bar at the top of every DreamHost application that contains the logo and navigation</p>
 
 <p class="alert alert--error">Watch out! The responsive part of the page header doesn't seem to work right now. Maybe it's <em>your</em> destiny to be the one to solve it. <a href="https://github.com/dreamhost/dreamhost.css/issues/73">Track issue.</a>
 
@@ -23,7 +23,7 @@ layout: page
 <ul class="list list--disc m-bottom-2">
 	<li>Logo:
 		<ul class="list list--disc">
-			<li>For internal sites (employees & customers), the moon symbol is enough</li>
+			<li>For internal sites (employees &amp; customers), the moon symbol is enough</li>
 			<li>For external sites (non-customers), use the full DreamHost logo</li>
 		</ul>
 	</li>

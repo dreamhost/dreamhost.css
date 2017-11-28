@@ -3,7 +3,7 @@ title: Modals
 layout: page
 ---
 
-<p class="t-5">DreamHost uses <a href="https://github.com/vodkabears/Remodal">remodal.js</a> with some custom styling for modals.</p>
+<p class="t-4">DreamHost uses <a href="https://github.com/vodkabears/Remodal">remodal.js</a> with some custom styling for modals.</p>
 
 <hr/>
 

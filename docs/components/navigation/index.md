@@ -3,4 +3,4 @@ title: Navigation
 layout: page
 ---
 
-<p class="t-5">This page describes navigation styles.</p>
+<p class="t-4">This page describes navigation styles.</p>
