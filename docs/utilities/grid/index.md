@@ -11,16 +11,16 @@ layout: page
 
 <div class="m-bottom">
 	<div class="u-clearfix m-bottom-2">
-		<div class="bg-grey p-s t-center g-1_2">.g-1_2</div>
-		<div class="bg-grey p-s t-center g-1_2">.g-1_2</div>
+		<div class="bg-c-g300 p-s t-center g-1_2">.g-1_2</div>
+		<div class="bg-c-g300 p-s t-center g-1_2">.g-1_2</div>
 	</div>
 	<div class="u-clearfix m-bottom-2">
-		<div class="bg-grey p-s t-center g-1_3">.g-1_3</div>
-		<div class="bg-grey p-s t-center g-2_3">.g-2_3</div>
+		<div class="bg-c-g300 p-s t-center g-1_3">.g-1_3</div>
+		<div class="bg-c-g300 p-s t-center g-2_3">.g-2_3</div>
 	</div>
 	<div class="u-clearfix m-bottom-2">
-		<div class="bg-grey p-s t-center g-1_4">.g-1_4</div>
-		<div class="bg-grey p-s t-center g-3_4">.g-3_4</div>
+		<div class="bg-c-g300 p-s t-center g-1_4">.g-1_4</div>
+		<div class="bg-c-g300 p-s t-center g-3_4">.g-3_4</div>
 	</div>
 </div>
 
@@ -69,8 +69,8 @@ All helper classes are mobile-first responsive and can be modified by adding `__
 For example, the following will only have columns on screens larger than 750px.
 
 <div class="u-clearfix m-bottom">
-	<div class="bg-grey p-1 g-1_2__m">responsive</div>
-	<div class="bg-grey p-1 g-1_2__m">responsive</div>
+	<div class="bg-c-g300 p-1 g-1_2__m">responsive</div>
+	<div class="bg-c-g300 p-1 g-1_2__m">responsive</div>
 </div>
 
 {% highlight css %}

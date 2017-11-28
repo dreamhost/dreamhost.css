@@ -3,7 +3,7 @@ title: Transitions
 layout: page
 ---
 
-<p class="bg-white">
+<p class="bg-c-w100">
   <p class="t-l">
     Transitions are mainly used to provide additional context for the hover states of interactive elements like buttons, links, and inputs.
   </p>
@@ -19,7 +19,7 @@ layout: page
     Transitions trigger on hover. There are 2 pre-defined transition effects: <code>.scale-up-hover</code> and <code>.scale-down-hover</code>.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <a class="Button t-center scale-up-hover p-s">Scale up</a>
 
@@ -53,7 +53,7 @@ layout: page
     <code>.tr-duration</code> can also be used as shorthand for <code>.tr-duration-m</code>.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <a class="Button t-center scale-up-hover tr-duration-xs">xs duration</a>
 
@@ -63,7 +63,7 @@ layout: page
 
   </div>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <a class="Button t-center scale-up-hover tr-duration-l">l duration</a>
 
@@ -105,7 +105,7 @@ layout: page
     Easing defines the curve on which the transition takes place. Each of the 5 easing options provide a different feel to the transition.
   </p>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <a class="Button t-center scale-up-hover tr-duration-xl tr-easing-linear">Linear</a>
 
@@ -115,7 +115,7 @@ layout: page
 
   </div>
 
-  <div class="container u-clearfix bg-lighter-grey p-s">
+  <div class="container u-clearfix bg-c-g100 p-s">
 
     <a class="Button t-center scale-up-hover tr-duration-xl tr-easing-cb-scale-in">Scale In</a>
 

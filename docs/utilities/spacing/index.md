@@ -12,23 +12,23 @@ layout: page
 
 <p>Use the convention m-size or m-side-size, e.g m-l or m-bottom-l.</p>
 
-<div class="p-1 bg-grey m-bottom-half">.m-half</div>
-<div class="p-1 bg-grey m-bottom-1">.m-1</div>
-<div class="p-1 bg-grey m-bottom-2">.m-2</div>
-<div class="p-1 bg-grey m-bottom-3">.m-3</div>
-<div class="p-1 bg-grey m-bottom-4">.m-4</div>
-<div class="p-1 bg-grey m-bottom-5">.m-5</div>
-<div class="p-1 bg-grey m-bottom-6">.m-6</div>
-<div class="p-1 bg-grey m-bottom-7">.m-7</div>
-<div class="p-1 bg-grey m-bottom-8">.m-8</div>
-<div class="p-1 bg-grey m-bottom-9">.m-9</div>
-<div class="p-1 bg-grey m-bottom-10">.m-10</div>
-<div class="p-1 bg-grey m-bottom-11">.m-11</div>
-<div class="p-1 bg-grey m-bottom-12">.m-12</div>
-<div class="p-1 bg-grey m-bottom-13">.m-13</div>
-<div class="p-1 bg-grey m-bottom-14">.m-14</div>
-<div class="p-1 bg-grey m-bottom-15">.m-15</div>
-<div class="p-1 bg-grey m-bottom-16">.m-16</div>
+<div class="p-1 bg-c-g300 m-bottom-half">.m-half</div>
+<div class="p-1 bg-c-g300 m-bottom-1">.m-1</div>
+<div class="p-1 bg-c-g300 m-bottom-2">.m-2</div>
+<div class="p-1 bg-c-g300 m-bottom-3">.m-3</div>
+<div class="p-1 bg-c-g300 m-bottom-4">.m-4</div>
+<div class="p-1 bg-c-g300 m-bottom-5">.m-5</div>
+<div class="p-1 bg-c-g300 m-bottom-6">.m-6</div>
+<div class="p-1 bg-c-g300 m-bottom-7">.m-7</div>
+<div class="p-1 bg-c-g300 m-bottom-8">.m-8</div>
+<div class="p-1 bg-c-g300 m-bottom-9">.m-9</div>
+<div class="p-1 bg-c-g300 m-bottom-10">.m-10</div>
+<div class="p-1 bg-c-g300 m-bottom-11">.m-11</div>
+<div class="p-1 bg-c-g300 m-bottom-12">.m-12</div>
+<div class="p-1 bg-c-g300 m-bottom-13">.m-13</div>
+<div class="p-1 bg-c-g300 m-bottom-14">.m-14</div>
+<div class="p-1 bg-c-g300 m-bottom-15">.m-15</div>
+<div class="p-1 bg-c-g300 m-bottom-16">.m-16</div>
 
 {% highlight html %}
 <div class="m-half">.m-half</div>
@@ -54,23 +54,23 @@ layout: page
 <p class="t-l">Padding utilities are prefixed with p- and can be used to add space inside an element on any side.</p>
 
 <p>Use the convention p-size or m-side-size, e.g m-large or m-bottom-l.</p>
-<div class="m-bottom-1 bg-grey p-half">.p-half</div>
-<div class="m-bottom-1 bg-grey p-1">.p-1</div>
-<div class="m-bottom-1 bg-grey p-2">.p-2</div>
-<div class="m-bottom-1 bg-grey p-3">.p-3</div>
-<div class="m-bottom-1 bg-grey p-4">.p-4</div>
-<div class="m-bottom-1 bg-grey p-5">.p-5</div>
-<div class="m-bottom-1 bg-grey p-6">.p-6</div>
-<div class="m-bottom-1 bg-grey p-7">.p-7</div>
-<div class="m-bottom-1 bg-grey p-8">.p-8</div>
-<div class="m-bottom-1 bg-grey p-9">.p-9</div>
-<div class="m-bottom-1 bg-grey p-10">.p-10</div>
-<div class="m-bottom-1 bg-grey p-11">.p-11</div>
-<div class="m-bottom-1 bg-grey p-12">.p-12</div>
-<div class="m-bottom-1 bg-grey p-13">.p-13</div>
-<div class="m-bottom-1 bg-grey p-14">.p-14</div>
-<div class="m-bottom-1 bg-grey p-15">.p-15</div>
-<div class="m-bottom-1 bg-grey p-16">.p-16</div>
+<div class="m-bottom-1 bg-c-g300 p-half">.p-half</div>
+<div class="m-bottom-1 bg-c-g300 p-1">.p-1</div>
+<div class="m-bottom-1 bg-c-g300 p-2">.p-2</div>
+<div class="m-bottom-1 bg-c-g300 p-3">.p-3</div>
+<div class="m-bottom-1 bg-c-g300 p-4">.p-4</div>
+<div class="m-bottom-1 bg-c-g300 p-5">.p-5</div>
+<div class="m-bottom-1 bg-c-g300 p-6">.p-6</div>
+<div class="m-bottom-1 bg-c-g300 p-7">.p-7</div>
+<div class="m-bottom-1 bg-c-g300 p-8">.p-8</div>
+<div class="m-bottom-1 bg-c-g300 p-9">.p-9</div>
+<div class="m-bottom-1 bg-c-g300 p-10">.p-10</div>
+<div class="m-bottom-1 bg-c-g300 p-11">.p-11</div>
+<div class="m-bottom-1 bg-c-g300 p-12">.p-12</div>
+<div class="m-bottom-1 bg-c-g300 p-13">.p-13</div>
+<div class="m-bottom-1 bg-c-g300 p-14">.p-14</div>
+<div class="m-bottom-1 bg-c-g300 p-15">.p-15</div>
+<div class="m-bottom-1 bg-c-g300 p-16">.p-16</div>
 {% highlight html %}
 <div class="p-half">.p-half</div>
 <div class="p-1">.p-1</div>
