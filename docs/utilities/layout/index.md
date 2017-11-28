@@ -3,22 +3,26 @@ title: Layout
 layout: page
 ---
 
-<p class="t-l">Layout utilities are prefixed with l- and control the positioning of elements.</p>
+<p class="t-4">Layout utilities are prefixed with l- and control the positioning of elements.</p>
 
 <hr />
 
 ## Floats
 
-<div>
+<div class="m-bottom">
 	<p class="m-bottom-0 t-s t-c-r300 t-bold">.l-float-left</p>
-	<div class="u-clearfix">
-		<p class="bg-c-g300 p-s l-float-left">Left</p>
+	<div class="border t-c-g100">
+		<div class="u-clearfix">
+			<p class="bg-c-g300 p-s l-float-left t-c-g500">Left</p>
+		</div>
 	</div>
 </div>
-<div>
+<div class="m-bottom">
 	<p class="m-bottom-0 t-s t-c-r300 t-bold">.l-float-right</p>
-	<div class="u-clearfix">
-		<p class="bg-c-g300 p-s l-float-right">Right</p>
+	<div class="border t-c-g100">
+		<div class="u-clearfix">
+			<p class="bg-c-g300 p-s l-float-right t-c-g500">Right</p>
+		</div>
 	</div>
 </div>
 

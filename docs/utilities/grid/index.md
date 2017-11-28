@@ -3,7 +3,7 @@ title: Grid
 layout: page
 ---
 
-<p class="t-l">DreamHost uses Bourbon's Neat Sass grid alongside some helper classes from the most common layouts we need to create.</p>
+<p class="t-4">DreamHost uses Bourbon's Neat Sass grid alongside some helper classes from the most common layouts we need to create.</p>
 
 <hr />
 

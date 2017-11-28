@@ -3,4 +3,4 @@ title: Iconography
 layout: page
 ---
 
-<p class="t-5">This page describes iconography styles.</p>
+<p class="t-4">This page describes iconography styles.</p>
