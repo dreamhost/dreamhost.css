@@ -45,9 +45,4 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.3.1)
   jekyll-feed (~> 0.6)
-
-RUBY VERSION
-   ruby 2.3.3p222
-
-BUNDLED WITH
-   1.16.0
+  rb-fsevent (<= 0.9.4)
