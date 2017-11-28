@@ -6,7 +6,7 @@ layout: page
 <p class="t-l">All the buttons!</p>
 
 ## Colors
-<div class="m-bottom-l">
+<div class="m-bottom-5">
 	<span role="button" class="m-bottom-2 dh-button dh-button--primary">Primary button</span>
 	<span role="button" class="m-bottom-2 dh-button">Secondary button</span>
 	<span role="button" class="m-bottom-2 dh-button dh-button--transaction">Transaction button</span>
@@ -25,7 +25,7 @@ layout: page
 <hr />
 ## Tags
 
-<div class="m-bottom-l">
+<div class="m-bottom-5">
 	<span role="button" class="m-bottom-2 dh-button dh-button__tag dh-button__tag--positive">Positive Tag button </span>
 	<span role="button" class="m-bottom-2 dh-button dh-button__tag dh-button__tag--negative">Negative Tag button</span>
 	<span role="button" class="m-bottom-2 dh-button dh-button__tag">Tag button</span>
@@ -40,7 +40,7 @@ layout: page
 <hr />
 ## Sizes
 
-<div class="m-bottom-l">
+<div class="m-bottom-5">
 	<span role="button" class="m-bottom-2 dh-button">Regular button</span>
 	<span role="button" class="m-bottom-2 dh-button dh-button--tertiary">Tertiary button</span>
 </div>
@@ -53,7 +53,7 @@ layout: page
 <hr />
 ## Shapes
 
-<div class="m-bottom-l">
+<div class="m-bottom-5">
 	<span role="button" class="m-bottom-2 dh-button">Solid button</span>
 	<span role="button" class=" m-bottom-2 dh-button dh-button--text">Text-only button</span>
 </div>
@@ -66,7 +66,7 @@ layout: page
 <hr />
 ## Widths
 
-<div class="m-bottom-l">
+<div class="m-bottom-5">
 	<span role="button" class="m-bottom-2 dh-button">Normal width</span>
 	<span role="button" class="m-bottom-2 dh-button dh-button--block">Full-width block button</span>
 </div>

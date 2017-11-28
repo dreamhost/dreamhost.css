@@ -96,15 +96,15 @@ DreamHost uses Ubuntu for headings and Proxima Nova for body text.
 
 <div>
 	<p class="m-bottom-0 t-2 t-c-r300 t-bold">.t-left</p>
-	<p class="t-left p-xs border">The quick brown fox jumps over the lazy dog.</p>
+	<p class="t-left p-1 border">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
 	<p class="m-bottom-0 t-2 t-c-r300 t-bold">.t-right</p>
-	<p class="t-right p-xs border">The quick brown fox jumps over the lazy dog.</p>
+	<p class="t-right p-1 border">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
 	<p class="m-bottom-0 t-2 t-c-r300 t-bold">.t-center</p>
-	<p class="t-center p-xs border">The quick brown fox jumps over the lazy dog.</p>
+	<p class="t-center p-1 border">The quick brown fox jumps over the lazy dog.</p>
 </div>
 
 

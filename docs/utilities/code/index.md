@@ -3,7 +3,7 @@ title: Code
 layout: page
 ---
 
-<p class="t-l">These styles automatically work with <a href="https://highlightjs.org/" target="_blank">Highlight.js</a> to optionally highlight code syntax.</p>
+<p class="t-4">These styles automatically work with <a href="https://highlightjs.org/" target="_blank">Highlight.js</a> to optionally highlight code syntax.</p>
 
 <hr />
 
