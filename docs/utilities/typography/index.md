@@ -7,30 +7,8 @@ layout: page
 
 <hr />
 
-## Fonts
-DreamHost uses Ubuntu for headings and Proxima Nova for body text.
-<div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-heading</p>
-	<p class="t-heading">The quick brown fox jumps over the lazy dog.</p>
-</div>
-<div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-body</p>
-	<p class="t-body">The quick brown fox jumps over the lazy dog.</p>
-</div>
-<div>
-	<p class="m-bottom-0 t-s t-salmon t-bold">.t-mono</p>
-	<p class="t-mono">The quick brown fox jumps over the lazy dog.</p>
-</div>
-
-{% highlight html %}
-<p class="t-heading">The quick brown fox jumps over the lazy dog.</p>
-<p class="t-body">The quick brown fox jumps over the lazy dog.</p>
-<p class="t-mono">The quick brown fox jumps over the lazy dog.</p>
-{% endhighlight %}
-
-<hr />
-
 ## Headings
+
 <div>
 	<p class="m-bottom-0 t-s t-salmon t-bold">h1, .h1</p>
 	<h1>Heading One</h1>
@@ -57,6 +35,30 @@ DreamHost uses Ubuntu for headings and Proxima Nova for body text.
 
 <hr />
 
+## Fonts
+DreamHost uses Ubuntu for headings and Proxima Nova for body text.
+
+<div>
+	<p class="m-bottom-0 t-s t-salmon t-bold">.t-heading</p>
+	<p class="t-heading">The quick brown fox jumps over the lazy dog.</p>
+</div>
+<div>
+	<p class="m-bottom-0 t-s t-salmon t-bold">.t-body</p>
+	<p class="t-body">The quick brown fox jumps over the lazy dog.</p>
+</div>
+<div>
+	<p class="m-bottom-0 t-s t-salmon t-bold">.t-mono</p>
+	<p class="t-mono">The quick brown fox jumps over the lazy dog.</p>
+</div>
+
+{% highlight html %}
+<p class="t-heading">The quick brown fox jumps over the lazy dog.</p>
+<p class="t-body">The quick brown fox jumps over the lazy dog.</p>
+<p class="t-mono">The quick brown fox jumps over the lazy dog.</p>
+{% endhighlight %}
+
+<hr />
+
 ## Sizes
 
 <div>
@@ -68,7 +70,7 @@ DreamHost uses Ubuntu for headings and Proxima Nova for body text.
 	<p class="t-4">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
-	<p class="m-bottom-0 t-s t-dark-grey">.t-3 (default)  <span class="p-left-s t-light t-dark-grey">1rem, 16px</span></p>
+	<p class="m-bottom-0 t-s t-salmon t-bold">.t-3 (default)  <span class="p-left-s t-light t-dark-grey">1rem, 16px</span></p>
 	<p>The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div>
