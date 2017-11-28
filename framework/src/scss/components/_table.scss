@@ -4,11 +4,12 @@ Table
 
 	There are two table styles.
 
-	The default table (.dh-table) has 24px by 16px padding, and no
-	zebra striping.
+	The default table (.dh-table) has 24px by 16px padding.
 
 	The condensed table (.dh-table--condensed) has 16px padding
-	all around, and zebra striping.
+	all around.
+
+	Add zebra striping with .dh-table--striped
 
 	Usage:
 	<table class="dh-table dh-table--condensed">
@@ -65,7 +66,95 @@ Table
 	td {
 		border-bottom: 1px solid $c-g200;
 	}
+}
 
+// Zebra stripes
+.dh-table--striped {
 	tbody tr:nth-child(odd) {background: $c-w100;}
 	tbody tr:nth-child(even) {background: $c-g100;}
+}
+
+// Mobile
+.dh-table__m {
+	@extend .dh-table;
+
+	thead {
+		display: none;
+	}
+
+	tbody tr {
+		display: block;
+		margin-bottom: convertScaleToRem(3);
+
+		td {
+			display: block;
+			font-size: $t-3;
+
+			&:before {
+				content: attr(data-title);
+				display: inline-block;
+				width: 150px;
+				font-weight: $t-bold;
+			}
+
+			&:first-child:before {
+				width: auto;
+			}
+
+			&:first-child,
+			&:first-child a {
+				font-size: $t-3;
+				font-weight: $t-bold;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+			}
+
+			&:last-child {
+				border-bottom: 0;
+				margin-bottom: 2rem;
+			}
+
+			button, a {
+				width: calc(100% - 1rem);
+			}
+		}
+	}
+
+	@media (min-width: $medium-breakpoint) {
+		thead {
+			display: table-header-group;
+		}
+
+		tbody tr {
+			display: table-row;
+			margin-bottom: 0;
+			border: 0;
+
+			td {
+				display: table-cell;
+				font-size: $t-2;
+
+				&:before {
+					content: '';
+					width: auto;
+				}
+
+				&:first-child,
+				&:first-child a {
+					font-size: $t-2;
+					font-weight: $t-regular;
+					text-transform: none;
+					letter-spacing: 0;
+				}
+
+				&:last-child {
+					border-bottom: 1px solid $c-g300;
+				}
+
+				button, a {
+					width: auto;
+				}
+			}
+		}
+	}
 }
