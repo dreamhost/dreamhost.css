@@ -50,6 +50,39 @@ layout: page
 {% endhighlight%}
 
 <hr />
+
+## Fluid Row
+Displays list items in a row, with a specified primary row item which scales based on overall container width.
+<div class="m-bottom">
+	<ul class="Fluid-Row">
+		<li class="Fluid-Row__item p-2 border">
+			Row item
+		</li>
+		<li class="Fluid-Row__item Fluid-Row__item--primary p-2 border">
+			Primary row item
+		</li>
+		<li class="Fluid-Row__item p-2 border">
+			Row item
+		</li>
+	</ul>
+</div>
+
+{% highlight html %}
+<ul class="Fluid-Row">
+    <li class="Fluid-Row__item">
+        Row item
+    </li>
+    <li class="Fluid-Row__item Fluid-Row__item--primary">
+        Primary row item
+    </li>
+    <li class="Fluid-Row__item">
+        Row item
+    </li>
+</ul>
+{% endhighlight %}
+
+<hr />
+
 ## Link lists
 
 ### Small bold
