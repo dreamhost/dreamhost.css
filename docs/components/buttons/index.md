@@ -8,7 +8,7 @@ layout: page
 	<span role="button" class="m-bottom-2 dh-button">Default Button</span>
 	<span role="button" class="m-bottom-2 dh-button dh-button--primary">Primary Button</span>
 	<span role="button" class="m-bottom-2 dh-button dh-button--transaction">Transactional</span>
-	<span role="button" class="m-bottom-2 dh-button dh-button--negative">Danger</span>
+	<span role="button" class="m-bottom-2 dh-button dh-button--danger">Danger</span>
 	<span role="button" class="m-bottom-2 dh-button dh-button--disabled">Disabled</span>
 </div>
 
@@ -40,7 +40,7 @@ layout: page
 
 <div class="m-bottom-5">
 	<span role="button" class="m-bottom-2 dh-button">Default Size</span>
-	<span role="button" class="m-bottom-2 dh-button dh-button--tertiary">Compact Size</span>
+	<span role="button" class="m-bottom-2 dh-button dh-button--compact">Compact Size</span>
 </div>
 
 {% highlight html %}
