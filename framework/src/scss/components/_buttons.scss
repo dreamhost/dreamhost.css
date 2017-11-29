@@ -4,24 +4,25 @@ Buttons
 
 Can be used with anchor or button tags. When updating colors, make sure to update _tags.scss as well
 
-Shapes
-.dh-button  - Normal button
-.dh-button--text  - Underlined text
-
 Usage
+.dh-button                 - Default
 .dh-button--primary        - Primary
-.dh-button                 - Secondary
-.dh-button__tag            - Secondary w/Tag Neutral
-.dh-button__tag--postive   - Secondary w/Tag Positive
-.dh-button__tag--negative  - Secondary w/Tag Negative
-.dh-button--transaction    - Transaction
-.dh-button--negative       - Negative
+.dh-button--transaction    - Transactional
+.dh-button--danger         - Danger!
 .dh-button--disabled       - Disabled
+.dh-button__tag            - Tag Button
+.dh-button__tag--positive  - Positive Tag Button
+.dh-button__tag--negative  - Negative Tag Button
+
+Shapes
+.dh-button                 - Default shape
+.dh-button--text           - Underlined text
 
 Sizes
-.dh-button  - 11px
+.dh-button                 - Default size
+.dh-button--compact        - Compact size
 
-Markup:
+Markup
 <a href="#" class="button {{modifier_class}}">Text</a>
 
 Styleguide Base.dh-buttons
@@ -119,7 +120,7 @@ Styleguide Base.dh-buttons
 		&:before { background-color: $red; color: $white; }
 	}
 
-	&.dh-button--tertiary {
+	&.dh-button--compact {
 		padding-left: 3em;
 
 		&:before {
@@ -148,8 +149,8 @@ Styleguide Base.dh-buttons
 	&.dh-button--text:hover { color: darken($orange, 10%); background: transparent; }
 }
 
-// Negative
-.dh-button--negative {
+// Danger!
+.dh-button--danger {
 	background: $red;
 	border-color: $red;
 	color: $white;
@@ -163,8 +164,8 @@ Styleguide Base.dh-buttons
 	&.dh-button--text:hover { color: darken($red, 10%); background: transparent; }
 }
 
-// Tertiary
-.dh-button--tertiary {
+// Compact
+.dh-button--compact {
 	padding:0.65em 1em;
 }
 
@@ -241,6 +242,6 @@ Styleguide Base.dh-buttons
 	margin-left: 1em;
 
 	&.dh-button__tag{ margin-left:3.25em; }
-	&.dh-button__tag.dh-button--tertiary{ margin-left:2.75em; }
+	&.dh-button__tag.dh-button--compact{ margin-left:2.75em; }
 	&.dh-button--block, &.dh-button__tag.dh-button--block{ margin-left:0; }
 }
