@@ -33,15 +33,3 @@ Tags
 		background: $c-o300;
 	}
 }
-
-.dh-tag-button {
-	position: relative;
-	display: inline-block;
-	.dh-tag {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		right: 85%; // position from right so tag text doesnt overlap button
-		white-space: nowrap;
-	}
-}
