@@ -793,12 +793,12 @@ $(document).on('click', '.js-toggle-popover', function (e) {
 	var $this = $(this),
 		$thisPopover = $this
 			.parent()
-			.children('.dh-popover');
+			.children('.popover');
 
 	$('.js-toggle-popover').not($this).removeClass('is-open');
 	$thisPopover.toggleClass('is-open');
 	$this.toggleClass('is-open');
-	$('.dh-popover').not($thisPopover).removeClass('is-open');
+	$('.popover').not($thisPopover).removeClass('is-open');
 
 	e.stopPropagation();
 });
@@ -813,15 +813,15 @@ $(document).on('mouseout', '.on-hover', function () {
 		.removeClass('is-open');
 });
 
-$(document).on('click', '.dh-popover', function (e) {
+$(document).on('click', '.popover', function (e) {
 	e.stopPropagation();
 });
 
 $(document).on('click', function (e) {
-	$('.dh-popover, .js-toggle-popover').removeClass('is-open');
+	$('.popover, .js-toggle-popover').removeClass('is-open');
 });
 
 $(document).on('click', '.js-toggle-mobile-menu', function(e) {
 	e.preventDefault();
-	$('.Page-header').toggleClass('mobile-is-open');
+	$('.page-header').toggleClass('mobile-is-open');
 });
