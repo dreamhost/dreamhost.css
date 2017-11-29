@@ -33,7 +33,65 @@
 
 //Toaster Alerts
 
+.dh-toasters{
+	position: absolute;
+	top:5.5em;
+	right:1em;
+}
+
+@keyframes ToasterFadeIn { 
+	0% {
+	opacity: 0;
+	transform: scale($s-1) translateX(100%);
+	box-shadow: 0 0 10px 0 rgba($c-g500,0.2);
+	}
+
+	100% {
+	opacity: 1;
+	transform: scale($s-3) translateX(0);
+	box-shadow: 0 0 0px 0 rgba($c-g500,0);
+	}
+}
+
+@keyframes ToasterTemp { 
+	0% {
+		opacity: 0;
+		transform: scale($s-1) translateX(100%);
+		box-shadow: 0 0 10px 0 rgba($c-g500,0.2);
+		margin-bottom:0.5em;
+		height:100%;
+		}
+	15% {
+		opacity: 1;
+		transform: scale($s-3) translateX(0);
+		box-shadow: 0 0 0px 0 rgba($c-g500,0);
+		}
+
+	90% {
+		opacity: 1;
+		transform: scale($s-3) translateX(0);
+		box-shadow: 0 0 0px 0 rgba($c-g500,0);
+		margin-bottom:0.5em;
+		height:100%;
+	}
+	
+	100% {
+	opacity: 0;
+	transform: scale($s-1) translateX(100%);
+	box-shadow: 0 0 10px 0 rgba($c-g500,0.2);
+	display: none;
+	margin-bottom:0;
+	height:0;
+	}
+}
+
+@for $i from 1 to 10 {
+	.dh-toasters .dh-toaster:nth-child(#{$i}) { animation-delay: $i * 0.25s; }
+}
+
 .dh-toaster {
+	animation: ToasterFadeIn $a-2 ease-in-out backwards;
+	word-wrap: break-word;
 	background: $c-w100;
 	color: $c-g500;
 	border: $border-size-1 $c-g200 solid;
@@ -44,9 +102,7 @@
 	@include transition (transform $tr-3 ease-in-out);
 
 	&:hover, &:active {
-		transform: scale($s-5);
 		cursor: pointer;
-		box-shadow: 0 0 10px 0 rgba($c-g500,0.2);
 	}
 
 	p{margin:0;}	
@@ -76,6 +132,10 @@
 	}
 }
 
+.dh-toaster--temp{
+	animation: ToasterTemp 4s ease-in-out both;
+}
+
 .dh-toaster--negative{
 	.dh-toaster__type {
 		background: $c-r300;
@@ -93,17 +153,19 @@
 }
 
 .dh-toaster__heading{
-	padding: 1.5em 1.5em 1.5em 33%;
-	margin-bottom: 0;
+	padding: 1.5em;
+	width:75%;
+	transform: translateX(33%);
 	text-transform: uppercase;
 	font: $body;
 	font-size: $t-2;
 	font-weight: $t-bold;
 
 	span{
-		display: inline-block;
+		display: block;
 		text-transform: initial;
 		font-weight: $t-regular;
+		margin-top:0.5em;
 	}
 
 }
