@@ -586,14 +586,13 @@ layout: page
     Dropdown menus leverage the <a href="{{site.baseurl}}/components/lists">lists component</a> to create a simple menu with links, possibly used for header nav menus, filters, etc. Horizontal rules can be created within dropdowns by distributing links between multiple <code>dh-popover__section</code> dividers.
   </p>
 
-  <p>
+  <p class="m-bottom-7">
     Note that <code>dh-popover__section</code> dividers are only required for dropdown menu dh-popovers.
   </p>
 
-  <p class="t-c-r300 t-bold m-bottom-0">Basic Dropdown Menu</p>
+  <h3>Basic Dropdown Menu</h3>
 
   <div class="container u-clearfix bg-c-g100 p-2">
-
     <div class="dh-popover-container on-click w-100">
       <div class="dh-popover dh-popover--bottom has-caret">
         <div class="dh-popover__wrapper">
@@ -610,7 +609,6 @@ layout: page
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Basic Dropdown</a>
     </div>
-
   </div>
 
   {% highlight html %}
@@ -633,31 +631,85 @@ layout: page
   </div>
   {% endhighlight %}
 
-  <p class="t-c-r300 t-bold m-bottom-0">Dropdown Menu With Separator</p>
-
+  <h3 class="m-top">Dropdown Menu With Separator</h3>
   <div class="container u-clearfix bg-c-g100 p-2">
-
-    <div class="dh-popover-container on-click w-100">
-      <div class="dh-popover dh-popover--bottom has-caret">
-        <div class="dh-popover__wrapper">
-          <div class="dh-popover__section">
-            <ul class="List List--padding">
-							<li><a href="#">Twitter</a></li>
-							<li><a href="#">Facebook</a></li>
-							<li><a href="#">Google</a></li>
-							<li><a href="#">Dedicated Hosting</a></li>
-						</ul>
-  				</div>
-          <div class="dh-popover__section dh-popover__section--separator">
-  					<ul class="List List--padding">
-  						<li><a href="#">Contact us</a></li>
-  					</ul>
-  				</div>
+    <div class="g-1_2">
+      <div class="dh-popover-container on-click w-100">
+        <div class="dh-popover dh-popover--bottom dh-popover--max-height has-caret">
+          <div class="dh-popover__wrapper">
+            <div class="dh-popover__section">
+              <ul class="dh-list dh-list--padding">
+                <li><a href="/dreamhost.css/components/animations">Animations</a></li>
+                <li><a href="/dreamhost.css/components/alerts">Alerts</a></li>
+                <li><a href="/dreamhost.css/components/buttons">Buttons</a></li>
+                <li><a href="/dreamhost.css/components/form">Forms</a></li>
+                <li><a href="/dreamhost.css/components/table">Table</a></li>
+                <li><a href="/dreamhost.css/components/header">Header</a></li>
+                <li><a href="/dreamhost.css/components/lists">dh-lists</a></li>
+                <li><a href="/dreamhost.css/components/modals">Modals</a></li>
+                <li><a href="/dreamhost.css/components/popovers">dh-popovers</a></li>
+                <li><a href="/dreamhost.css/components/transitions">Transitions</a></li>
+                <li><a href="/dreamhost.css/components/animations">Animations</a></li>
+                <li><a href="/dreamhost.css/components/alerts">Alerts</a></li>
+                <li><a href="/dreamhost.css/components/buttons">Buttons</a></li>
+                <li><a href="/dreamhost.css/components/form">Forms</a></li>
+                <li><a href="/dreamhost.css/components/table">Table</a></li>
+                <li><a href="/dreamhost.css/components/header">Header</a></li>
+                <li><a href="/dreamhost.css/components/lists">dh-lists</a></li>
+                <li><a href="/dreamhost.css/components/modals">Modals</a></li>
+                <li><a href="/dreamhost.css/components/popovers">dh-popovers</a></li>
+                <li><a href="/dreamhost.css/components/transitions">Transitions</a></li>
+              </ul>
+            </div>
+            <div class="dh-popover__section dh-popover__section--separator">
+              <ul class="dh-list dh-list--padding">
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <a class="dh-button js-toggle-popover w-100 t-center">Dropdown with Separator</a>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Dropdown with Separator</a>
     </div>
 
+    <div class="g-1_2">
+      <div class="dh-popover-container on-click w-100">
+        <div class="dh-popover dh-popover--bottom dh-popover--max-height has-caret">
+          <div class="dh-popover__wrapper">
+            <div class="dh-popover__section">
+              <ul class="dh-list dh-list--padding">
+                <li><a href="/dreamhost.css/components/animations">Animations</a></li>
+                <li><a href="/dreamhost.css/components/alerts">Alerts</a></li>
+                <li><a href="/dreamhost.css/components/buttons">Buttons</a></li>
+                <li><a href="/dreamhost.css/components/form">Forms</a></li>
+                <li><a href="/dreamhost.css/components/table">Table</a></li>
+                <li><a href="/dreamhost.css/components/header">Header</a></li>
+                <li><a href="/dreamhost.css/components/lists">dh-lists</a></li>
+                <li><a href="/dreamhost.css/components/modals">Modals</a></li>
+                <li><a href="/dreamhost.css/components/popovers">dh-popovers</a></li>
+                <li><a href="/dreamhost.css/components/transitions">Transitions</a></li>
+                <li><a href="/dreamhost.css/components/animations">Animations</a></li>
+                <li><a href="/dreamhost.css/components/alerts">Alerts</a></li>
+                <li><a href="/dreamhost.css/components/buttons">Buttons</a></li>
+                <li><a href="/dreamhost.css/components/form">Forms</a></li>
+                <li><a href="/dreamhost.css/components/table">Table</a></li>
+                <li><a href="/dreamhost.css/components/header">Header</a></li>
+                <li><a href="/dreamhost.css/components/lists">dh-lists</a></li>
+                <li><a href="/dreamhost.css/components/modals">Modals</a></li>
+                <li><a href="/dreamhost.css/components/popovers">dh-popovers</a></li>
+                <li><a href="/dreamhost.css/components/transitions">Transitions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="dh-popover__section dh-popover__section--separator">
+            <ul class="dh-list dh-list--padding">
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+        <a class="dh-button js-toggle-popover w-100">Dropdown with fixed separator</a>
+      </div>
+    </div>
   </div>
 
   {% highlight html %}
@@ -666,7 +718,7 @@ layout: page
     <div class="dh-popover dh-popover--bottom">
       <div class="dh-popover__wrapper">
         <div class="dh-popover__section">
-          <ul class="List List--padding">
+          <ul class="dh-list dh-list--padding">
             <li><a href="#">Twitter</a></li>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Google</a></li>
@@ -674,13 +726,127 @@ layout: page
           </ul>
         </div>
         <div class="dh-popover__section dh-popover__section--separator">
-          <ul class="List List--padding">
+          <ul class="dh-list dh-list--padding">
             <li><a href="#">Contact us</a></li>
           </ul>
         </div>
       </div>
     </div>
     <a class="dh-button js-toggle-popover">Click here</a>
+  </div>
+
+  <!-- Dropdown menu popover with a fixed separator -->
+  <div class="dh-popover-container on-click">
+    <div class="dh-popover dh-popover--bottom">
+      <div class="dh-popover__wrapper">
+        <div class="dh-popover__section">
+          <ul class="dh-list dh-list--padding">
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Google</a></li>
+            <li><a href="#">Dedicated Hosting</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="dh-popover__section dh-popover__section--separator">
+        <ul class="dh-list dh-list--padding">
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+    <a class="dh-button js-toggle-popover">Click here</a>
+  </div>
+  {% endhighlight %}
+
+  <h3 class="m-top">Product Menu</h3>
+
+  <div class="container u-clearfix bg-c-g100 p-2">
+    <div class="dh-popover-container on-click w-100">
+      <div class="dh-popover dh-popover--max-height dh-popover--bottom dh-popover--5 dh-popover--flush-right">
+        <div class="dh-popover__wrapper">
+          <div class="dh-popover__section">
+            <ul class="dh-list dh-list__menu dh-list--50 dh-list--padding">
+              <li>
+                <a href="#">
+                  <p class="dh-list__menu--title">Register Domains</p>
+                  <p class="dh-list__menu--description">Register one or more domains.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="dh-list__menu--title">Malware Remover</p>
+                  <p class="dh-list__menu--description">Scrubs your website for malware.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="dh-list__menu--title">Add Hosting</p>
+                  <p class="dh-list__menu--description">Shared, VPS, Dedicated, Cloud, etc.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="dh-list__menu--title">Add Security With SSL</p>
+                  <p class="dh-list__menu--description">Protect your website from nasties.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="dh-list__menu--title">Transfer Domains</p>
+                  <p class="dh-list__menu--description">Transfer domains to DreamHost.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="dh-list__menu--title">Add MySQL</p>
+                  <p class="dh-list__menu--description">Need a database? Sure you do.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="dh-list__menu--title">Install WordPress</p>
+                  <p class="dh-list__menu--description">Quick, easy, 1-click WordPress.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="dh-list__menu--title">Add Remixer</p>
+                  <p class="dh-list__menu--description">This won't play your MP3s.</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="dh-button js-toggle-popover has-text-caret w-100">Product Menu</a>
+    </div>
+  </div>
+
+  {% highlight html %}
+  <!-- Product menu -->
+  <div class="dh-popover-container on-click">
+      <div class="dh-popover dh-popover--bottom dh-popover--5 dh-popover--flush-right">
+        <div class="dh-popover__wrapper">
+          <div class="dh-popover__section">
+            <ul class="dh-list dh-list__menu dh-list--50 dh-list--padding">
+              <li>
+                <a href="#">
+                  <p class="dh-list__menu--title">Product</p>
+                  <p class="dh-list__menu--description">Product description.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="dh-list__menu--title">Product</p>
+                  <p class="dh-list__menu--description">Product description.</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="dh-button js-toggle-popover has-text-caret">Product Menu</a>
+    </div>
   </div>
   {% endhighlight %}
 
