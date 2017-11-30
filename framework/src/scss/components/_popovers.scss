@@ -54,6 +54,7 @@ Popover Component
 	box-shadow: 0 0 1px 1px rgba(31,45,61,.15);
 	z-index: 999;
 	opacity: 0;
+	width: 300px;
 	visibility: hidden;
 }
 
@@ -362,7 +363,6 @@ Popover Component
 	width: 200px;
 }
 
-.dh-popover,
 .dh-popover--2 {
 	width: 300px;
 }
