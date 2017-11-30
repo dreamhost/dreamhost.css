@@ -7,45 +7,149 @@ layout: page
 
 <hr />
 
-<table class="Table">
+## Responsive Table
+<table class="dh-table__m">
 	<thead>
-		<th>Heading</th>
-		<th>Heading</th>
+		<th class="w-50">Name</th>
+		<th>Location</th>
+		<th>IP Address</th>
+		<th />
 	</thead>
 	<tbody>
 		<tr>
-			<td>Column 1</td>
-			<td>Column 2</td>
+			<td><a href="#">Server Name</a></td>
+			<td data-title="Location:"> US East-2</td>
+			<td data-title="IP Address:"> 208.123.123.123</td>
+			<td>
+				<button class="dh-button dh-button--compact">Manage</button>
+			</td>
 		</tr>
 		<tr>
-			<td>Column 3</td>
-			<td>Column 4</td>
+			<td><a href="#">Server Name</a></td>
+			<td data-title="Location:"> US East-2</td>
+			<td data-title="IP Address:"> 208.123.123.123</td>
+			<td>
+				<button class="dh-button dh-button--compact">Manage</button>
+			</td>
 		</tr>
 		<tr>
-			<td>Column 5</td>
-			<td>Column 6</td>
+			<td><a href="#">Server Name</a></td>
+			<td data-title="Location:"> US East-2</td>
+			<td data-title="IP Address:"> 208.123.123.123</td>
+			<td>
+				<button class="dh-button dh-button--compact">Manage</button>
+			</td>
 		</tr>
 	</tbody>
 </table>
 
 {% highlight html %}
-<table class="Table">
+<table class="dh-table__m">
 	<thead>
-		<tr>Heading</tr>
-		<tr>Heading</tr>
+		<th class="w-50">Name</th>
+		<th>Location</th>
+		<th>IP Address</th>
+		<th />
 	</thead>
 	<tbody>
 		<tr>
-			<td>Column 1</td>
-			<td>Column 2</td>
+			<td><a href="#">Server Name</a></td>
+			<td data-title="Location:"> US East-2</td>
+			<td data-title="IP Address:"> 208.123.123.123</td>
+			<td>
+				<button class="dh-button dh-button--compact">Manage</button>
+			</td>
 		</tr>
 		<tr>
-			<td>Column 3</td>
-			<td>Column 4</td>
+			<td><a href="#">Server Name</a></td>
+			<td data-title="Location:"> US East-2</td>
+			<td data-title="IP Address:"> 208.123.123.123</td>
+			<td>
+				<button class="dh-button dh-button--compact">Manage</button>
+			</td>
 		</tr>
 		<tr>
-			<td>Column 5</td>
-			<td>Column 6</td>
+			<td><a href="#">Server Name</a></td>
+			<td data-title="Location:"> US East-2</td>
+			<td data-title="IP Address:"> 208.123.123.123</td>
+			<td>
+				<button class="dh-button dh-button--compact">Manage</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+{% endhighlight %}
+
+<hr />
+
+## Table Condensed with zebra striping
+<table class="dh-table dh-table--striped dh-table--condensed">
+	<thead>
+		<th class="w-50">Name</th>
+		<th>Location</th>
+		<th>IP Address</th>
+		<th />
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="#">Server Name</a></td>
+			<td> US East-2</td>
+			<td>208.123.123.123</td>
+			<td>
+				<button class="dh-button dh-button--compact">Manage</button>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="#">Server Name</a></td>
+			<td> US East-2</td>
+			<td>208.123.123.123</td>
+			<td>
+				<button class="dh-button dh-button--compact">Manage</button>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="#">Server Name</a></td>
+			<td> US East-2</td>
+			<td>208.123.123.123</td>
+			<td>
+				<button class="dh-button dh-button--compact">Manage</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+{% highlight html %}
+<table class="dh-table dh-table--striped dh-table--condensed">
+	<thead>
+		<th class="w-50">Name</th>
+		<th>Location</th>
+		<th>IP Address</th>
+		<th />
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="#">Server Name</a></td>
+			<td> US East-2</td>
+			<td>208.123.123.123</td>
+			<td>
+				<button class="dh-button dh-button--compact">Manage</button>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="#">Server Name</a></td>
+			<td> US East-2</td>
+			<td>208.123.123.123</td>
+			<td>
+				<button class="dh-button dh-button--compact">Manage</button>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="#">Server Name</a></td>
+			<td> US East-2</td>
+			<td>208.123.123.123</td>
+			<td>
+				<button class="dh-button dh-button--compact">Manage</button>
+			</td>
 		</tr>
 	</tbody>
 </table>
