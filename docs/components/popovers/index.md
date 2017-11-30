@@ -90,7 +90,7 @@ layout: page
           This popover only activates on click.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover t-center w-100">Click dh-popover</a>
+      <a class="dh-button js-toggle-popover t-center w-100">Click popover</a>
       <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.on-click</code></p>
     </div>
 
@@ -100,7 +100,7 @@ layout: page
           This popover only activates on hover.
         </div>
       </div>
-      <a class="dh-button t-center w-100">Hover dh-popover</a>
+      <a class="dh-button t-center w-100">Hover popover</a>
       <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.on-hover</code></p>
     </div>
 
@@ -148,7 +148,7 @@ layout: page
           This popover does not have a caret.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">dh-popover Without Caret</a>
+      <a class="dh-button js-toggle-popover w-100 t-center">Popover Without Caret</a>
     </div>
 
     <div class="dh-popover-container on-click g-1_2">
