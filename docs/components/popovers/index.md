@@ -91,7 +91,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover t-center w-100">Click popover</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.on-click</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.on-click</code></p>
     </div>
 
     <div class="dh-popover-container on-hover g-1_2">
@@ -101,7 +101,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button t-center w-100">Hover popover</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.on-hover</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.on-hover</code></p>
     </div>
 
   </div>
@@ -158,7 +158,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Popover With Caret</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.has-caret</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.has-caret</code></p>
     </div>
 
   </div>
@@ -205,7 +205,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Right Aligned</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--right</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--right</code></p>
     </div>
 
     <div class="dh-popover-container on-click g-1_4">
@@ -215,7 +215,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Bottom Aligned</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--bottom</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--bottom</code></p>
     </div>
 
     <div class="dh-popover-container on-click g-1_4">
@@ -225,7 +225,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Left Aligned</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--left</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--left</code></p>
     </div>
   </div>
 
@@ -280,7 +280,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Flush Left</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--flush-left</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--flush-left</code></p>
     </div>
 
     <div class="dh-popover-container on-click g-1_2 p-bottom-large">
@@ -290,7 +290,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Flush Right</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--flush-right</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--flush-right</code></p>
     </div>
 
   </div>
@@ -330,7 +330,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Flush Top</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--flush-top</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--flush-top</code></p>
     </div>
 
     <div class="dh-popover-container on-click g-1_2">
@@ -340,7 +340,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Flush Bottom</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--flush-bottom</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--flush-bottom</code></p>
     </div>
 
   </div>
@@ -397,7 +397,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Dark</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--dark</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--dark</code></p>
     </div>
 
     <div class="dh-popover-container on-click g-1_4">
@@ -407,7 +407,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Error</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--error</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--error</code></p>
     </div>
 
     <div class="dh-popover-container on-click g-1_4">
@@ -417,7 +417,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Success</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--success</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--success</code></p>
     </div>
 
   </div>
@@ -475,7 +475,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Size 1</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--1</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--1</code></p>
     </div>
 
     <div class="dh-popover-container on-click g-1_3">
@@ -485,7 +485,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Size 2</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--2</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--2</code></p>
     </div>
 
     <div class="dh-popover-container on-click g-1_3">
@@ -495,7 +495,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Size 3</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--3</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--3</code></p>
     </div>
   </div>
 
@@ -507,7 +507,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Size 4</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--4</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--4</code></p>
     </div>
 
     <div class="dh-popover-container on-click g-1_2">
@@ -517,7 +517,7 @@ layout: page
         </div>
       </div>
       <a class="dh-button js-toggle-popover w-100 t-center">Size 5</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-lighter-grey t-darker-grey">.dh-popover--5</code></p>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--5</code></p>
     </div>
 
   </div>
