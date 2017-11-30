@@ -597,7 +597,7 @@ layout: page
       <div class="dh-popover dh-popover--bottom has-caret">
         <div class="dh-popover__wrapper">
           <div class="dh-popover__section">
-            <ul class="List List--padding">
+            <ul class="dh-list dh-list--padding">
 							<li><a href="#">Twitter</a></li>
 							<li><a href="#">Facebook</a></li>
 							<li><a href="#">Google</a></li>
@@ -617,7 +617,7 @@ layout: page
     <div class="dh-popover dh-popover--bottom">
       <div class="dh-popover__wrapper">
         <div class="dh-popover__section">
-          <ul class="List List--padding">
+          <ul class="dh-list dh-list--padding">
             <li><a href="#">Twitter</a></li>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Google</a></li>
