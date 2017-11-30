@@ -16,7 +16,7 @@ Page Header Component
 	- Page header content can vary. Use `.Fluid-Row` classes to space content.
 	- `.Page-Header__nav` should contain the primary navigation
 	- `.Page-Header__subnav` is for all the secondary links we may need to provide
-	- Both nav and subnav supports Lists within a `.popover` as a dropdown
+	- Both nav and subnav supports dh-lists within a `.popover` as a dropdown
 	- The header was built around the idea of a single breakpoint. Below that breakpoint,
 		the header will show a hamburger menu link with the header taking over the screen
 		when shown. Larger than that breakpoint will display the header inline.
@@ -84,8 +84,8 @@ Page Header Component
 }
 
 .Page-Header__nav {
-	@extend .List;
-	@extend .List--inline;
+	@extend .dh-list;
+	@extend .dh-list--inline;
 }
 
 .Page-Header__nav-link {
@@ -116,8 +116,8 @@ Page Header Component
 }
 
 .Page-Header__subnav {
-	@extend .List;
-	@extend .List--inline;
+	@extend .dh-list;
+	@extend .dh-list--inline;
 	padding-left: convertScaleToRem(4);
 }
 

@@ -2,39 +2,159 @@
 
 Table
 
-	Minimal table stylings. Sets padding, alignment and alternate
-	row backgrounds.
+	There are two table styles.
 
-	Adding .table--large-padding will double the padding.
+	The default table (.dh-table) has 24px by 16px padding.
+
+	The condensed table (.dh-table--condensed) has 16px padding
+	all around.
+
+	Add zebra striping with .dh-table--striped
+
+	Usage:
+	<table class="dh-table dh-table--condensed">
+		<thead>
+			<tr>
+				<th>Table head</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Table data</td>
+			</tr>
+		</tbody>
+	</table>
 
 */
 
-.Table {
+// Default
+.dh-table {
 	width: 100%;
 	margin-bottom: convertScaleToRem(4);
 	text-align: left;
 
 	thead tr {
-		border-bottom: 3px solid $lighter-grey;
+		border-bottom: 2px solid $c-g500;
 	}
 
 	th {
-		padding: convertScaleToRem(3) convertScaleToRem(4);
-		font-size: $t-4;
+		padding: convertScaleToRem(2) convertScaleToRem(1);
+		font-size: $t-2;
 		font-family: $heading;
-		color: $black;
+		color: $c-black;
+		text-transform: uppercase;
+	}
+
+	td {
+		padding: convertScaleToRem(2) convertScaleToRem(1);
+		vertical-align: middle;
+		border-bottom: 1px solid $c-g300;
+		font-size: $t-2;
+	}
+}
+
+// Condensed
+.dh-table--condensed {
+	thead tr {
+		border-bottom: 1px solid $c-g300;
+	}
+
+	th, td {
+		padding: convertScaleToRem(1);
+	}
+
+	td {
+		border-bottom: 1px solid $c-g200;
+	}
+}
+
+// Zebra stripes
+.dh-table--striped {
+	tbody tr:nth-child(odd) {background: $c-w100;}
+	tbody tr:nth-child(even) {background: $c-g100;}
+}
+
+// Mobile
+.dh-table__m {
+	@extend .dh-table;
+
+	thead {
+		display: none;
 	}
 
 	tbody tr {
-		@extend .border;
-		@extend .border-light-grey;
+		display: block;
+		margin-bottom: convertScaleToRem(3);
+
+		td {
+			display: block;
+			font-size: $t-3;
+
+			&:before {
+				content: attr(data-title);
+				display: inline-block;
+				width: 150px;
+				font-weight: $t-bold;
+			}
+
+			&:first-child:before {
+				width: auto;
+			}
+
+			&:first-child,
+			&:first-child a {
+				font-size: $t-3;
+				font-weight: $t-bold;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+			}
+
+			&:last-child {
+				border-bottom: 0;
+				margin-bottom: 2rem;
+			}
+
+			button, a {
+				width: calc(100% - 1rem);
+			}
+		}
 	}
 
-	tbody tr:nth-child(odd) {background: #fff;}
-	tbody tr:nth-child(even) {background: $lighter-grey;}
+	@media (min-width: $medium-breakpoint) {
+		thead {
+			display: table-header-group;
+		}
 
-	td {
-		padding: convertScaleToRem(3);
-		vertical-align: middle;
+		tbody tr {
+			display: table-row;
+			margin-bottom: 0;
+			border: 0;
+
+			td {
+				display: table-cell;
+				font-size: $t-2;
+
+				&:before {
+					content: '';
+					width: auto;
+				}
+
+				&:first-child,
+				&:first-child a {
+					font-size: $t-2;
+					font-weight: $t-regular;
+					text-transform: none;
+					letter-spacing: 0;
+				}
+
+				&:last-child {
+					border-bottom: 1px solid $c-g300;
+				}
+
+				button, a {
+					width: auto;
+				}
+			}
+		}
 	}
 }

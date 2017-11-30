@@ -74,3 +74,137 @@
 	margin-bottom: 0.5em;
 	color: $c-g300;
 }
+
+//Toaster Alerts
+
+.dh-toaster-container{
+	position: absolute;
+	top:5.5em;
+	right:1em;
+}
+
+.dh-toaster {
+	position: relative;
+	word-wrap: break-word;
+	background: $c-w100;
+	color: $c-g500;
+	border: $border-size-1 $c-g200 solid;
+	border-radius: $border-radius;
+	margin: 0 0 .5em 0;
+	animation: Toaster 5s ease-in-out both;
+	@include transition (transform $tr-3 ease-in-out);
+
+	&:hover, &:active {
+		transform: scale($s-5); 
+		box-shadow:0 0 10px 0 rgba($c-g500,0.2);
+		cursor: pointer;
+	}
+
+	p{margin:0;}	
+
+	.dh-toaster__type{
+		display: inline-block;
+		vertical-align: middle;
+		background: $c-y300;
+		border-color: $c-y300;
+		border-radius: $border-radius 0 0 $border-radius !important;
+		width: 25%;
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		bottom: -1px;
+		margin: 0;
+
+		svg {
+			position: absolute;
+			top:50%;
+			left:50%;
+			width:24px;
+			height:24px;
+			margin:-12px 0 0 -12px;
+			path { fill: $c-y500 };
+		}
+	}
+}
+
+.dh-toaster--persistent{
+	animation: ToasterPersistent $a-2 ease-in-out backwards;
+}
+
+.dh-toaster--negative{
+	.dh-toaster__type {
+		background: $c-r300;
+		border-color: $c-r300;
+		svg{ path { fill: $c-r100 } }
+	}
+}
+
+.dh-toaster--positive{
+	.dh-toaster__type {	
+		background: $c-t300;
+		border-color: $c-t300;
+		svg{ path { fill: $c-t100 } }
+	}
+}
+
+.dh-toaster__heading{
+	padding: 1.5em;
+	width:75%;
+	transform: translateX(33%);
+	text-transform: uppercase;
+	font: $body;
+	font-size: $t-2;
+	font-weight: $t-bold;
+
+	span{
+		display: block;
+		text-transform: initial;
+		font-weight: $t-regular;
+		margin-top:0.5em;
+	}
+
+}
+
+@keyframes ToasterPersistent { 
+	0% {
+	opacity: 0;
+	transform: scale($s-1) translateX(100%);
+	}
+
+	100% {
+	opacity: 1;
+	transform: scale($s-3) translateX(0);
+	}
+}
+
+@keyframes Toaster { 
+	0% {
+	opacity: 0;
+	transform: scale($s-1) translateX(100%);
+	margin-bottom:0.5em;
+	height:100%;
+	}
+	
+	10% {
+	opacity: 1;
+	transform: scale($s-3) translateX(0);
+	}
+
+	90% {
+	opacity: 1;
+	transform: scale($s-3) translateX(0);
+	margin-bottom:0.5em;
+	height:100%;
+	}
+	
+	100% {
+	opacity: 0;
+	transform: scale($s-1) translateX(100%);
+	margin-bottom:0;
+	height:0;
+	}
+}
+
+@for $i from 1 to 10 {
+	.dh-toaster-container .dh-toaster:nth-child(#{$i}) { animation-delay: $i * 0.3s; }
+}

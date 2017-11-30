@@ -10,23 +10,22 @@ Popover Component
 	- The default width is medium.
 	- Popover content can vary, there are no strict dos and don'ts.
 	- The max-height class is optional. It enforces a 60vh max-height.
-	- It is possible to nest hover Popovers inside of click Popovers.
-	- Popovers with max-height cannot contain nested Popovers.
+	- It is possible to nest hover popovers inside of click popovers.
+	- popovers with max-height cannot contain nested popovers.
 	- Padding size can vary.
 	- The caret is optional.
-	- Replace .on-click with .on-hover
-		for hover Popovers.
+	- Replace .on-click with .on-hover for hover popovers.
 
 	Usage:
-	<div class="Popover-container on-click">
-		<div class="Popover Popover--dark Popover--bottom
-		Popover--flush-left Popover--max-height has-caret">
-			<div class="Popover__wrapper">
+	<div class="dh-popover-container on-click">
+		<div class="dh-popover dh-popover--dark dh-popover--bottom
+		dh-popover--flush-left dh-popover--max-height has-caret">
+			<div class="dh-popover__wrapper">
 				<div class="p-3">
-					This is a dark themed Popover with small padding. It appears
+					This is a dark themed popover with small padding. It appears
 					below the clicked element, is flushed left, has max-height
-					enforced, and has a caret. Note, Popovers must live within
-					.Popover-container. To enable Popovers on hover, the
+					enforced, and has a caret. Note, popovers must live within
+					.dh-popover-container. To enable popovers on hover, the
 					.on-hover class must be included on the
 					container.
 				</div>
@@ -39,12 +38,12 @@ Popover Component
 
 
 // Base
-.Popover-container {
+.dh-popover-container {
 	display: inline-block;
 	position: relative;
 }
 
-.Popover {
+.dh-popover {
 	position: absolute;
 	text-align: center;
 	border-radius: $border-radius;
@@ -58,15 +57,15 @@ Popover Component
 	visibility: hidden;
 }
 
-.Popover,
-.Popover.has-caret:after {
+.dh-popover,
+.dh-popover.has-caret:after {
 	background: #fff;
 	color: $black;
 	transition-duration: $tr-4;
 	transition-timing-function: ease-in-out;
 }
 
-.Popover.has-caret:after {
+.dh-popover.has-caret:after {
 	display: block;
 	position: absolute;
 	border-radius: $border-radius;
@@ -78,9 +77,9 @@ Popover Component
 	bottom: -5px;
 }
 
-.Popover.is-open,
-.on-hover:hover > .Popover,
-.on-hover:focus > .Popover {
+.dh-popover.is-open,
+.on-hover:hover > .dh-popover,
+.on-hover:focus > .dh-popover {
 	opacity: 1;
 	height: auto;
 	overflow: visible;
@@ -91,25 +90,25 @@ Popover Component
 	Max height:
 	Enforces 60% viewport maximum height.
  */
-.Popover--max-height .Popover__wrapper{
+.dh-popover--max-height .dh-popover__wrapper{
 	max-height: 60vh;
 	height: 100%;
 	overflow: hidden;
 }
 
-.Popover--max-height.is-open .Popover__wrapper {
+.dh-popover--max-height.is-open .dh-popover__wrapper {
 	overflow: scroll;
 }
 
 
 /*
 	Themes:
-	- Popover--dark
-	- Popover--error
-	- Popover--success
+	- dh-popover--dark
+	- dh-popover--error
+	- dh-popover--success
 */
-.Popover {
-	&.Popover--dark {
+.dh-popover {
+	&.dh-popover--dark {
 		&,
 		& a {
 			color: #fff;
@@ -121,7 +120,7 @@ Popover Component
 		}
 	}
 
-	&.Popover--error {
+	&.dh-popover--error {
 		&,
 		& a {
 			color: #fff;
@@ -133,7 +132,7 @@ Popover Component
 		}
 	}
 
-	&.Popover--success{
+	&.dh-popover--success{
 		&,
 		& a {
 			color: #fff;
@@ -148,202 +147,202 @@ Popover Component
 
 /*
 	Alignment:
-	- Popover--right
-	- Popover--bottom
-	- Popover--left
+	- dh-popover--right
+	- dh-popover--bottom
+	- dh-popover--left
 
 	Positioning:
-	- Popover--flush-top
-	- Popover--flush-right
-	- Popover--flush-bottom
-	- Popover--flush-left
+	- dh-popover--flush-top
+	- dh-popover--flush-right
+	- dh-popover--flush-bottom
+	- dh-popover--flush-left
 */
-.Popover--bottom {
+.dh-popover--bottom {
 	margin-bottom: 2rem;
 	transform: translateX(-50%);
 }
 
-.Popover:after,
-.Popover--bottom:after {
+.dh-popover:after,
+.dh-popover--bottom:after {
 	margin-left: -6px;
 }
 
-.Popover,
-.Popover:after,
-.Popover--bottom,
-.Popover--bottom:after {
+.dh-popover,
+.dh-popover:after,
+.dh-popover--bottom,
+.dh-popover--bottom:after {
 	left: 50%;
 }
 
-.Popover.is-open,
-.on-hover:hover > .Popover,
-.on-hover:focus > .Popover {
+.dh-popover.is-open,
+.on-hover:hover > .dh-popover,
+.on-hover:focus > .dh-popover {
 	transform: translateX(-50%) translateY(0);
 }
 
-.Popover.Popover--flush-left,
-.Popover.Popover--flush-right {
+.dh-popover.dh-popover--flush-left,
+.dh-popover.dh-popover--flush-right {
 	transform: translateX(0);
 }
 
-.Popover.Popover--flush-left,
-.Popover--bottom.Popover--flush-left {
+.dh-popover.dh-popover--flush-left,
+.dh-popover--bottom.dh-popover--flush-left {
 	left: 0;
 }
 
-.Popover.Popover--flush-right,
-.Popover--bottom.Popover--flush-right {
+.dh-popover.dh-popover--flush-right,
+.dh-popover--bottom.dh-popover--flush-right {
 	right: 0;
 	left: auto;
 }
 
-.Popover.Popover--flush-left,
-.Popover--bottom.Popover--flush-left,
-.Popover.Popover--flush-right,
-.Popover--bottom.Popover--flush-right {
+.dh-popover.dh-popover--flush-left,
+.dh-popover--bottom.dh-popover--flush-left,
+.dh-popover.dh-popover--flush-right,
+.dh-popover--bottom.dh-popover--flush-right {
 	transform-origin: left bottom;
 }
 
-.Popover.Popover--flush-left,
-.Popover.Popover--flush-right,
-.Popover--bottom.Popover--flush-left.is-open,
-.Popover--bottom.Popover--flush-right.is-open,
-.on-hover:hover > .Popover--bottom.Popover--flush-left,
-.on-hover:hover > .Popover--bottom.Popover--flush-right,
-.on-hover:focus > .Popover--bottom.Popover--flush-left,
-.on-hover:focus > .Popover--bottom.Popover--flush-right {
+.dh-popover.dh-popover--flush-left,
+.dh-popover.dh-popover--flush-right,
+.dh-popover--bottom.dh-popover--flush-left.is-open,
+.dh-popover--bottom.dh-popover--flush-right.is-open,
+.on-hover:hover > .dh-popover--bottom.dh-popover--flush-left,
+.on-hover:hover > .dh-popover--bottom.dh-popover--flush-right,
+.on-hover:focus > .dh-popover--bottom.dh-popover--flush-left,
+.on-hover:focus > .dh-popover--bottom.dh-popover--flush-right {
 	transform: translateX(0) translateY(-5px);
 }
 
-.Popover--bottom.Popover--flush-left,
-.Popover--bottom.Popover--flush-right,
-.Popover:not(.Popover--bottom).Popover--flush-left.is-open,
-.Popover:not(.Popover--bottom).Popover--flush-right.is-open,
-.on-hover:hover > .Popover--top.Popover--flush-left,
-.on-hover:hover > .Popover--top.Popover--flush-right,
-.on-hover:focus > .Popover--top.Popover--flush-left,
-.on-hover:focus > .Popover--top.Popover--flush-right {
+.dh-popover--bottom.dh-popover--flush-left,
+.dh-popover--bottom.dh-popover--flush-right,
+.dh-popover:not(.dh-popover--bottom).dh-popover--flush-left.is-open,
+.dh-popover:not(.dh-popover--bottom).dh-popover--flush-right.is-open,
+.on-hover:hover > .dh-popover--top.dh-popover--flush-left,
+.on-hover:hover > .dh-popover--top.dh-popover--flush-right,
+.on-hover:focus > .dh-popover--top.dh-popover--flush-left,
+.on-hover:focus > .dh-popover--top.dh-popover--flush-right {
 	transform: translateX(0) translateY(0);
 }
 
-.Popover--bottom.Popover--flush-left.has-caret:after,
-.Popover.Popover--flush-left.has-caret:after {
+.dh-popover--bottom.dh-popover--flush-left.has-caret:after,
+.dh-popover.dh-popover--flush-left.has-caret:after {
 	left: 28px;
 }
 
-.Popover--bottom.Popover--flush-right.has-caret:after,
-.Popover.Popover--flush-right.has-caret:after {
+.dh-popover--bottom.dh-popover--flush-right.has-caret:after,
+.dh-popover.dh-popover--flush-right.has-caret:after {
 	right: 28px;
 	left: auto;
 }
 
-.Popover--bottom {
+.dh-popover--bottom {
 	margin-top: 1rem;
 	top: calc(100% + 5px);
 	transform: translateX(-50%) translateY(0);
 }
 
-.Popover--bottom.has-caret:after {
+.dh-popover--bottom.has-caret:after {
 	box-shadow: -1px -1px 0 0 rgba(31,45,61,.15);
 	top: -5px;
 }
 
-.Popover--bottom.is-open,
-.on-hover:hover > .Popover--bottom,
-.on-hover:focus > .Popover--bottom {
+.dh-popover--bottom.is-open,
+.on-hover:hover > .dh-popover--bottom,
+.on-hover:focus > .dh-popover--bottom {
 	transform: translateX(-50%) translateY(-5px);
 }
 
-.Popover--right {
+.dh-popover--right {
 	margin-left: 1rem;
 	left: 100%;
 }
 
-.Popover--left:after,
-.Popover--right:after {
+.dh-popover--left:after,
+.dh-popover--right:after {
 	margin-top: -4px;
 }
 
-.Popover--right,
-.Popover--right:after,
-.Popover--left,
-.Popover--left:after {
+.dh-popover--right,
+.dh-popover--right:after,
+.dh-popover--left,
+.dh-popover--left:after {
 	top: 50%;
 }
 
-.Popover--right,
-.Popover--left {
+.dh-popover--right,
+.dh-popover--left {
 	transform: translateX(0) translateY(-50%);
 }
 
-.Popover--right,
-.Popover--left,
-.Popover--bottom {
+.dh-popover--right,
+.dh-popover--left,
+.dh-popover--bottom {
 	bottom: auto;
 }
 
-.Popover--right.is-open,
-.on-hover:hover > .Popover--right,
-.on-hover:focus > .Popover--right {
+.dh-popover--right.is-open,
+.on-hover:hover > .dh-popover--right,
+.on-hover:focus > .dh-popover--right {
 	transform: translateX(-5px) translateY(-50%);
 }
 
-.Popover--right.Popover--flush-bottom,
-.Popover--left.Popover--flush-bottom.is-open,
-.on-hover:focus > .Popover--left.Popover--flush-bottom,
-.on-hover:hover > .Popover--left.Popover--flush-bottom {
-	transform: translateX(0) translateY(calc(-100% + 2.24rem));
+.dh-popover--right.dh-popover--flush-bottom,
+.dh-popover--left.dh-popover--flush-bottom.is-open,
+.on-hover:focus > .dh-popover--left.dh-popover--flush-bottom,
+.on-hover:hover > .dh-popover--left.dh-popover--flush-bottom {
+	transform: translateX(0) translateY(calc(-100% + 1.24rem));
 }
 
-.Popover--right.Popover--flush-bottom.is-open,
-.Popover--left.Popover--flush-bottom,
-.on-hover:focus > .Popover--right.Popover--flush-bottom,
-.on-hover:hover > .Popover--right.Popover--flush-bottom {
-	transform: translateX(-5px) translateY(calc(-100% + 2.24rem));
+.dh-popover--right.dh-popover--flush-bottom.is-open,
+.dh-popover--left.dh-popover--flush-bottom,
+.on-hover:focus > .dh-popover--right.dh-popover--flush-bottom,
+.on-hover:hover > .dh-popover--right.dh-popover--flush-bottom {
+	transform: translateX(-5px) translateY(calc(-100% + 1.24rem));
 }
 
-.Popover--right.Popover--flush-top,
-.Popover--left.Popover--flush-top.is-open,
-.on-hover:focus > .Popover--left.Popover--flush-top,
-.on-hover:hover > .Popover--left.Popover--flush-top {
-	transform: translateX(0) translateY(calc(0% - 2.24rem));
+.dh-popover--right.dh-popover--flush-top,
+.dh-popover--left.dh-popover--flush-top.is-open,
+.on-hover:focus > .dh-popover--left.dh-popover--flush-top,
+.on-hover:hover > .dh-popover--left.dh-popover--flush-top {
+	transform: translateX(0) translateY(calc(0% - 1.24rem));
 }
 
-.Popover--right.Popover--flush-top.is-open,
-.Popover--left.Popover--flush-top,
-.on-hover:focus > .Popover--right.Popover--flush-top,
-.on-hover:hover > .Popover--right.Popover--flush-top {
-	transform: translateX(-5px) translateY(calc(0% - 2.24rem));
+.dh-popover--right.dh-popover--flush-top.is-open,
+.dh-popover--left.dh-popover--flush-top,
+.on-hover:focus > .dh-popover--right.dh-popover--flush-top,
+.on-hover:hover > .dh-popover--right.dh-popover--flush-top {
+	transform: translateX(-5px) translateY(calc(0% - 1.24rem));
 }
 
-.Popover--flush-top.has-caret:after {
+.dh-popover--flush-top.has-caret:after {
 	top: 2rem;
 }
 
-.Popover--flush-bottom.has-caret:after {
+.dh-popover--flush-bottom.has-caret:after {
 	bottom: 1.9rem;
 	top: auto;
 }
 
-.Popover--right.has-caret:after {
+.dh-popover--right.has-caret:after {
 	box-shadow: -1px 1px 0 0 rgba(31,45,61,.15);
 	left: 1px;
 }
 
-.Popover--left {
+.dh-popover--left {
 	margin-left: 1rem;
 	margin-right: 1rem;
 	right: 100%;
 	left: auto;
 }
 
-.Popover--left.is-open,
-.on-hover:hover > .Popover--left,
-.on-hover:focus > .Popover--left {
+.dh-popover--left.is-open,
+.on-hover:hover > .dh-popover--left,
+.on-hover:focus > .dh-popover--left {
 	transform: translateX(5px) translateY(-50%);
 }
 
-.Popover--left.has-caret:after {
+.dh-popover--left.has-caret:after {
 	box-shadow: 1px -1px 0 0 rgba(31,45,61,.15);
 	right: -5px;
 	left: auto;
@@ -352,34 +351,46 @@ Popover Component
 
 /*
 	Sizes:
-	- Popover--small
-	- Popover--large
+	- dh-popover--1
+	- dh-popover--2
+	- dh-popover--3
+	- dh-popover--4
+	- dh-popover--5
 */
 
-.Popover {
-	width: 300px;
-}
-
-.Popover--small {
+.dh-popover--1 {
 	width: 200px;
 }
 
-.Popover--large {
+.dh-popover,
+.dh-popover--2 {
+	width: 300px;
+}
+
+.dh-popover--3 {
 	width: 400px;
+}
+
+.dh-popover--4 {
+	width: 500px;
+}
+
+.dh-popover--5 {
+	width: 600px;
 }
 
 
 /*
 	Dropdown Content:
-	- Popover__section
+	- dh-popover__section
 */
 
-.Popover__section {
+.dh-popover__section {
 	// Separator classes
 	&--separator {
 		border-top: 1px solid darken($lighter-grey, 5%);
 
-		.Popover--dark & {
+		.dh-popover--dark & {
 			border-color: darken($darker-grey, 5%);
 		}
 	}
