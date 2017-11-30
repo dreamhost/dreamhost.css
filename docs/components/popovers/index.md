@@ -1,5 +1,5 @@
 ---
-title: dh-popovers
+title: Popovers
 layout: page
 ---
 
