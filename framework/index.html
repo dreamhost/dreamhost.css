@@ -186,12 +186,14 @@
 		<h2>Modal</h2>
 		<p>DreamHost uses https://github.com/vodkabears/Remodal with some customized styling.</p>
 		<p>To call the modal, use</p>
-		<button class="dh-button" data-remodal-target="modal">Open modal</button>
-		<div class="remodal modal" data-remodal-id="modal">
-			<h1 class="modal__heading">I'm a modal</h1>
-			<p class="modal__introduction">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nemo praesentium aliquid optio labore qui, voluptate consequatur provident quos sed aperiam animi, placeat! Asperiores dicta, fuga modi temporibus laborum, culpa?</p>
-			<button class="dh-button dh-button" data-remodal-action="close">Close</button>
+		<button class="dh-button" data-remodal-target="test-modal">Open modal</button>
+		<div class="remodal dh-modal" data-remodal-id="test-modal">
+			<p class="t-5">Modal Window Title</p>
+			<p>Modal window descriptive text.</p>
+			<div class="dh-modal__button-group">
+				<button class="dh-button dh-button--primary" data-remodal-action="close">Primary Button</button>
+				<button class="dh-button" data-remodal-action="close">Secondary Button</button>
+			</div>
 		</div>
 	</section>
 
@@ -887,7 +889,6 @@
 								<li><a href="/dreamhost.css/components/table">Table</a></li>
 								<li><a href="/dreamhost.css/components/header">Header</a></li>
 								<li><a href="/dreamhost.css/components/lists">dh-lists</a></li>
-								<li><a href="/dreamhost.css/components/modals">Modals</a></li>
 								<li><a href="/dreamhost.css/components/popovers">dh-popovers</a></li>
 								<li><a href="/dreamhost.css/components/transitions">Transitions</a></li>
 							</ul>
