@@ -190,7 +190,7 @@ Styleguide Base.dh-buttons
 }
 
 // Text
-.dh-button--text{
+.dh-button--text {
 	background: transparent;
 	border: none;
 	position: relative;
@@ -209,7 +209,7 @@ Styleguide Base.dh-buttons
 	&:active {color:rgba($c-b700, 0.6);}
 }
 
-.dh-button--text:before{
+.dh-button--text:before {
 	content: "";
 	position: absolute;
 	z-index: $z-0;
@@ -222,7 +222,7 @@ Styleguide Base.dh-buttons
 	@include transition (right $tr-4 ease-out);
 }
 
-.dh-button--text:hover:before{
+.dh-button--text:hover:before {
 	right:0%;
 }
 
