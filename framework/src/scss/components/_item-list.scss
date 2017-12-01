@@ -25,7 +25,8 @@
 	white-space: nowrap;
 }
 
-.dh-item-list.dh-item-list--responsive {
+// TODO: Change this to __s size when a $small-breakpoint is available
+.dh-item-list__m {
 	.dh-item-list__item-desc, .dh-item-list__item-btn {
 		display: block;
 		text-align: center;
@@ -36,7 +37,7 @@
 		margin-top: 24px;
 	}
 
-	@media (min-width: 640px) {
+	@media (min-width: $medium-breakpoint) {
 		.dh-item-list__item {
 			display: table;
 			width: 100%;
