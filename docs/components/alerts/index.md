@@ -3,37 +3,66 @@ title: Alerts
 layout: page
 ---
 
-<p class="t-4">Alerts! For good things, bad things and neutral things.</p>
+<p class="t-4">Banner Notifications. For good things, bad things and neutral things.</p>
 
 <hr />
 
-<div class="Alert">
-	<p class="Alert__heading">Neutral alert</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
-</div>
-<div class="Alert Alert--error">
-	<p class="Alert__heading">Scary alert</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
-</div>
-<div class="Alert Alert--success">
-	<p class="Alert__heading">Happy alert</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+<div class="m-bottom-7">
+
+<div class="dh-notification">
+	<div class="dh-notification__wrapper">
+		<h3 class="dh-notification__heading">Neutral notification</h3>
+		<span class="dh-notification__time">Jan 5, 2017  4:55pm PST</span>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+		<button role="button" class="dh-button dh-button--text">Primary action</button>
+	</div><!--dh-notification__wrapper-->
+</div><!--dh-notification-->
+<div class="dh-notification dh-notification--positive">
+	<div class="dh-notification__wrapper">
+		<h3 class="dh-notification__heading">Positive notification</h3>
+		<span class="dh-notification__time">Jan 5, 2017  4:55pm PST</span>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+		<button role="button" class="dh-button dh-button--text">Primary action</button>
+	</div><!--dh-notification__wrapper-->
+</div><!--dh-notification-->
+<div class="dh-notification dh-notification--negative">
+	<div class="dh-notification__wrapper">
+		<h3 class="dh-notification__heading">Warning notification</h3>
+		<span class="dh-notification__time">Jan 5, 2017  4:55pm PST</span>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+		<button role="button" class="dh-button dh-button--text">Primary action</button>
+	</div><!--dh-notification__wrapper-->
+</div><!--dh-notification-->
+
 </div>
 
 {% highlight html %}
-<div class="Alert">
-	<p class="Alert__heading">Neutral alert</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
-</div>
-<div class="Alert Alert--error">
-	<p class="Alert__heading">Scary alert</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
-</div>
-<div class="Alert Alert--success">
-	<p class="Alert__heading">Happy alert</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
-</div>
+<div class="dh-notification">
+	<div class="dh-notification__wrapper">
+		<h3 class="dh-notification__heading">Neutral notification</h3>
+		<span class="dh-notification__time">Jan 5, 2017  4:55pm PST</span>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+		<button role="button" class="dh-button dh-button--text">Primary action</button>
+	</div><!--dh-notification__wrapper-->
+</div><!--dh-notification-->
+<div class="dh-notification dh-notification--positive">
+	<div class="dh-notification__wrapper">
+		<h3 class="dh-notification__heading">Positive notification</h3>
+		<span class="dh-notification__time">Jan 5, 2017  4:55pm PST</span>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+		<button role="button" class="dh-button dh-button--text">Primary action</button>
+	</div><!--dh-notification__wrapper-->
+</div><!--dh-notification-->
+<div class="dh-notification dh-notification--negative">
+	<div class="dh-notification__wrapper">
+		<h3 class="dh-notification__heading">Warning notification</h3>
+		<span class="dh-notification__time">Jan 5, 2017  4:55pm PST</span>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+		<button role="button" class="dh-button dh-button--text">Primary action</button>
+	</div><!--dh-notification__wrapper-->
+</div><!--dh-notification-->
 {% endhighlight%}
+
 
 <hr />
 
@@ -69,4 +98,36 @@ layout: page
 		<p class="dh-toaster__heading">Negative toaster notification<span>Click for more details</span></p>
 	</div><!--dh-toaster-->
 </div><!--dh-toaster-container-->
+{% endhighlight%}
+
+<p class="t-4">Alerts! For good things, bad things and neutral things.</p>
+
+<hr />
+
+<div class="Alert">
+	<p class="Alert__heading">Neutral alert</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+</div>
+<div class="Alert Alert--success">
+	<p class="Alert__heading">Happy alert</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+</div>
+<div class="Alert Alert--error">
+	<p class="Alert__heading">Scary alert</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+</div>
+
+{% highlight html %}
+<div class="Alert">
+	<p class="Alert__heading">Neutral alert</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+</div>
+<div class="Alert Alert--success">
+	<p class="Alert__heading">Happy alert</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+</div>
+<div class="Alert Alert--error">
+	<p class="Alert__heading">Scary alert</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+</div>
 {% endhighlight%}
