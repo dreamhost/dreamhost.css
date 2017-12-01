@@ -53,12 +53,12 @@ layout: page
 
 <div class="m-bottom-5">
 	<span role="button" class="m-bottom-2 dh-button">Default Shape</span>
-	<span role="button" class=" m-bottom-2 dh-button dh-button--text">Text Shape</span>
+	<span role="button" class=" m-bottom-2 dh-button dh-button__text">Text Shape</span>
 </div>
 
 {% highlight html %}
 <span role="button" class="dh-button">Default Shape</span>
-<span role="button" class="dh-button dh-button--text">Text Shape</span>
+<span role="button" class="dh-button dh-button__text">Text Shape</span>
 {% endhighlight %}
 
 <hr />
