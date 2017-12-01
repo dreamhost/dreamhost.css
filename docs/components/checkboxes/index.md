@@ -76,3 +76,31 @@ layout: page
 	</label>
 </div>
 {% endhighlight %}
+
+<hr />
+
+## Checkbox as a toggle
+
+<div class="dh-toggle">
+    <input class="dh-toggle__input" type="checkbox" id="toggle" />
+    <label for="toggle" class="dh-toggle__label">
+        <span class="dh-toggle__visible"></span>
+        <span class="dh-toggle__description">
+            <span class="dh-toggle__checked">On</span>
+            <span class="dh-toggle__unchecked">Off</span>
+        </span>
+    </label>
+</div>
+
+{% highlight html %}
+<div class="dh-toggle">
+    <input class="dh-toggle__input" type="checkbox" id="toggle" />
+    <label for="toggle" class="dh-toggle__label">
+        <span class="dh-toggle__visible"></span>
+        <span class="dh-toggle__description">
+            <span class="dh-toggle__checked">On</span>
+            <span class="dh-toggle__unchecked">Off</span>
+        </span>
+    </label>
+</div>
+{% endhighlight %}

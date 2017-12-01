@@ -21,7 +21,7 @@ layout: page
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact">Manage</button>
+				<button class="dh-button dh-button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -29,7 +29,7 @@ layout: page
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact">Manage</button>
+				<button class="dh-button dh-button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -37,7 +37,7 @@ layout: page
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact">Manage</button>
+				<button class="dh-button dh-button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
 	</tbody>
@@ -57,7 +57,7 @@ layout: page
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact">Manage</button>
+				<button class="dh-button dh-button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -65,7 +65,7 @@ layout: page
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact">Manage</button>
+				<button class="dh-button dh-button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -73,7 +73,7 @@ layout: page
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact">Manage</button>
+				<button class="dh-button dh-button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
 	</tbody>
@@ -96,7 +96,7 @@ layout: page
 			<td> US East-2</td>
 			<td>208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact">Manage</button>
+				<button class="dh-button dh-button--compact l-float-right">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -104,7 +104,7 @@ layout: page
 			<td> US East-2</td>
 			<td>208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact">Manage</button>
+				<button class="dh-button dh-button--compact l-float-right">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -112,7 +112,7 @@ layout: page
 			<td> US East-2</td>
 			<td>208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact">Manage</button>
+				<button class="dh-button dh-button--compact l-float-right">Manage</button>
 			</td>
 		</tr>
 	</tbody>
@@ -132,7 +132,7 @@ layout: page
 			<td> US East-2</td>
 			<td>208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact">Manage</button>
+				<button class="dh-button dh-button--compact l-float-right">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -140,7 +140,7 @@ layout: page
 			<td> US East-2</td>
 			<td>208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact">Manage</button>
+				<button class="dh-button dh-button--compact l-float-right">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -148,7 +148,7 @@ layout: page
 			<td> US East-2</td>
 			<td>208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact">Manage</button>
+				<button class="dh-button dh-button--compact l-float-right">Manage</button>
 			</td>
 		</tr>
 	</tbody>
