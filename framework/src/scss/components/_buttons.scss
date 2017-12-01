@@ -31,9 +31,9 @@ Styleguide Base.dh-buttons
 
 .dh-button {
 	font-family: $body;
-	color: $black;
+	color: $c-black;
 	background: none;
-	border: solid 1px $light-grey;
+	border: solid 1px $c-g200;
 	border-radius: 3px;
 	display: inline-block;
 	font-size: $t-0;
@@ -61,9 +61,9 @@ Styleguide Base.dh-buttons
 	&:hover,
 	&:active,
 	&.is-open {
-		border: solid 1px $blue;
+		border: solid 1px $c-b300;
 		background: none;
-		color: $black;
+		color: $c-black;
 		text-decoration: none;
 	}
 
@@ -83,10 +83,10 @@ Styleguide Base.dh-buttons
 
 // Colors
 .dh-button--primary {
-	background: $darkest-blue;
+	background: $c-b700;
 	color: $white;
-	border: solid 1px $darkest-blue;
-	&:hover, &:active, &.is-open {	color: $black; background: none; border-color: $darkest-blue; }
+	border: solid 1px $c-b700;
+	&:hover, &:active, &.is-open {	color: $c-black; background: none; border-color: $c-b700; }
 }
 
 // Tags
@@ -96,13 +96,13 @@ Styleguide Base.dh-buttons
 	margin-left: 2.5em;
 
 	&:hover {
-		&:hover { border-color: $yellow; }
+		&:hover { border-color: $c-y300; }
 	}
 
 	&:before {
 		content: 'label';
-		background-color: $yellow;
-		color: $darker-yellow;
+		background-color: $c-y300;
+		color: $c-y500;
     	position: absolute;
     	left: -2.5em;
 		top: 15%;
@@ -111,13 +111,13 @@ Styleguide Base.dh-buttons
 	}
 
 	&.dh-button__tag--positive {
-		&:hover, &.is-open { border-color: $blue; }
-		&:before { background-color: $blue; color: $white; }
+		&:hover, &.is-open { border-color: $c-b300; }
+		&:before { background-color: $c-b300; color: $c-w100; }
 	}
 
 	&.dh-button__tag--negative {
-		&:hover, &.is-open { border-color: $red; }
-		&:before { background-color: $red; color: $white; }
+		&:hover, &.is-open { border-color: $c-r300; }
+		&:before { background-color: $c-r300; color: $c-w100; }
 	}
 
 	&.dh-button--compact {
@@ -135,33 +135,33 @@ Styleguide Base.dh-buttons
 
 // Transaction
 .dh-button--transaction {
-	background: $orange;
-	border-color:$orange;
-	color: $white;
+	background: $c-o300;
+	border-color:$c-o300;
+	color: $c-w100;
 
 	&:hover, &:active, &.is-open {
 		background: none;
-		border-color: $orange;
-		color: $black;
+		border-color: $c-o300;
+		color: $c-black;
 	}
 
-	&.dh-button--text { color: $orange; background: transparent; }
-	&.dh-button--text:hover { color: darken($orange, 10%); background: transparent; }
+	&.dh-button--text { color: $c-o300; background: transparent; }
+	&.dh-button--text:hover { color: darken($c-o300, 10%); background: transparent; }
 }
 
 // Danger!
 .dh-button--danger {
-	background: $red;
-	border-color: $red;
-	color: $white;
+	background: $c-r300;
+	border-color: $c-r300;
+	color: $c-w100;
 
 	&:hover, &:active, &.is-open {
 		background: none;
-		border-color: $red;
-		color: $black; }
+		border-color: $c-r300;
+		color: $c-black; }
 
-	&.dh-button--text { color: $red; background: transparent; }
-	&.dh-button--text:hover { color: darken($red, 10%); background: transparent; }
+	&.dh-button--text { color: $c-r300; background: transparent; }
+	&.dh-button--text:hover { color: darken($c-r300, 10%); background: transparent; }
 }
 
 // Compact
@@ -174,26 +174,27 @@ Styleguide Base.dh-buttons
 	// Disable Button
 	cursor: not-allowed;
 	text-shadow: none;
-	background: $light-grey;
-	color: $dark-grey;
+	background: $c-g200;
+	color: $c-g400;
 
 	&:hover, &:active, &.is-open {
-		background: $light-grey;
-		color: $dark-grey;
+		background: $c-g200;
+		color: $c-g400;
 		transform: scale($s-3);
 		box-shadow: none;
-		border-color: $light-grey;
+		border-color: $c-g200;
 	}
 
 	&:active{ pointer-events: none; }
-	&.dh-button--text {color: $dark-grey; background: transparent; }
+	&.dh-button--text {color: $c-g400; background: transparent; }
 }
 
 // Text
 .dh-button--text {
 	background: transparent;
 	border: none;
-	color: $dark-blue;
+	position: relative;
+	color: $c-b500;
 	text-decoration: none;
 	padding: 0;
 
@@ -201,14 +202,14 @@ Styleguide Base.dh-buttons
 		border: none;
 		background: transparent;
 		box-shadow: none;
-		color: darken($dark-blue, 10%);
+		color: darken($c-b500, 10%);
 		transform: scale($s-3);
 	}
 
-	&:active {color:rgba($darkest-blue, 0.6);}
+	&:active {color:rgba($c-b700, 0.6);}
 }
 
-.dh-button--text:before{
+.dh-button--text:before {
 	content: "";
 	position: absolute;
 	z-index: $z-0;
@@ -221,7 +222,7 @@ Styleguide Base.dh-buttons
 	@include transition (right $tr-4 ease-out);
 }
 
-.dh-button--text:hover:before{
+.dh-button--text:hover:before {
 	right:0%;
 }
 
