@@ -13,12 +13,10 @@ Usage
 .dh-button__tag            - Tag Button
 .dh-button__tag--positive  - Positive Tag Button
 .dh-button__tag--negative  - Negative Tag Button
-.dh-button__text            - Text
-.dh-button__text--secondary - Text Secondary
 
 Shapes
 .dh-button                 - Default shape
-.dh-button__text           - Underlined text
+.dh-button--text           - Underlined text
 
 Sizes
 .dh-button                 - Default size
@@ -147,8 +145,8 @@ Styleguide Base.dh-buttons
 		color: $c-black;
 	}
 
-	&.dh-button__text { color: $c-o300; background: transparent; }
-	&.dh-button__text:hover { color: darken($c-o300, 10%); background: transparent; }
+	&.dh-button--text { color: $c-o300; background: transparent; }
+	&.dh-button--text:hover { color: darken($c-o300, 10%); background: transparent; }
 }
 
 // Danger!
@@ -162,8 +160,8 @@ Styleguide Base.dh-buttons
 		border-color: $c-r300;
 		color: $c-black; }
 
-	&.dh-button__text { color: $c-r300; background: transparent; }
-	&.dh-button__text:hover { color: darken($c-r300, 10%); background: transparent; }
+	&.dh-button--text { color: $c-r300; background: transparent; }
+	&.dh-button--text:hover { color: darken($c-r300, 10%); background: transparent; }
 }
 
 // Compact
@@ -188,11 +186,11 @@ Styleguide Base.dh-buttons
 	}
 
 	&:active{ pointer-events: none; }
-	&.dh-button__text {color: $c-g400; background: transparent; }
+	&.dh-button--text {color: $c-g400; background: transparent; }
 }
 
 // Text
-.dh-button__text{
+.dh-button--text{
 	background: transparent;
 	border: none;
 	position: relative;
@@ -209,18 +207,9 @@ Styleguide Base.dh-buttons
 	}
 
 	&:active {color:rgba($c-b700, 0.6);}
-
-	&.dh-button__text--secondary{
-		color: $c-g400;
-		&:hover, &:active, &.is-open {
-			color: darken($c-g500, 10%);
-		}
-	
-	}
-
 }
 
-.dh-button__text:before{
+.dh-button--text:before{
 	content: "";
 	position: absolute;
 	z-index: $z-0;
@@ -233,7 +222,7 @@ Styleguide Base.dh-buttons
 	@include transition (right $tr-4 ease-out);
 }
 
-.dh-button__text:hover:before{
+.dh-button--text:hover:before{
 	right:0%;
 }
 
