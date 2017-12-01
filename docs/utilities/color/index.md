@@ -103,16 +103,29 @@ layout: page
 
 <h4>Type / Delineators</h4>
 <div class="u-clearfix m-bottom-4">
-	<div class="g-1_4 bg-c-g500 p-top-3">
+	<div class="g-1_2 bg-c-g500 p-top-3">
 		<ul class="t-center p-2 u-clearfix">
 			<li class="t-center t-c-w100 g-1_4"><span class="t-3">A</span><br />&#128515;</li>
 			<li class="t-center t-c-w100 g-1_4"><span class="t-1">A</span><br />&#128515;</li>
 			<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128557;</li>
 			<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128557;</li>
 		</ul>
-		<p class="p-3 bg-c-g100 m-0"><strong>Metal</strong><br />Sass $c-g500<br />Hex#434F58<br />rgb(67,79,88)</p>
+		<p class="p-3 bg-c-g100 m-0"><strong>Metal</strong><br />Sass $c-g500<br />Hex #434F58<br />rgb(67,79,88)</p>
 	</div><!--Metal-->
-	<div class="g-1_4 bg-c-g300 p-top-3">
+
+	<div class="g-1_2 bg-c-g400 p-top-3">
+		<ul class="t-center p-2 u-clearfix">
+			<li class="t-center t-c-w100 g-1_4"><span class="t-3">A</span><br />&#128557;</li>
+			<li class="t-center t-c-w100 g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+			<li class="t-center g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+			<li class="t-center g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+		</ul>
+		<p class="p-3 bg-c-g100 m-0"><strong>Galactic</strong><br />Sass $c-g400<br />Hex #909EA8<br />rgb(144,158,168)</p>
+	</div><!--Galactic-->
+</div>
+
+<div class="u-clearfix m-bottom-4">
+	<div class="g-1_3 bg-c-g300 p-top-3">
 		<ul class="t-center p-2 u-clearfix">
 			<li class="t-center t-c-w100 g-1_4"><span class="t-3">A</span><br />&#128557;</li>
 			<li class="t-center t-c-w100 g-1_4"><span class="t-1">A</span><br />&#128557;</li>
@@ -121,7 +134,8 @@ layout: page
 		</ul>
 		<p class="p-3 bg-c-g100 m-0"><strong>Cloudy</strong><br />Sass $c-g300<br />Hex #AFBFC9<br />rgb(175,191,201)</p>
 	</div><!--Cloudy-->
-	<div class="g-1_4 bg-c-g200 p-top-3">
+
+	<div class="g-1_3 bg-c-g200 p-top-3">
 		<ul class="t-center p-2 u-clearfix">
 			<li class="t-center t-c-w100 g-1_4"><span class="t-3">A</span><br />&#128557;</li>
 			<li class="t-center t-c-w100 g-1_4"><span class="t-1">A</span><br />&#128557;</li>
@@ -130,7 +144,8 @@ layout: page
 		</ul>
 		<p class="p-3 bg-c-g100 m-0"><strong>Smoke</strong><br />Sass $c-g200<br />Hex #E0E4E8<br />rgb(224,228,232)</p>
 	</div><!--Smoke-->
-	<div class="g-1_4 bg-c-g100 p-top-3">
+
+	<div class="g-1_3 bg-c-g100 p-top-3">
 		<ul class="t-center p-2 u-clearfix">
 			<li class="t-center t-c-w100 g-1_4"><span class="t-3">A</span><br />&#128557;</li>
 			<li class="t-center t-c-w100 g-1_4"><span class="t-1">A</span><br />&#128557;</li>

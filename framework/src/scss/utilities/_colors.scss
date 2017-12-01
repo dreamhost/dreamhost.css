@@ -41,6 +41,7 @@ Color Utilities
 
 //grey
 .bg-c-g500 {background: $c-g500 !important}
+.bg-c-g400 {background: $c-g400 !important}
 .bg-c-g300 {background: $c-g300 !important}
 .bg-c-g200 {background: $c-g200 !important}
 .bg-c-g100 {background: $c-g100 !important}
@@ -78,6 +79,7 @@ Color Utilities
 
 //grey
 .t-c-g500 {color: $c-g500 !important}
+.t-c-g300 {color: $c-g400 !important}
 .t-c-g300 {color: $c-g300 !important}
 .t-c-g200 {color: $c-g200 !important}
 .t-c-g100 {color: $c-g100 !important}
@@ -116,6 +118,7 @@ Combo Colors
 
 //grey
 .c-c-g500 {@extend .bg-c-g500; @extend .t-c-w100;}
+.c-c-g300 {@extend .bg-c-g400; @extend .t-c-b700;}
 .c-c-g300 {@extend .bg-c-g300; @extend .t-c-b700;}
 .c-c-g200 {@extend .bg-c-g200; @extend .t-c-b700;}
 .c-c-g100 {@extend .bg-c-g100; @extend .t-c-b700;}
