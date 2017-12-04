@@ -108,7 +108,7 @@ Styleguide Base.dh-buttons
 	&:before {
 		content: 'label';
 		background-color: $c-y300;
-		color: #6F5F1B;
+		color: $c-y500;
     	position: absolute;
     	left: -2.5em;
 		top: 15%;
@@ -143,7 +143,7 @@ Styleguide Base.dh-buttons
 .dh-button--transaction {
 	background: $c-o300;
 	border-color: $c-o300;
-	color: #664200;
+	color: $c-o500;
 
 	&:hover, &:active, &.is-open {
 		background: $c-w100;
@@ -159,7 +159,7 @@ Styleguide Base.dh-buttons
 .dh-button--danger {
 	background: $c-r300;
 	border-color: $c-r300;
-	color: #4F0703;
+	color: $c-r500;
 
 	&:hover, &:active, &.is-open {
 		background: $c-w100;

@@ -218,11 +218,11 @@ layout: page
 	<div class="g-1_3 bg-c-o500 p-top-3">
 		<ul class="t-center p-2 u-clearfix">
 			<li class="t-center t-c-w100 g-1_4"><span class="t-3">A</span><br />&#128515;</li>
-			<li class="t-center t-c-w100 g-1_4"><span class="t-1">A</span><br />&#128557;</li>
-			<li class="t-center g-1_4 t-c-b700"><span class="t-3">A</span><br />&#128515;</li>
-			<li class="t-center g-1_4 t-c-b700"><span class="t-1">A</span><br />&#128515;</li>
+			<li class="t-center t-c-w100 g-1_4"><span class="t-1">A</span><br />&#128515;</li>
+			<li class="t-center g-1_4 t-c-b700"><span class="t-3">A</span><br />&#128557;</li>
+			<li class="t-center g-1_4 t-c-b700"><span class="t-1">A</span><br />&#128557;</li>
 		</ul>
-		<p class="p-3 bg-c-g100 m-0"><strong>Autumn</strong><br />Sass $c-o500<br />Hex #C97400<br />rgb(201,116,0)</p>
+		<p class="p-3 bg-c-g100 m-0"><strong>Autumn</strong><br />Sass $c-o500<br />Hex #664200<br />rgb(102,66,0)</p>
 	</div><!--Autumn-->
 	<div class="g-1_3 bg-c-o300 p-top-3">
 		<ul class="t-center p-2 u-clearfix">
@@ -279,12 +279,12 @@ layout: page
 <div class="u-clearfix m-bottom-7">
 	<div class="g-1_3 bg-c-y500 p-top-3">
 		<ul class="t-center p-2 u-clearfix">
-			<li class="t-center t-c-w100 g-1_4"><span class="t-3">A</span><br />&#128557;</li>
-			<li class="t-center t-c-w100 g-1_4"><span class="t-1">A</span><br />&#128557;</li>
+			<li class="t-center t-c-w100 g-1_4"><span class="t-3">A</span><br />&#128515;</li>
+			<li class="t-center t-c-w100 g-1_4"><span class="t-1">A</span><br />&#128515;</li>
 			<li class="t-center g-1_4 t-c-b700"><span class="t-3">A</span><br />&#128515;</li>
-			<li class="t-center g-1_4 t-c-b700"><span class="t-1">A</span><br />&#128515;</li>
+			<li class="t-center g-1_4 t-c-b700"><span class="t-1">A</span><br />&#128557;</li>
 		</ul>
-		<p class="p-3 bg-c-g100 m-0"><strong>Leather</strong><br />Sass $c-y500<br />Hex #AC942A<br />rgb(172,148,42)</p>
+		<p class="p-3 bg-c-g100 m-0"><strong>Leather</strong><br />Sass $c-y500<br />Hex #6F5F1B<br />rgb(111,95,27)</p>
 	</div><!--Leather-->
 	<div class="g-1_3 bg-c-y300 p-top-3">
 			<ul class="t-center p-2 u-clearfix">
@@ -312,10 +312,10 @@ layout: page
 		<ul class="t-center p-2 u-clearfix">
 			<li class="t-center t-c-w100 g-1_4"><span class="t-3">A</span><br />&#128515;</li>
 			<li class="t-center t-c-w100 g-1_4"><span class="t-1">A</span><br />&#128515;</li>
-			<li class="t-center g-1_4 t-c-b700"><span class="t-3">A</span><br />&#128515;</li>
+			<li class="t-center g-1_4 t-c-b700"><span class="t-3">A</span><br />&#128557;</li>
 			<li class="t-center g-1_4 t-c-b700"><span class="t-1">A</span><br />&#128557;</li>
 		</ul>
-		<p class="p-3 bg-c-g100 m-0"><strong>Rust</strong><br />Sass $c-r500<br />Hex #C97400<br />rgb(184,12,3)</p>
+		<p class="p-3 bg-c-g100 m-0"><strong>Rust</strong><br />Sass $c-r500<br />Hex #4F0703<br />rgb(79,7,3)</p>
 	</div><!--Rust-->
 	<div class="g-1_3 bg-c-r300 p-top-3">
 		<ul class="t-center p-2 u-clearfix">
