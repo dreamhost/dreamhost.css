@@ -90,7 +90,7 @@ Styleguide Base.dh-buttons
 
 	&:hover, &:active, &.is-open {
 		color: $c-black;
-		background: $c-w100
+		background: $c-w100;
 		border-color: $c-b700;
 	}
 }
@@ -162,7 +162,7 @@ Styleguide Base.dh-buttons
 	color: #4F0703;
 
 	&:hover, &:active, &.is-open {
-		background: $c-w100
+		background: $c-w100;
 		border-color: $c-r300;
 		color: $c-black; }
 
