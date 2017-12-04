@@ -32,7 +32,7 @@ Styleguide Base.dh-buttons
 .dh-button {
 	font-family: $body;
 	color: $c-black;
-	background: none;
+	background: $c-w100;
 	border: solid 1px $c-g200;
 	border-radius: 3px;
 	display: inline-block;
@@ -62,7 +62,7 @@ Styleguide Base.dh-buttons
 	&:active,
 	&.is-open {
 		border: solid 1px $c-b300;
-		background: none;
+		background: $c-w100;
 		color: $c-black;
 		text-decoration: none;
 	}
@@ -86,7 +86,13 @@ Styleguide Base.dh-buttons
 	background: $c-b700;
 	color: $white;
 	border: solid 1px $c-b700;
-	&:hover, &:active, &.is-open {	color: $c-black; background: none; border-color: $c-b700; }
+	letter-spacing: .75px;
+
+	&:hover, &:active, &.is-open {
+		color: $c-black;
+		background: none;
+		border-color: $c-b700;
+	}
 }
 
 // Tags
@@ -102,7 +108,7 @@ Styleguide Base.dh-buttons
 	&:before {
 		content: 'label';
 		background-color: $c-y300;
-		color: $c-y500;
+		color: #6F5F1B;
     	position: absolute;
     	left: -2.5em;
 		top: 15%;
@@ -136,24 +142,24 @@ Styleguide Base.dh-buttons
 // Transaction
 .dh-button--transaction {
 	background: $c-o300;
-	border-color:$c-o300;
-	color: $c-w100;
+	border-color: $c-o300;
+	color: #664200;
 
 	&:hover, &:active, &.is-open {
-		background: none;
-		border-color: $c-o300;
+		background: $c-w100;
+		border-color:$c-o300;
 		color: $c-black;
 	}
 
-	&.dh-button--text { color: $c-o300; background: transparent; }
-	&.dh-button--text:hover { color: darken($c-o300, 10%); background: transparent; }
+	&.dh-button--text { color: darken($c-o300, 10%); background: transparent; }
+	&.dh-button--text:hover { color: $c-o300; background: transparent; }
 }
 
 // Danger!
 .dh-button--danger {
 	background: $c-r300;
 	border-color: $c-r300;
-	color: $c-w100;
+	color: #4F0703;
 
 	&:hover, &:active, &.is-open {
 		background: none;
