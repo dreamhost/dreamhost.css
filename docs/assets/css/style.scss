@@ -8,7 +8,7 @@ body {
 }
 
 // Sidenav styles
-.dh-sidenav {
+.Sidenav {
     background: #061C26;
     color: #fff;
     display: none;
@@ -23,7 +23,7 @@ body {
     }
 }
 
-.dh-sidenav-mobile {
+.Sidenav-mobile {
     position: fixed;
     cursor: pointer;
     top: 0;
@@ -35,17 +35,17 @@ body {
     }
 }
 
-.dh-sidenav-mobile--white {
+.Sidenav-mobile--white {
     .icon-hamburger path {
         fill: #fff;
     }
 }
 
-.dh-sidenav--show {
+.Sidenav--show {
     display: block;
 }
 
-.dh-sidenav__nav-link {
+.Sidenav__nav-link {
     color: #CCEFFF;
     text-decoration: none;
     display: block;
@@ -61,13 +61,13 @@ body {
     }
 }
 
-.dh-sidenav__nav-link.is-active {
+.Sidenav__nav-link.is-active {
     background: #1176A5;
     font-weight: bold;
     padding: .3rem 1rem;
 }
 
-.dh-sidenav__label {
+.Sidenav__label {
     font-family: 'Ubuntu', sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
