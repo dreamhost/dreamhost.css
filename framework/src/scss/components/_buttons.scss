@@ -84,13 +84,13 @@ Styleguide Base.dh-buttons
 // Colors
 .dh-button--primary {
 	background: $c-b700;
-	color: $white;
+	color: $c-w100;
 	border: solid 1px $c-b700;
 	letter-spacing: .75px;
 
 	&:hover, &:active, &.is-open {
 		color: $c-black;
-		background: none;
+		background: $c-w100
 		border-color: $c-b700;
 	}
 }
@@ -162,7 +162,7 @@ Styleguide Base.dh-buttons
 	color: #4F0703;
 
 	&:hover, &:active, &.is-open {
-		background: none;
+		background: $c-w100
 		border-color: $c-r300;
 		color: $c-black; }
 
