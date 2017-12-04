@@ -117,14 +117,12 @@ DreamHost uses Ubuntu for headings and Proxima Nova for body text.
 <hr />
 
 ## Text Caret
-Adds a triangular caret to the end of any type of text.
 
 <div>
-	<p class="has-text-caret">This text has a caret.</p>
-	<p>This text does not have a caret.</p>
+	<p class="m-bottom-0 t-2 t-c-r300 t-bold">.t-caret</p>
+	<p class="t-caret">This text has a caret.</p>
 </div>
 
 {% highlight html %}
-<p class="has-text-caret">This text has a caret.</p>
-<p>This text does not have a caret.</p>
+<p class="t-caret">This text has a caret.</p>
 {% endhighlight %}
