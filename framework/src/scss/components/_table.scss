@@ -11,15 +11,16 @@ Table
 
 	Add zebra striping with .dh-table--striped
 
+	Add hierarchy with .dh-table__row, .dh-table__row--parent,
+	and .dh-table__row--child
+
 	Usage:
 	<table class="dh-table dh-table--condensed">
 		<thead>
-			<tr>
-				<th>Table head</th>
-			</tr>
+			<th>Table head</th>
 		</thead>
 		<tbody>
-			<tr>
+			<tr class="dh-table__row">
 				<td>Table data</td>
 			</tr>
 		</tbody>
@@ -27,13 +28,13 @@ Table
 
 */
 
-// Default
-.dh-table {
+.dh-table,
+.dh-table__m {
 	width: 100%;
 	margin-bottom: convertScaleToRem(4);
 	text-align: left;
 
-	thead tr {
+	thead {
 		border-bottom: 2px solid $c-g500;
 	}
 
@@ -44,27 +45,34 @@ Table
 		color: $c-black;
 		text-transform: uppercase;
 	}
+}
+
+// Default
+.dh-table {
+	tbody tr:last-child {
+		border-bottom: 1px solid $c-g300;
+	}
 
 	td {
 		padding: convertScaleToRem(2) convertScaleToRem(1);
 		vertical-align: middle;
-		border-bottom: 1px solid $c-g300;
 		font-size: $t-2;
 	}
-}
 
-// Condensed
-.dh-table--condensed {
-	thead tr {
+	.dh-table__row {
 		border-bottom: 1px solid $c-g300;
+		border-top: 1px solid $c-g300;
 	}
 
-	th, td {
-		padding: convertScaleToRem(1);
+	.dh-table__row--parent {
+		border-bottom: 0;
 	}
 
-	td {
-		border-bottom: 1px solid $c-g200;
+	.dh-table__row--child {
+		background-image: linear-gradient(to right, $c-g300 20%, rgba(255, 255, 255, 0) 0);
+		background-position: top;
+		background-size: 5px 1px;
+		background-repeat: repeat-x;
 	}
 }
 
@@ -76,19 +84,23 @@ Table
 
 // Mobile
 .dh-table__m {
-	@extend .dh-table;
-
 	thead {
 		display: none;
 	}
 
 	tbody tr {
 		display: block;
-		margin-bottom: convertScaleToRem(3);
+		margin-bottom: convertScaleToRem(7);
+		background: $c-g100;
+		border: 1px solid $c-g200;
+		border-radius: 5px;
+		padding: convertScaleToRem(4) convertScaleToRem(4) convertScaleToRem(1);
 
 		td {
 			display: block;
 			font-size: $t-3;
+			padding: convertScaleToRem(2) convertScaleToRem(1);
+			vertical-align: middle;
 
 			&:before {
 				content: attr(data-title);
@@ -110,14 +122,23 @@ Table
 			}
 
 			&:last-child {
-				border-bottom: 0;
-				margin-bottom: 2rem;
+				margin-bottom: 1rem;
 			}
 
 			button, a {
 				width: calc(100% - 1rem);
 			}
 		}
+	}
+
+	.dh-table__row,
+	.dh-table__row--parent,
+	.dh-table__row--child {
+		border: 0;
+	}
+
+	.dh-table__row--child td:first-child {
+		padding-left: convertScaleToRem(1);
 	}
 
 	@media (min-width: $medium-breakpoint) {
@@ -129,6 +150,7 @@ Table
 			display: table-row;
 			margin-bottom: 0;
 			border: 0;
+			background: transparent;
 
 			td {
 				display: table-cell;
@@ -147,14 +169,50 @@ Table
 					letter-spacing: 0;
 				}
 
-				&:last-child {
-					border-bottom: 1px solid $c-g300;
-				}
-
 				button, a {
 					width: auto;
 				}
 			}
+
+			&:last-child {
+				border-bottom: 1px solid $c-g300;
+			}
 		}
+
+		.dh-table__row {
+			border-bottom: 1px solid $c-g300;
+			border-top: 1px solid $c-g300;
+		}
+
+		.dh-table__row--parent {
+			border-bottom: 0;
+		}
+
+		.dh-table__row--child {
+			background-image: linear-gradient(to right, $c-g300 20%, rgba(255, 255, 255, 0) 0);
+			background-position: top;
+			background-size: 5px 1px;
+			background-repeat: repeat-x;
+
+			td:first-child {
+				padding-left: convertScaleToRem(5);
+			}
+		}
+	}
+}
+
+// Condensed
+.dh-table--condensed {
+	thead {
+		border-bottom: 1px solid $c-g300;
+	}
+
+	th, tbody tr td {
+		padding: convertScaleToRem(1);
+	}
+
+	tbody tr,
+	tbody tr:last-child {
+		border-bottom: 1px solid $c-g200;
 	}
 }

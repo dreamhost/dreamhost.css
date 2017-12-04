@@ -76,6 +76,8 @@ $black: $darkest-blue;
 div {color: $black}
 {% endhighlight %}
 
+<hr />
+
 ## Spacing
 
 Use the baseScale with convertScaleToRem() to ensure consistent margins.
@@ -88,6 +90,8 @@ $maxSize: 16;
 {% highlight css %}
 div {margin-bottom: convertScaleToRem(2);}
 {% endhighlight %}
+
+<hr />
 
 ## Typography
 
@@ -131,6 +135,8 @@ $t-extrabold: 900;
 div {font-weight: $t-light}
 {% endhighlight %}
 
+<hr />
+
 ## Borders
 
 {% highlight css %}
@@ -142,6 +148,8 @@ $border-radius-large: 5px;
 {% highlight css %}
 div {border-radius: $border-radius}
 {% endhighlight %}
+
+<hr />
 
 ## Durations
 
@@ -157,6 +165,7 @@ $a-smaller: .3s;
 div {transition-duration: $a-smaller;}
 {% endhighlight %}
 
+<hr />
 
 ## Z-Index
 
@@ -172,6 +181,8 @@ $z-5: 10000;
 {% highlight css %}
 div {position: relative; z-index: $z-4;}
 {% endhighlight %}
+
+<hr />
 
 ## Responsive
 

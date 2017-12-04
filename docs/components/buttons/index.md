@@ -3,6 +3,8 @@ title: Buttons
 layout: page
 ---
 
+<hr />
+
 ## Colors
 <div class="m-bottom-5">
 	<span role="button" class="m-bottom-2 dh-button">Default Button</span>

@@ -38,6 +38,19 @@
 // Line Height
 .t-line-height-1 {line-height: 1 !important}
 
+// Caret
+.t-caret:after {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: .3em solid transparent;
+	border-bottom-width: .14em;
+	border-top-color: currentColor;
+	vertical-align: middle;
+	margin-left: .4em;
+}
+
 @media screen and (min-width: $medium-breakpoint){
 	.t-1__m {font-size: $t-1 !important}
 	.t-2__m {font-size: $t-2 !important}

@@ -82,7 +82,7 @@ layout: page
     Popovers can be triggered two ways: on click or hover. Click events require JavaScript. To enable click popovers, append <code>.on-click</code> to the <code>.dh-popover-container</code>. For hover popovers, append <code>.on-hover</code> instead.
   </p>
 
-  <div class="container u-clearfix bg-c-g100 p-2">
+  <div class="container u-clearfix bg-c-g100 p-7">
 
     <div class="dh-popover-container on-click g-1_2">
       <div class="dh-popover has-caret">
@@ -762,7 +762,7 @@ layout: page
 
   <div class="container u-clearfix bg-c-g100 p-2">
     <div class="dh-popover-container on-click w-100">
-      <div class="dh-popover dh-popover--max-height dh-popover--bottom dh-popover--5 dh-popover--flush-right">
+      <div class="dh-popover dh-popover--bottom dh-popover--5 dh-popover--flush-right">
         <div class="dh-popover__wrapper">
           <div class="dh-popover__section">
             <ul class="dh-list dh-list__menu dh-list--50 dh-list--padding">

@@ -94,11 +94,11 @@ Popover Component
 .dh-popover--max-height .dh-popover__wrapper{
 	max-height: 60vh;
 	height: 100%;
-	overflow: hidden;
+	overflow-y: hidden;
 }
 
 .dh-popover--max-height.is-open .dh-popover__wrapper {
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 

@@ -8,6 +8,36 @@ layout: page
 <hr />
 
 <div class="container-m">
+    <div class="g-1_3 box m-bottom-4 border">
+        <p>Default/Solid border</p>
+    </div>
+
+    <div class="g-1_3 box m-bottom-4 border border-dashed">
+        <p>Dashed border</p>
+    </div>
+
+    <div class="g-1_3 g-omega box m-bottom-4 border border-dotted">
+        <p>Dotted border</p>
+    </div>
+</div>
+
+{% highlight html %}
+<div class="g-1_3 box m-bottom-4 border">
+    <p>Default/Solid border</p>
+</div>
+
+<div class="g-1_3 box m-bottom-4 border border-dashed">
+    <p>Dashed border</p>
+</div>
+
+<div class="g-1_3 g-omega box m-bottom-4 border border-dotted">
+    <p>Dotted border</p>
+</div>
+{% endhighlight %}
+
+<hr />
+
+<div class="container-m">
     <div class="g-1_4 box m-bottom-4 border-top">
         <p>Top border</p>
     </div>
@@ -40,36 +70,6 @@ layout: page
 
 <div class="g-1_4 g-omega box m-bottom-4 border-right">
     <p>Right border</p>
-</div>
-{% endhighlight %}
-
-<hr />
-
-<div class="container-m">
-    <div class="g-1_3 box m-bottom-4 border">
-        <p>Default/Solid border</p>
-    </div>
-
-    <div class="g-1_3 box m-bottom-4 border border-dashed">
-        <p>Dashed border</p>
-    </div>
-
-    <div class="g-1_3 g-omega box m-bottom-4 border border-dotted">
-        <p>Dotted border</p>
-    </div>
-</div>
-
-{% highlight html %}
-<div class="g-1_3 box m-bottom-4 border">
-    <p>Default/Solid border</p>
-</div>
-
-<div class="g-1_3 box m-bottom-4 border border-dashed">
-    <p>Dashed border</p>
-</div>
-
-<div class="g-1_3 g-omega box m-bottom-4 border border-dotted">
-    <p>Dotted border</p>
 </div>
 {% endhighlight %}
 

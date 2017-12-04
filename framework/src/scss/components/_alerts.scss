@@ -15,19 +15,16 @@
 
 .Alert--success {
 	background: $lighter-green;
-	color: $dark-green;
 	border-left: convertScaleToRem(1) solid $green;
 }
 
 .Alert--error {
 	background: $lighter-red;
-	color: $dark-red;
 	border-left: convertScaleToRem(1) solid $red;
 }
 
 .Alert:not(.Alert--success):not(.Alert--error) {
 	background: $lighter-yellow;
-	color: $darker-yellow;
 	border-left: convertScaleToRem(1) solid $yellow;
 }
 
@@ -96,12 +93,12 @@
 	@include transition (transform $tr-3 ease-in-out);
 
 	&:hover, &:active {
-		transform: scale($s-5); 
+		transform: scale($s-5);
 		box-shadow:0 0 10px 0 rgba($c-g500,0.2);
 		cursor: pointer;
 	}
 
-	p{margin:0;}	
+	p{margin:0;}
 
 	.dh-toaster__type{
 		display: inline-block;
@@ -141,7 +138,7 @@
 }
 
 .dh-toaster--positive{
-	.dh-toaster__type {	
+	.dh-toaster__type {
 		background: $c-t300;
 		border-color: $c-t300;
 		svg{ path { fill: $c-t100 } }
@@ -166,7 +163,7 @@
 
 }
 
-@keyframes ToasterPersistent { 
+@keyframes ToasterPersistent {
 	0% {
 	opacity: 0;
 	transform: scale($s-1) translateX(100%);
@@ -178,14 +175,14 @@
 	}
 }
 
-@keyframes Toaster { 
+@keyframes Toaster {
 	0% {
 	opacity: 0;
 	transform: scale($s-1) translateX(100%);
 	margin-bottom:0.5em;
 	height:100%;
 	}
-	
+
 	10% {
 	opacity: 1;
 	transform: scale($s-3) translateX(0);
@@ -197,7 +194,7 @@
 	margin-bottom:0.5em;
 	height:100%;
 	}
-	
+
 	100% {
 	opacity: 0;
 	transform: scale($s-1) translateX(100%);
