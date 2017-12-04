@@ -3,35 +3,7 @@ title: Typography
 layout: page
 ---
 
-<p class="t-4">Typography utilities are prefixed with t-.</p>
-
-<hr />
-
-## Headings
-
-<div>
-	<p class="m-bottom-0 t-2 t-salmon t-bold">h1, .h1</p>
-	<h1>Heading One</h1>
-</div>
-<div>
-	<p class="m-bottom-0 t-2 t-salmon t-bold">h2, .h2</p>
-	<h2>Heading Two</h2>
-</div>
-<div>
-	<p class="m-bottom-0 t-2 t-salmon t-bold">h3, .h3</p>
-	<h3>Heading Three</h3>
-</div>
-<div>
-	<p class="m-bottom-0 t-2 t-salmon t-bold">h4, .h4</p>
-	<h4>Heading Four</h4>
-</div>
-
-{% highlight html %}
-<h1>Heading One</h1>
-<h2>Heading Two</h2>
-<h3>Heading Three</h3>
-<h4>Heading Four</h4>
-{% endhighlight %}
+<p class="t-4">Typography utilities are prefixed with <strong>t-</strong>.</p>
 
 <hr />
 
