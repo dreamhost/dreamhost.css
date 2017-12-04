@@ -3,7 +3,7 @@ title: Layout
 layout: page
 ---
 
-<p class="t-4">Layout utilities are prefixed with l- and control the positioning of elements.</p>
+<p class="t-4">Layout utilities are prefixed with <strong>l-</strong> and control the positioning of elements.</p>
 
 <hr />
 

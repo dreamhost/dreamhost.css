@@ -3,9 +3,12 @@ title: Alerts
 layout: page
 ---
 
-<p class="t-4">Banner Notifications. For good things, bad things and neutral things.</p>
+<p class="t-4">Alerts! For good things, bad things and neutral things.</p>
 
 <hr />
+
+<h2 class="m-bottom-1">Banner Alerts</h2>
+<p class="m-bottom-7">Useful for global errors, system statuses, promotions, etc. All banner alerts include a primary action, with an optional secondary action.</p>
 
 <div class="m-bottom-7">
 
@@ -66,8 +69,8 @@ layout: page
 
 <hr />
 
-<h2>Toaster Notifications</h2>
-<p class="t-4 m-bottom-7">Quick &amp; contextual notifications for the user, with optional persistence ( add <strong>dh-toaster--persistent</strong> to .dh-toaster div). For good things, bad things and neutral things.</p>
+<h2 class="m-bottom-1">Toaster Alerts</h2>
+<p class="m-bottom-7">Useful for in-the-moment contextual notification, such as successful form submission, feature turned on/off, momentary errors, new messages recieved, etc. By default, toasters animate in, and disappear after 3 seconds. They can be made persistent by adding <code>.dh-toaster--persistent</code>.</p>
 
 <div class="w-50 m-bottom-7">
 <div class="dh-toaster dh-toaster--persistent">
@@ -100,9 +103,10 @@ layout: page
 </div><!--dh-toaster-container-->
 {% endhighlight%}
 
-<p class="t-4">Alerts! For good things, bad things and neutral things.</p>
-
 <hr />
+
+<h2 class="m-bottom-1">Banner Alerts (Legacy)</h2>
+<p class="m-bottom-7">Useful for global errors, system statuses, promotions, etc. All banner alerts include a primary action, with an optional secondary action.</p>
 
 <div class="Alert">
 	<p class="Alert__heading">Neutral alert</p>

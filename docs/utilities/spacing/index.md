@@ -50,6 +50,8 @@ layout: page
 <div class="m-16">.m-16</div>
 {% endhighlight %}
 
+<hr />
+
 ## Padding
 <p class="t-l">Padding utilities are prefixed with p- and can be used to add space inside an element on any side.</p>
 
@@ -90,6 +92,8 @@ layout: page
 <div class="p-15">.p-15</div>
 <div class="p-16">.p-16</div>
 {% endhighlight %}
+
+<hr />
 
 ## Responsive
 
