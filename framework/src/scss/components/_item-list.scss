@@ -2,13 +2,13 @@
 	@extend .p-2;
 	font-weight: bold;
 	font-size: 24px;
-	border-bottom: 2px solid;
+	border-bottom: 2px solid $c-g200;
 	margin: 0;
 }
 
 .dh-item-list__item {
 	@extend .p-2;
-	border-bottom: 1px solid $grey;
+	border-bottom: 1px solid $c-g200;
 	display: table;
 	width: 100%;
 }

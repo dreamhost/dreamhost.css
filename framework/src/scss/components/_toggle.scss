@@ -25,13 +25,14 @@ Usage:
 
 .dh-toggle__label {
 	display: block;
+	line-height: 0px;
 }
 
 .dh-toggle__description {
 	position: relative;
 	display: inline-block;
 	top: -8px;
-	padding: 0 0 0 .5em;
+	padding: 0 .5em 0 0;
 	transition: all .2s ease-in-out;
 }
 
