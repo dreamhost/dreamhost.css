@@ -4,31 +4,31 @@ Toggle Component
 Allows users to toggle between two states.
 
 Usage:
-<div class="dh-toggle">
-    <input class="dh-toggle__input" type="checkbox" id="toggle" />
-    <label for="toggle" class="dh-toggle__label">
-        <span class="dh-toggle__visible"></span>
-        <span class="dh-toggle__description">
-            <span class="dh-toggle__checked">On</span>
-            <span class="dh-toggle__unchecked">Off</span>
+<div class="Toggle">
+    <input class="Toggle__input" type="checkbox" id="toggle" />
+    <label for="toggle" class="Toggle__label">
+        <span class="Toggle__visible"></span>
+        <span class="Toggle__description">
+            <span class="Toggle__checked">On</span>
+            <span class="Toggle__unchecked">Off</span>
         </span>
     </label>
 </div>
 
 */
 
-.dh-toggle__input {
+.Toggle__input {
 	position: absolute;
 	margin-left: -9999px;
 	visibility: hidden;
 }
 
-.dh-toggle__label {
+.Toggle__label {
 	display: block;
 	line-height: 0px;
 }
 
-.dh-toggle__description {
+.Toggle__description {
 	position: relative;
 	display: inline-block;
 	top: -8px;
@@ -36,14 +36,14 @@ Usage:
 	transition: all .2s ease-in-out;
 }
 
-.dh-toggle__label .dh-toggle__visible {
+.Toggle__label .Toggle__visible {
 	display: inline-block;
 	position: relative;
 	outline: none;
 	user-select: none;
 }
 
-.dh-toggle__input + .dh-toggle__label .dh-toggle__visible {
+.Toggle__input + .Toggle__label .Toggle__visible {
 	padding: 2px;
 	width: 60px;
 	height: 30px;
@@ -82,10 +82,10 @@ Usage:
 }
 
 // Checked state
-.dh-toggle__input:checked + .dh-toggle__label {
+.Toggle__input:checked + .Toggle__label {
 	color: $c-black;
 
-	.dh-toggle__visible {
+	.Toggle__visible {
 		background-color: $c-b300;
 
 		&:before {
@@ -98,29 +98,29 @@ Usage:
 	}
 }
 
-.dh-toggle__input + .dh-toggle__label .dh-toggle__description .dh-toggle__unchecked,
-.dh-toggle__input:checked + .dh-toggle__label .dh-toggle__description .dh-toggle__checked {
+.Toggle__input + .Toggle__label .Toggle__description .Toggle__unchecked,
+.Toggle__input:checked + .Toggle__label .Toggle__description .Toggle__checked {
 	display: inline-block;
 }
 
-.dh-toggle__input + .dh-toggle__label .dh-toggle__description .dh-toggle__checked,
-.dh-toggle__input:checked + .dh-toggle__label .dh-toggle__description .dh-toggle__unchecked {
+.Toggle__input + .Toggle__label .Toggle__description .Toggle__checked,
+.Toggle__input:checked + .Toggle__label .Toggle__description .Toggle__unchecked {
 	display: none;
 }
 
 // Disabled state
-.dh-toggle__input:disabled {
-	& + .dh-toggle__label {
+.Toggle__input:disabled {
+	& + .Toggle__label {
 		cursor: not-allowed;
 	}
 
-	& + .dh-toggle__label .dh-toggle__visible,
-	& + .dh-toggle__label .dh-toggle__visible:before {
+	& + .Toggle__label .Toggle__visible,
+	& + .Toggle__label .Toggle__visible:before {
 		background-color: $c-g300;
 	}
 
-	& + .dh-toggle__label .dh-toggle__visible:after,
-	& + .dh-toggle__label .dh-toggle__visible:hover:after {
+	& + .Toggle__label .Toggle__visible:after,
+	& + .Toggle__label .Toggle__visible:hover:after {
 		top: 5px;
 		bottom: 3.5px;
 		width: 20px;
@@ -135,27 +135,27 @@ Usage:
 	}
 }
 
-.dh-toggle__input:disabled + .dh-toggle__label .dh-toggle__description {
+.Toggle__input:disabled + .Toggle__label .Toggle__description {
 	color: $c-g400;
 }
 
 // Hover states
-.dh-toggle__input:not([disabled]):hover {
-	.dh-toggle__description {
+.Toggle__input:not([disabled]):hover {
+	.Toggle__description {
 		color: $c-black;
 	}
 
-	& + .dh-toggle__label {
+	& + .Toggle__label {
 		cursor: pointer;
 	}
 
-	& + .dh-toggle__label .dh-toggle__visible,
-	& + .dh-toggle__label .dh-toggle__visible:before {
+	& + .Toggle__label .Toggle__visible,
+	& + .Toggle__label .Toggle__visible:before {
 		background-color: $c-black;
 	}
 
-	&:checked + .dh-toggle__label .dh-toggle__visible,
-	&:checked + .dh-toggle__label .dh-toggle__visible:before {
+	&:checked + .Toggle__label .Toggle__visible,
+	&:checked + .Toggle__label .Toggle__visible:before {
 		background-color: darken($c-b100, 50%);
 	}
 }

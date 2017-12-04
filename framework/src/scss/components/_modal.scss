@@ -1,20 +1,20 @@
 // use remodal.js
 // https://github.com/vodkabears/Remodal
 
-.dh-modal {
+.Modal {
 	padding: convertScaleToRem(3);
 	@extend .u-border-radius-l;
 	@extend .remodal;
 	box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.15);
 }
 
-.dh-modal__button-group {
+.Modal__button-group {
 	@extend .m-top-4;
 }
 
 @media screen and (min-width: $medium-breakpoint){
-	.dh-modal {padding: convertScaleToRem(9)}
-	.dh-modal__heading {font-size: $t-6}
+	.Modal {padding: convertScaleToRem(9)}
+	.Modal__heading {font-size: $t-6}
 }
 
 .remodal-overlay {

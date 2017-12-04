@@ -1,4 +1,4 @@
-.dh-item-list__heading {
+.ItemList__heading {
 	@extend .p-2;
 	font-weight: bold;
 	font-size: 24px;
@@ -6,49 +6,49 @@
 	margin: 0;
 }
 
-.dh-item-list__item {
+.ItemList__item {
 	@extend .p-2;
 	border-bottom: 1px solid $c-g200;
 	display: table;
 	width: 100%;
 }
 
-.dh-item-list__item-desc {
+.ItemList__item-desc {
 	display: table-cell;
 	width: 99%;
 	font-weight: 600;
 }
 
-.dh-item-list__item-btn {
+.ItemList__item-btn {
 	display: inline-block;
 	width: 1%;
 	white-space: nowrap;
 }
 
 // TODO: Change this to __s size when a $small-breakpoint is available
-.dh-item-list__m {
-	.dh-item-list__item-desc, .dh-item-list__item-btn {
+.ItemList__m {
+	.ItemList__item-desc, .ItemList__item-btn {
 		display: block;
 		text-align: center;
 		width: 100%;
 	}
 
-	.dh-item-list__item-btn {
+	.ItemList__item-btn {
 		margin-top: 24px;
 	}
 
 	@media (min-width: $medium-breakpoint) {
-		.dh-item-list__item {
+		.ItemList__item {
 			display: table;
 			width: 100%;
 		}
 
-		.dh-item-list__item-desc {
+		.ItemList__item-desc {
 			display: table-cell;
 			width: 99%;
 			text-align: left;
 		}
-		.dh-item-list__item-btn {
+		.ItemList__item-btn {
 			display: inline-block;
 			width: 1%;
 			margin-top: 0;

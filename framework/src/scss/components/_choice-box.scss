@@ -6,14 +6,14 @@
 
 	Usage:
 	<ul class="u-clearfix">
-		<li class="dh-choice-box g-1_2__m">
-			<input type="radio" class="dh-choice-box__radio"
+		<li class="ChoiceBox g-1_2__m">
+			<input type="radio" class="ChoiceBox__radio"
 				name="example" id="example" value="example" />
-			<label for="example" class="dh-choice-box__label">
-				<div class="dh-choice-box__title">
+			<label for="example" class="ChoiceBox__label">
+				<div class="ChoiceBox__title">
 					Example Title
 				</div>
-				<div class="dh-choice-box__content">
+				<div class="ChoiceBox__content">
 					This is one of two choice boxes that appear
 					next to each other.
 				</div>
@@ -23,7 +23,7 @@
 
 */
 
-.dh-choice-box__label {
+.ChoiceBox__label {
 	border-radius: 3px;
 	box-shadow: inset 0 0 0 1px $light-grey;
 	cursor: pointer;
@@ -36,11 +36,11 @@
 	}
 }
 
-.dh-choice-box__radio:focus ~ .dh-choice-box__label {
+.ChoiceBox__radio:focus ~ .ChoiceBox__label {
 	background: $lighter-grey;
 }
 
-.dh-choice-box__title {
+.ChoiceBox__title {
 	color: $black;
 	display: block;
 	overflow: hidden;
@@ -50,7 +50,7 @@
 	width: 100%;
 }
 
-.dh-choice-box__content {
+.ChoiceBox__content {
 	border-top: 0;
 	color: $darker-grey;
 	overflow: hidden;
@@ -58,7 +58,7 @@
 	transition: all .2s ease-in-out;
 }
 
-.dh-choice-box {
+.ChoiceBox {
 	display: inline-block;
 	font-size: convertScaleToRem(2); // Weird inline-block gap fix
 	margin-bottom: convertScaleToRem(1);
@@ -68,18 +68,18 @@
 
 	&:hover,
 	&:focus {
-		.dh-choice-box__title,
-		.dh-choice-box__content {
+		.ChoiceBox__title,
+		.ChoiceBox__content {
 			color: $black;
 		}
 	}
 }
 
-.dh-choice-box .dh-choice-box__radio {
+.ChoiceBox .ChoiceBox__radio {
 	display: none;
 }
 
-.dh-choice-box .dh-choice-box__radio + .dh-choice-box__label {
+.ChoiceBox .ChoiceBox__radio + .ChoiceBox__label {
 	display: block;
 
 	&:active {
@@ -87,7 +87,7 @@
 	}
 }
 
-.dh-choice-box .dh-choice-box__radio:checked + .dh-choice-box__label {
+.ChoiceBox .ChoiceBox__radio:checked + .ChoiceBox__label {
 	box-shadow: inset 0 0 0 2px $blue;
 	position: relative;
 
@@ -95,11 +95,11 @@
 		transform: scale(1.02);
 	}
 
-	.dh-choice-box__title {
+	.ChoiceBox__title {
 		font-weight: bold;
 	}
 
-	.dh-choice-box__content {
+	.ChoiceBox__content {
 		color: $black;
 	}
 

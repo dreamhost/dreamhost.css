@@ -1,19 +1,19 @@
-// dh-list settings
+// List settings
 
-.dh-list__settings .dh-item-list__item-desc{
+.List__settings .ItemList__item-desc{
 	width: 75%;
 	vertical-align: middle;
 	font-weight: $t-bold;
 }
 
-.dh-list__settings .dh-item-list__item-desc span{
+.List__settings .ItemList__item-desc span{
 	font-weight: $t-regular;
 	margin-left: 2em;
 	display: inline-block;
 }
 
 
-.dh-list__settings .dh-item-list__item-toggle{
+.List__settings .ItemList__item-toggle{
 	width: 100%;
 	text-align: right;
 	display: inline-block;
