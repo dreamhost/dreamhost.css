@@ -46,8 +46,7 @@ Page Header Component
 */
 
 .Page-Header {
-	padding: convertScaleToRem(3);
-
+	padding: convertScaleToRem(3.5) 4em;
 	background: $black;
 	color: #fff;
 }
@@ -67,6 +66,32 @@ Page Header Component
 	> * {
 		@extend .Fluid-Row__item;
 	}
+
+	.dh-popover__section {
+		padding:1em;
+		font-weight:$t-bold;
+		text-align:left;
+
+		.list li {
+			margin-bottom:0.5em;
+
+			&:last-child{
+				margin-bottom:0;
+			}
+
+		}
+
+		.list li a {
+			font-size: 0.875em;
+			color: $c-g500;
+			@include transition (all $tr-3 ease-in-out);
+
+			&:hover {
+				text-decoration: none;
+				color: $c-b300;
+			}
+		}
+	}
 }
 
 .Page-Header__nav,
@@ -75,12 +100,9 @@ Page Header Component
 }
 
 .Page-Header__logo {
-	padding-right: convertScaleToRem(4);
-
-	img {
-		margin: 0;
-		vertical-align: text-bottom;
-	}
+	padding-right: 4em;
+	background-image: url("data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuNjggMThhMTMuMDUgMTMuMDUgMCAwIDEtNi41OCAxLjY0IDEyLjc2IDEyLjc2IDAgMCAxLTEyLjU1LTEzQTEyLjM3IDEyLjM3IDAgMCAxIDYuNDkuMjMgMTIuNjkgMTIuNjkgMCAwIDAgMTIuNTYgMjRhMTIuODEgMTIuODEgMCAwIDAgMTEuMTItNiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0xNyAxOC4xN2guMjNhMTEuNDMgMTEuNDMgMCAwIDAgNS4yOC0xLjMxQTExIDExIDAgMCAwIDI0IDExLjIyIDExLjE3IDExLjE3IDAgMCAwIDEzIDBhMTEuMTkgMTEuMTkgMCAwIDAtNS4zMSAxLjM2IDExIDExIDAgMCAwLTEuNjIgNS41QTExLjEgMTEuMSAwIDAgMCAxNyAxOC4xNyIgZmlsbD0iIzNlOTViZSIvPjwvc3ZnPg==");
+	background-repeat: no-repeat;
 }
 
 .Page-Header__nav {
@@ -91,15 +113,34 @@ Page Header Component
 .Page-Header__nav-link {
 	text-decoration: none;
 	font-weight: $t-bold;
-	color: $light-grey;
+	color: $c-g200;
 	font-size: $t-2;
 	display: inline-block;
 	outline: none;
+	position: relative;
 
 	&:hover,
 	&.is-open {
 		color: $lightest-blue;
+		text-decoration: none;
 	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 100%;
+		bottom: 0;
+		background: $c-b300;
+		height: 1px;
+	
+		@include transition (right $tr-4 ease-out);
+	}
+	
+	&:hover:before {
+		right:0%;
+	}
+	
 }
 
 .Page-Header__nav-link.is-active,
@@ -113,22 +154,26 @@ Page Header Component
 	&.is-open {
 		color: #fff;
 	}
+
+	&:before, &hover:before {
+		height:0;
+	}
 }
 
 .Page-Header__subnav {
 	@extend .dh-list;
 	@extend .dh-list--inline;
+	margin-right: 2.5em;
 	padding-left: convertScaleToRem(4);
 }
 
 .Page-Header__subnav-link {
 	text-decoration: none;
-	color: #fff;
-	font-size: $t-2;
+	color: $c-g200;
 	display: inline-block;
 
 	.icon {
-		opacity: .3;
+		margin-right:0;
 	}
 
 	&:hover,
@@ -136,7 +181,7 @@ Page Header Component
 		color: $lightest-blue;
 
 		.icon {
-			opacity: 1;
+			fill:$c-w100;
 		}
 	}
 }
@@ -146,6 +191,19 @@ button.Page-Header__subnav-link {
 	border-width: 0;
 	cursor: pointer;
 	outline: none;
+	width: 24px;
+	height: 24px;
+
+	&:after {
+		vertical-align: top;
+		margin-top: 12px;
+		margin-left: 4px;
+	}
+
+	button.Page-Header__subnav-link svg {
+		height: 100%;
+		width: 100%;
+	}
 }
 
 .Page-Header.mobile-is-open {
@@ -181,9 +239,10 @@ button.Page-Header__subnav-link {
 		padding: 0;
 	}
 
-	.popover {
+	.dh-popover {
 		position: static;
 		margin: 0;
+		padding:1em;
 		transform: translateX(0) translateY(-5px);
 	}
 
