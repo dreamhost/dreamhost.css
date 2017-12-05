@@ -82,6 +82,7 @@ Page Header Component
 		}
 
 		.list li a {
+			display:block;
 			font-size: 0.875em;
 			color: $c-g500;
 			@include transition (all $tr-3 ease-in-out);
@@ -165,6 +166,11 @@ Page Header Component
 	@extend .dh-list--inline;
 	margin-right: 2.5em;
 	padding-left: convertScaleToRem(4);
+
+	.Page-Header__subnav svg {
+		height: 100%;
+		width: 100%;
+	}
 }
 
 .Page-Header__subnav-link {
@@ -186,23 +192,30 @@ Page Header Component
 	}
 }
 
+.Page-Header__notification-amount{
+	display:inline-block;
+	background:$c-r300;
+	padding:1px 4px;
+	border-radius: 50px;
+	font-size: $t-0;
+	width:16px;
+	height:16px;
+	text-align: center;
+	vertical-align: middle;
+	transform: translate(15px, -4px);
+}
+
+
 button.Page-Header__subnav-link {
 	background: transparent;
 	border-width: 0;
 	cursor: pointer;
 	outline: none;
-	width: 24px;
-	height: 24px;
 
 	&:after {
 		vertical-align: top;
 		margin-top: 12px;
 		margin-left: 4px;
-	}
-
-	button.Page-Header__subnav-link svg {
-		height: 100%;
-		width: 100%;
 	}
 }
 
