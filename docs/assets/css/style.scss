@@ -7,8 +7,8 @@ body {
     background: #fff;
 }
 
-// Sidenav styles
-.Sidenav {
+// SideNav styles
+.SideNav {
     background: #061C26;
     color: #fff;
     display: none;
@@ -23,7 +23,7 @@ body {
     }
 }
 
-.Sidenav-mobile {
+.SideNav-mobile {
     position: fixed;
     cursor: pointer;
     top: 0;
@@ -35,17 +35,17 @@ body {
     }
 }
 
-.Sidenav-mobile--white {
+.SideNav-mobile--white {
     .icon-hamburger path {
         fill: #fff;
     }
 }
 
-.Sidenav--show {
+.SideNav--show {
     display: block;
 }
 
-.Sidenav__nav-link {
+.SideNav__nav-link {
     color: #CCEFFF;
     text-decoration: none;
     display: block;
@@ -61,13 +61,13 @@ body {
     }
 }
 
-.Sidenav__nav-link.is-active {
+.SideNav__nav-link.is-active {
     background: #1176A5;
     font-weight: bold;
     padding: .3rem 1rem;
 }
 
-.Sidenav__label {
+.SideNav__label {
     font-family: 'Ubuntu', sans-serif;
     font-size: 1rem;
     text-transform: uppercase;

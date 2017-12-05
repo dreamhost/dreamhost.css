@@ -1,7 +1,7 @@
-// Sidenav mobile click handler
+// SideNav mobile click handler
 $( document ).ready(function() {
-    $('.js-Sidenav-mobile').on('click', function() {
-        $('.Sidenav').toggleClass('Sidenav--show');
-        $('.Sidenav-mobile').toggleClass('Sidenav-mobile--white');
+    $('.js-sidenav-mobile').on('click', function() {
+        $('.SideNav').toggleClass('SideNav--show');
+        $('.sidenav-mobile').toggleClass('SideNav-mobile--white');
     });
 });
