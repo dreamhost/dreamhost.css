@@ -13,9 +13,9 @@ Cards
     Usage:
     <div class="Card g-1_3">
         <img src="url/image.svg" class="Card__large-icon" />
-        <label>Label</label>
-        <h3>Whatever</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <label class="Card__super">Superscript</label>
+        <h3 class="Card__heading">Whatever</h3>
+        <p class="Card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         <a href="#" class="Button">Go!</a>
     </div>
 
@@ -62,7 +62,7 @@ Cards
     height: 56px;
     width: 56px;
 
-    & ~ .Card__label {
+    & ~ .Card__super {
         position: absolute;
         top: convertScaleToRem(5);
         left: convertScaleToRem(12.5);
