@@ -1,32 +1,32 @@
 //Cart
-.dh-cart__wrapper{
+.Cart__wrapper{
     background-color: $c-g100;
     border:1px solid $c-g100;
 }
 
 
 //Cart Header
-.dh-cart__header{
+.Cart__header{
     @extend .p-3;
     background: $c-g100;
     border-radius: 3px 3px 0 0;
 }
 
-.dh-cart__header p{
+.Cart__header p{
     margin: 0;
 }
 
-.dh-cart__header h3{
+.Cart__header h3{
     margin-bottom: 0.25em;
 }
 
-.dh-cart__heading{
+.Cart__heading{
     margin: 0;
     font-weight: $t-bold;
 }
 
 //Cart Steps
-.dh-cart__step{
+.Cart__step{
     @include transition (all $tr-3 ease-in-out);
     background-color: $c-w100;
     position: relative;
@@ -68,7 +68,7 @@
         }
     }
 
-    &.dh-cart__step--active{
+    &.Cart__step--active{
         background: $c-b100;
 
         a{
@@ -81,8 +81,8 @@
 
     }
 
-    &.dh-cart__step--next, &.dh-cart__step--additional{
-        .dh-cart__heading{ font-weight: $t-regular; }
+    &.Cart__step--next, &.Cart__step--additional{
+        .Cart__heading{ font-weight: $t-regular; }
         span{ color: $c-g200; }
 
 
@@ -97,7 +97,7 @@
         }
     }
 
-    &.dh-cart__step--additional{
+    &.Cart__step--additional{
         color:$c-g300;
         &:before{ background-image:none; }
         &:hover,&:active{ &:before{background-image:none; }}
@@ -105,14 +105,14 @@
 }
 
 //Cart Footer
-.dh-cart__footer{
+.Cart__footer{
     @extend .p-3;
     background: $c-g100;
     font-weight: $t-bold;
     border-radius: 0 0 3px 3px;
 }
 
-.dh-cart__price{
+.Cart__price{
     margin: 0;
     padding: 0;
 

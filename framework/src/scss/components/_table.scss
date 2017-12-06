@@ -4,23 +4,23 @@ Table
 
 	There are two table styles.
 
-	The default table (.dh-table) has 24px by 16px padding.
+	The default table (.Table) has 24px by 16px padding.
 
-	The condensed table (.dh-table--condensed) has 16px padding
+	The condensed table (.Table--condensed) has 16px padding
 	all around.
 
-	Add zebra striping with .dh-table--striped
+	Add zebra striping with .Table--striped
 
-	Add hierarchy with .dh-table__row, .dh-table__row--parent,
-	and .dh-table__row--child
+	Add hierarchy with .Table__row, .Table__row--parent,
+	and .Table__row--child
 
 	Usage:
-	<table class="dh-table dh-table--condensed">
+	<table class="Table Table--condensed">
 		<thead>
 			<th>Table head</th>
 		</thead>
 		<tbody>
-			<tr class="dh-table__row">
+			<tr class="Table__row">
 				<td>Table data</td>
 			</tr>
 		</tbody>
@@ -28,8 +28,8 @@ Table
 
 */
 
-.dh-table,
-.dh-table__m {
+.Table,
+.Table__m {
 	width: 100%;
 	margin-bottom: convertScaleToRem(4);
 	text-align: left;
@@ -48,7 +48,7 @@ Table
 }
 
 // Default
-.dh-table {
+.Table {
 	tbody tr:last-child {
 		border-bottom: 1px solid $c-g300;
 	}
@@ -59,16 +59,16 @@ Table
 		font-size: $t-2;
 	}
 
-	.dh-table__row {
+	.Table__row {
 		border-bottom: 1px solid $c-g300;
 		border-top: 1px solid $c-g300;
 	}
 
-	.dh-table__row--parent {
+	.Table__row--parent {
 		border-bottom: 0;
 	}
 
-	.dh-table__row--child {
+	.Table__row--child {
 		background-image: linear-gradient(to right, $c-g300 20%, rgba(255, 255, 255, 0) 0);
 		background-position: top;
 		background-size: 5px 1px;
@@ -77,13 +77,13 @@ Table
 }
 
 // Zebra stripes
-.dh-table--striped {
+.Table--striped {
 	tbody tr:nth-child(odd) {background: $c-w100;}
 	tbody tr:nth-child(even) {background: $c-g100;}
 }
 
 // Mobile
-.dh-table__m {
+.Table__m {
 	thead {
 		display: none;
 	}
@@ -131,13 +131,13 @@ Table
 		}
 	}
 
-	.dh-table__row,
-	.dh-table__row--parent,
-	.dh-table__row--child {
+	.Table__row,
+	.Table__row--parent,
+	.Table__row--child {
 		border: 0;
 	}
 
-	.dh-table__row--child td:first-child {
+	.Table__row--child td:first-child {
 		padding-left: convertScaleToRem(1);
 	}
 
@@ -179,16 +179,16 @@ Table
 			}
 		}
 
-		.dh-table__row {
+		.Table__row {
 			border-bottom: 1px solid $c-g300;
 			border-top: 1px solid $c-g300;
 		}
 
-		.dh-table__row--parent {
+		.Table__row--parent {
 			border-bottom: 0;
 		}
 
-		.dh-table__row--child {
+		.Table__row--child {
 			background-image: linear-gradient(to right, $c-g300 20%, rgba(255, 255, 255, 0) 0);
 			background-position: top;
 			background-size: 5px 1px;
@@ -202,7 +202,7 @@ Table
 }
 
 // Condensed
-.dh-table--condensed {
+.Table--condensed {
 	thead {
 		border-bottom: 1px solid $c-g300;
 	}

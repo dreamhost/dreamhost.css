@@ -9,13 +9,13 @@ layout: page
 
 <hr />
 
-<ul class="dh-list m-bottom">
+<ul class="List m-bottom">
 	<li>list item</li>
 	<li>list item</li>
 </ul>
 
 {% highlight html %}
-<ul class="dh-list">
+<ul class="List">
 	<li>list item</li>
 	<li>list item</li>
 </ul>
@@ -23,13 +23,13 @@ layout: page
 
 <hr />
 ## Bullets
-<ul class="dh-list dh-list--disc m-bottom">
+<ul class="List List--disc m-bottom">
 	<li>list item</li>
 	<li>list item</li>
 </ul>
 
 {% highlight html %}
-<ul class="dh-list dh-list--disc">
+<ul class="List List--disc">
 	<li>list item</li>
 	<li>list item</li>
 </ul>
@@ -37,13 +37,13 @@ layout: page
 
 <hr />
 ## Inline
-<ul class="dh-list dh-list--inline m-bottom">
+<ul class="List List--inline m-bottom">
 	<li>list item</li>
 	<li>list item</li>
 </ul>
 
 {% highlight html %}
-<ul class="dh-list dh-list--inline">
+<ul class="List List--inline">
 	<li>list item</li>
 	<li>list item</li>
 </ul>
@@ -87,13 +87,13 @@ Displays list items in a row, with a specified primary row item which scales bas
 
 ### Small bold
 A slightly smaller and bolder list with no link underlines.
-<ul class="dh-list dh-list--small-bold m-bottom">
+<ul class="List List--small-bold m-bottom">
 	<li><a href="#">list item</a></li>
 	<li><a href="#">list item</a></li>
 </ul>
 
 {% highlight html %}
-<ul class="dh-list dh-list--small-bold">
+<ul class="List List--small-bold">
 	<li><a href="#">list item</a></li>
 	<li><a href="#">list item</a></li>
 </ul>
@@ -101,13 +101,13 @@ A slightly smaller and bolder list with no link underlines.
 
 ### Padding
 Adds default padding around the list items for larger click areas.
-<ul class="dh-list dh-list--padding m-bottom">
+<ul class="List List--padding m-bottom">
 	<li><a href="#">list item</a></li>
 	<li><a href="#">list item</a></li>
 </ul>
 
 {% highlight html %}
-<ul class="dh-list dh-list--padding">
+<ul class="List List--padding">
 	<li><a href="#">list item</a></li>
 	<li><a href="#">list item</a></li>
 </ul>
@@ -115,33 +115,33 @@ Adds default padding around the list items for larger click areas.
 
 ### Menu
 Adds default padding around the list items for larger click areas.
-<ul class="dh-list dh-list__menu m-bottom">
+<ul class="List List__menu m-bottom">
 	<li>
 		<a href="#">
-			<p class="dh-list__menu--title">list item</p>
-			<p class="dh-list__menu--description">list item description</p>
+			<p class="List__menu--title">list item</p>
+			<p class="List__menu--description">list item description</p>
 		</a>
 	</li>
 	<li>
 		<a href="#">
-			<p class="dh-list__menu--title">list item</p>
-			<p class="dh-list__menu--description">list item description</p>
+			<p class="List__menu--title">list item</p>
+			<p class="List__menu--description">list item description</p>
 		</a>
 	</li>
 </ul>
 
 {% highlight html %}
-<ul class="dh-list dh-list__menu">
+<ul class="List List__menu">
 	<li>
 		<a href="#">
-			<p class="dh-list__menu--title">list item</p>
-			<p class="dh-list__menu--description">list item description</p>
+			<p class="List__menu--title">list item</p>
+			<p class="List__menu--description">list item description</p>
 		</a>
 	</li>
 	<li>
 		<a href="#">
-			<p class="dh-list__menu--title">list item</p>
-			<p class="dh-list__menu--description">list item description</p>
+			<p class="List__menu--title">list item</p>
+			<p class="List__menu--description">list item description</p>
 		</a>
 	</li>
 </ul>

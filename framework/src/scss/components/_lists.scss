@@ -1,35 +1,35 @@
 /*
 	Default list component
 
-	.dh-list is for a general purpose list of text
-	.dh-list--disc gives the list dots, for an unordered list
-	.dh-list--inline makes the list horizontal
-	.dh-list--50 makes list items 50% width
-	.dh-list__menu formats list item links like a product menu
+	.List is for a general purpose list of text
+	.List--disc gives the list dots, for an unordered list
+	.List--inline makes the list horizontal
+	.List--50 makes list items 50% width
+	.List__menu formats list item links like a product menu
 */
-.dh-list {text-align: left;} // All lists should be left aligned unless specified
-.dh-list > li {margin-bottom: convertScaleToRem(1);}
-.dh-list > li:last-child {margin-bottom: 0;}
+.List {text-align: left;} // All lists should be left aligned unless specified
+.List > li {margin-bottom: convertScaleToRem(1);}
+.List > li:last-child {margin-bottom: 0;}
 
-.dh-list--disc {list-style-type: disc; list-style-position: outside}
-.dh-list--disc > li {margin-left: convertScaleToRem(4);}
+.List--disc {list-style-type: disc; list-style-position: outside}
+.List--disc > li {margin-left: convertScaleToRem(4);}
 
-.dh-list--inline > li {
+.List--inline > li {
 	padding: 0;
 	display: inline;
 	margin-right: convertScaleToRem(4);
 }
 
-.dh-list--inline > li:last-child {margin-right: 0;}
+.List--inline > li:last-child {margin-right: 0;}
 
-.dh-list--50 > li {
+.List--50 > li {
 	width: calc(50% - .2rem);
 	display: inline-block;
 	padding-right: convertScaleToRem(1);
 }
 
-// dh-list as a menu
-.dh-list__menu {
+// List as a menu
+.List__menu {
 	li {
 		vertical-align: top;
 	}
@@ -41,13 +41,13 @@
 			text-decoration: none;
 		}
 
-		&:hover > .dh-list__menu--title {
+		&:hover > .List__menu--title {
 			color: $c-b300;
 		}
 	}
 }
 
-.dh-list__menu--title {
+.List__menu--title {
 	text-transform: uppercase;
 	letter-spacing: .666px;
 	color: $c-g500;
@@ -55,23 +55,23 @@
 	margin-bottom: 0;
 }
 
-.dh-list__menu--description {
+.List__menu--description {
 	color: $c-g400;
 	font-size: $t-2;
 }
 
 /*
-	dh-list style variations
+	List style variations
 
 	Add to the default .list component for consistent styles
 	- list--padding adds some default padding around the list items for larger click areas
 	- list--small-bold is a slightly smaller and bolder list with no link underlines
 */
 // .list--padding
-.dh-list.dh-list--padding {padding-top: convertScaleToRem(1); padding-bottom: convertScaleToRem(1);}
-.dh-list.dh-list--padding > li {margin-bottom: 0;}
+.List.List--padding {padding-top: convertScaleToRem(1); padding-bottom: convertScaleToRem(1);}
+.List.List--padding > li {margin-bottom: 0;}
 
-.dh-list.dh-list--padding > li > * {
+.List.List--padding > li > * {
 	display: block;
 	padding: convertScaleToRem(1) convertScaleToRem(2);
 
@@ -80,7 +80,7 @@
 }
 
 // .list--small-bold
-.dh-list--small-bold > li > * {
+.List--small-bold > li > * {
 	font-weight: $t-bold;
 	color: $black;
 	text-decoration: none;
@@ -88,14 +88,14 @@
 }
 
 // Don't give hover states to non-links
-.dh-list--small-bold > li > a:hover,
-.dh-list--small-bold > li > button:hover,
-.dh-list--small-bold > li > .is-link:hover {
+.List--small-bold > li > a:hover,
+.List--small-bold > li > button:hover,
+.List--small-bold > li > .is-link:hover {
 	color: $blue;
 }
 
 // Disabled state
-.dh-list--small-bold > li  > .is-disabled {
+.List--small-bold > li  > .is-disabled {
 	pointer-events: none;
 	opacity: .3;
 }
@@ -107,10 +107,10 @@
 		<li><a><svg class="icon">...</svg>Link</a></li>
 	</ul>
 */
-.dh-list--icon-right > li {position: relative;}
-.dh-list--icon-right > li > * {padding-right: 3.5em;}
+.List--icon-right > li {position: relative;}
+.List--icon-right > li > * {padding-right: 3.5em;}
 
-.dh-list--icon-right .icon {
+.List--icon-right .icon {
 	position: absolute;
 	top: 50%;
 	margin-top: -.725em;

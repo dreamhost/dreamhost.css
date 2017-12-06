@@ -5,31 +5,31 @@ Buttons
 Can be used with anchor or button tags. When updating colors, make sure to update _tags.scss as well
 
 Usage
-.dh-button                 - Default
-.dh-button--primary        - Primary
-.dh-button--transaction    - Transactional
-.dh-button--danger         - Danger!
-.dh-button--disabled       - Disabled
-.dh-button__tag            - Tag Button
-.dh-button__tag--positive  - Positive Tag Button
-.dh-button__tag--negative  - Negative Tag Button
+.Button                 - Default
+.Button--primary        - Primary
+.Button--transaction    - Transactional
+.Button--danger         - Danger!
+.Button--disabled       - Disabled
+.Button__tag            - Tag Button
+.Button__tag--positive  - Positive Tag Button
+.Button__tag--negative  - Negative Tag Button
 
 Shapes
-.dh-button                 - Default shape
-.dh-button--text           - Underlined text
+.Button                 - Default shape
+.Button--text           - Underlined text
 
 Sizes
-.dh-button                 - Default size
-.dh-button--compact        - Compact size
+.Button                 - Default size
+.Button--compact        - Compact size
 
 Markup
-<a href="#" class="button {{modifier_class}}">Text</a>
+<a href="#" class="Button {{modifier_class}}">Text</a>
 
-Styleguide Base.dh-buttons
+Styleguide Base.Buttons
 
 */
 
-.dh-button {
+.Button {
 	font-family: $body;
 	color: $c-black;
 	background: $c-w100;
@@ -82,7 +82,7 @@ Styleguide Base.dh-buttons
 }
 
 // Colors
-.dh-button--primary {
+.Button--primary {
 	background: $c-b700;
 	color: $c-w100;
 	border: solid 1px $c-b700;
@@ -96,7 +96,7 @@ Styleguide Base.dh-buttons
 }
 
 // Tags
-.dh-button__tag {
+.Button__tag {
 	position: relative;
 	padding-left: 4em;
 	margin-left: 2.5em;
@@ -116,17 +116,17 @@ Styleguide Base.dh-buttons
 		border-radius: 50px;
 	}
 
-	&.dh-button__tag--positive {
+	&.Button__tag--positive {
 		&:hover, &.is-open { border-color: $c-b300; }
 		&:before { background-color: $c-b300; color: $c-w100; }
 	}
 
-	&.dh-button__tag--negative {
+	&.Button__tag--negative {
 		&:hover, &.is-open { border-color: $c-r300; }
 		&:before { background-color: $c-r300; color: $c-w100; }
 	}
 
-	&.dh-button--compact {
+	&.Button--compact {
 		padding-left: 3em;
 
 		&:before {
@@ -136,11 +136,11 @@ Styleguide Base.dh-buttons
 		}
 	}
 
-	&.dh-button--block { margin-left:0; }
+	&.Button--block { margin-left:0; }
 }
 
 // Transaction
-.dh-button--transaction {
+.Button--transaction {
 	background: $c-o300;
 	border-color: $c-o300;
 	color: $c-o500;
@@ -151,12 +151,12 @@ Styleguide Base.dh-buttons
 		color: $c-black;
 	}
 
-	&.dh-button--text { color: darken($c-o300, 10%); background: transparent; }
-	&.dh-button--text:hover { color: $c-o300; background: transparent; }
+	&.Button--text { color: darken($c-o300, 10%); background: transparent; }
+	&.Button--text:hover { color: $c-o300; background: transparent; }
 }
 
 // Danger!
-.dh-button--danger {
+.Button--danger {
 	background: $c-r300;
 	border-color: $c-r300;
 	color: $c-r500;
@@ -166,17 +166,17 @@ Styleguide Base.dh-buttons
 		border-color: $c-r300;
 		color: $c-black; }
 
-	&.dh-button--text { color: $c-r300; background: transparent; }
-	&.dh-button--text:hover { color: darken($c-r300, 10%); background: transparent; }
+	&.Button--text { color: $c-r300; background: transparent; }
+	&.Button--text:hover { color: darken($c-r300, 10%); background: transparent; }
 }
 
 // Compact
-.dh-button--compact {
+.Button--compact {
 	padding:0.65em 1em;
 }
 
 // Disabled
-.dh-button:disabled, .dh-button--disabled {
+.Button:disabled, .Button--disabled {
 	// Disable Button
 	cursor: not-allowed;
 	text-shadow: none;
@@ -192,11 +192,11 @@ Styleguide Base.dh-buttons
 	}
 
 	&:active{ pointer-events: none; }
-	&.dh-button--text {color: $c-g400; background: transparent; }
+	&.Button--text {color: $c-g400; background: transparent; }
 }
 
 // Text
-.dh-button--text {
+.Button--text {
 	background: transparent;
 	border: none;
 	position: relative;
@@ -215,7 +215,7 @@ Styleguide Base.dh-buttons
 	&:active {color:rgba($c-b700, 0.6);}
 }
 
-.dh-button--text:before {
+.Button--text:before {
 	content: "";
 	position: absolute;
 	z-index: $z-0;
@@ -228,13 +228,13 @@ Styleguide Base.dh-buttons
 	@include transition (right $tr-4 ease-out);
 }
 
-.dh-button--text:hover:before {
+.Button--text:hover:before {
 	right:0%;
 }
 
 
 // Widths
-.dh-button--block {
+.Button--block {
 	display: block;
 	width: 100%;
 	margin:0;
@@ -245,10 +245,10 @@ Styleguide Base.dh-buttons
 }
 
 // Spacing
-.dh-button + .dh-button {
+.Button + .Button {
 	margin-left: 1em;
 
-	&.dh-button__tag{ margin-left:3.25em; }
-	&.dh-button__tag.dh-button--compact{ margin-left:2.75em; }
-	&.dh-button--block, &.dh-button__tag.dh-button--block{ margin-left:0; }
+	&.Button__tag{ margin-left:3.25em; }
+	&.Button__tag.Button--compact{ margin-left:2.75em; }
+	&.Button--block, &.Button__tag.Button--block{ margin-left:0; }
 }
