@@ -468,10 +468,10 @@
 		</div>
 		<div>
 			<h4 class="m-bottom-1">Tags</h4>
-			<p><span role="button" class="Button Button__tag">Tag button</span>
-			<span role="button" class="Button Button__tag Button__tag--positive">Positive Tag button </span>
-			<span role="button" class="Button Button__tag Button__tag--negative">Negative Tag button</span>
-			<span role="button" class="Button Button__tag Button--compact">Compact Tag</span></p>
+			<p><span role="button" class="Button Button__tag" data-label="label">Tag button</span>
+			<span role="button" class="Button Button__tag Button__tag--positive" data-label="label">Positive Tag button </span>
+			<span role="button" class="Button Button__tag Button__tag--negative" data-label="label">Negative Tag button</span>
+			<span role="button" class="Button Button__tag Button--compact" data-label="label">Compact Tag</span></p>
 		</div>
 
 		<div class="m-bottom-5">
@@ -494,7 +494,7 @@
 			<p><span role="button" class="Button Button--block">Block Width</span></p>
 			<p><span role="button" class="Button Button--primary Button--block">Block Width Primary button</span></p>
 			<p><span role="button" class="Button Button--transaction Button--block">Block Width Transaction button</span></p>
-			<p><span role="button" class="Button Button__tag Button--block">Block Width Tag button</span></p>
+			<p><span role="button" class="Button Button__tag Button--block" data-label="label">Block Width Tag button</span></p>
 		</div>
 	</section>
 
@@ -1207,13 +1207,13 @@
 				<li class="ItemList__item">
 					<div class="ItemList__item-desc">Item1</div>
 					<div class="ItemList__item-btn">
-						<button class="Button Button__tag Button__tag--positive">Button</button>
+						<button class="Button Button__tag Button__tag--positive" data-label="label">Button</button>
 					</div>
 				</li>
 				<li class="ItemList__item">
 					<div class="ItemList__item-desc">Item2</div>
 					<div class="ItemList__item-btn">
-						<button class="Button Button__tag Button__tag--positive">Button</button>
+						<button class="Button Button__tag Button__tag--positive" data-label="label">Button</button>
 					</div>
 				</li>
 			</ul>
@@ -1228,13 +1228,13 @@
 				<li class="ItemList__item">
 					<div class="ItemList__item-desc">Item1</div>
 					<div class="ItemList__item-btn">
-						<button class="Button Button__tag Button__tag--positive">Button</button>
+						<button class="Button Button__tag Button__tag--positive" data-label="label">Button</button>
 					</div>
 				</li>
 				<li class="ItemList__item">
 					<div class="ItemList__item-desc">Item2</div>
 					<div class="ItemList__item-btn">
-						<button class="Button Button__tag Button__tag--positive">Button</button>
+						<button class="Button Button__tag Button__tag--positive" data-label="label">Button</button>
 					</div>
 				</li>
 			</ul>
@@ -1279,38 +1279,62 @@
 	</section>
 
 	<section class="container-m">
-		<div class="g-1_2 box m-bottom-4">
-			<h2>Whatever</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+		<div class="Card g-1_3">
+			<h3 class="Card__heading">Whatever</h3>
+			<p class="Card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			<a href="#" class="Button">Go!</a>
 		</div>
 
-		<div class="g-1_2 g-omega box m-bottom-4">
-			<h2>Whatever</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+		<div class="Card g-1_3">
+			<h3 class="Card__heading">Whatever</h3>
+			<p class="Card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			<a href="#" class="Button">Go!</a>
 		</div>
 
-		<div class="g-1_2 box m-bottom-4">
-			<h2>Whatever</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+		<div class="Card g-1_3 g-omega">
+			<h3 class="Card__heading">Whatever</h3>
+			<p class="Card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			<a href="#" class="Button">Go!</a>
 		</div>
-		<div class="g-1_2 g-omega box m-bottom-4">
-			<h2>Whatever</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+
+		<div class="Card g-1_2">
+			<img src="./src/images/icon.reboot.svg" class="Card__icon" />
+			<h3 class="Card__heading">Whatever</h3>
+			<p class="Card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<a href="#" class="Button Button--text">Go!</a>
+		</div>
+
+		<div class="Card g-1_2 g-omega">
+			<img src="./src/images/icon.powercycle.svg" class="Card__icon" />
+			<h3 class="Card__heading">Whatever</h3>
+			<p class="Card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<a href="#" class="Button Button--text">Go!</a>
+		</div>
+
+		<div class="Card g-1_3__m">
+			<img src="./src/images/icon.hosting.svg" class="Card__large-icon" />
+			<label class="Card__label">Label</label>
+			<h3 class="Card__heading">Whatever</h3>
+			<p class="Card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			<a href="#" class="Button">Go!</a>
 		</div>
-		<div class="g-1_2 box">
-			<h2>Whatever</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+
+		<div class="Card g-1_3__m">
+			<img src="./src/images/icon.billing.svg" class="Card__large-icon" />
+			<label class="Card__label">Label</label>
+			<h3 class="Card__heading">Whatever</h3>
+			<p class="Card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			<a href="#" class="Button">Go!</a>
 		</div>
-		<div class="g-1_2 g-omega box">
-			<h2>Whatever</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor nulla delectus corrupti, perferendis quos placeat praesentium ex ipsam.</p>
+
+		<div class="Card g-1_3__m g-omega">
+			<img src="./src/images/icon.hosting.svg" class="Card__large-icon" />
+			<label class="Card__label">Label</label>
+			<h3 class="Card__heading">Whatever</h3>
+			<p class="Card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			<a href="#" class="Button">Go!</a>
 		</div>
+
 	</section>
 
 	<section>
@@ -1371,16 +1395,16 @@
 			<p>Tags in every color of the rainbow! As far as the eye can see!</p>
 			<span class="Tag">Default ($c-b300)</span>
 			<span class="Tag Tag--red">Red ($c-r300)</span>
-			<span class="Tag Tag--turquoise">Turquoise ($c-t300)</span>
-			<span class="Tag Tag--orange">Orange ($c-r300)</span>
+			<span class="Tag Tag--teal">Teal ($c-t300)</span>
+			<span class="Tag Tag--yellow">Yellow ($c-y300)</span>
 		</div>
 
 		<div class="m-top">
 			<p>Also square!</p>
 			<span class="Tag Tag--square">Default ($c-b300)</span>
 			<span class="Tag Tag--square Tag--red">Red ($c-r300)</span>
-			<span class="Tag Tag--square Tag--turquoise">Turquoise ($c-t300)</span>
-			<span class="Tag Tag--square Tag--orange">Orange ($c-r300)</span>
+			<span class="Tag Tag--square Tag--teal">Teal ($c-t300)</span>
+			<span class="Tag Tag--square Tag--yellow">Yellow ($c-y300)</span>
 		</div>
 
 	</section>
