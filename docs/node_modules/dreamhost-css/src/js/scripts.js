@@ -16,12 +16,12 @@ $(document).on('click', '.js-toggle-popover', function (e) {
 	var $this = $(this),
 		$thisPopover = $this
 			.parent()
-			.children('.dh-popover');
+			.children('.Popover');
 
 	$('.js-toggle-popover').not($this).removeClass('is-open');
 	$thisPopover.toggleClass('is-open');
 	$this.toggleClass('is-open');
-	$('.dh-popover').not($thisPopover).removeClass('is-open');
+	$('.Popover').not($thisPopover).removeClass('is-open');
 
 	e.stopPropagation();
 });
@@ -36,12 +36,12 @@ $(document).on('mouseout', '.on-hover', function () {
 		.removeClass('is-open');
 });
 
-$(document).on('click', '.dh-popover', function (e) {
+$(document).on('click', '.Popover', function (e) {
 	e.stopPropagation();
 });
 
 $(document).on('click', function (e) {
-	$('.dh-popover, .js-toggle-popover').removeClass('is-open');
+	$('.Popover, .js-toggle-popover').removeClass('is-open');
 });
 
 $(document).on('click', '.js-toggle-mobile-menu', function(e) {
