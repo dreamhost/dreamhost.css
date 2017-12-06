@@ -28,16 +28,17 @@ Cards
     position: relative;
     margin-bottom: convertScaleToRem(4);
 
-    h3 {
+    .Card__heading {
         margin-bottom: convertScaleToRem(1);
     }
 
-    p {
+    .Card__content {
         margin-bottom: convertScaleToRem(3);
         color: $c-g400;
     }
 
-    img {
+    .Card__icon,
+    .Card__large-icon {
         display: inline-block;
         margin-right: convertScaleToRem(1);
     }
@@ -48,8 +49,8 @@ Cards
     height: 32px;
     width: 32px;
 
-    & + h3,
-    & ~ p,
+    & + .Card__heading,
+    & ~ .Card__content,
     & ~ .Button {
         margin-left: convertScaleToRem(6);
     }
@@ -60,7 +61,7 @@ Cards
     height: 56px;
     width: 56px;
 
-    & ~ label {
+    & ~ .Card__label {
         position: absolute;
         top: convertScaleToRem(5);
         left: convertScaleToRem(12.5);
@@ -69,7 +70,7 @@ Cards
         color: $c-g400;
     }
 
-    & ~ h3 {
+    & ~ .Card__heading {
         position: relative;
         display: inline-block;
         margin-bottom: convertScaleToRem(2);
