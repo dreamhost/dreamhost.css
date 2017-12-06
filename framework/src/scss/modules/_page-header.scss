@@ -179,6 +179,7 @@ Page Header Component
 	display: inline-block;
 
 	.icon {
+		height:100%;
 		margin-right:0;
 	}
 
@@ -197,12 +198,12 @@ Page Header Component
 	background:$c-r300;
 	padding:1px 4px;
 	border-radius: 50px;
-	font-size: $t-0;
 	width:16px;
 	height:16px;
+	font-weight:$t-bold;
 	text-align: center;
 	vertical-align: middle;
-	transform: translate(15px, -4px);
+	transform: translate(11px, -8px);
 }
 
 
