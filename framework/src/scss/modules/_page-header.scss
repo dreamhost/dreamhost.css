@@ -68,9 +68,17 @@ Page Header Component
 	}
 
 	.dh-popover__section {
-		padding:1em;
 		font-weight:$t-bold;
 		text-align:left;
+
+		ul{
+			padding:1em;
+		
+			&:not(:first-child) {
+				border-top: solid 1px $c-g100;
+			}	
+		
+		}
 
 		.list li {
 			margin-bottom:0.5em;
@@ -122,42 +130,44 @@ Page Header Component
 
 	&:hover,
 	&.is-open {
-		color: $lightest-blue;
+		color: $c-w100;
 		text-decoration: none;
+
+		&:after{
+			color:$c-b300;
+		}	
+	}	
+}
+
+//Animation
+@keyframes UnderlineEmphasis {
+	0% {
+	right: 100%;
 	}
 
-	&:before {
-		content: "";
-		position: absolute;
-		left: 0;
-		right: 100%;
-		bottom: 0;
-		background: $c-b300;
-		height: 1px;
-	
-		@include transition (right $tr-4 ease-out);
+	100% {
+	right: 0;
 	}
-	
-	&:hover:before {
-		right:0%;
-	}
-	
 }
 
 .Page-Header__nav-link.is-active,
 .Page-Header__nav-link--active {
 	@extend .t-white;
-	@extend .border-bottom-1;
-	@extend .border-blue;
-	@extend .border-solid;
 
 	&:hover,
 	&.is-open {
 		color: #fff;
 	}
 
-	&:before, &hover:before {
-		height:0;
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $c-b300;
+		height: 2px;
+		animation: UnderlineEmphasis $a-3 ease-in-out;
 	}
 }
 
@@ -179,16 +189,21 @@ Page Header Component
 	display: inline-block;
 
 	.icon {
-		height:100%;
-		margin-right:0;
+		margin-right: 0;
+		width: convertScaleToRem(3);
+		height: convertScaleToRem(3);
 	}
 
 	&:hover,
 	&.is-open {
-		color: $lightest-blue;
+		color: $c-w100;
 
 		.icon {
-			fill:$c-w100;
+			fill: $c-w100;
+		}
+
+		&:after{
+			color: $c-b300;
 		}
 	}
 }
@@ -198,12 +213,12 @@ Page Header Component
 	background:$c-r300;
 	padding:1px 4px;
 	border-radius: 50px;
-	width:16px;
-	height:16px;
+	width:convertScaleToRem(2);
+	height:convertScaleToRem(2);
 	font-weight:$t-bold;
 	text-align: center;
 	vertical-align: middle;
-	transform: translate(11px, -8px);
+	transform: translate(18px, -4px);
 }
 
 
@@ -217,6 +232,10 @@ button.Page-Header__subnav-link {
 		vertical-align: top;
 		margin-top: 12px;
 		margin-left: 4px;
+
+		&:hover:after{
+			color:$c-b300;
+		}
 	}
 }
 
