@@ -32,6 +32,7 @@
     position: relative;
     margin: 1px 0;
     padding: 1.5em 1.5em 1.5em 4em;
+    word-wrap: break-word;
 
     &:before{
         content:"";
@@ -68,41 +69,64 @@
         }
     }
 
-    &.Cart__step--active{
+    &.Cart__step--complete{
         background: $c-b100;
 
         a{
-            color: $c-g400;
+            color: $c-g300;
+
+            &:first-of-type{
+				display: inline-block;
+                margin-right: convertScaleToRem(2);
+            }
         }
 
         &:before{
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTQuNTUgNy4yMUwxMC42NDkuNjdhMS45NCAxLjk0IDAgMCAxIDIuODM3IDIuNjQ2TDYuMjYgMTEuMDY0YTEuOTQgMS45NCAwIDAgMS0yLjY2OC42MDMgMS45NDggMS45NDggMCAwIDEtLjQ4OC0uNDE4TC41NjIgOC43MDdhMS45NCAxLjk0IDAgMCAxIDIuNzQzLTIuNzQzTDQuNTUxIDcuMjF6IiBmaWxsPSIjMkJBREU5IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=");
         }
-
     }
 
-    &.Cart__step--next, &.Cart__step--additional{
+    &.Cart__step--next, &.Cart__step--incomplete{
+        
         .Cart__heading{ font-weight: $t-regular; }
         span{ color: $c-g200; }
 
+        &:before{ background-image:none; }
+        &:hover,&:active{ &:before{background-image:none; }}
+
+    }
+
+    &.Cart__step--incomplete{
+        color:$c-g300;
 
         &:hover,&:active{
             cursor: initial;
-            &:before{
-                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAxMC4xNTZMMy44NDYgNiAwIDEuODQ0IDIuNDU2IDAgOCA2bC01LjU0NCA2eiIgZmlsbC1ydWxlPSJub256ZXJvIiBmaWxsPSIjRTBFNEU4Ii8+PC9zdmc+");
-            }
-            &:after{
-                width: 0px;
-            }
+        }
+
+        &:after{
+            width: 0px;
         }
     }
-
-    &.Cart__step--additional{
-        color:$c-g300;
-        &:before{ background-image:none; }
-        &:hover,&:active{ &:before{background-image:none; }}
-    }
 }
+
+//Cart Step Price
+.Cart__actions{
+    width: 70%;
+    display: inline-block;
+}
+
+.Cart__step-price{
+    width: 30%;
+    display: inline-block;
+    text-align: right;
+    margin:0;
+}
+
+.Cart__step-price span{
+   display:block;
+   color:$c-g400;
+}
+
 
 //Cart Footer
 .Cart__footer{
@@ -112,7 +136,8 @@
     border-radius: 0 0 3px 3px;
 }
 
-.Cart__price{
+
+.Cart__total-price{
     margin: 0;
     padding: 0;
 
