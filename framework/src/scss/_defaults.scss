@@ -86,11 +86,12 @@ hr {
 
 code {
 	padding: 0 convertScaleToRem(1);
-	font-size: $t-3;
+	font-size: $t-2;
 	display: inline-block;
 	border: 1px solid $lighter-grey;
 	border-radius: $border-radius;
-	background: $white;
+	background: $c-g500;
+	color: $c-w100;
 	font-family: monospace;
 }
 
