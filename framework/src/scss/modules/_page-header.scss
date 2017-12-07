@@ -46,8 +46,8 @@ Page Header Component
 */
 
 .PageHeader {
-	padding: convertScaleToRem(3.5) 4em;
-	background: $black;
+	padding: convertScaleToRem(3.5) convertScaleToRem(8);
+	background: $c-b700;
 	color: #fff;
 }
 
