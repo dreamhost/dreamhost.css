@@ -11,7 +11,7 @@ layout: page
 
 <hr />
 
-<section class="dh-popover-position p-bottom-7">
+<section class="Popover-position p-bottom-7">
 
   <h2>Basic Usage</h2>
   <p>
@@ -20,9 +20,9 @@ layout: page
 
   {% highlight html %}
   <!-- A basic popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
@@ -35,7 +35,7 @@ layout: page
   </p>
 
 {% highlight html %}
-  <div class="dh-popover-container on-click">
+  <div class="Popover-container on-click">
 {% endhighlight %}
 
   <p>
@@ -43,7 +43,7 @@ layout: page
   </p>
 
 {% highlight html %}
-  <div class="dh-popover">
+  <div class="Popover">
 {% endhighlight %}
 
   <p>
@@ -51,11 +51,11 @@ layout: page
   </p>
 
 {% highlight html %}
-  <div class="dh-popover__wrapper">
+  <div class="Popover__wrapper">
 {% endhighlight %}
 
   <p>
-    Popovers don't have any padding by default, however padding can be set by nesting a divider inside of the <code>dh-popover__wrapper</code>. The contents of the popover are contained within the divider as well.
+    Popovers don't have any padding by default, however padding can be set by nesting a divider inside of the <code>Popover__wrapper</code>. The contents of the popover are contained within the divider as well.
   </p>
 
 {% highlight html %}
@@ -74,33 +74,33 @@ layout: page
 
 <hr />
 
-<section class="dh-popover-hover p-bottom-7">
+<section class="Popover-hover p-bottom-7">
 
   <H2>Triggering</h2>
 
   <p>
-    Popovers can be triggered two ways: on click or hover. Click events require JavaScript. To enable click popovers, append <code>.on-click</code> to the <code>.dh-popover-container</code>. For hover popovers, append <code>.on-hover</code> instead.
+    Popovers can be triggered two ways: on click or hover. Click events require JavaScript. To enable click popovers, append <code>.on-click</code> to the <code>.Popover-container</code>. For hover popovers, append <code>.on-hover</code> instead.
   </p>
 
   <div class="container u-clearfix bg-c-g100 p-7">
 
-    <div class="dh-popover-container on-click g-1_2">
-      <div class="dh-popover has-caret">
+    <div class="Popover-container on-click g-1_2">
+      <div class="Popover has-caret">
         <div class="p-2">
           This popover only activates on click.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover t-center w-100">Click popover</a>
+      <a class="Button js-toggle-popover t-center w-100">Click popover</a>
       <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.on-click</code></p>
     </div>
 
-    <div class="dh-popover-container on-hover g-1_2">
-      <div class="dh-popover has-caret">
+    <div class="Popover-container on-hover g-1_2">
+      <div class="Popover has-caret">
         <div class="p-2">
           This popover only activates on hover.
         </div>
       </div>
-      <a class="dh-button t-center w-100">Hover popover</a>
+      <a class="Button t-center w-100">Hover popover</a>
       <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.on-hover</code></p>
     </div>
 
@@ -108,23 +108,23 @@ layout: page
 
   {% highlight html %}
   <!-- Click popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Hover popover -->
-  <div class="dh-popover-container on-hover">
-    <div class="dh-popover">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-hover">
+    <div class="Popover">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
@@ -132,7 +132,7 @@ layout: page
 
 <hr />
 
-<section class="dh-popover-caret">
+<section class="Popover-caret">
 
   <h2>Caret</h2>
 
@@ -142,22 +142,22 @@ layout: page
 
   <div class="container u-clearfix bg-c-g100 p-2">
 
-    <div class="dh-popover-container on-click g-1_2">
-      <div class="dh-popover">
+    <div class="Popover-container on-click g-1_2">
+      <div class="Popover">
         <div class="p-2">
           This popover does not have a caret.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Popover Without Caret</a>
+      <a class="Button js-toggle-popover w-100 t-center">Popover Without Caret</a>
     </div>
 
-    <div class="dh-popover-container on-click g-1_2">
-      <div class="dh-popover has-caret">
+    <div class="Popover-container on-click g-1_2">
+      <div class="Popover has-caret">
         <div class="p-2">
           This popover has a caret.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Popover With Caret</a>
+      <a class="Button js-toggle-popover w-100 t-center">Popover With Caret</a>
       <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.has-caret</code></p>
     </div>
 
@@ -165,13 +165,13 @@ layout: page
 
   {% highlight html %}
   <!-- Popover with caret -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover has-caret">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover has-caret">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
@@ -179,7 +179,7 @@ layout: page
 
 <hr />
 
-<section class="dh-popover-position p-bottom-7">
+<section class="Popover-position p-bottom-7">
 
   <h2>Alignment &amp; Positioning</h2>
   <p>
@@ -189,181 +189,181 @@ layout: page
   <p class="t-c-r300 t-bold m-bottom-0">Popover Alignment</p>
 
   <div class="container u-clearfix bg-c-g100 p-2">
-    <div class="dh-popover-container on-click g-1_4">
-      <div class="dh-popover has-caret">
+    <div class="Popover-container on-click g-1_4">
+      <div class="Popover has-caret">
         <div class="p-1">
           This is a top aligned popover with a caret.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Top Aligned</a>
+      <a class="Button js-toggle-popover w-100 t-center">Top Aligned</a>
     </div>
 
-    <div class="dh-popover-container on-click g-1_4">
-      <div class="dh-popover dh-popover--right has-caret">
+    <div class="Popover-container on-click g-1_4">
+      <div class="Popover Popover--right has-caret">
         <div class="p-1">
           This is a right aligned popover with a caret.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Right Aligned</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--right</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Right Aligned</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--right</code></p>
     </div>
 
-    <div class="dh-popover-container on-click g-1_4">
-      <div class="dh-popover dh-popover--bottom has-caret">
+    <div class="Popover-container on-click g-1_4">
+      <div class="Popover Popover--bottom has-caret">
         <div class="p-1">
           This is a bottom aligned popover with a caret.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Bottom Aligned</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--bottom</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Bottom Aligned</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--bottom</code></p>
     </div>
 
-    <div class="dh-popover-container on-click g-1_4">
-      <div class="dh-popover dh-popover--left has-caret">
+    <div class="Popover-container on-click g-1_4">
+      <div class="Popover Popover--left has-caret">
         <div class="p-1">
           This is a left aligned popover with a caret.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Left Aligned</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--left</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Left Aligned</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--left</code></p>
     </div>
   </div>
 
   {% highlight html %}
   <!-- Right aligned popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--right">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--right">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Bottom aligned popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--bottom">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--bottom">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Left aligned popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--left">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--left">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
 </section>
 
-<section class="dh-popover-alignment p-bottom-7">
+<section class="Popover-alignment p-bottom-7">
 
   <p class="t-c-r300 t-bold m-bottom-0">Popover Positioning</p>
 
   <p>
-    There are left and right positioning classes for popovers that are top and bottom aligned. Adding a class <code>dh-popover--flush-left</code> or <code>dh-popover--flush-right</code> will adjust the popover's positioning and transform origin accordingly. By default, popovers are center positioned.
+    There are left and right positioning classes for popovers that are top and bottom aligned. Adding a class <code>Popover--flush-left</code> or <code>Popover--flush-right</code> will adjust the popover's positioning and transform origin accordingly. By default, popovers are center positioned.
   </p>
 
   <div class="container u-clearfix bg-c-g100 p-2">
 
-    <div class="dh-popover-container on-click g-1_2">
-      <div class="dh-popover dh-popover--flush-left has-caret">
+    <div class="Popover-container on-click g-1_2">
+      <div class="Popover Popover--flush-left has-caret">
         <div class="p-2">
           This is a top aligned popover that is flushed left with the clicked element.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Flush Left</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--flush-left</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Flush Left</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--flush-left</code></p>
     </div>
 
-    <div class="dh-popover-container on-click g-1_2 p-bottom-large">
-      <div class="dh-popover dh-popover--flush-right has-caret">
+    <div class="Popover-container on-click g-1_2 p-bottom-large">
+      <div class="Popover Popover--flush-right has-caret">
         <div class="p-2">
           This is a top aligned popover that is flushed right with the clicked element.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Flush Right</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--flush-right</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Flush Right</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--flush-right</code></p>
     </div>
 
   </div>
 
   {% highlight html %}
   <!-- Flushed left popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--flush-left">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--flush-left">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Flushed right popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--flush-right">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--flush-right">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
   <p>
-    There are also top and bottom positioning classes for popover that are left or right aligned. Adding classes <code>dh-popover--flush-top</code> or <code>dh-popover--flush-bottom</code> will adjust the popover's positioning and transform origin accordingly. By default, popovers are middle positioned.
+    There are also top and bottom positioning classes for popover that are left or right aligned. Adding classes <code>Popover--flush-top</code> or <code>Popover--flush-bottom</code> will adjust the popover's positioning and transform origin accordingly. By default, popovers are middle positioned.
   </p>
 
   <div class="container u-clearfix bg-c-g100 p-2">
 
-    <div class="dh-popover-container on-click g-1_2">
-      <div class="dh-popover dh-popover--left dh-popover--flush-top has-caret">
+    <div class="Popover-container on-click g-1_2">
+      <div class="Popover Popover--left Popover--flush-top has-caret">
         <div class="p-2">
           This is a left aligned popover that is flushed top with the clicked element.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Flush Top</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--flush-top</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Flush Top</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--flush-top</code></p>
     </div>
 
-    <div class="dh-popover-container on-click g-1_2">
-      <div class="dh-popover dh-popover--left dh-popover--flush-bottom has-caret">
+    <div class="Popover-container on-click g-1_2">
+      <div class="Popover Popover--left Popover--flush-bottom has-caret">
         <div class="p-2">
           This is a left aligned popover that is flushed bottom with the clicked element.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Flush Bottom</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--flush-bottom</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Flush Bottom</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--flush-bottom</code></p>
     </div>
 
   </div>
 
   {% highlight html %}
   <!-- Flushed top popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--left dh-popover--flush-top">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--left Popover--flush-top">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Flushed bottom popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--left dh-popover--flush-bottom">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--left Popover--flush-bottom">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
@@ -371,86 +371,86 @@ layout: page
 
 <hr />
 
-<section class="dh-popover-themes p-bottom-7">
+<section class="Popover-themes p-bottom-7">
 
   <h2>Themes</h2>
 
   <p>
-    There are 4 popover themes: default (light), dark, error, and success. Apply <code>.dh-popover--dark</code>, <code>.dh-popover--error</code>, or <code>.dh-popover--success</code> accordingly. Omit all of the above to use the default theme.
+    There are 4 popover themes: default (light), dark, error, and success. Apply <code>.Popover--dark</code>, <code>.Popover--error</code>, or <code>.Popover--success</code> accordingly. Omit all of the above to use the default theme.
   </p>
 
   <div class="container u-clearfix bg-c-g100 p-2">
 
-    <div class="dh-popover-container on-click g-1_4">
-      <div class="dh-popover has-caret">
+    <div class="Popover-container on-click g-1_4">
+      <div class="Popover has-caret">
         <div class="p-2">
           This is a popover using the default theme.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Default</a>
+      <a class="Button js-toggle-popover w-100 t-center">Default</a>
     </div>
 
-    <div class="dh-popover-container on-click g-1_4">
-      <div class="dh-popover dh-popover--dark has-caret">
+    <div class="Popover-container on-click g-1_4">
+      <div class="Popover Popover--dark has-caret">
         <div class="p-2">
           This is a popover using the dark theme.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Dark</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--dark</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Dark</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--dark</code></p>
     </div>
 
-    <div class="dh-popover-container on-click g-1_4">
-      <div class="dh-popover dh-popover--error has-caret">
+    <div class="Popover-container on-click g-1_4">
+      <div class="Popover Popover--error has-caret">
         <div class="p-2">
           This is a popover using the error theme.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Error</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--error</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Error</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--error</code></p>
     </div>
 
-    <div class="dh-popover-container on-click g-1_4">
-      <div class="dh-popover dh-popover--success has-caret">
+    <div class="Popover-container on-click g-1_4">
+      <div class="Popover Popover--success has-caret">
         <div class="p-2">
           This is a popover using the success theme.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Success</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--success</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Success</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--success</code></p>
     </div>
 
   </div>
 
   {% highlight html %}
   <!-- Dark theme popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--dark">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--dark">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Error theme popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--error">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--error">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Success theme popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--success">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--success">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
@@ -458,119 +458,119 @@ layout: page
 
 <hr />
 
-<section class="dh-popover-sizes p-bottom-7">
+<section class="Popover-sizes p-bottom-7">
 
   <h2>Sizes</h2>
 
   <p>
-    There are 5 popover sizes, numbered 1 - 5 in order of smallest to largest. They don't apply inner padding, but instead change the width of the overall popover. Apply <code>.dh-popover--1</code>, <code>.dh-popover--2</code>, etc.
+    There are 5 popover sizes, numbered 1 - 5 in order of smallest to largest. They don't apply inner padding, but instead change the width of the overall popover. Apply <code>.Popover--1</code>, <code>.Popover--2</code>, etc.
   </p>
 
   <div class="container u-clearfix bg-c-g100 p-5">
 
-    <div class="dh-popover-container on-click g-1_3">
-      <div class="dh-popover dh-popover--1 has-caret">
+    <div class="Popover-container on-click g-1_3">
+      <div class="Popover Popover--1 has-caret">
         <div class="p-2">
           This is a size 1 popover.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Size 1</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--1</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Size 1</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--1</code></p>
     </div>
 
-    <div class="dh-popover-container on-click g-1_3">
-      <div class="dh-popover dh-popover--2 has-caret">
+    <div class="Popover-container on-click g-1_3">
+      <div class="Popover Popover--2 has-caret">
         <div class="p-2">
           This is a size 2 (default) popover.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Size 2</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--2</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Size 2</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--2</code></p>
     </div>
 
-    <div class="dh-popover-container on-click g-1_3">
-      <div class="dh-popover has-caret">
+    <div class="Popover-container on-click g-1_3">
+      <div class="Popover has-caret">
         <div class="p-2">
           This is a size 3 popover.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Size 3</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--3</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Size 3</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--3</code></p>
     </div>
   </div>
 
   <div class="container u-clearfix bg-c-g100 p-5">
-    <div class="dh-popover-container on-click g-1_2">
-      <div class="dh-popover dh-popover--4 has-caret">
+    <div class="Popover-container on-click g-1_2">
+      <div class="Popover Popover--4 has-caret">
         <div class="p-2">
           This is a size 4 popover.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Size 4</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--4</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Size 4</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--4</code></p>
     </div>
 
-    <div class="dh-popover-container on-click g-1_2">
-      <div class="dh-popover dh-popover--5 has-caret">
+    <div class="Popover-container on-click g-1_2">
+      <div class="Popover Popover--5 has-caret">
         <div class="p-2">
           This is a size 5 popover.
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Size 5</a>
-      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.dh-popover--5</code></p>
+      <a class="Button js-toggle-popover w-100 t-center">Size 5</a>
+      <p class="m-top-1 m-bottom-0 l-pos-absolute w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.Popover--5</code></p>
     </div>
 
   </div>
 
   {% highlight html %}
   <!-- Size 1 popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--1">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--1">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Size 2 popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--2">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--2">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Size 3 popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--3">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--3">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Size 4 popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--4">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--4">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Size 5 popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--5">
-      <div class="dh-popover__wrapper">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--5">
+      <div class="Popover__wrapper">
         <div class="p-2">...</div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
@@ -578,26 +578,26 @@ layout: page
 
 <hr />
 
-<section class="dh-popover-dropdowns p-bottom-7">
+<section class="Popover-dropdowns p-bottom-7">
 
   <h2>Dropdown Menus</h2>
 
   <p>
-    Dropdown menus leverage the <a href="{{site.baseurl}}/components/lists">lists component</a> to create a simple menu with links, possibly used for header nav menus, filters, etc. Horizontal rules can be created within dropdowns by distributing links between multiple <code>dh-popover__section</code> dividers.
+    Dropdown menus leverage the <a href="{{site.baseurl}}/components/lists">lists component</a> to create a simple menu with links, possibly used for header nav menus, filters, etc. Horizontal rules can be created within dropdowns by distributing links between multiple <code>Popover__section</code> dividers.
   </p>
 
   <p class="m-bottom-7">
-    Note that <code>dh-popover__section</code> dividers are only required for dropdown menu dh-popovers.
+    Note that <code>Popover__section</code> dividers are only required for dropdown menu Popovers.
   </p>
 
   <h3>Basic Dropdown Menu</h3>
 
   <div class="container u-clearfix bg-c-g100 p-2">
-    <div class="dh-popover-container on-click w-100">
-      <div class="dh-popover dh-popover--bottom has-caret">
-        <div class="dh-popover__wrapper">
-          <div class="dh-popover__section">
-            <ul class="dh-list dh-list--padding">
+    <div class="Popover-container on-click w-100">
+      <div class="Popover Popover--bottom has-caret">
+        <div class="Popover__wrapper">
+          <div class="Popover__section">
+            <ul class="List List--padding">
 							<li><a href="#">Twitter</a></li>
 							<li><a href="#">Facebook</a></li>
 							<li><a href="#">Google</a></li>
@@ -607,17 +607,17 @@ layout: page
   				</div>
         </div>
       </div>
-      <a class="dh-button js-toggle-popover w-100 t-center">Basic Dropdown</a>
+      <a class="Button js-toggle-popover w-100 t-center">Basic Dropdown</a>
     </div>
   </div>
 
   {% highlight html %}
   <!-- Basic dropdown menu popover -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--bottom">
-      <div class="dh-popover__wrapper">
-        <div class="dh-popover__section">
-          <ul class="dh-list dh-list--padding">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--bottom">
+      <div class="Popover__wrapper">
+        <div class="Popover__section">
+          <ul class="List List--padding">
             <li><a href="#">Twitter</a></li>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Google</a></li>
@@ -627,27 +627,27 @@ layout: page
         </div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
   <h3 class="m-top">Dropdown Menu With Separator</h3>
   <div class="container u-clearfix bg-c-g100 p-2">
     <div class="g-1_2">
-      <div class="dh-popover-container on-click w-100">
-        <div class="dh-popover dh-popover--bottom dh-popover--max-height has-caret">
-          <div class="dh-popover__wrapper">
-            <div class="dh-popover__section">
-              <ul class="dh-list dh-list--padding">
+      <div class="Popover-container on-click w-100">
+        <div class="Popover Popover--bottom Popover--max-height has-caret">
+          <div class="Popover__wrapper">
+            <div class="Popover__section">
+              <ul class="List List--padding">
                 <li><a href="/dreamhost.css/components/animations">Animations</a></li>
                 <li><a href="/dreamhost.css/components/alerts">Alerts</a></li>
                 <li><a href="/dreamhost.css/components/buttons">Buttons</a></li>
                 <li><a href="/dreamhost.css/components/form">Forms</a></li>
                 <li><a href="/dreamhost.css/components/table">Table</a></li>
                 <li><a href="/dreamhost.css/components/header">Header</a></li>
-                <li><a href="/dreamhost.css/components/lists">dh-lists</a></li>
+                <li><a href="/dreamhost.css/components/lists">Lists</a></li>
                 <li><a href="/dreamhost.css/components/modals">Modals</a></li>
-                <li><a href="/dreamhost.css/components/popovers">dh-popovers</a></li>
+                <li><a href="/dreamhost.css/components/popovers">Popovers</a></li>
                 <li><a href="/dreamhost.css/components/transitions">Transitions</a></li>
                 <li><a href="/dreamhost.css/components/animations">Animations</a></li>
                 <li><a href="/dreamhost.css/components/alerts">Alerts</a></li>
@@ -655,38 +655,38 @@ layout: page
                 <li><a href="/dreamhost.css/components/form">Forms</a></li>
                 <li><a href="/dreamhost.css/components/table">Table</a></li>
                 <li><a href="/dreamhost.css/components/header">Header</a></li>
-                <li><a href="/dreamhost.css/components/lists">dh-lists</a></li>
+                <li><a href="/dreamhost.css/components/lists">Lists</a></li>
                 <li><a href="/dreamhost.css/components/modals">Modals</a></li>
-                <li><a href="/dreamhost.css/components/popovers">dh-popovers</a></li>
+                <li><a href="/dreamhost.css/components/popovers">Popovers</a></li>
                 <li><a href="/dreamhost.css/components/transitions">Transitions</a></li>
               </ul>
             </div>
-            <div class="dh-popover__section dh-popover__section--separator">
-              <ul class="dh-list dh-list--padding">
+            <div class="Popover__section Popover__section--separator">
+              <ul class="List List--padding">
                 <li><a href="#">Contact us</a></li>
               </ul>
             </div>
           </div>
         </div>
-        <a class="dh-button js-toggle-popover w-100 t-center">Dropdown with Separator</a>
+        <a class="Button js-toggle-popover w-100 t-center">Dropdown with Separator</a>
       </div>
     </div>
 
     <div class="g-1_2">
-      <div class="dh-popover-container on-click w-100">
-        <div class="dh-popover dh-popover--bottom dh-popover--max-height has-caret">
-          <div class="dh-popover__wrapper">
-            <div class="dh-popover__section">
-              <ul class="dh-list dh-list--padding">
+      <div class="Popover-container on-click w-100">
+        <div class="Popover Popover--bottom Popover--max-height has-caret">
+          <div class="Popover__wrapper">
+            <div class="Popover__section">
+              <ul class="List List--padding">
                 <li><a href="/dreamhost.css/components/animations">Animations</a></li>
                 <li><a href="/dreamhost.css/components/alerts">Alerts</a></li>
                 <li><a href="/dreamhost.css/components/buttons">Buttons</a></li>
                 <li><a href="/dreamhost.css/components/form">Forms</a></li>
                 <li><a href="/dreamhost.css/components/table">Table</a></li>
                 <li><a href="/dreamhost.css/components/header">Header</a></li>
-                <li><a href="/dreamhost.css/components/lists">dh-lists</a></li>
+                <li><a href="/dreamhost.css/components/lists">Lists</a></li>
                 <li><a href="/dreamhost.css/components/modals">Modals</a></li>
-                <li><a href="/dreamhost.css/components/popovers">dh-popovers</a></li>
+                <li><a href="/dreamhost.css/components/popovers">Popovers</a></li>
                 <li><a href="/dreamhost.css/components/transitions">Transitions</a></li>
                 <li><a href="/dreamhost.css/components/animations">Animations</a></li>
                 <li><a href="/dreamhost.css/components/alerts">Alerts</a></li>
@@ -694,53 +694,53 @@ layout: page
                 <li><a href="/dreamhost.css/components/form">Forms</a></li>
                 <li><a href="/dreamhost.css/components/table">Table</a></li>
                 <li><a href="/dreamhost.css/components/header">Header</a></li>
-                <li><a href="/dreamhost.css/components/lists">dh-lists</a></li>
+                <li><a href="/dreamhost.css/components/lists">Lists</a></li>
                 <li><a href="/dreamhost.css/components/modals">Modals</a></li>
-                <li><a href="/dreamhost.css/components/popovers">dh-popovers</a></li>
+                <li><a href="/dreamhost.css/components/popovers">Popovers</a></li>
                 <li><a href="/dreamhost.css/components/transitions">Transitions</a></li>
               </ul>
             </div>
           </div>
-          <div class="dh-popover__section dh-popover__section--separator">
-            <ul class="dh-list dh-list--padding">
+          <div class="Popover__section Popover__section--separator">
+            <ul class="List List--padding">
               <li><a href="#">Contact us</a></li>
             </ul>
           </div>
         </div>
-        <a class="dh-button js-toggle-popover w-100">Dropdown with fixed separator</a>
+        <a class="Button js-toggle-popover w-100">Dropdown with fixed separator</a>
       </div>
     </div>
   </div>
 
   {% highlight html %}
   <!-- Dropdown menu popover with a separator -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--bottom">
-      <div class="dh-popover__wrapper">
-        <div class="dh-popover__section">
-          <ul class="dh-list dh-list--padding">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--bottom">
+      <div class="Popover__wrapper">
+        <div class="Popover__section">
+          <ul class="List List--padding">
             <li><a href="#">Twitter</a></li>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Google</a></li>
             <li><a href="#">Dedicated Hosting</a></li>
           </ul>
         </div>
-        <div class="dh-popover__section dh-popover__section--separator">
-          <ul class="dh-list dh-list--padding">
+        <div class="Popover__section Popover__section--separator">
+          <ul class="List List--padding">
             <li><a href="#">Contact us</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
 
   <!-- Dropdown menu popover with a fixed separator -->
-  <div class="dh-popover-container on-click">
-    <div class="dh-popover dh-popover--bottom">
-      <div class="dh-popover__wrapper">
-        <div class="dh-popover__section">
-          <ul class="dh-list dh-list--padding">
+  <div class="Popover-container on-click">
+    <div class="Popover Popover--bottom">
+      <div class="Popover__wrapper">
+        <div class="Popover__section">
+          <ul class="List List--padding">
             <li><a href="#">Twitter</a></li>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Google</a></li>
@@ -748,104 +748,104 @@ layout: page
           </ul>
         </div>
       </div>
-      <div class="dh-popover__section dh-popover__section--separator">
-        <ul class="dh-list dh-list--padding">
+      <div class="Popover__section Popover__section--separator">
+        <ul class="List List--padding">
           <li><a href="#">Contact us</a></li>
         </ul>
       </div>
     </div>
-    <a class="dh-button js-toggle-popover">Click here</a>
+    <a class="Button js-toggle-popover">Click here</a>
   </div>
   {% endhighlight %}
 
   <h3 class="m-top">Product Menu</h3>
 
   <div class="container u-clearfix bg-c-g100 p-2">
-    <div class="dh-popover-container on-click w-100">
-      <div class="dh-popover dh-popover--bottom dh-popover--5 dh-popover--flush-right">
-        <div class="dh-popover__wrapper">
-          <div class="dh-popover__section">
-            <ul class="dh-list dh-list__menu dh-list--50 dh-list--padding">
+    <div class="Popover-container on-click w-100">
+      <div class="Popover Popover--bottom Popover--5 Popover--flush-right">
+        <div class="Popover__wrapper">
+          <div class="Popover__section">
+            <ul class="List List__menu List--50 List--padding">
               <li>
                 <a href="#">
-                  <p class="dh-list__menu--title">Register Domains</p>
-                  <p class="dh-list__menu--description">Register one or more domains.</p>
+                  <p class="List__menu--title">Register Domains</p>
+                  <p class="List__menu--description">Register one or more domains.</p>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <p class="dh-list__menu--title">Malware Remover</p>
-                  <p class="dh-list__menu--description">Scrubs your website for malware.</p>
+                  <p class="List__menu--title">Malware Remover</p>
+                  <p class="List__menu--description">Scrubs your website for malware.</p>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <p class="dh-list__menu--title">Add Hosting</p>
-                  <p class="dh-list__menu--description">Shared, VPS, Dedicated, Cloud, etc.</p>
+                  <p class="List__menu--title">Add Hosting</p>
+                  <p class="List__menu--description">Shared, VPS, Dedicated, Cloud, etc.</p>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <p class="dh-list__menu--title">Add Security With SSL</p>
-                  <p class="dh-list__menu--description">Protect your website from nasties.</p>
+                  <p class="List__menu--title">Add Security With SSL</p>
+                  <p class="List__menu--description">Protect your website from nasties.</p>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <p class="dh-list__menu--title">Transfer Domains</p>
-                  <p class="dh-list__menu--description">Transfer domains to DreamHost.</p>
+                  <p class="List__menu--title">Transfer Domains</p>
+                  <p class="List__menu--description">Transfer domains to DreamHost.</p>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <p class="dh-list__menu--title">Add MySQL</p>
-                  <p class="dh-list__menu--description">Need a database? Sure you do.</p>
+                  <p class="List__menu--title">Add MySQL</p>
+                  <p class="List__menu--description">Need a database? Sure you do.</p>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <p class="dh-list__menu--title">Install WordPress</p>
-                  <p class="dh-list__menu--description">Quick, easy, 1-click WordPress.</p>
+                  <p class="List__menu--title">Install WordPress</p>
+                  <p class="List__menu--description">Quick, easy, 1-click WordPress.</p>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <p class="dh-list__menu--title">Add Remixer</p>
-                  <p class="dh-list__menu--description">This won't play your MP3s.</p>
+                  <p class="List__menu--title">Add Remixer</p>
+                  <p class="List__menu--description">This won't play your MP3s.</p>
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <a class="dh-button js-toggle-popover has-text-caret w-100">Product Menu</a>
+      <a class="Button js-toggle-popover has-text-caret w-100">Product Menu</a>
     </div>
   </div>
 
   {% highlight html %}
   <!-- Product menu -->
-  <div class="dh-popover-container on-click">
-      <div class="dh-popover dh-popover--bottom dh-popover--5 dh-popover--flush-right">
-        <div class="dh-popover__wrapper">
-          <div class="dh-popover__section">
-            <ul class="dh-list dh-list__menu dh-list--50 dh-list--padding">
+  <div class="Popover-container on-click">
+      <div class="Popover Popover--bottom Popover--5 Popover--flush-right">
+        <div class="Popover__wrapper">
+          <div class="Popover__section">
+            <ul class="List List__menu List--50 List--padding">
               <li>
                 <a href="#">
-                  <p class="dh-list__menu--title">Product</p>
-                  <p class="dh-list__menu--description">Product description.</p>
+                  <p class="List__menu--title">Product</p>
+                  <p class="List__menu--description">Product description.</p>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <p class="dh-list__menu--title">Product</p>
-                  <p class="dh-list__menu--description">Product description.</p>
+                  <p class="List__menu--title">Product</p>
+                  <p class="List__menu--description">Product description.</p>
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <a class="dh-button js-toggle-popover has-text-caret">Product Menu</a>
+      <a class="Button js-toggle-popover has-text-caret">Product Menu</a>
     </div>
   </div>
   {% endhighlight %}

@@ -8,7 +8,7 @@ layout: page
 <hr />
 
 ## Responsive Table
-<table class="dh-table__m">
+<table class="Table__m">
 	<thead>
 		<th class="w-50">Name</th>
 		<th>Location</th>
@@ -21,7 +21,7 @@ layout: page
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact l-float-right__m">Manage</button>
+				<button class="Button Button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -29,7 +29,7 @@ layout: page
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact l-float-right__m">Manage</button>
+				<button class="Button Button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -37,14 +37,14 @@ layout: page
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact l-float-right__m">Manage</button>
+				<button class="Button Button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
 	</tbody>
 </table>
 
 {% highlight html %}
-<table class="dh-table__m">
+<table class="Table__m">
 	<thead>
 		<th class="w-50">Name</th>
 		<th>Location</th>
@@ -57,7 +57,7 @@ layout: page
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact l-float-right__m">Manage</button>
+				<button class="Button Button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -65,7 +65,7 @@ layout: page
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact l-float-right__m">Manage</button>
+				<button class="Button Button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -73,7 +73,7 @@ layout: page
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact l-float-right__m">Manage</button>
+				<button class="Button Button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
 	</tbody>
@@ -83,7 +83,7 @@ layout: page
 <hr />
 
 ## Table Condensed with zebra striping
-<table class="dh-table dh-table--striped dh-table--condensed">
+<table class="Table Table--striped Table--condensed">
 	<thead>
 		<th class="w-50">Name</th>
 		<th>Location</th>
@@ -96,7 +96,7 @@ layout: page
 			<td> US East-2</td>
 			<td>208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact l-float-right">Manage</button>
+				<button class="Button Button--compact l-float-right">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -104,7 +104,7 @@ layout: page
 			<td> US East-2</td>
 			<td>208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact l-float-right">Manage</button>
+				<button class="Button Button--compact l-float-right">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -112,14 +112,14 @@ layout: page
 			<td> US East-2</td>
 			<td>208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact l-float-right">Manage</button>
+				<button class="Button Button--compact l-float-right">Manage</button>
 			</td>
 		</tr>
 	</tbody>
 </table>
 
 {% highlight html %}
-<table class="dh-table dh-table--striped dh-table--condensed">
+<table class="Table Table--striped Table--condensed">
 	<thead>
 		<th class="w-50">Name</th>
 		<th>Location</th>
@@ -132,7 +132,7 @@ layout: page
 			<td> US East-2</td>
 			<td>208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact l-float-right">Manage</button>
+				<button class="Button Button--compact l-float-right">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -140,7 +140,7 @@ layout: page
 			<td> US East-2</td>
 			<td>208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact l-float-right">Manage</button>
+				<button class="Button Button--compact l-float-right">Manage</button>
 			</td>
 		</tr>
 		<tr>
@@ -148,7 +148,7 @@ layout: page
 			<td> US East-2</td>
 			<td>208.123.123.123</td>
 			<td>
-				<button class="dh-button dh-button--compact l-float-right">Manage</button>
+				<button class="Button Button--compact l-float-right">Manage</button>
 			</td>
 		</tr>
 	</tbody>

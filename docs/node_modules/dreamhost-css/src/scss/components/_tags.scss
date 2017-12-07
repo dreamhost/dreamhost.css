@@ -7,7 +7,7 @@ Tags
 
 */
 
-.dh-tag {
+.Tag {
 	text-transform: uppercase;
 	background: $c-b300;
 	color: $white;
@@ -17,19 +17,19 @@ Tags
 	border-radius: 20px;
 	padding: 0.25em 0.75em;
 
-	&.dh-tag--square {
+	&.Tag--square {
 		border-radius: 0;
 	}
 
-	&.dh-tag--red {
+	&.Tag--red {
 		background: $c-r300;
 	}
 
-	&.dh-tag--turquoise {
+	&.Tag--turquoise {
 		background: $c-t300;
 	}
 
-	&.dh-tag--orange {
+	&.Tag--orange {
 		background: $c-o300;
 	}
 }

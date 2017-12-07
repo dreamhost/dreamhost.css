@@ -16,7 +16,7 @@ Page Header Component
 	- Page header content can vary. Use `.Fluid-Row` classes to space content.
 	- `.PageHeader__nav` should contain the primary navigation
 	- `.PageHeader__subnav` is for all the secondary links we may need to provide
-	- Both nav and subnav supports dh-lists within a `.popover` as a dropdown
+	- Both nav and subnav supports Lists within a `.popover` as a dropdown
 	- The header was built around the idea of a single breakpoint. Below that breakpoint,
 		the header will show a hamburger menu link with the header taking over the screen
 		when shown. Larger than that breakpoint will display the header inline.
@@ -109,14 +109,14 @@ Page Header Component
 }
 
 .PageHeader__logo {
-	padding-right: 4em;
+	padding-right:  convertScaleToRem(8);
 	background-image: url("data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuNjggMThhMTMuMDUgMTMuMDUgMCAwIDEtNi41OCAxLjY0IDEyLjc2IDEyLjc2IDAgMCAxLTEyLjU1LTEzQTEyLjM3IDEyLjM3IDAgMCAxIDYuNDkuMjMgMTIuNjkgMTIuNjkgMCAwIDAgMTIuNTYgMjRhMTIuODEgMTIuODEgMCAwIDAgMTEuMTItNiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0xNyAxOC4xN2guMjNhMTEuNDMgMTEuNDMgMCAwIDAgNS4yOC0xLjMxQTExIDExIDAgMCAwIDI0IDExLjIyIDExLjE3IDExLjE3IDAgMCAwIDEzIDBhMTEuMTkgMTEuMTkgMCAwIDAtNS4zMSAxLjM2IDExIDExIDAgMCAwLTEuNjIgNS41QTExLjEgMTEuMSAwIDAgMCAxNyAxOC4xNyIgZmlsbD0iIzNlOTViZSIvPjwvc3ZnPg==");
 	background-repeat: no-repeat;
 }
 
 .PageHeader__nav {
-	@extend .dh-list;
-	@extend .dh-list--inline;
+	@extend .List;
+	@extend .List--inline;
 }
 
 .PageHeader__nav-link {
@@ -172,9 +172,9 @@ Page Header Component
 }
 
 .PageHeader__subnav {
-	@extend .dh-list;
-	@extend .dh-list--inline;
-	margin-right: 2.5em;
+	@extend .List;
+	@extend .List--inline;
+  margin-right: 2.5em;
 	padding-left: convertScaleToRem(4);
 
 	.PageHeader__subnav svg {
@@ -220,7 +220,6 @@ Page Header Component
 	vertical-align: middle;
 	transform: translate(18px, -4px);
 }
-
 
 button.PageHeader__subnav-link {
 	background: transparent;
