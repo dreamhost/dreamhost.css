@@ -72,21 +72,10 @@ Page Header Component
 		text-align:left;
 
 		ul{
-			padding:1em;
-		
 			&:not(:first-child) {
 				border-top: solid 1px $c-g100;
 			}	
 		
-		}
-
-		.List li {
-			margin-bottom:0.5em;
-
-			&:last-child{
-				margin-bottom:0;
-			}
-
 		}
 
 		.List li a {
