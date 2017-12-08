@@ -9,7 +9,7 @@ layout: page
 
 <hr />
 
-<div class="PageHeader">
+<div class="PageHeader m-bottom-5">
 	<div class="PageHeader__container">
 		<a class="PageHeader__logo" href="//www.dreamhost.com"></a>
 		<ul class="PageHeader__nav">
@@ -52,8 +52,9 @@ layout: page
 	</div>
 </div>
 
-## Basic guidelines
-<ul class="list list--disc m-bottom-2">
+<h2>Basic guidelines</h2>
+
+<ul class="list list--disc m-bottom-5">
 	<li><code>.PageHeader__nav</code> should contain the primary navigation</li>
 	<li><code>.PageHeader__subnav`</code> is for all the secondary links we may need to provide</li>
 	<li>Both nav and subnav supports lists within a <code>`.Popover`</code> as a dropdown</li>
