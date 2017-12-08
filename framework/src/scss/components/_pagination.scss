@@ -16,6 +16,11 @@
 
 		&:hover{
 			background: $c-w100;
+
+			.Pagination__icon{
+				color: $c-b300;
+				transform: scale($s-2);
+			}
 		}
 
 		&:first-child{
@@ -38,9 +43,4 @@
 	width: convertScaleToRem(1.5);
 	color: $c-g200;
 	display: block;
-
-	&:hover{
-		color: $c-b300;
-		transform: scale($s-2);
-	}
 }
