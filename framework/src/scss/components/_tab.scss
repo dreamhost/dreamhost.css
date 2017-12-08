@@ -1,26 +1,59 @@
-.tabs {
+.Tabs {
 	margin-bottom: convertScaleToRem(5);
 }
 
-.tabs__nav-item {
+.Tabs ul { 
+	border-bottom: solid 1px $c-g100; 
+	font-size: 0; 
+}
+
+.Tabs__nav-item {
 	@include link(dark);
-	font-family: $heading;
-	padding: convertScaleToRem(4);
-	font-size: $t-4;
+	margin:0 convertScaleToRem(2.5);
+	padding:0 0 convertScaleToRem(2) 0;
+	font-size: $t-2;
+	font-weight: $t-bold;
+	color: $c-g400;
 	display: inline-block;
+	position: relative;
+	user-select: none;
+
+	@include transition (right $tr-4 ease-out);
+
+	&:after{
+		content: "";
+		position: absolute;
+		z-index: $z-0;
+		left: 0;
+		right: 100%;
+		bottom: 0;
+		background: $c-b300;
+		height: 2px;
+		
+		@include transition (right $tr-4 ease-out);
+	}
+
+	&:hover, &:active{
+		color: $c-b700;
+	}
 
 	&:first-child {
-		padding-left: 0; // to align with hard-left start of box below
+		margin-left: 0; // to align with hard-left start of box below
 	}
 }
 
-.tab {
+.Tab {
 	@include box;
 }
 
 // States
 
-.tabs__nav-item.is-active {
+.Tabs__nav-item.is-active {
 	@include unlink;
 	font-weight: $t-bold;
+	color: $c-b700;
+
+	&:after {
+		right:0%;
+	}
 }
