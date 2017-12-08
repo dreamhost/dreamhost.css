@@ -1,6 +1,6 @@
 .Pagination{
 	display: inline-block;
-	margin:0;
+	margin: 0;
 
 	.Pagination__button{
 		display: inline-block;
@@ -16,11 +16,6 @@
 
 		&:hover{
 			background: $c-w100;
-
-			.icon{
-				color: $c-b300;
-				transform: scale($s-2);
-			}
 		}
 
 		&:first-child{
@@ -28,18 +23,24 @@
 		}
 	}
 
-	.icon{
-		margin: 0;
-		padding: 0;
-		height: convertScaleToRem(1.5);
-		width: convertScaleToRem(1.5);
-		color: $c-g200;
-		display: block;
-	}
-
 	.Pagination__status{
 		display: inline-block;
 		margin: 0;
 		padding: 0 convertScaleToRem(2);
+	}
+}
+
+.Pagination__icon{
+	@extend .Icon;
+	margin: 0;
+	padding: 0;
+	height: convertScaleToRem(1.5);
+	width: convertScaleToRem(1.5);
+	color: $c-g200;
+	display: block;
+
+	&:hover{
+		color: $c-b300;
+		transform: scale($s-2);
 	}
 }
