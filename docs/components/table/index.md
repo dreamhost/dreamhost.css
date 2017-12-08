@@ -16,7 +16,7 @@ layout: page
 		<th />
 	</thead>
 	<tbody>
-		<tr>
+		<tr class="Table__row--parent">
 			<td><a href="#">Server Name</a></td>
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
@@ -24,7 +24,7 @@ layout: page
 				<button class="Button Button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
-		<tr>
+		<tr class="Table__row--child">
 			<td><a href="#">Server Name</a></td>
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
@@ -32,7 +32,7 @@ layout: page
 				<button class="Button Button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
-		<tr>
+		<tr class="Table__row">
 			<td><a href="#">Server Name</a></td>
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
@@ -52,7 +52,7 @@ layout: page
 		<th />
 	</thead>
 	<tbody>
-		<tr>
+		<tr class="Table__row--parent">
 			<td><a href="#">Server Name</a></td>
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
@@ -60,7 +60,7 @@ layout: page
 				<button class="Button Button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
-		<tr>
+		<tr class="Table__row--child">
 			<td><a href="#">Server Name</a></td>
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
@@ -68,7 +68,7 @@ layout: page
 				<button class="Button Button--compact l-float-right__m">Manage</button>
 			</td>
 		</tr>
-		<tr>
+		<tr class="Table__row">
 			<td><a href="#">Server Name</a></td>
 			<td data-title="Location:"> US East-2</td>
 			<td data-title="IP Address:"> 208.123.123.123</td>
