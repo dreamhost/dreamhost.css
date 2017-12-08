@@ -1,13 +1,13 @@
-.tabs {
+.Tabs {
 	margin-bottom: convertScaleToRem(5);
 }
 
-.tabs ul { 
+.Tabs ul { 
 	border-bottom: solid 1px $c-g100; 
 	font-size: 0; 
 }
 
-.tabs__nav-item {
+.Tabs__nav-item {
 	@include link(dark);
 	margin:0 convertScaleToRem(2.5);
 	padding:0 0 convertScaleToRem(2) 0;
@@ -42,13 +42,13 @@
 	}
 }
 
-.tab {
+.Tab {
 	@include box;
 }
 
 // States
 
-.tabs__nav-item.is-active {
+.Tabs__nav-item.is-active {
 	@include unlink;
 	font-weight: $t-bold;
 	color: $c-b700;
