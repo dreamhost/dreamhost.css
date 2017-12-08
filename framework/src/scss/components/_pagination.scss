@@ -33,14 +33,15 @@
 		margin: 0;
 		padding: 0 convertScaleToRem(2);
 	}
-}
 
-.Pagination__icon{
-	@extend .Icon;
-	margin: 0;
-	padding: 0;
-	height: convertScaleToRem(1.5);
-	width: convertScaleToRem(1.5);
-	color: $c-g200;
-	display: block;
+	.Pagination__icon{
+		@extend .Icon;
+		margin: 0;
+		padding: 0;
+		height: convertScaleToRem(1.5);
+		width: convertScaleToRem(1.5);
+		color: $c-g200;
+		display: block;
+	}
+
 }
