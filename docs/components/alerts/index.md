@@ -10,6 +10,39 @@ layout: page
 <h2 class="m-bottom-1">Banner Alerts</h2>
 <p class="m-bottom-7">Useful for global errors, system statuses, promotions, etc. All banner alerts include a primary action, with an optional secondary action.</p>
 
+<div class="Alert">
+	<p class="Alert__heading">Neutral alert</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+</div>
+<div class="Alert Alert--success">
+	<p class="Alert__heading">Happy alert</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+</div>
+<div class="Alert Alert--error">
+	<p class="Alert__heading">Scary alert</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+</div>
+
+{% highlight html %}
+<div class="Alert">
+	<p class="Alert__heading">Neutral alert</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+</div>
+<div class="Alert Alert--success">
+	<p class="Alert__heading">Happy alert</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+</div>
+<div class="Alert Alert--error">
+	<p class="Alert__heading">Scary alert</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
+</div>
+{% endhighlight%}
+
+<hr />
+
+<h2 class="m-bottom-1">Notification Alerts</h2>
+<p class="m-bottom-7">Useful for global errors, system statuses, promotions, etc. All notification alerts also include a primary action, with an optional secondary action.</p>
+
 <div class="m-bottom-7">
 
 <div class="Notification">
@@ -66,7 +99,6 @@ layout: page
 </div><!--Notification-->
 {% endhighlight%}
 
-
 <hr />
 
 <h2 class="m-bottom-1">Toaster Alerts</h2>
@@ -101,37 +133,4 @@ layout: page
 		<p class="Toaster__heading">Negative toaster notification<span>Click for more details</span></p>
 	</div><!--Toaster-->
 </div><!--Toaster-container-->
-{% endhighlight%}
-
-<hr />
-
-<h2 class="m-bottom-1">Banner Alerts (Legacy)</h2>
-<p class="m-bottom-7">Useful for global errors, system statuses, promotions, etc. All banner alerts include a primary action, with an optional secondary action.</p>
-
-<div class="Alert">
-	<p class="Alert__heading">Neutral alert</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
-</div>
-<div class="Alert Alert--success">
-	<p class="Alert__heading">Happy alert</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
-</div>
-<div class="Alert Alert--error">
-	<p class="Alert__heading">Scary alert</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
-</div>
-
-{% highlight html %}
-<div class="Alert">
-	<p class="Alert__heading">Neutral alert</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
-</div>
-<div class="Alert Alert--success">
-	<p class="Alert__heading">Happy alert</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
-</div>
-<div class="Alert Alert--error">
-	<p class="Alert__heading">Scary alert</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia recusandae dolorum sunt quisquam perspiciatis ipsam delectus voluptas laborum autem quae placeat atque officia a officiis fugiat repellendus, ab. Ducimus.</p>
-</div>
 {% endhighlight%}
