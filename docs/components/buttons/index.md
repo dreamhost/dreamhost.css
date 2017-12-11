@@ -26,9 +26,9 @@ layout: page
 ## Tags
 
 <div class="m-bottom-5">
-	<span role="button" class="m-bottom-2 Button Button__tag">Tag button</span>
-	<span role="button" class="m-bottom-2 Button Button__tag Button__tag--positive">Positive Tag Button</span>
-	<span role="button" class="m-bottom-2 Button Button__tag Button__tag--negative">Negative Tag Button</span>
+	<span role="button" class="m-bottom-2 Button Button__tag" data-label="label">Tag button</span>
+	<span role="button" class="m-bottom-2 Button Button__tag Button__tag--positive" data-label="label">Positive Tag Button</span>
+	<span role="button" class="m-bottom-2 Button Button__tag Button__tag--negative" data-label="label">Negative Tag Button</span>
 </div>
 
 {% highlight html %}

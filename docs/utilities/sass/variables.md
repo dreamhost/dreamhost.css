@@ -10,6 +10,45 @@ layout: page
 ## Colors
 
 {% highlight css %}
+//Backgrounds
+$c-b700: #071c26; //midnight
+$c-w100: #ffffff; //white
+
+//Grayscale
+$c-black: #000000; //black
+$c-g500: #434F58; //metal
+$c-g400: #677983; //galactic
+$c-g300: #AFBFC9; //cloudy
+$c-g200: #E0E4E8; //smoke
+$c-g100: #F4F6F9; //offwhite
+
+//Primary Accent
+$c-b500: #1176A5; //royalblue
+$c-b300: #2BADE9; //skyblue
+$c-b100: #CCEFFF; //babyblue
+
+// Checkout Accent
+$c-o500: #664200; //autumn
+$c-o300: #FFA700; //orange
+$c-o100: #FFE0A6; //peach
+
+// Positive Accent
+$c-t500: #0D8288; //marina
+$c-t300: #00CAAA; //turtle
+$c-t100: #E5FEFF; //ice
+
+// Neutral Accent
+$c-y500: #6F5F1B; //leather
+$c-y300: #FFDA00; //sunflower
+$c-y100: #FFF4B6; //magnolia
+
+// Negative Accent
+$c-r500: #4F0703; //rust
+$c-r300: #FF4A48; //coral
+$c-r100: #FFCCCE; //rose
+
+// Brand Colors
+
 // Blues
 $lightest-blue
 $lighter-blue
@@ -115,10 +154,11 @@ $t-4: 1.5rem; // 24px
 $t-3: 1rem; // 16px
 $t-2: .875rem; // 14px. legibility at small sizes > adhering to scales
 $t-1: .75em; // 12px
+$t-0: .688em; //11px
 {% endhighlight %}
 
 {% highlight css %}
-div {font-size: $t-l}
+div {font-size: $t-4}
 {% endhighlight %}
 
 ### Weights
@@ -140,9 +180,9 @@ div {font-weight: $t-light}
 ## Borders
 
 {% highlight css %}
-$border-size: 1px;
+$border-size-1: 1px;
+$border-size-2: 2px;
 $border-radius: 3px;
-$border-radius-large: 5px;
 {% endhighlight %}
 
 {% highlight css %}
@@ -153,19 +193,47 @@ div {border-radius: $border-radius}
 
 ## Durations
 
+### Animation Duration
 {% highlight css %}
-$a-larger: 2s;
-$a-large: 1.5s;
-$a-size: 1s;
-$a-small: .5s;
-$a-smaller: .3s;
+$a-5: 2s;
+$a-4: 1.5s;
+$a-3: 1s;
+$a-2: .5s;
+$a-1: .3s;
 {% endhighlight %}
 
 {% highlight css %}
-div {transition-duration: $a-smaller;}
+div {animation-duration: $a-2;}
+{% endhighlight %}
+
+### Transition Duration
+{% highlight css %}
+$tr-5: .3s;
+$tr-4: .2s;
+$tr-3: .1s;
+$tr-2: .07s;
+$tr-1: .05s;
+{% endhighlight %}
+
+{% highlight css %}
+div {transition-duration: $a-2;}
 {% endhighlight %}
 
 <hr />
+
+## Scale
+
+{% highlight css %}
+$s-5: 1.02; //magnify
+$s-4: 1.01;
+$s-3: 1; //initial
+$s-2: .99;
+$s-1: .98; //shrink
+{% endhighlight %}
+
+{% highlight css %}
+div {transform: scale($s-5);}
+{% endhighlight %}
 
 ## Z-Index
 
