@@ -5,14 +5,14 @@ Allows users to toggle between two states.
 
 Usage:
 <div class="Toggle">
-    <input class="Toggle__input" type="checkbox" id="toggle" />
-    <label for="toggle" class="Toggle__label">
-        <span class="Toggle__visible"></span>
-        <span class="Toggle__description">
-            <span class="Toggle__checked">On</span>
-            <span class="Toggle__unchecked">Off</span>
-        </span>
-    </label>
+	<input class="Toggle__input" type="checkbox" id="toggle" />
+	<label for="toggle" class="Toggle__label">
+		<span class="Toggle__visible"></span>
+		<span class="Toggle__description">
+			<span class="Toggle__checked">On</span>
+			<span class="Toggle__unchecked">Off</span>
+		</span>
+	</label>
 </div>
 
 */

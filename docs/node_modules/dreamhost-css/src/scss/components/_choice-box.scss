@@ -41,7 +41,8 @@
 }
 
 .ChoiceBox__title {
-	color: $black;
+	color: $c-g500;
+	font-weight: bold;
 	display: block;
 	overflow: hidden;
 	padding-bottom: convertScaleToRem(1);
@@ -95,11 +96,8 @@
 		transform: scale(1.02);
 	}
 
+	.ChoiceBox__content,
 	.ChoiceBox__title {
-		font-weight: bold;
-	}
-
-	.ChoiceBox__content {
 		color: $black;
 	}
 
