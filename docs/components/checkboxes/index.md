@@ -81,26 +81,26 @@ layout: page
 
 ## Checkbox as a toggle
 
-<div class="Toggle">
-    <input class="Toggle__input" type="checkbox" id="toggle" />
-    <label for="toggle" class="Toggle__label">
-        <span class="Toggle__visible"></span>
-        <span class="Toggle__description">
-            <span class="Toggle__checked">On</span>
-            <span class="Toggle__unchecked">Off</span>
-        </span>
-    </label>
+<div class="Toggle m-bottom-5">
+	<input class="Toggle__input" type="checkbox" id="toggle" />
+	<label for="toggle" class="Toggle__label">
+		<span class="Toggle__description">
+			<span class="Toggle__checked">On</span>
+			<span class="Toggle__unchecked">Off</span>
+		</span>
+		<span class="Toggle__visible"></span>
+	</label>
 </div>
 
 {% highlight html %}
 <div class="Toggle">
-    <input class="Toggle__input" type="checkbox" id="toggle" />
-    <label for="toggle" class="Toggle__label">
-        <span class="Toggle__visible"></span>
-        <span class="Toggle__description">
-            <span class="Toggle__checked">On</span>
-            <span class="Toggle__unchecked">Off</span>
+	<input class="Toggle__input" type="checkbox" id="toggle" />
+	<label for="toggle" class="Toggle__label">
+		<span class="Toggle__description">
+			<span class="Toggle__checked">On</span>
+			<span class="Toggle__unchecked">Off</span>
         </span>
-    </label>
+		<span class="Toggle__visible"></span>
+	</label>
 </div>
 {% endhighlight %}
