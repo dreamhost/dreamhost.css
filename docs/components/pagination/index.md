@@ -10,7 +10,7 @@ layout: page
 
 <hr />
 
-<div class="Pagination">
+<div class="Pagination m-bottom-4">
 	<a class="Pagination__button" href="#"><svg class="Pagination__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M4.5 0L2 1.8 5.8 6 2 10.2 4.5 12 10 6z"/></svg></a>
 	<p class="Pagination__status">Step <span>1</span> of <span>5</span></p>
 	<a  class="Pagination__button" href="#"><svg class="Pagination__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M4.5 0L2 1.8 5.8 6 2 10.2 4.5 12 10 6z"/></svg></a>
