@@ -3,7 +3,7 @@ title: Core Design Principles
 layout: page
 ---
 
-<h2><span class="t-red">Users</span> - <span class="t-red">Purpose</span> - <span class="t-red">Effortless</span> - <span class="t-red">Personality</span></h2>
+<h2><span class="t-c-b500">Users</span> - <span class="t-c-b500">Purpose</span> - <span class="t-c-b500">Effortless</span> - <span class="t-c-b500">Personality</span></h2>
 
 <hr />
 
