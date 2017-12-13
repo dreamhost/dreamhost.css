@@ -10,7 +10,7 @@ layout: page
 ## Margins
 <p class="t-4">Margin utilities are prefixed with m- and can be used to push other elements away from any side.</p>
 
-<p>Use the convention m-size or m-side-size, e.g <code>.m-1</code> or <code>.m-bottom-1</code>. You can also you axis shortcuts: <code>.m-x-1</code> for margin on the x axis only, or <code>.m-y-1</code> for margin on the y axis only.</p>
+<p>Use the convention m-size or m-side-size, e.g <code>.m-1</code> or <code>.m-bottom-1</code>. You can also use axis shortcuts: <code>.m-x-1</code> for margin on the x axis only, or <code>.m-y-1</code> for margin on the y axis only.</p>
 
 <div class="p-1 bg-c-g300 m-bottom-half">.m-half</div>
 <div class="p-1 bg-c-g300 m-bottom-1">.m-1</div>
@@ -55,7 +55,7 @@ layout: page
 ## Padding
 <p class="t-l">Padding utilities are prefixed with p- and can be used to add space inside an element on any side.</p>
 
-<p>Use the convention p-size or m-side-size, e.g <code>.p-1</code> or <code>.p-bottom-1</code>. You can also you axis shortcuts: <code>.p-x-1</code> for padding on the x axis only, or <code>.p-y-1</code> for padding on the y axis only.</p>
+<p>Use the convention p-size or m-side-size, e.g <code>.p-1</code> or <code>.p-bottom-1</code>. You can also use axis shortcuts: <code>.p-x-1</code> for padding on the x axis only, or <code>.p-y-1</code> for padding on the y axis only.</p>
 <div class="m-bottom-1 bg-c-g300 p-half">.p-half</div>
 <div class="m-bottom-1 bg-c-g300 p-1">.p-1</div>
 <div class="m-bottom-1 bg-c-g300 p-2">.p-2</div>
