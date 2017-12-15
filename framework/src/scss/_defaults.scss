@@ -86,7 +86,7 @@ hr {
 }
 
 code {
-	padding: 0 convertScaleToRem(1);
+	padding: .3rem .6rem;
 	font-size: $t-2;
 	display: inline-block;
 	border: 1px solid $lighter-grey;
@@ -94,6 +94,7 @@ code {
 	background: $c-g500;
 	color: $c-w100;
 	font-family: monospace;
+
 }
 
 a[disabled] {
