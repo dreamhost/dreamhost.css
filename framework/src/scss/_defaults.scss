@@ -80,8 +80,9 @@ p, section, img {
 }
 
 hr {
-	border: 1px solid $lighter-grey;
+	border: 0;
 	margin: convertScaleToRem(4) 0;
+	border-bottom: 1px solid $c-g200;
 }
 
 code {
