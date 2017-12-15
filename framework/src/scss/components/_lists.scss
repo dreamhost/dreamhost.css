@@ -52,7 +52,7 @@
 	letter-spacing: .666px;
 	color: $c-g500;
 	font-size: $t-2;
-	margin-bottom: 0;
+	margin-bottom: convertScaleToRem(1);
 }
 
 .List__menu--description {
