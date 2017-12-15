@@ -87,6 +87,12 @@
 	font-size: $t-2;
 }
 
+.List--small-bold > li span {
+	color: $c-g400;
+	font-size: $t-2;
+	padding: auto convertScaleToRem(1);
+}
+
 // Don't give hover states to non-links
 .List--small-bold > li > a:hover,
 .List--small-bold > li > button:hover,
