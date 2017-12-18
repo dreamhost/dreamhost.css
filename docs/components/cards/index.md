@@ -5,7 +5,7 @@ layout: page
 
 <p class="t-4">Useful for displaying a heading, content, and call-to-action in a box.
     Optionally supports a label, and two different sized icons. Use with
-    the <a href="{{site.baseurl}}/utilities/grid/">Grid</a> for positioning.</p>
+    the <a href="{{site.baseurl}}/utilities/grid/">Grid</a> for positioning.</p> <p class="t-4">Cards can also use flexbox so that they all occupy the same vertical space. They must be wrapped by the <code>.Card__wrapper</code> class to flex correctly.</p>
 
 <hr />
 
