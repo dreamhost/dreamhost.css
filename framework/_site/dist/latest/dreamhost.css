@@ -462,7 +462,7 @@ Buttons
 	Styleguide Base.Buttons
 
 */
-.Button { font-family: "Proxima Nova", sans-serif; color: #000000; background: #ffffff; border: solid 1px #E0E4E8; border-radius: 3px; display: inline-block; font-size: 0.688rem; padding: 1em 3em; letter-spacing: .55px; margin: 0; text-align: center; text-decoration: none; text-transform: uppercase; font-weight: 600; text-shadow: none; vertical-align: middle; outline: none; transition: all 0.1s ease-in-out; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.Button { font-family: "Proxima Nova", sans-serif; color: #000000; background: #ffffff; border: solid 1px #E0E4E8; border-radius: 3px; display: inline-block; font-size: 0.688em; padding: 1em 3em; letter-spacing: .55px; margin: 0; text-align: center; text-decoration: none; text-transform: uppercase; font-weight: 600; text-shadow: none; vertical-align: middle; outline: none; transition: all 0.1s ease-in-out; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
 .Button:hover, .Button:active, .Button.is-open { border: solid 1px #2BADE9; background: #ffffff; color: #000000; text-decoration: none; }
 
@@ -1095,7 +1095,7 @@ Tags
 	Default tags are blue.
 
 */
-.Tag { text-transform: uppercase; display: inline-block; font-weight: bold; font-size: 0.75rem; border-radius: 20px; padding: 0.25em 0.75em 0.05em; }
+.Tag { text-transform: uppercase; display: inline-block; font-weight: bold; font-size: 0.75em; border-radius: 20px; padding: 0.25em 0.75em 0.05em; }
 
 .Tag, .Tag--blue, .Button__tag.Button__tag--positive:before { background: #2BADE9; color: #ffffff; }
 
@@ -3302,7 +3302,7 @@ Transition Utilities
 
 .t-mono { font-family: "Ubuntu Mono", monospace !important; }
 
-.t-1, .t-xs { font-size: 0.75rem !important; }
+.t-1, .t-xs { font-size: 0.75em !important; }
 
 .t-2, .t-s { font-size: 0.875rem !important; }
 
@@ -3352,7 +3352,7 @@ Transition Utilities
 
 .t-caret:after { content: ''; display: inline-block; width: 0; height: 0; border: .3em solid transparent; border-bottom-width: .14em; border-top-color: currentColor; vertical-align: middle; margin-left: .4em; }
 
-@media screen and (min-width: 750px) { .t-1__m { font-size: 0.75rem !important; }
+@media screen and (min-width: 750px) { .t-1__m { font-size: 0.75em !important; }
   .t-2__m { font-size: 0.875rem !important; }
   .t-3__m { font-size: 1rem !important; }
   .t-4__m { font-size: 1.5rem !important; }
@@ -3368,7 +3368,7 @@ Transition Utilities
   .t-lighter__m { font-weight: 100 !important; }
   .t-regular__m { font-weight: 400 !important; } }
 
-@media screen and (min-width: 1050px) { .t-1__l { font-size: 0.75rem !important; }
+@media screen and (min-width: 1050px) { .t-1__l { font-size: 0.75em !important; }
   .t-2__l { font-size: 0.875rem !important; }
   .t-3__l { font-size: 1rem !important; }
   .t-4__l { font-size: 1.5rem !important; }
