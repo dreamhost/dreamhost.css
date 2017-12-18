@@ -23,7 +23,40 @@ Cards
 
 */
 
+.Card__wrapper{
+	display: inline-flex;
+	flex-wrap: wrap;
+
+	.Card{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.Card__content{
+		flex: 1 0 auto;
+	}
+}
+
 .Card {
+	background: $c-g100;
+	width: 100%;
+
+	@media (min-width: 750px) {
+		background: none;
+
+		&.g-1_3,
+		&.g-1_3__m,
+		&.g-1_3__l {
+			width: 31.76157%;
+		}
+
+		&.g-1_2,
+		&.g-1_2__m,
+		&.g-1_2__l {
+			width: 48.82117%;
+		}
+	}
+
 	@include box;
 	position: relative;
 	margin-bottom: convertScaleToRem(4);
@@ -66,9 +99,6 @@ Cards
 		position: absolute;
 		top: convertScaleToRem(5);
 		left: convertScaleToRem(12.5);
-		text-transform: uppercase;
-		font-size: $t-2;
-		color: $c-g400;
 	}
 
 	& ~ .Card__heading {
@@ -77,4 +107,10 @@ Cards
 		margin-bottom: convertScaleToRem(2);
 		top: convertScaleToRem(-1);
 	}
+}
+
+.Card__super {
+	text-transform: uppercase;
+	font-size: $t-2;
+	color: $c-g400;
 }

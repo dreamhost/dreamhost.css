@@ -9,12 +9,15 @@ Tags
 */
 
 .Tag {
+	position: relative;
+	top: -.1em;
 	text-transform: uppercase;
 	display: inline-block;
 	font-weight: bold;
 	font-size: $t-1;
 	border-radius: 20px;
 	padding: 0.25em 0.75em 0.05em;
+	width: auto;
 }
 
 .Tag,
