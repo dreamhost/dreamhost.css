@@ -40,7 +40,7 @@ Table
 
 	th {
 		padding: convertScaleToRem(2) convertScaleToRem(1);
-		font-size: $t-2;
+		font-size: $t-3;
 		font-family: $heading;
 		color: $c-black;
 		text-transform: uppercase;
@@ -56,7 +56,7 @@ Table
 	td {
 		padding: convertScaleToRem(2) convertScaleToRem(1);
 		vertical-align: middle;
-		font-size: $t-2;
+		font-size: $t-3;
 	}
 
 	.Table__row {
@@ -158,7 +158,7 @@ Table
 
 			td {
 				display: table-cell;
-				font-size: $t-2;
+				font-size: $t-3;
 
 				&:before {
 					content: '';
@@ -167,7 +167,7 @@ Table
 
 				&:first-child,
 				&:first-child a {
-					font-size: $t-2;
+					font-size: $t-3;
 					font-weight: $t-regular;
 					text-transform: none;
 					letter-spacing: 0;
