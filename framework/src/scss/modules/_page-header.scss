@@ -152,10 +152,13 @@ Page Header Component
 .PageHeader__subnav {
 	@extend .List;
 	@extend .List--inline;
-  margin-right: 2.5em;
+	margin-right: 2.5em;
 	padding-left: convertScaleToRem(4);
 
-	.PageHeader__subnav svg {
+	a {
+		text-decoration: none;
+
+	svg {
 		height: 100%;
 		width: 100%;
 	}
@@ -196,6 +199,7 @@ Page Header Component
 	font-weight:$t-bold;
 	text-align: center;
 	vertical-align: middle;
+	color: $c-w100;
 	transform: translate(18px, -4px);
 }
 
