@@ -46,7 +46,7 @@ Page Header Component
 */
 
 .PageHeader {
-	padding: convertScaleToRem(3.5) convertScaleToRem(8);
+	padding: convertScaleToRem(3.5) 0;
 	background: $c-b700;
 	color: #fff;
 }
@@ -60,8 +60,11 @@ Page Header Component
 
 .PageHeader__container {
 	@include clearfix;
-	@extend .Fluid-Row;
+	display: block;
+	max-width: 1280px;
 	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 
 	> * {
 		@extend .Fluid-Row__item;
@@ -74,8 +77,7 @@ Page Header Component
 		ul{
 			&:not(:first-child) {
 				border-top: solid 1px $c-g100;
-			}	
-		
+			}
 		}
 
 		.List li a {
@@ -110,7 +112,7 @@ Page Header Component
 
 .PageHeader__nav-link {
 	text-decoration: none;
-	font-weight: $t-bold;
+	font-weight: 700;
 	color: $c-g200;
 	font-size: $t-2;
 	display: inline-block;
@@ -124,8 +126,8 @@ Page Header Component
 
 		&:after{
 			color:$c-b300;
-		}	
-	}	
+		}
+	}
 }
 
 .PageHeader__nav-link.is-active,
@@ -157,8 +159,7 @@ Page Header Component
 
 	a {
 		text-decoration: none;
-	}
-	
+
 	svg {
 		height: 100%;
 		width: 100%;
@@ -303,3 +304,4 @@ button.PageHeader__subnav-link {
 
 // Custom breakpoints (write this within an app)
 // .PageHeader { @include PageHeader--responsive(756px) }
+}
