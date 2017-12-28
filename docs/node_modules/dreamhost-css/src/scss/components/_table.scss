@@ -45,12 +45,20 @@ Table
 		color: $c-black;
 		text-transform: uppercase;
 	}
+
+	.Tag {
+		text-decoration: none;
+	}
+
+	.Button {
+		padding: convertScaleToRem(1) convertScaleToRem(2.5);
+	}
 }
 
 // Default
 .Table {
 	tbody tr:last-child {
-		border-bottom: 1px solid $c-g300;
+		border-bottom: 1px solid $c-g200;
 	}
 
 	td {
@@ -60,8 +68,8 @@ Table
 	}
 
 	.Table__row {
-		border-bottom: 1px solid $c-g300;
-		border-top: 1px solid $c-g300;
+		border-bottom: 1px solid $c-g200;
+		border-top: 1px solid $c-g200;
 	}
 
 	.Table__row--parent {
@@ -179,13 +187,13 @@ Table
 			}
 
 			&:last-child {
-				border-bottom: 1px solid $c-g300;
+				border-bottom: 1px solid $c-g200;
 			}
 		}
 
 		.Table__row {
-			border-bottom: 1px solid $c-g300;
-			border-top: 1px solid $c-g300;
+			border-bottom: 1px solid $c-g200;
+			border-top: 1px solid $c-g200;
 		}
 
 		.Table__row--parent {

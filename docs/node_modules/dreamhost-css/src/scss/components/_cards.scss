@@ -9,6 +9,7 @@ Cards
 	Options:
 	- .Card__icon               Include on an <img> to add a small icon
 	- .Card__large-icon         Include on an <img> to add a large icon
+	- .Card--disabled           Makes the card appear disabled
 
 	Usage:
 	<div class="Card g-1_3">
@@ -113,4 +114,18 @@ Cards
 	text-transform: uppercase;
 	font-size: $t-2;
 	color: $c-g400;
+}
+
+.Card--disabled {
+	cursor: not-allowed;
+
+	.Card__heading,
+	.Card__content,
+	.Button {
+		color: $c-g300;
+	}
+
+	.Button:before {
+		display: none;
+	}
 }

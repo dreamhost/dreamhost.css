@@ -33,7 +33,7 @@
 }
 
 .Tabs ul {
-	border-bottom: solid 1px $c-g200; 
+	border-bottom: solid 1px $c-g200;
 	font-size: 0;
 	min-width: 450px;
 }
@@ -71,7 +71,7 @@
 		bottom: 0;
 		background: $c-b300;
 		height: 2px;
-		
+
 		@include transition (right $tr-4 ease-out);
 	}
 
@@ -90,7 +90,6 @@
 }
 
 // States
-
 .Tabs__nav-item.is-active {
 	@include unlink;
 	font-weight: $t-bold;
@@ -98,5 +97,27 @@
 
 	&:after {
 		right:0%;
+	}
+}
+
+// Left tabs turn into top tabs at low widths
+@media (min-width: $medium-breakpoint) {
+	.Tabs--left {
+		max-width: 200px;
+		margin-top: 2rem;
+
+		ul {
+			border: 0;
+		}
+
+		.Tabs__nav-item {
+			display: block;
+			margin: 0;
+			font-size: 16px;
+
+			&:after {
+				display: none;
+			}
+		}
 	}
 }

@@ -48,3 +48,9 @@ $(document).on('click', '.js-toggle-mobile-menu', function(e) {
 	e.preventDefault();
 	$('.Page-header').toggleClass('mobile-is-open');
 });
+
+// Make closing Toaster animation controllable with JS
+// Example shown here using jQuery
+$('.js-toaster-close').on('click', function () {
+	$(this).closest('.Toaster--persistent').addClass('Toaster--is-closing');
+});
