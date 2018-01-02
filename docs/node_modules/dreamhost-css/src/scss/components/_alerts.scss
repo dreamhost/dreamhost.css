@@ -183,6 +183,10 @@
 	}
 }
 
+@for $i from 1 to 10 {
+	.Toaster-container .Toaster:nth-child(#{$i}) { animation-delay: $i * 0.3s; }
+}
+
 .Toaster--is-closing {
 	animation: CloseToaster .5s ease-in-out both;
 	animation-delay: 0s;
@@ -241,8 +245,4 @@
 	margin-bottom:0;
 	height:0;
 	}
-}
-
-@for $i from 1 to 10 {
-	.Toaster-container .Toaster:nth-child(#{$i}) { animation-delay: $i * 0.3s; }
 }
