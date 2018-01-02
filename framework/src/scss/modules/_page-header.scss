@@ -160,9 +160,10 @@ Page Header Component
 	a {
 		text-decoration: none;
 
-	svg {
-		height: 100%;
-		width: 100%;
+		svg {
+			height: 100%;
+			width: 100%;
+		}
 	}
 }
 
@@ -304,4 +305,3 @@ button.PageHeader__subnav-link {
 
 // Custom breakpoints (write this within an app)
 // .PageHeader { @include PageHeader--responsive(756px) }
-}
