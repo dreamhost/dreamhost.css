@@ -4,7 +4,8 @@ layout: page
 ---
 
 <p class="t-4">Below is the current collection of icons used throughout our applications.
-Icons are to be displayed at one of four different sizes <code>icon--size-x</code>.
+Icons are to be displayed at one of four different sizes <code>icon--size-x</code>. Icons have
+seperate color options to modify fill color. Icon colors are prefixed with <code>i-c-</code>
 </p>
 
 <hr />
