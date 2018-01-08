@@ -457,6 +457,77 @@ layout: page
 
 <hr />
 
+<section class="animations-delay">
+  <h2>Delay</h2>
+  <p>
+    There is no delay by default. Use <code>.a-delay-x</code>, where <code>x</code> is any number between 1 and 5.
+  </p>
+
+  <div class="container u-clearfix bg-c-g100 p-s">
+
+    <div class="g-1_3">
+      <div class="bg-c-b300 spin-right a-repeat p-s p-y-1 m-s m-x-auto h-0 w-0 u-border-radius-l">
+        &nbsp;
+      </div>
+    </div>
+
+    <div class="g-1_3">
+      <div class="bg-c-b300 spin-right a-delay-1 a-repeat p-s p-y-1 m-s m-x-auto h-0 w-0 u-border-radius-l">
+        &nbsp;
+      </div>
+      <p class="m-top-1 m-bottom-0 l-pos-relative w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.a-delay-1</code></p>
+    </div>
+
+    <div class="g-1_3 g-omega">
+      <div class="bg-c-b300 spin-right a-delay-2 a-repeat p-s p-y-1 m-s m-x-auto h-0 w-0 u-border-radius-l">
+        &nbsp;
+      </div>
+      <p class="m-top-1 m-bottom-0 l-pos-relative w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.a-delay-2</code></p>
+    </div>
+
+    <div class="g-1_3">
+      <div class="bg-c-b300 spin-right a-delay-3 a-repeat p-s p-y-1 m-s m-x-auto h-0 w-0 u-border-radius-l">
+        &nbsp;
+      </div>
+      <p class="m-top-1 m-bottom-0 l-pos-relative w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.a-delay-3</code></p>
+    </div>
+
+    <div class="g-1_3">
+      <div class="bg-c-b300 spin-right a-delay-4 a-repeat p-s p-y-1 m-s m-x-auto h-0 w-0 u-border-radius-l">
+        &nbsp;
+      </div>
+      <p class="m-top-1 m-bottom-0 l-pos-relative w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.a-delay-4</code></p>
+    </div>
+
+    <div class="g-1_3">
+      <div class="bg-c-b300 spin-right a-delay-5 a-repeat p-s p-y-1 m-s m-x-auto h-0 w-0 u-border-radius-l">
+        &nbsp;
+      </div>
+      <p class="m-top-1 m-bottom-0 l-pos-relative w-100"><code class="t-1 w-100 t-center bg-c-g100 t-c-g500">.a-delay-5</code></p>
+    </div>
+
+  </div>
+
+  {% highlight html %}
+  <!-- Animation delay 1 -->
+  <div class="spin-right a-delay-1"></div>
+
+  <!-- Animation delay 2 -->
+  <div class="spin-right a-delay-2"></div>
+
+  <!-- Animation delay 3 -->
+  <div class="spin-right a-delay-3"></div>
+
+  <!-- Animation delay 4 -->
+  <div class="spin-right a-delay-4"></div>
+
+  <!-- Animation delay 5 -->
+  <div class="spin-right a-delay-5"></div>
+  {% endhighlight %}
+</section>
+
+<hr />
+
 <section class="animations-repeat">
 
   <h2>Repeat</h2>

@@ -3,7 +3,103 @@ title: Grid
 layout: page
 ---
 
-<p class="t-4">DreamHost uses Bourbon's Neat Sass grid alongside some helper classes from the most common layouts we need to create.</p>
+<p class="t-4">DreamHost has multiple options to achieve the layouts we need to create.</p>
+
+<hr />
+
+<h2>Auto grid</h2>
+
+CSS Grid is used by the <code>.Grid--auto</code> class. It can be used to evenly distribute child <code><div></code> elements in a row &amp; is enacted at the <code>$medium-breakpoint</code>.
+
+{% highlight html %}
+<div class="Grid--auto">
+	<div>1</div>
+	<div>2</div>
+</div><!--Grid-->
+{% endhighlight %}
+
+There are also 2 column layout modifiers for auto grid layouts. <code>.Grid-1-3</code> <em>(2 column left aligned)</em> <code>.Grid-3-1</code> <em>(2 column right aligned)</em>. 
+
+{% highlight html %}
+<div class="Grid--auto .Grid-1-3">
+	<div>1</div>
+	<div>2</div>
+</div><!--Grid-->
+{% endhighlight %}
+
+Auto CSS grid layouts can also be nested.
+
+{% highlight html %}
+<div class="Grid--auto Grid-1-3">
+	<div>
+		<div class="Grid--auto">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div>
+	</div>
+	<div>2</div>
+</div>
+{% endhighlight %}
+
+<hr />
+
+<h2>12 column grid</h2>
+
+For more specific grid requirements there is also a 12 column grid layout system.
+
+<div class="Grid m-bottom-2">
+	<div class="g-12-12 bg-c-g200 t-center p-2 u-border-radius">.g-12-12</div>
+	<div class="g-6-12 bg-c-g200 t-center p-2 u-border-radius">.g-6-12</div>
+	<div class="g-6-12 bg-c-g200 t-center p-2 u-border-radius">.g-6-12</div>
+	<div class="g-3-12 bg-c-g200 t-center p-2 u-border-radius">.g-3-12</div>
+	<div class="g-3-12 bg-c-g200 t-center p-2 u-border-radius">.g-3-12</div>
+	<div class="g-3-12 bg-c-g200 t-center p-2 u-border-radius">.g-3-12</div>
+	<div class="g-3-12 bg-c-g200 t-center p-2 u-border-radius">.g-3-12</div>
+	<div class="g-2-12 bg-c-g200 t-center p-2 u-border-radius">.g-2-12</div>
+	<div class="g-2-12 bg-c-g200 t-center p-2 u-border-radius">.g-2-12</div>
+	<div class="g-2-12 bg-c-g200 t-center p-2 u-border-radius">.g-2-12</div>
+	<div class="g-2-12 bg-c-g200 t-center p-2 u-border-radius">.g-2-12</div>
+	<div class="g-2-12 bg-c-g200 t-center p-2 u-border-radius">.g-2-12</div>
+	<div class="g-2-12 bg-c-g200 t-center p-2 u-border-radius">.g-2-12</div>
+	<div class="g-1-12 bg-c-g200 t-center p-2 u-border-radius">.g-1-12</div>
+	<div class="g-1-12 bg-c-g200 t-center p-2 u-border-radius">.g-1-12</div>
+	<div class="g-1-12 bg-c-g200 t-center p-2 u-border-radius">.g-1-12</div>
+	<div class="g-1-12 bg-c-g200 t-center p-2 u-border-radius">.g-1-12</div>
+	<div class="g-1-12 bg-c-g200 t-center p-2 u-border-radius">.g-1-12</div>
+	<div class="g-1-12 bg-c-g200 t-center p-2 u-border-radius">.g-1-12</div>
+	<div class="g-1-12 bg-c-g200 t-center p-2 u-border-radius">.g-1-12</div>
+	<div class="g-1-12 bg-c-g200 t-center p-2 u-border-radius">.g-1-12</div>
+	<div class="g-1-12 bg-c-g200 t-center p-2 u-border-radius">.g-1-12</div>
+	<div class="g-1-12 bg-c-g200 t-center p-2 u-border-radius">.g-1-12</div>
+	<div class="g-1-12 bg-c-g200 t-center p-2 u-border-radius">.g-1-12</div>
+	<div class="g-1-12 bg-c-g200 t-center p-2 u-border-radius">.g-1-12</div>
+</div><!--Grid-->
+
+{% highlight html %}
+<div class="Grid">
+	<div class="g-6-12">1</div>
+	<div class="g-6-12">2</div>
+</div><!--Grid-->
+{% endhighlight %}
+
+<h2>12 column responsive modifiers</h2>
+
+<code>__m</code> - $medium-breakpoint modifier
+<code>__l</code> - $large-breakpoint modifier
+
+{% highlight html %}
+<div class="Grid">
+	<div class="g-12-12 g-6-12__m g-1-12__l">1</div>
+	<div class="g-12-12 g-6-12__m g-1-12__l">2</div>
+</div><!--Grid-->
+{% endhighlight %}
+
+<hr />
+
+<h2>Legacy grid</h2>
+
+<p class="t-4">DreamHost legacy floated grid uses Bourbon's Neat Sass grid alongside some helper classes from the most common layouts we need to create.</p>
 
 <hr />
 
