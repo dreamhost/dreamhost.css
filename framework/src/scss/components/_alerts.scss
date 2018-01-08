@@ -165,6 +165,48 @@
 
 }
 
+.Toaster__close {
+	padding: .4rem;
+
+	g {
+		stroke: $c-g300;
+		transition: all .15s ease-in-out;
+	}
+
+	&:hover {
+		background: $c-r300;
+		border-color: $c-r300;
+	}
+
+	&:hover g {
+		stroke: $c-w100;
+	}
+}
+
+@for $i from 1 to 10 {
+	.Toaster-container .Toaster:nth-child(#{$i}) { animation-delay: $i * 0.3s; }
+}
+
+.Toaster--is-closing {
+	animation: CloseToaster .5s ease-in-out both;
+	animation-delay: 0s;
+}
+
+@keyframes CloseToaster {
+	0% {
+		opacity: 1;
+		transform: scale($s-3) translateX(0);
+		margin-bottom: 0.5em;
+		height: 100%;
+	}
+	100% {
+		opacity: 0;
+		transform: scale($s-1) translateX(100%);
+		margin-bottom: 0;
+		height: 0;
+	}
+}
+
 @keyframes ToasterPersistent {
 	0% {
 	opacity: 0;
@@ -203,8 +245,4 @@
 	margin-bottom:0;
 	height:0;
 	}
-}
-
-@for $i from 1 to 10 {
-	.Toaster-container .Toaster:nth-child(#{$i}) { animation-delay: $i * 0.3s; }
 }
