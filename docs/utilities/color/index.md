@@ -3,7 +3,7 @@ title: Colors
 layout: page
 ---
 
-<p class="t-4">Colors are prefixed with <strong>c-</strong>, and can be used directly in Sass with their variable names. In HTML, add <strong>bg-</strong> for backgrounds or <strong>t-</strong> for text color.</p>
+<p class="t-4">Colors are prefixed with <strong>c-</strong>, and can be used directly in Sass with their variable names. In HTML, add <strong>bg-</strong> for backgrounds, <strong>t-</strong> for text color &amp; <strong>i-c-</strong> for icon fill color.</p>
 
 {% highlight html %}
 <div class="bg-c-b300">Sky Blue background</div>
