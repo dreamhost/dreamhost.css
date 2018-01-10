@@ -9,6 +9,8 @@ layout: page
 
 Use `data-remodal-target` to call a `data-remodal-id`. Make sure to include both `remodal` and `modal` classes. The modal can be closed with `<data-remodal-action="close"`.
 
+In order to add a blur to the content background when a modal is open, wrap the content with a container div `<div class="remodal-bg">...Page content...</div>`
+
 <button class="Button m-bottom-2" data-remodal-target="modal">Open modal</button>
 <div class="remodal Modal" data-remodal-id="modal">
 	<h1 class="Modal__heading">I'm a modal</h1>
@@ -18,6 +20,9 @@ Use `data-remodal-target` to call a `data-remodal-id`. Make sure to include both
 </div>
 
 {% highlight html %}
+<!-- Blurred background -->
+<div class="remodal-bg">...Page content...</div>
+
 <!-- Call modal -->
 <button class="Button" data-remodal-target="modal">Open modal</button>
 
