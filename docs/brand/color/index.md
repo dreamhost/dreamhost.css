@@ -1,4 +1,4 @@
 ---
-title: Components
+title: Color
 layout: page
 ---
