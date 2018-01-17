@@ -7,13 +7,20 @@ layout: page
 
 <hr />
 
-<ul>
-	<li>Empower People</li>
-	<li>Practice Shameless Honesty</li>
-	<li>Give Everyone a Voice</li>
-	<li>Speak Hacker</li>
-	<li>Embrace Open Source</li>
-	<li>Practice Flexibility (full spectrum of hosting services)</li>
-	<li>Provide Superhero Service</li>
-	<li>Be Irreverent &amp; Fun</li>
-</ul>
+<div class="u-clearfix m-bottom-4">
+	<div class="g-1_3">
+		<ul>
+			<li>Empower People</li>
+			<li>Practice Shameless Honesty</li>
+			<li>Give Everyone a Voice</li>
+			<li>Speak Hacker</li>
+			<li>Embrace Open Source</li>
+			<li>Practice Flexibility (full spectrum of hosting services)</li>
+			<li>Provide Superhero Service</li>
+			<li>Be Irreverent &amp; Fun</li>
+		</ul>
+	</div>
+	<div class="g-2_3">
+		<img src="{{site.baseurl}}/assets/images/values/b-values.png" alt="Values" />
+	</div>
+</div>
