@@ -1,4 +1,0 @@
----
-title: Iconography
-layout: page
----
