@@ -71,7 +71,7 @@ layout: page
 <div class="g-1_6"><img class="m-bottom-0 p-bottom-0" src="{{site.baseurl}}/assets/images/mascot/m-2-6.png" alt="Dreamhost mascot" /><p class="p-2 bg-c-g100">Format: <a href="/">EPS</a></p></div>
 </div>
 
-<div class="u-clearfix m-bottom-4">
+<div class="u-clearfix">
 <h3>Alternative Mascots</h3>
 <div class="g-1_6"><img class="m-bottom-0 p-bottom-0" src="{{site.baseurl}}/assets/images/mascot/m-4-1.png" alt="Dreamhost mascot" /><p class="p-2 bg-c-g100">Format: <a href="/">EPS</a></p></div>
 <div class="g-1_6"><img class="m-bottom-0 p-bottom-0" src="{{site.baseurl}}/assets/images/mascot/m-4-2.png" alt="Dreamhost mascot" /><p class="p-2 bg-c-g100">Format: <a href="/">EPS</a></p></div>
@@ -79,6 +79,8 @@ layout: page
 <div class="g-1_6"><img class="m-bottom-0 p-bottom-0" src="{{site.baseurl}}/assets/images/mascot/m-4-4.png" alt="Dreamhost mascot" /><p class="p-2 bg-c-g100">Format: <a href="/">EPS</a></p></div>
 <div class="g-1_6"><img class="m-bottom-0 p-bottom-0" src="{{site.baseurl}}/assets/images/mascot/m-4-5.png" alt="Dreamhost mascot" /><p class="p-2 bg-c-g100">Format: <a href="/">EPS</a></p></div>
 <div class="g-1_6"><img class="m-bottom-0 p-bottom-0" src="{{site.baseurl}}/assets/images/mascot/m-4-6.png" alt="Dreamhost mascot" /><p class="p-2 bg-c-g100">Format: <a href="/">EPS</a></p></div>
+</div>
+<div class="u-clearfix m-bottom-4">
 <div class="g-1_6"><img class="m-bottom-0 p-bottom-0" src="{{site.baseurl}}/assets/images/mascot/m-4-7.png" alt="Dreamhost mascot" /><p class="p-2 bg-c-g100">Format: <a href="/">EPS</a></p></div>
 <div class="g-1_6"><img class="m-bottom-0 p-bottom-0" src="{{site.baseurl}}/assets/images/mascot/m-4-8.png" alt="Dreamhost mascot" /><p class="p-2 bg-c-g100">Format: <a href="/">EPS</a></p></div>
 <div class="g-1_6"><img class="m-bottom-0 p-bottom-0" src="{{site.baseurl}}/assets/images/mascot/m-4-9.png" alt="Dreamhost mascot" /><p class="p-2 bg-c-g100">Format: <a href="/">EPS</a></p></div>
