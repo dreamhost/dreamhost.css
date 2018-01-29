@@ -1,6 +1,6 @@
 code.hljs {
 	font-family: monospace;
-    background-color: $c-g100;
+    background-color: $bg-c-g100;
     padding: $s-m;
     font-size: $t-s;
     border-radius: $border-radius;
@@ -16,7 +16,7 @@ code.hljs {
 .hljs-quote,
 .hljs-template-tag,
 .hljs-deletion {
-	color: $c-r300;
+	color: $t-c-b300 !important;;
 }
 
 .hljs .p {padding: 0 !important;}
