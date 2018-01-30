@@ -14,6 +14,8 @@
 .List--disc {list-style-type: disc; list-style-position: outside}
 .List--disc > li {margin-left: convertScaleToRem(4);}
 
+.List--dec {list-style-type: decimal;}
+
 .List--inline > li {
 	padding: 0;
 	display: inline;
