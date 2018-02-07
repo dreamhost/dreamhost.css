@@ -10,6 +10,13 @@ Form Component
 	font-size: $t-3;
 }
 %form-no-outline { outline: none; }
+
+%form-input-appearance-none{
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
 %form-text-style {
 	color: $black;
 	font-size: $t-3;
@@ -178,20 +185,62 @@ textarea.Input {
 // Choice: styles both radios and checkboxes
 .Choice {
 	@extend %form-text-style;
-
 	cursor: pointer;
 	display: block;
 	padding-left: 1.4rem;
 	position: relative;
-
 	margin-bottom: convertScaleToRem(1);
 
 	input {
 		@extend %form-no-outline;
+		@extend %form-input-appearance-none;
 		position: absolute;
 		left: 0;
 		top: 2px;
+		border:solid $c-g300 1px;
+		background: $c-w100;
+		padding:6px;
+		margin:0;
+
+		&:checked{
+			border-color:$c-b500;
+		}
+
+		&:checked:before{
+			content:'';
+			position: absolute; 
+			top: -4px;
+			left: 0px;
+			@extend .spin-right;
+			@extend .a-easing-cb-scale-up;
+			transform: scale($s-5);
+			height:16px;
+			width:16px;
+			background: url('../images/icon.tick.svg');
+		}
+
 	}
+
+	input[type='radio'] {
+		border-radius: 50px;
+
+		&:checked{
+			border-color:$c-b500;
+		}
+
+		&:checked:before{
+			background: $c-b300;
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			top:50%;
+			left:50%;
+			margin:-25% 0 0 -25%;
+			border-radius: 50px;
+		}
+	}
+
+	
 }
 
 .Choice__label {
