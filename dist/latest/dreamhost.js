@@ -777,15 +777,15 @@
 
 // TODO make this better
 
-var $link = $('.Tabs__nav-item');
+var $link = $('.tabs__nav-item');
 
-$('.Tab').hide();
-$('.Tab').first().show();
+$('.tab').hide();
+$('.tab').first().show();
 $link.click(function(){
 	var x = $(this).data('tab');
-	$('.Tab').hide();
-	$(".Tabs__nav-item[data-tab='" + x + "']").addClass('is-active').siblings().removeClass('is-active');
-	$(".Tabs").find("[data-tab='" + x + "']").show();
+	$('.tab').hide();
+	$(".tabs__nav-item[data-tab='" + x + "']").addClass('is-active').siblings().removeClass('is-active');
+	$(".tabs").find("[data-tab='" + x + "']").show();
 })
 
 // Popovers
