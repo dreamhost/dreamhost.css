@@ -48,7 +48,7 @@
 .l-flex-between {align-content: space-between !important}
 .l-flex-around {align-content: space-around !important}
 
-// sets spacing of individual flex items
+// sets horizontal spacing of individual flex items
 .l-flex-x-start {justify-content: flex-start !important}
 .l-flex-x-end {justify-content: flex-end !important}
 .l-flex-x-center {justify-content: center !important}
@@ -65,6 +65,7 @@
 
 // force flex items to wrap. usually only needed when items used fixed size
 .l-flex-wrap {flex-wrap: wrap !important}
+.l-flex-wrap-reverse {flex-wrap: wrap-reverse !important}
 .l-flex-nowrap {flex-wrap: nowrap !important}
 
 // manually set flex item sizing based on ratios
@@ -128,6 +129,7 @@
 	.l-flex-around__m {align-content: space-around !important}
 
 	.l-flex-wrap__m {flex-wrap: wrap !important}
+	.l-flex-wrap-reverse__m {flex-wrap: wrap-reverse !important}
 	.l-flex-nowrap__m {flex-wrap: nowrap !important}
 
 	.l-flex-grow-0__m {flex-grow: 0}
@@ -191,6 +193,7 @@
 	.l-flex-around__l {align-content: space-around !important}
 
 	.l-flex-wrap__l {flex-wrap: wrap !important}
+	.l-flex-wrap-reverse__l {flex-wrap: wrap-reverse !important}
 	.l-flex-nowrap__l {flex-wrap: nowrap !important}
 
 	.l-flex-grow-0__l {flex-grow: 0}

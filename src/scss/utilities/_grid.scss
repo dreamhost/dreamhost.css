@@ -129,29 +129,23 @@
 }
 
 /**
-
-Aflex grid with predefined default settings based on common grid composition in current systems,
+A flex grid with predefined default settings based on common grid composition in current systems,
 plus a few extra dandies for customization!
 
 Usage:
-	<ul class="Flex Flex--center Flex--col Flex--row-reverse__m Flex--spaced__l">
-		<li class="m-bottom-3 m-bottom-0__m p-3 bg-blue">Hi</li>
-		<li class="Flex__3__l p-3 bg-light-blue">Hi</li>
-	</ul>
+<ul class="Flex Flex--stretch Flex--center__m Flex--col Flex--row-reverse__m Flex--spaced">
+	<li class="m-bottom-3 m-bottom-0__m p-3 bg-blue">Hi</li>
+	<li class="Flex__3__l p-3 bg-light-blue">Hi</li>
+</ul>
 
 Explique:
-- .Flex: Basic flex container, set to justify items with space-between and flex-grow set to make item occupy as much space as possible by default
-
-- .Flex--center: Vertically center content within flex items. Note that this can mess with the size of the item when used in conjunction with .Flex--col
-
+- .Flex: Basic flex container, items justify with space-between and occupy full grid block with flex-grow
+- .Flex--center: Vertically center content within flex items
 - .Flex--col: Flex items appear stacked, like a list
-- .Flex--row-reverse__m: On screens over 750px, flex items appear as a row, items arranged last to first (overrides Flex--col, except on mobile devices)
-
-- .Flex--space__l: On screens over 1050px, flex items are spaced with a gutter in between them
+- .Flex--row-reverse__m: On screens over 750px, flex items appear as a row, items arranged LAST to FIRST
+- .Flex--spaced: Flex items are spaced with a gutter in between them
 - .Flex__3__l: on screens over 1050px, this flex item occupies row space over the other item(s) at a ratio of 3:1
-
 **/
-
 
 .Flex {
 	display: flex;
@@ -171,28 +165,18 @@ Explique:
 	&.Flex--col {flex-direction: column}
 	&.Flex--col-reverse {flex-direction: column-reverse}
 
-	&.Flex--spaced {
-		& > *:not(:last-child) {
-			margin-right: 2.3576515979%;
-		}
-		&.Flex--row-reverse__l,
-		&.Flex--row-reverse__m,
-		&.Flex--row-reverse {
-			& > * {
-				margin-right: 2.3576515979%;
-				&:first-child {
-					margin-right: 0;
-				}
-			}
-		}
-	}
-
 	.Flex__0 {flex-grow: 0}
 	.Flex__1 {flex-grow: 1}
 	.Flex__2 {flex-grow: 2}
 	.Flex__3 {flex-grow: 3}
 	.Flex__4 {flex-grow: 4}
+	.Flex__5 {flex-grow: 5}
 	.Flex__6 {flex-grow: 6}
+	.Flex__7 {flex-grow: 7}
+	.Flex__8 {flex-grow: 8}
+	.Flex__9 {flex-grow: 9}
+	.Flex__10 {flex-grow: 10}
+	.Flex__11 {flex-grow: 11}
 
 	@media(min-width: 750px) {
 		&.Flex--start__m {align-items: flex-start}
@@ -206,29 +190,18 @@ Explique:
 		&.Flex--col__m {flex-direction: column}
 		&.Flex--col-reverse__m {flex-direction: column-reverse}
 
-		&.Flex--spaced__m {
-			& > *:not(:last-child) {
-				margin-right: 2.3576515979%;
-			}
-
-			&.Flex--row-reverse__l,
-			&.Flex--row-reverse__m,
-			&.Flex--row-reverse {
-				& > * {
-					margin-right: 2.3576515979%;
-					&:first-child {
-						margin-right: 0;
-					}
-				}
-			}
-		}
-
 		.Flex__0__m {flex-grow: 0}
 		.Flex__1__m {flex-grow: 1}
 		.Flex__2__m {flex-grow: 2}
 		.Flex__3__m {flex-grow: 3}
 		.Flex__4__m {flex-grow: 4}
+		.Flex__5__m {flex-grow: 5}
 		.Flex__6__m {flex-grow: 6}
+		.Flex__7__m {flex-grow: 7}
+		.Flex__8__m {flex-grow: 8}
+		.Flex__9__m {flex-grow: 9}
+		.Flex__10__m {flex-grow: 10}
+		.Flex__11__m {flex-grow: 11}
 	}
 
 	@media(min-width: 1050px) {
@@ -243,28 +216,65 @@ Explique:
 		&.Flex--col__l {flex-direction: column}
 		&.Flex--col-reverse__l {flex-direction: column-reverse}
 
-		&.Flex--spaced__l {
-			& > *:not(:last-child) {
-				margin-right: 2.3576515979%;
-			}
-
-			&.Flex--row-reverse__l,
-			&.Flex--row-reverse__m,
-			&.Flex--row-reverse {
-				& > * {
-					margin-right: 2.3576515979%;
-					&:first-child {
-						margin-right: 0;
-					}
-				}
-			}
-		}
-
 		.Flex__0__l {flex-grow: 0}
 		.Flex__1__l {flex-grow: 1}
 		.Flex__2__l {flex-grow: 2}
 		.Flex__3__l {flex-grow: 3}
 		.Flex__4__l {flex-grow: 4}
+		.Flex__5__l {flex-grow: 5}
 		.Flex__6__l {flex-grow: 6}
+		.Flex__7__l {flex-grow: 7}
+		.Flex__8__l {flex-grow: 8}
+		.Flex__9__l {flex-grow: 9}
+		.Flex__10__l {flex-grow: 10}
+		.Flex__11__l {flex-grow: 11}
+	}
+
+	&.Flex--spaced {
+		& > * + * {
+			margin-left: 2.3576515979%;
+		}
+
+		&.Flex--row__m,
+		&.Flex--row-reverse__m {
+			& > * + * {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+
+		&.Flex--col {
+			& > * + * {
+				margin-top: 2.3576515979%;
+			}
+		}
+
+
+		@media(min-width: 750px) {
+			&.Flex--row__m > * + * {margin-left: 2.3576515979%}
+			&.Flex--row-reverse__m > * + * {margin-right: 2.3576515979%}
+			&.Flex--col {
+				&.Flex--row__m,
+				&.Flex--row-reverse__m {
+					& > * + * {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+		@media(min-width: 1050px) {
+			&.Flex--row__l > * + * {margin-left: 2.3576515979%}
+			&.Flex--row-reverse__l > * + * {margin-right: 2.3576515979%}
+			&.Flex--col {
+				&.Flex--row__l,
+				&.Flex--row-reverse__l {
+					& > * + * {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
 	}
 }
