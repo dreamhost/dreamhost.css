@@ -230,7 +230,13 @@ Explique:
 		.Flex__11__l {flex-grow: 11}
 	}
 
+	// Add gutters to rows/columns, taking into account the flex direction
 	&.Flex--spaced {
+		@extend .Flex--x-spaced, .Flex--y-spaced
+	}
+
+	// Add gutters only for rows
+	&.Flex--x-spaced {
 		& > * + * {
 			margin-left: 2.3576515979%;
 		}
@@ -243,16 +249,26 @@ Explique:
 			}
 		}
 
+		@media(min-width: 750px) {
+			&.Flex--row__m > * + * {margin-left: 2.3576515979%}
+			&.Flex--row-reverse__m > * + * {margin-right: 2.3576515979%}
+		}
+
+		@media(min-width: 1050px) {
+			&.Flex--row__l > * + * {margin-left: 2.3576515979%}
+			&.Flex--row-reverse__l > * + * {margin-right: 2.3576515979%}
+		}
+	}
+
+	// Add gutters only for columns
+	&.Flex--y-spaced {
 		&.Flex--col {
 			& > * + * {
 				margin-top: 2.3576515979%;
 			}
 		}
 
-
 		@media(min-width: 750px) {
-			&.Flex--row__m > * + * {margin-left: 2.3576515979%}
-			&.Flex--row-reverse__m > * + * {margin-right: 2.3576515979%}
 			&.Flex--col {
 				&.Flex--row__m,
 				&.Flex--row-reverse__m {
@@ -264,8 +280,6 @@ Explique:
 		}
 
 		@media(min-width: 1050px) {
-			&.Flex--row__l > * + * {margin-left: 2.3576515979%}
-			&.Flex--row-reverse__l > * + * {margin-right: 2.3576515979%}
 			&.Flex--col {
 				&.Flex--row__l,
 				&.Flex--row-reverse__l {
@@ -275,6 +289,6 @@ Explique:
 				}
 			}
 		}
-
 	}
+
 }
