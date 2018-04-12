@@ -162,8 +162,8 @@ Explique:
 
 	&.Flex--row {flex-direction: row}
 	&.Flex--row-reverse {flex-direction: row-reverse}
-	&.Flex--col {flex-direction: column}
-	&.Flex--col-reverse {flex-direction: column-reverse}
+	&.Flex--col {flex-direction: column; align-items: stretch}
+	&.Flex--col-reverse {flex-direction: column-reverse; align-items: stretch}
 
 	.Flex__0 {flex-grow: 0}
 	.Flex__1 {flex-grow: 1}
@@ -187,8 +187,8 @@ Explique:
 
 		&.Flex--row__m {flex-direction: row}
 		&.Flex--row-reverse__m {flex-direction: row-reverse}
-		&.Flex--col__m {flex-direction: column}
-		&.Flex--col-reverse__m {flex-direction: column-reverse}
+		&.Flex--col__m {flex-direction: column; align-items: stretch}
+		&.Flex--col-reverse__m {flex-direction: column-reverse; align-items: stretch}
 
 		.Flex__0__m {flex-grow: 0}
 		.Flex__1__m {flex-grow: 1}
@@ -213,8 +213,8 @@ Explique:
 
 		&.Flex--row__l {flex-direction: row}
 		&.Flex--row-reverse__l {flex-direction: row-reverse}
-		&.Flex--col__l {flex-direction: column}
-		&.Flex--col-reverse__l {flex-direction: column-reverse}
+		&.Flex--col__l {flex-direction: column; align-items: stretch}
+		&.Flex--col-reverse__l {flex-direction: column-reverse; align-items: stretch}
 
 		.Flex__0__l {flex-grow: 0}
 		.Flex__1__l {flex-grow: 1}
