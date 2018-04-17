@@ -38,15 +38,14 @@ Buttons
 	border-radius: 3px;
 	display: inline-block;
 	font-size: $t-1;
-	padding: 1em 3em .9em;
-	letter-spacing: .55px;
+	line-height: $t-h-1;
+	padding: 0.6875rem 1.5rem;
 	margin: 0;
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
 	font-weight: $t-bold;
 	text-shadow: none;
-	vertical-align: middle;
+	vertical-align: baseline;
 	outline: none;
 
 	@include transition (all $tr-3 ease-in-out);
@@ -87,7 +86,6 @@ Buttons
 	background: $c-b700;
 	color: $c-w100;
 	border: solid 1px $c-b700;
-	letter-spacing: .75px;
 
 	&:hover, &:active, &.is-open {
 		color: $c-black;
@@ -173,7 +171,8 @@ Buttons
 // Compact
 .Button--compact {
 	font-size: $t-1;
-	padding:0.65em 1em;
+	line-height: $t-h-1;
+	padding:0.4375rem 1rem;
 }
 
 // Disabled
@@ -201,8 +200,9 @@ Buttons
 	background: transparent;
 	border: none;
 	position: relative;
-	color: $c-b500;
-	font-size: $t-2;
+	color: $c-b300;
+	font-size: $t-1;
+	line-height: $t-h-1;
 	text-decoration: none;
 	padding: 0;
 
@@ -210,7 +210,7 @@ Buttons
 		border: none;
 		background: transparent;
 		box-shadow: none;
-		color: darken($c-b500, 10%);
+		color: darken($c-b300, 10%);
 		transform: scale($s-3);
 	}
 
