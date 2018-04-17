@@ -43,6 +43,9 @@
 .t-line-height-2 {line-height: $t-h-2 !important}
 .t-line-height-1 {line-height: $t-h-1 !important}
 
+.t-line-height-double {line-height: $t-h-double !important}
+.t-line-height-single {line-height: $t-h-single !important}
+
 // Caret
 .t-caret:after {
 	content: '';
