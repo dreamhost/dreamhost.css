@@ -97,7 +97,7 @@ Buttons
 // Tags
 .Button__tag {
 	position: relative;
-	padding-left: 4em;
+	padding-left: 2.5rem;
 	margin-left: 2.5em;
 
 	&:hover {
@@ -107,10 +107,13 @@ Buttons
 	&:before {
 		content: attr(data-label);
 		position: absolute;
+		text-transform: uppercase;
+		font-size: $t-0;
+		line-height: $t-h-1;
 		@extend .Tag--yellow;
 		right: calc(100% - 1.7rem);
-		top: 15%;
-		padding: 0.5em 1em;
+		top: 7px;
+		padding: 0.25rem 0.75rem;
 		border-radius: 50px;
 	}
 
