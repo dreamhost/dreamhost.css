@@ -1,5 +1,4 @@
 // TODO make this better
-
 var $link = $('.Tabs__nav-item');
 
 $('.Tab').hide();
@@ -56,7 +55,7 @@ $('.Toaster').on('click', function () {
 	var that = this;
 	if($('.Toaster').hasClass('Toaster--is-closing')) {
 		// KILL! - Add timer to remove whitespace left behind
-		setTimeout(function(){
+		setTimeout( function() {
 			$(that).addClass("Toaster--killed");
 		}, 300);
 	}
