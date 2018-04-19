@@ -155,11 +155,13 @@
 	text-transform: uppercase;
 	font: $body;
 	font-size: $t-1;
+	line-height: $t-h-1;
 	font-weight: $t-bold;
 
 	span{
 		display: block;
 		text-transform: initial;
+		line-height: $t-h-1;
 		font-weight: $t-regular;
 		margin-top:0.5em;
 	}
