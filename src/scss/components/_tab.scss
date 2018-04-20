@@ -40,9 +40,10 @@
 
 .Tabs__nav-item {
 	@include link(dark);
-	margin:0 convertScaleToRem(2.5);
+	margin:0 convertScaleToRem(2);
 	padding:0 0 1rem 0;
-	font-size: $t-2;
+	font-size: $t-1;
+	line-height: $t-h-2;
 	font-weight: $t-bold;
 	color: $c-g400;
 	display: inline-block;
@@ -111,7 +112,8 @@
 		.Tabs__nav-item {
 			display: block;
 			margin: 0;
-			font-size: 16px;
+			font-size: $t-1;
+			line-height: $t-h-2;
 
 			&:after {
 				display: none;

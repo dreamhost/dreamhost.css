@@ -12,9 +12,12 @@
 	@extend .m-top-4;
 }
 
-@media screen and (min-width: $medium-breakpoint){
-	.Modal {padding: convertScaleToRem(9)}
-	.Modal__heading {font-size: $t-6}
+@media screen and (min-width: $medium-breakpoint) {
+	.Modal { padding: convertScaleToRem(9) }
+	.Modal__heading {
+		font-size: $t-5;
+		line-height: $t-h-5
+	}
 }
 
 .remodal-overlay {

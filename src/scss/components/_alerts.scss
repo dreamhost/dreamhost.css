@@ -14,18 +14,18 @@
 }
 
 .Alert--success {
-	background: $lighter-green;
-	border-left: convertScaleToRem(1) solid $green;
+	background: $c-t100;
+	border-left: convertScaleToRem(1) solid $c-t300;
 }
 
 .Alert--error {
-	background: $lighter-red;
-	border-left: convertScaleToRem(1) solid $red;
+	background: $c-r100;
+	border-left: convertScaleToRem(1) solid $c-r300;
 }
 
 .Alert:not(.Alert--success):not(.Alert--error) {
-	background: $lighter-yellow;
-	border-left: convertScaleToRem(1) solid $yellow;
+	background: $c-y100;
+	border-left: convertScaleToRem(1) solid $c-y300;
 }
 
 // Notifications
@@ -67,7 +67,8 @@
 }
 
 .Notification__time{
-	font-size: 0.875em;
+	font-size: $t-1;
+	line-height: $t-h-2;
 	display: block;
 	margin-bottom: 0.5em;
 	color: $c-g300;
@@ -163,12 +164,14 @@
 	transform: translateX(33%);
 	text-transform: uppercase;
 	font: $body;
-	font-size: $t-2;
+	font-size: $t-1;
+	line-height: $t-h-1;
 	font-weight: $t-bold;
 
 	span{
 		display: block;
 		text-transform: initial;
+		line-height: $t-h-1;
 		font-weight: $t-regular;
 		margin-top:0.5em;
 	}

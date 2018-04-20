@@ -1,7 +1,8 @@
 .ItemList__heading {
 	@extend .p-2;
 	font-weight: bold;
-	font-size: 24px;
+	font-size: $t-3;
+	font-size: $t-h-3;
 	border-bottom: 2px solid $c-g200;
 	margin: 0;
 }
@@ -34,7 +35,7 @@
 	}
 
 	.ItemList__item-btn {
-		margin-top: 24px;
+		margin-top: convertScaleToRem(3);
 	}
 
 	@media (min-width: $medium-breakpoint) {
