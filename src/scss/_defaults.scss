@@ -78,8 +78,9 @@ hr {
 }
 
 code {
-	padding: .3rem .6rem;
-	font-size: $t-2;
+	padding: 0.4375rem;
+	font-size: $t-1;
+	line-height: $t-h-1;
 	display: inline-block;
 	border: 1px solid $lighter-grey;
 	border-radius: $border-radius;
