@@ -67,7 +67,7 @@
 }
 
 .Notification__time {
-	font-size: $t-1;
+	@include font-size($t-1);
 	display: block;
 	margin-bottom: 0.5em;
 	color: $c-g300;
@@ -163,14 +163,13 @@
 	transform: translateX(33%);
 	text-transform: uppercase;
 	font: $body;
-	font-size: $t-1;
-	line-height: $t-h-1;
+	@include font-size($t-1, $t-h-1);
 	font-weight: $t-bold;
 
 	span{
 		display: block;
 		text-transform: initial;
-		line-height: $t-h-1;
+		@include font-size($t-1, $t-h-1);
 		font-weight: $t-regular;
 		margin-top:0.5em;
 	}
