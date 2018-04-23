@@ -43,7 +43,6 @@
 	margin:0 convertScaleToRem(2);
 	padding:0 0 1rem 0;
 	font-size: $t-1;
-	line-height: $t-h-2;
 	font-weight: $t-bold;
 	color: $c-g400;
 	display: inline-block;
@@ -113,7 +112,6 @@
 			display: block;
 			margin: 0;
 			font-size: $t-1;
-			line-height: $t-h-2;
 
 			&:after {
 				display: none;

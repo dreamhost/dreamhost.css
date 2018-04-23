@@ -41,7 +41,6 @@ Table
 	th {
 		padding: convertScaleToRem(2) convertScaleToRem(1);
 		font-size: $t-1;
-		line-height: $t-h-2;
 		font-family: $heading;
 		color: $c-black;
 		text-transform: uppercase;
@@ -63,7 +62,6 @@ Table
 		padding: convertScaleToRem(2) convertScaleToRem(1);
 		vertical-align: middle;
 		font-size: $t-1;
-		line-height: $t-h-2;
 	}
 
 	.Table__row {
@@ -106,7 +104,6 @@ Table
 		td {
 			display: block;
 			font-size: $t-1;
-			line-height: $t-h-2;
 			padding: convertScaleToRem(2) convertScaleToRem(1);
 			vertical-align: middle;
 
@@ -124,7 +121,6 @@ Table
 			&:first-child,
 			&:first-child a {
 				font-size: $t-1;
-				line-height: $t-h-2;
 				font-weight: $t-bold;
 				text-transform: uppercase;
 				letter-spacing: 1.5px;
@@ -168,7 +164,6 @@ Table
 			td {
 				display: table-cell;
 				font-size: $t-1;
-				line-height: $t-h-2;
 
 				&:before {
 					content: '';
@@ -178,7 +173,6 @@ Table
 				&:first-child,
 				&:first-child a {
 					font-size: $t-1;
-					line-height: $t-h-2;
 					font-weight: $t-regular;
 					text-transform: none;
 					letter-spacing: 0;
