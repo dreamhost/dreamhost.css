@@ -20,7 +20,6 @@ appearance: none;
 %form-text-style {
 	color: $black;
 	font-size: $t-1;
-	line-height: $t-h-2;
 	font-family: $body;
 }
 
@@ -85,7 +84,6 @@ appearance: none;
 	color: $darker-grey;
 	display: block;
 	font-size: $t-1;
-	line-height: $t-h-2;
 	font-weight: $t-bold;
 	cursor: pointer;
 	max-width: 35rem;
@@ -244,14 +242,12 @@ textarea.Input {
 			animation: none;
 			@include transition (all $tr-5 ease-in-out);
 			background: $c-b300;
-			top: 0;
-			left: 0;
 			position: absolute;
 			top: 3px;
 			left: 3px;
-			width:8px;
-			height:8px;
-			padding:0;
+			width: 8px;
+			height: 8px;
+			padding: 0;
 			border-radius: 50px;
 			transform: scale(0);
 		}

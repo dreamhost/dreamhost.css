@@ -1,6 +1,10 @@
 // TO-DO
 // Some sort of scale
 
+* {
+	line-height: calc(1em + 8px);
+}
+
 body {
 	background: $white;
 	-webkit-font-smoothing: antialiased; // autoprefixer does not incl. font-smoothing
@@ -9,7 +13,6 @@ body {
 	color: $darker-grey;
 	font-family: $body;
 	font-size: $t-1; //16px
-	line-height: $t-h-2; // 24px
 }
 
 h1, h2, h3, h4{
@@ -24,15 +27,13 @@ h1 {
 
 h2 {
 	font-size: $t-4; //32px
-	line-height: $t-h-4; //40px
 }
 
-h3{
+h3 {
 	font-size: $t-3; //24px
-	line-height: $t-h-3; //32px
 }
 
-h4{
+h4 {
 	font-size: $t-2; //20px
 	line-height: $t-h-3; //32px
 }
@@ -40,7 +41,6 @@ h4{
 a {
 	color: $c-b300;
 	font-size: $t-1; //16px
-	line-height: $t-h-2; // 24px
 	text-decoration: none;
 
 	&:hover, &.is-open {
@@ -73,7 +73,7 @@ p, section, img {
 
 hr {
 	margin: convertScaleToRem(4) 0;
-	border:none;
+	border: none;
 	border-bottom: 1px solid $c-g200;
 }
 
@@ -87,7 +87,6 @@ code {
 	background: $c-g500;
 	color: $c-w100;
 	font-family: monospace;
-
 }
 
 a[disabled] {

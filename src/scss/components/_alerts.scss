@@ -57,18 +57,17 @@
 	}
 }
 
-.Notification__wrapper{
+.Notification__wrapper {
 	margin:0 0 0 2.5em;
 	padding:0;
 }
 
-.Notification__heading{
+.Notification__heading {
 	margin-bottom: 0.5em;
 }
 
-.Notification__time{
+.Notification__time {
 	font-size: $t-1;
-	line-height: $t-h-2;
 	display: block;
 	margin-bottom: 0.5em;
 	color: $c-g300;
