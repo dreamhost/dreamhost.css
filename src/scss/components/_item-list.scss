@@ -1,8 +1,7 @@
 .ItemList__heading {
 	@extend .p-2;
 	font-weight: bold;
-	font-size: $t-3;
-	line-height: $t-h-3;
+	@include font-size($t-3);
 	border-bottom: 2px solid $c-g200;
 	margin: 0;
 }

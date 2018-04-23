@@ -37,8 +37,7 @@ Buttons
 	border: solid 1px $c-g200;
 	border-radius: 3px;
 	display: inline-block;
-	font-size: $t-1;
-	line-height: $t-h-1;
+	@include font-size($t-1, $t-h-1);
 	padding: 0.75rem 1rem 0.625rem;
 	margin: 0;
 	text-align: center;
@@ -108,8 +107,7 @@ Buttons
 		content: attr(data-label);
 		position: absolute;
 		text-transform: uppercase;
-		font-size: $t-0;
-		line-height: $t-h-1;
+		@include font-size($t-0);
 		@extend .Tag--yellow;
 		right: calc(100% - 1.7rem);
 		top: 7px;
@@ -173,8 +171,7 @@ Buttons
 
 // Compact
 .Button--compact {
-	font-size: $t-1;
-	line-height: $t-h-1;
+	@include font-size($t-1, $t-h-1);
 	padding: 0.5rem 1rem 0.375rem;
 }
 
@@ -204,8 +201,7 @@ Buttons
 	border: none;
 	position: relative;
 	color: $c-b300;
-	font-size: $t-1;
-	line-height: $t-h-1;
+	@include font-size($t-1, $t-h-1);
 	text-decoration: none;
 	padding: 0;
 
