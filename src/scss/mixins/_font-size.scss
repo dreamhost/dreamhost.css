@@ -24,14 +24,14 @@ Compiles to:
 
 **/
 
-@mixin font-size($size: 16px, $line-height: calc(1em + 8px)) {
+@mixin font-size($size: 1rem, $line-height: calc(1em + 8px)) {
 	font-size: $size;
 	@if($line-height != calc(1em + 8px)) {
 		line-height: $line-height;
 	} @else {
-		@if $size == 14px or $size == 0.875rem {
+		@if $size == 0.875rem {
 			line-height: 1rem;
-		} @else if $size == 20px or $size == 1.25rem {
+		} @else if $size == 1.25rem {
 			line-height: 2rem;
 		} @else {
 			line-height: $line-height;
