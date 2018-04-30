@@ -10,9 +10,12 @@ Buttons
 	.Button--primary        - Primary
 	.Button--danger         - Danger!
 	.Button--disabled       - Disabled
-	.Button__tag            - Tag Button
-	.Button__tag--positive  - Positive Tag Button
+	.Button__tag            - Positive Tag Button
 	.Button__tag--negative  - Negative Tag Button
+
+	Colors
+	.Button--dark           - Dark color
+	.Button--light          -Light color
 
 	Shapes
 	.Button                 - Default shape
@@ -20,6 +23,7 @@ Buttons
 
 	Sizes
 	.Button                 - Default size
+	.Button--hero           - Hero size
 	.Button--compact        - Compact size
 
 	Markup
@@ -113,12 +117,12 @@ Buttons
 	position: relative;
 	padding-left: 3rem;
 	margin-left: 3em;
-	border-color:$c-b700;
-	color:$c-b700;
+	border-color: $c-b700;
+	color: $c-b700;
 
 	&:hover {
 		 border-color: $c-b300;
-		 color:$c-b300;
+		 color: $c-b300;
 	}
 
 	&:before {
@@ -180,7 +184,7 @@ Buttons
 	// Disable Button
 	cursor: not-allowed;
 	text-shadow: none;
-	border:none;
+	border: none;
 	background: $c-g200;
 	color: $c-g400;
 
@@ -193,7 +197,7 @@ Buttons
 	}
 
 	&:active{ pointer-events: none; }
-	&.Button--text {color: $c-g400; background: transparent; }
+	&.Button--text { color: $c-g400; background: transparent; }
 }
 
 // Text
@@ -214,7 +218,7 @@ Buttons
 		transform: scale($s-3);
 	}
 
-	&:active {color:rgba($c-b700, 0.6);}
+	&:active { color:rgba($c-b700, 0.6); }
 }
 
 .Button--text:before {
@@ -234,19 +238,18 @@ Buttons
 	right:0%;
 }
 
-
 // Widths
 .Button--block {
 	display: block;
 	width: 100%;
-	margin:0;
+	margin: 0;
 }
 
 // Spacing
 .Button + .Button {
 	margin-left: 1em;
 
-	&.Button__tag{ margin-left:3.25em; }
-	&.Button__tag.Button--compact{ margin-left:2.75em; }
-	&.Button--block, &.Button__tag.Button--block{ margin-left:0; }
+	&.Button__tag{ margin-left: 3.25em; }
+	&.Button__tag.Button--compact{ margin-left: 2.75em; }
+	&.Button--block, &.Button__tag.Button--block{ margin-left: 0; }
 }
