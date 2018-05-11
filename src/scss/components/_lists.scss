@@ -4,12 +4,13 @@
 	.List is for a general purpose list of text
 	.List--disc gives the list dots, for an unordered list
 	.List--dec give the list numbered value for an ordered list
+	.List--tick give the list tick icons
+	.List--double gives lists double line height
 	.List--inline makes the list horizontal
 	.List--50 makes list items 50% width
 	.List__menu formats list item links like a product menu
 */
-.List {text-align: left;} // All lists should be left aligned unless specified
-.List > li {margin-bottom: convertScaleToRem(1);}
+.List {text-align: left; @include font-size($t-1);} // All lists should be left aligned unless specified
 .List > li:last-child {margin-bottom: 0;}
 
 .List--disc {list-style-type: disc; list-style-position: outside;}
@@ -17,6 +18,26 @@
 
 .List--dec {list-style-type: decimal-leading-zero;}
 .List--dec > li {margin-left: convertScaleToRem(4);}
+
+.List--tick {list-style-type: none;}
+.List--tick > li {margin: 0;}
+.List--tick > li:before {
+	content: "";
+	display: inline-block;
+	height: convertScaleToRem(2);
+	width: convertScaleToRem(2);
+	vertical-align: middle;
+	margin-right: convertScaleToRem(1);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M10.4 18.8l14-15.4c1.7-1.8 4.5-1.9 6.3-.1 1.7 1.7 1.8 4.5.2 6.3L14.3 27.9c-1.3 2.1-4 2.8-6.1 1.4-.4-.3-.8-.6-1.1-1l-5.8-6c-1.7-1.8-1.6-4.7.1-6.5 1.7-1.7 4.4-1.7 6.2 0l2.8 3z' fill='#{$c-b300}'/%3E%3C/svg%3E");
+}
+
+.List--double > li{
+	margin-bottom: convertScaleToRem(2);
+}
+
+.List--double > li:last-of-type{
+	margin-bottom: none;
+}
 
 .List--inline > li {
 	padding: 0;
@@ -102,7 +123,7 @@
 .List--small-bold > li > a:hover,
 .List--small-bold > li > button:hover,
 .List--small-bold > li > .is-link:hover {
-	color: $blue;
+	color: $c-b300;
 }
 
 // Disabled state
