@@ -19,9 +19,9 @@
 .List--dec {list-style-type: decimal-leading-zero;}
 .List--dec > li {margin-left: convertScaleToRem(4);}
 
-.List--tick {list-style-type: none;}
-.List--tick > li {margin: 0;}
-.List--tick > li:before {
+.List--check {list-style-type: none;}
+.List--check > li {margin: 0;}
+.List--check > li:before {
 	content: "";
 	display: inline-block;
 	height: convertScaleToRem(2);
