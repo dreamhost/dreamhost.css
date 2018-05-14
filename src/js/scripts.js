@@ -10,6 +10,11 @@ $link.click(function(){
 	$(".Tabs").find("[data-tab='" + x + "']").show();
 })
 
+// Accordion
+$('.Accordion__toggle').on('click', function () {
+	$(this).closest('.Accordion').toggleClass('Accordion--Open');
+});
+
 // Popovers
 $(document).on('click', '.js-toggle-popover', function (e) {
 	var $this = $(this),
