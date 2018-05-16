@@ -115,7 +115,7 @@ Cards
 			text-transform: uppercase;
 		}
 
-		.Card__content {
+		.Card__number {
 			margin: convertScaleToRem(2) convertScaleToRem(0);
 			@include font-size($t-5);
 			color: $c-b700;
@@ -149,8 +149,7 @@ Cards
 			color: $c-g500;
 			margin-bottom: convertScaleToRem(0);
 		}
-		.Card__content {
-			margin-top: convertScaleToRem(0);
+		.Card__number {
 			color: $c-b300;
 		}
 
