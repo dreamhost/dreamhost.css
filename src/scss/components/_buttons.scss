@@ -97,8 +97,9 @@ Buttons
 	color: $c-w100;
 
 	&:hover, &:active, &.is-open {
-		color: $c-b300;
-		border-color: $c-b300;
+		color: $c-b700;
+		background: $c-w100;
+		border-color: $c-w100;
 	}
 }
 
@@ -107,8 +108,9 @@ Buttons
 	color: $c-b700;
 
 	&:hover, &:active, &.is-open {
-		color: $c-b300;
-		border-color: $c-b300;
+		color: $c-w100;
+		background: $c-b700;
+		border-color: $c-b700;
 	}
 }
 
