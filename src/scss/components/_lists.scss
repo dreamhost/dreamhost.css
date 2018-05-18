@@ -51,20 +51,30 @@
 
 .List--inline > li:last-child {margin-right: 0;}
 
+.List--50 {
+	font-size: 0;
+}
+
 .List--50 > li {
-	width: calc(50% - .2rem);
+	width: 50%;
 	display: inline-block;
-	padding-right: convertScaleToRem(1);
 }
 
 // List as a menu
 .List__menu {
+
 	li {
 		vertical-align: top;
+
+		&:last-of-type() .List__menu--description {
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
 	}
 
 	li a {
 		display: block;
+		padding: 0;
 
 		&:hover {
 			text-decoration: none;
@@ -72,6 +82,15 @@
 
 		&:hover > .List__menu--title {
 			color: $c-b300;
+		}
+	}
+
+	&.List--50{
+		li {
+			&:nth-last-of-type(2) .List__menu--description, &:last-of-type() .List__menu--description{
+				padding-bottom: 0;
+				margin-bottom: 0;
+			}
 		}
 	}
 }
@@ -99,6 +118,8 @@
 */
 // .list--padding
 .List.List--padding {padding-top: convertScaleToRem(1); padding-bottom: convertScaleToRem(1);}
+.List__menu.List--padding {padding: 1.5rem 0};
+.List__menu.List--padding > li {padding: 0 0.5rem;};
 .List.List--padding > li {margin-bottom: 0;}
 
 .List.List--padding > li > * {
