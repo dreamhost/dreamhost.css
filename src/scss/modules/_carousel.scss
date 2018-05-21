@@ -1,13 +1,13 @@
 .Carousel {
 	color: $c-w100;
-	@include font-size($t-2);
+	@include font-size($t-1);
 	text-align: center;
-	padding: convertScaleToRem(6);
+	padding: convertScaleToRem(2);
 
 		.Carousel__panel__inner {
-			width:95%;
+			width: 95%;
 			height: 100%;
-			margin:0 auto;
+			margin: 0 auto;
 			@extend .u-border-radius;
 			border: solid 1px $c-g200;
 			padding: convertScaleToRem(6) convertScaleToRem(8);
@@ -19,9 +19,10 @@
 		margin-top: convertScaleToRem(4);
 
 		span {
+			text-align: center;
+			display: block;
 			vertical-align: middle;
-			display: inline-block;
-			margin-right: convertScaleToRem(2);
+			margin: 0 auto convertScaleToRem(1) auto;
 			@extend .u-border-radius;
 			height: 40px;
 			width: 40px;
@@ -30,15 +31,15 @@
 			overflow: hidden;
 
 
-			img{
+			img {
 				position: absolute;
 				margin: 0;
 				padding: 0;
-				top:50%;
-				left:50%;
-				width:100%;
-				height:auto;
-				transform:translate(-50%, -50%);
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				height: auto;
+				transform: translate(-50%, -50%);
 			}
 		}
 	}
@@ -48,8 +49,8 @@
 		border: none;
 		text-indent: -5000em;
 		position: absolute;
-		top:50%;
-		transform:translate(0, -50%);
+		top: 50%;
+		transform: translate(0, -50%);
 		@include transition (all $tr-3 ease-in-out);
 		display: inline-block;
 		height: 16px;
@@ -58,35 +59,31 @@
 		background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M5.6 27.1L15.9 16 5.6 4.9 12.2 0 27 16 12.2 32l-6.6-4.9z' fill='%230073EC'/></svg>");
 
 
-		&:focus{
-			outline:none;
+		&:focus { outline: none; }
+
+		&:hover { cursor: pointer; }
+
+		&.slick-prev {
+			left: 0;
+			transform: translate(0, -50%) rotate(180deg);
 		}
 
-		&:hover{
-			cursor: pointer;
-		}
-
-		&.slick-prev{
-			left:0;
-			transform:translate(0, -50%) rotate(180deg);
-		}
-
-		&.slick-next{
-			right:0;
+		&.slick-next {
+			right: 0;
 		}
 	}
 
 	// Dot Navigation
-	.slick-dots{
+	.slick-dots {
 		margin-top: convertScaleToRem(1);
 		position: absolute;
 		left: 50%;
-		transform:translate(-50%, 0);
+		transform: translate(-50%, 0);
 
 		li {
 			display: inline;
 
-		 button{
+		 button {
 				background: transparent;
 				border: solid 1px $c-b300;
 				text-indent: -5000em;
@@ -97,7 +94,7 @@
 				margin: 1rem 0.5rem;
 
 				&:focus {
-					outline:none;
+					outline: none;
 				}
 
 				&:hover {
@@ -194,8 +191,6 @@
 		display: none;
 	}
 
-	display: none;
-
 	&.dragging img {
 		pointer-events: none;
 	}
@@ -217,4 +212,25 @@
 
 .slick-arrow.slick-hidden {
 	display: none;
+}
+
+@media (min-width: $medium-breakpoint) {
+
+	.Carousel {
+		@include font-size($t-2);
+		padding: convertScaleToRem(6);
+
+		.Carousel__author{
+			span {
+				display: inline-block;
+				margin-right: convertScaleToRem(2);
+			}
+
+			strong {
+				border-right: solid 1px $c-b700;
+				padding-right: convertScaleToRem(2);
+				margin-right: convertScaleToRem(1);
+			}
+		}
+	}
 }
