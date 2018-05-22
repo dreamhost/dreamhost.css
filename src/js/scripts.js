@@ -31,7 +31,7 @@
 		// all jQuery events go in this neat little function. Comment for anything confusing
 		events: function() {
 			$('.Accordion__toggle').on('click', function () {
-				$(this).closest('.Accordion').toggleClass('Accordion--Open');
+				$(this).closest('.Accordion').toggleClass('Accordion--open');
 			});
 		}
 	}
