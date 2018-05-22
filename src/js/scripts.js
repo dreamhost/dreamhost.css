@@ -15,6 +15,13 @@ $('.Accordion__toggle').on('click', function () {
 	$(this).closest('.Accordion').toggleClass('Accordion--Open');
 });
 
+// Carousel
+$(document).ready(function(){
+	$('.Carousel').slick({
+		dots: true
+	});
+});
+
 // Popovers
 $(document).on('click', '.js-toggle-popover', function (e) {
 	var $this = $(this),
