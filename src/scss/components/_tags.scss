@@ -14,7 +14,7 @@ Tags
 	text-transform: uppercase;
 	display: inline-block;
 	font-weight: bold;
-	@include font-size($t-0);
+	@include fontsize($t-0);
 	border-radius: 20px;
 	padding: 0.25rem 0.75rem;
 	width: auto;

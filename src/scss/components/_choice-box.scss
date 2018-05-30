@@ -61,7 +61,7 @@
 
 .ChoiceBox {
 	display: inline-block;
-	@include font-size($t-1);
+	@include fontsize($t-1);
 	margin-bottom: convertScaleToRem(1);
 	margin-right: convertScaleToRem(1);
 	vertical-align: top;

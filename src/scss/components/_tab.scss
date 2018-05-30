@@ -14,7 +14,7 @@
 	@include link(dark);
 	margin: 0 convertScaleToRem(2);
 	padding: 0 0 1rem 0;
-	@include font-size($t-1);
+	@include fontsize($t-1);
 	font-weight: $t-bold;
 	color: $c-g400;
 	display: inline-block;
