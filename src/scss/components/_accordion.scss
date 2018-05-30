@@ -5,7 +5,7 @@
 	margin-bottom: convertScaleToRem(2);
 
 	.Accordion__toggle {
-		@include font-size($t-2);
+		@include fontsize($t-2);
 		color: $c-b300;
 		display: block;
 		padding: convertScaleToRem(2);
@@ -30,7 +30,7 @@
 		@include transition (all $tr-3 ease-in-out);
 		opacity: 0;
 		height: 0;
-		@include font-size($t-1);
+		@include fontsize($t-1);
 		color: $c-g500;
 		padding: convertScaleToRem(0) convertScaleToRem(6);
 

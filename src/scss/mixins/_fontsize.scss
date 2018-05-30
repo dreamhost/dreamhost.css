@@ -24,7 +24,7 @@ Compiles to:
 
 **/
 
-@mixin font-size($size: 1rem, $line-height: calc(1em + 8px)) {
+@mixin fontsize($size: 1rem, $line-height: calc(1em + 8px)) {
 	font-size: $size;
 	@if($line-height != calc(1em + 8px)) {
 		line-height: $line-height;
