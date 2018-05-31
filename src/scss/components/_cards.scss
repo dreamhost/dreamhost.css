@@ -57,7 +57,7 @@ Cards
 	.Card__content {
 		margin-bottom: convertScaleToRem(3);
 		color: $c-g400;
-		@include font-size($t-1, $t-h-2);
+		@include fontsize($t-1, $t-h-2);
 
 	}
 
@@ -78,7 +78,7 @@ Cards
 
 		.Card__content {
 			color: $c-b700;
-			@include font-size($t-2);
+			@include fontsize($t-2);
 		}
 	}
 
@@ -88,7 +88,7 @@ Cards
 
 		.Card__heading {
 			color: $c-b700;
-			@include font-size($t-2);
+			@include fontsize($t-2);
 			margin-bottom: convertScaleToRem(2);
 		}
 
@@ -104,19 +104,19 @@ Cards
 
 		.Card__heading {
 			color: $c-b700;
-			@include font-size($t-3);
+			@include fontsize($t-3);
 			margin-bottom: convertScaleToRem(2);
 		}
 
 		.Card__subheading {
-			@include font-size($t-0);
+			@include fontsize($t-0);
 			color: $c-b300;
 			text-transform: uppercase;
 		}
 
 		.Card__number {
 			margin: convertScaleToRem(2) convertScaleToRem(0);
-			@include font-size($t-5);
+			@include fontsize($t-5);
 			color: $c-b700;
 		}
 	}
@@ -140,7 +140,7 @@ Cards
 		}
 
 		p{
-			@include font-size($t-1);
+			@include fontsize($t-1);
 		}
 
 		.Card__subheading {
@@ -191,7 +191,7 @@ Cards
 
 .Card__super {
 	text-transform: uppercase;
-	@include font-size($t-0);
+	@include fontsize($t-0);
 	color: $c-g400;
 }
 

@@ -10,7 +10,7 @@
 	.List--50 makes list items 50% width
 	.List__menu formats list item links like a product menu
 */
-.List {text-align: left; @include font-size($t-1);} // All lists should be left aligned unless specified
+.List {text-align: left; @include fontsize($t-1);} // All lists should be left aligned unless specified
 .List > li:last-child {margin-bottom: 0;}
 
 .List--disc {list-style-type: disc; list-style-position: outside;}
@@ -99,14 +99,14 @@
 	text-transform: uppercase;
 	letter-spacing: .666px;
 	color: $c-g500;
-	@include font-size($t-1, $t-h-1);
+	@include fontsize($t-1, $t-h-1);
 	font-weight: 600;
 	margin-bottom: convertScaleToRem(1);
 }
 
 .List__menu--description {
 	color: $c-g400;
-	@include font-size($t-1);
+	@include fontsize($t-1);
 }
 
 /*
@@ -135,12 +135,12 @@
 	font-weight: $t-bold;
 	color: $black;
 	text-decoration: none;
-	@include font-size($t-1);
+	@include fontsize($t-1);
 }
 
 .List--small-bold > li span {
 	color: $c-g400;
-	@include font-size($t-1);
+	@include fontsize($t-1);
 	padding: auto convertScaleToRem(1);
 }
 

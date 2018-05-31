@@ -1,6 +1,6 @@
 .Carousel {
 	color: $c-w100;
-	@include font-size($t-1);
+	@include fontsize($t-1);
 	text-align: center;
 	padding: convertScaleToRem(2);
 
@@ -217,7 +217,7 @@
 @media (min-width: $medium-breakpoint) {
 
 	.Carousel {
-		@include font-size($t-2);
+		@include fontsize($t-2);
 		padding: convertScaleToRem(6);
 
 		.Carousel__author{
