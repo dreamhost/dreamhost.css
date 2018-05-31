@@ -118,8 +118,8 @@ All font sizes/line heights should use only the sizing variables set in _variabl
 
 // Usage [SCSS]
 .thing {
-	@include fontsize($t-5);
-	// @include(fontsize($t-5, $t-h-1); <-- Custom line height value override also available
+	@include font-size($t-5);
+	// @include(font-size($t-5, $t-h-1); <-- Custom line height value override also available
 }
 
 Compiles to:
