@@ -45,6 +45,11 @@ Page Header Component
 	padding: 1.75rem 1.75rem 3.5rem 1.75rem;
 	background: $c-b700;
 	color: #fff;
+
+	&.PageHeader--transparent{
+		background: transparent;
+	}
+
 }
 
 .PageHeader__menu-toggle {
@@ -209,17 +214,6 @@ Page Header Component
 	&:hover,
 	&.is-open {
 		color: $c-w100;
-	}
-
-	&:before {
-		content: "";
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: $c-b300;
-		height: 2px;
-		animation: UnderlineEmphasis $a-3 ease-in-out;
 	}
 }
 
@@ -416,6 +410,20 @@ button.PageHeader__subnav-link {
 	.PageHeader.mobile-is-open .PageHeader__container, .PageHeader__container {
 		display: flex;
 		flex-flow: row nowrap;
+	}
+
+	.PageHeader__nav-link.is-active,.PageHeader__nav-link--active {
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: $c-b300;
+			height: 2px;
+			animation: UnderlineEmphasis $a-3 ease-in-out;
+		}
 	}
 
 	.PageHeader.mobile-is-open .PageHeader__nav, .PageHeader__nav {

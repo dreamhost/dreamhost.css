@@ -7,7 +7,34 @@
 </head>
 <body>
 	<div class="remodal-bg">
-	<div class="PageHeader">
+			<div class="PageHeader PageHeader--transparent">
+					<div class="PageHeader__container">
+						<a class="PageHeader__logo" href="//www.dreamhost.com"></a>
+						<ul class="PageHeader__nav">
+							<li><a class="PageHeader__nav-link is-active" href="#">Active link</a></li>
+							<li><a class="PageHeader__nav-link" href="#">Other</a></li>
+							<li class="Popover-container on-click">
+								<button class="PageHeader__nav-link t-caret js-toggle-popover Button--unset">Dropdown</button>
+								<div class="Popover Popover--1 Popover--bottom">
+									<div class="Popover__section">
+										<ul class="List List--padding List--small-bold">
+											<li><a href="#">Menu One</a></li>
+											<li><a href="#">Menu Two</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="PageHeader__subnav">
+							<li>
+								<a role="button" class="Button Button--compact Button--light">Login</a>
+							</li>
+							<li><div class="PageHeader__menu-toggle js-toggle-mobile-menu"><span></span><span></span><span></span></div></li>
+						</ul>
+					</div>
+				</div>
+
+		<div class="PageHeader">
 			<div class="PageHeader__container">
 				<a class="PageHeader__logo" href="//www.dreamhost.com"></a>
 				<ul class="PageHeader__nav">
