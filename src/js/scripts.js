@@ -49,8 +49,9 @@ $(document).on('click', function (e) {
 });
 
 $(document).on('click', '.js-toggle-mobile-menu', function(e) {
+	console.log('menu click');
 	e.preventDefault();
-	$('.Page-header').toggleClass('mobile-is-open');
+	$('.PageHeader').toggleClass('mobile-is-open');
 });
 
 // Make closing Toaster animation controllable with JS
