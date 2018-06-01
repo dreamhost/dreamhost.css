@@ -210,14 +210,21 @@ Page Header Component
 }
 
 .PageHeader__subnav {
-	@extend .List;
-	@extend .List--inline;
 	text-align: right;
 	margin: convertScaleToRem(3.5);
 	padding-left: 0;
 	position: absolute;
 	top: 0;
 	right: 0;
+
+	li{
+		display: inline-block;
+		margin-right: 2rem;
+	}
+
+	li:last-of-type{
+			margin: 0;
+	}
 
 	a {
 		text-decoration: none;
