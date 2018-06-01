@@ -136,7 +136,7 @@ Page Header Component
 
 		.List li a {
 			display: block;
-			font-size: 0.875em;
+			@include fontsize($t-0);
 			color: $c-g500;
 			@include transition (all $tr-3 ease-in-out);
 
@@ -164,7 +164,7 @@ Page Header Component
 }
 
 .PageHeader__nav {
-	@include font-size($t-1, $t-h-1);
+	@include fontsize($t-1, $t-h-1);
 	display: none;
 	margin: convertScaleToRem(4) 0 0 0;
 
@@ -181,7 +181,7 @@ Page Header Component
 	text-decoration: none;
 	font-weight: $t-bold;
 	color: $c-g200;
-	@include font-size($t-1, $t-h-1);
+	@include fontsize($t-1, $t-h-1);
 	display: inline-block;
 	outline: none;
 	position: relative;
@@ -267,7 +267,7 @@ Page Header Component
 	border-radius: 50px;
 	width: convertScaleToRem(2);
 	height: convertScaleToRem(2);
-	@include font-size($t-0);
+	@include fontsize($t-0);
 	font-weight: $t-bold;
 	text-align: center;
 	vertical-align: middle;
