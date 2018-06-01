@@ -20,20 +20,19 @@ Page Header Component
 	- The header was built around the idea of a single breakpoint. Below that breakpoint,
 		the header will show a hamburger menu link with the header taking over the screen
 		when shown. Larger than that breakpoint will display the header inline.
-	- There are some built-in responsive classes also but they will be inaccurate for most
-		instances of the header. For specific breakpoints, you should use
-		the `PageHeader--responsive()` mixin in the app specific CSS
+	- There are some built-in responsive classes.
+	- Add `.PageHeader__logo--internal` to `.PageHeader__logo` to show correct logo on internal only facing properties & logged in page states.
 
 
 	Usage:
-	<div class="PageHeader (PageHeader--responsive-[s/m/l])">
+	<div class="PageHeader">
 		<div class="PageHeader__container">
-			<a class="PageHeader__logo ( PageHeader__logo--internal - add for internal facing / user logged into DreamHost Properties ) " href="//www.dreamhost.com"></a>
+			<a class="PageHeader__logo" href="//www.dreamhost.com"></a>
 			<ul class="PageHeader__nav">
 				<li><a class="PageHeader__nav-link is-active" href="#">Link</a></li>
 			</ul>
 			<ul class="PageHeader__subnav">
-				<li><div class="PageHeader__menu-toggle js-toggle-mobile-menu"><span></span><span></span><span></span></div></li>
+				<li><div class="Menu-toggle js-menu-toggle"><span class="Menu-toggle__inner"></span></div></li>
 			</ul>
 		</div>
 	</div>
@@ -52,7 +51,7 @@ Page Header Component
 
 }
 
-.PageHeader__menu-toggle {
+.Menu-toggle {
 	margin: convertScaleToRem(0.5) 0 0 0;
 	display: inline-block;
 	height: 15px;
@@ -64,16 +63,17 @@ Page Header Component
 		cursor: pointer;
 	}
 
-	span {
+	%menu-partial {
 		background: $c-w100;
 		height: 2px;
 		border-radius: 3px;
 		width: 20px;
-		margin:0 0 3px 0;
+		margin:0;
 		display: block;
 		position: absolute;
 		opacity: 1;
 		left: 0;
+		top: 4px;
 		-webkit-transform: rotate(0deg);
 		-moz-transform: rotate(0deg);
 		-o-transform: rotate(0deg);
@@ -82,26 +82,25 @@ Page Header Component
 		-moz-transition: .3s ease-in-out;
 		-o-transition: .3s ease-in-out;
 		transition: .3s ease-in-out;
+	}
 
-		&:nth-child(1) {
-			top: 0px;
-			-webkit-transform: rotate(0deg);
-			-moz-transform: rotate(0deg);
-			-o-transform: rotate(0deg);
-			transform: rotate(0deg);
-		}
+	.Menu-toggle__inner {
+		@extend %menu-partial;
 
-		&:nth-child(2) {
-			top: 5px;
+
+		&:before {
+			@extend %menu-partial;
+			content: '';
+			display: block;
+			top: -5px;
 			opacity: 1;
 		}
 
-		&:nth-child(3) {
-			top: 10px;
-			-webkit-transform: rotate(0deg);
-			-moz-transform: rotate(0deg);
-			-o-transform: rotate(0deg);
-			transform: rotate(0deg);
+		&:after {
+			@extend %menu-partial;
+			content: '';
+			display: block;
+			top: 5px;
 		}
 	}
 }
@@ -149,11 +148,6 @@ Page Header Component
 	}
 }
 
-.PageHeader__nav,
-.PageHeader__mobile-button {
-	@extend .Fluid-Row__item--primary;
-}
-
 .PageHeader__logo {
 	width: 160px;
 	height: 30px;
@@ -170,8 +164,6 @@ Page Header Component
 }
 
 .PageHeader__nav {
-	@extend .List;
-	@extend .List--inline;
 	@include font-size($t-1, $t-h-1);
 	display: none;
 	margin: convertScaleToRem(4) 0 0 0;
@@ -294,7 +286,7 @@ button.PageHeader__subnav-link {
 	}
 }
 
-.PageHeader.mobile-is-open {
+.PageHeader.menu-is-open {
 
 	padding: convertScaleToRem(3.5);
 
@@ -318,29 +310,24 @@ button.PageHeader__subnav-link {
 		}
 	}
 
-	.PageHeader__menu-toggle span {
+	.Menu-toggle__inner{
+			height:0;
 
-		&:nth-child(1) {
-			top: 5px;
-			-webkit-transform: rotate(135deg);
-			-moz-transform: rotate(135deg);
-			-o-transform: rotate(135deg);
-			transform: rotate(135deg);
-		}
+			&:before {
+				top: 0px;
+				-webkit-transform: rotate(135deg);
+				-moz-transform: rotate(135deg);
+				-o-transform: rotate(135deg);
+				transform: rotate(135deg);
+			}
 
-		&:nth-child(2) {
-			top: 5px;
-			opacity: 0;
-		}
-
-		&:nth-child(3) {
-			top: 5px;
-			-webkit-transform: rotate(-135deg);
-			-moz-transform: rotate(-135deg);
-			-o-transform: rotate(-135deg);
-			transform: rotate(-135deg);
-		}
-
+			&:after {
+				top: 0px;
+				-webkit-transform: rotate(-135deg);
+				-moz-transform: rotate(-135deg);
+				-o-transform: rotate(-135deg);
+				transform: rotate(-135deg);
+			}
 	}
 }
 
@@ -348,7 +335,7 @@ button.PageHeader__subnav-link {
 	background: $c-w100;
 	border-bottom: solid 1px #E0E4E8;
 
-	.PageHeader__menu-toggle span {
+	.Menu-toggle__inner, .Menu-toggle__inner:before, .Menu-toggle__inner:after{
 		background: $c-g400;
 	}
 
@@ -407,7 +394,7 @@ button.PageHeader__subnav-link {
 		padding: 1.75rem;
 	}
 
-	.PageHeader.mobile-is-open .PageHeader__container, .PageHeader__container {
+	.PageHeader.menu-is-open .PageHeader__container, .PageHeader__container {
 		display: flex;
 		flex-flow: row nowrap;
 	}
@@ -426,7 +413,7 @@ button.PageHeader__subnav-link {
 		}
 	}
 
-	.PageHeader.mobile-is-open .PageHeader__nav, .PageHeader__nav {
+	.PageHeader.menu-is-open .PageHeader__nav, .PageHeader__nav {
 		display: flex;
 		margin: convertScaleToRem(1) 0 0 0;
 
@@ -459,7 +446,7 @@ button.PageHeader__subnav-link {
 		border: none;
 	}
 
-	.PageHeader__menu-toggle {
+	.Menu-toggle {
 		display: none;
 	}
 

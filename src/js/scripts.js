@@ -48,10 +48,8 @@ $(document).on('click', function (e) {
 	$('.Popover, .js-toggle-popover').removeClass('is-open');
 });
 
-$(document).on('click', '.js-toggle-mobile-menu', function(e) {
-	console.log('menu click');
-	e.preventDefault();
-	$('.PageHeader').toggleClass('mobile-is-open');
+$(document).on('click', '.js-menu-toggle', function(e) {
+	$('.PageHeader').toggleClass('menu-is-open');
 });
 
 // Make closing Toaster animation controllable with JS
