@@ -1,5 +1,6 @@
 .Carousel {
 	color: $c-w100;
+	overflow: hidden;
 	@include fontsize($t-1);
 	text-align: center;
 	padding: convertScaleToRem(2);
