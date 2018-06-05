@@ -121,12 +121,12 @@
 	.l-flex-y-baseline__m {align-items: baseline !important}
 	.l-flex-y-stretch__m {align-items: stretch !important}
 
-	.l-flex-start__m {align-content: flex-start !important}
-	.l-flex-end__m {align-content: flex-end !important}
-	.l-flex-center__m {align-content: center !important}
-	.l-flex-stretch__m {align-content: stretch !important}
-	.l-flex-between__m {align-content: space-between !important}
-	.l-flex-around__m {align-content: space-around !important}
+	.l-flex-start__m {align-self: flex-start !important}
+	.l-flex-end__m {align-self: flex-end !important}
+	.l-flex-center__m {align-self: center !important}
+	.l-flex-stretch__m {align-self: stretch !important}
+	.l-flex-between__m {align-self: space-between !important}
+	.l-flex-around__m {align-self: space-around !important}
 
 	.l-flex-wrap__m {flex-wrap: wrap !important}
 	.l-flex-wrap-reverse__m {flex-wrap: wrap-reverse !important}
@@ -190,12 +190,12 @@
 	.l-flex-y-baseline__l {align-items: baseline !important}
 	.l-flex-y-stretch__l {align-items: stretch !important}
 
-	.l-flex-start__l {align-content: flex-start !important}
-	.l-flex-end__l {align-content: flex-end !important}
-	.l-flex-center__l {align-content: center !important}
-	.l-flex-stretch__l {align-content: stretch !important}
-	.l-flex-between__l {align-content: space-between !important}
-	.l-flex-around__l {align-content: space-around !important}
+	.l-flex-start__l {align-self: flex-start !important}
+	.l-flex-end__l {align-self: flex-end !important}
+	.l-flex-center__l {align-self: center !important}
+	.l-flex-stretch__l {align-self: stretch !important}
+	.l-flex-between__l {align-self: space-between !important}
+	.l-flex-around__l {align-self: space-around !important}
 
 	.l-flex-wrap__l {flex-wrap: wrap !important}
 	.l-flex-wrap-reverse__l {flex-wrap: wrap-reverse !important}
