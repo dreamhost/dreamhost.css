@@ -28,7 +28,7 @@
 
 // Icon font character mapping
 
-[class^="Icon-"], [class*="Icon-"] {
+[class^="Icon--"], [class*="Icon--"] {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'dh-icon' !important;
 	speak: none;
@@ -36,7 +36,7 @@
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
-	line-height: $t-h-1;
+	@include fontsize($t-3);
 
 	/* Better Font Rendering */
 	-webkit-font-smoothing: antialiased;
@@ -45,6 +45,8 @@
 
 .supports-fontface .Icon--secure:before {
 	content: "\e913";
+	width: 100%;
+	height: 100%;
 }
 .supports-fontface .Icon--protection:before {
 	content: "\e914";
