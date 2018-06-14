@@ -25,3 +25,252 @@
 		height:convertScaleToRem(2);
 	}
 }
+
+// Icon font character mapping
+
+[class^="Icon-"], [class*="Icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'dh-icon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: $t-h-1;
+
+	/* Better Font Rendering */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.supports-fontface .Icon-secure:before {
+	content: "\e913";
+}
+.supports-fontface .Icon-protection:before {
+	content: "\e914";
+}
+.supports-fontface .Icon-ruby:before {
+	content: "\e915";
+}
+.supports-fontface .Icon-team:before {
+	content: "\e916";
+}
+.supports-fontface .Icon-node:before {
+	content: "\e917";
+}
+.supports-fontface .Icon-proof:before {
+	content: "\e918";
+}
+.supports-fontface .Icon-build:before {
+	content: "\e919";
+}
+.supports-fontface .Icon-updates:before {
+	content: "\e91a";
+}
+.supports-fontface .Icon-automate:before {
+	content: "\e91b";
+}
+.supports-fontface .Icon-raw:before {
+	content: "\e91c";
+}
+.supports-fontface .Icon-ram:before {
+	content: "\e91d";
+}
+.supports-fontface .Icon-accounts:before {
+	content: "\e91e";
+}
+.supports-fontface .Icon-certificate:before {
+	content: "\e91f";
+}
+.supports-fontface .Icon-bandwidth:before {
+	content: "\e920";
+}
+.supports-fontface .Icon-unlock:before {
+	content: "\e921";
+}
+.supports-fontface .Icon-aid:before {
+	content: "\e922";
+}
+.supports-fontface .Icon-biz:before {
+	content: "\e923";
+}
+.supports-fontface .Icon-cache:before {
+	content: "\e924";
+}
+.supports-fontface .Icon-cart:before {
+	content: "\e925";
+}
+.supports-fontface .Icon-chat:before {
+	content: "\e926";
+}
+.supports-fontface .Icon-chef:before {
+	content: "\e927";
+}
+.supports-fontface .Icon-clock:before {
+	content: "\e928";
+}
+.supports-fontface .Icon-comp:before {
+	content: "\e929";
+}
+.supports-fontface .Icon-dedicated:before {
+	content: "\e92a";
+}
+.supports-fontface .Icon-doc:before {
+	content: "\e92b";
+}
+.supports-fontface .Icon-email:before {
+	content: "\e92c";
+}
+.supports-fontface .Icon-facebook:before {
+	content: "\e92d";
+}
+.supports-fontface .Icon-folders:before {
+	content: "\e92e";
+}
+.supports-fontface .Icon-globe:before {
+	content: "\e92f";
+}
+.supports-fontface .Icon-http:before {
+	content: "\e930";
+}
+.supports-fontface .Icon-http2:before {
+	content: "\e931";
+}
+.supports-fontface .Icon-instagram:before {
+	content: "\e932";
+}
+.supports-fontface .Icon-joystick:before {
+	content: "\e933";
+}
+.supports-fontface .Icon-lock:before {
+	content: "\e934";
+}
+.supports-fontface .Icon-mouse:before {
+	content: "\e935";
+}
+.supports-fontface .Icon-network:before {
+	content: "\e936";
+}
+.supports-fontface .Icon-pencil:before {
+	content: "\e937";
+}
+.supports-fontface .Icon-portfolio:before {
+	content: "\e938";
+}
+.supports-fontface .Icon-ribbon:before {
+	content: "\e939";
+}
+.supports-fontface .Icon-scale:before {
+	content: "\e93a";
+}
+.supports-fontface .Icon-search:before {
+	content: "\e93b";
+}
+.supports-fontface .Icon-security:before {
+	content: "\e93c";
+}
+.supports-fontface .Icon-sftp:before {
+	content: "\e93d";
+}
+.supports-fontface .Icon-shared:before {
+	content: "\e93e";
+}
+.supports-fontface .Icon-ssd:before {
+	content: "\e93f";
+}
+.supports-fontface .Icon-tape:before {
+	content: "\e940";
+}
+.supports-fontface .Icon-thumb:before {
+	content: "\e941";
+}
+.supports-fontface .Icon-twitter--solo:before {
+	content: "\e942";
+}
+.supports-fontface .Icon-vps:before {
+	content: "\e943";
+}
+.supports-fontface .Icon-vps2:before {
+	content: "\e944";
+}
+.supports-fontface .Icon-wall:before {
+	content: "\e945";
+}
+.supports-fontface .Icon-web:before {
+	content: "\e946";
+}
+.supports-fontface .Icon-wp-circle:before {
+	content: "\e947";
+}
+.supports-fontface .Icon-youtube:before {
+	content: "\e948";
+}
+.supports-fontface .Icon-alarm:before {
+	content: "\e949";
+}
+.supports-fontface .Icon-forward:before {
+	content: "\e94a";
+}
+.supports-fontface .Icon-glass:before {
+	content: "\e94b";
+}
+.supports-fontface .Icon-stack:before {
+	content: "\e94c";
+}
+.supports-fontface .Icon-account:before {
+	content: "\e900";
+}
+.supports-fontface .Icon-alert:before {
+	content: "\e901";
+}
+.supports-fontface .Icon-direction:before {
+	content: "\e902";
+}
+.supports-fontface .Icon-cross:before {
+	content: "\e903";
+}
+.supports-fontface .Icon-cross--solo:before {
+	content: "\e904";
+}
+.supports-fontface .Icon-dropdown:before {
+	content: "\e905";
+}
+.supports-fontface .Icon-facebook-icon:before {
+	content: "\e906";
+}
+.supports-fontface .Icon-globe-icon:before {
+	content: "\e907";
+}
+.supports-fontface .Icon-messages:before {
+	content: "\e908";
+}
+.supports-fontface .Icon-notification:before {
+	content: "\e909";
+}
+.supports-fontface .Icon-powercycle:before {
+	content: "\e90a";
+}
+.supports-fontface .Icon-reload:before {
+	content: "\e90b";
+}
+.supports-fontface .Icon-restore:before {
+	content: "\e90c";
+}
+.supports-fontface .Icon-stopwatch:before {
+	content: "\e90d";
+}
+.supports-fontface .Icon-tick:before {
+	content: "\e90e";
+}
+.supports-fontface .Icon-tick--solo:before {
+	content: "\e90f";
+}
+.supports-fontface .Icon-traffic:before {
+	content: "\e910";
+}
+.supports-fontface .Icon-twitter:before {
+	content: "\e911";
+}
+.supports-fontface .Icon-weight:before {
+	content: "\e912";
+}
