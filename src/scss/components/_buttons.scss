@@ -26,6 +26,10 @@ Buttons
 	.Button--hero           - Hero size
 	.Button--compact        - Compact size
 
+	Width
+	.Button--block          - Display block
+	.Button--responsive     - Display block on mobile, inline-block on medium & above viewports
+
 	Markup
 	<a href="#" class="Button {{modifier_class}}" data-label="label">Text</a>
 
@@ -92,7 +96,7 @@ Buttons
 	}
 }
 
-.Button--light{
+.Button--light {
 	border-color: $c-w100;
 	color: $c-w100;
 
@@ -103,7 +107,7 @@ Buttons
 	}
 }
 
-.Button--dark{
+.Button--dark {
 	border-color: $c-b700;
 	color: $c-b700;
 
@@ -198,7 +202,7 @@ Buttons
 		border-color: $c-g200;
 	}
 
-	&:active{ pointer-events: none; }
+	&:active { pointer-events: none; }
 	&.Button--text { color: $c-g400; background: transparent; }
 }
 
@@ -240,18 +244,33 @@ Buttons
 	right:0%;
 }
 
-// Widths
-.Button--block {
+// Widths & Responive
+.Button--block, .Button--responsive {
 	display: block;
 	width: 100%;
 	margin: 0;
+}
+
+@media (min-width: $medium-breakpoint) {
+	.Button--responsive {
+		display: inline-block;
+		width: auto;
+		margin: initial;
+	}
 }
 
 // Spacing
 .Button + .Button {
 	margin-left: 1em;
 
-	&.Button__tag{ margin-left: 3.25em; }
-	&.Button__tag.Button--compact{ margin-left: 2.75em; }
-	&.Button--block, &.Button__tag.Button--block{ margin-left: 0; }
+	&.Button__tag { margin-left: 3.25em; }
+	&.Button__tag.Button--compact { margin-left: 2.75em; }
+	&.Button--block, &.Button__tag.Button--block { margin-left: 0; }
+	&.Button--responsive { margin-left: 0; }
+	&.Button--responsive.Button__tag.Button--compact { margin-left: 0; }
+	@media (min-width: $medium-breakpoint) {
+		&.Button--responsive { margin-left: 1em; }
+		&.Button--responsive.Button__tag { margin-left: 3.25em; }
+		&.Button--responsive.Button__tag.Button--compact { margin-left: 2.75em; }
+	}
 }
