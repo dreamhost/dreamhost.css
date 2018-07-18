@@ -120,3 +120,18 @@ $('.Toaster').on('click', function () {
 		}, 300);
 	}
 });
+
+// Quick copy fields
+$('.js-copy-btn').on('click', function(e) {
+	var $parent = $(this).closest('.js-copy');
+	var $temp = $('<input>');
+	$('body').append($temp);
+	$temp.val($('.js-copy-text', $parent).text()).select();
+	var success = document.execCommand('copy');
+	$temp.remove();
+	if(!success) return;
+	$parent.toggleClass('js-copy-success');
+	setTimeout(function(){
+		$parent.toggleClass('js-copy-success');
+	},1000);
+});
