@@ -57,12 +57,12 @@ Panel
 	font-weight: $t-bold;
 }
 
-	.Panel__code {
-		display: inline-block;
-	}
+.Panel__code {
+	display: inline-block;
+}
 
 
-	.Panel__section {
+.Panel__section {
 	display: block;
 	position: relative;
 	margin-bottom: convertScaleToRem(5);
