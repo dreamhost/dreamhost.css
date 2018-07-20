@@ -1,9 +1,9 @@
 //Quick Copy
-.js-copy {
+.Quickcopy {
 	display: inline-block;
 	position: relative;
 
-	.js-copy-text {
+	.Quickcopy__text {
 		border-radius: 3px;
 		background: $c-g500;
 		display: inline-block;
@@ -13,7 +13,7 @@
 			border: none;
 		}
 
-		.js-copy-btn {
+		.Quickcopy__btn {
 			display: inline-block;
 			color: $c-w100;
 			@include fontsize($t-0);
@@ -24,7 +24,7 @@
 		}
 	}
 
-	.js-copy-message {
+	.Quickcopy__message {
 		font-family: monospace;
 		position: absolute;
 		top: 0;
@@ -54,8 +54,8 @@
 }
 
 //Show success state
-.js-copy-success {
-	.js-copy-message {
+.Quickcopy__success {
+	.Quickcopy__message {
 		opacity: 1;
 	}
 }

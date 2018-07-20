@@ -20,6 +20,7 @@
 	dh_css.init = function() {
 		Accordion.load();
 		Tabs.load();
+		Quickcopy.load();
 	}
 
 	var Accordion = {
@@ -57,6 +58,34 @@
 				$('.Tab', $parent).removeClass('is-active');
 				$('.Tab[data-tab="' + tab + '"]').addClass('is-active');
 			});
+		}
+	}
+
+	// 'copy to clipboard' functionality
+	var Quickcopy = {
+		load: function() {
+				if(!$('.Quickcopy').length) return;
+				Quickcopy.events();
+		},
+		events: function() {
+				$('.Quickcopy__btn').on('click', function(e) {
+								var $parent = $(this).closest('.Quickcopy');
+
+								// create temporary input field populate with text to be copied. this is the only way JS can grab text
+								var $temp = $('<input>');
+								$('body').append($temp);
+								$temp.val($('.Quickcopy__text', $parent).text()).select();
+								var success = document.execCommand('copy');
+								$temp.remove();
+
+								if(!success) return;
+
+								// toggle success message if successful
+								$parent.toggleClass('Quickcopy__success');
+								setTimeout(function() {
+												$parent.toggleClass('Quickcopy__success');
+								}, 1000);
+				});
 		}
 	}
 
@@ -119,19 +148,4 @@ $('.Toaster').on('click', function () {
 			$(that).addClass("Toaster--killed");
 		}, 300);
 	}
-});
-
-// Quick copy fields
-$('.js-copy-btn').on('click', function(e) {
-	var $parent = $(this).closest('.js-copy');
-	var $temp = $('<input>');
-	$('body').append($temp);
-	$temp.val($('.js-copy-text', $parent).text()).select();
-	var success = document.execCommand('copy');
-	$temp.remove();
-	if(!success) return;
-	$parent.toggleClass('js-copy-success');
-	setTimeout(function(){
-		$parent.toggleClass('js-copy-success');
-	},1000);
 });
