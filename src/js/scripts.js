@@ -68,24 +68,24 @@
 				Quickcopy.events();
 		},
 		events: function() {
-				$('.Quickcopy__btn').on('click', function(e) {
-								var $parent = $(this).closest('.Quickcopy');
+			$('.Quickcopy__btn').on('click', function(e) {
+				var $parent = $(this).closest('.Quickcopy');
 
-								// create temporary input field populate with text to be copied. this is the only way JS can grab text
-								var $temp = $('<input>');
-								$('body').append($temp);
-								$temp.val($('.Quickcopy__text', $parent).text()).select();
-								var success = document.execCommand('copy');
-								$temp.remove();
+				// create temporary input field populate with text to be copied. this is the only way JS can grab text
+				var $temp = $('<input>');
+				$('body').append($temp);
+				$temp.val($('.Quickcopy__text', $parent).text()).select();
+				var success = document.execCommand('copy');
+				$temp.remove();
 
-								if(!success) return;
+				if(!success) return;
 
-								// toggle success message if successful
+				// toggle success message if successful
+				$parent.toggleClass('Quickcopy__success');
+				setTimeout(function() {
 								$parent.toggleClass('Quickcopy__success');
-								setTimeout(function() {
-												$parent.toggleClass('Quickcopy__success');
-								}, 1000);
-				});
+				}, 1000);
+			});
 		}
 	}
 
