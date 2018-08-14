@@ -22,7 +22,7 @@
 .List--check {list-style-type: none;}
 .List--check > li {margin: 0;}
 
-.List--check .Icon {
+.List--check .List-icon {
 	color: $c-b300;
 	margin-right: convertScaleToRem(1);
 }
@@ -163,7 +163,7 @@
 .List--icon-right > li {position: relative;}
 .List--icon-right > li > * {padding-right: 3.5em;}
 
-.List--icon-right .icon {
+.List--icon-right .List-icon {
 	position: absolute;
 	top: 50%;
 	margin-top: -.725em;
