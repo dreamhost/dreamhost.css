@@ -33,7 +33,7 @@
 	padding: 1.5em 1.5em 1.5em 4em;
 	word-wrap: break-word;
 
-	.Icon {
+	.Cart__step-icon {
 		position: absolute;
 		top: 50%;
 		margin: -8px 0 0 -8px;
@@ -60,7 +60,7 @@
 			width: 8px;
 		}
 
-		.Icon {
+		.Cart__step-icon {
 			color: $c-b300;
 		}
 	}
