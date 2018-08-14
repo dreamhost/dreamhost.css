@@ -16,7 +16,7 @@
 			cursor: pointer;
 		}
 
-		.Icon {
+		.Accordion__toggle-icon {
 			@include transition (all $tr-3 ease-in-out);
 			margin-right: convertScaleToRem(2);
 			transform: rotate(90deg);
@@ -47,7 +47,7 @@
 	.Accordion__toggle {
 		padding-bottom: convertScaleToRem(1);
 
-		.Icon {
+		.Accordion__toggle-icon {
 			transform: rotate(-90deg);
 		}
 	}
