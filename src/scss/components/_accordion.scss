@@ -20,6 +20,9 @@
 			@include transition (all $tr-3 ease-in-out);
 			margin-right: convertScaleToRem(2);
 			transform: rotate(90deg);
+			width: convertScaleToRem(2);
+			height: convertScaleToRem(2);
+			fill: currentColor;
 		}
 	}
 
