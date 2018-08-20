@@ -52,6 +52,9 @@
 		top:0;
 		left:0;
 		margin:0.25em 0 0 0;
+		width: convertScaleToRem(3);
+		height: convertScaleToRem(3);
+		fill: currentColor;
 	}
 }
 
