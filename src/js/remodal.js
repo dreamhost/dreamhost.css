@@ -573,7 +573,11 @@
       }
 
       if (remodal.settings.closeOnOutsideClick) {
-        remodal.close();
+       if ( $target.children(".Modal").hasClass('js-modal--persistent')) {
+          return;
+        } else {
+          remodal.close();
+        }
       }
     });
   }
