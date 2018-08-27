@@ -8,20 +8,20 @@
 	@if $responsive {
 		@media screen and ( min-width: $medium-breakpoint ) {
 			@for $i from 1 through $maxSize {
-	 			@include createClass( #{$class}-#{$i}__m #{$relationship}, $props, convertScaleToRem($i) );
-	 		}
+				@include createClass( #{$class}-#{$i}__m #{$relationship}, $props, convertScaleToRem($i) );
+			}
 			@include createClass( #{$class}-0__m #{$relationship}, $props, 0 );
 			@include createClass( #{$class}-half__m #{$relationship}, $props, convertScaleToRem(.5) );
 			@include createClass( #{$class}-auto__m #{$relationship}, $props, auto );
-	 	}
-	 	@media screen and ( min-width: $large-breakpoint ) {
-	 		@for $i from 1 through $maxSize {
-	 			@include createClass( #{$class}-#{$i}__l #{$relationship}, $props, convertScaleToRem($i) );
-	 		}
+		}
+		@media screen and ( min-width: $large-breakpoint ) {
+			@for $i from 1 through $maxSize {
+				@include createClass( #{$class}-#{$i}__l #{$relationship}, $props, convertScaleToRem($i) );
+			}
 			@include createClass( #{$class}-0__l #{$relationship}, $props, 0 );
 			@include createClass( #{$class}-half__l #{$relationship}, $props, convertScaleToRem(.5) );
 			@include createClass( #{$class}-auto__l #{$relationship}, $props, auto );
-	 	}
+		}
 	}
 }
 @mixin createClass( $class, $props, $value ) {
@@ -32,8 +32,8 @@
 	}
 }
 @function convertScaleToRem( $value ) {
-	 @return convertPxToRem( $value * $baseScale );
+	@return convertPxToRem( $value * $baseScale );
 }
 @function convertPxToRem( $value ) {
-	 @return ( $value / 16 ) * 1rem;
+	@return ( $value / 16 ) * 1rem;
 }
