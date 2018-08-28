@@ -1,27 +1,48 @@
 // All directions
 @include createClasses('margin', 'm', true);
 @include createClasses('padding', 'p', true);
+// Children
+@include createClasses('margin', 'm-child', true, '> *');
+@include createClasses('padding', 'p-child', true, '> *');
 
 // Top
 @include createClasses('margin-top', 'm-top', true);
 @include createClasses('padding-top', 'p-top', true);
+// Children
+@include createClasses('margin-top', 'm-child-top', true, '> *');
+@include createClasses('padding-top', 'p-child-top', true, '> *');
 
 // Right
 @include createClasses('margin-right', 'm-right', true);
 @include createClasses('padding-right', 'p-right', true);
+// Children
+@include createClasses('margin-right', 'm-child-right', true, '> *');
+@include createClasses('padding-right', 'p-child-right', true, '> *');
 
 // Bottom
 @include createClasses('margin-bottom', 'm-bottom', true);
 @include createClasses('padding-bottom', 'p-bottom', true);
+// Children
+@include createClasses('margin-bottom', 'm-child-bottom', true, '> *');
+@include createClasses('padding-bottom', 'p-child-bottom', true, '> *');
 
 // Left
 @include createClasses('margin-left', 'm-left', true);
 @include createClasses('padding-left', 'p-left', true);
+// Children
+@include createClasses('margin-left', 'm-child-left', true, '> *');
+@include createClasses('padding-left', 'p-child-left', true, '> *');
 
 // X
 @include createClasses( ('margin-left', 'margin-right'), 'm-x', true);
 @include createClasses( ('padding-left', 'padding-right'), 'p-x', true);
+// Children
+@include createClasses( ('margin-left', 'margin-right'), 'm-child-x', true, '> *');
+@include createClasses( ('margin-left', 'margin-right'), 'p-child-x', true, '> *');
 
 // Y
 @include createClasses( ('margin-top', 'margin-bottom'), 'm-y', true);
 @include createClasses( ('padding-top', 'padding-bottom'), 'p-y', true);
+// Children
+@include createClasses( ('margin-top', 'margin-bottom'), 'm-child-y', true, '> *');
+@include createClasses( ('margin-top', 'margin-bottom'), 'p-child-y', true, '> *');
