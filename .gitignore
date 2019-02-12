@@ -4,3 +4,4 @@
 /node_modules/
 /src/css/style.css
 *.DS_Store
+.npm-debug.log
