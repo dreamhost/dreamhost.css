@@ -24,6 +24,3 @@ Border Radius Utility
 .u-border-radius--bottom {border-radius: 0 0 $border-radius $border-radius !important;}
 
 .u-border-radius--left {border-radius: $border-radius 0 0 $border-radius !important;}
-
-// Shorthand!
-.u-rounded-corners {@extend .u-border-radius}

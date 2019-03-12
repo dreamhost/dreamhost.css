@@ -1,17 +1,16 @@
 .Alert {
 	padding: convertScaleToRem(3);
-	@extend .u-border-radius;
+	border-radius: $border-radius;
 	margin-bottom: convertScaleToRem(4);
-	color:#434F58;
+	color:$c-g500;
 	@include fontsize($t-1);
 
 	*:last-child {margin-bottom: 0;}
 
 	&__heading {
-		@extend .t-bold;
-		@extend .t-heading;
-		@extend .m-top-0;
-		@extend .m-bottom-0;
+		font-weight: $t-bold;
+		font-family: $heading;
+		margin: 0;
 	}
 }
 

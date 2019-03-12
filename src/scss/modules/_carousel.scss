@@ -9,7 +9,7 @@
 			width: 95%;
 			height: 100%;
 			margin: 0 auto;
-			@extend .u-border-radius;
+			border-radius: $border-radius;
 			border: solid 1px $c-g200;
 			padding: convertScaleToRem(6) convertScaleToRem(8);
 			color: $c-b700;
@@ -24,7 +24,7 @@
 			display: block;
 			vertical-align: middle;
 			margin: 0 auto convertScaleToRem(1) auto;
-			@extend .u-border-radius;
+			border-radius: $border-radius;
 			height: 40px;
 			width: 40px;
 			position: relative;

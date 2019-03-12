@@ -1,5 +1,5 @@
 .ItemList__heading {
-	@extend .p-2;
+	padding: 1rem;
 	font-weight: bold;
 	@include fontsize($t-3);
 	border-bottom: 2px solid $c-g200;
@@ -7,7 +7,7 @@
 }
 
 .ItemList__item {
-	@extend .p-2;
+	padding: 1rem;
 	border-bottom: 1px solid $c-g200;
 	display: table;
 	width: 100%;

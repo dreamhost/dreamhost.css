@@ -21,12 +21,12 @@
 .l-pos-left {left: 0 !important}
 .l-pos-right {right: 0 !important}
 
-.l-pos-top-left {@extend .l-pos-top, .l-pos-left;}
-.l-pos-top-right {@extend .l-pos-top, .l-pos-right;}
-.l-pos-bottom-left {@extend .l-pos-bottom, .l-pos-left;}
-.l-pos-bottom-right {@extend .l-pos-bottom, .l-pos-right;}
+.l-pos-top-left {top: 0 !important; left: 0 !important;}
+.l-pos-top-right {top: 0 !important; right: 0 !important;}
+.l-pos-bottom-left {bottom: 0 !important; left: 0 !important;}
+.l-pos-bottom-right {bottom: 0 !important; right: 0 !important;}
 
-.l-pos-all {@extend .l-pos-top, .l-pos-bottom, .l-pos-left, .l-pos-right;}
+.l-pos-all {top: 0 !important; bottom: 0 !important; left: 0 !important; right: 0 !important;}
 
 .l-border-box {box-sizing: border-box !important}
 .l-content-box {box-sizing: content-box !important}
@@ -38,14 +38,6 @@
 .l-flex-row-reverse {flex-direction: row-reverse !important}
 .l-flex-col {flex-direction: column !important}
 .l-flex-col-reverse {flex-direction: column-reverse !important}
-
-// set alignment of a single item within the flex container
-.l-flex-start {align-self: flex-start !important}
-.l-flex-end {align-self: flex-end !important}
-.l-flex-center {align-self: center !important}
-.l-flex-stretch {align-self: stretch !important}
-.l-flex-between {align-self: space-between !important}
-.l-flex-around {align-self: space-around !important}
 
 // sets horizontal alignment of content within the flex container
 .l-flex-x-start {justify-content: flex-start !important}
@@ -61,6 +53,14 @@
 .l-flex-y-center {align-items: center !important}
 .l-flex-y-baseline {align-items: baseline !important}
 .l-flex-y-stretch {align-items: stretch !important}
+
+// set alignment of a single item within the flex container
+.l-flex-start {align-self: flex-start !important}
+.l-flex-end {align-self: flex-end !important}
+.l-flex-center {align-self: center !important}
+.l-flex-stretch {align-self: stretch !important}
+.l-flex-between {align-self: space-between !important}
+.l-flex-around {align-self: space-around !important}
 
 // force flex items to wrap. usually only needed when items used fixed size
 .l-flex-wrap {flex-wrap: wrap !important}

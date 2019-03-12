@@ -83,7 +83,7 @@ Cards
 
 	&.Card__featured {
 		border:solid 1px $c-b300;
-		@extend .u-border-radius;
+		border-radius: $border-radius;
 
 		.Card__heading {
 			color: $c-b700;
@@ -99,7 +99,7 @@ Cards
 	&.Card__plan {
 		text-align: center;
 		border:solid 1px $c-g200;
-		@extend .u-border-radius;
+		border-radius: $border-radius;
 
 		.Card__heading {
 			color: $c-b700;
@@ -121,7 +121,27 @@ Cards
 	}
 
 	&.Card__plan--highlighted {
-		@extend .Card__plan;
+		text-align: center;
+		border:solid 1px $c-g200;
+		border-radius: $border-radius;
+
+		.Card__heading {
+			color: $c-b700;
+			@include fontsize($t-3);
+			margin-bottom: convertScaleToRem(2);
+		}
+
+		.Card__subheading {
+			@include fontsize($t-0);
+			color: $c-b300;
+			text-transform: uppercase;
+		}
+
+		.Card__number {
+			margin: convertScaleToRem(2) convertScaleToRem(0);
+			@include fontsize($t-5);
+			color: $c-b700;
+		}
 		border:solid 1px $c-o300;
 
 		.Tag{
@@ -132,7 +152,27 @@ Cards
 	}
 
 	&.Card__plan--extended {
-		@extend .Card__plan;
+		text-align: center;
+		border:solid 1px $c-g200;
+		border-radius: $border-radius;
+
+		.Card__heading {
+			color: $c-b700;
+			@include fontsize($t-3);
+			margin-bottom: convertScaleToRem(2);
+		}
+
+		.Card__subheading {
+			@include fontsize($t-0);
+			color: $c-b300;
+			text-transform: uppercase;
+		}
+
+		.Card__number {
+			margin: convertScaleToRem(2) convertScaleToRem(0);
+			@include fontsize($t-5);
+			color: $c-b700;
+		}
 
 		.Card__heading {
 			color: $c-b300;

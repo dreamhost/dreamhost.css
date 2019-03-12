@@ -63,7 +63,7 @@ Page Header Component
 		cursor: pointer;
 	}
 
-	%menu-partial {
+	.Menu-toggle__inner {
 		background: $c-w100;
 		height: 2px;
 		border-radius: 3px;
@@ -82,14 +82,24 @@ Page Header Component
 		-moz-transition: .3s ease-in-out;
 		-o-transition: .3s ease-in-out;
 		transition: .3s ease-in-out;
-	}
-
-	.Menu-toggle__inner {
-		@extend %menu-partial;
 
 
 		&:before {
-			@extend %menu-partial;
+			background: $c-w100;
+			height: 2px;
+			border-radius: 3px;
+			width: 20px;
+			margin: 0;
+			position: absolute;
+			left: 0;
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+			-webkit-transition: .3s ease-in-out;
+			-moz-transition: .3s ease-in-out;
+			-o-transition: .3s ease-in-out;
+			transition: .3s ease-in-out;
 			content: '';
 			display: block;
 			top: -5px;
@@ -97,9 +107,24 @@ Page Header Component
 		}
 
 		&:after {
-			@extend %menu-partial;
-			content: '';
+			background: $c-w100;
+			height: 2px;
+			border-radius: 3px;
+			width: 20px;
+			margin: 0;
 			display: block;
+			position: absolute;
+			opacity: 1;
+			left: 0;
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+			-webkit-transition: .3s ease-in-out;
+			-moz-transition: .3s ease-in-out;
+			-o-transition: .3s ease-in-out;
+			transition: .3s ease-in-out;
+			content: '';
 			top: 5px;
 		}
 	}
