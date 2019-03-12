@@ -132,9 +132,6 @@
 //
 // Required variables can be found in ./src/scss/_variables.scss
 // Required mixins for building grid classes can be found in ./src/scss/_vendor.scss
-//
-// Note that we should NEVER alter native bootstrap code found in ./node_modules or ./src/scss/vendor/bootstrap
-// in order to make it easier to handle bootstrap version updates.
 
 // Row
 @if $enable-grid-classes {
