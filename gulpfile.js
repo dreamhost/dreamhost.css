@@ -12,10 +12,7 @@ var package     = require('./package.json');
 
 var dist = {
 	fileName: 'dreamhost',
-	path: {
-		version: './dist/' + package.version,
-		latest: './dist/latest'
-	}
+	path: './dist/'
 };
 
 /*
@@ -92,27 +89,17 @@ gulp.task('styles', ['lint'], function () {
 */
 
 gulp.task('js', function() {
-	return gulp.src([
-			'./src/js/*.js',
-			'!./src/js/bundle.js'
-		])
-		// .pipe(concat('bundle.js'))
-		// .pipe(gulp.dest('./src/js/'))
+	return gulp.src('./src/js/*.js')
 		.pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('js-dist', function() {
-	return gulp.src([
-			'./src/js/*.js',
-			'!./src/js/bundle.js'
-		])
+	return gulp.src('./src/js/*.js')
 		.pipe(concat(dist.fileName + '.js'))
-		.pipe(gulp.dest(dist.path.version))
-		.pipe(gulp.dest(dist.path.latest))
+		.pipe(gulp.dest(dist.path + 'js'))
 		.pipe(uglify())
 		.pipe(rename(dist.fileName + '.min.js'))
-		.pipe(gulp.dest(dist.path.version))
-		.pipe(gulp.dest(dist.path.latest));
+		.pipe(gulp.dest(dist.path + 'js'))
 });
 
 gulp.task('css-dist', function() {
@@ -120,12 +107,10 @@ gulp.task('css-dist', function() {
 		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
 		.pipe(prefix({browsers: ['last 4 versions']}))
 		.pipe(rename(dist.fileName + '.css'))
-		.pipe(gulp.dest(dist.path.version))
-		.pipe(gulp.dest(dist.path.latest))
+		.pipe(gulp.dest(dist.path + 'css'))
 		.pipe(cleanCSS())
 		.pipe(rename(dist.fileName + '.min.css'))
-		.pipe(gulp.dest(dist.path.version))
-		.pipe(gulp.dest(dist.path.latest));
+		.pipe(gulp.dest(dist.path + 'css'))
 });
 
 /*
