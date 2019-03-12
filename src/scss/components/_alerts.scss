@@ -97,7 +97,7 @@
 	border-radius: $border-radius;
 	margin: 0 0 .5em 0;
 	animation: Toaster 5s ease-in-out both;
-	@include transition (transform 0.1s ease-in-out);
+	transition: transform 0.1s ease-in-out;
 
 	&:before{
 		content: '';

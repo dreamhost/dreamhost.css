@@ -26,7 +26,7 @@
 
 //Cart Steps
 .Cart__step{
-	@include transition (all 0.1s ease-in-out);
+	transition: all 0.1s ease-in-out;
 	background-color: $c-w100;
 	position: relative;
 	margin: 1px 0;
@@ -55,7 +55,7 @@
 		height: 100%;
 		width: 0px;
 		background: $c-b300;
-		@include transition (all 0.1s ease-out);
+		transition: all 0.1s ease-out;
 	}
 
 	&:hover,
