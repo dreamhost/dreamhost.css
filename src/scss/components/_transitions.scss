@@ -17,7 +17,7 @@ Transition Components
 
 // Scale on hover
 .scale-up-hover {
-	transition-duration: $tr-3;
+	transition-duration: 0.1s;
 
 	&:hover, &.is-open {
 		transform: scale(1.1);
@@ -25,7 +25,7 @@ Transition Components
 }
 
 .scale-down-hover {
-	transition-duration: $tr-3;
+	transition-duration: 0.1s;
 
 	&:hover, &.is-open {
 		transform: scale(.95);

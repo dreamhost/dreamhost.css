@@ -138,7 +138,7 @@ Page Header Component
 			display: block;
 			@include fontsize($t-0);
 			color: $c-g500;
-			@include transition (all $tr-3 ease-in-out);
+			@include transition (all 0.1s ease-in-out);
 
 			&:hover {
 				text-decoration: none;
@@ -416,7 +416,7 @@ button.PageHeader__subnav-link {
 			bottom: 0;
 			background: $c-b300;
 			height: 2px;
-			animation: UnderlineEmphasis $a-3 ease-in-out;
+			animation: UnderlineEmphasis 1s ease-in-out;
 		}
 	}
 

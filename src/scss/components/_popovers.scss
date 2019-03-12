@@ -62,7 +62,7 @@ Popover Component
 .Popover.has-caret:after {
 	background: $c-w100;
 	color: $black;
-	transition-duration: $tr-4;
+	transition-duration: 0.2s;
 	transition-timing-function: ease-in-out;
 }
 

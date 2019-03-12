@@ -31,7 +31,7 @@
 		}
 	}
 
-	@include transition (right $tr-4 ease-out);
+	@include transition (right 0.2s ease-out);
 
 	&:after {
 		content: "";
@@ -41,7 +41,7 @@
 		bottom: 0;
 		background: $c-b300;
 		height: 2px;
-		@include transition (right $tr-4 ease-out);
+		@include transition (right 0.2s ease-out);
 	}
 
 	&:hover, &:active, &.is-active a {

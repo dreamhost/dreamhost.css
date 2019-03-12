@@ -12,14 +12,14 @@
 		padding: convertScaleToRem(0.75);
 		vertical-align: middle;
 
-		@include transition (all $tr-3 ease-in-out);
+		@include transition (all 0.1s ease-in-out);
 
 		&:hover{
 			background: $c-w100;
 
 			.Pagination__icon{
 				color: $c-b300;
-				transform: scale($s-2);
+				transform: scale(.99);
 			}
 		}
 

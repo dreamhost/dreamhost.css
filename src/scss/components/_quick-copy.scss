@@ -34,7 +34,7 @@
 		color: $c-b700;
 		width: 100%;
 		padding: 0.45rem;
-		@include transition (all $tr-4 ease-in-out);
+		@include transition (all 0.2s ease-in-out);
 		pointer-events: none;
 		opacity: 0;
 		border-radius: 3px;

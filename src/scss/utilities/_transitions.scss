@@ -18,11 +18,11 @@ Transition Utilities
 
 // Duration
 .tr-duration-0 {transition-duration: 0s !important;}
-.tr-duration-1 {transition-duration: $tr-1 !important;}
-.tr-duration-2 {transition-duration: $tr-2 !important;}
-.tr-duration-3 {transition-duration: $tr-3 !important;}
-.tr-duration-4 {transition-duration: $tr-4 !important;}
-.tr-duration-5 {transition-duration: $tr-5 !important;}
+.tr-duration-1 {transition-duration: 0.5s !important;}
+.tr-duration-2 {transition-duration: 0.7s !important;}
+.tr-duration-3 {transition-duration: 0.1s !important;}
+.tr-duration-4 {transition-duration: 0.2s !important;}
+.tr-duration-5 {transition-duration: 0.3s !important;}
 
 // Easing
 .tr-easing-linear {transition-timing-function: linear !important;}

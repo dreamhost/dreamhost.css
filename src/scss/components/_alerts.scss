@@ -98,7 +98,7 @@
 	border-radius: $border-radius;
 	margin: 0 0 .5em 0;
 	animation: Toaster 5s ease-in-out both;
-	@include transition (transform $tr-3 ease-in-out);
+	@include transition (transform 0.1s ease-in-out);
 
 	&:before{
 		content: '';
@@ -111,7 +111,7 @@
 	}
 
 	&:hover, &:active {
-		transform: scale($s-5);
+		transform: scale(1.02);
 		box-shadow:0 0 10px 0 rgba($c-g500,0.2);
 		cursor: pointer;
 	}
@@ -144,7 +144,7 @@
 }
 
 .Toaster--persistent{
-	animation: ToasterPersistent $a-2 ease-in-out backwards;
+	animation: ToasterPersistent .5s ease-in-out backwards;
 }
 
 .Toaster--negative{
@@ -213,40 +213,40 @@
 @keyframes ToasterPersistent {
 	0% {
 	opacity: 0;
-	transform: scale($s-1) translateX(100%);
+	transform: scale(.98) translateX(100%);
 	}
 
 	100% {
 	opacity: 1;
-	transform: scale($s-3) translateX(0);
+	transform: scale(1) translateX(0);
 	}
 }
 
 @keyframes Toaster {
 	0% {
 	opacity: 0;
-	transform: scale($s-1) translateX(100%);
+	transform: scale(.98) translateX(100%);
 	margin-bottom: 0.5em;
 	height: 100%;
 	}
 
 	10% {
 	opacity: 1;
-	transform: scale($s-3) translateX(0);
+	transform: scale(1) translateX(0);
 	margin-bottom: 0.5em;
 	height: 100%;
 	}
 
 	90% {
 	opacity: 1;
-	transform: scale($s-3) translateX(0);
+	transform: scale(1) translateX(0);
 	margin-bottom: 0.5em;
 	height: 100%;
 	}
 
 	99% {
 	opacity: 1;
-	transform: scale($s-1) translateX(100%);
+	transform: scale(.98) translateX(100%);
 	margin-bottom: 0.5em;
 	height: 100%;
 	}
