@@ -232,9 +232,9 @@ textarea.Input {
 
 		&:checked:before{
 			opacity: 1;
-			@extend .zoom-in;
-			@extend .a-easing-cb-scale-up;
-			@extend .a-duration-1;
+			animation: zoomIn 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1);
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		}
 
 	}

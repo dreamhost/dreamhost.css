@@ -102,14 +102,6 @@
 .t-xl {@extend .t-5;}
 .t-xxl {@extend .t-6;}
 
-// Deprecate animation tshirt classes
-.a-duration-none {@extend .a-duration-0;}
-.a-duration-xs {@extend .a-duration-1;}
-.a-duration-s {@extend .a-duration-2;}
-.a-duration, .a-duration-m {@extend .a-duration-3;}
-.a-duration-l {@extend .a-duration-4;}
-.a-duration-xl {@extend .a-duration-5;}
-
 // Deprecate transition tshirt classes
 .tr-duration-xs {@extend .tr-duration-1;}
 .tr-duration-s {@extend .tr-duration-2;}
