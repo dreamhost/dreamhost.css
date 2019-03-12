@@ -40,28 +40,6 @@ gulp.task('serve', ['styles', 'js'], function() {
 
 /*
 
-	## gulp style linting
-
-	1. Lint sass and log any errors to the console.
-	2. Ignore defaults.scss and reset.scss
-
-*/
-
-gulp.task('lint', function() {
-	return gulp.src([
-		'./src/scss/*.scss',
-		'!./src/scss/_defaults.scss',
-		'!./src/scss/_reset.scss',
-		'!./src/scss/_variables.scss'
-	])
-	.pipe(stylelint({
-		failAfterError: false,
-		reporters: [{formatter: 'string', console: true}]
-	}));
-});
-
-/*
-
 	## gulp styles
 
 	1. Compile sass
