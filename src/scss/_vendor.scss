@@ -1,21 +1,3 @@
 @import 'vendor/remodal';
 
 
-// mixins pulled from bourbon/neat libraries.
-// We were including the full libraries but only using these mixins ._.
-@mixin clearfix {
-	&::after {
-		clear: both;
-		content: "";
-		display: table;
-	}
-}
-
-@mixin outer-container($local-max-width: $max-width) {
-	@extend .u-clearfix;
-	max-width: $local-max-width;
-	margin: {
-		left: auto;
-		right: auto;
-	}
-}
