@@ -1,11 +1,21 @@
 @import 'vendor/remodal';
 
-// Loaded via NPM
-// @import 'vendor/bourbon/bourbon';
-// @import "vendor/neat/neat-helpers";
 
-/* stylelint-disable */
-$max-width: 980px;
-/* stylelint-enable */
+// mixins pulled from bourbon/neat libraries.
+// We were including the full libraries but only using these mixins ._.
+@mixin clearfix {
+	&::after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
 
-// @import "vendor/neat/neat";
+@mixin outer-container($local-max-width: $max-width) {
+	@extend .u-clearfix;
+	max-width: $local-max-width;
+	margin: {
+		left: auto;
+		right: auto;
+	}
+}

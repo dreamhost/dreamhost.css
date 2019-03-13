@@ -1,8 +1,15 @@
 // TO-DO
 // Some sort of scale
+html { // http://bit.ly/1qk2tVR
+	box-sizing: border-box;
+}
 
 * {
-	line-height: calc(1em + 8px);
+	&,
+	&::after,
+	&::before {
+		box-sizing: inherit;
+	}
 }
 
 body {
@@ -13,6 +20,7 @@ body {
 	color: $darker-grey;
 	font-family: $body;
 	font-size: $t-1; //16px
+	line-height: 1.5;
 }
 
 h1, h2, h3, h4{
