@@ -1,18 +1,5 @@
 // Container Sizes
-.container-s,
-.container-m,
-.container-l,
-.container-full-width {
-	margin: 0 auto;
-	&::after {
-		clear: both;
-		content: "";
-		display: table;
-	}
-}
-
-// Container Sizes
-.container-s {max-width: 640px;} // 320 x 2
-.container-m {max-width: 960px;} // 320 x 3
-.container-l {max-width: 1280px;} // 320 x 4
-.container-full-width {max-width: 100%;} // 100%
+.container-s { @include outer-container(640px); } // 320 x 2
+.container-m { @include outer-container(960px); } // 320 x 3
+.container-l { @include outer-container(1280px); } // 320 x 4
+.container-full-width {@include outer-container(100%); } // 100%

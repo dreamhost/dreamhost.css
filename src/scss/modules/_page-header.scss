@@ -138,11 +138,7 @@ Page Header Component
 }
 
 .PageHeader__container {
-  &::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
+	@include clearfix;
 	display: block;
 	max-width: 1280px;
 	width: 100%;
