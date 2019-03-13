@@ -65,65 +65,89 @@
 	.g-12-12__l {grid-column: span 12;}
 }
 
-// https://dreamhost.github.io/dreamhost.css/grid/
 
-.g-1_6 {@include span-columns(2)}
-.g-1_4 {@include span-columns(3)}
-.g-1_3 {@include span-columns(4)}
-.g-1_2 {@include span-columns(6)}
-.g-2_3 {@include span-columns(8)}
-.g-3_4 {@include span-columns(9)}
-.g-omega {@include omega()}
-.g-shift-1 {@include shift(1)}
-.g-shift-2 {@include shift(2)}
-.g-shift-3 {@include shift(3)}
-.g-shift-4 {@include shift(4)}
-.g-shift-5 {@include shift(5)}
-.g-shift-6 {@include shift(6)}
-.g-shift-7 {@include shift(7)}
-.g-shift-8 {@include shift(8)}
-.g-shift-9 {@include shift(9)}
-.g-shift-10 {@include shift(10)}
-.g-shift-11 {@include shift(11)}
+.g-1_6 { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
+.g-1_6:last-child { margin-right: 0; }
 
-@media screen and (min-width: $medium-breakpoint){
-	.g-1_6__m {@include span-columns(2)}
-	.g-1_4__m {@include span-columns(3)}
-	.g-1_3__m {@include span-columns(4)}
-	.g-1_2__m {@include span-columns(6)}
-	.g-2_3__m {@include span-columns(8)}
-	.g-3_4__m {@include span-columns(9)}
-	.g-omega__m {@include omega()}
-	.g-shift-1__m {@include shift(1)}
-	.g-shift-2__m {@include shift(2)}
-	.g-shift-3__m {@include shift(3)}
-	.g-shift-4__m {@include shift(4)}
-	.g-shift-5__m {@include shift(5)}
-	.g-shift-6__m {@include shift(6)}
-	.g-shift-7__m {@include shift(7)}
-	.g-shift-8__m {@include shift(8)}
-	.g-shift-9__m {@include shift(9)}
-	.g-shift-10__m {@include shift(10)}
-	.g-shift-11__m {@include shift(11)}
+.g-1_4 { float: left; display: block; margin-right: 2.35765%; width: 23.23176%; }
+.g-1_4:last-child { margin-right: 0; }
+
+.g-1_3 { float: left; display: block; margin-right: 2.35765%; width: 31.76157%; }
+.g-1_3:last-child { margin-right: 0; }
+
+.g-1_2 { float: left; display: block; margin-right: 2.35765%; width: 48.82117%; }
+.g-1_2:last-child { margin-right: 0; }
+
+.g-2_3 { float: left; display: block; margin-right: 2.35765%; width: 65.88078%; }
+.g-2_3:last-child { margin-right: 0; }
+
+.g-3_4 { float: left; display: block; margin-right: 2.35765%; width: 74.41059%; }
+.g-3_4:last-child { margin-right: 0; }
+
+.g-omega { margin-right: 0; }
+
+.g-shift-1 { margin-left: 8.5298%; }
+.g-shift-2 { margin-left: 17.05961%; }
+.g-shift-3 { margin-left: 25.58941%; }
+.g-shift-4 { margin-left: 34.11922%; }
+.g-shift-5 { margin-left: 42.64902%; }
+.g-shift-6 { margin-left: 51.17883%; }
+.g-shift-7 { margin-left: 59.70863%; }
+.g-shift-8 { margin-left: 68.23843%; }
+.g-shift-9 { margin-left: 76.76824%; }
+.g-shift-10 { margin-left: 85.29804%; }
+.g-shift-11 { margin-left: 93.82785%; }
+
+@media screen and (min-width: $medium-breakpoint) {
+	.g-1_6__m { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
+	.g-1_6__m:last-child { margin-right: 0; }
+	.g-1_4__m { float: left; display: block; margin-right: 2.35765%; width: 23.23176%; }
+	.g-1_4__m:last-child { margin-right: 0; }
+	.g-1_3__m { float: left; display: block; margin-right: 2.35765%; width: 31.76157%; }
+	.g-1_3__m:last-child { margin-right: 0; }
+	.g-1_2__m { float: left; display: block; margin-right: 2.35765%; width: 48.82117%; }
+	.g-1_2__m:last-child { margin-right: 0; }
+	.g-2_3__m { float: left; display: block; margin-right: 2.35765%; width: 65.88078%; }
+	.g-2_3__m:last-child { margin-right: 0; }
+	.g-3_4__m { float: left; display: block; margin-right: 2.35765%; width: 74.41059%; }
+	.g-3_4__m:last-child { margin-right: 0; }
+	.g-omega__m { margin-right: 0; }
+	.g-shift-1__m { margin-left: 8.5298%; }
+	.g-shift-2__m { margin-left: 17.05961%; }
+	.g-shift-3__m { margin-left: 25.58941%; }
+	.g-shift-4__m { margin-left: 34.11922%; }
+	.g-shift-5__m { margin-left: 42.64902%; }
+	.g-shift-6__m { margin-left: 51.17883%; }
+	.g-shift-7__m { margin-left: 59.70863%; }
+	.g-shift-8__m { margin-left: 68.23843%; }
+	.g-shift-9__m { margin-left: 76.76824%; }
+	.g-shift-10__m { margin-left: 85.29804%; }
+	.g-shift-11__m { margin-left: 93.82785%; }
 }
 
-@media screen and (min-width: $large-breakpoint){
-	.g-1_6__l {@include span-columns(2)}
-	.g-1_4__l {@include span-columns(3)}
-	.g-1_3__l {@include span-columns(4)}
-	.g-1_2__l {@include span-columns(6)}
-	.g-2_3__l {@include span-columns(8)}
-	.g-3_4__l {@include span-columns(9)}
-	.g-omega__l {@include omega()}
-	.g-shift-1__l {@include shift(1)}
-	.g-shift-2__l {@include shift(2)}
-	.g-shift-3__l {@include shift(3)}
-	.g-shift-4__l {@include shift(4)}
-	.g-shift-5__l {@include shift(5)}
-	.g-shift-6__l {@include shift(6)}
-	.g-shift-7__l {@include shift(7)}
-	.g-shift-8__l {@include shift(8)}
-	.g-shift-9__l {@include shift(9)}
-	.g-shift-10__l {@include shift(10)}
-	.g-shift-11__l {@include shift(11)}
+@media screen and (min-width: $large-breakpoint) {
+	.g-1_6__l { float: left; display: block; margin-right: 2.35765%; width: 14.70196%; }
+	.g-1_6__l:last-child { margin-right: 0; }
+	.g-1_4__l { float: left; display: block; margin-right: 2.35765%; width: 23.23176%; }
+	.g-1_4__l:last-child { margin-right: 0; }
+	.g-1_3__l { float: left; display: block; margin-right: 2.35765%; width: 31.76157%; }
+	.g-1_3__l:last-child { margin-right: 0; }
+	.g-1_2__l { float: left; display: block; margin-right: 2.35765%; width: 48.82117%; }
+	.g-1_2__l:last-child { margin-right: 0; }
+	.g-2_3__l { float: left; display: block; margin-right: 2.35765%; width: 65.88078%; }
+	.g-2_3__l:last-child { margin-right: 0; }
+	.g-3_4__l { float: left; display: block; margin-right: 2.35765%; width: 74.41059%; }
+	.g-3_4__l:last-child { margin-right: 0; }
+	.g-omega__l { margin-right: 0; }
+	.g-shift-1__l { margin-left: 8.5298%; }
+	.g-shift-2__l { margin-left: 17.05961%; }
+	.g-shift-3__l { margin-left: 25.58941%; }
+	.g-shift-4__l { margin-left: 34.11922%; }
+	.g-shift-5__l { margin-left: 42.64902%; }
+	.g-shift-6__l { margin-left: 51.17883%; }
+	.g-shift-7__l { margin-left: 59.70863%; }
+	.g-shift-8__l { margin-left: 68.23843%; }
+	.g-shift-9__l { margin-left: 76.76824%; }
+	.g-shift-10__l { margin-left: 85.29804%; }
+	.g-shift-11__l { margin-left: 93.82785%; }
 }

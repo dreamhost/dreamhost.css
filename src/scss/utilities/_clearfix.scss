@@ -1,2 +1,8 @@
 .u-cf,
-.u-clearfix {@include clearfix;}
+.u-clearfix {
+	&::after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
