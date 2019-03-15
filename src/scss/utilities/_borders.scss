@@ -62,23 +62,14 @@
 .border-left-2 {border-left-width: $border-size-2}
 .border-right-2 {border-right-width: $border-size-2}
 
-// colors
-.border-black {border-color: $black}
-.border-white {border-color: $white}
-
-.border-blue {border-color: $blue}
-.border-light-blue {border-color: $light-blue}
-.border-dark-blue {border-color: $dark-blue}
-
-.border-red {border-color: $red}
-.border-light-red {border-color: $light-red}
-.border-dark-red {border-color:$dark-red}
-
-.border-lighter-grey {border-color: $lighter-grey}
-.border-light-grey {border-color: $light-grey}
-.border-grey {border-color: $grey}
-.border-dark-grey {border-color: $dark-grey}
-.border-darker-grey {border-color: $darker-grey}
+// Legacy Border colors
+// TODO: DEPRECATE THESE, NEPHEW
+.border-lighter-grey {border-color: $c-g100}
+.border-light-grey {border-color: $c-g200}
+.border-grey {border-color: $c-g300}
+.border-blue {border-color: $c-b300}
+.border-light-blue {border-color: $c-b100}
+.border-white {border-color: $c-w100}
 
 // updated palette
 .border-c-b300 {border-color: $c-b300}
