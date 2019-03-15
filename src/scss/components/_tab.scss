@@ -148,7 +148,15 @@
 }
 
 .Tab {
-	@include box;
+	padding: 2rem;
+	background: $c-w100;
+	> *:last-child {
+		&:not(input) {
+			&:not(textarea) {
+				margin-bottom: 0;
+			}
+		}
+	}
 	display: none;
 	&.is-active {
 		display: block;

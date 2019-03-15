@@ -28,7 +28,15 @@ Panel
 
 .Panel,
 .Panel--double {
-	@include box;
+	padding: 2rem;
+	background: $c-w100;
+	> *:last-child {
+		&:not(input) {
+			&:not(textarea) {
+				margin-bottom: 0;
+			}
+		}
+	}
 	background: $c-g100;
 	display: inline-block;
 	position: relative;
