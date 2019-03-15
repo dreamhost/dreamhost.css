@@ -113,3 +113,8 @@
 	.t-regular__l {font-weight: $t-regular !important}
 }
 
+// Misc type utilities for handling white space or breaking long words
+.u-ws-normal {white-space: normal;}
+.u-ws-nowrap {white-space: nowrap;}
+.u-wb-normal {word-break: normal; }
+.u-wb-break-all {word-break: break-all; word-break: break-word;}
