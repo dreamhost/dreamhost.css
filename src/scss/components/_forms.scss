@@ -52,7 +52,7 @@ appearance: none;
 }
 
 .Form__group--actions {
-	margin-top: convertScaleToRem(6);
+	margin-top: 3rem;
 }
 
 .Form__group--stacked {
@@ -72,9 +72,9 @@ appearance: none;
 		content: '';
 		position: absolute;
 		pointer-events: none;
-		bottom: convertScaleToRem(2);
-		height: convertScaleToRem(1);
-		right: convertScaleToRem(2);
+		bottom: 1rem;
+		height: 0.5rem;
+		right: 1rem;
 		border-color: $c-g300 transparent;
 		border-style: solid;
 		border-width: .35rem .35rem 0 .35rem;
@@ -111,11 +111,11 @@ appearance: none;
 
 	display: block;
 	margin: 0;
-	margin-top: convertScaleToRem(1);
+	margin-top: 0.5rem;
 	width: 100%;
 	transition: all .2s ease-in-out;
 	border-radius: $border-radius;
-	padding: 0.4375rem convertScaleToRem(1); /* to ensure align with baseline grid. */
+	padding: 0.4375rem 0.5rem; /* to ensure align with baseline grid. */
 
 	&:active,
 	&:focus {
@@ -162,11 +162,11 @@ textarea.Input {
 	@extend %form-border;
 	@extend %form-no-outline;
 	@extend %form-text-style;
-	margin-top: convertScaleToRem(1);
+	margin-top: 0.5rem;
 	border-radius: $border-radius;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	padding: 0.4375rem convertScaleToRem(1);
+	padding: 0.4375rem 0.5rem;
 	background: $white;
 	display: block;
 	width: 100%;
@@ -193,7 +193,7 @@ textarea.Input {
 	display: block;
 	padding-left: 1.4rem;
 	position: relative;
-	margin-bottom: convertScaleToRem(1);
+	margin-bottom: 0.5rem;
 
 	&:hover input{
 		border-color: $c-b300;
@@ -279,7 +279,7 @@ textarea.Input {
 .Choice__description {
 	@extend %form-description;
 	display: block;
-	margin-bottom: convertScaleToRem(2);
+	margin-bottom: 1rem;
 }
 
 .Choice--error > .Choice__label {

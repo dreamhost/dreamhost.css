@@ -1,3 +1,6 @@
+/**
+Mixin for automating creation of spacing (margin and padding) classes. See src/utilities/_spacing.scss
+**/
 @mixin createClasses( $props, $class, $responsive) {
 	@include createClass( #{$class}-0, $props, 0 );
 	@include createClass( #{$class}-half, $props, convertScaleToRem(.5) );

@@ -20,7 +20,7 @@
 
 
 @mixin box($color: $c-w100){
-	padding: convertScaleToRem(4);
+	padding: 2rem;
 	background: $color;
 
 	// TODO: Make this less confusing.

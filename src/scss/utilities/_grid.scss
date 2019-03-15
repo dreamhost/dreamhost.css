@@ -1,7 +1,7 @@
 // CSS Grid auto layout
 .Grid--auto {
 	display: grid;
-	grid-gap: convertScaleToRem(2);
+	grid-gap: 1rem;
 }
 
 @media screen and (min-width: $medium-breakpoint){
@@ -18,8 +18,8 @@
 .Grid {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-column-gap: convertScaleToRem(2);
-	grid-row-gap: convertScaleToRem(1);
+	grid-column-gap: 1rem;
+	grid-row-gap: 0.5rem;
 }
 
 .g-1-12 {grid-column: span 1;}

@@ -6,7 +6,7 @@
 
 //Cart Header
 .Cart__header{
-	padding: convertScaleToRem(3);
+	padding: 1.5rem;
 	background: $c-g100;
 	border-radius: 3px 3px 0 0;
 }
@@ -79,7 +79,7 @@
 
 			&:first-of-type{
 				display: inline-block;
-				margin-right: convertScaleToRem(2);
+				margin-right: 1rem;
 			}
 		}
 
@@ -131,7 +131,7 @@
 
 //Cart Footer
 .Cart__footer{
-	padding: convertScaleToRem(3);
+	padding: 1.5rem;
 	background: $c-g100;
 	font-weight: $t-bold;
 	border-radius: 0 0 3px 3px;

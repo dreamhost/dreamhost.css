@@ -31,7 +31,7 @@ Table
 .Table,
 .Table__m {
 	width: 100%;
-	margin-bottom: convertScaleToRem(4);
+	margin-bottom: 2rem;
 	text-align: left;
 
 	thead {
@@ -39,7 +39,7 @@ Table
 	}
 
 	th {
-		padding: convertScaleToRem(2) convertScaleToRem(1);
+		padding: 1rem 0.5rem;
 		@include fontsize($t-1);
 		font-family: $heading;
 		color: $c-black;
@@ -59,7 +59,7 @@ Table
 	}
 
 	td {
-		padding: convertScaleToRem(2) convertScaleToRem(1);
+		padding: 1rem 0.5rem;
 		vertical-align: middle;
 		@include fontsize($t-1);
 	}
@@ -95,16 +95,16 @@ Table
 
 	tbody tr {
 		display: block;
-		margin-bottom: convertScaleToRem(7);
+		margin-bottom: 3.5rem;
 		background: $c-g100;
 		border: 1px solid $c-g200;
 		border-radius: 5px;
-		padding: convertScaleToRem(4) convertScaleToRem(4) convertScaleToRem(1);
+		padding: 2rem 2rem 0.5rem;
 
 		td {
 			display: block;
 			@include fontsize($t-1);
-			padding: convertScaleToRem(2) convertScaleToRem(1);
+			padding: 1rem 0.5rem;
 			vertical-align: middle;
 
 			&:before {
@@ -147,7 +147,7 @@ Table
 	}
 
 	.Table__row--child td:first-child {
-		padding-left: convertScaleToRem(1);
+		padding-left: 0.5rem;
 	}
 
 	@media (min-width: $medium-breakpoint) {
@@ -204,7 +204,7 @@ Table
 			background-repeat: repeat-x;
 
 			td:first-child {
-				padding-left: convertScaleToRem(5);
+				padding-left: 2.5rem;
 			}
 		}
 	}
@@ -217,7 +217,7 @@ Table
 	}
 
 	th, tbody tr td {
-		padding: convertScaleToRem(1);
+		padding: 0.5rem;
 	}
 
 	tbody tr,

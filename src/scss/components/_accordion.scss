@@ -3,14 +3,14 @@
 	background: $c-w100;
 	border: solid 1px $c-g200;
 	border-radius: 3px;
-	margin-bottom: convertScaleToRem(2);
+	margin-bottom: 1rem;
 
 	.Accordion__toggle {
 		@include fontsize($t-2);
 		font-family: $body;
 		color: $c-b300;
 		display: block;
-		padding: convertScaleToRem(2);
+		padding: 1rem;
 
 		&:hover {
 			cursor: pointer;
@@ -22,7 +22,7 @@
 			display: inline-block;
 			height: 16px;
 			width: 16px;
-			margin-right: convertScaleToRem(2);
+			margin-right: 1rem;
 			background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M5.6 27.1L15.9 16 5.6 4.9 12.2 0 27 16 12.2 32l-6.6-4.9z' fill='%230073EC'/></svg>");
 			transform: rotate(90deg);
 		}
@@ -34,10 +34,10 @@
 		height: 0;
 		@include fontsize($t-1);
 		color: $c-g500;
-		padding: convertScaleToRem(0) convertScaleToRem(6);
+		padding: 0 3rem;
 
 		p:last-of-type {
-		margin-bottom: convertScaleToRem(0.75);
+		margin-bottom: 0.375rem;
 		}
 
 		&> * {
@@ -50,7 +50,7 @@
 .Accordion.Accordion--open {
 
 	.Accordion__toggle {
-		padding-bottom: convertScaleToRem(1);
+		padding-bottom: 0.5rem;
 
 		&:before {
 			transform: rotate(-90deg);
@@ -64,7 +64,7 @@
 	.Accordion__content {
 		opacity: 1;
 		height: 100%;
-		padding: convertScaleToRem(0) convertScaleToRem(6) convertScaleToRem(2) convertScaleToRem(6);
+		padding: 0 3rem 1rem 3rem;
 
 		&> * {
 			pointer-events: all;

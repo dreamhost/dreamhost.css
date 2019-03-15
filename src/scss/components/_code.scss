@@ -5,10 +5,10 @@
 code.hljs {
 	font-family: monospace;
     background-color: $lighter-grey;
-    padding: convertScaleToRem(1);
+    padding: 0.5rem;
     @include fontsize($t-1);
     border-radius: $border-radius;
-    margin-bottom: convertScaleToRem(2);
+    margin-bottom: 1rem;
     width: 100%;
     overflow-y: scroll;
 }
