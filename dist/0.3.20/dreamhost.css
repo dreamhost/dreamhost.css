@@ -807,13 +807,13 @@ textarea.Input { min-height: 140px; }
 
 .Icon > *, .Pagination .Pagination__icon > * { fill: currentColor; }
 
-.Icon.Icon--size-4, .Pagination .Icon--size-4.Pagination__icon { width: 4rem; height: 4rem; font-size: 4rem; }
+.Icon.Icon--size-4, .Pagination .Icon--size-4.Pagination__icon { width: 4rem; height: 4rem; }
 
-.Icon.Icon--size-3, .Pagination .Icon--size-3.Pagination__icon { width: 2rem; height: 2rem; font-size: 4rem; font-size: 2rem; }
+.Icon.Icon--size-3, .Pagination .Icon--size-3.Pagination__icon { width: 2rem; height: 2rem; }
 
-.Icon.Icon--size-2, .Pagination .Icon--size-2.Pagination__icon { width: 1.5rem; height: 1.5rem; font-size: 1.5rem; }
+.Icon.Icon--size-2, .Pagination .Icon--size-2.Pagination__icon { width: 1.5rem; height: 1.5rem; }
 
-.Icon.Icon--size-1, .Pagination .Icon--size-1.Pagination__icon { width: 1rem; height: 1rem; font-size: 1rem; }
+.Icon.Icon--size-1, .Pagination .Icon--size-1.Pagination__icon { width: 1rem; height: 1rem; }
 
 [class^="Icon--"], [class*="Icon--"] { font-family: 'dh-icon'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; font-size: 1.5rem; line-height: calc(1em + 8px); text-decoration: inherit; text-rendering: optimizeLegibility; text-transform: none; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; }
 
