@@ -7,7 +7,8 @@
     "url": "https://github.com/dreamhost/dreamhost.css.git"
   },
   "scripts": {
-    "version": "gulp dist && git add -A"
+    "version": "gulp dist && git add -A",
+    "postinstall": "cp -r ./node_modules/bootstrap ./src/scss/vendor/bootstrap"
   },
   "devDependencies": {
     "bootstrap": "^4.3.1",
