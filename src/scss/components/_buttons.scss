@@ -10,8 +10,6 @@ Buttons
 	.Button--primary        - Primary
 	.Button--danger         - Danger!
 	.Button--disabled       - Disabled
-	.Button__tag            - Positive Tag Button
-	.Button__tag--negative  - Negative Tag Button
 
 	Colors
 	.Button--dark           - Dark color
@@ -209,8 +207,5 @@ Buttons
 // Spacing
 .Button + .Button {
 	margin-left: 1em;
-
-	&.Button__tag{ margin-left: 3.25em; }
-	&.Button__tag.Button--compact{ margin-left: 2.75em; }
-	&.Button--block, &.Button__tag.Button--block{ margin-left: 0; }
+	&.Button--block {margin-left: 0;}
 }
