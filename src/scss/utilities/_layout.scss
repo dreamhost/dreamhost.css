@@ -28,6 +28,13 @@
 
 .l-pos-all {top: 0 !important; bottom: 0 !important; left: 0 !important; right: 0 !important;}
 
+.z-0 { z-index: $z-0; }
+.z-1 { z-index: $z-1; }
+.z-2 { z-index: $z-2; }
+.z-3 { z-index: $z-3; }
+.z-4 { z-index: $z-4; }
+.z-5 { z-index: $z-5; }
+
 .l-border-box {box-sizing: border-box !important}
 .l-content-box {box-sizing: content-box !important}
 
