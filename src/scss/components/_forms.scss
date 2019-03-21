@@ -1,27 +1,8 @@
 /*
 
-Form Component
+Form Components
 
 */
-
-%form-border { border: 1px solid $c-g300; }
-%form-description {
-	color: $c-g500;
-	@include fontsize($t-1);
-}
-%form-no-outline { outline: none; }
-
-%form-input-appearance-none{
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-}
-
-%form-text-style {
-	color: $c-g500;
-	@include fontsize($t-1);
-	font-family: $body;
-}
 
 .Form {}
 
@@ -64,10 +45,6 @@ appearance: none;
 .Form__group--select {
 	position: relative;
 
-	&, > * {
-		cursor: pointer;
-	}
-
 	&:after {
 		content: '';
 		position: absolute;
@@ -91,13 +68,12 @@ appearance: none;
 	display: block;
 	@include fontsize($t-1);
 	font-weight: $t-bold;
-	cursor: pointer;
 	max-width: 35rem;
 }
 
 .Form__description {
-	@extend %form-description;
-
+	color: $c-g500;
+	@include fontsize($t-1);
 	font-weight: $t-regular;
 	margin-bottom: 0;
 }
@@ -105,9 +81,12 @@ appearance: none;
 
 // Inputs
 .Input {
-	@extend %form-border;
-	@extend %form-no-outline;
-	@extend %form-text-style;
+	border: 1px solid $c-g300;
+
+	outline: none;
+	color: $c-g500;
+	@include fontsize($t-1);
+	font-family: $body;
 
 	display: block;
 	margin: 0;
@@ -155,13 +134,14 @@ textarea.Input {
 
 
 // Selects
-// Maybe we should create a custom style for these?
-// This looks kinda crazy in Safari. Looks decent elsewhere though.
-// This is the only way to get a native select box to stay at a height though.
 .Select {
-	@extend %form-border;
-	@extend %form-no-outline;
-	@extend %form-text-style;
+	border: 1px solid $c-g300;
+
+	outline: none;
+	color: $c-g500;
+	@include fontsize($t-1);
+	font-family: $body;
+
 	margin-top: 0.5rem;
 	border-radius: $border-radius;
 	-webkit-appearance: none;
@@ -170,7 +150,6 @@ textarea.Input {
 	background: $white;
 	display: block;
 	width: 100%;
-	cursor: pointer;
 	transition: all .2s ease-in-out;
 
 	&:hover,
@@ -188,8 +167,9 @@ textarea.Input {
 
 // Choice: styles both radios and checkboxes
 .Choice {
-	@extend %form-text-style;
-	cursor: pointer;
+	color: $c-g500;
+	@include fontsize($t-1);
+	font-family: $body;
 	display: block;
 	padding-left: 1.4rem;
 	position: relative;
@@ -200,8 +180,10 @@ textarea.Input {
 	}
 
 	input {
-		@extend %form-no-outline;
-		@extend %form-input-appearance-none;
+		outline: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 		transition: all 0.1s ease-in-out;
 		position: absolute;
 		left: 0;
@@ -210,10 +192,6 @@ textarea.Input {
 		background: $c-w100;
 		padding: 7px;
 		margin: 0;
-
-		&:hover{
-			cursor: pointer;
-		}
 
 		&:checked{
 			border-color: $c-b300;
@@ -277,7 +255,8 @@ textarea.Input {
 }
 
 .Choice__description {
-	@extend %form-description;
+	color: $c-g500;
+	@include fontsize($t-1);
 	display: block;
 	margin-bottom: 1rem;
 }
