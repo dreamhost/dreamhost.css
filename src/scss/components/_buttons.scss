@@ -114,47 +114,6 @@ Buttons
 	}
 }
 
-// Tags
-.Button__tag {
-	position: relative;
-	padding-left: 3rem;
-	margin-left: 3em;
-	border-color: $c-b700;
-	color: $c-b700;
-
-	&:hover {
-		 border-color: $c-b300;
-		 color: $c-b300;
-	}
-
-	&:before {
-		content: attr(data-label);
-		position: absolute;
-		text-transform: uppercase;
-		@include fontsize($t-0);
-		@extend .Tag--blue;
-		right: calc(100% - 2rem);
-		top: 7px;
-		padding: 0.25rem 0.75rem;
-		border-radius: 50px;
-	}
-
-	&.Button__tag--negative {
-		&:hover, &.is-open { border-color: $c-r300; color: $c-r500;}
-		&:before { @extend .Tag--red; }
-	}
-
-	&.Button--compact {
-		padding-left: 2.75em;
-
-		&:before {
-			top: 0.1875rem;
-		}
-	}
-
-	&.Button--block { margin-left:0; }
-}
-
 // Danger!
 .Button--danger {
 	background: transparent;
