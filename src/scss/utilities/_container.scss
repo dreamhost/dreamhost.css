@@ -3,11 +3,19 @@
 // TODO: Delete this and replace with commented code below once we remove the float grid, and also because this is a dumb mixin.
 
 .container-s { @include outer-container(640px); } // 320 x 2
-.container-m, .container { @include outer-container(960px); } // 320 x 3
+.container-m { @include outer-container(960px); } // 320 x 3
 .container-l { @include outer-container(1280px); } // 320 x 4
-.container-full-width, .container-fluid {@include outer-container(100%); } // 100%
+.container-full-width {@include outer-container(100%); } // 100%
 
-// .container-s {max-width: 640px; margin: 0 auto;}
-// .container-m, .container {max-width: 960px; margin: 0 auto;}
-// .container-l {max-width: 1280px; margin: 0 auto;}
-// .container-full-width, .container-fluid {width: 100%; margin: 0 auto;}
+@if $enable-grid-classes {
+	.container {
+		@include make-container();
+		@include make-container-max-widths();
+	}
+}
+
+@if $enable-grid-classes {
+	.container-fluid {
+		@include make-container();
+	}
+}
