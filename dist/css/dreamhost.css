@@ -2361,17 +2361,29 @@ Combo Colors
 
 .container-s::after { clear: both; content: ""; display: table; }
 
-.container-m, .container { max-width: 960px; margin-left: auto; margin-right: auto; }
+.container-m { max-width: 960px; margin-left: auto; margin-right: auto; }
 
-.container-m::after, .container::after { clear: both; content: ""; display: table; }
+.container-m::after { clear: both; content: ""; display: table; }
 
 .container-l { max-width: 1280px; margin-left: auto; margin-right: auto; }
 
 .container-l::after { clear: both; content: ""; display: table; }
 
-.container-full-width, .container-fluid { max-width: 100%; margin-left: auto; margin-right: auto; }
+.container-full-width { max-width: 100%; margin-left: auto; margin-right: auto; }
 
-.container-full-width::after, .container-fluid::after { clear: both; content: ""; display: table; }
+.container-full-width::after { clear: both; content: ""; display: table; }
+
+.container { width: 100%; padding-right: 16px; padding-left: 16px; margin-right: auto; margin-left: auto; }
+
+@media (min-width: 576px) { .container { max-width: 540px; } }
+
+@media (min-width: 750px) { .container { max-width: 700px; } }
+
+@media (min-width: 1050px) { .container { max-width: 928px; } }
+
+@media (min-width: 1280px) { .container { max-width: 1212px; } }
+
+.container-fluid { width: 100%; padding-right: 16px; padding-left: 16px; margin-right: auto; margin-left: auto; }
 
 .Grid--auto { display: -ms-grid; display: grid; grid-gap: 1rem; }
 
@@ -2623,7 +2635,7 @@ Combo Colors
 
 .offset-11 { margin-left: 91.66667%; }
 
-@media (min-width: 480px) { .col-sm { -ms-flex-preferred-size: 0; flex-basis: 0; -ms-flex-positive: 1; flex-grow: 1; max-width: 100%; }
+@media (min-width: 576px) { .col-sm { -ms-flex-preferred-size: 0; flex-basis: 0; -ms-flex-positive: 1; flex-grow: 1; max-width: 100%; }
   .col-sm-auto { -ms-flex: 0 0 auto; flex: 0 0 auto; width: auto; max-width: 100%; }
   .col-sm-1 { -ms-flex: 0 0 8.33333%; flex: 0 0 8.33333%; max-width: 8.33333%; }
   .col-sm-2 { -ms-flex: 0 0 16.66667%; flex: 0 0 16.66667%; max-width: 16.66667%; }
