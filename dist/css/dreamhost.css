@@ -439,6 +439,40 @@ Animation Components
 @keyframes zoomIn { 0% { transform: scale(0); }
   100% { transform: scale(1); } }
 
+.Bar { border-radius: 10px; border: 1px solid #AFBFC9; }
+
+.Bar + .Bar { margin-top: 1.5rem; }
+
+.Bar__row { display: -ms-flexbox; display: flex; min-height: 88px; -ms-flex-direction: column; flex-direction: column; }
+
+.Bar__group-icon { min-width: 32px; max-width: 32px; margin-right: 1rem; }
+
+.Bar__group { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; padding: 1.5rem; padding-right: 1rem; }
+
+.Bar__group--start { width: 100%; margin-right: auto; white-space: nowrap; font-weight: 600; color: #000000; }
+
+.Bar__group--mid { width: 100%; padding: 1.5rem; }
+
+.Bar__group--end { padding: 0; }
+
+@media (min-width: 1050px) { .Bar__row { -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: start; justify-content: flex-start; -ms-flex-align: center; align-items: center; }
+  .Bar__group--start { margin-bottom: 0; width: 25%; }
+  .Bar__group--mid { width: 250px; white-space: nowrap; text-overflow: ellipsis; display: block; border: 0; }
+  .Bar__group--end { border: 0; }
+  .Bar__group--end { padding: 1.5rem; margin-left: auto; } }
+
+.Bar__drawer, .Bar__delete, .Bar__edit { display: none; }
+
+.Bar.is-open { box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.08); }
+
+.Bar.is-open .Bar__drawer { display: block; }
+
+.Bar__drawer { background: #F4F6F9; border-radius: 0 0 10px 10px; }
+
+.Bar.is-open .chevron-down, .chevron-up { -ms-transform: rotate(180deg); transform: rotate(180deg); }
+
+.Bar.delete-mode .Bar__delete { display: -ms-flexbox; display: flex; }
+
 /*
 
 Buttons
