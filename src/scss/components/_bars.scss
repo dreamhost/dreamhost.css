@@ -68,7 +68,7 @@
 	}
 }
 
-.Bar__drawer, .Bar__delete, .Bar__edit {
+.Bar__drawer, .Bar__delete, .Bar__edit, .Bar__alert {
 	display: none;
 }
 
@@ -93,18 +93,26 @@
 	display: flex;
 }
 
-// .Bar.edit-mode .Bar__edit {
-// 	display: block;
-// }
+.Bar.edit-mode .Bar__edit {
+	display: block;
+}
 
-// .Bar__editable-icon {
-// 	display: none;
-// }
+.Bar__editable {
+	cursor: pointer;
+}
 
-// .Bar__editable:hover .Bar__editable-text {
-// 	border-bottom: 1px solid #434F58;
-// }
+.Bar__editable-icon {
+	display: none;
+}
 
-// .Bar__editable:hover .Bar__editable-icon {
-// 	display: inline-block;
-// }
+.Bar__editable:hover .Bar__editable-text {
+	border-bottom: 1px solid #434F58;
+}
+
+.Bar__editable:hover .Bar__editable-icon {
+	display: inline-block;
+}
+
+.Bar.has-alert .Bar__alert {
+	display: block;
+}
