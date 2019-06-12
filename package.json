@@ -10,7 +10,6 @@
     "version": "gulp dist && git add -A"
   },
   "devDependencies": {
-    "bootstrap": "^4.3.1",
     "browser-sync": "2.18.1",
     "gulp": "3.9",
     "gulp-autoprefixer": "^3.1.1",
@@ -21,5 +20,8 @@
     "gulp-stylelint": "^3.7.0",
     "gulp-uglify": "^2.0.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
 }
