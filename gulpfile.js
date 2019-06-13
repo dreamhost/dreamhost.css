@@ -2,13 +2,10 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var cleanCSS    = require('gulp-clean-css');
 var sass        = require('gulp-sass');
-var stylelint   = require('gulp-stylelint');
 var prefix      = require('gulp-autoprefixer');
 var rename      = require('gulp-rename');
 var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
-var lintconfig  = require('./stylelint.config.js');
-var package     = require('./package.json');
 
 var dist = {
 	fileName: 'dreamhost',
@@ -36,32 +33,13 @@ gulp.task('serve', ['styles', 'js'], function() {
 });
 
 /*
-	## gulp style linting
-	1. Lint sass and log any errors to the console.
-	2. Ignore defaults.scss and reset.scss
-*/
-
-gulp.task('lint', function() {
-	return gulp.src([
-		'./src/scss/*.scss',
-		'!./src/scss/_defaults.scss',
-		'!./src/scss/_reset.scss',
-		'!./src/scss/_variables.scss'
-	])
-	.pipe(stylelint({
-		failAfterError: false,
-		reporters: [{formatter: 'string', console: true}]
-	}));
-});
-
-/*
 	## gulp styles
 	1. Compile sass
 	2. Add minified, versioned(TODO) file to /dist folder
 	3. Inject into browser with BrowserSync
 */
 
-gulp.task('styles', ['lint'], function () {
+gulp.task('styles', function () {
 	return gulp.src('./src/scss/*.scss')
 		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
 		.pipe(gulp.dest('./src/css/'))
