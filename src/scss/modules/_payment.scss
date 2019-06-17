@@ -35,7 +35,7 @@ Payment Module
 .Payment-container {
 
 	.ChoiceBox__label {
-		padding: convertScaleToRem(3);
+		padding: 1.5rem;
 	}
 
 	.Payment--autopay .ChoiceBox__title:after {
@@ -50,13 +50,13 @@ Payment Module
 	.ChoiceBox__title,
 	.ChoiceBox__content {
 		text-align: left;
-		padding-right: convertScaleToRem(20);
+		padding-right: 10rem;
 	}
 
 	.Payment__actions--primary,
 	.Payment__actions--secondary,
 	.Payment__actions--danger {
-		margin-bottom: convertScaleToRem(1);
+		margin-bottom: 0.5rem;
 		font-size: $t-1;
 		line-height: $t-h-2;
 		color: $c-g300;
@@ -83,7 +83,7 @@ Payment Module
 
 .Payment__actions {
 	position: absolute;
-	top: convertScaleToRem(3);
-	right: convertScaleToRem(3);
+	top: 1.5rem;
+	right: 1.5rem;
 	text-align: right;
 }

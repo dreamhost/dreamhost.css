@@ -9,7 +9,6 @@ Thanks for contributing to DreamHost.css. Please start by [reading the documenta
 * No numbers or colours  outside of _variables.scss
 * No margin-top [(read more)](http://csswizardry.com/2012/06/single-direction-margin-declarations/)
 * The framework is for repeatable elements and sass functionality, not one-off styles
-* Components should be truly repeatable and built exclusively using @extends
 * Mobile first: (min-width), not (max-width)
 
 Certain exceptions may apply to all rules of course but please check with the entire team before adding any and document heavily.

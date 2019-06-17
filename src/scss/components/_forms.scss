@@ -1,27 +1,8 @@
 /*
 
-Form Component
+Form Components
 
 */
-
-%form-border { border: 1px solid $c-g300; }
-%form-description {
-	color: $c-g500;
-	@include fontsize($t-1);
-}
-%form-no-outline { outline: none; }
-
-%form-input-appearance-none{
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-}
-
-%form-text-style {
-	color: $c-g500;
-	@include fontsize($t-1);
-	font-family: $body;
-}
 
 .Form {}
 
@@ -52,7 +33,7 @@ appearance: none;
 }
 
 .Form__group--actions {
-	margin-top: convertScaleToRem(6);
+	margin-top: 3rem;
 }
 
 .Form__group--stacked {
@@ -64,17 +45,13 @@ appearance: none;
 .Form__group--select {
 	position: relative;
 
-	&, > * {
-		cursor: pointer;
-	}
-
 	&:after {
 		content: '';
 		position: absolute;
 		pointer-events: none;
-		bottom: convertScaleToRem(2);
-		height: convertScaleToRem(1);
-		right: convertScaleToRem(2);
+		bottom: 1rem;
+		height: 0.5rem;
+		right: 1rem;
 		border-color: $c-g300 transparent;
 		border-style: solid;
 		border-width: .35rem .35rem 0 .35rem;
@@ -91,13 +68,12 @@ appearance: none;
 	display: block;
 	@include fontsize($t-1);
 	font-weight: $t-bold;
-	cursor: pointer;
 	max-width: 35rem;
 }
 
 .Form__description {
-	@extend %form-description;
-
+	color: $c-g500;
+	@include fontsize($t-1);
 	font-weight: $t-regular;
 	margin-bottom: 0;
 }
@@ -105,17 +81,20 @@ appearance: none;
 
 // Inputs
 .Input {
-	@extend %form-border;
-	@extend %form-no-outline;
-	@extend %form-text-style;
+	border: 1px solid $c-g300;
+
+	outline: none;
+	color: $c-g500;
+	@include fontsize($t-1);
+	font-family: $body;
 
 	display: block;
 	margin: 0;
-	margin-top: convertScaleToRem(1);
+	margin-top: 0.5rem;
 	width: 100%;
 	transition: all .2s ease-in-out;
 	border-radius: $border-radius;
-	padding: 0.4375rem convertScaleToRem(1); /* to ensure align with baseline grid. */
+	padding: 0.4375rem 0.5rem; /* to ensure align with baseline grid. */
 
 	&:active,
 	&:focus {
@@ -155,22 +134,22 @@ textarea.Input {
 
 
 // Selects
-// Maybe we should create a custom style for these?
-// This looks kinda crazy in Safari. Looks decent elsewhere though.
-// This is the only way to get a native select box to stay at a height though.
 .Select {
-	@extend %form-border;
-	@extend %form-no-outline;
-	@extend %form-text-style;
-	margin-top: convertScaleToRem(1);
+	border: 1px solid $c-g300;
+
+	outline: none;
+	color: $c-g500;
+	@include fontsize($t-1);
+	font-family: $body;
+
+	margin-top: 0.5rem;
 	border-radius: $border-radius;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	padding: 0.4375rem convertScaleToRem(1);
+	padding: 0.4375rem 0.5rem;
 	background: $white;
 	display: block;
 	width: 100%;
-	cursor: pointer;
 	transition: all .2s ease-in-out;
 
 	&:hover,
@@ -188,21 +167,24 @@ textarea.Input {
 
 // Choice: styles both radios and checkboxes
 .Choice {
-	@extend %form-text-style;
-	cursor: pointer;
+	color: $c-g500;
+	@include fontsize($t-1);
+	font-family: $body;
 	display: block;
 	padding-left: 1.4rem;
 	position: relative;
-	margin-bottom: convertScaleToRem(1);
+	margin-bottom: 0.5rem;
 
 	&:hover input{
 		border-color: $c-b300;
 	}
 
 	input {
-		@extend %form-no-outline;
-		@extend %form-input-appearance-none;
-		@include transition (all $tr-3 ease-in-out);
+		outline: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		transition: all 0.1s ease-in-out;
 		position: absolute;
 		left: 0;
 		top: 3px;
@@ -210,10 +192,6 @@ textarea.Input {
 		background: $c-w100;
 		padding: 7px;
 		margin: 0;
-
-		&:hover{
-			cursor: pointer;
-		}
 
 		&:checked{
 			border-color: $c-b300;
@@ -232,9 +210,9 @@ textarea.Input {
 
 		&:checked:before{
 			opacity: 1;
-			@extend .zoom-in;
-			@extend .a-easing-cb-scale-up;
-			@extend .a-duration-1;
+			animation: zoomIn 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1);
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		}
 
 	}
@@ -244,7 +222,7 @@ textarea.Input {
 
 		&:before{
 			animation: none;
-			@include transition (all $tr-5 ease-in-out);
+			transition: all 0.3s ease-in-out;
 			background: $c-b300;
 			position: absolute;
 			top: 3px;
@@ -277,9 +255,10 @@ textarea.Input {
 }
 
 .Choice__description {
-	@extend %form-description;
+	color: $c-g500;
+	@include fontsize($t-1);
 	display: block;
-	margin-bottom: convertScaleToRem(2);
+	margin-bottom: 1rem;
 }
 
 .Choice--error > .Choice__label {

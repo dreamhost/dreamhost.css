@@ -39,22 +39,22 @@ Cards
 }
 
 .Card {
-	padding: convertScaleToRem(5);
+	padding: 2.5rem;
 	position: relative;
-	margin-bottom: convertScaleToRem(4);
+	margin-bottom: 2rem;
 
 	hr {
 		border-bottom-color: $c-b100;
-		margin: convertScaleToRem(2) convertScaleToRem(0);
+		margin: 1rem 0;
 	}
 
 	.Card__heading {
 		color: $c-b700;
-		margin-bottom: convertScaleToRem(1);
+		margin-bottom: 0.5rem;
 	}
 
 	.Card__content {
-		margin-bottom: convertScaleToRem(3);
+		margin-bottom: 1.5rem;
 		color: $c-g400;
 		@include fontsize($t-1, $t-h-2);
 
@@ -63,7 +63,7 @@ Cards
 	.Card__icon,
 	.Card__large-icon {
 		display: inline-block;
-		margin-right: convertScaleToRem(1);
+		margin-right: 0.5rem;
 		margin-bottom: 0;
 	}
 
@@ -72,7 +72,7 @@ Cards
 		color: $c-b700;
 
 		.Card__heading {
-			margin-bottom: convertScaleToRem(0);
+			margin-bottom: 0;
 		}
 
 		.Card__content {
@@ -83,12 +83,12 @@ Cards
 
 	&.Card__featured {
 		border:solid 1px $c-b300;
-		@extend .u-border-radius;
+		border-radius: $border-radius;
 
 		.Card__heading {
 			color: $c-b700;
 			@include fontsize($t-2);
-			margin-bottom: convertScaleToRem(2);
+			margin-bottom: 1rem;
 		}
 
 		.Card__content {
@@ -99,12 +99,12 @@ Cards
 	&.Card__plan {
 		text-align: center;
 		border:solid 1px $c-g200;
-		@extend .u-border-radius;
+		border-radius: $border-radius;
 
 		.Card__heading {
 			color: $c-b700;
 			@include fontsize($t-3);
-			margin-bottom: convertScaleToRem(2);
+			margin-bottom: 1rem;
 		}
 
 		.Card__subheading {
@@ -114,14 +114,34 @@ Cards
 		}
 
 		.Card__number {
-			margin: convertScaleToRem(2) convertScaleToRem(0);
+			margin: 1rem 0;
 			@include fontsize($t-5);
 			color: $c-b700;
 		}
 	}
 
 	&.Card__plan--highlighted {
-		@extend .Card__plan;
+		text-align: center;
+		border:solid 1px $c-g200;
+		border-radius: $border-radius;
+
+		.Card__heading {
+			color: $c-b700;
+			@include fontsize($t-3);
+			margin-bottom: 1rem;
+		}
+
+		.Card__subheading {
+			@include fontsize($t-0);
+			color: $c-b300;
+			text-transform: uppercase;
+		}
+
+		.Card__number {
+			margin: 1rem 0;
+			@include fontsize($t-5);
+			color: $c-b700;
+		}
 		border:solid 1px $c-o300;
 
 		.Tag{
@@ -132,7 +152,27 @@ Cards
 	}
 
 	&.Card__plan--extended {
-		@extend .Card__plan;
+		text-align: center;
+		border:solid 1px $c-g200;
+		border-radius: $border-radius;
+
+		.Card__heading {
+			color: $c-b700;
+			@include fontsize($t-3);
+			margin-bottom: 1rem;
+		}
+
+		.Card__subheading {
+			@include fontsize($t-0);
+			color: $c-b300;
+			text-transform: uppercase;
+		}
+
+		.Card__number {
+			margin: 1rem 0;
+			@include fontsize($t-5);
+			color: $c-b700;
+		}
 
 		.Card__heading {
 			color: $c-b300;
@@ -145,27 +185,27 @@ Cards
 		.Card__subheading {
 			text-transform: none;
 			color: $c-g500;
-			margin-bottom: convertScaleToRem(0);
+			margin-bottom: 0;
 		}
 		.Card__number {
 			color: $c-b300;
 		}
 
 		.List{
-			margin: convertScaleToRem(4) convertScaleToRem(0);
+			margin: 2rem 0;
 		}
 	}
 }
 
 .Card__icon {
 	position: absolute;
-	margin: convertScaleToRem(0);
+	margin: 0;
 	color: $c-b300;
 
 	& + .Card__heading,
 	& ~ .Card__content,
 	& ~ .Button {
-		margin-left: convertScaleToRem(5);
+		margin-left: 2.5rem;
 	}
 }
 
@@ -176,15 +216,15 @@ Cards
 
 	& ~ .Card__super {
 		position: absolute;
-		top: convertScaleToRem(5);
-		left: convertScaleToRem(12.5);
+		top: 2.5rem;
+		left: 6.25rem;
 	}
 
 	& ~ .Card__heading {
 		position: relative;
 		display: inline-block;
-		margin-bottom: convertScaleToRem(2);
-		top: convertScaleToRem(-1);
+		margin-bottom: 1rem;
+		top: -0.5rem;
 	}
 }
 

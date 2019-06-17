@@ -10,8 +10,6 @@ Buttons
 	.Button--primary        - Primary
 	.Button--danger         - Danger!
 	.Button--disabled       - Disabled
-	.Button__tag            - Positive Tag Button
-	.Button__tag--negative  - Negative Tag Button
 
 	Colors
 	.Button--dark           - Dark color
@@ -50,7 +48,7 @@ Buttons
 	vertical-align: baseline;
 	outline: none;
 
-	@include transition (all $tr-4 ease-in-out);
+	transition: all 0.2s ease-in-out;
 
 	// Allow buttons to work on elements that aren't <a>
 	cursor: pointer;
@@ -114,47 +112,6 @@ Buttons
 	}
 }
 
-// Tags
-.Button__tag {
-	position: relative;
-	padding-left: 3rem;
-	margin-left: 3em;
-	border-color: $c-b700;
-	color: $c-b700;
-
-	&:hover {
-		 border-color: $c-b300;
-		 color: $c-b300;
-	}
-
-	&:before {
-		content: attr(data-label);
-		position: absolute;
-		text-transform: uppercase;
-		@include fontsize($t-0);
-		@extend .Tag--blue;
-		right: calc(100% - 2rem);
-		top: 7px;
-		padding: 0.25rem 0.75rem;
-		border-radius: 50px;
-	}
-
-	&.Button__tag--negative {
-		&:hover, &.is-open { border-color: $c-r300; color: $c-r500;}
-		&:before { @extend .Tag--red; }
-	}
-
-	&.Button--compact {
-		padding-left: 2.75em;
-
-		&:before {
-			top: 0.1875rem;
-		}
-	}
-
-	&.Button--block { margin-left:0; }
-}
-
 // Danger!
 .Button--danger {
 	background: transparent;
@@ -193,7 +150,7 @@ Buttons
 	&:hover, &:active, &.is-open {
 		background: $c-g200;
 		color: $c-g400;
-		transform: scale($s-3);
+		transform: scale(1);
 		box-shadow: none;
 		border-color: $c-g200;
 	}
@@ -217,7 +174,7 @@ Buttons
 		background: transparent;
 		box-shadow: none;
 		color: darken($c-b300, 10%);
-		transform: scale($s-3);
+		transform: scale(1);
 	}
 
 	&:active { color:rgba($c-b700, 0.6); }
@@ -233,7 +190,7 @@ Buttons
 	background: currentColor;
 	height: 1px;
 
-	@include transition (right $tr-4 ease-out);
+	transition: right 0.2s ease-out;
 }
 
 .Button--text:hover:before {
@@ -250,8 +207,5 @@ Buttons
 // Spacing
 .Button + .Button {
 	margin-left: 1em;
-
-	&.Button__tag{ margin-left: 3.25em; }
-	&.Button__tag.Button--compact{ margin-left: 2.75em; }
-	&.Button--block, &.Button__tag.Button--block{ margin-left: 0; }
+	&.Button--block {margin-left: 0;}
 }

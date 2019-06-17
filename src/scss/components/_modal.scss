@@ -2,18 +2,18 @@
 // https://github.com/vodkabears/Remodal
 
 .Modal {
-	padding: convertScaleToRem(3);
-	@extend .u-border-radius-l;
+	padding: 1.5rem;
+	border-radius: $border-radius;
 	@extend .remodal;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
 
 .Modal__button-group {
-	@extend .m-top-4;
+	margin-top: 2rem;
 }
 
 @media screen and (min-width: $medium-breakpoint) {
-	.Modal { padding: convertScaleToRem(9) }
+	.Modal { padding: 4.5rem }
 	.Modal__heading {
 		@include fontsize($t-5);
 	}

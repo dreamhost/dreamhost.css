@@ -14,13 +14,13 @@
 */
 
 // default
-.border {@extend .border-1; @extend .border-solid;}
+.border {border-width: $border-size-1; border-style: solid;}
 
 // directions
-.border-top {@extend .border-top-1; @extend .border-top-solid;}
-.border-bottom {@extend .border-bottom-1; @extend .border-bottom-solid;}
-.border-left {@extend .border-left-1; @extend .border-left-solid;}
-.border-right {@extend .border-right-1; @extend .border-right-solid;}
+.border-top {border-top-width: $border-size-1; border-top-style: solid;}
+.border-bottom {border-bottom-width: $border-size-1; border-bottom-style: solid;}
+.border-left {border-left-width: $border-size-1; border-left-style: solid;}
+.border-right {border-right-width: $border-size-1; border-right-style: solid;}
 
 // styles
 .border-solid {border-style: solid}
@@ -62,23 +62,14 @@
 .border-left-2 {border-left-width: $border-size-2}
 .border-right-2 {border-right-width: $border-size-2}
 
-// colors
-.border-black {border-color: $black}
-.border-white {border-color: $white}
-
-.border-blue {border-color: $blue}
-.border-light-blue {border-color: $light-blue}
-.border-dark-blue {border-color: $dark-blue}
-
-.border-red {border-color: $red}
-.border-light-red {border-color: $light-red}
-.border-dark-red {border-color:$dark-red}
-
-.border-lighter-grey {border-color: $lighter-grey}
-.border-light-grey {border-color: $light-grey}
-.border-grey {border-color: $grey}
-.border-dark-grey {border-color: $dark-grey}
-.border-darker-grey {border-color: $darker-grey}
+// Legacy Border colors
+// TODO: DEPRECATE THESE, NEPHEW
+.border-lighter-grey {border-color: $c-g100}
+.border-light-grey {border-color: $c-g200}
+.border-grey {border-color: $c-g300}
+.border-blue {border-color: $c-b300}
+.border-light-blue {border-color: $c-b100}
+.border-white {border-color: $c-w100}
 
 // updated palette
 .border-c-b300 {border-color: $c-b300}

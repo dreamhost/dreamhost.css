@@ -3,28 +3,28 @@
 	overflow: hidden;
 	@include fontsize($t-1);
 	text-align: center;
-	padding: convertScaleToRem(2);
+	padding: 1rem;
 
 		.Carousel__item-content {
 			width: 95%;
 			height: 100%;
 			margin: 0 auto;
-			@extend .u-border-radius;
+			border-radius: $border-radius;
 			border: solid 1px $c-g200;
-			padding: convertScaleToRem(6) convertScaleToRem(8);
+			padding: 3rem 4rem;
 			color: $c-b700;
 		}
 
 
 	.Carousel__author {
-		margin-top: convertScaleToRem(4);
+		margin-top: 2rem;
 
 		span {
 			text-align: center;
 			display: block;
 			vertical-align: middle;
-			margin: 0 auto convertScaleToRem(1) auto;
-			@extend .u-border-radius;
+			margin: 0 auto 0.5rem auto;
+			border-radius: $border-radius;
 			height: 40px;
 			width: 40px;
 			position: relative;
@@ -52,7 +52,7 @@
 		position: absolute;
 		top: 50%;
 		transform: translate(0, -50%);
-		@include transition (all $tr-3 ease-in-out);
+		transition: all 0.1s ease-in-out;
 		display: inline-block;
 		height: 16px;
 		width: 16px;
@@ -76,7 +76,7 @@
 
 	// Dot Navigation
 	.slick-dots {
-		margin-top: convertScaleToRem(1);
+		margin-top: 0.5rem;
 		position: absolute;
 		left: 50%;
 		transform: translate(-50%, 0);
@@ -219,18 +219,18 @@
 
 	.Carousel {
 		@include fontsize($t-2);
-		padding: convertScaleToRem(6);
+		padding: 3rem;
 
 		.Carousel__author{
 			span {
 				display: inline-block;
-				margin-right: convertScaleToRem(2);
+				margin-right: 1rem;
 			}
 
 			strong {
 				border-right: solid 1px $c-b700;
-				padding-right: convertScaleToRem(2);
-				margin-right: convertScaleToRem(1);
+				padding-right: 1rem;
+				margin-right: 0.5rem;
 			}
 		}
 	}

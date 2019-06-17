@@ -1,5 +1,5 @@
 .Tabs {
-	margin-bottom: convertScaleToRem(5);
+	margin-bottom: 2.5rem;
 }
 
 
@@ -11,8 +11,7 @@
 }
 
 .Tabs__nav-item {
-	@include link(dark);
-	margin: 0 convertScaleToRem(2);
+	margin: 0 1rem;
 	padding: 0 0 1rem 0;
 	@include fontsize($t-1);
 	font-weight: $t-bold;
@@ -31,7 +30,7 @@
 		}
 	}
 
-	@include transition (right $tr-4 ease-out);
+	transition: right 0.2s ease-out;
 
 	&:after {
 		content: "";
@@ -41,7 +40,7 @@
 		bottom: 0;
 		background: $c-b300;
 		height: 2px;
-		@include transition (right $tr-4 ease-out);
+		transition: right 0.2s ease-out;
 	}
 
 	&:hover, &:active, &.is-active a {
@@ -55,11 +54,13 @@
 
 	// States
 	&.is-active {
-		@include unlink;
 		font-weight: $t-bold;
 		color: $c-b700;
+		&:hover {
+			cursor: default;
+		}
 		&:after {
-			right:0%;
+			right: 0%;
 		}
 	}
 }
@@ -96,7 +97,7 @@
 		border: solid 1px $c-g200;
 		border-bottom: none;
 		margin: 0;
-		padding: convertScaleToRem(1.5) convertScaleToRem(2);
+		padding: 0.75rem 1rem;
 
 		&:after {
 			height: 0px;
@@ -147,7 +148,15 @@
 }
 
 .Tab {
-	@include box;
+	padding: 2rem;
+	background: $c-w100;
+	> *:last-child {
+		&:not(input) {
+			&:not(textarea) {
+				margin-bottom: 0;
+			}
+		}
+	}
 	display: none;
 	&.is-active {
 		display: block;

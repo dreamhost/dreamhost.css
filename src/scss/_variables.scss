@@ -40,66 +40,17 @@ $c-r500: #4F0703; //rust
 $c-r300: #FF4A48; //coral
 $c-r100: #FFCCCE; //rose
 
-// Brand Colors
-
-// Blues
-$lightest-blue: #EEFAFF;
-$lighter-blue: #CCEFFF;
-$light-blue: #80CDF0;
+// Legacy Colors
+// TODO: DEPRECATE THESE, NEPHEW
 $blue: #2BADE9;
 $dark-blue: #1176A5;
-$darker-blue: #073F59;
-$darkest-blue: #061C26;
-
-// Teal
-$lighter-teal: #E5FEFF;
-$light-teal: #5CB4B9;
-$teal: #109CA3;
-$dark-teal: #0D8288;
-$darker-teal: #064145;
-
-// Green
-$lighter-green: #EEFDF1;
-$light-green: #B0DBB9;
 $green: #027F1B;
-$dark-green: #074C15;
-$darker-green: #072C0E;
-
-// Yellow
-$lighter-yellow: #FFF9CC;
-$light-yellow: #F4E171;
-$yellow: #FFDA00;
-$dark-yellow: #C7A900;
-$darker-yellow: #837000;
-
-// Orange
-$lighter-orange: #FFEECC;
-$light-orange: #FFCA63;
 $orange: #FFA700;
-$dark-orange: #D78B00;
-$darker-orange: #8A5900;
-
-// Red
-$lighter-red: #FFD6D4;
-$light-red: #D45F59;
 $red: #B80C03;
-$dark-red: #8C0700;
-$darker-red: #590400;
-
-// Salmon
-$lighter-salmon: #FFCCCE;
-$light-salmon: #FC9A95;
-$salmon: #F36058;
-$dark-salmon: #C04740;
-$darker-salmon: #853834;
-
-// Greys
 $white: #fff;
 $lighter-grey: #F4F6F9;
 $light-grey: #E0E4E8;
-$grey: #AFBFCA;
 $dark-grey: #5E6D78;
-$darker-grey: #434F58;
 $black: #000000;
 
 // Sizing Scale
@@ -149,27 +100,6 @@ $border-radius: 3px;
 // Border size
 $border-size-1: 1px;
 $border-size-2: 2px;
-
-// Animation Duration
-$a-5: 2s;
-$a-4: 1.5s;
-$a-3: 1s;
-$a-2: .5s;
-$a-1: .3s;
-
-// Transition Duration
-$tr-5: .3s;
-$tr-4: .2s;
-$tr-3: .1s;
-$tr-2: .07s;
-$tr-1: .05s;
-
-// Transform Scale
-$s-5: 1.02; //magnify
-$s-4: 1.01; //magnify less
-$s-3: 1; //initial
-$s-2: .99; //shrink less
-$s-1: .98; //shrink
 
 // Z-indexes
 $z-0: -1;
