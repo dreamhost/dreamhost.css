@@ -27,8 +27,8 @@ gulp.task('serve', ['styles', 'js'], function() {
 				open: false
 		});
 
-		gulp.watch("./src/js/*.js", ['js']);
-		gulp.watch("./src/scss/**/*.scss", ['styles']);
+		gulp.watch("./src/js/*.js", ['js']).on('change', browserSync.reload);
+		gulp.watch("./src/scss/**/*.scss", ['styles']).on('change', browserSync.reload);
 		gulp.watch("./**/*.html").on('change', browserSync.reload);
 });
 
