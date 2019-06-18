@@ -19,18 +19,19 @@ var dist = {
 	3. Live-reload .html
 */
 
-gulp.task('serve', ['styles', 'js'], function() {
+function serve() {
+	browserSync.init({
+		server: "./",
+		port: 9999,
+		open: false
+	});
 
-		browserSync.init({
-				server: "./",
-				port: 9999,
-				open: false
-		});
+	gulp.watch("./src/js/*.js", gulp.series('js', js)).on('change', browserSync.reload);
+	gulp.watch("./src/scss/**/*.scss", gulp.series('styles', styles)).on('change', browserSync.reload);
+	gulp.watch("./**/*.html").on('change', browserSync.reload);
+}
 
-		gulp.watch("./src/js/*.js", ['js']).on('change', browserSync.reload);
-		gulp.watch("./src/scss/**/*.scss", ['styles']).on('change', browserSync.reload);
-		gulp.watch("./**/*.html").on('change', browserSync.reload);
-});
+gulp.task('serve', serve);
 
 /*
 	## gulp styles
@@ -39,12 +40,14 @@ gulp.task('serve', ['styles', 'js'], function() {
 	3. Inject into browser with BrowserSync
 */
 
-gulp.task('styles', function () {
+function styles() {
 	return gulp.src('./src/scss/*.scss')
-		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
-		.pipe(gulp.dest('./src/css/'))
-		.pipe(browserSync.stream());
-});
+	.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
+	.pipe(gulp.dest('./src/css/'))
+	.pipe(browserSync.stream());
+}
+
+gulp.task('styles', styles);
 
 /*
 	## gulp js
@@ -53,21 +56,25 @@ gulp.task('styles', function () {
 	1. main.js
 */
 
-gulp.task('js', function() {
+function js() {
 	return gulp.src('./src/js/*.js')
-		.pipe(browserSync.reload({stream: true}))
-});
+	.pipe(browserSync.reload({stream: true}))
+}
 
-gulp.task('js-dist', function() {
+gulp.task('js', js);
+
+function jsDist() {
 	return gulp.src('./src/js/*.js')
 		.pipe(concat(dist.fileName + '.js'))
 		.pipe(gulp.dest(dist.path + 'js'))
 		.pipe(uglify())
 		.pipe(rename(dist.fileName + '.min.js'))
 		.pipe(gulp.dest(dist.path + 'js'))
-});
+}
 
-gulp.task('css-dist', function() {
+gulp.task('jsDist', jsDist);
+
+function cssDist() {
 	return gulp.src('./src/scss/*.scss')
 		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
 		.pipe(prefix({browsers: ['last 4 versions']}))
@@ -76,7 +83,9 @@ gulp.task('css-dist', function() {
 		.pipe(cleanCSS())
 		.pipe(rename(dist.fileName + '.min.css'))
 		.pipe(gulp.dest(dist.path + 'css'))
-});
+}
+
+gulp.task('cssDist', cssDist);
 
 /*
 	## gulp dist
@@ -86,9 +95,11 @@ gulp.task('css-dist', function() {
 	2. dreamhost.[version].min.css
 */
 
-gulp.task('dist', ['css-dist', 'js-dist'], function() {
-	return; // This just runs css-dist and js-dist
-})
+gulp.task('dist', gulp.series(jsDist, cssDist));
+
+// gulp.task('dist', ['css-dist', 'js-dist'], function() {
+// 	return; // This just runs css-dist and js-dist
+// })
 
 /*
 	## gulp
@@ -96,4 +107,6 @@ gulp.task('dist', ['css-dist', 'js-dist'], function() {
 	compiles and updates HTML and SCSS.
 */
 
-gulp.task('default', ['serve']);
+gulp.task('default', gulp.parallel('serve', serve));
+
+exports.default = serve;
