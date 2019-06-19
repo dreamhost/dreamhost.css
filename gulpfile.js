@@ -26,12 +26,12 @@ function serve() {
 		open: false
 	});
 
-	gulp.watch("./src/js/*.js", js);
-	gulp.watch("./src/scss/**/*.scss", styles);
+	gulp.watch("./src/js/*.js", gulp.series('js', js)).on('change', browserSync.reload);
+	gulp.watch("./src/scss/**/*.scss", gulp.series('styles', styles)).on('change', browserSync.reload);
 	gulp.watch("./**/*.html").on('change', browserSync.reload);
 }
 
-exports.serve = serve;
+gulp.task('serve', serve);
 
 /*
 	## gulp styles
@@ -47,7 +47,7 @@ function styles() {
 	.pipe(browserSync.stream());
 }
 
-exports.styles = styles;
+gulp.task('styles', styles);
 
 /*
 	## gulp js
@@ -61,7 +61,7 @@ function js() {
 	.pipe(browserSync.reload({stream: true}))
 }
 
-exports.js = js;
+gulp.task('js', js);
 
 function jsDist() {
 	return gulp.src('./src/js/*.js')
@@ -72,7 +72,7 @@ function jsDist() {
 		.pipe(gulp.dest(dist.path + 'js'))
 }
 
-exports.jsDist = jsDist;
+gulp.task('jsDist', jsDist);
 
 function cssDist() {
 	return gulp.src('./src/scss/*.scss')
@@ -85,7 +85,7 @@ function cssDist() {
 		.pipe(gulp.dest(dist.path + 'css'))
 }
 
-exports.cssDist = cssDist;
+gulp.task('cssDist', cssDist);
 
 /*
 	## gulp dist
@@ -106,5 +106,7 @@ gulp.task('dist', gulp.series(jsDist, cssDist));
 	The default gulp task will run the server which watches,
 	compiles and updates HTML and SCSS.
 */
-var build = gulp.parallel(styles, js, serve);
-gulp.task('default', build);
+
+gulp.task('default', gulp.parallel('serve', serve));
+
+exports.default = serve;
