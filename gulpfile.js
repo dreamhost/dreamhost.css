@@ -1,4 +1,5 @@
 var gulp        = require('gulp');
+var babel       = require('gulp-babel');
 var browserSync = require('browser-sync').create();
 var cleanCSS    = require('gulp-clean-css');
 var sass        = require('gulp-sass');
@@ -58,6 +59,7 @@ exports.styles = styles;
 
 function js() {
 	return gulp.src('./src/js/*.js')
+	.pipe(babel({presets: ['@babel/env']}))
 	.pipe(browserSync.reload({stream: true}))
 }
 
@@ -65,6 +67,7 @@ exports.js = js;
 
 function jsDist() {
 	return gulp.src('./src/js/*.js')
+		.pipe(babel({presets: ['@babel/env']}))
 		.pipe(concat(dist.fileName + '.js'))
 		.pipe(gulp.dest(dist.path + 'js'))
 		.pipe(uglify())
