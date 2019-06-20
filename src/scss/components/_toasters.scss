@@ -16,7 +16,7 @@
 	color: $c-g500;
 	border: $border-size-1 $c-g200 solid;
 	border-radius: $border-radius;
-	margin: 0 0 .5em 0;
+	margin: 0 0 1rem 0;
 	animation: Toaster 5s ease-in-out both;
 	transition: transform 0.1s ease-in-out;
     display: flex;
@@ -43,7 +43,7 @@
 		background: $c-y300;
 		border-color: $c-y300;
 		border-radius: $border-radius 0 0 $border-radius !important;
-		width: 5rem;
+		width: 7rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -93,6 +93,15 @@
 	}
 
 }
+
+
+.Toaster__more{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
 @for $i from 1 to 10 {
 	.Toaster-container .Toaster:nth-child(#{$i}) { animation-delay: $i * 0.3s; }
 }
