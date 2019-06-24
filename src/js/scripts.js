@@ -214,7 +214,6 @@ var Toaster = {
 		var toasterStyle = !!style ? 'Toaster--' + style : '';
 		var toasterIcon = !!style ? icons[style] : icons.default;
 
-
         var toaster = '<div class="Toaster ' + toasterStyle + ' ' + isPersistent + '">';
         toaster += '<div class="Toaster__type">';
         toaster += '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">';
@@ -224,17 +223,11 @@ var Toaster = {
 		toaster += '<div class="Toaster__close">&times;</div>'
 		toaster += '</div>';
 		
-		// this removes the animation-delay created by the nth-child loop in _toasterss.scss
 		toaster = $(toaster).css("animation-delay","0s");
 		
-		// grab time if its passed and create an animation delay
-		if (!!time){
-			toaster = $(toaster).css("animation-delay", time + "s");
-		}
+		if (!!time){toaster = $(toaster).css("animation-delay", time + "s");}
 	
-		if (!$('body').has('.Toaster-container')){
-			$('body').prepend('.Toaster-container');
-		}
+		if (!$('body').has('.Toaster-container')){$('body').prepend('.Toaster-container');}
 		
 		$('.Toaster-container').append(toaster);
 
