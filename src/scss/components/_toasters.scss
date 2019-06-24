@@ -12,9 +12,9 @@
 .Toaster {
 	position: relative;
 	word-wrap: break-word;
-	background: $c-g100;
+	background: $c-g200;
 	color: $c-g500;
-	border: $border-size-1 $c-g200 solid;
+	// border: $border-size-1 $c-g200 solid;
 	border-radius: $border-radius;
 	margin: 0 0 1rem 0;
 	animation: Toaster 5s ease-in-out both;
@@ -33,15 +33,15 @@
 
 	&:hover, &:active {
 		transform: scale(1.02);
-		box-shadow:0 0 10px 0 rgba($c-g500,0.2);
+		box-shadow:0 0 10px rgba($c-g500,0.3);
 		cursor: pointer;
 	}
 
 	p {margin:0;}
 
 	.Toaster__type {
-		background: $c-y300;
-		border-color: $c-y300;
+		background: $c-b300;
+		border-color: $c-b300;
 		border-radius: $border-radius 0 0 $border-radius !important;
 		width: 7rem;
 		display: flex;
@@ -51,7 +51,7 @@
 		svg {
 			width:1.5rem;
 			height:1.5rem;
-			fill: $c-y500;
+			fill: $c-w100;
 		}
 	}
 }
@@ -76,12 +76,21 @@
 	}
 }
 
+.Toaster--warning{
+	.Toaster__type{
+		background-color: $c-y300;
+		border-color: $c-y300;
+		svg * { fill: $c-w100; }
+	}
+}
+
 .Toaster__heading {
-	padding: 1.5rem;
+	padding: 2rem;
 	flex: 1 1 auto;
 	text-transform: uppercase;
 	font: $body;
 	@include fontsize($t-1);
+	line-height: 1;
 	font-weight: $t-bold;
 
 	span {
@@ -89,16 +98,25 @@
 		text-transform: initial;
 		@include fontsize($t-1);
 		font-weight: $t-regular;
-		margin-top:0.5em;
+		margin-top: 1rem;
+		line-height: 1;
 	}
 
 }
 
 
-.Toaster__more{
+.Toaster__close{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 1rem 2rem 1rem 1rem;
+	color: $c-g400;
+	background-color: transparent;
+	font-size: 2rem;
+	&:hover{
+		text-decoration: none;
+	}
+
 }
 
 
