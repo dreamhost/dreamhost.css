@@ -189,13 +189,13 @@ $(document).on('click', '.js-menu-toggle', function(e) {
 // - Remove the entire dom node.
 // (But since our platform is generally delivered server-side this probably won't matter much, but it'd be nice to keep things clean)
 $(document).on('click', '.Toaster', function () {
-	var that = this;
-	$(this).addClass('Toaster--is-closing');
+	var $this = $(this)
+	$this.addClass('Toaster--is-closing');
 	if($('.Toaster').hasClass('Toaster--is-closing')) {
 		// KILL! - Add timer to remove whitespace left behind
 		setTimeout( function() {
-			$(that).addClass("Toaster--killed");
-			$(that).remove();
+			$this.addClass("Toaster--killed");
+			$this.remove();
 		}, 300);
 	}
 });
