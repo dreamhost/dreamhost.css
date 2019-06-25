@@ -225,9 +225,9 @@ var Toaster = {
 		
 		toaster = $(toaster).css("animation-delay","0s");
 		
-		if (!!time){toaster = $(toaster).css("animation-delay", time + "s");}
+		if (!!time) toaster = $(toaster).css("animation-delay", time + "s");
 	
-		if (!$('body').has('.Toaster-container')){$('body').prepend('.Toaster-container');}
+		if (!$('body').has('.Toaster-container')) $('body').prepend('.Toaster-container');
 		
 		$('.Toaster-container').append(toaster);
 
