@@ -31,10 +31,10 @@
 .u-vertical-align-text-bottom {vertical-align: text-bottom !important}
 
 // White Space
-.u-ws-normal { white-space: normal; }
-.u-ws-nowrap { white-space: nowrap; }
+.u-ws-normal { white-space: normal !important; }
+.u-ws-nowrap { white-space: nowrap !important; }
 
 // Word Break
-.u-wb-normal { word-break: normal; }
-.u-wb-break-all { word-break: break-all; word-break: break-word; }
+.u-wb-normal { word-break: normal !important; }
+.u-wb-break-all { word-break: break-all !important; word-break: break-word !important;}
 
