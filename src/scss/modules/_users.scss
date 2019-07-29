@@ -1,0 +1,101 @@
+// User Component
+.User__details {
+  display: grid;
+  grid-template-columns: 2rem minmax(4rem, 1fr) min-content;
+  grid-template-rows: auto auto;
+  grid-auto-flow: column dense;
+  align-items: center;
+  grid-column-gap: 1rem;
+  position: relative;
+  @media (min-width: $medium-breakpoint) {
+    grid-template-columns: 2rem minmax(4rem, 1fr) minmax(4rem, 1fr) auto;
+    grid-column-gap: 1rem;
+  }
+  @media (min-width: $large-breakpoint) {
+    grid-template-columns: 2rem minmax(4rem, 1fr) minmax(4rem, 1fr) auto max-content;
+    grid-column-gap: 2rem;
+  }
+}
+
+.User__details__avatar {
+  grid-row: span 2;
+  align-items: center;
+}
+
+.User__details__description {
+  @media (min-width: $medium-breakpoint) {
+    grid-row: span 2;
+  }
+}
+
+.User__details__url {
+  @media (min-width: $medium-breakpoint) {
+    grid-row: span 2;
+  }
+}
+
+.User__details__login-info {
+  grid-row: span 2;
+  line-height: 1;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @media (min-width: $large-breakpoint) {
+      display: none;
+    }
+  }
+  svg {
+    fill: $c-g200;
+    flex-shrink: 0;
+  }
+}
+
+.User__details__actions {
+  @media (min-width: $large-breakpoint) {
+    display: flex !important;
+  }
+}
+
+.User__login-info {
+  background-color: #f4f6f9; // color picked from mockup
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  @media (min-width: $large-breakpoint) {
+    background-color: transparent;
+  }
+}
+
+.User__login-info__group {
+  @media (min-width: $large-breakpoint) {
+    flex: 1 1 auto;
+    & + & {
+      margin-left: 3rem;
+    }
+  }
+}
+
+.User__delete{
+	border-bottom-left-radius: inherit;
+	border-bottom-right-radius: inherit;
+}
+
+// State based styles
+
+.User__login-info.is-uncollapsed {
+  display: block !important;
+  @media (min-width: $large-breakpoint) {
+    display: flex !important;
+  }
+}
+
+.User__edit.is-uncollapsed {
+  display: block !important;
+}
+
+.User__delete.is-uncollapsed {
+  display: flex !important;
+}
