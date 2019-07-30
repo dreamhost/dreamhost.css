@@ -1,42 +1,43 @@
-// User Component
+// ManageUser Component
 .User__details {
-  display: grid;
-  grid-template-columns: 2rem minmax(4rem, 1fr) min-content;
-  grid-template-rows: auto auto;
-  grid-auto-flow: column dense;
+  display: flex;
   align-items: center;
-  grid-column-gap: 1rem;
+  flex-shrink: 1;
   position: relative;
-  @media (min-width: $medium-breakpoint) {
-    grid-template-columns: 2rem minmax(4rem, 1fr) minmax(4rem, 1fr) auto;
-    grid-column-gap: 1rem;
-  }
-  @media (min-width: $large-breakpoint) {
-    grid-template-columns: 2rem minmax(4rem, 1fr) minmax(4rem, 1fr) auto max-content;
-    grid-column-gap: 2rem;
-  }
 }
 
 .User__details__avatar {
-  grid-row: span 2;
   align-items: center;
+  margin-right: 1rem;
+  flex-shrink: 3;
+}
+
+.User__details__info {
+  min-width: 0;
+  flex-shrink: 10;
 }
 
 .User__details__description {
-  @media (min-width: $medium-breakpoint) {
-    grid-row: span 2;
+  min-width: 0;
+  @media (min-width: 1050px) {
+    width: 35%;
   }
 }
 
 .User__details__url {
-  @media (min-width: $medium-breakpoint) {
-    grid-row: span 2;
+  @media (min-width: 1050px) {
+    width: 65%;
   }
 }
 
 .User__details__login-info {
-  grid-row: span 2;
   line-height: 1;
+  align-self: stretch;
+  flex-shrink: 0;
+  @media (min-width: 1050px) {
+    margin-right: 1rem;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -44,50 +45,54 @@
     right: 0;
     bottom: 0;
     left: 0;
-    @media (min-width: $large-breakpoint) {
+    @media (min-width: 1050px) {
       display: none;
     }
   }
   svg {
-    fill: $c-g200;
+    fill: #afbfc9; // $c-g200
     flex-shrink: 0;
   }
 }
 
 .User__details__actions {
-  @media (min-width: $large-breakpoint) {
+  @media (min-width: 1050px) {
     display: flex !important;
   }
+  > .Button {
+    flex-shrink: 0;
+  }
 }
+
+/* USER Login Info */
 
 .User__login-info {
   background-color: #f4f6f9; // color picked from mockup
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
-  @media (min-width: $large-breakpoint) {
+  @media (min-width: 1050px) {
     background-color: transparent;
   }
 }
 
 .User__login-info__group {
-  @media (min-width: $large-breakpoint) {
-    flex: 1 1 auto;
+  @media (min-width: 1050px) {
+    flex: 1 1 auto; // there's no flex shrink util
     & + & {
       margin-left: 3rem;
     }
   }
 }
 
-.User__delete {
-  border-bottom-left-radius: inherit;
-  border-bottom-right-radius: inherit;
+.User__login-info__ssh-group {
+  flex-shrink: 0;
 }
 
-// State based styles
+// State Based Styles
 
 .User__login-info.is-uncollapsed {
   display: block !important;
-  @media (min-width: $large-breakpoint) {
+  @media (min-width: 1050px) {
     display: flex !important;
   }
 }
@@ -98,4 +103,21 @@
 
 .User__delete.is-uncollapsed {
   display: flex !important;
+}
+
+.User__delete {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+// Utils
+
+.border-circle {
+  border-radius: 50%;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
