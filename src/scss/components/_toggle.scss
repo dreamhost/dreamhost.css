@@ -83,7 +83,7 @@ Usage:
 
 // Checked state
 .Toggle__input:checked + .Toggle__label {
-	color: $c-black;
+	color: $c-b900;
 
 	.Toggle__visible {
 		background-color: $c-b300;
@@ -142,7 +142,7 @@ Usage:
 // Hover states
 .Toggle__input:not([disabled]):hover {
 	.Toggle__description {
-		color: $c-black;
+		color: $c-b900;
 	}
 
 	& + .Toggle__label {
@@ -151,7 +151,7 @@ Usage:
 
 	& + .Toggle__label .Toggle__visible,
 	& + .Toggle__label .Toggle__visible:before {
-		background-color: $c-black;
+		background-color: $c-b900;
 	}
 
 	&:checked + .Toggle__label .Toggle__visible,

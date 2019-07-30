@@ -5,7 +5,7 @@ $c-b700: #071c26; //midnight
 $c-w100: #ffffff; //white
 
 //Grayscale
-$c-black: #000000; //black
+$c-b900: #000000; //black
 $c-g500: #434F58; //metal
 $c-g400: #677983; //galactic
 $c-g300: #AFBFC9; //cloudy
@@ -43,15 +43,15 @@ $c-r100: #FFCCCE; //rose
 // Legacy Colors
 // TODO: DEPRECATE THESE, NEPHEW
 $blue: #2BADE9;
-$dark-blue: #1176A5;
+$dark-blue: $c-b500;
 $green: #027F1B;
 $orange: #FFA700;
 $red: #B80C03;
-$white: #fff;
-$lighter-grey: #F4F6F9;
-$light-grey: #E0E4E8;
+$white: $c-w100;
+$lighter-grey: $c-g100;
+$light-grey: $c-g200;
 $dark-grey: #5E6D78;
-$black: #000000;
+$black: $c-b900;
 
 // Sizing Scale
 // Use baseScale with convertScaleToRem() to ensure consistent margins.
