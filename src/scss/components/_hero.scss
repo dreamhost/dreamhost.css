@@ -1,0 +1,76 @@
+/*
+
+Hero
+
+	Hero headers are used for any splash pages to display text and illustration .
+
+	Use modifier class to adjust its position, opacity, and iamge file.
+
+	Example:
+
+	Options
+	.Hero__graphic						Cards occupy same vertical space with flexbox
+	.Card__icon								Include on an <img> to add a small icon
+
+	Usage
+	.Hero										- Header
+	.Hero--dedicated 				- Dedicated page Header
+
+	Opacity
+	.Button                 - Default shape
+	.Button--text           - Underlined text
+
+	Sizes
+	.Button                 - Default size
+	.Button--hero           - Hero size
+	.Button--compact        - Compact size
+
+	Markup
+	<div class="bg-hero {{modifier_class}}></div>
+
+*/
+
+.Hero {
+	position: relative;
+	z-index: 1;
+	&:before {
+		position: absolute;
+		top: 0; bottom: 0; left: 0; right: 0;
+		content: '';
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+		z-index: -1;
+		opacity: 0.06;
+	}
+}
+
+@media (min-width: 1050px) {
+	.Hero {
+		padding: 2rem 0;
+		&:before {
+			opacity: 1;
+			background-size: 30%;
+			background-position: 12% center;
+		}
+	}
+}
+
+// .Hero--t-left {
+// 	background-position: 80% center;
+// }
+
+
+// .Hero--t-right {
+// 	background-position: 12% center;
+// }
+
+.Hero--blog {
+	&:before {
+		background-image: url(/images/graphic.blog.svg);
+	}
+}
