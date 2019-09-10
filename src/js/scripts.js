@@ -185,7 +185,7 @@ $(document).on('click', '.js-menu-toggle', function(e) {
 // Make closing Toaster animation controllable with JS
 // Example shown here using jQuery
 
-// ⚠️ TO DO ⚠️ 
+// ⚠️ TO DO ⚠️
 // - Remove the entire dom node.
 // (But since our platform is generally delivered server-side this probably won't matter much, but it'd be nice to keep things clean)
 $(document).on('click', '.Toaster', function () {
@@ -200,9 +200,9 @@ $(document).on('click', '.Toaster', function () {
 	}
 });
 
-var Toaster = {
-	create(title, description, style, persistence, time){
+(function(Toaster, $) {
 
+	Toaster.create = function(title, description, style, persistence, time) {
 		var icons = {
 			default: '<g fill="#ffffff" fill-rule="evenodd"><path d="M12 23.963C5.393 23.963.037 18.607.037 12 .037 5.393 5.393.037 12 .037 18.607.037 23.963 5.393 23.963 12c0 6.607-5.356 11.963-11.963 11.963zm0-1.772c5.628 0 10.19-4.563 10.19-10.191 0-5.628-4.562-10.19-10.19-10.19C6.372 1.81 1.81 6.371 1.81 12c0 5.628 4.562 10.19 10.19 10.19z" fill-rule="nonzero"/><path d="M12 14.88l-2.5 2.31.248-3.394-3.364-.514 2.808-1.923-1.695-2.95 3.253.996L12 6.24l1.25 3.165 3.253-.996-1.695 2.95 2.808 1.923-3.364.514.247 3.394z"/></g>',
 			positive: '<g fill="#ffffff" fill-rule="evenodd"><rect transform="rotate(-47 12.861 12.147)" x="6.698" y="10.552" width="12.326" height="3.191" rx="1.595"/><path d="M11.861 21.503a9.503 9.503 0 1 0 0-19.006 9.503 9.503 0 0 0 0 19.006zM12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12z" fill-rule="nonzero"/><rect transform="rotate(-135 8.664 14.351)" x="5.473" y="12.756" width="6.382" height="3.191" rx="1.595"/></g>',
@@ -214,32 +214,32 @@ var Toaster = {
 		var toasterStyle = !!style ? 'Toaster--' + style : '';
 		var toasterIcon = !!style ? icons[style] : icons.default;
 
-        var toaster = '<div class="Toaster ' + toasterStyle + ' ' + isPersistent + '">';
-        toaster += '<div class="Toaster__type">';
-        toaster += '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">';
-        toaster += toasterIcon
-        toaster += '</div>';
-		toaster += '<p class="Toaster__heading">' + title + ' <span>' + description + '</span></p>';
-		toaster += '<div class="Toaster__close">&times;</div>'
+		var toaster = '<div class="Toaster ' + toasterStyle + ' ' + isPersistent + '">';
+		toaster += '<div class="Toaster__type">';
+		toaster += '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">';
+		toaster += toasterIcon;
+		toaster += '</svg>'
 		toaster += '</div>';
-		
+		toaster += '<p class="Toaster__heading">' + title + ' <span>' + description + '</span></p>';
+		toaster += '<div class="Toaster__close">&times;</div>';
+		toaster += '</div>';
+
 		toaster = $(toaster).css("animation-delay","0s");
-		
+
 		if (!!time) toaster = $(toaster).css("animation-delay", time + "s");
-	
 		if (!$('body').has('.Toaster-container')) $('body').prepend('.Toaster-container');
-		
+
 		$('.Toaster-container').append(toaster);
 
-		if (!isPersistent){
+		if (!isPersistent) {
 			setTimeout(function(){
 				$(toaster).remove();
 			}, 6000);
 		}
 
-		// ⚠️ To do: 
+		// ⚠️ To do:
 		// If has time, get time + 6000 (magic number) and use as setTimeout duration
 		// to ensure that it's not removed before the animation is complete
-
 	}
-}
+
+})(window.Toaster = window.Toaster || {}, jQuery);
