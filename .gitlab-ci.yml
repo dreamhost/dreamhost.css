@@ -1,0 +1,38 @@
+stages:
+- first
+- second
+
+image: node:8-buster
+before_script:
+- npm install -g npm
+
+build:
+  stage: first
+  script:
+  - npm install
+  - npm run dist
+  artifacts:
+    paths:
+    - src
+    - dist
+  cache:
+    key: global-v1
+    paths:
+    - node_modules
+
+publish:
+  stage: second
+  only:
+  - tags
+  dependencies:
+  - build
+  script:
+  - export DEBIAN_FRONTEND=noninteractive; apt-get -qq update; apt-get install -yqq jq
+  - jq ".version = \"$CI_COMMIT_TAG\"" package.json > package-new.json && mv package-new.json package.json
+  - cat package.json
+  - npm publish --dry-run
+  cache:
+    key: global-v1
+    policy: pull
+    paths:
+    - node_modules
