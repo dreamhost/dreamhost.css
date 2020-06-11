@@ -46,6 +46,13 @@
 .t-line-height-double {line-height: $t-h-double !important}
 .t-line-height-single {line-height: $t-h-single !important}
 
+// Truncate
+.t-truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 // Caret
 .t-caret:after {
 	content: '';

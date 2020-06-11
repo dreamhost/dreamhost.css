@@ -41,6 +41,7 @@
 .border-left-dotted {border-left-style: dotted}
 .border-right-dotted {border-right-style: dotted}
 
+
 // widths
 // zero widths to override an element with default styling
 // like an input, or to cancel individual border directions
@@ -78,3 +79,6 @@
 .border-c-g300 {border-color: $c-g300}
 .border-c-g200 {border-color: $c-g200}
 .border-c-g100 {border-color: $c-g100}
+
+// Border utilities
+.u-border-radius-circle {border-radius: 50%}
