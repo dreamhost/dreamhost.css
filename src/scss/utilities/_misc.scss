@@ -38,3 +38,11 @@
 .u-wb-normal { word-break: normal !important; }
 .u-wb-break-all { word-break: break-all !important; word-break: break-word !important;}
 
+// Cursor
+.u-pointer {
+	cursor: pointer;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
