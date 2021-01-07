@@ -1,3 +1,16 @@
+/*
+Currently in use at:
+- NDN
+		perl/Ndn/Dhwebpanel/Cloud/Compute.pm.tp
+		perl/Ndn/Dhwebpanel/Cloud/Objects.pm.tp
+		perl/Ndn/Dhwebpanel/Referrals/Dashboard.pm.tp
+		perl/Ndn/Dhwebpanel/Vps/Dashboard.pm.tp
+- DH.com
+		Numerous pages
+- Signup
+		signup/src/presentation/components/Icons/NotificationIcon.js
+*/
+
 // Class for SVG icons to make them work inline with text
 .Icon {
 	vertical-align: middle;
